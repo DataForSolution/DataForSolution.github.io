@@ -11,27 +11,26 @@
 # If you need help with YAML syntax, here are some quick references for you:
 # https://learn-the-web.algonquindesign.ca/topics/markdown-yaml-cheat-sheet/#yaml
 # https://learnxinyminutes.com/docs/yaml/
-
+#
 # Site settings
 # These are used to personalize your new site. If you look in the HTML files,
 # you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: LL Machine Learning
-email: your-kent.sew@gmail.com
-description: >-
+title: "LL Machine Learning"
+email: "your-kent.sew@gmail.com"
+description: >- # this means to ignore newlines until "baseurl:"
   Welcome to Lissan Liben's professional website. As a dedicated data scientist, I utilize this platform 
   to share insights and advancements in the fields of data science, machine learning, data 
   analysis, and data visualization. This site is crafted to provide valuable resources, 
   showcase my projects, and engage with the data science community. Stay tuned for in-depth 
   articles, tutorials, and discussions. You can edit this line in _config.yml. It will appear 
   in your document head meta (for Google search results) and in your feed.xml site description.
-
-baseurl: "" # Site will be accessible at http://LLdataSolution.com
-url: "https://dataforsolution.github.io" # the base hostname & protocol for your site, e.g. http://LLdataSolution.com
-twitter_username: @SewLiben
-github_username:  Lissan
+baseurl: "" # Leave this empty if hosting at the root
+url: "https://dataforsolution.github.io" # The base hostname & protocol for your site
+twitter_username: "SewLiben"
+github_username: "Lissan"
 
 # Build settings
 theme: minima
@@ -39,22 +38,16 @@ plugins:
   - jekyll-feed
 
 # Exclude from processing.
-# The following items will not be processed, by default.
-# Any item listed under the `exclude:` key here will be automatically added to
-# the internal "default list".
-#
-# Excluded items can be processed by explicitly listing the directories or
-# their entries' file path in the `include:` list.
-#
-# exclude:
-#   - .sass-cache/
-#   - .jekyll-cache/
-#   - gemfiles/
-#   - Gemfile
-#   - Gemfile.lock
-#   - node_modules/
-#   - vendor/bundle/
-#   - vendor/cache/
-#   - vendor/gems/
-#   - vendor/ruby/
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules/
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
 
