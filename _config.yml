@@ -18,25 +18,27 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: "LL Machine Learning"
-email: "your-kent.sew@gmail.com"
+title: "cause2effect"
+email: "kent.sew@gmail.com"
 description: >- # this means to ignore newlines until "baseurl:"
-  Welcome to Lissan Liben's professional website. As a dedicated data scientist, I utilize this platform 
-  to share insights and advancements in the fields of data science, machine learning, data 
-  analysis, and data visualization. This site is crafted to provide valuable resources, 
-  showcase my projects, and engage with the data science community. Stay tuned for in-depth 
-  articles, tutorials, and discussions. You can edit this line in _config.yml. It will appear 
-  in your document head meta (for Google search results) and in your feed.xml site description.
+  Welcome to the cause2effect website, this platform 
+  shares insights and advancements in data science, machine learning, data 
+  analysis, and visualization. It is crafted to provide valuable resources, 
+  showcase projects, and engage with the data science community. Stay tuned for in-depth 
+  articles, tutorials, and discussions. 
 baseurl: "" # Leave this empty if hosting at the root
-url: "https://dataforsolution.github.io" # The base hostname & protocol for your site
+URL: "https://dataforsolution.github.io" # The base hostname & protocol for your site
 twitter_username: "SewLiben"
 github_username: "Lissan"
 
+# Author information
+author:
+  name: "Lissan Liben"
 # Build settings
 theme: minima
 plugins:
   - jekyll-feed
-
+  - jekyll-seo-tag
 # Exclude from processing.
 exclude:
   - .sass-cache/
@@ -49,5 +51,12 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+# Pagination settings
+paginate: 5  # Number of posts per page
+permalink: pretty  # Use clean URLs without .html
 
+# Markdown processor
+markdown: kramdown
+
+# Future plugins or settings can be added here
 
