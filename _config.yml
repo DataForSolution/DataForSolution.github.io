@@ -57,9 +57,9 @@ permalink: pretty  # Use clean URLs without .html
 
 # Markdown processor
 markdown: kramdown
-theme: minimal-mistakes-jekyll
-plugins:
-  - jekyll-seo-tag
+theme: minima
+
+
 
 # Future plugins or settings can be added here
 
