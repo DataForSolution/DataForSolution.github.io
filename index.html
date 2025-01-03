@@ -6,21 +6,100 @@
     <meta name="description" content="Welcome to Lissan Liben's professional website.">
     <title>LL Machine Learning</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        /* Navigation Bar */
+        nav {
+            background-color: #333;
+            padding: 10px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav ul li {
+            margin: 0 20px;
+        }
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-weight: bold;
+            font-size: 1.2em;
+            padding: 10px 15px;
+            transition: color 0.3s ease-in-out;
+            cursor: pointer;
+        }
+        nav ul li a:hover {
+            color: #4CAF50;
+        }
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Sections - Hidden by Default */
+        section {
+            padding: 40px;
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+            display: none;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
+
+        /* Active Section */
+        .active {
+            display: block;
+            opacity: 1;
+        }
+
+        /* Hero Section */
+        header {
+            text-align: center;
+            padding: 50px;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 15px;
+            margin-top: 20px;
+        }
+        footer a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
 
     <!-- Navigation Menu -->
     <nav>
         <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#recent-posts">Recent Posts</a></li>
+            <li><a onclick="showSection('about')">About</a></li>
+            <li><a onclick="showSection('projects')">Projects</a></li>
+            <li><a onclick="showSection('recent-posts')">Recent Posts</a></li>
         </ul>
     </nav>
 
     <!-- Hero Section -->
-    <header id="home">
+    <header>
         <h1>LL Machine Learning</h1>
         <p>Welcome to Lissan Liben's professional website.</p>
     </header>
@@ -28,7 +107,10 @@
     <!-- About Section -->
     <section id="about">
         <h2>About</h2>
-        <p>I am a data scientist using this site to share my insights on data science, machine learning, data analysis, and visualization. Explore the resources, projects, and articles to learn more about the world of data science.</p>
+        <p>
+            I am a data scientist using this site to share my insights on data science, machine learning, data analysis, and visualization.
+            Explore the resources, projects, and articles to learn more about the world of data science.
+        </p>
     </section>
 
     <!-- Recent Posts Section -->
@@ -39,19 +121,21 @@
         </ul>
     </section>
 
-    <h2>Projects</h2>
-    <ul>
-        <li>
-            <a href="https://github.com/DataForSolution/Data-Solution/blob/Master/chest_ct_scan_Cancer_Detection_cnn.ipynb" target="_blank">
-                Chest CT Scan Classification
-            </a>
-        </li>
-        <li>
-            <a href="https://github.com/DataForSolution/Data-Solution/blob/Master/Adversarial_Attacks.ipynb" target="_blank">
-                Adversarial Attacks
-            </a>
-        </li>
-    </ul>
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li>
+                <a href="https://github.com/DataForSolution/Data-Solution/blob/Master/chest_ct_scan_Cancer_Detection_cnn.ipynb" target="_blank">
+                    Chest CT Scan Classification
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/DataForSolution/Data-Solution/blob/Master/Adversarial_Attacks.ipynb" target="_blank">
+                    Adversarial Attacks
+                </a>
+            </li>
+        </ul>
     </section>
 
     <!-- Footer -->
@@ -61,6 +145,19 @@
             <a href="https://github.com/DataForSolution" target="_blank">GitHub</a>.
         </p>
     </footer>
+
+    <!-- JavaScript for Section Display -->
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll("section").forEach(section => {
+                section.classList.remove("active");
+            });
+
+            // Show the selected section
+            document.getElementById(sectionId).classList.add("active");
+        }
+    </script>
 
 </body>
 </html>
