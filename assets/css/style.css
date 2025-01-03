@@ -1,39 +1,198 @@
-/* Navigation Styling */
-nav {
-    background-color: #4CAF50;
-    padding: 10px 0;
-    text-align: center;
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
 }
 
-    nav ul {
-        list-style: none;
-        padding: 0;
-    }
-
-        nav ul li {
-            display: inline;
-            margin-right: 20px;
-        }
-
-            nav ul li a {
-                color: white;
-                text-decoration: none;
-                font-weight: bold;
-                font-size: 1.2em;
-            }
-
-                nav ul li a:hover {
-                    text-decoration: underline;
-                }
-
-/* Smooth Scrolling Effect */
+/* Smooth Scrolling */
 html {
     scroll-behavior: smooth;
 }
 
-/* Section Styling */
+/* Navigation Bar */
+nav {
+    background-color: #222;
+    padding: 15px 0;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        gap: 30px;
+    }
+
+        nav ul li {
+            display: inline;
+        }
+
+            nav ul li a {
+                text-decoration: none;
+                color: white;
+                font-size: 1.2em;
+                font-weight: bold;
+                padding: 10px 15px;
+                transition: all 0.3s ease-in-out;
+            }
+
+                nav ul li a:hover {
+                    color: #4CAF50;
+                    background-color: rgba(255, 255, 255, 0.2);
+                    border-radius: 5px;
+                }
+
+/* Hero Section */
+header {
+    text-align: center;
+    padding: 80px 20px;
+    background: linear-gradient(90deg, #4CAF50, #388E3C);
+    color: white;
+    margin-top: 50px;
+}
+
+    header h1 {
+        font-size: 3em;
+        margin-bottom: 10px;
+    }
+
+/* Sections */
 section {
-    padding: 50px;
-    margin-top: 20px;
-    border-bottom: 2px solid #4CAF50;
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+}
+
+    /* Section Headers */
+    section h2 {
+        font-size: 2em;
+        color: #4CAF50;
+        margin-bottom: 20px;
+        border-bottom: 2px solid #4CAF50;
+        display: inline-block;
+        padding-bottom: 5px;
+    }
+
+/* About Section */
+.about {
+    background-color: #f9f9f9;
+    padding: 60px;
+    border-radius: 10px;
+}
+
+/* Projects Section */
+.projects {
+    background: #ffffff;
+    padding: 40px;
+}
+
+    .projects ul {
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        align-items: center;
+    }
+
+    .projects li {
+        background: #eee;
+        padding: 15px;
+        border-radius: 10px;
+        width: 80%;
+        text-align: center;
+        transition: transform 0.3s ease-in-out;
+    }
+
+        .projects li:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+    /* Project Links */
+    .projects a {
+        text-decoration: none;
+        font-weight: bold;
+        color: #333;
+        font-size: 1.1em;
+        transition: color 0.3s ease-in-out;
+    }
+
+        .projects a:hover {
+            color: #4CAF50;
+        }
+
+/* Recent Posts */
+.recent-posts ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.recent-posts li {
+    padding: 10px;
+    background: #eee;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    width: 50%;
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+}
+
+    .recent-posts li:hover {
+        transform: scale(1.05);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 0.9em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+    footer a {
+        color: #4CAF50;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+        footer a:hover {
+            color: white;
+        }
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    header h1 {
+        font-size: 2em;
+    }
+
+    section {
+        padding: 40px 10px;
+    }
+
+    .projects li {
+        width: 100%;
+    }
+
+    .recent-posts li {
+        width: 100%;
+    }
 }
