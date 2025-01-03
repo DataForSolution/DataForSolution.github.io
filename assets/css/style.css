@@ -30,6 +30,7 @@ ul {
                 color: #4CAF50;
             }
 
+/* General Styling */
 body {
     font-family: 'Roboto', Arial, sans-serif;
     background-color: #f9f9f9; /* Light gray background */
@@ -58,6 +59,7 @@ h2 {
     font-size: 1.5em;
 }
 
+/* Header Styling */
 header {
     background-color: #4CAF50;
     color: white;
@@ -66,6 +68,7 @@ header {
     border-bottom: 5px solid #333;
 }
 
+/* Footer Styling */
 footer {
     background-color: #333;
     color: white;
@@ -84,6 +87,7 @@ footer {
             color: white;
         }
 
+/* List Styling */
 ul {
     list-style: none;
     padding: 0;
@@ -113,6 +117,7 @@ ul {
                 color: #4CAF50;
             }
 
+/* Responsive Styling */
 @media (max-width: 768px) {
     body {
         font-size: 14px;
@@ -131,4 +136,3 @@ ul {
         font-size: 0.9em;
     }
 }
-
