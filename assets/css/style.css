@@ -92,6 +92,18 @@ section {
         padding-bottom: 5px;
     }
 
+/* Project and Recent Posts Links (Updated for Visibility) */
+#projects a, #recent-posts a {
+    color: #4CAF50; /* Changed from purple to green for better visibility */
+    font-weight: bold;
+    text-decoration: none;
+}
+
+    #projects a:hover, #recent-posts a:hover {
+        color: #FFD700; /* Gold on hover */
+        text-decoration: underline;
+    }
+
 /* Footer */
 footer {
     background-color: #222;
