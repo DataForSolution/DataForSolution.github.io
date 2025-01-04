@@ -15,22 +15,22 @@
     <!-- Navigation Menu -->
     <nav>
         <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#recent-posts">Recent Posts</a></li>
+            <li><a onclick="showSection('about')">About</a></li>
+            <li><a onclick="showSection('projects')">Projects</a></li>
+            <li><a onclick="showSection('recent-posts')">Recent Posts</a></li>
         </ul>
     </nav>
 
     <!-- Hero Section (Top Left Title) -->
     <header>LLMachine Learning</header>
 
-    <!-- About Section -->
+    <!-- About Section - Hidden by Default -->
     <section id="about">
         <h2>About</h2>
         <p>Specialist in data science, machine learning, nuclear medicine, PET/CT imaging, and Google Advanced Analytics.</p>
     </section>
 
-    <!-- Projects Section -->
+    <!-- Projects Section - Hidden by Default -->
     <section id="projects">
         <h2>Projects</h2>
         <ul>
@@ -39,7 +39,7 @@
         </ul>
     </section>
 
-    <!-- Recent Posts Section -->
+    <!-- Recent Posts Section - Hidden by Default -->
     <section id="recent-posts">
         <h2>Recent Posts</h2>
         <ul>
@@ -51,6 +51,19 @@
     <footer>
         <p>&copy; 2024 Lissan Liben. Follow me on <a href="https://twitter.com/SewLiben" target="_blank">Twitter</a> and <a href="https://github.com/DataForSolution" target="_blank">GitHub</a>.</p>
     </footer>
+
+    <!-- JavaScript to Show Sections -->
+    <script>
+        function showSection(sectionId) {
+            // Hide all sections
+            document.querySelectorAll('section').forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // Show selected section
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
 
     <!-- Particles.js Script -->
     <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
@@ -80,4 +93,5 @@
 
 </body>
 </html>
+
 
