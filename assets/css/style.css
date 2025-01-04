@@ -42,6 +42,7 @@ nav {
                 font-weight: bold;
                 padding: 10px 15px;
                 transition: all 0.3s ease-in-out;
+                cursor: pointer;
             }
 
                 nav ul li a:hover {
@@ -72,8 +73,9 @@ header {
     background: black;
 }
 
-/* Sections */
+/* Sections - Hidden by Default */
 section {
+    display: none; /* Hide all sections initially */
     padding: 60px 20px;
     text-align: center;
     max-width: 900px;
