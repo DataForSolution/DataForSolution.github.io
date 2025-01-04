@@ -3,47 +3,72 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Welcome to LL Machine Learning">
+    <meta name="description" content="LL Machine Learning - Professional AI, Data Science & Analytics Services">
     <title>LL Machine Learning</title>
     <link rel="stylesheet" href="assets/css/style.css">
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('section').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
 </head>
 <body>
-
-    <!-- Background Animation -->
-    <div id="background-animation"></div>
 
     <!-- Navigation Menu -->
     <nav>
         <ul>
-            <li><a onclick="showSection('about')">About</a></li>
-            <li><a onclick="showSection('projects')">Projects</a></li>
-            <li><a onclick="showSection('recent-posts')">Recent Posts</a></li>
+            <li><a href="#" onclick="showSection('home')">Home</a></li>
+            <li><a href="#" onclick="showSection('about')">About</a></li>
+            <li><a href="#" onclick="showSection('services')">Services</a></li>
+            <li><a href="#" onclick="showSection('projects')">Projects</a></li>
+            <li><a href="#" onclick="showSection('recent-posts')">Recent Posts</a></li>
         </ul>
     </nav>
 
-    <!-- Hero Section (Top Left Title) -->
-    <header>LLMachine Learning</header>
+    <!-- Hero Section -->
+    <header id="home">
+        <h1>LL Machine Learning</h1>
+    </header>
 
-    <!-- About Section - Hidden by Default -->
+    <!-- About Section -->
     <section id="about">
         <h2>About</h2>
-        <p>Specialist in data science, machine learning, nuclear medicine, PET/CT imaging, and Google Advanced Analytics.</p>
+        <p>Expert in Data Science, AI, and Analytics with specialization in Healthcare & Finance.</p>
     </section>
 
-    <!-- Projects Section - Hidden by Default -->
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li><a href="https://github.com/DataForSolution/Data-Solution/blob/Master/chest_ct_scan_Cancer_Detection_cnn.ipynb">Chest CT Scan Classification</a></li>
-            <li><a href="https://github.com/DataForSolution/Data-Solution/blob/Master/Adversarial_Attacks.ipynb">Adversarial Attacks</a></li>
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Services</h2>
+        <ul class="services-list">
+            <li>Business Analytics</li>
+            <li>Data Entry</li>
+            <li>Data Reporting</li>
+            <li>Strategic Planning</li>
+            <li>Healthcare Consulting</li>
+            <li>Financial Analysis</li>
+            <li>Financial Reporting</li>
+            <li>Market Research</li>
+            <li>Online Research</li>
         </ul>
     </section>
 
-    <!-- Recent Posts Section - Hidden by Default -->
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li><a href="https://github.com/DataForSolution/Data-Solution/blob/Master/chest_ct_scan_Cancer_Detection_cnn.ipynb" target="_blank">Chest CT Scan Classification</a></li>
+            <li><a href="https://github.com/DataForSolution/Data-Solution/blob/Master/Adversarial_Attacks.ipynb" target="_blank">Adversarial Attacks</a></li>
+        </ul>
+    </section>
+
+    <!-- Recent Posts Section -->
     <section id="recent-posts">
         <h2>Recent Posts</h2>
         <ul>
-            <li><a href="#">Coming Soon...</a></li>
+            <li><a href="posts/welcome-to-jekyll.html">Welcome to Jekyll!</a></li>
         </ul>
     </section>
 
@@ -51,45 +76,6 @@
     <footer>
         <p>&copy; 2024 Lissan Liben. Follow me on <a href="https://twitter.com/SewLiben" target="_blank">Twitter</a> and <a href="https://github.com/DataForSolution" target="_blank">GitHub</a>.</p>
     </footer>
-
-    <!-- JavaScript to Show Sections -->
-    <script>
-        function showSection(sectionId) {
-            // Hide all sections
-            document.querySelectorAll('section').forEach(section => {
-                section.style.display = 'none';
-            });
-
-            // Show selected section
-            document.getElementById(sectionId).style.display = 'block';
-        }
-    </script>
-
-    <!-- Particles.js Script -->
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
-    <script>
-        particlesJS("background-animation", {
-            "particles": {
-                "number": { "value": 100 },
-                "size": { "value": 3 },
-                "color": { "value": "#4CAF50" },
-                "line_linked": {
-                    "enable": true,
-                    "distance": 120,
-                    "color": "#4CAF50"
-                },
-                "move": {
-                    "enable": true,
-                    "speed": 2
-                }
-            },
-            "interactivity": {
-                "events": {
-                    "onhover": { "enable": true, "mode": "repulse" }
-                }
-            }
-        });
-    </script>
 
 </body>
 </html>
