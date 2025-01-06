@@ -6,16 +6,16 @@
     <meta name="description" content="LL Machine Learning - Professional AI, Data Science & Analytics Services">
     <title>LL Machine Learning</title>
     <link rel="stylesheet" href="assets/css/style.css">
-    <script>
-        function showSection(sectionId) {
-            document.querySelectorAll('section').forEach(section => {
-                section.style.display = 'none';
-            });
-            document.getElementById(sectionId).style.display = 'block';
-        }
-    </script>
 </head>
 <body>
+
+    <!-- Background Video -->
+    <div id="background-animation">
+        <video autoplay loop muted playsinline>
+            <source src="assets/videos/neural_network.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+    </div>
 
     <!-- Navigation Menu -->
     <nav>
@@ -28,15 +28,15 @@
         </ul>
     </nav>
 
-    <!-- Hero Section -->
-    <header id="home">
-        <h1>LL Machine Learning</h1>
+    <!-- Logo -->
+    <header>
+        LL Machine Learning
     </header>
 
     <!-- About Section -->
     <section id="about">
         <h2>About</h2>
-        <p>Professional in AI, Machine Learning, Nuclear Medicine, PET/CT, and Google Advanced Analytics.</p>
+        <p>Expert in Data Science, AI, Machine Learning, PET/CT Imaging, and Google Advanced Analytics.</p>
     </section>
 
     <!-- Services Section -->
@@ -55,28 +55,22 @@
         </ul>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li><a href="https://github.com/DataForSolution/Data-Solution/blob/Master/chest_ct_scan_Cancer_Detection_cnn.ipynb" target="_blank">Chest CT Scan Classification</a></li>
-            <li><a href="https://github.com/DataForSolution/Data-Solution/blob/Master/Adversarial_Attacks.ipynb" target="_blank">Adversarial Attacks</a></li>
-        </ul>
-    </section>
-
-    <!-- Recent Posts Section -->
-    <section id="recent-posts">
-        <h2>Recent Posts</h2>
-        <p>No posts available yet.</p>
-    </section>
-
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Lissan Liben. Follow me on 
+        <p>&copy; 2024 LL Machine Learning. Follow me on 
             <a href="https://twitter.com/SewLiben" target="_blank">Twitter</a> and 
             <a href="https://github.com/DataForSolution" target="_blank">GitHub</a>.
         </p>
     </footer>
+
+    <script>
+        function showSection(sectionId) {
+            document.querySelectorAll('section').forEach(section => {
+                section.style.display = 'none';
+            });
+            document.getElementById(sectionId).style.display = 'block';
+        }
+    </script>
 
 </body>
 </html>
