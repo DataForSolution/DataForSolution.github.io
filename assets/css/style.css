@@ -177,3 +177,45 @@ footer {
         footer a:hover {
             color: white;
         }
+#projects {
+    padding: 40px;
+    text-align: center;
+}
+
+    #projects h2 {
+        color: #4CAF50;
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    #projects ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    #projects li {
+        background: rgba(255, 255, 255, 0.1);
+        margin: 15px auto;
+        padding: 15px;
+        width: 80%;
+        border-radius: 8px;
+        transition: background 0.3s, transform 0.2s;
+    }
+
+        #projects li:hover {
+            background: rgba(255, 255, 255, 0.2);
+            transform: scale(1.05);
+        }
+
+    #projects a {
+        text-decoration: none;
+        font-size: 1.2em;
+        font-weight: bold;
+        color: #4CAF50;
+        display: block;
+    }
+
+        #projects a:hover {
+            color: white;
+        }
+
