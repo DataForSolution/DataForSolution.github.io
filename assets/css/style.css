@@ -229,22 +229,33 @@ footer {
         text-decoration: underline;
     }
 /* Style for the search bar */
+/* Style for the search bar */
 #search-form {
     display: flex;
     align-items: center;
     background: white;
     border-radius: 5px;
     padding: 5px;
+    border: 2px solid #4CAF50;
 }
 
+/* Input field for search */
 #search-input {
     border: none;
     outline: none;
     padding: 8px;
     width: 200px;
     font-size: 1em;
+    color: blue; /* Changes text color to blue */
 }
 
+    /* Change placeholder text to blue */
+    #search-input::placeholder {
+        color: blue;
+        opacity: 1; /* Ensures full visibility */
+    }
+
+/* Search button */
 #search-form button {
     background: #4CAF50;
     color: white;
@@ -255,6 +266,7 @@ footer {
     transition: background 0.3s;
 }
 
+    /* Button hover effect */
     #search-form button:hover {
         background: #45a049;
     }
