@@ -279,6 +279,62 @@ footer {
     margin: 10px auto;
     border: 3px solid #4CAF50; /* Adds a nice border */
 }
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+    .hero h1 {
+        font-size: 3em;
+        color: #4CAF50;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+        margin: 10px 0;
+    }
+
+.cta-button {
+    background: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+}
+
+    .cta-button:hover {
+        background: #2E7D32;
+    }
+
+/* Featured Projects */
+#featured-projects {
+    text-align: center;
+    padding: 40px;
+}
+
+.project {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin: 15px auto;
+    width: 80%;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+    .project:hover {
+        background: rgba(255, 255, 255, 0.2);
+    }
+
+    .project a {
+        text-decoration: none;
+        font-weight: bold;
+        color: #4CAF50;
+    }
+
 
 
 
