@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="LLmachine - Professional AI, Data Science & Analytics Services">
-    <title>LLmachine </title>
+    <title>LLmachine</title>
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -24,35 +24,42 @@
             <li><a href="#" onclick="showSection('about')">About</a></li>
             <li><a href="#" onclick="showSection('services')">Services</a></li>
             <li><a href="#" onclick="showSection('projects')">Projects</a></li>
-            <li><a href="#" onclick="showSection('recent-posts')">Recent Posts</a></li>
+            <li><a href="#" onclick="showSection('contact')">Contact</a></li>
         </ul>
-    <!-- Search Bar -->
-<form id="search-form" onsubmit="return searchSite()">
-    <input type="text" id="search-input" placeholder="Search..." aria-label="Search">
-    <button type="submit">🔍</button>
-</form>
 
+        <!-- Search Bar -->
+        <form id="search-form" onsubmit="return searchSite()">
+            <input type="text" id="search-input" placeholder="Search..." aria-label="Search">
+            <button type="submit">🔍</button>
+        </form>
     </nav>
 
     <!-- Logo -->
-    <header>
+    <header id="logo">
         LLmachine
     </header>
 
+    <!-- Home Section -->
+    <section id="home" class="hero">
+        <h1>Welcome to LLmachine</h1>
+        <p>Empowering AI and Data Science for Innovation and Research.</p>
+        <a href="#projects" class="cta-button">Explore My Work</a>
+    </section>
+
     <!-- About Section -->
     <section id="about">
-         <h2>About</h2>
-    <img src="assets/images/profile.jpg" alt="Lissan" id="profile-pic">
-    <p>
-        Expert in Data Science, AI, Machine Learning, PET/CT Imaging, and Google Advanced Analytics.
-        Passionate about leveraging data for impactful insights and business solutions.
-    </p>
-    
-    <!-- LinkedIn and Email -->
-    <p>
-        📧 Email: <a href="mailto:kent.sew@gmail.com" style="color: #4CAF50;">kent.sew@gmail.com</a><br>
-        🔗 LinkedIn: <a href="https://www.linkedin.com/in/lissan-analytic" target="_blank" style="color: #4CAF50;">Lissan Analytic</a>
-    </p>
+        <h2>About</h2>
+        <img src="assets/images/profile.jpg" alt="Lissan" id="profile-pic">
+        <p>
+            Expert in Data Science, AI, Machine Learning, PET/CT Imaging, and Google Advanced Analytics.
+            Passionate about leveraging data for impactful insights and business solutions.
+        </p>
+
+        <!-- LinkedIn and Email -->
+        <p>
+            📧 Email: <a href="mailto:kent.sew@gmail.com" style="color: #4CAF50;">kent.sew@gmail.com</a><br>
+            🔗 LinkedIn: <a href="https://www.linkedin.com/in/lissan-analytic" target="_blank" style="color: #4CAF50;">Lissan Analytic</a>
+        </p>
     </section>
 
     <!-- Services Section -->
@@ -70,23 +77,36 @@
             <li>Online Research</li>
         </ul>
     </section>
-    <!-- Projects Section -->
-<section id="projects">
-    <h2>Projects</h2>
-    <ul>
-        <li>
-            <a href="https://github.com/DataForSolution/Data-Solution/blob/Master/chest_ct_scan_Cancer_Detection_cnn.ipynb" target="_blank">
-                Chest CT Scan Cancer Detection
-            </a>
-        </li>
-        <li>
-            <a href="https://github.com/DataForSolution/Data-Solution/blob/Master/Adversarial_Attacks.ipynb" target="_blank">
-                Adversarial Attacks in Machine Learning
-            </a>
-        </li>
-    </ul>
-</section>
 
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul>
+            <li>
+                <a href="https://github.com/DataForSolution/Data-Solution/blob/Master/chest_ct_scan_Cancer_Detection_cnn.ipynb" target="_blank">
+                    Chest CT Scan Cancer Detection
+                </a>
+            </li>
+            <li>
+                <a href="https://github.com/DataForSolution/Data-Solution/blob/Master/Adversarial_Attacks.ipynb" target="_blank">
+                    Adversarial Attacks in Machine Learning
+                </a>
+            </li>
+            <li>
+                <a href="assets/documents/Chest_Cancer_Detection_Deep_Learning_CT_Scan.pdf" target="_blank">
+                    📄 Chest Cancer Detection Using Deep Learning on Chest CT-Scan Images (PDF)
+                </a>
+            </li>
+        </ul>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>📧 Email: <a href="mailto:kent.sew@gmail.com">kent.sew@gmail.com</a></p>
+        <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/lissan-analytic" target="_blank">Lissan Analytic</a></p>
+        <p>💻 GitHub: <a href="https://github.com/DataForSolution" target="_blank">DataForSolution</a></p>
+    </section>
 
     <!-- Footer -->
     <footer>
@@ -96,6 +116,7 @@
         </p>
     </footer>
 
+    <!-- JavaScript -->
     <script>
         function showSection(sectionId) {
             document.querySelectorAll('section').forEach(section => {
@@ -103,62 +124,29 @@
             });
             document.getElementById(sectionId).style.display = 'block';
         }
-    </script>
-<script>
-    function searchSite() {
-        let query = document.getElementById("search-input").value.toLowerCase();
-        let sections = document.querySelectorAll("section");
 
-        let found = false;
+        function searchSite() {
+            let query = document.getElementById("search-input").value.toLowerCase();
+            let sections = document.querySelectorAll("section");
 
-        sections.forEach(section => {
-            if (section.innerText.toLowerCase().includes(query)) {
-                section.style.display = "block";
-                found = true;
-            } else {
-                section.style.display = "none";
+            let found = false;
+
+            sections.forEach(section => {
+                if (section.innerText.toLowerCase().includes(query)) {
+                    section.style.display = "block";
+                    found = true;
+                } else {
+                    section.style.display = "none";
+                }
+            });
+
+            if (!found) {
+                alert("No results found.");
             }
-        });
 
-        if (!found) {
-            alert("No results found.");
+            return false; // Prevents form submission
         }
-
-        return false; // Prevents form submission
-    }
-</script>
-      <section id="home" class="hero">
-    <h1>Welcome to LLmachine</h1>
-    <p>Empowering AI and Data Science for Innovation and Research.</p>
-    <a href="#projects" class="cta-button">Explore My Work</a>
-</section>
-     <section id="home-about">
-    <h2>About Me</h2>
-    <p>I am a data scientist specializing in AI, Machine Learning, and PET/CT Imaging. Passionate about leveraging data to drive meaningful insights.</p>
-    <a href="#about" class="cta-button">Read More</a>
-</section>
-     <section id="featured-projects">
-    <h2>Featured Projects</h2>
-    <div class="project">
-        <h3>Chest Cancer Detection Using Deep Learning</h3>
-        <p>Using AI to improve early detection of chest cancer in CT scans.</p>
-        <a href="https://github.com/DataForSolution/Data-Solution/blob/Master/chest_ct_scan_Cancer_Detection_cnn.ipynb" target="_blank">View Project</a>
-    </div>
-
-    <div class="project">
-        <h3>Adversarial Attacks in Machine Learning</h3>
-        <p>Exploring security vulnerabilities in AI models.</p>
-        <a href="https://github.com/DataForSolution/Data-Solution/blob/Master/Adversarial_Attacks.ipynb" target="_blank">View Project</a>
-    </div>
-</section>
-    <section id="contact">
-    <h2>Contact Me</h2>
-    <p>📧 Email: <a href="mailto:kent.sew@gmail.com">kent.sew@gmail.com</a></p>
-    <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/lissan-analytic" target="_blank">Lissan Analytic</a></p>
-    <p>💻 GitHub: <a href="https://github.com/DataForSolution" target="_blank">DataForSolution</a></p>
-</section>
-
-
+    </script>
 
 </body>
 </html>
