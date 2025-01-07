@@ -26,6 +26,12 @@
             <li><a href="#" onclick="showSection('projects')">Projects</a></li>
             <li><a href="#" onclick="showSection('recent-posts')">Recent Posts</a></li>
         </ul>
+    <!-- Search Bar -->
+<form id="search-form" onsubmit="return searchSite()">
+    <input type="text" id="search-input" placeholder="Search..." aria-label="Search">
+    <button type="submit">🔍</button>
+</form>
+
     </nav>
 
     <!-- Logo -->
@@ -97,6 +103,30 @@
             document.getElementById(sectionId).style.display = 'block';
         }
     </script>
+<script>
+    function searchSite() {
+        let query = document.getElementById("search-input").value.toLowerCase();
+        let sections = document.querySelectorAll("section");
+
+        let found = false;
+
+        sections.forEach(section => {
+            if (section.innerText.toLowerCase().includes(query)) {
+                section.style.display = "block";
+                found = true;
+            } else {
+                section.style.display = "none";
+            }
+        });
+
+        if (!found) {
+            alert("No results found.");
+        }
+
+        return false; // Prevents form submission
+    }
+</script>
+
 
 </body>
 </html>
