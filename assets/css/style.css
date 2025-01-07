@@ -270,6 +270,16 @@ footer {
     #search-form button:hover {
         background: #45a049;
     }
+#profile-pic {
+    display: block;
+    width: 150px; /* Adjust size as needed */
+    height: 150px;
+    border-radius: 50%; /* Makes it circular */
+    object-fit: cover;
+    margin: 10px auto;
+    border: 3px solid #4CAF50; /* Adds a nice border */
+}
+
 
 
 
