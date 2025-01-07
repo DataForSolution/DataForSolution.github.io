@@ -98,12 +98,12 @@ nav {
 /* Fix LLmachine Logo (Upper Left Corner) */
 header {
     position: absolute;
-    top: 10px;
-    left: 10px;
-    font-size: 2.5em;
+    top: 15px; /* Shift it down slightly */
+    left: 20px; /* Align properly */
+    font-size: 1.8em; /* Reduce size */
     font-weight: bold;
     color: #4CAF50;
-    z-index: 1000;
+    z-index: 1000; /* Make sure it's above everything */
 }
 
 /* Sections - Hidden by Default */
@@ -237,6 +237,9 @@ footer {
     border-radius: 5px;
     padding: 5px;
     border: 2px solid #4CAF50;
+    margin-top: 10px; /* Push it down slightly */
+    position: relative;
+    z-index: 1001; /* Ensure it's above the logo */
 }
 
 /* Input field for search */
@@ -288,8 +291,10 @@ footer {
 }
 
     .hero h1 {
-        font-size: 3em;
+        font-size: 2.5em; /* Adjust size (was too large) */
+        font-weight: bold;
         color: #4CAF50;
+        text-align: center;
     }
 
     .hero p {
