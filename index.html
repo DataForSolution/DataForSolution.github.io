@@ -19,13 +19,11 @@
 
     <!-- Navigation Menu -->
     <nav>
-        <!-- Logo -->
         <div id="logo-container">
             <a href="index.html">
                 <img src="assets/images/logo.png" alt="LLmachine Logo" id="logo">
             </a>
         </div>
-
         <ul>
             <li><a href="#" onclick="showSection('home')">Home</a></li>
             <li><a href="#" onclick="showSection('about')">About</a></li>
@@ -57,8 +55,6 @@
             Expert in Data Science, AI, Machine Learning, PET/CT Imaging, and Google Advanced Analytics.
             Passionate about leveraging data for impactful insights and business solutions.
         </p>
-
-        <!-- LinkedIn and Email -->
         <p>
             📧 Email: <a href="mailto:kent.sew@gmail.com" style="color: #4CAF50;">kent.sew@gmail.com</a><br>
             🔗 LinkedIn: <a href="https://www.linkedin.com/in/lissan-analytic" target="_blank" style="color: #4CAF50;">Lissan Analytic</a>
@@ -101,45 +97,32 @@
                 </a>
             </li>
         </ul>
-    <div class="project-card">
-    <img src="assets/images/project1.png" alt="Project Preview">
-    <div>
-        <h3>Chest CT Scan Cancer Detection</h3>
-        <p>Using AI to improve early detection of chest cancer in CT scans.</p>
-        <a href="https://github.com/DataForSolution/Data-Solution/blob/Master/chest_ct_scan_Cancer_Detection_cnn.ipynb" target="_blank">View Project</a>
-    </div>
-</div>
-
     </section>
 
     <!-- Contact Section -->
     <section id="contact">
         <h2>Contact Me</h2>
-         <form id="contact-form">
-        <input type="text" id="name" placeholder="Your Name" required>
-        <input type="email" id="email" placeholder="Your Email" required>
-        <textarea id="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-    </form>
+        <form id="contact-form">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
         <p>📧 Email: <a href="mailto:kent.sew@gmail.com">kent.sew@gmail.com</a></p>
         <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/lissan-analytic" target="_blank">Lissan Analytic</a></p>
         <p>💻 GitHub: <a href="https://github.com/DataForSolution" target="_blank">DataForSolution</a></p>
-        
     </section>
 
     <!-- Blog/Articles Section -->
     <section id="blog">
         <h2>Latest Articles</h2>
         <div id="articles-container">
-        {% for post in site.posts %}
+            {% for post in site.posts %}
             <div class="blog-post">
                 <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
                 <p>{{ post.excerpt }}</p>
             </div>
-        {% endfor %}
-    </div>
-        <div id="articles-container">
-            <!-- Articles will be dynamically added here -->
+            {% endfor %}
         </div>
     </section>
 
@@ -152,65 +135,12 @@
     </footer>
 
     <!-- JavaScript -->
-    <script>
-        function showSection(sectionId) {
-            document.querySelectorAll('section').forEach(section => {
-                section.style.display = 'none';
-            });
-            document.getElementById(sectionId).style.display = 'block';
-        }
-
-        function searchSite() {
-            let query = document.getElementById("search-input").value.toLowerCase();
-            let sections = document.querySelectorAll("section");
-
-            let found = false;
-
-            sections.forEach(section => {
-                if (section.innerText.toLowerCase().includes(query)) {
-                    section.style.display = "block";
-                    found = true;
-                } else {
-                    section.style.display = "none";
-                }
-            });
-
-            if (!found) {
-                alert("No results found.");
-            }
-
-            return false; // Prevents form submission
-        }
-        function toggleDarkMode() {
-    document.body.classList.toggle("dark-mode");
-    localStorage.setItem("dark-mode", document.body.classList.contains("dark-mode"));
-}
-
-// Apply user preference
-if (localStorage.getItem("dark-mode") === "true") {
-    document.body.classList.add("dark-mode");
-}
-
-    </script>
-<h1 class="typing">Welcome to LLmachine - AI & Data Science Hub</h1>
-<button class="toggle-btn" onclick="toggleDarkMode()">🌙 Dark Mode</button>
-<button id="back-to-top" onclick="scrollToTop()">🔝</button>
-// Show/Hide Button
-window.onscroll = function() {
-    document.getElementById("back-to-top").style.display = (window.scrollY > 200) ? "block" : "none";
-};
-
-// Scroll to Top
-function scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-}
-document.getElementById("contact-form").onsubmit = function(event) {
-    event.preventDefault();
-    alert("Thank you! Your message has been sent.");
-};
-
-
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
+</body>
+</html>
 
 
 </body>
 </html>
+
