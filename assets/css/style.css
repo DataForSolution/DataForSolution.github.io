@@ -292,6 +292,30 @@ section {
         #projects a:hover {
             color: white;
         }
+/* Project Cards */
+.project-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    margin: 15px auto;
+    width: 80%;
+    border-radius: 8px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+    .project-card img {
+        width: 80px;
+        height: 80px;
+        border-radius: 8px;
+    }
+
+    .project-card:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: scale(1.05);
+    }
+
 
 /* Footer */
 footer {
@@ -314,3 +338,66 @@ footer {
         footer a:hover {
             color: white;
         }
+/* Animated Typing Effect */
+.typing {
+    font-size: 1.8em;
+    color: #4CAF50;
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 2px solid #4CAF50;
+    animation: typing 4s steps(40) infinite, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink {
+    from, to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: #4CAF50
+    }
+}
+/* Dark Mode */
+.dark-mode {
+    background: #222;
+    color: white;
+}
+
+.toggle-btn {
+    position: fixed;
+    top: 15px;
+    right: 20px;
+    padding: 10px;
+    background: #4CAF50;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+/* Back to Top Button */
+#back-to-top {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+    #back-to-top:hover {
+        background: #2E7D32;
+    }
+
+
