@@ -113,7 +113,22 @@ header {
     margin-left: 10px; /* Add spacing */
     vertical-align: middle;
 }
-
+#logo {
+height: 50px; /* Adjust to fit menu bar */
+width: auto; /* Maintain aspect ratio */
+margin-left: 15px; /* Adjust spacing */
+vertical-align: middle;
+display: inline-block;
+}
+nav {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+}
+#logo-container {
+    background-color: white; /* Add background to enhance visibility */
+    padding: 5px;
+    border-radius: 5px; /* Optional rounded corners */
 }
 
 /* Sections - Hidden by Default */
