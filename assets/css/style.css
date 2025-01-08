@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
-}
+ded Deep Learning in Healthcare Article}
 
 /* Smooth Scrolling */
 html {
@@ -104,6 +104,16 @@ header {
     font-weight: bold;
     color: #4CAF50;
     z-index: 1000; /* Make sure it's above everything */
+    /* Style for the logo in the menu */
+    #logo
+
+{
+    height: 40px; /* Adjust height to fit the menu bar */
+    width: auto; /* Maintain aspect ratio */
+    margin-left: 10px; /* Add spacing */
+    vertical-align: middle;
+}
+
 }
 
 /* Sections - Hidden by Default */
