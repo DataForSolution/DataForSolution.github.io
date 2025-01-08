@@ -4,7 +4,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Arial', sans-serif;
-ded Deep Learning in Healthcare Article}
+}
 
 /* Smooth Scrolling */
 html {
@@ -39,97 +39,121 @@ html {
 /* Navigation Bar */
 nav {
     background-color: #222;
-    padding: 15px 0;
+    padding: 15px 20px;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    text-align: center;
-}
-
-    nav ul {
-        list-style: none;
-        display: flex;
-        justify-content: center;
-        gap: 30px;
-    }
-
-        nav ul li {
-            display: inline;
-        }
-
-            nav ul li a {
-                text-decoration: none;
-                color: white;
-                font-size: 1.2em;
-                font-weight: bold;
-                padding: 10px 15px;
-                transition: all 0.3s ease-in-out;
-                cursor: pointer;
-                position: relative;
-            }
-
-                /* Highlight menu on hover */
-                nav ul li a:hover,
-                nav ul li a:focus {
-                    color: #4CAF50;
-                    background-color: rgba(255, 255, 255, 0.2);
-                    border-radius: 5px;
-                }
-
-                /* Underline effect when hovered */
-                nav ul li a::after {
-                    content: "";
-                    position: absolute;
-                    left: 50%;
-                    bottom: -5px;
-                    width: 0%;
-                    height: 3px;
-                    background: #4CAF50;
-                    transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
-                }
-
-                nav ul li a:hover::after {
-                    width: 100%;
-                    left: 0;
-                }
-
-/* Fix LLmachine Logo (Upper Left Corner) */
-header {
-    position: absolute;
-    top: 15px; /* Shift it down slightly */
-    left: 20px; /* Align properly */
-    font-size: 1.8em; /* Reduce size */
-    font-weight: bold;
-    color: #4CAF50;
-    z-index: 1000; /* Make sure it's above everything */
-    /* Style for the logo in the menu */
-    #logo
-
-{
-    height: 40px; /* Adjust height to fit the menu bar */
-    width: auto; /* Maintain aspect ratio */
-    margin-left: 10px; /* Add spacing */
-    vertical-align: middle;
-}
-#logo {
-height: 50px; /* Adjust to fit menu bar */
-width: auto; /* Maintain aspect ratio */
-margin-left: 15px; /* Adjust spacing */
-vertical-align: middle;
-display: inline-block;
-}
-nav {
     display: flex;
     align-items: center;
-    padding: 10px 20px;
+    justify-content: space-between;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+/* Logo */
 #logo-container {
-    background-color: white; /* Add background to enhance visibility */
-    padding: 5px;
-    border-radius: 5px; /* Optional rounded corners */
+    display: flex;
+    align-items: center;
 }
+
+#logo {
+    height: 40px; /* Adjust height to fit the menu bar */
+    width: auto;
+    margin-left: 10px; /* Add spacing */
+    vertical-align: middle;
+    background-color: white; /* Ensures visibility */
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/* Menu Items */
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+    nav ul li {
+        display: inline;
+    }
+
+        nav ul li a {
+            text-decoration: none;
+            color: white;
+            font-size: 1.2em;
+            font-weight: bold;
+            padding: 10px 15px;
+            transition: all 0.3s ease-in-out;
+            cursor: pointer;
+            position: relative;
+        }
+
+            /* Highlight menu on hover */
+            nav ul li a:hover,
+            nav ul li a:focus {
+                color: #4CAF50;
+                background-color: rgba(255, 255, 255, 0.2);
+                border-radius: 5px;
+            }
+
+            /* Underline effect when hovered */
+            nav ul li a::after {
+                content: "";
+                position: absolute;
+                left: 50%;
+                bottom: -5px;
+                width: 0%;
+                height: 3px;
+                background: #4CAF50;
+                transition: width 0.3s ease-in-out, left 0.3s ease-in-out;
+            }
+
+            nav ul li a:hover::after {
+                width: 100%;
+                left: 0;
+            }
+
+/* Search Bar */
+#search-form {
+    display: flex;
+    align-items: center;
+    background: white;
+    border-radius: 5px;
+    padding: 5px;
+    border: 2px solid #4CAF50;
+    margin-top: 5px;
+}
+
+#search-input {
+    border: none;
+    outline: none;
+    padding: 8px;
+    width: 200px;
+    font-size: 1em;
+    color: blue;
+}
+
+    /* Change placeholder text to blue */
+    #search-input::placeholder {
+        color: blue;
+        opacity: 1;
+    }
+
+/* Search button */
+#search-form button {
+    background: #4CAF50;
+    color: white;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+    #search-form button:hover {
+        background: #45a049;
+    }
 
 /* Sections - Hidden by Default */
 section {
@@ -150,7 +174,52 @@ section {
         padding-bottom: 5px;
     }
 
-/* Services List - Interactive */
+/* Home Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: rgba(0, 0, 0, 0.7);
+    color: white;
+}
+
+    .hero h1 {
+        font-size: 2.5em; /* Adjusted to fit properly */
+        font-weight: bold;
+        color: #4CAF50;
+        text-align: center;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+        margin: 10px 0;
+    }
+
+/* CTA Button */
+.cta-button {
+    background: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 5px;
+}
+
+    .cta-button:hover {
+        background: #2E7D32;
+    }
+
+/* Profile Image */
+#profile-pic {
+    display: block;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 10px auto;
+    border: 3px solid #4CAF50;
+}
+
+/* Services List */
 #services ul {
     list-style: none;
     padding: 0;
@@ -181,27 +250,7 @@ section {
             color: white;
         }
 
-/* Footer */
-footer {
-    background-color: #222;
-    color: white;
-    text-align: center;
-    padding: 20px;
-    font-size: 0.9em;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-}
-
-    footer a {
-        color: #4CAF50;
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-        footer a:hover {
-            color: white;
-        }
+/* Projects Section */
 #projects {
     padding: 40px;
     text-align: center;
@@ -243,129 +292,25 @@ footer {
         #projects a:hover {
             color: white;
         }
-#about a {
-    font-weight: bold;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
-}
 
-    #about a:hover {
-        color: white;
-        text-decoration: underline;
-    }
-/* Style for the search bar */
-/* Style for the search bar */
-#search-form {
-    display: flex;
-    align-items: center;
-    background: white;
-    border-radius: 5px;
-    padding: 5px;
-    border: 2px solid #4CAF50;
-    margin-top: 10px; /* Push it down slightly */
-    position: relative;
-    z-index: 1001; /* Ensure it's above the logo */
-}
-
-/* Input field for search */
-#search-input {
-    border: none;
-    outline: none;
-    padding: 8px;
-    width: 200px;
-    font-size: 1em;
-    color: blue; /* Changes text color to blue */
-}
-
-    /* Change placeholder text to blue */
-    #search-input::placeholder {
-        color: blue;
-        opacity: 1; /* Ensures full visibility */
-    }
-
-/* Search button */
-#search-form button {
-    background: #4CAF50;
+/* Footer */
+footer {
+    background-color: #222;
     color: white;
-    border: none;
-    padding: 8px;
-    cursor: pointer;
-    border-radius: 5px;
-    transition: background 0.3s;
-}
-
-    /* Button hover effect */
-    #search-form button:hover {
-        background: #45a049;
-    }
-#profile-pic {
-    display: block;
-    width: 150px; /* Adjust size as needed */
-    height: 150px;
-    border-radius: 50%; /* Makes it circular */
-    object-fit: cover;
-    margin: 10px auto;
-    border: 3px solid #4CAF50; /* Adds a nice border */
-}
-/* Hero Section */
-.hero {
     text-align: center;
-    padding: 100px 20px;
-    background: rgba(0, 0, 0, 0.7);
-    color: white;
-}
-
-    .hero h1 {
-        font-size: 2.5em; /* Adjust size (was too large) */
-        font-weight: bold;
-        color: #4CAF50;
-        text-align: center;
-    }
-
-    .hero p {
-        font-size: 1.2em;
-        margin: 10px 0;
-    }
-
-.cta-button {
-    background: #4CAF50;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-size: 1.2em;
-    border-radius: 5px;
-}
-
-    .cta-button:hover {
-        background: #2E7D32;
-    }
-
-/* Featured Projects */
-#featured-projects {
-    text-align: center;
-    padding: 40px;
-}
-
-.project {
-    background: rgba(255, 255, 255, 0.1);
     padding: 20px;
-    margin: 15px auto;
-    width: 80%;
-    border-radius: 8px;
-    transition: 0.3s;
+    font-size: 0.9em;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
 
-    .project:hover {
-        background: rgba(255, 255, 255, 0.2);
-    }
-
-    .project a {
+    footer a {
+        color: #4CAF50;
         text-decoration: none;
         font-weight: bold;
-        color: #4CAF50;
     }
 
-
-
-
-
+        footer a:hover {
+            color: white;
+        }
