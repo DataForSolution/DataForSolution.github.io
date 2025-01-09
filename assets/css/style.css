@@ -298,6 +298,61 @@ section {
         background: rgba(255, 255, 255, 0.2);
         transform: scale(1.05);
     }
+/* ----------------------------------- */
+/* Fix Section Overlapping the Menu Bar */
+/* ----------------------------------- */
+section {
+    display: none;
+    padding: 100px 20px 60px; /* Increased top padding to avoid being covered */
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* ----------------------------------- */
+/* Project Links - Make Them More Visible & Interactive */
+/* ----------------------------------- */
+#projects ul {
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+
+#projects li {
+    background: rgba(255, 255, 255, 0.1);
+    margin: 15px auto;
+    padding: 15px;
+    width: 80%;
+    border-radius: 8px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+/* Change default link color to visible green */
+#projects a {
+    text-decoration: none;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #4CAF50; /* Visible Green */
+    display: block;
+    transition: color 0.3s, background 0.3s;
+}
+
+    /* Hover Effect - Change color when mouse hovers */
+    #projects a:hover {
+        color: white;
+        background-color: #4CAF50;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    /* Clicked/Selected Effect */
+    #projects a:active {
+        color: yellow;
+        background-color: #2E7D32;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
 
 /* Footer */
 footer {
