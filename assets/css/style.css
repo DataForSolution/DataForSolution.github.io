@@ -249,6 +249,27 @@ section {
         font-size: 1.2em;
         margin: 10px 0;
     }
+/* ✅ Remove Black Background from Home */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    color: white;
+    background: none !important; /* Removes black overlay */
+}
+
+    /* ✅ Ensure Text Visibility */
+    .hero h1 {
+        font-size: 2.5em;
+        font-weight: bold;
+        color: #4CAF50;
+        text-align: center;
+    }
+
+    .hero p {
+        font-size: 1.2em;
+        margin: 10px 0;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adds contrast on text */
+    }
 
 /* CTA Button */
 .cta-button {
@@ -646,6 +667,23 @@ body {
 #chat-response {
     margin-top: 10px;
     color: #4CAF50;
+}
+/* ✅ Ensure other sections have padding to be visible */
+section {
+    padding: 60px 20px;
+    text-align: center;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* ✅ Improve AI Dashboard Visibility */
+.ai-dashboard, #ai-chatbot {
+    background: rgba(0, 0, 0, 0.3); /* Slight transparency to keep text readable */
+    padding: 15px;
+    border-radius: 8px;
+    width: 50%;
+    margin: auto;
+    color: white;
 }
 
 
