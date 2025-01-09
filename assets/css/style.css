@@ -1,4 +1,4 @@
-/* Reset default browser styles */
+﻿/* Reset default browser styles */
 * {
     margin: 0;
     padding: 0;
@@ -352,6 +352,100 @@ section {
         padding: 5px;
         border-radius: 5px;
     }
+/* Contact Section Styling */
+#contact {
+    text-align: center;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    margin: auto;
+    width: 80%;
+}
+
+    /* Contact Heading */
+    #contact h2 {
+        color: #4CAF50;
+        font-size: 2em;
+        margin-bottom: 20px;
+    }
+
+    /* Contact Links */
+    #contact p {
+        font-size: 1.2em;
+        margin: 10px 0;
+    }
+
+    /* Contact Links - Enhanced for Visibility */
+    #contact a {
+        text-decoration: none;
+        font-weight: bold;
+        color: #4CAF50; /* Updated to a visible green */
+        transition: color 0.3s ease-in-out;
+    }
+
+        #contact a:hover {
+            color: white;
+            text-decoration: underline;
+        }
+
+    /* Icons for Contact */
+    #contact p::before {
+        content: "📩 "; /* Adds relevant icons */
+        font-size: 1.2em;
+    }
+
+/* Contact Form */
+#contact-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+}
+
+    #contact-form input,
+    #contact-form textarea {
+        width: 60%;
+        padding: 12px;
+        border-radius: 5px;
+        border: 2px solid #4CAF50;
+        font-size: 1em;
+        background: #333;
+        color: white;
+    }
+
+        /* Placeholder Text Color */
+        #contact-form input::placeholder,
+        #contact-form textarea::placeholder {
+            color: #bbb;
+        }
+
+    /* Aligning Input Fields */
+    #contact-form input {
+        height: 45px;
+    }
+
+    #contact-form textarea {
+        height: 120px;
+        resize: none;
+    }
+
+    /* Submit Button */
+    #contact-form button {
+        background: #4CAF50;
+        color: white;
+        border: none;
+        padding: 12px 20px;
+        font-size: 1.2em;
+        cursor: pointer;
+        border-radius: 5px;
+        transition: background 0.3s ease-in-out;
+    }
+
+        #contact-form button:hover {
+            background: #2E7D32;
+        }
+
 
 
 /* Footer */
