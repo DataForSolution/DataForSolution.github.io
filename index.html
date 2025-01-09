@@ -42,10 +42,39 @@
 
     <!-- Home Section -->
     <section id="home" class="hero">
-        <h1>Welcome to LLmachine</h1>
-        <p>Empowering AI and Data Science for Innovation and Research.</p>
-        <a href="#projects" class="cta-button">Explore My Work</a>
+        <h1 class="typing-text">Welcome to LLmachine</h1>
+        <p class="ai-intro">Empowering AI and Data Science for Innovation and Research.</p>
+        
+         <div class="ai-dashboard">
+            <h3>AI Dashboard Insights</h3>
+            <p>📊 Deep Learning Accuracy: <span id="ai-accuracy">97.8%</span></p>
+            <p>🤖 AI Models Trained: <span id="ai-models">1,203</span></p>
+            <p>💾 Data Processed: <span id="ai-data">5TB+</span></p>
+        </div>
+
+        <div class="featured-projects">
+            <h2>Featured Machine Learning Projects</h2>
+            <div class="project-carousel">
+                <div class="project-card">
+                    <h3>🏥 Chest Cancer Detection</h3>
+                    <p>AI-powered early detection using CT scans.</p>
+                </div>
+                <div class="project-card">
+                    <h3>🔍 Adversarial Attack Analysis</h3>
+                    <p>Exploring AI security vulnerabilities.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- AI Chatbot -->
+        <div id="ai-chatbot">
+            <h3>💬 Ask AI</h3>
+            <input type="text" id="chat-input" placeholder="Ask about AI & Data Science...">
+            <button onclick="askAI()">Send</button>
+            <div id="chat-response"></div>
+        </div>
     </section>
+
 
     <!-- About Section -->
     <section id="about">
@@ -120,12 +149,24 @@
         <div id="articles-container">
         {% for post in site.posts %}
             <div class="blog-post">
-                <h3><a href="{{ post.url }}" class="blog-title">{{ post.title }}</a></h3>
-                <p class="blog-excerpt">{{ post.excerpt }}</p>
+                <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                <p>{{ post.excerpt }}</p>
             </div>
         {% endfor %}
     </div>
     </section>
+    <section id="blog">
+    <h2>Latest Articles</h2>
+    <div class="blog-post">
+        <h3><a href="articles/deep-learning-healthcare.html">Deep Learning in Healthcare</a></h3>
+        <p>An overview of how deep learning is transforming the healthcare industry.</p>
+    </div>
+    <div class="blog-post">
+        <h3><a href="articles/ai-business.html">AI in Business Analytics</a></h3>
+        <p>How AI and machine learning can optimize business decision-making.</p>
+    </div>
+</section>
+
 
     <!-- Footer -->
     <footer>
@@ -138,11 +179,11 @@
     <!-- JavaScript -->
     <script src="assets/js/script.js"></script>
     <script src="assets/js/script.js"></script>
+    <script src="assets/js/script.js"></script>
 
 </body>
 </html>
 
 
-</body>
-</html>
+
 

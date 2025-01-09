@@ -558,4 +558,94 @@ footer {
     margin-top: 5px;
     line-height: 1.5;
 }
+/* General Styling */
+body {
+    background: black;
+    color: white;
+    font-family: 'Arial', sans-serif;
+    text-align: center;
+}
+
+/* Typing Animation */
+.typing-text {
+    font-size: 2em;
+    font-weight: bold;
+    color: #4CAF50;
+    overflow: hidden;
+    border-right: 3px solid #4CAF50;
+    white-space: nowrap;
+    width: 0;
+    animation: typing 3s steps(40) forwards, blink 0.8s infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+
+    to {
+        width: 100%
+    }
+}
+
+@keyframes blink {
+    from, to {
+        border-color: transparent
+    }
+
+    50% {
+        border-color: #4CAF50
+    }
+}
+
+/* AI Dashboard */
+.ai-dashboard {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    border-radius: 8px;
+    width: 50%;
+    margin: auto;
+    font-size: 1.2em;
+}
+
+/* Project Carousel */
+.project-carousel {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.project-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    width: 40%;
+    transition: 0.3s;
+}
+
+    .project-card:hover {
+        background: rgba(255, 255, 255, 0.2);
+        transform: scale(1.05);
+    }
+
+/* AI Chatbot */
+#ai-chatbot {
+    margin-top: 20px;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    width: 50%;
+    margin: auto;
+    border-radius: 8px;
+}
+
+#chat-input {
+    padding: 10px;
+    width: 70%;
+}
+
+#chat-response {
+    margin-top: 10px;
+    color: #4CAF50;
+}
+
 
