@@ -66,14 +66,16 @@
             </div>
         </div>
 
-        <!-- AI Chatbot -->
-        <div id="ai-chatbot">
-            <h3>💬 Ask AI</h3>
-            <input type="text" id="chat-input" placeholder="Ask about AI & Data Science...">
-            <button onclick="askAI()">Send</button>
-            <div id="chat-response"></div>
-        </div>
-    </section>
+       <!-- Ask AI Section -->
+<section id="ask-ai">
+    <h2>Ask AI</h2>
+    <form id="ask-ai-form">
+        <input type="text" id="ask-ai-input" placeholder="Ask me anything..." required>
+        <button type="submit">Ask</button>
+    </form>
+    <div id="ai-response"></div> <!-- AI Response Output -->
+</section>
+
 
 
     <!-- About Section -->
