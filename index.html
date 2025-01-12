@@ -5,47 +5,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="LLmachine - Professional AI, Data Science & Analytics Services">
     <title>LLmachine</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
 </head>
+
 <body>
+
+    <!-- Include Navigation -->
+    {% include navigation.html %}
 
     <!-- Background Video -->
     <div id="background-animation">
         <video autoplay loop muted playsinline>
-            <source src="assets/videos/neural_network.mp4" type="video/mp4">
+            <source src="{{ site.baseurl }}/assets/videos/neural_network.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
     </div>
-
-    <!-- Navigation Menu -->
-    <nav>
-        <div id="logo-container">
-            <a href="index.html">
-                <img src="assets/images/logo.png" alt="LLmachine Logo" id="logo">
-            </a>
-        </div>
-        <ul>
-            <li><a href="#" onclick="showSection('home')">Home</a></li>
-            <li><a href="#" onclick="showSection('about')">About</a></li>
-            <li><a href="#" onclick="showSection('services')">Services</a></li>
-            <li><a href="#" onclick="showSection('projects')">Projects</a></li>
-            <li><a href="#" onclick="showSection('contact')">Contact</a></li>
-            <li><a href="#" onclick="showSection('blog')">Blog</a></li>
-        </ul>
-
-        <!-- Search Bar -->
-        <form id="search-form" onsubmit="return searchSite()">
-            <input type="text" id="search-input" placeholder="Search..." aria-label="Search">
-            <button type="submit">🔍</button>
-        </form>
-    </nav>
 
     <!-- Home Section -->
     <section id="home" class="hero">
         <h1 class="typing-text">Welcome to LLmachine</h1>
         <p class="ai-intro">Empowering AI and Data Science for Innovation and Research.</p>
         
-         <div class="ai-dashboard">
+        <div class="ai-dashboard">
             <h3>AI Dashboard Insights</h3>
             <p>📊 Deep Learning Accuracy: <span id="ai-accuracy">97.8%</span></p>
             <p>🤖 AI Models Trained: <span id="ai-models">1,203</span></p>
@@ -65,79 +46,11 @@
                 </div>
             </div>
         </div>
-
-       <!-- Ask AI Section -->
-<section id="ask-ai">
-    <h2>Ask AI</h2>
-    <form id="ask-ai-form">
-        <input type="text" id="ask-ai-input" placeholder="Ask me anything..." required>
-        <button type="submit">Ask</button>
-    </form>
-    <div id="ai-response"></div> <!-- AI Response Output -->
-</section>
-
-
-
-    <!-- About Section -->
-    <section id="about">
-        <h2>About</h2>
-        <img src="assets/images/profile.jpg" alt="Lissan" id="profile-pic">
-        <p>
-            Expert in Data Science, AI, Machine Learning, PET/CT Imaging, and Google Advanced Analytics.
-            Passionate about leveraging data for impactful insights and business solutions.
-        </p>
-        <p>
-            📧 Email: <a href="mailto:kent.sew@gmail.com" style="color: #4CAF50;">kent.sew@gmail.com</a><br>
-            🔗 LinkedIn: <a href="https://www.linkedin.com/in/lissan-analytic" target="_blank" style="color: #4CAF50;">Lissan Analytic</a>
-        </p>
     </section>
 
-    <!-- Services Section -->
-    <section id="services">
-        <h2>Services</h2>
-        <ul>
-        <li><a href="#" onclick="showServiceDetails('business-analytics')">Business Analytics</a></li>
-        <li><a href="#" onclick="showServiceDetails('data-entry')">Data Entry</a></li>
-        <li><a href="#" onclick="showServiceDetails('data-reporting')">Data Reporting</a></li>
-        <li><a href="#" onclick="showServiceDetails('strategic-planning')">Strategic Planning</a></li>
-        <li><a href="#" onclick="showServiceDetails('healthcare-consulting')">Healthcare Consulting</a></li>
-        <li><a href="#" onclick="showServiceDetails('financial-analysis')">Financial Analysis</a></li>
-        <li><a href="#" onclick="showServiceDetails('financial-reporting')">Financial Reporting</a></li>
-        <li><a href="#" onclick="showServiceDetails('market-research')">Market Research</a></li>
-        <li><a href="#" onclick="showServiceDetails('online-research')">Online Research</a></li>
-        </ul>
-         <div id="service-details"></div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2>Projects</h2>
-        <ul>
-            <li>
-                <a href="https://github.com/DataForSolution/Data-Solution/blob/Master/chest_ct_scan_Cancer_Detection_cnn.ipynb" target="_blank">
-                    Chest CT Scan Cancer Detection
-                </a>
-            </li>
-            <li>
-                <a href="https://github.com/DataForSolution/Data-Solution/blob/Master/Adversarial_Attacks.ipynb" target="_blank">
-                    Adversarial Attacks in Machine Learning
-                </a>
-            </li>
-            <li>
-                <a href="assets/documents/Chest_Cancer_Detection_Deep_Learning_CT_Scan.pdf" target="_blank">
-                    📄 Chest Cancer Detection Using Deep Learning on Chest CT-Scan Images (PDF)
-                </a>
-            </li>
-                <a href="projects/SVM_440.ipynb" target="_blank">
-                📊 Support Vector Machine (SVM) for Classification - Jupyter Notebook
-            </a>
-        </li>
-        <a href="https://github.com/DataForSolution/Data-Solution/blob/main/projects/SVM_440.ipynb" target="_blank">
-        📊 Support Vector Machine (SVM) for Classification - Jupyter Notebook
-    </a>
-</li>
-        </ul>
-    </section>
+    <!-- Include Other Sections -->
+    {% include services.html %}
+    {% include projects.html %}
 
     <!-- Contact Section -->
     <section id="contact">
@@ -153,30 +66,18 @@
         <p>💻 GitHub: <a href="https://github.com/DataForSolution" target="_blank">DataForSolution</a></p>
     </section>
 
-    <!-- Blog/Articles Section -->
+    <!-- Blog Section -->
     <section id="blog">
         <h2>Latest Articles</h2>
         <div id="articles-container">
-        {% for post in site.posts %}
-            <div class="blog-post">
-                <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-                <p>{{ post.excerpt }}</p>
-            </div>
-        {% endfor %}
-    </div>
+            {% for post in site.posts %}
+                <div class="blog-post">
+                    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+                    <p>{{ post.excerpt }}</p>
+                </div>
+            {% endfor %}
+        </div>
     </section>
-    <section id="blog">
-    <h2>Latest Articles</h2>
-    <div class="blog-post">
-        <h3><a href="articles/deep-learning-healthcare.html">Deep Learning in Healthcare</a></h3>
-        <p>An overview of how deep learning is transforming the healthcare industry.</p>
-    </div>
-    <div class="blog-post">
-        <h3><a href="articles/ai-business.html">AI in Business Analytics</a></h3>
-        <p>How AI and machine learning can optimize business decision-making.</p>
-    </div>
-</section>
-
 
     <!-- Footer -->
     <footer>
@@ -187,24 +88,7 @@
     </footer>
 
     <!-- JavaScript -->
-    <script src="assets/js/script.js"></script>
-    {% include services.html %}
-{% include projects.html %}
+    <script src="{{ site.baseurl }}/assets/js/script.js"></script>
 
-  <nav>
-    <ul>
-        <li><a href="{{ '/' | relative_url }}">Home</a></li>
-        <li><a href="{{ '/about/' | relative_url }}">About</a></li>
-        <li><a href="{{ '/services/' | relative_url }}">Services</a></li>
-        <li><a href="{{ '/projects/' | relative_url }}">Projects</a></li>
-        <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
-        <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
-    </ul>
-</nav>
-  
 </body>
 </html>
-
-
-
-
