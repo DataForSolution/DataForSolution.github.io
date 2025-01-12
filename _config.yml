@@ -37,10 +37,10 @@ markdown: kramdown
 collections:
   services:
     output: true
-    permalink: /services/:path/
+    permalink: /services/:name/
   projects:
     output: true
-    permalink: /projects/:path/
+    permalink: /projects/:name/
   blog:
     output: true
     permalink: /blog/
@@ -53,7 +53,7 @@ defaults:
   - scope:
       path: ""
     values:
-      layout: "home"
+      layout: "default"  # Ensure "default.html" is inside _layouts/
   - scope:
       path: "_posts"
     values:
@@ -79,14 +79,10 @@ defaults:
 exclude:
   - .sass-cache/
   - .jekyll-cache/
-  - gemfiles/
   - Gemfile
   - Gemfile.lock
   - node_modules/
-  - vendor/bundle/
-  - vendor/cache/
-  - vendor/gems/
-  - vendor/ruby/
+  - vendor/
 
 # Sass Settings
 sass:
