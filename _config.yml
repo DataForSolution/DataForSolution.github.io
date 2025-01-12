@@ -19,7 +19,7 @@ github_username: "Lissan"
 author:
   name: "Lissan Liben"
 
-# Build Settings
+# Theme and Build Settings
 theme: minima
 plugins:
   - jekyll-feed
@@ -28,12 +28,43 @@ plugins:
 
 # Pagination Settings
 paginate: 5  # Number of posts per page
+paginate_path: "/page:num/"
+
+# Permalinks
 permalink: pretty  # Use clean URLs (without .html extensions)
 
 # Markdown Processor
 markdown: kramdown
 
-# Exclude these files from Jekyll processing
+# Collections for Services and Projects
+collections:
+  services:
+    output: true
+    permalink: /services/:path/
+  projects:
+    output: true
+    permalink: /projects/:path/
+
+# Defaults (Ensuring Layouts are Applied)
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "home"
+  - scope:
+      path: "_posts"
+    values:
+      layout: "post"
+  - scope:
+      path: "services"
+    values:
+      layout: "page"
+  - scope:
+      path: "projects"
+    values:
+      layout: "page"
+
+# Exclude Unnecessary Files
 exclude:
   - .sass-cache/
   - .jekyll-cache/
@@ -45,12 +76,3 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
-
-# Future settings and plugins can be added here
-paginate_path: "/page:num/"
-defaults:
-  - scope:
-      path: ""
-    values:
-      layout: "home"
-
