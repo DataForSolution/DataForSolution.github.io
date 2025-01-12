@@ -47,3 +47,10 @@ exclude:
   - vendor/ruby/
 
 # Future settings and plugins can be added here
+paginate_path: "/page:num/"
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: "home"
+
