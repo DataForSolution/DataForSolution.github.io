@@ -24,19 +24,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Function to Show Selected Section
 function showSection(sectionId) {
-    // Hide only direct sections inside <body> to prevent breaking nested elements
-    document.querySelectorAll("body > section").forEach(section => {
-        section.style.display = "none";
+     document.querySelectorAll('section').forEach(section => {
+        section.style.display = 'none';  // Hide all sections
     });
 
     let selectedSection = document.getElementById(sectionId);
     if (selectedSection) {
-        selectedSection.style.display = "block";
-
-        // Smooth scroll to section with extra space for visibility
+        selectedSection.style.display = 'block';  // Show selected section
         window.scrollTo({
             top: selectedSection.offsetTop - 80, // Adjust for fixed menu
-            behavior: "smooth"
+            behavior: 'smooth'
         });
     }
 }

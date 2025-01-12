@@ -76,3 +76,28 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
+collections:
+  services:
+    output: true
+    permalink: /services/:path/
+  projects:
+    output: true
+    permalink: /projects/:path/
+
+defaults:
+  - scope:
+      path: "services"
+    values:
+      layout: "page"
+  - scope:
+      path: "projects"
+    values:
+      layout: "page"
+  - scope:
+      path: "blog"
+    values:
+      layout: "page"
+  - scope:
+      path: "contact"
+    values:
+      layout: "page"
