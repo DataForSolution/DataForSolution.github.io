@@ -8,18 +8,15 @@ description: >-
   engages with the data science community. Stay tuned for in-depth articles, 
   tutorials, and discussions.
 
-baseurl: "" # Leave empty if hosting at the root (GitHub Pages)
-url: "https://dataforsolution.github.io" # Ensure correct GitHub Pages URL
+# Base URL (Important for GitHub Pages)
+baseurl: ""  # Keep this empty if hosted at the root (GitHub Pages)
+url: "https://dataforsolution.github.io"  # Ensure correct GitHub Pages URL
 
 # Social Media Links
 twitter_username: "SewLiben"
 github_username: "Lissan"
 
-# Author Information
-author:
-  name: "Lissan Liben"
-
-# Theme and Build Settings
+# Theme and Plugins
 theme: minima
 plugins:
   - jekyll-feed
@@ -30,13 +27,13 @@ plugins:
 paginate: 5  # Number of posts per page
 paginate_path: "/page:num/"
 
-# Permalinks
-permalink: pretty  # Use clean URLs (without .html extensions)
+# Permalinks (Ensure Clean URLs)
+permalink: pretty
 
 # Markdown Processor
 markdown: kramdown
 
-# Collections for Services and Projects
+# Collections (For Custom Pages)
 collections:
   services:
     output: true
@@ -44,8 +41,14 @@ collections:
   projects:
     output: true
     permalink: /projects/:path/
+  blog:
+    output: true
+    permalink: /blog/
+  contact:
+    output: true
+    permalink: /contact/
 
-# Defaults (Ensuring Layouts are Applied)
+# Defaults (Ensure Correct Layouts)
 defaults:
   - scope:
       path: ""
@@ -63,8 +66,16 @@ defaults:
       path: "projects"
     values:
       layout: "page"
+  - scope:
+      path: "blog"
+    values:
+      layout: "page"
+  - scope:
+      path: "contact"
+    values:
+      layout: "page"
 
-# Exclude Unnecessary Files
+# Exclude Unnecessary Files from Build
 exclude:
   - .sass-cache/
   - .jekyll-cache/
@@ -76,47 +87,8 @@ exclude:
   - vendor/cache/
   - vendor/gems/
   - vendor/ruby/
-collections:
-  services:
-    output: true
-    permalink: /services/:path/
-  projects:
-    output: true
-    permalink: /projects/:path/
 
-# Permalink & Collections
-permalink: pretty
-collections:
-  services:
-    output: true
-    permalink: /services/
-  projects:
-    output: true
-    permalink: /projects/
-  blog:
-    output: true
-    permalink: /blog/
-  contact:
-    output: true
-    permalink: /contact/
-
-defaults:
-  - scope:
-      path: "services"
-    values:
-      layout: "page"
-  - scope:
-      path: "projects"
-    values:
-      layout: "page"
-  - scope:
-      path: "blog"
-    values:
-      layout: "page"
-  - scope:
-      path: "contact"
-    values:
-      layout: "page"
+# Sass Settings
 sass:
   sass_dir: _sass
   style: compressed
