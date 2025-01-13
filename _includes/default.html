@@ -3,22 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="LLmachine - AI, Data Science & Analytics">
-    <title>{{ page.title | default: "LLmachine" }}</title>
+    <meta name="description" content="LLmachine - Professional AI, Data Science & Analytics Services">
+    <title>{{ page.title }}</title>
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
 </head>
-
 <body>
 
+    <!-- Include Navigation -->
     {% include navigation.html %}
 
     <main>
         {{ content }}
     </main>
 
-    {% include services.html %}
-    {% include projects.html %}
-
+    <!-- Footer -->
     <footer>
         <p>&copy; 2024 LLmachine. Follow me on 
             <a href="https://twitter.com/SewLiben" target="_blank">Twitter</a> and 
@@ -27,5 +25,6 @@
     </footer>
 
     <script src="{{ site.baseurl }}/assets/js/script.js"></script>
+
 </body>
 </html>

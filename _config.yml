@@ -22,13 +22,14 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-paginate
+  - jekyll-sitemap  # ✅ Added for SEO optimization
 
 # Pagination Settings
 paginate: 5  # Number of posts per page
-paginate_path: "/page:num/"
+paginate_path: "/page:num/"  # Pagination URL structure
 
 # Permalinks (Ensure Clean URLs)
-permalink: pretty
+permalink: /:title/  # Removes .html extension for cleaner URLs
 
 # Markdown Processor
 markdown: kramdown
@@ -53,7 +54,7 @@ defaults:
   - scope:
       path: ""
     values:
-      layout: "default"  # Ensure "default.html" is inside _layouts/
+      layout: "default"  # Ensure "_layouts/default.html" exists
   - scope:
       path: "_posts"
     values:
@@ -69,7 +70,7 @@ defaults:
   - scope:
       path: "blog"
     values:
-      layout: "page"
+      layout: "blog"  # ✅ Ensure "_layouts/blog.html" exists
   - scope:
       path: "contact"
     values:
@@ -83,6 +84,7 @@ exclude:
   - Gemfile.lock
   - node_modules/
   - vendor/
+  - README.md
 
 # Sass Settings
 sass:

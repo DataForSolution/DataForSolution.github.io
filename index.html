@@ -1,3 +1,10 @@
+---
+layout: default
+title: Home
+pagination: 
+  enabled: true
+---
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -48,6 +55,29 @@
         </div>
     </section>
 
+    <!-- Blog Section with Pagination -->
+    <section id="blog">
+        <h2>Latest Articles</h2>
+        <div id="articles-container">
+            {% for post in paginator.posts %}
+                <div class="blog-post">
+                    <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                    <p>{{ post.excerpt }}</p>
+                </div>
+            {% endfor %}
+        </div>
+
+        <!-- Pagination Controls -->
+        <div class="pagination">
+            {% if paginator.previous_page %}
+                <a href="{{ paginator.previous_page_path | relative_url }}" class="prev">&larr; Previous</a>
+            {% endif %}
+            {% if paginator.next_page %}
+                <a href="{{ paginator.next_page_path | relative_url }}" class="next">Next &rarr;</a>
+            {% endif %}
+        </div>
+    </section>
+
     <!-- Include Other Sections -->
     {% include services.html %}
     {% include projects.html %}
@@ -64,19 +94,6 @@
         <p>📧 Email: <a href="mailto:kent.sew@gmail.com">kent.sew@gmail.com</a></p>
         <p>🔗 LinkedIn: <a href="https://www.linkedin.com/in/lissan-analytic" target="_blank">Lissan Analytic</a></p>
         <p>💻 GitHub: <a href="https://github.com/DataForSolution" target="_blank">DataForSolution</a></p>
-    </section>
-
-    <!-- Blog Section -->
-    <section id="blog">
-        <h2>Latest Articles</h2>
-        <div id="articles-container">
-            {% for post in site.posts %}
-                <div class="blog-post">
-                    <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-                    <p>{{ post.excerpt }}</p>
-                </div>
-            {% endfor %}
-        </div>
     </section>
 
     <!-- Footer -->
