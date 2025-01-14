@@ -3,6 +3,7 @@ layout: default
 title: Blog
 permalink: /blog/
 ---
+
 <h1>Latest Articles</h1>
 {% for post in site.posts %}
     <div>
