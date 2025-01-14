@@ -2,19 +2,11 @@
 title: "LLmachine"
 email: "kent.sew@gmail.com"
 description: >-
-  Welcome to the LLmachine website. This platform shares insights and 
-  advancements in data science, machine learning, data analysis, and 
-  visualization. It provides valuable resources, showcases projects, and 
-  engages with the data science community. Stay tuned for in-depth articles, 
-  tutorials, and discussions.
+  Welcome to LLmachine, your hub for AI, data science, and analytics.
+  Explore projects, insights, and professional research.
 
-# Base URL (Important for GitHub Pages)
-baseurl: ""  # Keep this empty if hosted at the root (GitHub Pages)
-url: "https://dataforsolution.github.io"  # Ensure correct GitHub Pages URL
-
-# Social Media Links
-twitter_username: "SewLiben"
-github_username: "Lissan"
+baseurl: ""  
+url: "https://dataforsolution.github.io"  
 
 # Theme and Plugins
 theme: minima
@@ -22,26 +14,22 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-paginate
-  - jekyll-sitemap  # ✅ Added for SEO optimization
 
 # Pagination Settings
-paginate: 5  # Number of posts per page
-paginate_path: "/page:num/"  # Pagination URL structure
-
-# Permalinks (Ensure Clean URLs)
-permalink: /:title/  # Removes .html extension for cleaner URLs
+paginate: 5  
+paginate_path: "/page:num/"  
 
 # Markdown Processor
 markdown: kramdown
 
-# Collections (For Custom Pages)
+# Collections
 collections:
   services:
     output: true
-    permalink: /services/:name/
+    permalink: /services/:path/
   projects:
     output: true
-    permalink: /projects/:name/
+    permalink: /projects/:path/
   blog:
     output: true
     permalink: /blog/
@@ -49,38 +37,7 @@ collections:
     output: true
     permalink: /contact/
 
-# Defaults (Ensure Correct Layouts)
-defaults:
-  - scope:
-      path: "about"
-    values:
-      layout: "page"
-  - scope:
-      path: ""
-    values:
-      layout: "default"  # Ensure "_layouts/default.html" exists
-  - scope:
-      path: "_posts"
-    values:
-      layout: "post"
-  - scope:
-      path: "services"
-    values:
-      layout: "page"
-  - scope:
-      path: "projects"
-    values:
-      layout: "page"
-  - scope:
-      path: "blog"
-    values:
-      layout: "blog"  # ✅ Ensure "_layouts/blog.html" exists
-  - scope:
-      path: "contact"
-    values:
-      layout: "page"
-
-# Exclude Unnecessary Files from Build
+# Exclusions
 exclude:
   - .sass-cache/
   - .jekyll-cache/
@@ -88,9 +45,3 @@ exclude:
   - Gemfile.lock
   - node_modules/
   - vendor/
-  - README.md
-
-# Sass Settings
-sass:
-  sass_dir: _sass
-  style: compressed

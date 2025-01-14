@@ -39,27 +39,7 @@ pagination:
             <p>🤖 AI Models Trained: <span id="ai-models">1,203</span></p>
             <p>💾 Data Processed: <span id="ai-data">5TB+</span></p>
         </div>
-
-        <div class="featured-projects">
-            <h2>Featured Machine Learning Projects</h2>
-            <div class="project-carousel">
-                <div class="project-card">
-                    <h3>🏥 Chest Cancer Detection</h3>
-                    <p>AI-powered early detection using CT scans.</p>
-                </div>
-                <div class="project-card">
-                    <h3>🔍 Adversarial Attack Analysis</h3>
-                    <p>Exploring AI security vulnerabilities.</p>
-                </div>
-            </div>
-        </div>
     </section>
-
-    <!-- Conditional Inclusion of Sections (Only on Homepage) -->
-    {% if page.url == "/" %}
-        {% include services.html %}
-        {% include projects.html %}
-    {% endif %}
 
 </body>
 
