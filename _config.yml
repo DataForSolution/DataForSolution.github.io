@@ -52,6 +52,10 @@ collections:
 # Defaults (Ensure Correct Layouts)
 defaults:
   - scope:
+      path: "about"
+    values:
+      layout: "page"
+  - scope:
       path: ""
     values:
       layout: "default"  # Ensure "_layouts/default.html" exists
