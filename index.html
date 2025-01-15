@@ -1,10 +1,3 @@
----
-layout: default
-title: Home
-pagination: 
-  enabled: true
----
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,16 +21,30 @@ pagination:
         </video>
     </div>
 
-    <!-- Home Section -->
-    <section id="home" class="hero">
+    <!-- Home Section (Properly Centered) -->
+    <section id="home">
         <h1 class="typing-text">Welcome to LLmachine</h1>
         <p class="ai-intro">Empowering AI and Data Science for Innovation and Research.</p>
-        
+
         <div class="ai-dashboard">
             <h3>AI Dashboard Insights</h3>
             <p>📊 Deep Learning Accuracy: <span id="ai-accuracy">97.8%</span></p>
             <p>🤖 AI Models Trained: <span id="ai-models">1,203</span></p>
             <p>💾 Data Processed: <span id="ai-data">5TB+</span></p>
+        </div>
+
+        <div class="featured-projects">
+            <h2>Featured Machine Learning Projects</h2>
+            <div class="project-carousel">
+                <div class="project-card">
+                    <h3>🏥 Chest Cancer Detection</h3>
+                    <p>AI-powered early detection using CT scans.</p>
+                </div>
+                <div class="project-card">
+                    <h3>🔍 Adversarial Attack Analysis</h3>
+                    <p>Exploring AI security vulnerabilities.</p>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -46,7 +53,5 @@ pagination:
 <!-- JavaScript -->
 <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
 
-<!-- CSS -->
-<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-
 </html>
+
