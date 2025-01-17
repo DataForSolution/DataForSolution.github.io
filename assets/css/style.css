@@ -11,6 +11,36 @@ nav {
     align-items: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+/* Navigation Bar Links */
+.nav-link {
+    text-decoration: none;
+    color: black;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 5px;
+}
+
+    .nav-link:hover {
+        color: white;
+        background-color: #007BFF; /* Blue hover */
+    }
+
+    .nav-link.active {
+        color: white;
+        background-color: #4CAF50; /* Green for active */
+    }
+
+/* Search Bar */
+input[type="text"] {
+    width: 200px;
+}
+
+button:hover {
+    opacity: 0.9;
+}
+
 
     nav ul {
         list-style: none;
