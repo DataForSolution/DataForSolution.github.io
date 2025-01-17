@@ -10,4 +10,6 @@ permalink: /blog/
         <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
         <p>{{ post.excerpt }}</p>
     </div>
+  {% include navigation.html %}
+
 {% endfor %}
