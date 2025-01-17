@@ -1,16 +1,57 @@
-﻿/* NAVIGATION BAR FIX */
+﻿/* NAVIGATION BAR */
 nav {
-    background-color: #222;
+    background-color: #222; /* Dark background for contrast */
     padding: 15px 20px;
     position: fixed;
     top: 0;
     width: 100%;
     z-index: 1000;
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* Space between logo and menu */
     align-items: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
+
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+        margin: 0;
+        padding: 0;
+    }
+
+        nav ul li {
+            display: inline;
+        }
+
+            nav ul li a {
+                text-decoration: none;
+                color: white;
+                font-size: 1.2em;
+                font-weight: bold;
+                padding: 10px 15px;
+                transition: all 0.3s ease-in-out;
+            }
+
+                nav ul li a:hover {
+                    color: #4CAF50; /* Green hover effect */
+                }
+
+    /* Logo Styling */
+    nav .logo {
+        font-size: 1.5em;
+        font-weight: bold;
+        color: white;
+        margin-right: 15px;
+        text-decoration: none;
+    }
+
+        nav .logo img {
+            height: 30px;
+            margin-right: 10px;
+            vertical-align: middle;
+        }
+
 /* Navigation Bar Links */
 .nav-link {
     text-decoration: none;
@@ -35,42 +76,36 @@ nav {
 /* Search Bar */
 input[type="text"] {
     width: 200px;
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
 }
 
-button:hover {
-    opacity: 0.9;
-}
-
-
-    nav ul {
-        list-style: none;
-        display: flex;
-        gap: 30px;
+    input[type="text"]:focus {
+        border-color: #007BFF;
     }
 
-        nav ul li {
-            display: inline;
-        }
+button {
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 5px 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
 
-            nav ul li a {
-                text-decoration: none;
-                color: white;
-                font-size: 1.2em;
-                font-weight: bold;
-                padding: 10px 15px;
-                transition: all 0.3s ease-in-out;
-            }
-
-                nav ul li a:hover {
-                    color: #4CAF50;
-                }
+    button:hover {
+        background-color: #0056b3; /* Darker blue on hover */
+    }
 
 /* ENSURE CONTENT BELOW MENU */
 body {
     padding-top: 80px;
 }
 
-/* SECTION FIX - ENSURE DETAILS SHOW UP */
+/* SECTIONS */
 section {
     display: block;
     padding: 60px 20px;
@@ -82,71 +117,12 @@ section {
     border-radius: 10px;
 }
 
-/* MAKE TEXT COLOR VISIBLE */
+/* TEXT STYLING */
 h1, h2, h3, p {
     color: white;
 }
 
-/* FIX SERVICE LIST VISIBILITY */
-#services ul li a {
-    color: lightgreen;
-    font-weight: bold;
-    transition: color 0.3s;
-}
-
-    #services ul li a:hover {
-        color: white;
-        background-color: #4CAF50;
-        padding: 10px;
-        border-radius: 5px;
-    }
-
-#service-details {
-    display: none;
-    margin-top: 20px;
-    padding: 15px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 8px;
-    font-size: 1.1em;
-    color: white;
-}
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-    section {
-        padding: 40px 10px;
-    }
-
-    .project-carousel {
-        flex-direction: column;
-    }
-
-    .project-card {
-        margin-bottom: 20px;
-    }
-
-    .cta-container {
-        flex-direction: column;
-        gap: 10px;
-    }
-
-
-@media (max-width: 480px) {
-    nav ul li a {
-        font-size: 1em;
-        padding: 8px 12px;
-    }
-
-    h1, h2, h3, p {
-        font-size: 1em;
-    }
-}
-
-/* Featured Project Carousel Styling */
+/* FEATURED PROJECT CAROUSEL */
 .project-carousel {
     display: flex;
     gap: 20px;
@@ -181,3 +157,38 @@ h1, h2, h3, p {
         line-height: 1.4;
     }
 
+/* MEDIA QUERIES FOR RESPONSIVENESS */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    section {
+        padding: 40px 10px;
+    }
+
+    .project-carousel {
+        flex-direction: column;
+    }
+
+    .project-card {
+        margin-bottom: 20px;
+    }
+
+    .cta-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav ul li a {
+        font-size: 1em;
+        padding: 8px 12px;
+    }
+
+    h1, h2, h3, p {
+        font-size: 1em;
+    }
+}

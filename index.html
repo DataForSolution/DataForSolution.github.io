@@ -4,10 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="LLmachine - Professional AI, Data Science & Analytics Services">
+    <meta name="keywords" content="AI, Data Science, Machine Learning, Analytics, LLmachine">
+    <meta name="author" content="LLmachine">
     <title>LLmachine</title>
+
+    <!-- Favicon -->
+    <link rel="icon" href="{{ '/assets/images/favicon.ico' | relative_url }}" type="image/x-icon">
+
+    <!-- CSS -->
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 </head>
-
 <body>
 
     <!-- Include Navigation -->
@@ -17,29 +23,36 @@
     <div id="background-animation">
         <video autoplay loop muted playsinline>
             <source src="{{ '/assets/videos/neural_network.mp4' | relative_url }}" type="video/mp4">
-            Your browser does not support the video tag.
+            <!-- Fallback image -->
+            <img src="{{ '/assets/images/video-fallback.jpg' | relative_url }}" alt="AI Neural Network Visualization">
         </video>
     </div>
 
-    <!-- Home Section (Properly Centered) -->
+    <!-- Home Section -->
     <section id="home">
         <h1 class="typing-text">Welcome to LLmachine</h1>
         <p class="ai-intro">Empowering AI and Data Science for Innovation and Research.</p>
 
+        <!-- AI Dashboard -->
         <div class="ai-dashboard">
             <h3>AI Dashboard Insights</h3>
-            <p>📊 Deep Learning Accuracy: <span id="ai-accuracy">97.8%</span></p>
-            <p>🤖 AI Models Trained: <span id="ai-models">1,203</span></p>
-            <p>💾 Data Processed: <span id="ai-data">5TB+</span></p>
+            <ul>
+                <li>📊 Deep Learning Accuracy: <span id="ai-accuracy">97.8%</span></li>
+                <li>🤖 AI Models Trained: <span id="ai-models">1,203</span></li>
+                <li>💾 Data Processed: <span id="ai-data">5TB+</span></li>
+            </ul>
         </div>
 
+        <!-- Featured Projects -->
         <div class="featured-projects">
             <h2>Featured Machine Learning Projects</h2>
             <div class="project-carousel">
+                <!-- Project Card 1 -->
                 <div class="project-card">
                     <h3>🏥 Chest Cancer Detection</h3>
                     <p>AI-powered early detection using CT scans.</p>
                 </div>
+                <!-- Project Card 2 -->
                 <div class="project-card">
                     <h3>🔍 Adversarial Attack Analysis</h3>
                     <p>Exploring AI security vulnerabilities.</p>
@@ -48,18 +61,12 @@
         </div>
     </section>
 
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 LLmachine. All Rights Reserved.</p>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
 </body>
-
-<!-- JavaScript -->
-<script src="{{ '/assets/js/script.js' | relative_url }}"></script>
-{% include navigation.html %}
-<link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-<script src="{{ '/assets/js/script.js' | relative_url }}"></script>
-<video autoplay loop muted playsinline>
-    <source src="{{ '/assets/videos/neural_network.mp4' | relative_url }}" type="video/mp4">
-</video>
-<link rel="icon" href="{{ '/assets/images/favicon.ico' | relative_url }}" type="image/x-icon">
-
-
 </html>
-
