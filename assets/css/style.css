@@ -80,3 +80,74 @@ h1, h2, h3, p {
     font-size: 1.1em;
     color: white;
 }
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    section {
+        padding: 40px 10px;
+    }
+
+    .project-carousel {
+        flex-direction: column;
+    }
+
+    .project-card {
+        margin-bottom: 20px;
+    }
+
+    .cta-container {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+
+@media (max-width: 480px) {
+    nav ul li a {
+        font-size: 1em;
+        padding: 8px 12px;
+    }
+
+    h1, h2, h3, p {
+        font-size: 1em;
+    }
+}
+
+/* Featured Project Carousel Styling */
+.project-carousel {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    padding: 20px;
+}
+
+.project-card {
+    flex: 0 0 300px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: left;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    scroll-snap-align: start;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+    .project-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+    }
+
+    .project-card h3 {
+        margin-bottom: 10px;
+        font-size: 1.2em;
+    }
+
+    .project-card p {
+        font-size: 1em;
+        line-height: 1.4;
+    }
+
