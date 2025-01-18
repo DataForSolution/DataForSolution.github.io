@@ -4,31 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="LLmachine - Professional AI, Data Science & Analytics Services">
+    <meta name="keywords" content="AI, Data Science, Machine Learning, Analytics, LLmachine">
+    <meta name="author" content="LLmachine">
     <title>{{ page.title }}</title>
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
-    <link rel="icon" href="{{ '/assets/images/favicon.ico' | relative_url }}" type="image/x-icon">
 
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+    
+    <!-- Favicon -->
+    <link rel="icon" href="{{ '/assets/images/favicon.ico' | relative_url }}" type="image/x-icon">
 </head>
 <body>
-
     <!-- Include Navigation -->
     {% include navigation.html %}
 
+    <!-- Main Content -->
     <main>
         {{ content }}
     </main>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 LLmachine. Follow me on 
-            <a href="https://twitter.com/SewLiben" target="_blank">Twitter</a> and 
-            <a href="https://github.com/DataForSolution" target="_blank">GitHub</a>.
+        <p>&copy; 2025 LLmachine. Follow me on 
+            <a href="https://twitter.com/SewLiben" target="_blank" rel="noopener noreferrer">Twitter</a> and 
+            <a href="https://github.com/DataForSolution" target="_blank" rel="noopener noreferrer">GitHub</a>.
         </p>
     </footer>
 
-    <script src="{{ site.baseurl }}/assets/js/script.js"></script>
-    {% include navigation.html %}
-
-
+    <!-- JavaScript -->
+    <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
 </body>
 </html>

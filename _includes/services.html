@@ -1,5 +1,9 @@
-{% if page.url == "/services/" %}
-<section id="services"> 
+---
+layout: default
+title: "Our Services"
+---
+
+<section id="services">
     <h2>Our Services</h2>
     <ul>
         <li><a href="#" onclick="showServiceDetails('business-analytics')">Business Analytics</a></li>
@@ -12,26 +16,32 @@
     </ul>
 
     <!-- Service Details Section -->
-    <div id="service-details"></div>
+    <div id="service-details" style="display: none; margin-top: 20px; padding: 10px; background-color: #f9f9f9; border: 1px solid #ddd; border-radius: 5px;">
+        <!-- Dynamic service details will appear here -->
+    </div>
 </section>
 
-<!-- JavaScript to Display Service Details -->
 <script>
-    function showServiceDetails(service) {
-        const details = {
-            "business-analytics": "We provide insights to drive business decisions with AI-driven data analysis.",
-            "data-entry": "Accurate and efficient data entry services to ensure reliable records.",
-            "data-reporting": "Custom data reports and visualization for effective decision-making.",
-            "strategic-planning": "Helping businesses align data strategies with business goals.",
-            "healthcare-consulting": "Providing AI-powered solutions for healthcare analytics and imaging.",
-            "financial-analysis": "Data-driven financial insights to optimize budgeting and investments.",
-            "market-research": "Market trend analysis and consumer behavior insights."
-        };
+    const serviceDescriptions = {
+        "business-analytics": "We provide insights to drive business decisions with AI-driven data analysis.",
+        "data-entry": "Accurate and efficient data entry services to ensure reliable records.",
+        "data-reporting": "Custom data reports and visualization for effective decision-making.",
+        "strategic-planning": "Helping businesses align data strategies with business goals.",
+        "healthcare-consulting": "Providing AI-powered solutions for healthcare analytics and imaging.",
+        "financial-analysis": "Data-driven financial insights to optimize budgeting and investments.",
+        "market-research": "Market trend analysis and consumer behavior insights."
+    };
 
-        document.getElementById("service-details").innerHTML = `<p>${details[service]}</p>`;
-        document.getElementById("service-details").style.display = "block";
+    function showServiceDetails(serviceId) {
+        const serviceDetailsDiv = document.getElementById("service-details");
+        
+        if (serviceDescriptions[serviceId]) {
+            serviceDetailsDiv.innerHTML = `<p>${serviceDescriptions[serviceId]}</p>`;
+            serviceDetailsDiv.style.display = "block";
+        } else {
+            serviceDetailsDiv.innerHTML = `<p>Details for this service are not available.</p>`;
+            serviceDetailsDiv.style.display = "block";
+            console.warn(`Service ID "${serviceId}" not found.`);
+        }
     }
-    {% include navigation.html %}
-
 </script>
-{% endif %}
