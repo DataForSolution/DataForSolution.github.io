@@ -13,23 +13,24 @@ section {
 
 /* SECTION-SPECIFIC STYLING */
 #about, #services, #projects, #blog, #faq, #contact {
-    background-color: #d4edda; /* Light gray/green background */
+    background-color: transparent; /* Background video remains visible */
 }
 
 #about h1, #services h1, #projects h1, #blog h1, #faq h1, #contact h1 {
     font-size: 2.5em;
     font-weight: bold;
-    color: #4CAF50; /* Green for headings */
+    color: #FFFFFF; /* Text floats over the background video */
     margin-bottom: 10px;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 #about p, #services p, #projects p, #blog p, #faq p, #contact p {
     font-size: 1.2em;
     line-height: 1.6;
-    color: #333;
+    color: #FFFFFF;
     max-width: 800px;
     text-align: justify;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
 }
 
 /* INTERACTIVITY */
@@ -51,7 +52,7 @@ section {
 .faq-item {
     margin-bottom: 15px;
     padding: 15px;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.8);
     border-radius: 10px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     cursor: pointer;
@@ -88,7 +89,7 @@ section {
 
 .service-card {
     width: 250px;
-    background-color: #fff;
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: 10px;
     padding: 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
@@ -143,7 +144,7 @@ section {
 
 /* FOOTER STYLING */
 footer {
-    background-color: #333;
+    background-color: rgba(0, 0, 0, 0.8);
     color: white;
     text-align: center;
     padding: 20px;
@@ -157,11 +158,11 @@ footer a {
 }
 
 footer a[href*="twitter.com"] {
-    color: #1DA1F2; /* Twitter Blue */
+    color: #1DA1F2;
 }
 
 footer a[href*="github.com"] {
-    color: #007BFF; /* Bright Blue for GitHub */
+    color: #007BFF;
 }
 
 footer a:hover {
