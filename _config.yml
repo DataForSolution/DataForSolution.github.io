@@ -15,6 +15,8 @@ plugins:
   - jekyll-seo-tag
   - jekyll-paginate
   - jekyll-include-cache  # Enables includes caching for better performance
+  - jekyll-sitemap         # Generates a sitemap for better SEO
+  - jekyll-assets          # Manages assets like CSS, JS, and images
 
 # Pagination Settings
 paginate: 5  
@@ -24,6 +26,9 @@ paginate_path: "/page:num/"
 markdown: kramdown
 kramdown:
   input: GFM # Enables GitHub-flavored markdown
+  hard_wrap: false
+  syntax_highlighter_opts:
+    line_numbers: true
 
 # Include and Exclude Paths
 include:
@@ -31,6 +36,7 @@ include:
   - _layouts
   - assets
   - .nojekyll
+  - favicon.ico
 
 exclude:
   - .sass-cache/
@@ -39,6 +45,7 @@ exclude:
   - Gemfile.lock
   - node_modules/
   - vendor/
+  - README.md
 
 # Collections
 collections:
@@ -51,11 +58,14 @@ collections:
   blog:
     output: true
     permalink: /blog/
+  faq:
+    output: true
+    permalink: /faq/:path/
   contact:
     output: true
     permalink: /contact/
 
-# Defaults (Optional)
+# Defaults
 defaults:
   - scope:
       path: ""
@@ -63,6 +73,38 @@ defaults:
     values:
       layout: "post"
       author: "LLmachine"
+  - scope:
+      path: "about"
+    values:
+      layout: "default"
+      title: "About LLmachine"
+  - scope:
+      path: "services"
+    values:
+      layout: "default"
+      title: "Our Services"
 
 # Permalinks
 permalink: pretty
+
+# Sitemap Configuration
+sitemap:
+  exclude:
+    - /404.html
+  include:
+    - /services/
+    - /projects/
+    - /blog/
+    - /faq/
+    - /contact/
+
+# SEO Defaults
+jekyll_seo_tag:
+  social:
+    twitter:
+      username: "SewLiben"
+    github:
+      username: "DataForSolution"
+
+# Performance Optimization
+cache: true

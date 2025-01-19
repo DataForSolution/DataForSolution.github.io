@@ -46,9 +46,29 @@ function showServiceDetails(serviceId) {
     }
 }
 
-// EVENT LISTENER FOR SERVICE SELECTION (OPTIONAL FEATURE)
+// EVENT LISTENER FOR SERVICE SELECTION
 document.addEventListener('click', (event) => {
     if (event.target && event.target.dataset.serviceId) {
         showServiceDetails(event.target.dataset.serviceId);
     }
+});
+
+// HIGHLIGHT ACTIVE MENU ITEM
+function highlightActiveMenuItem() {
+    const navLinks = document.querySelectorAll('.nav-link');
+    const currentPath = window.location.pathname;
+
+    navLinks.forEach(link => {
+        // Mark the link as active if the href matches the current path
+        if (link.getAttribute('href') === currentPath) {
+            link.classList.add('active');
+        } else {
+            link.classList.remove('active');
+        }
+    });
+}
+
+// RUN HIGHLIGHT FUNCTION ON PAGE LOAD
+document.addEventListener('DOMContentLoaded', () => {
+    highlightActiveMenuItem();
 });

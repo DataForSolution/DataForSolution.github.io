@@ -3,14 +3,92 @@ layout: default
 ---
 
 <article class="post">
-    <h1>{{ page.title }}</h1>
-    <p class="post-meta">Published on {{ page.date | date: "%B %d, %Y" }}</p>
+    <header class="post-header">
+        <h1>{{ page.title }}</h1>
+        <p class="post-meta">Published on {{ page.date | date: "%B %d, %Y" }}</p>
+    </header>
 
     <div class="post-content">
         {{ content }}
     </div>
 
-    <hr>
-
-    <p><a href="{{ site.baseurl }}/blog">← Back to Blog</a></p>
+    <footer class="post-footer">
+        <hr>
+        <p><a href="{{ site.baseurl }}/blog" class="back-to-blog-link">← Back to Blog</a></p>
+    </footer>
 </article>
+
+<style>
+    /* General Post Styling */
+    .post {
+        background-color: #fff;
+        padding: 40px 20px;
+        margin: 40px auto;
+        max-width: 800px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        font-family: 'Arial', sans-serif;
+        line-height: 1.6;
+    }
+
+    .post-header {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    .post-header h1 {
+        font-size: 2.5em;
+        color: #4CAF50; /* Green for headings */
+        margin-bottom: 10px;
+    }
+
+    .post-meta {
+        font-size: 1em;
+        color: #777;
+    }
+
+    .post-content {
+        margin-top: 20px;
+        font-size: 1.2em;
+        color: #333;
+    }
+
+    .post-content img {
+        max-width: 100%;
+        border-radius: 5px;
+        margin: 20px 0;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .post-footer {
+        margin-top: 40px;
+        text-align: center;
+    }
+
+    .back-to-blog-link {
+        text-decoration: none;
+        font-size: 1em;
+        color: #007BFF;
+        font-weight: bold;
+    }
+
+    .back-to-blog-link:hover {
+        color: #0056b3;
+        text-decoration: underline;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .post {
+            padding: 20px;
+        }
+
+        .post-header h1 {
+            font-size: 2em;
+        }
+
+        .post-content {
+            font-size: 1em;
+        }
+    }
+</style>

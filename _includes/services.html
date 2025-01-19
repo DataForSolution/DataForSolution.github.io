@@ -4,20 +4,61 @@ title: "Our Services"
 ---
 
 <section id="services">
-    <h2>Our Services</h2>
-    <ul>
-        <li><a href="#" onclick="showServiceDetails('business-analytics')">Business Analytics</a></li>
-        <li><a href="#" onclick="showServiceDetails('data-entry')">Data Entry</a></li>
-        <li><a href="#" onclick="showServiceDetails('data-reporting')">Data Reporting</a></li>
-        <li><a href="#" onclick="showServiceDetails('strategic-planning')">Strategic Planning</a></li>
-        <li><a href="#" onclick="showServiceDetails('healthcare-consulting')">Healthcare Consulting</a></li>
-        <li><a href="#" onclick="showServiceDetails('financial-analysis')">Financial Analysis</a></li>
-        <li><a href="#" onclick="showServiceDetails('market-research')">Market Research</a></li>
-    </ul>
+    <h1>Our Services</h1>
+    <p>Explore the comprehensive services we offer to drive your business forward with data and AI-powered insights.</p>
+
+    <!-- Services List -->
+    <div class="services-container">
+        <ul>
+            <li>
+                <a href="#" class="service-link" data-service-id="business-analytics">
+                    <img src="{{ '/assets/images/business-analytics.png' | relative_url }}" alt="Business Analytics" class="service-icon">
+                    <span>Business Analytics</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="service-link" data-service-id="data-entry">
+                    <img src="{{ '/assets/images/data-entry.png' | relative_url }}" alt="Data Entry" class="service-icon">
+                    <span>Data Entry</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="service-link" data-service-id="data-reporting">
+                    <img src="{{ '/assets/images/data-reporting.png' | relative_url }}" alt="Data Reporting" class="service-icon">
+                    <span>Data Reporting</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="service-link" data-service-id="strategic-planning">
+                    <img src="{{ '/assets/images/strategic-planning.png' | relative_url }}" alt="Strategic Planning" class="service-icon">
+                    <span>Strategic Planning</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="service-link" data-service-id="healthcare-consulting">
+                    <img src="{{ '/assets/images/healthcare-consulting.png' | relative_url }}" alt="Healthcare Consulting" class="service-icon">
+                    <span>Healthcare Consulting</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="service-link" data-service-id="financial-analysis">
+                    <img src="{{ '/assets/images/financial-analysis.png' | relative_url }}" alt="Financial Analysis" class="service-icon">
+                    <span>Financial Analysis</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="service-link" data-service-id="market-research">
+                    <img src="{{ '/assets/images/market-research.png' | relative_url }}" alt="Market Research" class="service-icon">
+                    <span>Market Research</span>
+                </a>
+            </li>
+        </ul>
+    </div>
 
     <!-- Service Details Section -->
-    <div id="service-details" style="display: none; margin-top: 20px; padding: 10px; background-color: #f9f9f9; border: 1px solid #ddd; border-radius: 5px;">
+    <div id="service-details" class="service-details">
         <!-- Dynamic service details will appear here -->
+        <p>Select a service to see details.</p>
     </div>
 </section>
 
@@ -32,16 +73,117 @@ title: "Our Services"
         "market-research": "Market trend analysis and consumer behavior insights."
     };
 
-    function showServiceDetails(serviceId) {
-        const serviceDetailsDiv = document.getElementById("service-details");
-        
-        if (serviceDescriptions[serviceId]) {
-            serviceDetailsDiv.innerHTML = `<p>${serviceDescriptions[serviceId]}</p>`;
-            serviceDetailsDiv.style.display = "block";
-        } else {
-            serviceDetailsDiv.innerHTML = `<p>Details for this service are not available.</p>`;
-            serviceDetailsDiv.style.display = "block";
-            console.warn(`Service ID "${serviceId}" not found.`);
+    document.addEventListener('click', (event) => {
+        if (event.target.closest('.service-link')) {
+            const serviceId = event.target.closest('.service-link').dataset.serviceId;
+            const serviceDetailsDiv = document.getElementById("service-details");
+            
+            if (serviceDescriptions[serviceId]) {
+                serviceDetailsDiv.innerHTML = `<h3>${event.target.closest('.service-link').textContent.trim()}</h3>
+                                               <p>${serviceDescriptions[serviceId]}</p>`;
+                serviceDetailsDiv.style.display = "block";
+            } else {
+                serviceDetailsDiv.innerHTML = `<p>Details for this service are not available.</p>`;
+                serviceDetailsDiv.style.display = "block";
+                console.warn(`Service ID "${serviceId}" not found.`);
+            }
+            event.preventDefault();
+        }
+    });
+</script>
+
+<style>
+    /* General Styling */
+    #services {
+        background-color: #d4edda; /* Light gray/green background */
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    #services h1 {
+        font-size: 2.5em;
+        font-weight: bold;
+        color: #4CAF50; /* Green for headings */
+        margin-bottom: 20px;
+    }
+
+    #services p {
+        font-size: 1.2em;
+        margin-bottom: 40px;
+        color: #333;
+    }
+
+    .services-container ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .services-container li {
+        flex: 0 1 calc(33.333% - 20px); /* Three items per row */
+        text-align: center;
+    }
+
+    .service-link {
+        text-decoration: none;
+        color: #333;
+        display: block;
+        transition: transform 0.3s ease;
+    }
+
+    .service-link:hover {
+        transform: scale(1.05); /* Slight zoom on hover */
+    }
+
+    .service-icon {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        margin-bottom: 10px;
+        border: 3px solid #4CAF50;
+        transition: transform 0.3s ease, border-color 0.3s ease;
+    }
+
+    .service-icon:hover {
+        border-color: #007BFF; /* Blue on hover */
+        transform: scale(1.1);
+    }
+
+    .service-details {
+        margin-top: 40px;
+        padding: 20px;
+        background-color: #fff;
+        border: 1px solid #ddd;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .service-details h3 {
+        font-size: 1.5em;
+        color: #4CAF50;
+    }
+
+    /* Responsive Design */
+    @media (max-width: 768px) {
+        .services-container li {
+            flex: 0 1 calc(50% - 20px); /* Two items per row on smaller screens */
+        }
+
+        .service-icon {
+            width: 80px;
+            height: 80px;
+        }
+
+        .service-details {
+            width: 90%;
         }
     }
-</script>
+</style>
