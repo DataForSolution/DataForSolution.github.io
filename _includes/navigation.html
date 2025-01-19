@@ -1,5 +1,5 @@
 <nav style="background-color: #f0f0f0; padding: 10px 20px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);" role="navigation" aria-label="Main Navigation">
-    <div style="display: flex; align-items: center; justify-content: space-between;">
+    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
         <!-- Left Section: Logo and Name -->
         <div style="display: flex; align-items: center;">
             <img src="{{ '/assets/images/favicon.ico' | relative_url }}" alt="LLmachine Logo" style="height: 30px; margin-right: 10px;">
@@ -7,7 +7,7 @@
         </div>
 
         <!-- Center Section: Menu Links -->
-        <ul style="list-style: none; display: flex; gap: 20px; margin: 0; padding: 0;">
+        <ul style="list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; flex-wrap: wrap;">
             <li><a href="{{ '/' | relative_url }}" class="nav-link {% if page.url == '/' %}active{% endif %}">Home</a></li>
             <li><a href="{{ '/about/' | relative_url }}" class="nav-link {% if page.url == '/about/' %}active{% endif %}">About</a></li>
             <li><a href="{{ '/services/' | relative_url }}" class="nav-link {% if page.url == '/services/' %}active{% endif %}">Services</a></li>
@@ -18,7 +18,7 @@
         </ul>
 
         <!-- Right Section: Search Bar -->
-        <div style="display: flex; align-items: center;">
+        <div style="display: flex; align-items: center; flex-wrap: wrap;">
             <input type="text" placeholder="Search" aria-label="Search" style="padding: 5px; border: 1px solid #ccc; border-radius: 5px; margin-right: 5px;">
             <button style="background-color: #007BFF; color: white; border: none; border-radius: 5px; padding: 5px 10px; cursor: pointer;">Search</button>
         </div>
@@ -27,7 +27,7 @@
 
 <!-- Styles for Enhanced Navigation -->
 <style>
-    /* General Navigation Link Styling */
+    /* General Navigation Styling */
     .nav-link {
         color: black;
         font-size: 1.1em;
@@ -48,7 +48,7 @@
         background-color: #4CAF50; /* Green for active */
     }
 
-    /* Search Bar Enhancements */
+    /* Search Bar */
     input[type="text"] {
         padding: 5px 10px;
         border: 1px solid #ccc;

@@ -26,7 +26,7 @@ paginate: true
     {% include navigation.html %}
 
     <!-- Background Video -->
-    <div id="background-animation">
+    <div id="background-animation" aria-label="Background animation">
         <video autoplay loop muted playsinline>
             <source src="{{ '/assets/videos/neural_network.mp4' | relative_url }}" type="video/mp4">
             <!-- Fallback image -->
@@ -64,7 +64,6 @@ paginate: true
                         <h3>🔍 Adversarial Attack Analysis</h3>
                         <p>Exploring AI security vulnerabilities.</p>
                     </div>
-                    <!-- Add More Projects If Needed -->
                 </div>
             </div>
         </div>
@@ -72,11 +71,11 @@ paginate: true
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2025 LLmachine. All Rights Reserved.</p>
+        <p>&copy; {{ "now" | date: "%Y" }} LLmachine. All Rights Reserved.</p>
         <p>
             Follow us on 
-            <a href="https://twitter.com/SewLiben" target="_blank">Twitter</a> and 
-            <a href="https://github.com/DataForSolution" target="_blank">GitHub</a>.
+            <a href="https://twitter.com/SewLiben" target="_blank" style="color: #1DA1F2; text-decoration: none;">Twitter</a> and 
+            <a href="https://github.com/DataForSolution" target="_blank" style="color: #6e5494; text-decoration: none;">GitHub</a>.
         </p>
     </footer>
 
