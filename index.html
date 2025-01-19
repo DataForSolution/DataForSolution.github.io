@@ -4,82 +4,53 @@ title: "Home"
 paginate: true
 ---
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="LLmachine - Professional AI, Data Science & Analytics Services">
-    <meta name="keywords" content="AI, Data Science, Machine Learning, Analytics, LLmachine">
-    <meta name="author" content="LLmachine">
-    <title>LLmachine</title>
+<section id="background-animation" aria-label="Background animation">
+    <video autoplay loop muted playsinline>
+        <source src="{{ '/assets/videos/neural_network.mp4' | relative_url }}" type="video/mp4">
+        <!-- Fallback image -->
+        <img src="{{ '/assets/images/video-fallback.jpg' | relative_url }}" alt="AI Neural Network Visualization">
+    </video>
+</section>
 
-    <!-- Favicon -->
-    <link rel="icon" href="{{ '/assets/images/favicon.ico' | relative_url }}" type="image/x-icon">
+<section id="home">
+    <div id="overlay-content">
+        <h1 class="typing-text">Welcome to LLmachine</h1>
+        <p class="ai-intro">Empowering AI and Data Science for Innovation and Research.</p>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-</head>
-<body>
+        <!-- AI Dashboard -->
+        <div class="ai-dashboard">
+            <h3>AI Dashboard Insights</h3>
+            <ul>
+                <li>📊 <strong>Deep Learning Accuracy:</strong> <span id="ai-accuracy">97.8%</span></li>
+                <li>🤖 <strong>AI Models Trained:</strong> <span id="ai-models">1,203</span></li>
+                <li>💾 <strong>Data Processed:</strong> <span id="ai-data">5TB+</span></li>
+            </ul>
+        </div>
 
-    <!-- Include Navigation -->
-    {% include navigation.html %}
-
-    <!-- Background Video -->
-    <div id="background-animation" aria-label="Background animation">
-        <video autoplay loop muted playsinline>
-            <source src="{{ '/assets/videos/neural_network.mp4' | relative_url }}" type="video/mp4">
-            <!-- Fallback image -->
-            <img src="{{ '/assets/images/video-fallback.jpg' | relative_url }}" alt="AI Neural Network Visualization">
-        </video>
-    </div>
-
-    <!-- Home Section -->
-    <section id="home">
-        <div id="overlay-content">
-            <h1 class="typing-text">Welcome to LLmachine</h1>
-            <p class="ai-intro">Empowering AI and Data Science for Innovation and Research.</p>
-
-            <!-- AI Dashboard -->
-            <div class="ai-dashboard">
-                <h3>AI Dashboard Insights</h3>
-                <ul>
-                    <li>📊 <strong>Deep Learning Accuracy:</strong> <span id="ai-accuracy">97.8%</span></li>
-                    <li>🤖 <strong>AI Models Trained:</strong> <span id="ai-models">1,203</span></li>
-                    <li>💾 <strong>Data Processed:</strong> <span id="ai-data">5TB+</span></li>
-                </ul>
-            </div>
-
-            <!-- Featured Projects -->
-            <div class="featured-projects">
-                <h2>Featured Machine Learning Projects</h2>
-                <div class="project-carousel">
-                    <!-- Project Card 1 -->
-                    <div class="project-card">
-                        <h3>🏥 Chest Cancer Detection</h3>
-                        <p>AI-powered early detection using CT scans.</p>
-                    </div>
-                    <!-- Project Card 2 -->
-                    <div class="project-card">
-                        <h3>🔍 Adversarial Attack Analysis</h3>
-                        <p>Exploring AI security vulnerabilities.</p>
-                    </div>
+        <!-- Featured Projects -->
+        <div class="featured-projects">
+            <h2>Featured Machine Learning Projects</h2>
+            <div class="project-carousel">
+                <!-- Project Card 1 -->
+                <div class="project-card">
+                    <h3>🏥 Chest Cancer Detection</h3>
+                    <p>AI-powered early detection using CT scans.</p>
+                </div>
+                <!-- Project Card 2 -->
+                <div class="project-card">
+                    <h3>🔍 Adversarial Attack Analysis</h3>
+                    <p>Exploring AI security vulnerabilities.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
-    <!-- Footer -->
-    <footer>
-        <p>&copy; {{ "now" | date: "%Y" }} LLmachine. All Rights Reserved.</p>
-        <p>
-            Follow us on 
-            <a href="https://twitter.com/SewLiben" target="_blank" style="color: #1DA1F2; text-decoration: none;">Twitter</a> and 
-            <a href="https://github.com/DataForSolution" target="_blank" style="color: #6e5494; text-decoration: none;">GitHub</a>.
-        </p>
-    </footer>
-
-    <!-- JavaScript -->
-    <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
-</body>
-</html>
+<footer>
+    <p>&copy; {{ "now" | date: "%Y" }} LLmachine. All Rights Reserved.</p>
+    <p>
+        Follow us on 
+        <a href="https://twitter.com/SewLiben" target="_blank" style="color: #1DA1F2; text-decoration: none;">Twitter</a> and 
+        <a href="https://github.com/DataForSolution" target="_blank" style="color: #6e5494; text-decoration: none;">GitHub</a>.
+    </p>
+</footer>
