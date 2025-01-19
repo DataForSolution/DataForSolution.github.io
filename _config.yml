@@ -35,6 +35,7 @@ include:
   - _includes
   - _layouts
   - assets
+  - assets/documents # Ensure this directory is included
   - .nojekyll
   - favicon.ico
 
