@@ -34,6 +34,7 @@ kramdown:
 include:
   - _includes
   - _layouts
+  - _projects # Include the Projects directory for collections
   - assets
   - assets/documents # Ensure this directory is included
   - .nojekyll
@@ -84,6 +85,11 @@ defaults:
     values:
       layout: "default"
       title: "Our Services"
+  - scope:
+      path: "projects"
+    values:
+      layout: "default"
+      title: "Our Projects"
 
 # Permalinks
 permalink: pretty
