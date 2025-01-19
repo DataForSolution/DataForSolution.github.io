@@ -11,7 +11,7 @@ permalink: /projects/
     <!-- Projects List -->
     <div class="projects-list">
         <div class="project-card">
-            <h2>Chest CT Scan Cancer Detection</h2>
+            <h2>🏥 Chest CT Scan Cancer Detection</h2>
             <p>AI-powered early detection using CT scans.</p>
             <a href="https://github.com/DataForSolution/Data-Solution/blob/main/chest_ct_scan_Cancer_Detection_cnn.ipynb" 
                target="_blank" class="project-link">
@@ -19,11 +19,27 @@ permalink: /projects/
             </a>
         </div>
         <div class="project-card">
-            <h2>Adversarial Attacks in Machine Learning</h2>
+            <h2>🔍 Adversarial Attacks in Machine Learning</h2>
             <p>Exploring AI security vulnerabilities and model robustness.</p>
             <a href="https://github.com/DataForSolution/Data-Solution/blob/main/Adversarial_Attacks.ipynb" 
                target="_blank" class="project-link">
                 View Project
+            </a>
+        </div>
+        <div class="project-card">
+            <h2>📊 Support Vector Machine (SVM) for Classification</h2>
+            <p>High-accuracy classification using Support Vector Machines in machine learning.</p>
+            <a href="https://github.com/DataForSolution/Data-Solution/blob/main/projects/SVM_440.ipynb" 
+               target="_blank" class="project-link">
+                View Project
+            </a>
+        </div>
+        <div class="project-card">
+            <h2>📄 Chest Cancer Detection Documentation</h2>
+            <p>A detailed PDF report on deep learning applications for lung cancer detection using CT scans.</p>
+            <a href="{{ '/assets/documents/Chest_Cancer_Detection_Deep_Learning_CT_Scan.pdf' | relative_url }}" 
+               target="_blank" class="project-link">
+                View Document
             </a>
         </div>
     </div>
