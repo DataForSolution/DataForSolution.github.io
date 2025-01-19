@@ -250,26 +250,18 @@ section {
         object-fit: cover;
     }
 
-/* ABOUT PAGE STYLING */
+/* ABOUT PAGE */
 #about {
     background-color: #d4edda; /* Light green background */
     padding: 100px 20px;
-    min-height: 100vh; /* Make sure the section covers the entire page height */
+    min-height: 100vh; /* Full-page height */
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     text-align: center;
     color: #333; /* Dark text for readability */
     font-family: 'Arial', sans-serif;
-}
-
-#profile-section {
-    background: rgba(255, 255, 255, 0.8); /* Slightly transparent white box */
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Soft shadow for depth */
-    max-width: 800px;
-    text-align: center;
 }
 
 /* Profile Picture Styling */
@@ -300,6 +292,7 @@ section {
     font-size: 1.2em;
     line-height: 1.6;
     color: #333;
+    max-width: 800px;
 }
 
 /* Hover Effects for Interactivity */
@@ -319,21 +312,17 @@ section {
         padding: 60px 20px;
     }
 
-    #profile-section {
-        padding: 20px;
-    }
+        #about h1 {
+            font-size: 2em;
+        }
 
-    #about h1 {
-        font-size: 2em;
-    }
+        #about h2 {
+            font-size: 1.2em;
+        }
 
-    #about h2 {
-        font-size: 1.2em;
-    }
-
-    #about p {
-        font-size: 1em;
-    }
+        #about p {
+            font-size: 1em;
+        }
 }
 
 
