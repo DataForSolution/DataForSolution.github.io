@@ -19,18 +19,27 @@
     <!-- Navigation Bar -->
     {% include navigation.html %}
 
+    <!-- Hero Section -->
+    {% if page.title == "Home" %}
+    <header style="background-color: #4CAF50; color: white; padding: 50px 20px; text-align: center;">
+        <h1 style="font-size: 2.5em; font-weight: bold;">Welcome to LLmachine</h1>
+        <p style="font-size: 1.2em; margin-top: 10px;">Your hub for AI, Data Science, and Analytics</p>
+    </header>
+    {% endif %}
+
     <!-- Main Content -->
-    <main>
+    <main style="padding: 20px; margin: auto; max-width: 1200px;">
         {{ content }}
     </main>
 
     <!-- Footer -->
-    <footer style="background-color: #222; color: white; text-align: center; padding: 20px 10px; margin-top: 20px;">
+    <footer style="background-color: #333; color: white; text-align: center; padding: 20px 10px; margin-top: 40px; font-size: 0.9em;">
         <p>&copy; {{ "now" | date: "%Y" }} LLmachine. All Rights Reserved.</p>
-        <p>Follow me on 
-            <a href="https://twitter.com/SewLiben" target="_blank" style="color: #1DA1F2; text-decoration: none;">Twitter</a> and 
-            <a href="https://github.com/DataForSolution" target="_blank" style="color: #6e5494; text-decoration: none;">GitHub</a>.
-        </p>
+        <div style="margin: 10px 0;">
+            <a href="https://twitter.com/SewLiben" target="_blank" style="color: #1DA1F2; text-decoration: none; margin: 0 10px;">Twitter</a>
+            <a href="https://github.com/DataForSolution" target="_blank" style="color: #6e5494; text-decoration: none; margin: 0 10px;">GitHub</a>
+        </div>
+        <p>Designed with ❤️ by LLmachine.</p>
     </footer>
 
     <!-- JavaScript -->
