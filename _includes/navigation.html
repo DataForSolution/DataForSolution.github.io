@@ -14,18 +14,20 @@
             <li><a href="{{ '/projects/' | relative_url }}" class="nav-link {% if page.url == '/projects/' %}active{% endif %}">Projects</a></li>
             <li><a href="{{ '/contact/' | relative_url }}" class="nav-link {% if page.url == '/contact/' %}active{% endif %}">Contact</a></li>
             <li><a href="{{ '/blog/' | relative_url }}" class="nav-link {% if page.url == '/blog/' %}active{% endif %}">Blog</a></li>
+            <li><a href="{{ '/faq/' | relative_url }}" class="nav-link {% if page.url == '/faq/' %}active{% endif %}">FAQ</a></li>
         </ul>
 
         <!-- Right Section: Search Bar -->
         <div style="display: flex; align-items: center;">
             <input type="text" placeholder="Search" aria-label="Search" style="padding: 5px; border: 1px solid #ccc; border-radius: 5px; margin-right: 5px;">
-            <button style="background-color: blue; color: white; border: none; border-radius: 5px; padding: 5px 10px; cursor: pointer;">Search</button>
+            <button style="background-color: #007BFF; color: white; border: none; border-radius: 5px; padding: 5px 10px; cursor: pointer;">Search</button>
         </div>
     </div>
 </nav>
 
-<!-- Styles for Active Links -->
+<!-- Styles for Enhanced Navigation -->
 <style>
+    /* General Navigation Link Styling */
     .nav-link {
         color: black;
         font-size: 1.1em;
@@ -46,6 +48,34 @@
         background-color: #4CAF50; /* Green for active */
     }
 
+    /* Search Bar Enhancements */
+    input[type="text"] {
+        padding: 5px 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        outline: none;
+        transition: border-color 0.3s ease-in-out;
+    }
+
+    input[type="text"]:focus {
+        border-color: #007BFF;
+    }
+
+    button {
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+    }
+
+    button:hover {
+        background-color: #0056b3; /* Darker blue */
+    }
+
+    /* Mobile Responsiveness */
     @media (max-width: 768px) {
         nav div {
             flex-direction: column;
