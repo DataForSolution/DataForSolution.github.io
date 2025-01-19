@@ -1,0 +1,84 @@
+---
+layout: page
+title: "FAQ"
+permalink: /faq/
+---
+
+<section id="faq">
+    <h1>Frequently Asked Questions</h1>
+    <p>Here are some of the most common questions we receive, along with their answers:</p>
+
+    <div class="faq-list">
+        <div class="faq-item">
+            <h2>What is LLmachine?</h2>
+            <div class="faq-answer">
+                <p>LLmachine is a platform dedicated to providing AI, Data Science, and Analytics services to businesses and individuals.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <h2>How can I contact LLmachine?</h2>
+            <div class="faq-answer">
+                <p>You can reach out to us through our <a href="/contact/">Contact page</a> or via email at <a href="mailto:kent.sew@gmail.com">kent.sew@gmail.com</a>.</p>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <h2>What services do you offer?</h2>
+            <div class="faq-answer">
+                <p>We offer a range of services, including Business Analytics, Data Entry, Data Reporting, Strategic Planning, Healthcare Consulting, and Financial Analysis.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style>
+    /* FAQ Page Styling */
+    #faq {
+        padding: 50px 20px;
+        text-align: center;
+        background-color: #d4edda; /* Light gray/green background */
+    }
+
+    .faq-list {
+        text-align: left;
+        max-width: 800px;
+        margin: auto;
+    }
+
+    .faq-item {
+        margin-bottom: 20px;
+        padding: 15px;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: background-color 0.3s, transform 0.3s;
+    }
+
+    .faq-item:hover {
+        background-color: #4CAF50;
+        color: white;
+        transform: scale(1.02);
+    }
+
+    .faq-answer {
+        display: none;
+        margin-top: 10px;
+        color: #333;
+    }
+
+    .faq-item.active .faq-answer {
+        display: block;
+    }
+</style>
+
+<script>
+    // FAQ Toggle Logic
+    document.addEventListener('click', (e) => {
+        const faqItem = e.target.closest('.faq-item');
+        if (faqItem) {
+            faqItem.classList.toggle('active');
+        }
+    });
+</script>
