@@ -72,3 +72,12 @@ function highlightActiveMenuItem() {
 document.addEventListener('DOMContentLoaded', () => {
     highlightActiveMenuItem();
 });
+// Ensure YouTube iframe is responsive and centered
+document.addEventListener("DOMContentLoaded", function () {
+    const iframe = document.querySelector(".youtube-embed-container iframe");
+    if (iframe) {
+        iframe.style.display = "block";
+        iframe.style.margin = "0 auto";
+    }
+});
+
