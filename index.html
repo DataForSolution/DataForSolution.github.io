@@ -1,3 +1,35 @@
+---
+layout: default
+title: "Home"
+paginate: true
+---
+
+<section id="home-content">
+    <h1>Welcome to LLmachine</h1>
+    <p>Empowering AI and Data Science for Innovation and Research.</p>
+
+    <!-- Paginator Loop -->
+    {% if paginator %}
+    <ul class="posts">
+        {% for post in paginator.posts %}
+        <li>
+            <a href="{{ post.url }}">{{ post.title }}</a>
+            <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
+        </li>
+        {% endfor %}
+    </ul>
+
+    <div class="pagination">
+        {% if paginator.previous_page %}
+        <a href="{{ paginator.previous_page_path }}">Previous</a>
+        {% endif %}
+        {% if paginator.next_page %}
+        <a href="{{ paginator.next_page_path }}">Next</a>
+        {% endif %}
+    </div>
+    {% endif %}
+</section>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
