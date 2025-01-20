@@ -4,32 +4,6 @@ title: "Home"
 paginate: true
 ---
 
-<section id="home-content">
-    <h1>Welcome to LLmachine</h1>
-    <p>Empowering AI and Data Science for Innovation and Research.</p>
-
-    <!-- Paginator Loop -->
-    {% if paginator %}
-    <ul class="posts">
-        {% for post in paginator.posts %}
-        <li>
-            <a href="{{ post.url }}">{{ post.title }}</a>
-            <span class="post-date">{{ post.date | date: "%B %d, %Y" }}</span>
-        </li>
-        {% endfor %}
-    </ul>
-
-    <div class="pagination">
-        {% if paginator.previous_page %}
-        <a href="{{ paginator.previous_page_path }}">Previous</a>
-        {% endif %}
-        {% if paginator.next_page %}
-        <a href="{{ paginator.next_page_path }}">Next</a>
-        {% endif %}
-    </div>
-    {% endif %}
-</section>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -54,60 +28,29 @@ paginate: true
 </head>
 <body>
 
+<!-- Navigation -->
+<nav>
+    <!-- Add your navigation bar code here -->
+</nav>
+
 <!-- Background Video Section -->
 <section id="background-animation" aria-label="Background animation">
     <video autoplay loop muted playsinline>
         <source src="{{ '/assets/videos/neural_network.mp4' | relative_url }}" type="video/mp4">
         <img src="{{ '/assets/images/video-fallback.jpg' | relative_url }}" alt="AI Neural Network Visualization">
     </video>
+</section>
 
-    <!-- Home Content Overlay -->
-    <div id="home-content">
-        <h1 class="typing-text">Welcome to LLmachine</h1>
-        <p class="ai-intro">Empowering AI and Data Science for Innovation and Research.</p>
-
-        <!-- AI Dashboard -->
-        <div class="ai-dashboard">
-            <h3>AI Dashboard Insights</h3>
-            <ul>
-                <li>📊 <strong>Deep Learning Accuracy:</strong> <span id="ai-accuracy">97.8%</span></li>
-                <li>🤖 <strong>AI Models Trained:</strong> <span id="ai-models">1,203</span></li>
-                <li>💾 <strong>Data Processed:</strong> <span id="ai-data">5TB+</span></li>
-            </ul>
-       <!-- YouTube Video Embed Section -->
-<div class="youtube-embed-container">
-    <iframe 
-        src="https://www.youtube.com/embed/jbkSRLYSojo" 
-        title="YouTube video player" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen>
-    </iframe>
-</div>
-
-<!-- Link to YouTube Channel -->
-<div class="youtube-link">
-    <a href="https://www.youtube.com/channel/UCz0xOXtt7qg3mS3ElsZDWOA" target="_blank" class="youtube-button">
-        Visit our YouTube Channel
-    </a>
-</div>
-
-       
-
-        <!-- Featured Projects -->
-        <div class="featured-projects">
-            <h2>Featured Machine Learning Projects</h2>
-            <div class="project-carousel">
-                <div class="project-card">
-                    <h3>🏥 Chest Cancer Detection</h3>
-                    <p>AI-powered early detection using CT scans.</p>
-                </div>
-                <div class="project-card">
-                    <h3>🔍 Adversarial Attack Analysis</h3>
-                    <p>Exploring AI security vulnerabilities.</p>
-                </div>
-            </div>
-        </div>
+<!-- YouTube Video Embed Section -->
+<section id="home-content" class="youtube-section">
+    <div class="youtube-embed-container" style="position: absolute; top: 20px; right: 20px;">
+        <iframe 
+            src="https://www.youtube.com/embed/jbkSRLYSojo" 
+            title="YouTube video player" 
+            frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+            allowfullscreen>
+        </iframe>
     </div>
 </section>
 
@@ -124,7 +67,7 @@ paginate: true
 <!-- JavaScript -->
 <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
 <script>
-    // Analytics Integration
+    // Google Analytics Integration
     (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
     (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)

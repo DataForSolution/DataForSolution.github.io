@@ -43,6 +43,7 @@ section {
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7); /* Shadow for better contrast */
 }
 
+/* PROJECT CARD */
 .project-card {
     background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent for visibility */
     color: white;
@@ -59,21 +60,21 @@ section {
 
 /* YOUTUBE EMBED STYLING */
 .youtube-embed-container {
-    position: relative;
-    width: 100%;
-    max-width: 800px; /* Adjust the size of the YouTube video container */
-    margin: 30px auto; /* Center the video */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Shadow for better visibility */
-    border-radius: 10px; /* Rounded corners */
+    position: absolute; /* Align to top-right corner */
+    top: 20px;
+    right: 20px;
+    max-width: 800px; /* Center the video on the page */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Shadow for visibility */
+    border-radius: 10px; /* Rounded corners for a polished look */
     overflow: hidden;
-    background-color: rgba(0, 0, 0, 0.8); /* Background color if video is not loading */
+    background-color: rgba(0, 0, 0, 0.8); /* Fallback background color */
 }
 
 .youtube-embed-container iframe {
     width: 100%;
-    height: 450px; /* Adjust height based on the aspect ratio */
+    height: 450px; /* Standard aspect ratio */
     border: none;
-    border-radius: 10px;
+    border-radius: 10px; /* Match the container's rounded corners */
 }
 
 /* BUTTON TO YOUTUBE CHANNEL */
@@ -143,4 +144,14 @@ footer a:hover {
         font-size: 1em;
         padding: 10px 20px;
     }
+}
+
+/* BUTTON HOVER ANIMATION */
+button, .youtube-button {
+    transition: transform 0.2s, box-shadow 0.3s ease-in-out;
+}
+
+button:hover, .youtube-button:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    transform: scale(1.1);
 }
