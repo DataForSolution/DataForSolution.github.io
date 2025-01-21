@@ -19,15 +19,9 @@ permalink: /contact/
                LinkedIn
             </a>.
         </p>
-    </div>
+    
 
-    <!-- Contact Information -->
-    <div class="contact-details">
-        <p><strong>Email:</strong> <a href="mailto:kent.sew@gmail.com" class="contact-link">kent.sew@gmail.com</a></p>
-        <p><strong>GitHub:</strong> <a href="https://github.com/DataForSolution" target="_blank" class="contact-link">DataForSolution</a></p>
-    </div>
-
-    <form id="contact-form" action="#" method="POST">
+     <form id="contact-form" action="#" method="POST">
         <h2>Send Us a Message</h2>
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
