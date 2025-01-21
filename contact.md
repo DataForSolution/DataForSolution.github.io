@@ -11,7 +11,7 @@ permalink: /contact/
     <div class="profile-section">
         <img src="{{ '/assets/images/lissan-profile.jpg' | relative_url }}" alt="Lissan's Profile Picture" class="profile-pic">
         <h2>Lissan</h2>
-        <p>AI & Data Science, Nuclear Medicine, Data Analyist</p>
+        <p>AI & Data Science, Nuclear Medicine, Data Analyst</p>
         <p>
             Let's connect on 
             <a href="https://www.linkedin.com/in/lissan-analytic?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bd17iurqvQ0SBEBUQxrMHXw%3D%3D" 
@@ -22,8 +22,6 @@ permalink: /contact/
     </div>
 
     <!-- Contact Information -->
-    <p>Email: <a href="mailto:kent.sew@gmail.com">kent.sew@gmail.com</a></p>
-    <p>GitHub: <a href="https://github.com/DataForSolution" target="_blank">DataForSolution</a></p>
     <div class="contact-details">
         <p><strong>Email:</strong> <a href="mailto:kent.sew@gmail.com" class="contact-link">kent.sew@gmail.com</a></p>
         <p><strong>GitHub:</strong> <a href="https://github.com/DataForSolution" target="_blank" class="contact-link">DataForSolution</a></p>
