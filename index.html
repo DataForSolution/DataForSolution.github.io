@@ -33,17 +33,11 @@ paginate: true
     <!-- Add your navigation bar code here -->
 </nav>
 
-<!-- Chat Interface Section -->
-<div id="chat-section" style="margin: 20px auto; text-align: center;">
-    <h2>Chat with Us</h2>
-    <div class="chat-container" style="display: inline-block; width: 300px; border: 1px solid #ccc; border-radius: 10px; padding: 15px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);">
-        <div id="messages" style="max-height: 300px; overflow-y: auto; border: 1px solid #ddd; border-radius: 5px; padding: 10px; margin-bottom: 10px; height: 200px;"></div>
-        <div class="input-container" style="display: flex; gap: 10px;">
-            <input type="text" id="userInput" placeholder="Type your message here..." style="flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 5px;">
-            <button onclick="sendMessage()" style="padding: 10px 15px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">Send</button>
-        </div>
-    </div>
-</div>
+<!-- Hero Section -->
+<section id="hero">
+    <h1>Welcome to LLmachine</h1>
+    <p>Your go-to solution for AI and Data Science projects</p>
+</section>
 
 <!-- Background Video Section -->
 <section id="background-animation" aria-label="Background animation">
@@ -51,6 +45,27 @@ paginate: true
         <source src="{{ '/assets/videos/neural_network.mp4' | relative_url }}" type="video/mp4">
         <img src="{{ '/assets/images/video-fallback.jpg' | relative_url }}" alt="AI Neural Network Visualization">
     </video>
+</section>
+
+<!-- Features Section -->
+<section id="features">
+    <div id="search-feature">
+        <h2>Search Our Site</h2>
+        <form id="menu-search-form">
+            <input id="menu-search-input" type="text" placeholder="Search...">
+            <button type="submit">Search</button>
+        </form>
+    </div>
+    <div id="chatbot-feature">
+        <h2>Chat With Us</h2>
+        <div class="chat-container">
+            <div id="messages"></div>
+            <div class="input-container">
+                <input type="text" id="userInput" placeholder="Type your message here...">
+                <button onclick="sendMessage()">Send</button>
+            </div>
+        </div>
+    </div>
 </section>
 
 <!-- JavaScript -->
