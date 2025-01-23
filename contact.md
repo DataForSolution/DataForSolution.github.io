@@ -6,22 +6,31 @@ permalink: /contact/
 
 <section id="contact">
     <h1>Contact Us</h1>
-    <p>Have questions or want to collaborate? Feel free to reach out to us via email or connect with us on GitHub.</p>
+    <p>
+        Have questions or want to collaborate? Feel free to reach out to us via email, 
+        or connect with us on LinkedIn or GitHub. We're excited to hear from you!
+    </p>
+    
     <!-- Profile Section -->
     <div class="profile-section">
         <img src="{{ '/assets/images/lissan-profile.jpg' | relative_url }}" alt="Lissan's Profile Picture" class="profile-pic">
         <h2>Lissan</h2>
-        <p>AI & Data Science, Nuclear Medicine, Data Analyst</p>
+        <p>AI & Data Science | Nuclear Medicine | Data Analyst</p>
         <p>
             Let's connect on 
-            <a href="https://www.linkedin.com/in/lissan-analytic?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3Bd17iurqvQ0SBEBUQxrMHXw%3D%3D" 
-               target="_blank">
+            <a href="https://www.linkedin.com/in/lissan-analytic" 
+               target="_blank" class="contact-link">
                LinkedIn
+            </a> or check out my projects on 
+            <a href="https://github.com/DataForSolution" 
+               target="_blank" class="contact-link">
+               GitHub
             </a>.
         </p>
-    
+    </div>
 
-     <form id="contact-form" action="#" method="POST">
+    <!-- Contact Form -->
+    <form id="contact-form" action="#" method="POST">
         <h2>Send Us a Message</h2>
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
@@ -30,60 +39,85 @@ permalink: /contact/
     </form>
 </section>
 
+<!-- Styles for Contact Section -->
 <style>
     /* Contact Section Styling */
     #contact {
-        background-color: #d4edda; /* Light gray/green background */
+        background-color: #f9f9f9;
         padding: 50px 20px;
         text-align: center;
+        color: #333;
     }
 
     #contact h1 {
         font-size: 2.5em;
         font-weight: bold;
-        color: #4CAF50; /* Green for headings */
+        color: #4CAF50;
         margin-bottom: 20px;
     }
 
     #contact p {
         font-size: 1.2em;
-        margin-bottom: 40px;
-        color: #333;
-    }
-
-    .contact-details p {
-        font-size: 1.2em;
-        margin: 10px 0;
+        margin-bottom: 20px;
+        line-height: 1.6;
     }
 
     .contact-link {
-        color: #007BFF; /* Blue for links */
+        color: #007BFF;
         text-decoration: none;
         font-weight: bold;
     }
 
     .contact-link:hover {
         text-decoration: underline;
+        color: #0056b3;
     }
 
-    /* Contact Form Styling */
+    /* Profile Section */
+    .profile-section {
+        margin: 30px auto;
+        text-align: center;
+    }
+
+    .profile-pic {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 5px solid #4CAF50;
+        margin-bottom: 15px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .profile-section h2 {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+    }
+
+    .profile-section p {
+        font-size: 1.2em;
+        margin-bottom: 15px;
+    }
+
+    /* Contact Form */
     #contact-form {
         background-color: #fff;
         padding: 30px;
         border-radius: 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         max-width: 600px;
-        margin: 20px auto 0;
+        margin: 20px auto;
         text-align: left;
     }
 
     #contact-form h2 {
         font-size: 1.8em;
-        color: #4CAF50; /* Green for heading */
+        color: #4CAF50;
         margin-bottom: 20px;
     }
 
-    #contact-form input, #contact-form textarea {
+    #contact-form input,
+    #contact-form textarea {
         width: 100%;
         padding: 10px;
         margin-bottom: 15px;
@@ -97,8 +131,9 @@ permalink: /contact/
         height: 100px;
     }
 
-    #contact-form input:focus, #contact-form textarea:focus {
-        border-color: #007BFF; /* Blue focus border */
+    #contact-form input:focus,
+    #contact-form textarea:focus {
+        border-color: #4CAF50;
         outline: none;
     }
 
@@ -115,17 +150,18 @@ permalink: /contact/
     }
 
     #contact-form button:hover {
-        background-color: #007BFF; /* Blue on hover */
+        background-color: #007BFF;
     }
 
     /* Responsive Design */
     @media (max-width: 768px) {
-        #contact {
-            padding: 30px 20px;
-        }
-
         #contact h1 {
             font-size: 2em;
+        }
+
+        .profile-pic {
+            width: 120px;
+            height: 120px;
         }
 
         #contact-form {

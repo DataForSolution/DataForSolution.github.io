@@ -16,16 +16,20 @@
             <li><a href="{{ '/blog/' | relative_url }}" class="nav-link {% if page.url == '/blog/' %}active{% endif %}">Blog</a></li>
             <li><a href="{{ '/faq/' | relative_url }}" class="nav-link {% if page.url == '/faq/' %}active{% endif %}">FAQ</a></li>
             <li><a href="/media/">Media</a></li>
-
         </ul>
 
         <!-- Right Section: Search Bar -->
         <div style="display: flex; align-items: center; flex-wrap: wrap;">
-            <input type="text" placeholder="Search" aria-label="Search" style="padding: 5px; border: 1px solid #ccc; border-radius: 5px; margin-right: 5px;">
-            <button style="background-color: #007BFF; color: white; border: none; border-radius: 5px; padding: 5px 10px; cursor: pointer;">Search</button>
+            <form id="menu-search-form" style="display: flex; align-items: center;">
+                <input type="text" id="menu-search-input" placeholder="Search" aria-label="Search" style="padding: 5px; border: 1px solid #ccc; border-radius: 5px; margin-right: 5px;">
+                <button type="submit" style="background-color: #007BFF; color: white; border: none; border-radius: 5px; padding: 5px 10px; cursor: pointer;">Search</button>
+            </form>
         </div>
     </div>
 </nav>
+
+<!-- Search Results Container -->
+<div id="search-results" style="display: none; position: absolute; top: 60px; right: 20px; width: 300px; background-color: #222; color: white; border-radius: 5px; padding: 15px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); z-index: 1000;"></div>
 
 <!-- Styles for Enhanced Navigation -->
 <style>
@@ -75,6 +79,16 @@
 
     button:hover {
         background-color: #0056b3; /* Darker blue */
+    }
+
+    /* Search Results */
+    #search-results a {
+        color: #4CAF50;
+        text-decoration: none;
+    }
+
+    #search-results a:hover {
+        color: white;
     }
 
     /* Mobile Responsiveness */
