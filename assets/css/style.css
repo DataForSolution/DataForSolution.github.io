@@ -12,40 +12,31 @@ section {
     background-color: transparent; /* Ensure transparency */
 }
 
-/* BACKGROUND VIDEO SECTION */
-#background-animation {
-    position: relative;
-    width: 100%;
-    height: 100vh; /* Full-page height */
-    overflow: hidden;
+/* BACKGROUND IMAGE STYLING */
+body {
+    background: url('/assets/images/background.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: white;
 }
 
-#background-animation video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover; /* Ensures the video fills the entire area */
-}
-
-#background-animation::before {
+body::before {
     content: '';
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay for better text readability */
-    z-index: 1;
+    background: rgba(0, 0, 0, 0.4); /* Overlay for better readability */
+    z-index: -1;
 }
 
 /* PURPOSE SECTION */
 #purpose {
     text-align: center;
     padding: 50px 20px;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: transparent; /* Remove white background */
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for better readability */
 }
 
 #purpose h1 {
@@ -62,8 +53,10 @@ section {
 /* ENGAGEMENT SECTION */
 #engagement {
     padding: 50px 20px;
-    background-color: #fff;
+    background-color: transparent; /* Remove white background */
     text-align: center;
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for better readability */
 }
 
 #engagement h2 {
@@ -79,12 +72,12 @@ section {
 }
 
 .engagement-card {
-    background: #f9f9f9;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black for contrast */
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     padding: 20px;
     max-width: 300px;
     text-align: center;
+    color: white; /* Ensure text visibility */
 }
 
 .engagement-card h3 {
@@ -95,11 +88,6 @@ section {
 
 .engagement-card p {
     margin-bottom: 15px;
-    color: #555;
-}
-
-.engagement-card form {
-    margin-top: 10px;
 }
 
 .engagement-card input[type="email"] {
@@ -128,8 +116,9 @@ section {
 #visual-design {
     text-align: center;
     padding: 50px 20px;
-    background-color: #f4f4f4;
-    color: #333;
+    background-color: transparent; /* Remove white background */
+    color: white;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7); /* Add shadow for better readability */
 }
 
 #visual-design h2 {
@@ -160,46 +149,6 @@ section {
 .cta-button:hover {
     background-color: #007BFF;
     transform: scale(1.05);
-}
-
-/* SEARCH BAR STYLING */
-#menu-search-form {
-    display: flex;
-    align-items: center;
-    margin-left: 20px;
-}
-
-#menu-search-input {
-    padding: 10px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1em;
-    color: #333;
-    width: 250px;
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-#menu-search-input:focus {
-    border-color: #4CAF50;
-    box-shadow: 0 4px 8px rgba(76, 175, 80, 0.3); /* Light green glow */
-    outline: none;
-}
-
-#menu-search-form button {
-    background: #4CAF50; /* Green button */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    margin-left: 5px;
-    cursor: pointer;
-    font-size: 1em;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-#menu-search-form button:hover {
-    background: #45a049; /* Darker green on hover */
-    transform: scale(1.1);
 }
 
 /* RESPONSIVE DESIGN */
