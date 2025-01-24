@@ -40,6 +40,128 @@ section {
     z-index: 1;
 }
 
+/* PURPOSE SECTION */
+#purpose {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+#purpose h1 {
+    font-size: 2.5em;
+    color: #4CAF50;
+    margin-bottom: 20px;
+}
+
+#purpose p {
+    font-size: 1.2em;
+    line-height: 1.6;
+}
+
+/* ENGAGEMENT SECTION */
+#engagement {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+#engagement h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+.engagement-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.engagement-card {
+    background: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    text-align: center;
+}
+
+.engagement-card h3 {
+    font-size: 1.5em;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.engagement-card p {
+    margin-bottom: 15px;
+    color: #555;
+}
+
+.engagement-card form {
+    margin-top: 10px;
+}
+
+.engagement-card input[type="email"] {
+    width: 80%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.engagement-card button {
+    padding: 10px 15px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.engagement-card button:hover {
+    background-color: #007BFF;
+}
+
+/* VISUAL DESIGN SECTION */
+#visual-design {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+#visual-design h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+.design-preview {
+    margin-top: 20px;
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* CTA BUTTON */
+.cta-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #4CAF50;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.cta-button:hover {
+    background-color: #007BFF;
+    transform: scale(1.05);
+}
+
 /* SEARCH BAR STYLING */
 #menu-search-form {
     display: flex;
@@ -80,152 +202,14 @@ section {
     transform: scale(1.1);
 }
 
-#menu-search-form button:active {
-    transform: scale(0.95); /* Pressed effect */
-}
-
-/* SEARCH RESULTS CONTAINER */
-#search-results {
-    position: absolute;
-    top: 60px;
-    right: 20px;
-    width: 300px;
-    background-color: #222; /* Match dark theme */
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-    overflow-y: auto; /* Scroll if results overflow */
-    max-height: 400px; /* Limit height */
-    display: none; /* Hidden by default */
-}
-
-#search-results p {
-    color: white;
-    margin: 10px 0;
-    font-size: 0.9em;
-}
-
-#search-results a {
-    color: #4CAF50;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
-
-#search-results a:hover {
-    color: white;
-}
-
-/* NO RESULTS MESSAGE */
-#search-results p.no-results {
-    color: lightgray;
-    text-align: center;
-}
-
-/* CONTACT SECTION */
-#contact {
-    background-color: #f9f9f9; /* Light background */
-    padding: 50px 20px;
-    text-align: center;
-    color: #333; /* Text color */
-}
-
-#contact h1 {
-    font-size: 2.5em;
-    font-weight: bold;
-    color: #4CAF50; /* Green for heading */
-    margin-bottom: 20px;
-}
-
-#contact p {
-    font-size: 1.2em;
-    margin-bottom: 20px;
-    line-height: 1.6;
-}
-
-/* Profile Section */
-.profile-section {
-    margin: 30px auto;
-    text-align: center;
-}
-
-.profile-pic {
-    width: 150px;
-    height: 150px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 5px solid #4CAF50; /* Green border */
-    margin-bottom: 15px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Subtle shadow */
-}
-
-.profile-section h2 {
-    font-size: 1.8em;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.profile-section p {
-    font-size: 1.2em;
-    margin-bottom: 15px;
-}
-
-/* Contact Form */
-#contact-form {
-    background-color: #fff;
-    padding: 30px;
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
-    margin: 20px auto;
-    text-align: left;
-}
-
-#contact-form h2 {
-    font-size: 1.8em;
-    color: #4CAF50; /* Green for heading */
-    margin-bottom: 20px;
-}
-
-#contact-form input,
-#contact-form textarea {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 15px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    font-size: 1em;
-}
-
-#contact-form textarea {
-    resize: none;
-    height: 100px;
-}
-
-#contact-form input:focus,
-#contact-form textarea:focus {
-    border-color: #4CAF50;
-    outline: none;
-}
-
-#contact-form button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
-    font-size: 1em;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 100%;
-}
-
-#contact-form button:hover {
-    background-color: #007BFF; /* Blue on hover */
-}
-
 /* RESPONSIVE DESIGN */
 @media (max-width: 768px) {
+    #purpose h1,
+    #engagement h2,
+    #visual-design h2 {
+        font-size: 1.8em;
+    }
+
     #menu-search-input {
         width: 200px;
         font-size: 0.9em;
@@ -236,26 +220,7 @@ section {
         padding: 8px 12px;
     }
 
-    #search-results {
-        width: 90%; /* Use full width on smaller screens */
-        left: 5%;
-        right: 5%;
-    }
-
-    #contact h1 {
-        font-size: 2em;
-    }
-
-    .profile-pic {
-        width: 120px;
-        height: 120px;
-    }
-
-    #contact-form {
-        padding: 20px;
-    }
-
-    #background-animation {
-        height: 60vh; /* Adjust height for smaller screens */
+    .design-preview {
+        width: 100%;
     }
 }
