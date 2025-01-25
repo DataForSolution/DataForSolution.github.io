@@ -1,11 +1,11 @@
 ---
 layout: default
-title: "Contact Us"
+title: "Contact & Portfolio"
 permalink: /contact/
 ---
 
 <section id="contact">
-    <h1>Contact Us</h1>
+    <h1>Contact & Portfolio</h1>
     <p>
         Have questions or want to collaborate? Feel free to reach out to us via email, 
         or connect with us on LinkedIn or GitHub. We're excited to hear from you!
@@ -30,53 +30,62 @@ permalink: /contact/
     </div>
 
     <!-- Contact Form -->
-    <form id="contact-form" action="#" method="POST">
-        <h2>Send Us a Message</h2>
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <textarea name="message" placeholder="Your Message" required></textarea>
-        <button type="submit">Submit</button>
-    </form>
+    <div class="contact-form">
+        <h2>Send Me a Message</h2>
+        <form action="https://formsubmit.co/your-email@example.com" method="POST">
+            <input type="text" name="name" placeholder="Your Name" required>
+            <input type="email" name="email" placeholder="Your Email" required>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
 </section>
 
-<!-- Styles for Contact Section -->
+<section id="portfolio">
+    <h2>My Portfolio</h2>
+    <p>Explore a curated selection of my data science and AI projects. Use the filters to browse by category.</p>
+
+    <!-- Filter Buttons -->
+    <div class="portfolio-filters">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="machine-learning">Machine Learning</button>
+        <button class="filter-btn" data-category="ai">AI</button>
+        <button class="filter-btn" data-category="data-visualization">Data Visualization</button>
+    </div>
+
+    <!-- Portfolio Grid -->
+    <div class="portfolio-grid">
+        <div class="portfolio-item" data-category="machine-learning">
+            <h3>Project 1: Predictive Modeling</h3>
+            <p><strong>Accuracy:</strong> 95%</p>
+            <p><strong>Dataset Size:</strong> 10,000 rows</p>
+            <p><strong>Insights:</strong> Achieved significant prediction accuracy using advanced regression models.</p>
+        </div>
+        <div class="portfolio-item" data-category="ai">
+            <h3>Project 2: Chatbot Development</h3>
+            <p><strong>Accuracy:</strong> 92%</p>
+            <p><strong>Dataset Size:</strong> 5,000 intents</p>
+            <p><strong>Insights:</strong> Built an AI-powered conversational agent for customer support.</p>
+        </div>
+        <div class="portfolio-item" data-category="data-visualization">
+            <h3>Project 3: Interactive Dashboard</h3>
+            <p><strong>Metrics:</strong> Real-time data integration</p>
+            <p><strong>Insights:</strong> Designed a dashboard with dynamic filtering for decision-making.</p>
+        </div>
+        <div class="portfolio-item" data-category="machine-learning">
+            <h3>Project 4: Classification Models</h3>
+            <p><strong>Accuracy:</strong> 90%</p>
+            <p><strong>Dataset Size:</strong> 15,000 rows</p>
+            <p><strong>Insights:</strong> Applied advanced classification techniques for business predictions.</p>
+        </div>
+    </div>
+</section>
+
 <style>
-    /* Contact Section Styling */
-    #contact {
-        background-color: #f9f9f9;
-        padding: 50px 20px;
-        text-align: center;
-        color: #333;
-    }
-
-    #contact h1 {
-        font-size: 2.5em;
-        font-weight: bold;
-        color: #4CAF50;
-        margin-bottom: 20px;
-    }
-
-    #contact p {
-        font-size: 1.2em;
-        margin-bottom: 20px;
-        line-height: 1.6;
-    }
-
-    .contact-link {
-        color: #007BFF;
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-    .contact-link:hover {
-        text-decoration: underline;
-        color: #0056b3;
-    }
-
     /* Profile Section */
     .profile-section {
-        margin: 30px auto;
         text-align: center;
+        margin: 30px auto;
     }
 
     .profile-pic {
@@ -89,35 +98,19 @@ permalink: /contact/
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
     }
 
-    .profile-section h2 {
-        font-size: 1.8em;
-        margin-bottom: 10px;
-    }
-
-    .profile-section p {
-        font-size: 1.2em;
-        margin-bottom: 15px;
-    }
-
-    /* Contact Form */
-    #contact-form {
+    /* Contact Form Styling */
+    .contact-form {
+        text-align: center;
         background-color: #fff;
         padding: 30px;
         border-radius: 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         max-width: 600px;
         margin: 20px auto;
-        text-align: left;
     }
 
-    #contact-form h2 {
-        font-size: 1.8em;
-        color: #4CAF50;
-        margin-bottom: 20px;
-    }
-
-    #contact-form input,
-    #contact-form textarea {
+    .contact-form input,
+    .contact-form textarea {
         width: 100%;
         padding: 10px;
         margin-bottom: 15px;
@@ -126,46 +119,67 @@ permalink: /contact/
         font-size: 1em;
     }
 
-    #contact-form textarea {
-        resize: none;
-        height: 100px;
-    }
-
-    #contact-form input:focus,
-    #contact-form textarea:focus {
-        border-color: #4CAF50;
-        outline: none;
-    }
-
-    #contact-form button {
+    .contact-form button {
+        width: 100%;
+        padding: 10px;
         background-color: #4CAF50;
         color: white;
-        padding: 10px 15px;
         border: none;
         border-radius: 5px;
-        font-size: 1em;
         cursor: pointer;
         transition: background-color 0.3s ease;
-        width: 100%;
     }
 
-    #contact-form button:hover {
+    .contact-form button:hover {
         background-color: #007BFF;
     }
 
-    /* Responsive Design */
-    @media (max-width: 768px) {
-        #contact h1 {
-            font-size: 2em;
-        }
+    /* Portfolio Section */
+    #portfolio {
+        padding: 50px 20px;
+        background-color: #f4f4f4;
+        color: #333;
+        text-align: center;
+    }
 
-        .profile-pic {
-            width: 120px;
-            height: 120px;
-        }
+    .portfolio-filters {
+        margin-bottom: 20px;
+    }
 
-        #contact-form {
-            padding: 20px;
-        }
+    .filter-btn {
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 15px;
+        cursor: pointer;
+        margin: 5px;
+        font-size: 1em;
+    }
+
+    .filter-btn:hover {
+        background-color: #007BFF;
+    }
+
+    .portfolio-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .portfolio-item {
+        background-color: white;
+        border-radius: 10px;
+        padding: 20px;
+        max-width: 300px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: left;
+    }
+
+    .portfolio-item h3 {
+        font-size: 1.5em;
+        color: #4CAF50;
+        margin-bottom: 10px;
     }
 </style>
