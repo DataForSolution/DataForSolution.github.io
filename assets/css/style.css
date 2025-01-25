@@ -320,3 +320,74 @@ body::before {
         width: 100%;
     }
 }
+/* RESOURCES SECTION */
+#resources {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #f9f9f9; /* Light background */
+    color: #333; /* Default text color */
+    font-family: 'Arial', sans-serif;
+}
+
+#resources h1 {
+    font-size: 2.5em;
+    color: #4CAF50; /* Green color for heading */
+    margin-bottom: 20px;
+}
+
+#resources p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+.resource-grid {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.resource-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 300px;
+    text-align: left;
+}
+
+.resource-card h3 {
+    font-size: 1.5em;
+    color: #4CAF50;
+    margin-bottom: 10px;
+}
+
+.resource-card p {
+    font-size: 1em;
+    margin-bottom: 10px;
+}
+
+.resource-card a {
+    color: #007BFF;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.resource-card a:hover {
+    color: #0056b3;
+    text-decoration: underline;
+}
+
+/* Responsive Design for Resources Section */
+@media (max-width: 768px) {
+    .resource-grid {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .resource-card {
+        max-width: 100%;
+    }
+}

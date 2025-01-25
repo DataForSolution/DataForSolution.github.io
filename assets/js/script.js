@@ -193,3 +193,44 @@ document.addEventListener('DOMContentLoaded', () => {
     initializeSearchFeature();
     initializePlotly();
 });
+// FUNCTION TO FILTER RESOURCES
+function filterResources(category) {
+    const allCards = document.querySelectorAll('.resource-card');
+
+    allCards.forEach(card => {
+        if (category === 'all' || card.dataset.category === category) {
+            card.style.display = 'block';
+        } else {
+            card.style.display = 'none';
+        }
+    });
+}
+
+// FUNCTION TO TOGGLE RESOURCE DETAILS
+function toggleResourceDetails(event) {
+    const target = event.target.closest('.resource-card');
+    if (target) {
+        const details = target.querySelector('.resource-details');
+        if (details) {
+            details.style.display = details.style.display === 'block' ? 'none' : 'block';
+        }
+    }
+}
+
+// EVENT LISTENERS FOR RESOURCE INTERACTIONS
+document.addEventListener('DOMContentLoaded', () => {
+    // Attach click listener to filter buttons
+    const filterButtons = document.querySelectorAll('.filter-button');
+    filterButtons.forEach(button => {
+        button.addEventListener('click', (event) => {
+            const category = event.target.dataset.category;
+            filterResources(category);
+        });
+    });
+
+    // Attach click listener to resource cards for toggling details
+    const resourceCards = document.querySelectorAll('.resource-card');
+    resourceCards.forEach(card => {
+        card.addEventListener('click', toggleResourceDetails);
+    });
+});
