@@ -119,6 +119,55 @@ function displaySearchResults(results) {
     resultsContainer.style.display = 'block';
 }
 
+// FAQ CHATBOT FUNCTIONALITY
+document.getElementById("faq-chat-submit").addEventListener("click", async () => {
+    const input = document.getElementById("faq-chat-input").value.trim();
+    const display = document.getElementById("faq-chat-display");
+
+    if (!input) return;
+
+    const userMessage = document.createElement("p");
+    userMessage.innerHTML = `<strong>You:</strong> ${input}`;
+    display.appendChild(userMessage);
+
+    try {
+        const response = await fetch("http://localhost:3000/faq-chat", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ question: input })
+        });
+        const data = await response.json();
+
+        const botMessage = document.createElement("p");
+        botMessage.innerHTML = `<strong>Bot:</strong> ${data.answer || "I'm sorry, I don't have an answer for that."}`;
+        display.appendChild(botMessage);
+    } catch (error) {
+        console.error("Error:", error);
+        const botMessage = document.createElement("p");
+        botMessage.innerHTML = `<strong>Bot:</strong> Unable to process your request right now.`;
+        display.appendChild(botMessage);
+    }
+
+    document.getElementById("faq-chat-input").value = "";
+});
+
+// RECOMMENDATION ENGINE
+document.addEventListener("DOMContentLoaded", () => {
+    const recommendationList = document.getElementById("recommendation-list");
+
+    const recommendations = [
+        { title: "Getting Started with AI", url: "/blog/ai-intro" },
+        { title: "Learn About Our Data Science Projects", url: "/projects" },
+        { title: "Check Out Our Services", url: "/services" },
+    ];
+
+    recommendations.forEach(item => {
+        const listItem = document.createElement("li");
+        listItem.innerHTML = `<a href="${item.url}">${item.title}</a>`;
+        recommendationList.appendChild(listItem);
+    });
+});
+
 // PLOTLY VISUALIZATION INITIALIZATION
 function initializePlotly() {
     const data = {
@@ -138,7 +187,7 @@ function initializePlotly() {
     Plotly.newPlot('chart-container', [data], layout);
 }
 
-// RUN HIGHLIGHT, SEARCH, AND PLOTLY FUNCTIONALITY ON PAGE LOAD
+// RUN FUNCTIONALITIES ON PAGE LOAD
 document.addEventListener('DOMContentLoaded', () => {
     highlightActiveMenuItem();
     initializeSearchFeature();
