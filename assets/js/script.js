@@ -119,51 +119,28 @@ function displaySearchResults(results) {
     resultsContainer.style.display = 'block';
 }
 
-// RUN HIGHLIGHT AND SEARCH FUNCTIONALITY ON PAGE LOAD
+// PLOTLY VISUALIZATION INITIALIZATION
+function initializePlotly() {
+    const data = {
+        x: ['2020', '2021', '2022', '2023', '2024'],
+        y: [100, 150, 200, 250, 300],
+        type: 'scatter',
+        mode: 'lines+markers',
+        marker: { color: 'blue' }
+    };
+
+    const layout = {
+        title: 'Trend Prediction',
+        xaxis: { title: 'Year' },
+        yaxis: { title: 'Value' }
+    };
+
+    Plotly.newPlot('chart-container', [data], layout);
+}
+
+// RUN HIGHLIGHT, SEARCH, AND PLOTLY FUNCTIONALITY ON PAGE LOAD
 document.addEventListener('DOMContentLoaded', () => {
     highlightActiveMenuItem();
     initializeSearchFeature();
-});
-
-// Ensure YouTube iframe is responsive and centered
-document.addEventListener("DOMContentLoaded", function () {
-    const iframe = document.querySelector(".youtube-embed-container iframe");
-    if (iframe) {
-        iframe.style.display = "block";
-        iframe.style.margin = "0 auto";
-    }
-});
-
-// CHAT FUNCTIONALITY
-const chatForm = document.querySelector("#chat-form");
-const chatInput = document.querySelector("#chat-input");
-const chatDisplay = document.querySelector("#chat-display");
-
-chatForm.addEventListener("submit", async e => {
-    e.preventDefault();
-
-    const userMessage = chatInput.value.trim();
-    if (!userMessage) return;
-
-    chatDisplay.innerHTML += `<p><strong>You:</strong> ${userMessage}</p>`;
-    chatInput.value = "";
-
-    try {
-        const response = await fetch("http://localhost:3000/chat", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ message: userMessage })
-        });
-
-        const data = await response.json();
-
-        if (data.reply) {
-            chatDisplay.innerHTML += `<p><strong>Bot:</strong> ${data.reply}</p>`;
-        } else {
-            chatDisplay.innerHTML += `<p><strong>Bot:</strong> Something went wrong!</p>`;
-        }
-    } catch (error) {
-        console.error("Error:", error);
-        chatDisplay.innerHTML += `<p><strong>Bot:</strong> Unable to connect to the server.</p>`;
-    }
+    initializePlotly();
 });

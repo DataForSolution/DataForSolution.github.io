@@ -34,6 +34,9 @@ paginate: true
 
     <!-- CSS -->
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+
+    <!-- Plotly.js -->
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 <body style="background: url('{{ '/assets/images/background.jpg' | relative_url }}') no-repeat center center fixed; background-size: cover;">
 
@@ -41,6 +44,25 @@ paginate: true
 <nav>
     <!-- Add your navigation bar code here -->
 </nav>
+  <!-- Interactive Visualization Section -->
+<section id="interactive-visualizations">
+    <h2>Interactive Visualizations</h2>
+    <p>Explore our AI-powered models and predictive analytics through interactive charts.</p>
+
+    <!-- Chart Container -->
+    <div id="chart-container" style="width: 100%; max-width: 800px; margin: auto;">
+        <!-- The chart will be rendered here -->
+    </div>
+
+    <!-- Input Prediction Section -->
+    <div id="predict-section" style="margin-top: 20px; text-align: center;">
+        <h3>Predict Future Trends</h3>
+        <label for="predict-input">Enter a value:</label>
+        <input id="predict-input" type="number" placeholder="Input data..." style="padding: 10px; border-radius: 5px;">
+        <button id="predict-btn" style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">Predict</button>
+        <p id="prediction-result" style="margin-top: 10px; font-weight: bold;"></p>
+    </div>
+</section>
 
 <!-- Purpose-Driven Content Section -->
 
@@ -69,61 +91,36 @@ paginate: true
     </div>
 </section>
 
-<!-- Visual Design Section -->
-
-<!-- Features Section -->
-<section id="features">
-    <div id="search-feature">
-        <h2>Search Our Site</h2>
-        <form id="menu-search-form">
-            <input id="menu-search-input" type="text" placeholder="Search...">
-            <button type="submit">Search</button>
-        </form>
-    </div>
-    <div id="chatbot-feature">
-        <h2>Chat With Us</h2>
-        <div class="chat-container">
-            <div id="messages"></div>
-            <div class="input-container">
-                <input type="text" id="userInput" placeholder="Type your message here...">
-                <button onclick="sendMessage()">Send</button>
-            </div>
-        </div>
-    </div>
-</section>
-
 <!-- JavaScript -->
 <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
 <script>
-    // Chatbot Logic
-    function sendMessage() {
-        const userInput = document.getElementById("userInput");
-        const messages = document.getElementById("messages");
+    // Plotly Visualization
+    const data = {
+        x: ['2020', '2021', '2022', '2023', '2024'],
+        y: [100, 150, 200, 250, 300],
+        type: 'scatter',
+        mode: 'lines+markers',
+        marker: { color: 'blue' }
+    };
 
-        if (userInput.value.trim() === "") return;
+    const layout = {
+        title: 'Trend Prediction',
+        xaxis: { title: 'Year' },
+        yaxis: { title: 'Value' }
+    };
 
-        // Display user message
-        const userMessage = document.createElement("div");
-        userMessage.textContent = `You: ${userInput.value}`;
-        userMessage.style.textAlign = "left";
-        messages.appendChild(userMessage);
+    Plotly.newPlot('chart-container', [data], layout);
 
-        // Call your chatbot logic here
-        fetchChatGPTResponse(userInput.value).then((response) => {
-            const botMessage = document.createElement("div");
-            botMessage.textContent = `Bot: ${response}`;
-            botMessage.style.textAlign = "right";
-            messages.appendChild(botMessage);
-            messages.scrollTop = messages.scrollHeight; // Auto-scroll
-        });
-
-        userInput.value = ""; // Clear input
-    }
-
-    async function fetchChatGPTResponse(userMessage) {
-        // Replace with your API logic
-        return "This is a placeholder response from ChatGPT.";
-    }
+    // Prediction Logic
+    document.getElementById('predict-btn').addEventListener('click', () => {
+        const inputValue = document.getElementById('predict-input').value;
+        if (inputValue) {
+            const prediction = parseFloat(inputValue) * 50 + 50;
+            document.getElementById('prediction-result').textContent = `Predicted Value: ${prediction.toFixed(2)}`;
+        } else {
+            document.getElementById('prediction-result').textContent = 'Please enter a valid input.';
+        }
+    });
 </script>
 </body>
 </html>
