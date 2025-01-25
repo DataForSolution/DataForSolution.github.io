@@ -12,7 +12,7 @@ function showSection(sectionId) {
         console.error(`Section with ID '${sectionId}' not found.`);
     }
 }
-
+ 
 // SERVICE DESCRIPTIONS OBJECT
 const serviceDescriptions = {
     "business-analytics": "We provide insights to drive business decisions with AI-driven data analysis.",
@@ -119,118 +119,8 @@ function displaySearchResults(results) {
     resultsContainer.style.display = 'block';
 }
 
-// FAQ CHATBOT FUNCTIONALITY
-document.getElementById("faq-chat-submit").addEventListener("click", async () => {
-    const input = document.getElementById("faq-chat-input").value.trim();
-    const display = document.getElementById("faq-chat-display");
-
-    if (!input) return;
-
-    const userMessage = document.createElement("p");
-    userMessage.innerHTML = `<strong>You:</strong> ${input}`;
-    display.appendChild(userMessage);
-
-    try {
-        const response = await fetch("http://localhost:3000/faq-chat", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ question: input })
-        });
-        const data = await response.json();
-
-        const botMessage = document.createElement("p");
-        botMessage.innerHTML = `<strong>Bot:</strong> ${data.answer || "I'm sorry, I don't have an answer for that."}`;
-        display.appendChild(botMessage);
-    } catch (error) {
-        console.error("Error:", error);
-        const botMessage = document.createElement("p");
-        botMessage.innerHTML = `<strong>Bot:</strong> Unable to process your request right now.`;
-        display.appendChild(botMessage);
-    }
-
-    document.getElementById("faq-chat-input").value = "";
-});
-
-// RECOMMENDATION ENGINE
+// Dynamic loading or live updates for the Live Projects Section
 document.addEventListener("DOMContentLoaded", () => {
-    const recommendationList = document.getElementById("recommendation-list");
-
-    const recommendations = [
-        { title: "Getting Started with AI", url: "/blog/ai-intro" },
-        { title: "Learn About Our Data Science Projects", url: "/projects" },
-        { title: "Check Out Our Services", url: "/services" },
-    ];
-
-    recommendations.forEach(item => {
-        const listItem = document.createElement("li");
-        listItem.innerHTML = `<a href="${item.url}">${item.title}</a>`;
-        recommendationList.appendChild(listItem);
-    });
-});
-
-// PLOTLY VISUALIZATION INITIALIZATION
-function initializePlotly() {
-    const data = {
-        x: ['2020', '2021', '2022', '2023', '2024'],
-        y: [100, 150, 200, 250, 300],
-        type: 'scatter',
-        mode: 'lines+markers',
-        marker: { color: 'blue' }
-    };
-
-    const layout = {
-        title: 'Trend Prediction',
-        xaxis: { title: 'Year' },
-        yaxis: { title: 'Value' }
-    };
-
-    Plotly.newPlot('chart-container', [data], layout);
-}
-
-// RUN FUNCTIONALITIES ON PAGE LOAD
-document.addEventListener('DOMContentLoaded', () => {
-    highlightActiveMenuItem();
-    initializeSearchFeature();
-    initializePlotly();
-});
-// FUNCTION TO FILTER RESOURCES
-function filterResources(category) {
-    const allCards = document.querySelectorAll('.resource-card');
-
-    allCards.forEach(card => {
-        if (category === 'all' || card.dataset.category === category) {
-            card.style.display = 'block';
-        } else {
-            card.style.display = 'none';
-        }
-    });
-}
-
-// FUNCTION TO TOGGLE RESOURCE DETAILS
-function toggleResourceDetails(event) {
-    const target = event.target.closest('.resource-card');
-    if (target) {
-        const details = target.querySelector('.resource-details');
-        if (details) {
-            details.style.display = details.style.display === 'block' ? 'none' : 'block';
-        }
-    }
-}
-
-// EVENT LISTENERS FOR RESOURCE INTERACTIONS
-document.addEventListener('DOMContentLoaded', () => {
-    // Attach click listener to filter buttons
-    const filterButtons = document.querySelectorAll('.filter-button');
-    filterButtons.forEach(button => {
-        button.addEventListener('click', (event) => {
-            const category = event.target.dataset.category;
-            filterResources(category);
-        });
-    });
-
-    // Attach click listener to resource cards for toggling details
-    const resourceCards = document.querySelectorAll('.resource-card');
-    resourceCards.forEach(card => {
-        card.addEventListener('click', toggleResourceDetails);
-    });
+    console.log("Live Projects Section Loaded");
+    // Add any dynamic functionality here
 });

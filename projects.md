@@ -45,6 +45,25 @@ permalink: /projects/
     </div>
 </section>
 
+<section id="live-projects">
+    <h2>Live Projects</h2>
+    <p>Explore live, interactive data science projects showcasing real-time insights and dynamic visualizations.</p>
+
+    <!-- Live Sentiment Analysis -->
+    <div class="live-project">
+        <h3>Real-Time Sentiment Analysis</h3>
+        <p>Analyze live Twitter data to uncover sentiment trends and topics of discussion.</p>
+        <iframe src="https://your-sentiment-project-url.com" width="100%" height="400"></iframe>
+    </div>
+
+    <!-- Dynamic Financial Data Visualization -->
+    <div class="live-project">
+        <h3>Dynamic Financial Data Visualization</h3>
+        <p>Visualize real-time stock market data and trends.</p>
+        <iframe src="https://your-financial-project-url.com" width="100%" height="400"></iframe>
+    </div>
+</section>
+
 <style>
     /* Projects Section Styling */
     #projects {
@@ -116,6 +135,30 @@ permalink: /projects/
         background-color: #0056b3; /* Darker blue on hover */
     }
 
+    /* Live Projects Section Styling */
+    #live-projects {
+        padding: 50px 20px;
+        background-color: #f4f4f4;
+        color: #333;
+        text-align: center;
+    }
+
+    .live-project {
+        margin-bottom: 40px;
+    }
+
+    .live-project h3 {
+        font-size: 1.8em;
+        color: #4CAF50;
+        margin-bottom: 10px;
+    }
+
+    .live-project iframe {
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
     /* Responsive Design */
     @media (max-width: 768px) {
         .projects-list {
@@ -126,6 +169,10 @@ permalink: /projects/
         .project-card {
             width: 100%;
             max-width: 400px;
+        }
+
+        .live-project iframe {
+            width: 100%;
         }
     }
 </style>
