@@ -148,3 +148,54 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 });
+// Handle Data Cleaning Tool
+document.getElementById("data-cleaning-form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const fileInput = e.target.querySelector('input[type="file"]');
+    const resultDiv = document.getElementById("cleaning-result");
+
+    if (fileInput.files.length === 0) {
+        resultDiv.textContent = "Please upload a CSV file.";
+        return;
+    }
+
+    const formData = new FormData();
+    formData.append("csv-file", fileInput.files[0]);
+
+    try {
+        const response = await fetch("/api/data-cleaning", {
+            method: "POST",
+            body: formData
+        });
+        const result = await response.json();
+        resultDiv.innerHTML = `<p>Dataset cleaned successfully! Download your cleaned dataset <a href="${result.download_url}" target="_blank">here</a>.</p>`;
+    } catch (error) {
+        resultDiv.textContent = "An error occurred while cleaning the dataset.";
+        console.error(error);
+    }
+});
+
+// Handle Prediction Tool
+document.getElementById("prediction-form").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const inputFeature = e.target.querySelector('input[name="input-feature"]').value.trim();
+    const resultDiv = document.getElementById("prediction-result");
+
+    if (!inputFeature) {
+        resultDiv.textContent = "Please provide an input value.";
+        return;
+    }
+
+    try {
+        const response = await fetch("/api/predict", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ feature: inputFeature })
+        });
+        const result = await response.json();
+        resultDiv.innerHTML = `<p>Prediction: ${result.prediction}</p>`;
+    } catch (error) {
+        resultDiv.textContent = "An error occurred while generating the prediction.";
+        console.error(error);
+    }
+});

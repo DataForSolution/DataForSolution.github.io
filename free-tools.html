@@ -1,0 +1,57 @@
+---
+layout: page
+title: "Free Tools"
+permalink: /free-tools/
+---
+
+<section id="free-tools">
+    <h1>Free Tools</h1>
+    <p>Explore our free tools to enhance your data science projects.</p>
+
+    <!-- Data Cleaning Tool -->
+    <div class="tool">
+        <h2>Data Cleaning Tool</h2>
+        <p>Upload your CSV file, and we'll clean the dataset for you.</p>
+        <form id="data-cleaning-form" enctype="multipart/form-data">
+            <input type="file" name="csv-file" accept=".csv" required>
+            <button type="submit">Clean Dataset</button>
+        </form>
+        <div id="cleaning-result" style="margin-top: 20px;"></div>
+    </div>
+
+    <!-- Prediction Tool -->
+    <div class="tool">
+        <h2>Prediction Tool</h2>
+        <p>Provide input data and get instant predictions from our ML model demo.</p>
+        <form id="prediction-form">
+            <input type="text" name="input-feature" placeholder="Enter input value" required>
+            <button type="submit">Predict</button>
+        </form>
+        <div id="prediction-result" style="margin-top: 20px;"></div>
+    </div>
+</section>
+
+<style>
+    #free-tools {
+        padding: 50px 20px;
+        text-align: center;
+    }
+
+    .tool {
+        margin-bottom: 40px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .tool h2 {
+        color: #4CAF50;
+    }
+
+    form input, form button {
+        margin: 5px;
+        padding: 10px;
+        font-size: 1em;
+    }
+</style>
