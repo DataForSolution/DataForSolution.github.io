@@ -13,14 +13,14 @@ permalink: /collaborate/
 
     <div class="collaboration-grid">
         <div class="collaboration-card">
-            <h3>Kaggle Profile</h3>
-            <p>Discover my Kaggle competitions, datasets, and notebooks.</p>
-            <a href="https://www.kaggle.com/addislissan" target="_blank" class="project-link">Visit Kaggle Profile</a>
+            <h2>Sentiment Analysis on Social Media</h2>
+            <p>Collaborated with Dr. Jane Doe to analyze social media trends using advanced NLP models.</p>
+            <a href="https://github.com/username/project-link" target="_blank" class="project-link">View Project</a>
         </div>
         <div class="collaboration-card">
-            <h3>Featured Kaggle Notebook</h3>
-            <p>Explore my notebook on predicting housing prices using machine learning.</p>
-            <a href="https://www.kaggle.com/addislissan/https://www.kaggle.com/code/addislissan/lime-shap-nnm-winedataset" target="_blank" class="project-link">View Notebook</a>
+            <h2>Dynamic Dashboard for COVID-19 Data</h2>
+            <p>Partnered with the XYZ Organization to develop a real-time dashboard visualizing global COVID-19 data.</p>
+            <a href="https://covid19-dashboard-link.com" target="_blank" class="project-link">View Dashboard</a>
         </div>
     </div>
 </section>
