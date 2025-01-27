@@ -486,3 +486,81 @@ body::before {
         max-width: 90%;
     }
 }
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212; /* Dark background */
+    color: #e0e0e0; /* Light text color for dark mode */
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.dark-mode h1, 
+.dark-mode h2, 
+.dark-mode h3 {
+    color: #90caf9; /* Lighter blue for headings in dark mode */
+}
+
+.dark-mode a {
+    color: #90caf9; /* Light blue links */
+}
+
+.dark-mode a:hover {
+    color: #bbdefb; /* Even lighter blue on hover */
+}
+
+.dark-mode .nav-link {
+    color: #e0e0e0; /* Light text color for nav links */
+}
+
+.dark-mode .nav-link:hover {
+    background-color: #424242; /* Slightly darker hover effect for nav links */
+}
+
+.dark-mode .cta-button {
+    background-color: #2196f3; /* Blue for buttons in dark mode */
+}
+
+.dark-mode .cta-button:hover {
+    background-color: #64b5f6; /* Lighter blue on hover */
+}
+
+.dark-mode .project-card {
+    background-color: #1e1e1e; /* Darker card background */
+    color: #e0e0e0; /* Light text color */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.8); /* Darker shadow for contrast */
+}
+
+.dark-mode .project-card:hover {
+    background-color: #333333; /* Slightly lighter on hover */
+}
+
+.dark-mode #faq {
+    background-color: #1e1e1e; /* Dark background for FAQ section */
+}
+
+.dark-mode .faq-item {
+    background-color: #2e2e2e; /* Slightly darker background for FAQ items */
+    color: #e0e0e0;
+}
+
+.dark-mode .faq-item.active {
+    background-color: #424242; /* Highlighted background for active FAQ item */
+}
+
+.dark-mode .portfolio-item {
+    background-color: #1e1e1e; /* Darker portfolio card background */
+    color: #e0e0e0; /* Light text color */
+}
+
+.dark-mode .portfolio-item:hover {
+    background-color: #333333; /* Lighter on hover */
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.6); /* Subtle shadow effect */
+}
+
+/* Dark Mode Toggle Styles */
+.dark-mode #dark-mode-toggle {
+    color: #e0e0e0; /* Light icon color in dark mode */
+}
+
+.dark-mode #dark-mode-toggle:hover {
+    color: #90caf9; /* Light blue on hover */
+}

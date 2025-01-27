@@ -124,3 +124,27 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Live Projects Section Loaded");
     // Add any dynamic functionality here
 });
+// Dark Mode Toggle Functionality
+document.addEventListener("DOMContentLoaded", () => {
+    const darkModeToggle = document.getElementById("dark-mode-toggle");
+
+    // Check if the user has a preferred theme
+    const userPreference = localStorage.getItem("theme");
+    if (userPreference === "dark") {
+        document.body.classList.add("dark-mode");
+    }
+
+    // Add event listener to toggle button
+    if (darkModeToggle) {
+        darkModeToggle.addEventListener("click", () => {
+            document.body.classList.toggle("dark-mode");
+
+            // Save user preference to localStorage
+            if (document.body.classList.contains("dark-mode")) {
+                localStorage.setItem("theme", "dark");
+            } else {
+                localStorage.setItem("theme", "light");
+            }
+        });
+    }
+});
