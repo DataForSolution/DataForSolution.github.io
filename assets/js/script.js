@@ -199,3 +199,39 @@ document.getElementById("prediction-form").addEventListener("submit", async (e) 
         console.error(error);
     }
 });
+document.addEventListener('DOMContentLoaded', () => {
+    const readButtons = document.querySelectorAll('.read-book-btn');
+    const modal = document.getElementById('subscription-modal');
+    const closeModal = document.getElementById('close-modal');
+    let selectedBookUrl = null;
+
+    // Show modal when 'Read' button is clicked
+    readButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            selectedBookUrl = button.getAttribute('data-book-url');
+            modal.style.display = 'block';
+        });
+    });
+
+    // Close modal
+    closeModal.addEventListener('click', () => {
+        modal.style.display = 'none';
+    });
+
+    // Handle subscription form submission
+    document.getElementById('subscription-form').addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        const email = event.target.querySelector('input[type="email"]').value;
+
+        if (email) {
+            alert('Thank you for subscribing! Redirecting to the book...');
+            modal.style.display = 'none';
+
+            // Open the book URL
+            if (selectedBookUrl) {
+                window.open(selectedBookUrl, '_blank');
+            }
+        }
+    });
+});
