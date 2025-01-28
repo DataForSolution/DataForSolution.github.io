@@ -29,7 +29,79 @@ permalink: /free-tools/
         </form>
         <div id="prediction-result" style="margin-top: 20px;"></div>
     </div>
+
+    <!-- Data Science Quiz and Challenges -->
+    <div class="tool">
+        <h2>Data Science Quiz and Challenges</h2>
+        <p>Test your knowledge and skills with our quizzes and coding challenges. Compete with others on our leaderboard!</p>
+
+        <!-- Quizzes Section -->
+        <div class="quiz-section">
+            <h3>Quizzes</h3>
+            <p>Take quizzes on Python, Machine Learning, and Statistics.</p>
+            <ul>
+                <li><button class="quiz-btn" data-quiz-id="python">Python Basics Quiz</button></li>
+                <li><button class="quiz-btn" data-quiz-id="ml">Machine Learning Concepts Quiz</button></li>
+                <li><button class="quiz-btn" data-quiz-id="stats">Statistics for Data Science Quiz</button></li>
+            </ul>
+            <div id="quiz-result" style="margin-top: 20px;"></div>
+        </div>
+
+        <!-- Coding Challenges Section -->
+        <div class="coding-challenges-section">
+            <h3>Coding Challenges</h3>
+            <p>Participate in coding challenges directly on our platform.</p>
+            <ul>
+                <li><button class="challenge-btn" data-challenge-id="linear-regression">Build a Linear Regression Model</button></li>
+                <li><button class="challenge-btn" data-challenge-id="cnn">Classify Images Using CNN</button></li>
+                <li><button class="challenge-btn" data-challenge-id="decision-tree">Optimize a Decision Tree</button></li>
+            </ul>
+            <div id="challenge-result" style="margin-top: 20px;"></div>
+        </div>
+
+        <!-- Leaderboard Section -->
+        <div class="leaderboard-section">
+            <h3>Leaderboard</h3>
+            <p>See how you rank among other data enthusiasts!</p>
+            <ul id="leaderboard">
+                <li>1. Alice - 1500 Points</li>
+                <li>2. Bob - 1200 Points</li>
+                <li>3. Charlie - 1000 Points</li>
+            </ul>
+        </div>
+    </div>
 </section>
+
+<script>
+    // Interactive functionality for quizzes
+    document.querySelectorAll('.quiz-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const quizId = button.dataset.quizId;
+            const resultDiv = document.getElementById('quiz-result');
+            resultDiv.innerHTML = `You started the <strong>${quizId.toUpperCase()} Quiz</strong>. Good luck!`;
+        });
+    });
+
+    // Interactive functionality for coding challenges
+    document.querySelectorAll('.challenge-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const challengeId = button.dataset.challengeId;
+            const resultDiv = document.getElementById('challenge-result');
+            resultDiv.innerHTML = `You selected the <strong>${challengeId.replace(/-/g, ' ')}</strong> challenge. Prepare your code!`;
+        });
+    });
+
+    // Example for leaderboard - dynamically add scores
+    const leaderboard = document.getElementById('leaderboard');
+    const addScore = (name, points) => {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${name} - ${points} Points`;
+        leaderboard.appendChild(listItem);
+    };
+
+    // Simulate adding a new score
+    setTimeout(() => addScore('Diana', 800), 5000);
+</script>
 
 <style>
     #free-tools {
@@ -45,13 +117,40 @@ permalink: /free-tools/
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     }
 
-    .tool h2 {
+    .tool h2, .tool h3 {
         color: #4CAF50;
     }
 
-    form input, form button {
+    form input, form button, .quiz-btn, .challenge-btn {
         margin: 5px;
         padding: 10px;
         font-size: 1em;
+        cursor: pointer;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    form button, .quiz-btn, .challenge-btn {
+        background-color: #4CAF50;
+        color: white;
+        transition: background-color 0.3s ease;
+    }
+
+    form button:hover, .quiz-btn:hover, .challenge-btn:hover {
+        background-color: #007BFF;
+    }
+
+    #leaderboard {
+        list-style: none;
+        padding: 0;
+        text-align: left;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    #leaderboard li {
+        margin-bottom: 10px;
+        font-size: 1em;
+        color: #333;
     }
 </style>
