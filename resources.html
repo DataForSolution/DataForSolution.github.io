@@ -197,6 +197,45 @@ permalink: /resources/
         alert('Thank you for subscribing! Access the book now.');
         modal.style.display = 'none';
     });
+    // JavaScript for handling subscription and reading books
+document.addEventListener("DOMContentLoaded", () => {
+    const modal = document.getElementById("subscription-modal");
+    const closeModal = document.getElementById("close-modal");
+    const subscriptionForm = document.getElementById("subscription-form");
+    let selectedBookUrl = ""; // To store the selected book URL
+
+    // Show the subscription modal when "Read" is clicked
+    document.querySelectorAll(".read-book-btn").forEach(button => {
+        button.addEventListener("click", () => {
+            selectedBookUrl = button.dataset.bookUrl; // Store the book URL
+            modal.style.display = "block";
+        });
+    });
+
+    // Close the subscription modal
+    closeModal.addEventListener("click", () => {
+        modal.style.display = "none";
+    });
+
+    // Handle the subscription form submission
+    subscriptionForm.addEventListener("submit", event => {
+        event.preventDefault(); // Prevent form submission
+        const email = subscriptionForm.querySelector("input[type='email']").value.trim();
+
+        if (email) {
+            alert("Thank you for subscribing! You can now read the book.");
+            modal.style.display = "none";
+
+            // Open the book in a new tab
+            if (selectedBookUrl) {
+                window.open(selectedBookUrl, "_blank");
+            }
+        } else {
+            alert("Please enter a valid email to subscribe.");
+        }
+    });
+});
+
 </script>
 
 <style>
