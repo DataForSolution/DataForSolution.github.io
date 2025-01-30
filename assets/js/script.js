@@ -235,3 +235,61 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+document.addEventListener("DOMContentLoaded", function () {
+
+    // Function to fetch and display quizzes
+    document.querySelectorAll('.quiz-btn').forEach(button => {
+        button.addEventListener('click', async () => {
+            const quizId = button.dataset.quizId;
+            const response = await fetch(`/quiz?quiz_id=${quizId}`);
+            const data = await response.json();
+
+            const quizContainer = document.getElementById('quiz-container');
+            quizContainer.innerHTML = `<h3>${data.title}</h3>`;
+
+            data.questions.forEach((question, index) => {
+                const questionBlock = document.createElement('div');
+                questionBlock.innerHTML = `
+                    <p><strong>${index + 1}. ${question.question}</strong></p>
+                    <ul>
+                        ${question.options.map(option => `<li><button class="answer-btn" data-correct="${option === question.correct}">${option}</button></li>`).join('')}
+                    </ul>
+                `;
+                quizContainer.appendChild(questionBlock);
+            });
+
+            document.querySelectorAll('.answer-btn').forEach(answerBtn => {
+                answerBtn.addEventListener('click', () => {
+                    answerBtn.style.backgroundColor = answerBtn.dataset.correct === "true" ? "green" : "red";
+                });
+            });
+        });
+    });
+
+    // Function to fetch and display coding challenges
+    document.querySelectorAll('.challenge-btn').forEach(button => {
+        button.addEventListener('click', async () => {
+            const challengeId = button.dataset.challengeId;
+            const response = await fetch(`/challenge?challenge_id=${challengeId}`);
+            const data = await response.json();
+
+            const challengeContainer = document.getElementById('challenge-container');
+            challengeContainer.innerHTML = `
+                <h3>${data.title}</h3>
+                <p>${data.description}</p>
+                <a href="${data.url}" target="_blank">Start Challenge</a>
+            `;
+        });
+    });
+
+    // Function to fetch and update leaderboard
+    async function loadLeaderboard() {
+        const response = await fetch('/leaderboard');
+        const data = await response.json();
+
+        const leaderboard = document.getElementById('leaderboard');
+        leaderboard.innerHTML = data.map((entry, index) => `<li>${index + 1}. ${entry.name} - ${entry.points} Points</li>`).join('');
+    }
+
+    loadLeaderboard();
+});
