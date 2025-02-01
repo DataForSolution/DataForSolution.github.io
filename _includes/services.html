@@ -4,83 +4,115 @@ title: "Our Services"
 permalink: /services/
 ---
 
-
 <section id="services">
     <h1>Our Services</h1>
-    <p>Explore how we can help you leverage data for success. Click on a service to learn more!</p>
+    <p>Explore the comprehensive services we offer to drive your business forward with data and AI-powered insights.</p>
 
     <!-- Services List -->
-    <div class="services-list">
-        <div class="service-card" data-service-id="business-analytics">
-            <div class="service-header">
-                <h2>📊 Business Analytics</h2>
-            </div>
-            <button class="toggle-details">View More</button>
-            <div class="service-details">
-                <p>Drive decisions with AI-powered insights and predictive analytics.</p>
-            </div>
-        </div>
+    <div class="services-container">
+        <ul>
+            <li>
+                <a href="#" class="service-link" data-service-id="business-analytics">
+                    <img src="{{ '/assets/images/business-analytics.png' | relative_url }}" alt="Business Analytics" class="service-icon">
+                    <span>Business Analytics</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="service-link" data-service-id="data-entry">
+                    <img src="{{ '/assets/images/data-entry.png' | relative_url }}" alt="Data Entry" class="service-icon">
+                    <span>Data Entry</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="service-link" data-service-id="data-reporting">
+                    <img src="{{ '/assets/images/data-reporting.png' | relative_url }}" alt="Data Reporting" class="service-icon">
+                    <span>Data Reporting</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="service-link" data-service-id="strategic-planning">
+                    <img src="{{ '/assets/images/strategic-planning.png' | relative_url }}" alt="Strategic Planning" class="service-icon">
+                    <span>Strategic Planning</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="service-link" data-service-id="healthcare-consulting">
+                    <img src="{{ '/assets/images/healthcare-consulting.png' | relative_url }}" alt="Healthcare Consulting" class="service-icon">
+                    <span>Healthcare Consulting</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="service-link" data-service-id="financial-analysis">
+                    <img src="{{ '/assets/images/financial-analysis.png' | relative_url }}" alt="Financial Analysis" class="service-icon">
+                    <span>Financial Analysis</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="service-link" data-service-id="market-research">
+                    <img src="{{ '/assets/images/market-research.png' | relative_url }}" alt="Market Research" class="service-icon">
+                    <span>Market Research</span>
+                </a>
+            </li>
+        </ul>
+    </div>
 
-        <div class="service-card" data-service-id="data-entry">
-            <div class="service-header">
-                <h2>✍️ Data Entry</h2>
-            </div>
-            <button class="toggle-details">View More</button>
-            <div class="service-details">
-                <p>Accurate and efficient data entry services to ensure reliable records.</p>
-            </div>
-        </div>
-
-        <div class="service-card" data-service-id="data-reporting">
-            <div class="service-header">
-                <h2>📈 Data Reporting</h2>
-            </div>
-            <button class="toggle-details">View More</button>
-            <div class="service-details">
-                <p>Automated reports and data visualization for informed decisions.</p>
-            </div>
-        </div>
-
-        <div class="service-card" data-service-id="strategic-planning">
-            <div class="service-header">
-                <h2>📋 Strategic Planning</h2>
-            </div>
-            <button class="toggle-details">View More</button>
-            <div class="service-details">
-                <p>Align strategies with data insights for growth and success.</p>
-            </div>
-        </div>
-
-        <div class="service-card" data-service-id="healthcare-consulting">
-            <div class="service-header">
-                <h2>💊 Healthcare Consulting</h2>
-            </div>
-            <button class="toggle-details">View More</button>
-            <div class="service-details">
-                <p>AI-powered solutions for healthcare analytics and medical imaging.</p>
-            </div>
-        </div>
-
-        <div class="service-card" data-service-id="financial-analysis">
-            <div class="service-header">
-                <h2>💹 Financial Analysis</h2>
-            </div>
-            <button class="toggle-details">View More</button>
-            <div class="service-details">
-                <p>Optimize budgeting and investments with financial insights.</p>
-            </div>
-        </div>
+    <!-- Service Details Section -->
+    <div id="service-details" class="service-details">
+        <h3>Select a Service</h3>
+        <p>Click on a service to learn more about what we offer.</p>
     </div>
 </section>
 
 <script>
-    // Toggle the service details
-    document.querySelectorAll('.toggle-details').forEach(button => {
-        button.addEventListener('click', () => {
-            const details = button.nextElementSibling;
-            const isVisible = details.style.display === 'block';
-            details.style.display = isVisible ? 'none' : 'block';
-            button.textContent = isVisible ? 'View More' : 'View Less';
+    const serviceDescriptions = {
+        "business-analytics": {
+            "title": "Business Analytics",
+            "description": "Gain insights into your business operations through AI-powered data analysis and visualization."
+        },
+        "data-entry": {
+            "title": "Data Entry",
+            "description": "We provide accurate and efficient data entry services, ensuring reliable records for your business."
+        },
+        "data-reporting": {
+            "title": "Data Reporting",
+            "description": "Custom-built reports with dynamic visualizations to make data-driven decisions easier."
+        },
+        "strategic-planning": {
+            "title": "Strategic Planning",
+            "description": "Align data strategies with your business goals using our expert strategic analysis."
+        },
+        "healthcare-consulting": {
+            "title": "Healthcare Consulting",
+            "description": "Leverage AI-powered healthcare solutions for analytics, imaging, and diagnostics."
+        },
+        "financial-analysis": {
+            "title": "Financial Analysis",
+            "description": "Utilize AI for budgeting, fraud detection, and investment optimization."
+        },
+        "market-research": {
+            "title": "Market Research",
+            "description": "Gain competitive intelligence with AI-driven market trend analysis."
+        }
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.service-link').forEach(service => {
+            service.addEventListener('click', (event) => {
+                event.preventDefault();
+                const serviceId = service.dataset.serviceId;
+                const serviceDetails = document.getElementById('service-details');
+
+                if (serviceDescriptions[serviceId]) {
+                    serviceDetails.innerHTML = `
+                        <h3>${serviceDescriptions[serviceId].title}</h3>
+                        <p>${serviceDescriptions[serviceId].description}</p>
+                    `;
+                    serviceDetails.style.display = "block";
+                } else {
+                    serviceDetails.innerHTML = "<p>Details for this service are not available.</p>";
+                    serviceDetails.style.display = "block";
+                }
+            });
         });
     });
 </script>
@@ -88,7 +120,7 @@ permalink: /services/
 <style>
     /* General Styling */
     #services {
-        background-color: #f3f4f6;
+        background-color: #f5f5f5; 
         padding: 50px 20px;
         text-align: center;
     }
@@ -96,87 +128,94 @@ permalink: /services/
     #services h1 {
         font-size: 2.5em;
         font-weight: bold;
-        color: #4CAF50;
+        color: #333;
         margin-bottom: 20px;
+        text-shadow: 1px 1px 2px #ddd;
     }
 
     #services p {
         font-size: 1.2em;
         margin-bottom: 40px;
-        color: #333;
+        color: #555;
+        line-height: 1.6;
     }
 
-    .services-list {
+    .services-container ul {
+        list-style: none;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
         gap: 20px;
+        padding: 0;
+        margin: 0;
     }
 
-    .service-card {
-        background-color: white;
-        border-radius: 10px;
-        padding: 20px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        width: 300px;
-        text-align: left;
-        transition: transform 0.3s, box-shadow 0.3s;
+    .services-container li {
+        flex: 0 1 calc(33.333% - 20px); 
+        text-align: center;
     }
 
-    .service-card:hover {
+    .service-link {
+        text-decoration: none;
+        color: #333;
+        display: block;
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .service-link:hover {
         transform: scale(1.05);
-        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+        color: #007BFF;
     }
 
-    .service-header h2 {
-        font-size: 1.5em;
+    .service-icon {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
         margin-bottom: 10px;
+        border: 3px solid #4CAF50;
+        transition: transform 0.3s ease, border-color 0.3s ease;
     }
 
-    .toggle-details {
-        background-color: #007BFF;
-        color: white;
-        border: none;
-        padding: 10px 15px;
-        font-size: 0.9em;
-        cursor: pointer;
-        border-radius: 5px;
-        margin-top: 10px;
-    }
-
-    .toggle-details:hover {
-        background-color: #0056b3;
+    .service-icon:hover {
+        border-color: #007BFF;
+        transform: scale(1.1);
     }
 
     .service-details {
-        margin-top: 15px;
-        background-color: #f9f9f9;
+        margin-top: 40px;
+        padding: 20px;
+        background-color: #fff;
         border: 1px solid #ddd;
-        padding: 10px;
-        border-radius: 5px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
         display: none;
-        animation: fadeIn 0.5s;
+        color: #333;
+        font-size: 1.1em;
     }
 
-    @keyframes fadeIn {
-        from {
-            opacity: 0;
-        }
-        to {
-            opacity: 1;
-        }
+    .service-details h3 {
+        font-size: 1.5em;
+        color: #4CAF50;
+        margin-bottom: 10px;
     }
 
     /* Responsive Design */
     @media (max-width: 768px) {
-        .services-list {
-            flex-direction: column;
-            align-items: center;
+        .services-container li {
+            flex: 0 1 calc(50% - 20px);
         }
 
-        .service-card {
-            width: 100%;
-            max-width: 400px;
+        .service-icon {
+            width: 80px;
+            height: 80px;
+        }
+
+        .service-details {
+            width: 90%;
         }
     }
 </style>
