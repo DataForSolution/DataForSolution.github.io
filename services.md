@@ -4,92 +4,174 @@ title: "Our Services"
 permalink: /services/
 ---
 
-{% include services.html %}
-
 <section id="services">
     <h1>Our Services</h1>
-    <p>We offer a wide range of data-driven services to help your business thrive.</p>
+    <p>Explore the comprehensive services we offer to drive your business forward with data and AI-powered insights.</p>
 
     <!-- Services List -->
-    <div class="services-list">
-        <div class="service-card" data-service-id="business-analytics">
-            <h2>Business Analytics</h2>
-            <button class="view-more-btn">View More</button>
-            <div class="service-details" style="display: none;">
-                <p>Drive business decisions with AI-powered insights and predictive analytics.</p>
-            </div>
-        </div>
-        <div class="service-card" data-service-id="data-entry">
-            <h2>Data Entry</h2>
-            <button class="view-more-btn">View More</button>
-            <div class="service-details" style="display: none;">
-                <p>Accurate and efficient data entry services to ensure reliable records.</p>
-            </div>
-        </div>
-        <div class="service-card" data-service-id="data-reporting">
-            <h2>Data Reporting</h2>
-            <button class="view-more-btn">View More</button>
-            <div class="service-details" style="display: none;">
-                <p>Automated reports and data visualization to help you make informed decisions.</p>
-            </div>
-        </div>
-        <div class="service-card" data-service-id="strategic-planning">
-            <h2>Strategic Planning</h2>
-            <button class="view-more-btn">View More</button>
-            <div class="service-details" style="display: none;">
-                <p>Align your business strategies with data insights and AI-driven decision-making.</p>
-            </div>
-        </div>
-        <div class="service-card" data-service-id="healthcare-consulting">
-            <h2>Healthcare Consulting</h2>
-            <button class="view-more-btn">View More</button>
-            <div class="service-details" style="display: none;">
-                <p>Providing AI-powered solutions for healthcare analytics and medical imaging.</p>
-            </div>
-        </div>
-        <div class="service-card" data-service-id="financial-analysis">
-            <h2>Financial Analysis</h2>
-            <button class="view-more-btn">View More</button>
-            <div class="service-details" style="display: none;">
-                <p>Financial forecasting, fraud detection, and investment insights.</p>
-            </div>
-        </div>
+    <div class="services-container">
+        <ul>
+            <li>
+                <a href="#" class="service-link" data-service-id="business-analytics">
+                    <span>Business Analytics</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="service-link" data-service-id="data-entry">
+                    <span>Data Entry</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="service-link" data-service-id="data-reporting">
+                    <span>Data Reporting</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="service-link" data-service-id="strategic-planning">
+                    <span>Strategic Planning</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="service-link" data-service-id="healthcare-consulting">
+                    <span>Healthcare Consulting</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="service-link" data-service-id="financial-analysis">
+                    <span>Financial Analysis</span>
+                </a>
+            </li>
+            <li>
+                <a href="#" class="service-link" data-service-id="market-research">
+                    <span>Market Research</span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+    <!-- Service Details Section -->
+    <div id="service-details" class="service-details">
+        <h3>Select a Service</h3>
+        <p>Click on a service to learn more about what we offer.</p>
     </div>
 </section>
 
 <script>
-    document.querySelectorAll('.view-more-btn').forEach(button => {
-        button.addEventListener('click', () => {
-            const details = button.nextElementSibling;
-            const isVisible = details.style.display === 'block';
-            details.style.display = isVisible ? 'none' : 'block';
-            button.textContent = isVisible ? 'View More' : 'View Less';
+    const serviceDescriptions = {
+        "business-analytics": {
+            "title": "Business Analytics",
+            "description": "Gain insights into your business operations through AI-powered data analysis and visualization."
+        },
+        "data-entry": {
+            "title": "Data Entry",
+            "description": "We provide accurate and efficient data entry services, ensuring reliable records for your business."
+        },
+        "data-reporting": {
+            "title": "Data Reporting",
+            "description": "Custom-built reports with dynamic visualizations to make data-driven decisions easier."
+        },
+        "strategic-planning": {
+            "title": "Strategic Planning",
+            "description": "Align data strategies with your business goals using our expert strategic analysis."
+        },
+        "healthcare-consulting": {
+            "title": "Healthcare Consulting",
+            "description": "Leverage AI-powered healthcare solutions for analytics, imaging, and diagnostics."
+        },
+        "financial-analysis": {
+            "title": "Financial Analysis",
+            "description": "Utilize AI for budgeting, fraud detection, and investment optimization."
+        },
+        "market-research": {
+            "title": "Market Research",
+            "description": "Gain competitive intelligence with AI-driven market trend analysis."
+        }
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.service-link').forEach(service => {
+            service.addEventListener('click', (event) => {
+                event.preventDefault();
+                const serviceId = service.dataset.serviceId;
+                const serviceDetails = document.getElementById('service-details');
+
+                if (serviceDescriptions[serviceId]) {
+                    serviceDetails.innerHTML = `
+                        <h3>${serviceDescriptions[serviceId].title}</h3>
+                        <p>${serviceDescriptions[serviceId].description}</p>
+                    `;
+                    serviceDetails.style.display = "block";
+                } else {
+                    serviceDetails.innerHTML = "<p>Details for this service are not available.</p>";
+                    serviceDetails.style.display = "block";
+                }
+            });
         });
     });
 </script>
 
 <style>
-    .view-more-btn {
-        background-color: #007BFF;
-        color: white;
-        border: none;
-        padding: 10px 15px;
-        font-size: 0.9em;
-        cursor: pointer;
-        border-radius: 5px;
-        margin-top: 10px;
+    #services {
+        background-color: #f9f9f9; 
+        padding: 50px 20px;
+        text-align: center;
     }
 
-    .view-more-btn:hover {
-        background-color: #0056b3;
+    #services h1 {
+        font-size: 2.5em;
+        font-weight: bold;
+        color: #4CAF50;
+        margin-bottom: 20px;
+    }
+
+    #services p {
+        font-size: 1.2em;
+        margin-bottom: 40px;
+        color: #333;
+    }
+
+    .services-container ul {
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .services-container li {
+        flex: 0 1 calc(33.333% - 20px); 
+        text-align: center;
+    }
+
+    .service-link {
+        text-decoration: none;
+        color: #333;
+        display: block;
+        transition: transform 0.3s ease;
+    }
+
+    .service-link:hover {
+        transform: scale(1.05);
     }
 
     .service-details {
-        margin-top: 15px;
-        background-color: #f9f9f9;
+        margin-top: 40px;
+        padding: 20px;
+        background-color: #fff;
         border: 1px solid #ddd;
-        padding: 10px;
-        border-radius: 5px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
         display: none;
+    }
+
+    .service-details h3 {
+        font-size: 1.5em;
+        color: #4CAF50;
     }
 </style>
