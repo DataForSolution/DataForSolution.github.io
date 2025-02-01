@@ -6,102 +6,88 @@ permalink: /services/
 
 <section id="services">
     <h1>Our Services</h1>
-    <p>We offer a wide range of data-driven services to help your business thrive in a competitive world.</p>
+    <p>We offer a wide range of data-driven services to help your business thrive.</p>
 
     <!-- Services List -->
     <div class="services-list">
-        <div class="service-card">
+        <div class="service-card" data-service-id="business-analytics">
             <h2>Business Analytics</h2>
-            <p>Drive business decisions with AI-powered data insights and analytics.</p>
+            <button class="view-more-btn">View More</button>
+            <div class="service-details" style="display: none;">
+                <p>Drive business decisions with AI-powered insights and predictive analytics.</p>
+            </div>
         </div>
-        <div class="service-card">
+        <div class="service-card" data-service-id="data-entry">
             <h2>Data Entry</h2>
-            <p>Accurate and efficient data entry services to ensure reliable records.</p>
+            <button class="view-more-btn">View More</button>
+            <div class="service-details" style="display: none;">
+                <p>Accurate and efficient data entry services to ensure reliable records.</p>
+            </div>
         </div>
-        <div class="service-card">
+        <div class="service-card" data-service-id="data-reporting">
             <h2>Data Reporting</h2>
-            <p>Create custom data reports and visualization for effective decision-making.</p>
+            <button class="view-more-btn">View More</button>
+            <div class="service-details" style="display: none;">
+                <p>Automated reports and data visualization to help you make informed decisions.</p>
+            </div>
         </div>
-        <div class="service-card">
+        <div class="service-card" data-service-id="strategic-planning">
             <h2>Strategic Planning</h2>
-            <p>Align data strategies with your business goals for success.</p>
+            <button class="view-more-btn">View More</button>
+            <div class="service-details" style="display: none;">
+                <p>Align your business strategies with data insights and AI-driven decision-making.</p>
+            </div>
         </div>
-        <div class="service-card">
+        <div class="service-card" data-service-id="healthcare-consulting">
             <h2>Healthcare Consulting</h2>
-            <p>Providing AI-powered solutions for healthcare analytics and imaging.</p>
+            <button class="view-more-btn">View More</button>
+            <div class="service-details" style="display: none;">
+                <p>Providing AI-powered solutions for healthcare analytics and medical imaging.</p>
+            </div>
         </div>
-        <div class="service-card">
+        <div class="service-card" data-service-id="financial-analysis">
             <h2>Financial Analysis</h2>
-            <p>Optimize budgeting and investments with data-driven financial insights.</p>
+            <button class="view-more-btn">View More</button>
+            <div class="service-details" style="display: none;">
+                <p>Financial forecasting, fraud detection, and investment insights.</p>
+            </div>
         </div>
     </div>
 </section>
 
+<script>
+    document.querySelectorAll('.view-more-btn').forEach(button => {
+        button.addEventListener('click', () => {
+            const details = button.nextElementSibling;
+            const isVisible = details.style.display === 'block';
+            details.style.display = isVisible ? 'none' : 'block';
+            button.textContent = isVisible ? 'View More' : 'View Less';
+        });
+    });
+</script>
+
 <style>
-    /* Services Section Styling */
-    #services {
-        background-color: #d4edda; /* Light gray/green background */
-        padding: 50px 20px;
-        text-align: center;
+    .view-more-btn {
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        padding: 10px 15px;
+        font-size: 0.9em;
+        cursor: pointer;
+        border-radius: 5px;
+        margin-top: 10px;
     }
 
-    #services h1 {
-        font-size: 2.5em;
-        font-weight: bold;
-        color: #4CAF50; /* Green for headings */
-        margin-bottom: 20px;
+    .view-more-btn:hover {
+        background-color: #0056b3;
     }
 
-    #services p {
-        font-size: 1.2em;
-        margin-bottom: 40px;
-        color: #333;
-    }
-
-    .services-list {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-    }
-
-    .service-card {
-        background-color: #fff;
-        border-radius: 10px;
-        padding: 20px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        width: 300px;
-        text-align: left;
-        transition: transform 0.3s, box-shadow 0.3s;
-    }
-
-    .service-card:hover {
-        transform: scale(1.05);
-        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
-    }
-
-    .service-card h2 {
-        font-size: 1.5em;
-        color: #4CAF50; /* Green for headings */
-        margin-bottom: 10px;
-    }
-
-    .service-card p {
-        font-size: 1em;
-        color: #555;
-        line-height: 1.6;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-        .services-list {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .service-card {
-            width: 100%;
-            max-width: 400px;
-        }
+    .service-details {
+        margin-top: 15px;
+        background-color: #f9f9f9;
+        border: 1px solid #ddd;
+        padding: 10px;
+        border-radius: 5px;
+        display: none;
     }
 </style>

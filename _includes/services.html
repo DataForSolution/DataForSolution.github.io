@@ -1,6 +1,7 @@
 ---
 layout: default
 title: "Our Services"
+permalink: /services/
 ---
 
 <section id="services">
@@ -57,45 +58,69 @@ title: "Our Services"
 
     <!-- Service Details Section -->
     <div id="service-details" class="service-details">
-        <!-- Dynamic service details will appear here -->
-        <p>Select a service to see details.</p>
+        <h3>Select a Service</h3>
+        <p>Click on a service to learn more about what we offer.</p>
     </div>
 </section>
 
 <script>
     const serviceDescriptions = {
-        "business-analytics": "We provide insights to drive business decisions with AI-driven data analysis.",
-        "data-entry": "Accurate and efficient data entry services to ensure reliable records.",
-        "data-reporting": "Custom data reports and visualization for effective decision-making.",
-        "strategic-planning": "Helping businesses align data strategies with business goals.",
-        "healthcare-consulting": "Providing AI-powered solutions for healthcare analytics and imaging.",
-        "financial-analysis": "Data-driven financial insights to optimize budgeting and investments.",
-        "market-research": "Market trend analysis and consumer behavior insights."
+        "business-analytics": {
+            "title": "Business Analytics",
+            "description": "Gain insights into your business operations through AI-powered data analysis and visualization."
+        },
+        "data-entry": {
+            "title": "Data Entry",
+            "description": "We provide accurate and efficient data entry services, ensuring reliable records for your business."
+        },
+        "data-reporting": {
+            "title": "Data Reporting",
+            "description": "Custom-built reports with dynamic visualizations to make data-driven decisions easier."
+        },
+        "strategic-planning": {
+            "title": "Strategic Planning",
+            "description": "Align data strategies with your business goals using our expert strategic analysis."
+        },
+        "healthcare-consulting": {
+            "title": "Healthcare Consulting",
+            "description": "Leverage AI-powered healthcare solutions for analytics, imaging, and diagnostics."
+        },
+        "financial-analysis": {
+            "title": "Financial Analysis",
+            "description": "Utilize AI for budgeting, fraud detection, and investment optimization."
+        },
+        "market-research": {
+            "title": "Market Research",
+            "description": "Gain competitive intelligence with AI-driven market trend analysis."
+        }
     };
 
-    document.addEventListener('click', (event) => {
-        if (event.target.closest('.service-link')) {
-            const serviceId = event.target.closest('.service-link').dataset.serviceId;
-            const serviceDetailsDiv = document.getElementById("service-details");
-            
-            if (serviceDescriptions[serviceId]) {
-                serviceDetailsDiv.innerHTML = `<h3>${event.target.closest('.service-link').textContent.trim()}</h3>
-                                               <p>${serviceDescriptions[serviceId]}</p>`;
-                serviceDetailsDiv.style.display = "block";
-            } else {
-                serviceDetailsDiv.innerHTML = `<p>Details for this service are not available.</p>`;
-                serviceDetailsDiv.style.display = "block";
-                console.warn(`Service ID "${serviceId}" not found.`);
-            }
-            event.preventDefault();
-        }
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.service-link').forEach(service => {
+            service.addEventListener('click', (event) => {
+                event.preventDefault();
+                const serviceId = service.dataset.serviceId;
+                const serviceDetails = document.getElementById('service-details');
+
+                if (serviceDescriptions[serviceId]) {
+                    serviceDetails.innerHTML = `
+                        <h3>${serviceDescriptions[serviceId].title}</h3>
+                        <p>${serviceDescriptions[serviceId].description}</p>
+                    `;
+                    serviceDetails.style.display = "block";
+                } else {
+                    serviceDetails.innerHTML = "<p>Details for this service are not available.</p>";
+                    serviceDetails.style.display = "block";
+                }
+            });
+        });
     });
 </script>
 
 <style>
     /* General Styling */
     #services {
-        background-color: #d4edda; /* Light gray/green background */
+        background-color: #f9f9f9; 
         padding: 50px 20px;
         text-align: center;
     }
@@ -103,7 +128,7 @@ title: "Our Services"
     #services h1 {
         font-size: 2.5em;
         font-weight: bold;
-        color: #4CAF50; /* Green for headings */
+        color: #4CAF50;
         margin-bottom: 20px;
     }
 
@@ -124,7 +149,7 @@ title: "Our Services"
     }
 
     .services-container li {
-        flex: 0 1 calc(33.333% - 20px); /* Three items per row */
+        flex: 0 1 calc(33.333% - 20px); 
         text-align: center;
     }
 
@@ -136,7 +161,7 @@ title: "Our Services"
     }
 
     .service-link:hover {
-        transform: scale(1.05); /* Slight zoom on hover */
+        transform: scale(1.05);
     }
 
     .service-icon {
@@ -149,7 +174,7 @@ title: "Our Services"
     }
 
     .service-icon:hover {
-        border-color: #007BFF; /* Blue on hover */
+        border-color: #007BFF;
         transform: scale(1.1);
     }
 
@@ -164,6 +189,7 @@ title: "Our Services"
         max-width: 600px;
         margin-left: auto;
         margin-right: auto;
+        display: none;
     }
 
     .service-details h3 {
@@ -174,7 +200,7 @@ title: "Our Services"
     /* Responsive Design */
     @media (max-width: 768px) {
         .services-container li {
-            flex: 0 1 calc(50% - 20px); /* Two items per row on smaller screens */
+            flex: 0 1 calc(50% - 20px);
         }
 
         .service-icon {
