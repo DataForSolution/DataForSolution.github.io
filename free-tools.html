@@ -29,44 +29,46 @@ permalink: /free-tools/
         </form>
         <div id="prediction-result" style="margin-top: 20px;"></div>
     </div>
-  <!-- Data Science Quiz and Challenges -->
-<div class="tool">
-    <h2>Data Science Quiz and Challenges</h2>
-    <p>Test your knowledge and skills with our quizzes and coding challenges. Compete with others on our leaderboard!</p>
 
-    <!-- Quizzes Section -->
-    <div class="quiz-section">
-        <h3>Quizzes</h3>
-        <p>Take quizzes on Python, Machine Learning, and Statistics.</p>
-        <ul>
-            <li><button class="quiz-btn" data-quiz-id="python">Python Basics Quiz</button></li>
-            <li><button class="quiz-btn" data-quiz-id="ml">Machine Learning Concepts Quiz</button></li>
-            <li><button class="quiz-btn" data-quiz-id="stats">Statistics for Data Science Quiz</button></li>
-        </ul>
-        <div id="quiz-container" style="margin-top: 20px;"></div>
-    </div>
+    <!-- Data Science Quiz and Challenges -->
+    <div class="tool">
+        <h2>Data Science Quiz and Challenges</h2>
+        <p>Test your knowledge and skills with our quizzes and coding challenges. Compete with others on our leaderboard!</p>
 
-    <!-- Coding Challenges Section -->
-    <div class="coding-challenges-section">
-        <h3>Coding Challenges</h3>
-        <p>Participate in coding challenges directly on our platform.</p>
-        <ul>
-            <li><button class="challenge-btn" data-challenge-id="linear-regression">Build a Linear Regression Model</button></li>
-            <li><button class="challenge-btn" data-challenge-id="cnn">Classify Images Using CNN</button></li>
-            <li><button class="challenge-btn" data-challenge-id="decision-tree">Optimize a Decision Tree</button></li>
-        </ul>
-        <div id="challenge-container" style="margin-top: 20px;"></div>
-    </div>
+        <!-- Quizzes Section -->
+        <div class="quiz-section">
+            <h3>Quizzes</h3>
+            <p>Take quizzes on Python, Machine Learning, and Statistics.</p>
+            <ul>
+                <li><button class="quiz-btn" data-quiz-id="python">Python Basics Quiz</button></li>
+                <li><button class="quiz-btn" data-quiz-id="ml">Machine Learning Concepts Quiz</button></li>
+                <li><button class="quiz-btn" data-quiz-id="stats">Statistics for Data Science Quiz</button></li>
+            </ul>
+            <div id="quiz-container" style="margin-top: 20px;"></div>
+        </div>
 
-    <!-- Leaderboard Section -->
-    <div class="leaderboard-section">
-        <h3>Leaderboard</h3>
-        <p>See how you rank among other data enthusiasts!</p>
-        <ul id="leaderboard">
-            <li>Loading leaderboard...</li>
-        </ul>
+        <!-- Coding Challenges Section -->
+        <div class="coding-challenges-section">
+            <h3>Coding Challenges</h3>
+            <p>Participate in coding challenges directly on our platform.</p>
+            <ul>
+                <li><button class="challenge-btn" data-challenge-id="1">Build a Linear Regression Model</button></li>
+                <li><button class="challenge-btn" data-challenge-id="2">Classify Images Using CNN</button></li>
+                <li><button class="challenge-btn" data-challenge-id="3">Optimize a Decision Tree</button></li>
+            </ul>
+            <div id="challenge-container" style="margin-top: 20px;"></div>
+        </div>
+
+        <!-- Leaderboard Section -->
+        <div class="leaderboard-section">
+            <h3>Leaderboard</h3>
+            <p>See how you rank among other data enthusiasts!</p>
+            <ul id="leaderboard">
+                <li>Loading leaderboard...</li>
+            </ul>
+        </div>
     </div>
-</div>
+</section>
 
 <script>
     // Fetch and display quiz questions dynamically
@@ -81,38 +83,27 @@ permalink: /free-tools/
                 const response = await fetch(`/quiz?quiz_id=${quizId}`);
                 const data = await response.json();
 
-                if (!data.questions) {
-                    quizContainer.innerHTML = "Error loading quiz. Please try again.";
+                if (data.status === "error") {
+                    quizContainer.innerHTML = data.message;
                     return;
                 }
 
                 quizContainer.innerHTML = `<h3>${data.title}</h3>`;
-
-                data.questions.forEach((question, index) => {
-                    const questionBlock = document.createElement('div');
-                    questionBlock.innerHTML = `
-                        <p><strong>${index + 1}. ${question.question}</strong></p>
-                        <ul>
-                            ${question.options.map(option => `<li><button class="answer-btn" data-correct="${option === question.correct}">${option}</button></li>`).join('')}
-                        </ul>
+                data.questions.forEach((q, index) => {
+                    const questionDiv = document.createElement("div");
+                    questionDiv.innerHTML = `
+                        <p><strong>${index + 1}. ${q.question}</strong></p>
+                        ${q.options.map(opt => `<button>${opt}</button>`).join("")}
                     `;
-                    quizContainer.appendChild(questionBlock);
+                    quizContainer.appendChild(questionDiv);
                 });
-
-                document.querySelectorAll('.answer-btn').forEach(answerBtn => {
-                    answerBtn.addEventListener('click', () => {
-                        answerBtn.style.backgroundColor = answerBtn.dataset.correct === "true" ? "green" : "red";
-                    });
-                });
-
-            } catch (error) {
+            } catch (err) {
                 quizContainer.innerHTML = "Error fetching quiz data.";
-                console.error(error);
             }
         });
     });
 
-    // Fetch and display coding challenges dynamically
+    // Fetch and display challenges dynamically
     document.querySelectorAll('.challenge-btn').forEach(button => {
         button.addEventListener('click', async () => {
             const challengeId = button.dataset.challengeId;
@@ -121,97 +112,47 @@ permalink: /free-tools/
             challengeContainer.innerHTML = "Loading challenge...";
 
             try {
-                const response = await fetch(`/challenge?challenge_id=${challengeId}`);
+                const response = await fetch(`/challenge`);
                 const data = await response.json();
 
-                challengeContainer.innerHTML = `
-                    <h3>${data.title}</h3>
-                    <p>${data.description}</p>
-                    <textarea id="challenge-code" placeholder="Write your code here..."></textarea>
-                    <button id="submit-code">Submit Code</button>
-                `;
+                if (data.status === "error") {
+                    challengeContainer.innerHTML = data.message;
+                    return;
+                }
 
-                document.getElementById('submit-code').addEventListener('click', () => {
-                    alert("Code submitted for review!");
-                });
-
-            } catch (error) {
-                challengeContainer.innerHTML = "Error loading challenge.";
-                console.error(error);
+                const challenge = data.challenges.find(c => c.id == challengeId);
+                if (challenge) {
+                    challengeContainer.innerHTML = `
+                        <h3>${challenge.title}</h3>
+                        <p>${challenge.description}</p>
+                    `;
+                } else {
+                    challengeContainer.innerHTML = "Challenge not found.";
+                }
+            } catch (err) {
+                challengeContainer.innerHTML = "Error fetching challenge data.";
             }
         });
     });
 
-    // Fetch and display leaderboard dynamically
+    // Load leaderboard
     async function loadLeaderboard() {
-        const leaderboard = document.getElementById('leaderboard');
+        const leaderboard = document.getElementById("leaderboard");
         leaderboard.innerHTML = "Loading...";
 
         try {
-            const response = await fetch('/leaderboard');
+            const response = await fetch("/leaderboard");
             const data = await response.json();
-
-            leaderboard.innerHTML = data.map((entry, index) => `<li>${index + 1}. ${entry.name} - ${entry.points} Points</li>`).join('');
-        } catch (error) {
+            leaderboard.innerHTML = data.leaderboard
+                .map((entry, idx) => `<li>${idx + 1}. ${entry.name} - ${entry.score}</li>`)
+                .join("");
+        } catch (err) {
             leaderboard.innerHTML = "Error loading leaderboard.";
-            console.error(error);
         }
     }
-
     loadLeaderboard();
-</script>
- 
-    
 </script>
 
 <style>
-    #free-tools {
-        padding: 50px 20px;
-        text-align: center;
-    }
-
-    .tool {
-        margin-bottom: 40px;
-        padding: 20px;
-        background-color: #f9f9f9;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .tool h2, .tool h3 {
-        color: #4CAF50;
-    }
-
-    form input, form button, .quiz-btn, .challenge-btn {
-        margin: 5px;
-        padding: 10px;
-        font-size: 1em;
-        cursor: pointer;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-    }
-
-    form button, .quiz-btn, .challenge-btn {
-        background-color: #4CAF50;
-        color: white;
-        transition: background-color 0.3s ease;
-    }
-
-    form button:hover, .quiz-btn:hover, .challenge-btn:hover {
-        background-color: #007BFF;
-    }
-
-    #leaderboard {
-        list-style: none;
-        padding: 0;
-        text-align: left;
-        max-width: 400px;
-        margin: 0 auto;
-    }
-
-    #leaderboard li {
-        margin-bottom: 10px;
-        font-size: 1em;
-        color: #333;
-    }
+    /* Keep your existing styles */
 </style>
