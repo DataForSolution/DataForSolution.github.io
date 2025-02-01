@@ -4,6 +4,8 @@ title: "Our Services"
 permalink: /services/
 ---
 
+{% include services.html %}
+
 <section id="services">
     <h1>Our Services</h1>
     <p>We offer a wide range of data-driven services to help your business thrive.</p>
