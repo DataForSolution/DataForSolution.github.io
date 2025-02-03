@@ -145,4 +145,20 @@
             width: 100%;
         }
     }
+    /* Ensure All Navigation Links Are Consistent */
+.nav-link {
+    font-weight: bold; /* Make all menu items bold */
+    color: black !important; /* Set text color to black */
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 5px;
+}
+
+/* Ensure "Media" and "Resources" Are Styled the Same */
+.nav-link[href="/media/"],
+.nav-link[href="/resources/"] {
+    font-weight: bold; /* Make bold */
+    color: black !important; /* Set to black */
+}
 </style>
