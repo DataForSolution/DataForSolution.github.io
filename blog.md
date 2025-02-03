@@ -5,101 +5,145 @@ permalink: /blog/
 ---
 
 <section id="blog">
-    <h1>Latest Articles</h1>
-    <p>Explore our latest insights, tutorials, and updates on AI, data science, and analytics.</p>
+    <h1>Welcome to Our Blog</h1>
+    <p>Explore insightful articles, tutorials, and industry trends in data science, AI, and analytics.</p>
 
-    <!-- Blog Post List -->
-    <div class="blog-list">
-        {% for post in site.posts %}
-            <div class="blog-card">
-                <h3><a href="{{ post.url }}" class="blog-link">{{ post.title }}</a></h3>
-                <p>{{ post.excerpt }}</p>
-                <a href="{{ post.url }}" class="read-more-link">Read More</a>
-            </div>
-        {% endfor %}
+    <!-- Blog Categories -->
+    <div class="blog-categories">
+        <h2>Blog Categories</h2>
+        <ul>
+            <li><a href="#tutorials">📚 Data Science Tutorials</a></li>
+            <li><a href="#trends">📈 Industry Trends</a></li>
+            <li><a href="#case-studies">🔬 Project Case Studies</a></li>
+            <li><a href="#tech-reviews">🛠️ Tech Reviews</a></li>
+            <li><a href="#career-advice">🎯 Career Advice</a></li>
+        </ul>
+    </div>
+
+    <!-- Blog Section: Tutorials -->
+    <div id="tutorials" class="blog-section">
+        <h2>📚 Data Science Tutorials</h2>
+        <p>Step-by-step guides on Machine Learning, Python, Pandas, and more.</p>
+        <ul>
+            <li><a href="#">How to Build a Machine Learning Model</a></li>
+            <li><a href="#">Python for Data Science: A Beginner’s Guide</a></li>
+            <li><a href="#">Understanding Pandas DataFrames</a></li>
+        </ul>
+    </div>
+
+    <!-- Blog Section: Industry Trends -->
+    <div id="trends" class="blog-section">
+        <h2>📈 Industry Trends</h2>
+        <p>Stay updated on the latest advancements in AI, big data, and analytics.</p>
+        <ul>
+            <li><a href="#">Top 10 AI Trends for 2024</a></li>
+            <li><a href="#">The Future of Data Analytics</a></li>
+        </ul>
+    </div>
+
+    <!-- Blog Section: Project Case Studies -->
+    <div id="case-studies" class="blog-section">
+        <h2>🔬 Project Case Studies</h2>
+        <p>Learn from real-world data science projects and solutions.</p>
+        <ul>
+            <li><a href="#">How We Built an AI for Healthcare Diagnostics</a></li>
+            <li><a href="#">Predicting Stock Prices Using Machine Learning</a></li>
+        </ul>
+    </div>
+
+    <!-- Blog Section: Tech Reviews -->
+    <div id="tech-reviews" class="blog-section">
+        <h2>🛠️ Tech Reviews</h2>
+        <p>In-depth reviews of data science tools and platforms.</p>
+        <ul>
+            <li><a href="#">TensorFlow vs PyTorch: Which One to Choose?</a></li>
+            <li><a href="#">Best Jupyter Notebook Extensions for Productivity</a></li>
+        </ul>
+    </div>
+
+    <!-- Blog Section: Career Advice -->
+    <div id="career-advice" class="blog-section">
+        <h2>🎯 Career Advice</h2>
+        <p>Tips and guidance for becoming a data scientist or AI expert.</p>
+        <ul>
+            <li><a href="#">How to Land Your First Data Science Job</a></li>
+            <li><a href="#">Top Skills Every Data Scientist Should Learn</a></li>
+        </ul>
     </div>
 </section>
 
 <style>
     /* Blog Section Styling */
     #blog {
-        background-color: #d4edda; /* Light gray/green background */
         padding: 50px 20px;
         text-align: center;
+        background-color: #f9f9f9;
+        color: #333;
     }
 
     #blog h1 {
         font-size: 2.5em;
-        font-weight: bold;
-        color: #4CAF50; /* Green for headings */
-        margin-bottom: 20px;
+        color: #4CAF50;
     }
 
-    #blog p {
+    .blog-categories ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .blog-categories li {
+        display: inline;
+        margin: 0 15px;
         font-size: 1.2em;
-        margin-bottom: 40px;
-        color: #333;
     }
 
-    .blog-list {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
+    .blog-categories a {
+        text-decoration: none;
+        color: #007BFF;
+        font-weight: bold;
+        transition: color 0.3s;
     }
 
-    .blog-card {
-        background-color: #fff;
-        border-radius: 10px;
+    .blog-categories a:hover {
+        color: #0056b3;
+    }
+
+    .blog-section {
+        margin-top: 40px;
         padding: 20px;
+        background-color: white;
+        border: 1px solid #ddd;
+        border-radius: 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        width: 300px;
         text-align: left;
-        transition: transform 0.3s, box-shadow 0.3s;
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
     }
 
-    .blog-card:hover {
-        transform: scale(1.05);
-        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+    .blog-section h2 {
+        font-size: 2em;
+        color: #4CAF50;
     }
 
-    .blog-link {
-        color: #007BFF; /* Blue for blog links */
-        text-decoration: none;
-        font-size: 1.5em;
-        font-weight: bold;
-        display: block;
+    .blog-section ul {
+        list-style-type: none;
+        padding: 0;
+    }
+
+    .blog-section li {
         margin-bottom: 10px;
-        transition: color 0.3s ease;
     }
 
-    .blog-link:hover {
-        color: #0056b3; /* Darker blue on hover */
-    }
-
-    .read-more-link {
-        color: #4CAF50; /* Green for 'Read More' link */
+    .blog-section a {
+        color: #007BFF;
         text-decoration: none;
-        font-weight: bold;
-        display: inline-block;
-        margin-top: 10px;
-        transition: color 0.3s ease;
+        font-size: 1.2em;
+        transition: color 0.3s;
     }
 
-    .read-more-link:hover {
-        color: #007BFF; /* Blue on hover */
-    }
-
-    /* Responsive Design */
-    @media (max-width: 768px) {
-        .blog-list {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .blog-card {
-            width: 100%;
-            max-width: 400px;
-        }
+    .blog-section a:hover {
+        color: #0056b3;
+        text-decoration: underline;
     }
 </style>
