@@ -161,10 +161,32 @@ body::before {
     font-weight: bold;
     font-size: 1.2em;
     transition: color 0.3s ease;
+    color: #0056b3 !important;
+
 }
 
 #media a:hover {
     color: #002855; /* Darker blue on hover */
+}
+/* Adjust Media Section */
+#media {
+    background-color: #f0f0f0; /* Light gray background */
+    padding: 50px 20px;
+    text-align: center;
+    color: #ffffff; /* White text */
+}
+
+/* Ensure Links Are Visible */
+#media a {
+    color: #ffffff; /* White color for visibility */
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+#media a:hover {
+    color: #cccccc; /* Slightly dimmed white on hover */
 }
 
 /* Improve List Visibility */
@@ -176,13 +198,11 @@ body::before {
 .media-list li {
     margin: 10px 0;
     font-size: 1.2em;
-    color: #004085; /* Apply blue color to text */
+    color: #ffffff; /* Ensure white text */
+    color: #ffffff !important;
+
 }
 
-.media-list a:hover {
-    color: #007BFF;
-    text-decoration: underline;
-}
 
 /* FAQ SECTION */
 #faq {
