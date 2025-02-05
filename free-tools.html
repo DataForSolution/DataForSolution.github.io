@@ -1,100 +1,89 @@
 ---
-layout: page
+layout: default
 title: "Free Tools"
 permalink: /free-tools/
 ---
 
 <section id="free-tools">
-    <h1>Free Tools</h1>
-    <p>Explore our free tools to enhance your data science projects.</p>
+    <h1>🚀 Free Tools for Data Scientists</h1>
+    <p>Explore our **cutting-edge** free tools that enhance your data science projects and research.</p>
 
-    <!-- Data Cleaning Tool -->
+    <!-- 🔹 Data Cleaning Tool -->
     <div class="tool">
-        <h2>Data Cleaning Tool</h2>
-        <p>Upload your CSV file, and we'll clean the dataset for you.</p>
+        <h2>🧹 Data Cleaning Tool</h2>
+        <p>Upload your CSV file, and our automated system will clean it for you.</p>
         <form id="data-cleaning-form" enctype="multipart/form-data">
             <input type="file" name="csv-file" accept=".csv" required>
             <button type="submit">Clean Dataset</button>
         </form>
-        <div id="cleaning-result" style="margin-top: 20px;"></div>
+        <div id="cleaning-result"></div>
     </div>
 
-    <!-- Prediction Tool -->
+    <!-- 🔹 AI-Powered Prediction Tool -->
     <div class="tool">
-        <h2>Prediction Tool</h2>
-        <p>Provide input data and get instant predictions from our ML model demo.</p>
+        <h2>🤖 AI Prediction Tool</h2>
+        <p>Provide input data and get instant AI predictions.</p>
         <form id="prediction-form">
             <input type="text" name="input-feature" placeholder="Enter input value" required>
             <button type="submit">Predict</button>
         </form>
-        <div id="prediction-result" style="margin-top: 20px;"></div>
+        <div id="prediction-result"></div>
     </div>
 
-    <!-- Data Science Quiz and Challenges -->
+    <!-- 🔹 Data Science Learning & Challenges -->
     <div class="tool">
-        <h2>Data Science Quiz and Challenges</h2>
-        <p>Test your knowledge and skills with our quizzes and coding challenges. Compete with others on our leaderboard!</p>
+        <h2>🎯 Data Science Quizzes & Challenges</h2>
+        <p>Test your knowledge and skills with our interactive quizzes and coding challenges.</p>
 
-        <!-- Quizzes Section -->
-        <div class="quiz-section">
-            <h3>Quizzes</h3>
-            <p>Take quizzes on Python, Machine Learning, and Statistics.</p>
-            <ul>
-                <li><button class="quiz-btn" data-quiz-id="python">Python Basics Quiz</button></li>
-                <li><button class="quiz-btn" data-quiz-id="ml">Machine Learning Concepts Quiz</button></li>
-                <li><button class="quiz-btn" data-quiz-id="stats">Statistics for Data Science Quiz</button></li>
-            </ul>
-            <div id="quiz-container" style="margin-top: 20px;"></div>
-        </div>
+        <h3>📘 Quizzes</h3>
+        <ul>
+            <li><button class="quiz-btn" data-quiz-id="python">Python Basics Quiz</button></li>
+            <li><button class="quiz-btn" data-quiz-id="ml">Machine Learning Quiz</button></li>
+            <li><button class="quiz-btn" data-quiz-id="stats">Statistics for Data Science Quiz</button></li>
+        </ul>
 
-        <!-- Coding Challenges Section -->
-        <div class="coding-challenges-section">
-            <h3>Coding Challenges</h3>
-            <p>Participate in coding challenges directly on our platform.</p>
-            <ul>
-                <li><button class="challenge-btn" data-challenge-id="1">Build a Linear Regression Model</button></li>
-                <li><button class="challenge-btn" data-challenge-id="2">Classify Images Using CNN</button></li>
-                <li><button class="challenge-btn" data-challenge-id="3">Optimize a Decision Tree</button></li>
-            </ul>
-            <div id="challenge-container" style="margin-top: 20px;"></div>
-        </div>
+        <h3>💻 Coding Challenges</h3>
+        <ul>
+            <li><button class="challenge-btn" data-challenge-id="1">Build a Regression Model</button></li>
+            <li><button class="challenge-btn" data-challenge-id="2">Classify Images Using CNN</button></li>
+        </ul>
 
-        <!-- Leaderboard Section -->
-        <div class="leaderboard-section">
-            <h3>Leaderboard</h3>
-            <p>See how you rank among other data enthusiasts!</p>
-            <ul id="leaderboard">
-                <li>Loading leaderboard...</li>
-            </ul>
-        </div>
+        <h3>🏆 Leaderboard</h3>
+        <ul id="leaderboard">
+            <li>Loading leaderboard...</li>
+        </ul>
     </div>
+
+    <!-- 🔹 Must-Have Free Tools for Data Scientists -->
+    <h2>🔗 Free Resources & Tools</h2>
+    <ul class="tool-links">
+        <li>📊 <a href="https://colab.research.google.com/" target="_blank">Google Colab</a> - Free cloud-based Jupyter Notebook.</li>
+        <li>📂 <a href="https://www.kaggle.com/datasets" target="_blank">Kaggle Datasets</a> - Access free datasets for machine learning.</li>
+        <li>🖥️ <a href="https://www.tensorflow.org/" target="_blank">TensorFlow</a> - Open-source deep learning framework.</li>
+        <li>📈 <a href="https://plotly.com/" target="_blank">Plotly</a> - Free interactive visualization library.</li>
+        <li>🛠️ <a href="https://github.com/" target="_blank">GitHub</a> - Host, collaborate, and contribute to open-source projects.</li>
+        <li>🖼️ <a href="https://www.openai.com/research" target="_blank">OpenAI Tools</a> - Free AI models, APIs, and research papers.</li>
+        <li>📡 <a href="https://huggingface.co/models" target="_blank">Hugging Face Models</a> - Free NLP & ML model hub.</li>
+    </ul>
+
 </section>
 
 <script>
-    // Fetch and display quiz questions dynamically
+    // Load quizzes
     document.querySelectorAll('.quiz-btn').forEach(button => {
         button.addEventListener('click', async () => {
             const quizId = button.dataset.quizId;
             const quizContainer = document.getElementById('quiz-container');
 
             quizContainer.innerHTML = "Loading quiz...";
-
             try {
                 const response = await fetch(`/quiz?quiz_id=${quizId}`);
                 const data = await response.json();
-
-                if (data.status === "error") {
-                    quizContainer.innerHTML = data.message;
-                    return;
-                }
-
                 quizContainer.innerHTML = `<h3>${data.title}</h3>`;
                 data.questions.forEach((q, index) => {
                     const questionDiv = document.createElement("div");
-                    questionDiv.innerHTML = `
-                        <p><strong>${index + 1}. ${q.question}</strong></p>
-                        ${q.options.map(opt => `<button>${opt}</button>`).join("")}
-                    `;
+                    questionDiv.innerHTML = `<p><strong>${index + 1}. ${q.question}</strong></p>
+                        ${q.options.map(opt => `<button>${opt}</button>`).join("")}`;
                     quizContainer.appendChild(questionDiv);
                 });
             } catch (err) {
@@ -103,43 +92,10 @@ permalink: /free-tools/
         });
     });
 
-    // Fetch and display challenges dynamically
-    document.querySelectorAll('.challenge-btn').forEach(button => {
-        button.addEventListener('click', async () => {
-            const challengeId = button.dataset.challengeId;
-            const challengeContainer = document.getElementById('challenge-container');
-
-            challengeContainer.innerHTML = "Loading challenge...";
-
-            try {
-                const response = await fetch(`/challenge`);
-                const data = await response.json();
-
-                if (data.status === "error") {
-                    challengeContainer.innerHTML = data.message;
-                    return;
-                }
-
-                const challenge = data.challenges.find(c => c.id == challengeId);
-                if (challenge) {
-                    challengeContainer.innerHTML = `
-                        <h3>${challenge.title}</h3>
-                        <p>${challenge.description}</p>
-                    `;
-                } else {
-                    challengeContainer.innerHTML = "Challenge not found.";
-                }
-            } catch (err) {
-                challengeContainer.innerHTML = "Error fetching challenge data.";
-            }
-        });
-    });
-
     // Load leaderboard
     async function loadLeaderboard() {
         const leaderboard = document.getElementById("leaderboard");
         leaderboard.innerHTML = "Loading...";
-
         try {
             const response = await fetch("/leaderboard");
             const data = await response.json();
@@ -154,5 +110,60 @@ permalink: /free-tools/
 </script>
 
 <style>
-    /* Keep your existing styles */
+    #free-tools {
+        padding: 50px 20px;
+        background-color: #f9f9f9;
+        color: #333;
+        text-align: center;
+    }
+
+    .tool {
+        background: white;
+        border-radius: 10px;
+        padding: 20px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        margin-bottom: 20px;
+        text-align: left;
+        max-width: 600px;
+        margin: auto;
+    }
+
+    .tool h2 {
+        font-size: 1.5em;
+        color: #4CAF50;
+        margin-bottom: 10px;
+    }
+
+    .tool p {
+        font-size: 1em;
+        margin-bottom: 10px;
+        color: #555;
+    }
+
+    .tool-links {
+        list-style: none;
+        padding: 0;
+        text-align: left;
+        max-width: 600px;
+        margin: auto;
+    }
+
+    .tool-links li {
+        font-size: 1.1em;
+        margin: 10px 0;
+        color: #333;
+        background: #eaf7ea;
+        padding: 10px;
+        border-radius: 5px;
+    }
+
+    .tool-links a {
+        color: #007BFF;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    .tool-links a:hover {
+        text-decoration: underline;
+    }
 </style>
