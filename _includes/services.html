@@ -5,7 +5,7 @@ permalink: /services/
 ---
 
 <section id="services">
-    <h1>Our Services</h1>
+    <h1>🚀 Our Services</h1>
     <p>Explore the comprehensive services we offer to drive your business forward with data and AI-powered insights.</p>
 
     <!-- Services List -->
@@ -47,19 +47,47 @@ permalink: /services/
                     <span>Financial Analysis</span>
                 </a>
             </li>
-            <li>
-                <a href="#" class="service-link" data-service-id="market-research">
-                    <img src="{{ '/assets/images/market-research.png' | relative_url }}" alt="Market Research" class="service-icon">
-                    <span>Market Research</span>
-                </a>
-            </li>
         </ul>
     </div>
 
     <!-- Service Details Section -->
     <div id="service-details" class="service-details">
-        <h3>Select a Service</h3>
+        <h3>🛠 Select a Service</h3>
         <p>Click on a service to learn more about what we offer.</p>
+    </div>
+
+    <!-- Request a Service Form -->
+    <div id="service-request">
+        <h2>📩 Request a Service</h2>
+        <p>Need a custom AI or data science solution? Submit your request below:</p>
+
+        <form id="service-request-form">
+            <label for="name">👤 Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">📧 Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="service-type">🛠 Select Service:</label>
+            <select id="service-type" name="service">
+                <option value="business-analytics">Business Analytics</option>
+                <option value="data-entry">Data Entry</option>
+                <option value="data-reporting">Data Reporting</option>
+                <option value="strategic-planning">Strategic Planning</option>
+                <option value="healthcare-consulting">Healthcare Consulting</option>
+                <option value="financial-analysis">Financial Analysis</option>
+            </select>
+
+            <label for="budget">💰 Budget (USD):</label>
+            <input type="number" id="budget" name="budget" min="100" step="50">
+
+            <label for="details">📝 Project Details:</label>
+            <textarea id="details" name="details" rows="4" required></textarea>
+
+            <button type="submit">Submit Request</button>
+        </form>
+
+        <div id="submission-message" style="display: none; margin-top: 10px;"></div>
     </div>
 </section>
 
@@ -88,10 +116,6 @@ permalink: /services/
         "financial-analysis": {
             "title": "Financial Analysis",
             "description": "Utilize AI for budgeting, fraud detection, and investment optimization."
-        },
-        "market-research": {
-            "title": "Market Research",
-            "description": "Gain competitive intelligence with AI-driven market trend analysis."
         }
     };
 
@@ -103,119 +127,69 @@ permalink: /services/
                 const serviceDetails = document.getElementById('service-details');
 
                 if (serviceDescriptions[serviceId]) {
-                    serviceDetails.innerHTML = `
-                        <h3>${serviceDescriptions[serviceId].title}</h3>
-                        <p>${serviceDescriptions[serviceId].description}</p>
-                    `;
-                    serviceDetails.style.display = "block";
-                } else {
-                    serviceDetails.innerHTML = "<p>Details for this service are not available.</p>";
+                    serviceDetails.innerHTML = `<h3>${serviceDescriptions[serviceId].title}</h3>
+                        <p>${serviceDescriptions[serviceId].description}</p>`;
                     serviceDetails.style.display = "block";
                 }
             });
+        });
+
+        // Handle form submission
+        document.getElementById("service-request-form").addEventListener("submit", (event) => {
+            event.preventDefault();
+            
+            document.getElementById("submission-message").style.display = "block";
+            document.getElementById("submission-message").innerHTML = "✅ Your request has been submitted successfully. We will contact you soon!";
         });
     });
 </script>
 
 <style>
-    /* General Styling */
-    #services {
-        background-color: #f5f5f5; 
-        padding: 50px 20px;
-        text-align: center;
-    }
-
-    #services h1 {
-        font-size: 2.5em;
-        font-weight: bold;
-        color: #333;
-        margin-bottom: 20px;
-        text-shadow: 1px 1px 2px #ddd;
-    }
-
-    #services p {
-        font-size: 1.2em;
-        margin-bottom: 40px;
-        color: #555;
-        line-height: 1.6;
-    }
-
-    .services-container ul {
-        list-style: none;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-        padding: 0;
-        margin: 0;
-    }
-
-    .services-container li {
-        flex: 0 1 calc(33.333% - 20px); 
-        text-align: center;
-    }
-
-    .service-link {
-        text-decoration: none;
-        color: #333;
-        display: block;
-        transition: transform 0.3s ease, color 0.3s ease;
-    }
-
-    .service-link:hover {
-        transform: scale(1.05);
-        color: #007BFF;
-    }
-
-    .service-icon {
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        margin-bottom: 10px;
-        border: 3px solid #4CAF50;
-        transition: transform 0.3s ease, border-color 0.3s ease;
-    }
-
-    .service-icon:hover {
-        border-color: #007BFF;
-        transform: scale(1.1);
-    }
-
-    .service-details {
+    #service-request {
         margin-top: 40px;
         padding: 20px;
-        background-color: #fff;
-        border: 1px solid #ddd;
+        background: white;
         border-radius: 10px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        text-align: left;
         max-width: 600px;
         margin-left: auto;
         margin-right: auto;
-        display: none;
-        color: #333;
-        font-size: 1.1em;
     }
 
-    .service-details h3 {
-        font-size: 1.5em;
-        color: #4CAF50;
-        margin-bottom: 10px;
+    #service-request h2 {
+        text-align: center;
+        color: #007BFF;
     }
 
-    /* Responsive Design */
-    @media (max-width: 768px) {
-        .services-container li {
-            flex: 0 1 calc(50% - 20px);
-        }
+    #service-request form {
+        display: flex;
+        flex-direction: column;
+    }
 
-        .service-icon {
-            width: 80px;
-            height: 80px;
-        }
+    #service-request label {
+        font-weight: bold;
+        margin-top: 10px;
+    }
 
-        .service-details {
-            width: 90%;
-        }
+    #service-request input, #service-request select, #service-request textarea {
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    #service-request button {
+        margin-top: 15px;
+        padding: 10px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    #service-request button:hover {
+        background-color: #0056b3;
     }
 </style>

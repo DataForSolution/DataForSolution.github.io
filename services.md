@@ -4,174 +4,56 @@ title: "Our Services"
 permalink: /services/
 ---
 
-<section id="services">
-    <h1>Our Services</h1>
-    <p>Explore the comprehensive services we offer to drive your business forward with data and AI-powered insights.</p>
+# 🚀 Our Services
+Explore the comprehensive services we offer to drive your business forward with **data and AI-powered insights**.
 
-    <!-- Services List -->
-    <div class="services-container">
-        <ul>
-            <li>
-                <a href="#" class="service-link" data-service-id="business-analytics">
-                    <span>Business Analytics</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="service-link" data-service-id="data-entry">
-                    <span>Data Entry</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="service-link" data-service-id="data-reporting">
-                    <span>Data Reporting</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="service-link" data-service-id="strategic-planning">
-                    <span>Strategic Planning</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="service-link" data-service-id="healthcare-consulting">
-                    <span>Healthcare Consulting</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="service-link" data-service-id="financial-analysis">
-                    <span>Financial Analysis</span>
-                </a>
-            </li>
-            <li>
-                <a href="#" class="service-link" data-service-id="market-research">
-                    <span>Market Research</span>
-                </a>
-            </li>
-        </ul>
-    </div>
+## 📌 Available Services
+We specialize in the following data-driven services:
 
-    <!-- Service Details Section -->
-    <div id="service-details" class="service-details">
-        <h3>Select a Service</h3>
-        <p>Click on a service to learn more about what we offer.</p>
-    </div>
-</section>
+- **📊 Business Analytics** – Gain insights into your operations through AI-powered data analysis and visualization.
+- **📝 Data Entry** – Efficient and accurate data entry services to maintain reliable business records.
+- **📈 Data Reporting** – Custom-built reports with dynamic visualizations to simplify decision-making.
+- **🎯 Strategic Planning** – Align data strategies with business objectives for maximum impact.
+- **🏥 Healthcare Consulting** – Leverage AI-powered analytics for diagnostics, medical imaging, and research.
+- **💰 Financial Analysis** – AI-driven budgeting, fraud detection, and investment optimization.
+- **📊 Market Research** – Understand market trends with AI-driven competitive intelligence.
 
-<script>
-    const serviceDescriptions = {
-        "business-analytics": {
-            "title": "Business Analytics",
-            "description": "Gain insights into your business operations through AI-powered data analysis and visualization."
-        },
-        "data-entry": {
-            "title": "Data Entry",
-            "description": "We provide accurate and efficient data entry services, ensuring reliable records for your business."
-        },
-        "data-reporting": {
-            "title": "Data Reporting",
-            "description": "Custom-built reports with dynamic visualizations to make data-driven decisions easier."
-        },
-        "strategic-planning": {
-            "title": "Strategic Planning",
-            "description": "Align data strategies with your business goals using our expert strategic analysis."
-        },
-        "healthcare-consulting": {
-            "title": "Healthcare Consulting",
-            "description": "Leverage AI-powered healthcare solutions for analytics, imaging, and diagnostics."
-        },
-        "financial-analysis": {
-            "title": "Financial Analysis",
-            "description": "Utilize AI for budgeting, fraud detection, and investment optimization."
-        },
-        "market-research": {
-            "title": "Market Research",
-            "description": "Gain competitive intelligence with AI-driven market trend analysis."
-        }
-    };
+## 📩 Request a Service
+Do you need a custom AI or data science solution? **Submit your project request below:**
 
-    document.addEventListener('DOMContentLoaded', () => {
-        document.querySelectorAll('.service-link').forEach(service => {
-            service.addEventListener('click', (event) => {
-                event.preventDefault();
-                const serviceId = service.dataset.serviceId;
-                const serviceDetails = document.getElementById('service-details');
+<form action="/submit-service-request" method="POST">
+    <label for="name">👤 Name:</label><br>
+    <input type="text" id="name" name="name" required><br>
 
-                if (serviceDescriptions[serviceId]) {
-                    serviceDetails.innerHTML = `
-                        <h3>${serviceDescriptions[serviceId].title}</h3>
-                        <p>${serviceDescriptions[serviceId].description}</p>
-                    `;
-                    serviceDetails.style.display = "block";
-                } else {
-                    serviceDetails.innerHTML = "<p>Details for this service are not available.</p>";
-                    serviceDetails.style.display = "block";
-                }
-            });
-        });
-    });
-</script>
+    <label for="email">📧 Email:</label><br>
+    <input type="email" id="email" name="email" required><br>
 
-<style>
-    #services {
-        background-color: #f9f9f9; 
-        padding: 50px 20px;
-        text-align: center;
-    }
+    <label for="service-type">🛠 Select Service:</label><br>
+    <select id="service-type" name="service">
+        <option value="business-analytics">Business Analytics</option>
+        <option value="data-entry">Data Entry</option>
+        <option value="data-reporting">Data Reporting</option>
+        <option value="strategic-planning">Strategic Planning</option>
+        <option value="healthcare-consulting">Healthcare Consulting</option>
+        <option value="financial-analysis">Financial Analysis</option>
+    </select><br>
 
-    #services h1 {
-        font-size: 2.5em;
-        font-weight: bold;
-        color: #4CAF50;
-        margin-bottom: 20px;
-    }
+    <label for="budget">💰 Budget (USD):</label><br>
+    <input type="number" id="budget" name="budget" min="100" step="50"><br>
 
-    #services p {
-        font-size: 1.2em;
-        margin-bottom: 40px;
-        color: #333;
-    }
+    <label for="details">📝 Project Details:</label><br>
+    <textarea id="details" name="details" rows="4" required></textarea><br>
 
-    .services-container ul {
-        list-style: none;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-        padding: 0;
-        margin: 0;
-    }
+    <button type="submit">Submit Request</button>
+</form>
 
-    .services-container li {
-        flex: 0 1 calc(33.333% - 20px); 
-        text-align: center;
-    }
+## 🔗 Related Resources
+Check out more useful links:
 
-    .service-link {
-        text-decoration: none;
-        color: #333;
-        display: block;
-        transition: transform 0.3s ease;
-    }
+- 📘 **[Our Projects](/projects/)** – See our latest AI & Data Science projects.
+- 📚 **[Free Tools](/free-tools/)** – Explore free data science tools and resources.
+- 🏆 **[Success Stories](/blog/)** – Learn how data science is transforming industries.
 
-    .service-link:hover {
-        transform: scale(1.05);
-    }
+---
 
-    .service-details {
-        margin-top: 40px;
-        padding: 20px;
-        background-color: #fff;
-        border: 1px solid #ddd;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        text-align: left;
-        max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
-        display: none;
-    }
-
-    .service-details h3 {
-        font-size: 1.5em;
-        color: #4CAF50;
-    }
-</style>
+💡 **Need help?** Reach out via our [Contact Page](/contact/) or email us at [kent.sew@gmail.com](mailto:kent.sew@gmail.com).
