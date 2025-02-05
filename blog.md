@@ -25,7 +25,7 @@ permalink: /blog/
         <h2>📚 Data Science Tutorials</h2>
         <p>Step-by-step guides on Machine Learning, Python, Pandas, and more.</p>
         <ul>
-            <li><a href="https://scikit-learn.org/stable/" target="_blank">How to Build a Machine Learning Model (Scikit-learn)</a></li>
+            <li><a href="https://scikit-learn.org/stable/" target="_blank">How to Build a Machine Learning Model</a></li>
             <li><a href="https://www.w3schools.com/python/" target="_blank">Python for Data Science: A Beginner’s Guide</a></li>
             <li><a href="https://pandas.pydata.org/docs/" target="_blank">Understanding Pandas DataFrames</a></li>
         </ul>
@@ -82,6 +82,7 @@ permalink: /blog/
     #blog h1 {
         font-size: 2.5em;
         color: #4CAF50;
+        margin-bottom: 20px;
     }
 
     .blog-categories ul {
@@ -99,6 +100,7 @@ permalink: /blog/
         text-decoration: none;
         color: #007BFF;
         font-weight: bold;
+        transition: color 0.3s;
     }
 
     .blog-categories a:hover {
@@ -133,6 +135,7 @@ permalink: /blog/
         color: #007BFF;
         text-decoration: none;
         font-size: 1.1em;
+        transition: color 0.3s;
     }
 
     .blog-section a:hover {
