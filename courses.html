@@ -12,16 +12,32 @@ permalink: /courses/
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Courses - Learn Power BI, Tableau, and Python</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+    
+    <style>
+        /* Style for navigation links */
+        nav ul li a {
+            font-weight: normal;
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        /* Bold black text for Courses in menu */
+        nav ul li a[href='/courses'] {
+            font-weight: bold;
+            color: black;
+        }
+
+        /* Change color when hovered */
+        nav ul li a[href='/courses']:hover {
+            color: #007BFF;
+        }
+    </style>
 </head>
 <body>
     <nav>
         <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/about">About</a></li>
-            <li><a href="/services">Services</a></li>
-            <li><a href="/blog">Blog</a></li>
-            <li><a href="/media">Media</a></li>
-            <li><a href="/contact">Contact</a></li>
+            
             <li><a href="/courses">Courses</a></li> <!-- Added Courses to Menu -->
         </ul>
     </nav>
