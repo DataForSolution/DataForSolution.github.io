@@ -7,7 +7,7 @@ paginate: true
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- Google tag (gtag.js) -->
+    <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-FNB09GQ72T"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -18,84 +18,54 @@ paginate: true
     
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="LLmachine - Empowering businesses with cutting-edge AI, data science solutions, and innovative analytics strategies.">
-    <meta name="keywords" content="AI, Data Science, Machine Learning, Analytics, LLmachine, AI solutions, Data Analytics">
+    <meta name="description" content="Empowering businesses with cutting-edge AI, data science solutions, and innovative analytics strategies.">
+    <meta name="keywords" content="AI, Data Science, Machine Learning, Analytics, AI solutions, Data Analytics">
     <meta name="author" content="LLmachine">
-    <meta property="og:title" content="LLmachine - AI, Data Science & Analytics">
-    <meta property="og:description" content="Explore cutting-edge AI and data science projects, insights, and services at LLmachine.">
-    <meta property="og:image" content="{{ '/assets/images/og-image.png' | relative_url }}">
-    <meta property="og:url" content="{{ site.url | relative_url }}">
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@SewLiben">
     <title>{{ page.title | default: "LLmachine" }}</title>
     
-    <section id="courses-home">
-    <h2>📚 Learn Data Science & AI</h2>
-    <p>Join our free online courses in Power BI, Tableau, and Python.</p>
-    <a href="/courses.html" class="button">Start Learning</a>
-</section>
-
-
     <!-- Favicon -->
     <link rel="icon" href="{{ '/assets/images/favicon.ico' | relative_url }}" type="image/x-icon">
-
+    
     <!-- CSS -->
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
-
+    
     <!-- Plotly.js -->
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
-<body style="background: url('{{ '/assets/images/background.jpg' | relative_url }}') no-repeat center center fixed; background-size: cover;">
+<body>
 
 <!-- Navigation -->
 <nav>
     <!-- Add your navigation bar code here -->
 </nav>
-  <!-- Interactive Visualization Section -->
-<section id="interactive-visualizations">
-    <h2>Interactive Visualizations</h2>
-    <p>Explore our AI-powered models and predictive analytics through interactive charts.</p>
 
-    <!-- Chart Container -->
-    <div id="chart-container" style="width: 100%; max-width: 800px; margin: auto;">
-        <!-- The chart will be rendered here -->
-    </div>
-
-    <!-- Input Prediction Section -->
-    <div id="predict-section" style="margin-top: 20px; text-align: center;">
-        <h3>Predict Future Trends</h3>
-        <label for="predict-input">Enter a value:</label>
-        <input id="predict-input" type="number" placeholder="Input data..." style="padding: 10px; border-radius: 5px;">
-        <button id="predict-btn" style="padding: 10px 20px; background-color: #4CAF50; color: white; border: none; border-radius: 5px; cursor: pointer;">Predict</button>
-        <p id="prediction-result" style="margin-top: 10px; font-weight: bold;"></p>
-    </div>
+<!-- Hero Section -->
+<section id="hero">
+    <h1>🚀 Unlock the Power of AI & Data Science</h1>
+    <p>Explore AI-powered insights, real-world solutions, and data-driven decision-making tools.</p>
+    <a href="/services" class="button">Discover Services</a>
+    <a href="/courses" class="button-secondary">Start Learning</a>
 </section>
 
-<!-- Purpose-Driven Content Section -->
+<!-- Why Choose Us Section -->
+<section id="why-us">
+    <h2>💡 Why Choose LLmachine?</h2>
+    <ul>
+        <li>✅ Hands-on AI Learning & Projects</li>
+        <li>✅ Advanced Data Science Visualizations</li>
+        <li>✅ Industry-Leading AI Applications</li>
+    </ul>
+    <a href="/about" class="button">Learn More</a>
+</section>
 
-<!-- Engagement Section -->
-<section id="engagement">
-    <h2>Engage With Us</h2>
-    <div class="engagement-grid">
-        <div class="engagement-card">
-            <h3>Testimonials</h3>
-            <p>"LLmachine transformed our business with AI solutions that improved efficiency by 40%!"</p>
-            <p>- Sarah J., Business Owner</p>
-        </div>
-        <div class="engagement-card">
-            <h3>Newsletter</h3>
-            <p>Stay informed with our latest updates in AI and data science.</p>
-            <form id="newsletter-form">
-                <input type="email" placeholder="Enter your email" required>
-                <button type="submit">Subscribe</button>
-            </form>
-        </div>
-        <div class="engagement-card">
-            <h3>Call-to-Action</h3>
-            <p>Ready to get started? Explore our services and learn more about how we can help your business grow.</p>
-            <a href="/services" class="cta-button">Discover Services</a>
-        </div>
-    </div>
+<!-- Stay Updated Section -->
+<section id="newsletter">
+    <h2>📢 Stay Updated with AI & Data Science</h2>
+    <p>Subscribe to get the latest insights, trends, and learning resources.</p>
+    <form>
+        <input type="email" placeholder="Enter your email" required>
+        <button type="submit">Subscribe</button>
+    </form>
 </section>
 
 <!-- JavaScript -->
@@ -109,25 +79,12 @@ paginate: true
         mode: 'lines+markers',
         marker: { color: 'blue' }
     };
-
     const layout = {
         title: 'Trend Prediction',
         xaxis: { title: 'Year' },
         yaxis: { title: 'Value' }
     };
-
     Plotly.newPlot('chart-container', [data], layout);
-
-    // Prediction Logic
-    document.getElementById('predict-btn').addEventListener('click', () => {
-        const inputValue = document.getElementById('predict-input').value;
-        if (inputValue) {
-            const prediction = parseFloat(inputValue) * 50 + 50;
-            document.getElementById('prediction-result').textContent = `Predicted Value: ${prediction.toFixed(2)}`;
-        } else {
-            document.getElementById('prediction-result').textContent = 'Please enter a valid input.';
-        }
-    });
 </script>
 </body>
 </html>
