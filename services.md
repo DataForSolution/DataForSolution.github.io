@@ -21,14 +21,20 @@ We specialize in the following data-driven services:
 ## 📩 Request a Service
 Do you need a custom AI or data science solution? **Submit your project request below:**
 
-<form action="/submit-service-request" method="POST">
-    <label for="name">👤 Name:</label><br>
-    <input type="text" id="name" name="name" required><br>
+     # Our Services
+Explore our comprehensive services.
 
-    <label for="email">📧 Email:</label><br>
-    <input type="email" id="email" name="email" required><br>
+## Service Request Form
+If you need our services, submit a request below:
 
-    <label for="service-type">🛠 Select Service:</label><br>
+<form action="/request-submitted.html" method="GET">
+    <label for="name">👤 Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">📧 Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="service-type">🛠 Select Service:</label>
     <select id="service-type" name="service">
         <option value="business-analytics">Business Analytics</option>
         <option value="data-entry">Data Entry</option>
@@ -36,17 +42,16 @@ Do you need a custom AI or data science solution? **Submit your project request 
         <option value="strategic-planning">Strategic Planning</option>
         <option value="healthcare-consulting">Healthcare Consulting</option>
         <option value="financial-analysis">Financial Analysis</option>
-    </select><br>
+    </select>
 
-    <label for="budget">💰 Budget (USD):</label><br>
-    <input type="number" id="budget" name="budget" min="100" step="50"><br>
+    <label for="budget">💰 Budget (USD):</label>
+    <input type="number" id="budget" name="budget" min="100" step="50" required>
 
-    <label for="details">📝 Project Details:</label><br>
-    <textarea id="details" name="details" rows="4" required></textarea><br>
+    <label for="details">📝 Project Details:</label>
+    <textarea id="details" name="details" rows="4" required></textarea>
 
     <button type="submit">Submit Request</button>
 </form>
-
 ## 🔗 Related Resources
 Check out more useful links:
 
