@@ -770,4 +770,56 @@ body.dark-mode {
 .resource-navigation a:hover {
     background-color: #f1f1f1;
 }
+/* Courses Section Fix */
+#courses {
+    padding: 50px 20px;
+    background-color: #ffffff; /* Change background to white for better contrast */
+    text-align: center;
+    color: #333333; /* Dark text for better visibility */
+}
+
+#courses h1, #courses h2, #courses h3 {
+    color: #4CAF50; /* Use a readable green shade */
+}
+
+#courses p {
+    font-size: 1.2em;
+    color: #555555; /* Medium gray for readability */
+    line-height: 1.6;
+}
+
+.course {
+    background: white; /* Ensures text is on a readable background */
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+    text-align: left;
+}
+
+.course h2 {
+    font-size: 1.8em;
+    color: #333333; /* Ensure text is readable */
+}
+
+.course p {
+    font-size: 1em;
+    color: #666666;
+}
+
+.button {
+    display: inline-block;
+    padding: 12px 20px;
+    background-color: #007BFF;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
 
