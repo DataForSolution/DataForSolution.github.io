@@ -15,6 +15,21 @@ permalink: /courses/
     
     <style>
         /* Style for navigation links */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
         nav ul li a {
             font-weight: normal;
             color: #333;
@@ -28,13 +43,24 @@ permalink: /courses/
             color: black;
         }
 
-        /* Change color when hovered */
-        nav ul li a[href='/courses']:hover {
-            color: #007BFF;
-        }
-         /* Change color to orange when hovered */
+        /* Change color to orange when hovered */
         nav ul li a[href='/courses']:hover {
             color: orange;
+        }
+
+        /* Sign-in button */
+        .sign-in {
+            font-weight: bold;
+            color: white;
+            background-color: #007BFF;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .sign-in:hover {
+            background-color: #0056b3;
         }
     </style>
 </head>
