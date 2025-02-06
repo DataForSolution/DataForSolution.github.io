@@ -1,28 +1,33 @@
 ---
 layout: default
-title: "Sign In"
-permalink: /signin/
+title: "Sign Up"
+permalink: /signup/
 ---
 
-<section id="signin">
-    <h1>🔑 Sign In</h1>
-    <p>Welcome! Please sign in to access your account.</p>
+<section id="signup">
+    <h1>📝 Sign Up</h1>
+    <p>Create an account to access exclusive content and features.</p>
 
-    <form action="/dashboard" method="POST">
+    <form action="/welcome" method="POST">
+        <label for="name">👤 Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
         <label for="email">📧 Email:</label>
         <input type="email" id="email" name="email" required>
 
         <label for="password">🔒 Password:</label>
         <input type="password" id="password" name="password" required>
 
-        <button type="submit">Sign In</button>
+        <button type="submit">Sign Up</button>
     </form>
 
-    <p>Don't have an account? <a href="/signup">Sign up here</a>.</p>
+    <p>Already have an account? <a href="/signin">Sign in here</a>.</p>
+    <p>Don't have an account? <a href="/signup/">Sign up here</a>.</p>
+
 </section>
 
 <style>
-    #signin {
+    #signup {
         max-width: 400px;
         margin: auto;
         padding: 20px;
@@ -50,7 +55,7 @@ permalink: /signin/
 
     button {
         padding: 10px;
-        background-color: #007BFF;
+        background-color: #28a745;
         color: white;
         border: none;
         border-radius: 5px;
@@ -58,6 +63,6 @@ permalink: /signin/
     }
 
     button:hover {
-        background-color: #0056b3;
+        background-color: #218838;
     }
 </style>
