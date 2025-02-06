@@ -8,22 +8,16 @@ permalink: /signin/
     <h1>📝 Sign Up</h1>
     <p>Create an account to access exclusive content and features.</p>
 
-    <form action="/welcome" method="POST">
-        <label for="name">👤 Full Name:</label>
-        <input type="text" id="name" name="name" required>
+  <form action="/dashboard.html" method="GET">
+    <label for="email">📧 Email:</label>
+    <input type="email" id="email" name="email" required>
 
-        <label for="email">📧 Email:</label>
-        <input type="email" id="email" name="email" required>
+    <label for="password">🔒 Password:</label>
+    <input type="password" id="password" name="password" required>
 
-        <label for="password">🔒 Password:</label>
-        <input type="password" id="password" name="password" required>
+    <button type="submit">Sign In</button>
+</form>
 
-        <button type="submit">Sign Up</button>
-    </form>
-
-    <p>Already have an account? <a href="/signin/">Sign in here</a>.</p>
-
-    <p>Don't have an account? <a href="/signup/">Sign up here</a>.</p>
 
 </section>
 
