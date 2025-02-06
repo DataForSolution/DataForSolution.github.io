@@ -39,34 +39,38 @@ paginate: true
     <!-- Add your navigation bar code here -->
 </nav>
 
-<!-- Hero Section -->
-<section id="hero">
-    <h1>🚀 Unlock the Power of AI & Data Science</h1>
-    <p>Explore AI-powered insights, real-world solutions, and data-driven decision-making tools.</p>
-    <a href="/services" class="button">Discover Services</a>
-    <a href="/courses" class="button-secondary">Start Learning</a>
-</section>
+<div class="container">
+    <!-- Hero Section -->
+    <section id="hero">
+        <h1>🚀 Unlock the Power of AI & Data Science</h1>
+        <p>Explore AI-powered insights, real-world solutions, and data-driven decision-making tools.</p>
+        <div class="hero-buttons">
+            <a href="/services" class="button">Discover Services</a>
+            <a href="/courses" class="button-secondary">Start Learning</a>
+        </div>
+    </section>
 
-<!-- Why Choose Us Section -->
-<section id="why-us">
-    <h2>💡 Why Choose LLmachine?</h2>
-    <ul>
-        <li>✅ Hands-on AI Learning & Projects</li>
-        <li>✅ Advanced Data Science Visualizations</li>
-        <li>✅ Industry-Leading AI Applications</li>
-    </ul>
-    <a href="/about" class="button">Learn More</a>
-</section>
+    <!-- Why Choose Us Section -->
+    <section id="why-us">
+        <h2>💡 Why Choose LLmachine?</h2>
+        <div class="features-grid">
+            <div class="feature-box">✅ Hands-on AI Learning & Projects</div>
+            <div class="feature-box">✅ Advanced Data Science Visualizations</div>
+            <div class="feature-box">✅ Industry-Leading AI Applications</div>
+        </div>
+        <a href="/about" class="button">Learn More</a>
+    </section>
 
-<!-- Stay Updated Section -->
-<section id="newsletter">
-    <h2>📢 Stay Updated with AI & Data Science</h2>
-    <p>Subscribe to get the latest insights, trends, and learning resources.</p>
-    <form>
-        <input type="email" placeholder="Enter your email" required>
-        <button type="submit">Subscribe</button>
-    </form>
-</section>
+    <!-- Stay Updated Section -->
+    <section id="newsletter">
+        <h2>📢 Stay Updated with AI & Data Science</h2>
+        <p>Subscribe to get the latest insights, trends, and learning resources.</p>
+        <form>
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+</div>
 
 <!-- JavaScript -->
 <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
@@ -86,5 +90,59 @@ paginate: true
     };
     Plotly.newPlot('chart-container', [data], layout);
 </script>
+
+<style>
+    .container {
+        max-width: 1200px;
+        margin: auto;
+        text-align: center;
+    }
+
+    #hero, #why-us, #newsletter {
+        padding: 50px 20px;
+        margin-bottom: 30px;
+    }
+
+    .hero-buttons {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        margin-top: 20px;
+    }
+
+    .features-grid {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+
+    .feature-box {
+        background-color: #f4f4f4;
+        padding: 20px;
+        border-radius: 8px;
+        font-weight: bold;
+    }
+
+    form {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    input {
+        padding: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+
+    button {
+        padding: 10px 20px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+</style>
 </body>
 </html>
