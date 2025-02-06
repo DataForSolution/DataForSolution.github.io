@@ -21,13 +21,7 @@ We specialize in the following data-driven services:
 ## 📩 Request a Service
 Do you need a custom AI or data science solution? **Submit your project request below:**
 
-     # Our Services
-Explore our comprehensive services.
-
-## Service Request Form
-If you need our services, submit a request below:
-
-<form action="/request-submitted.html" method="GET">
+<form action="/request-submitted/" method="GET">
     <label for="name">👤 Name:</label>
     <input type="text" id="name" name="name" required>
 
@@ -52,6 +46,7 @@ If you need our services, submit a request below:
 
     <button type="submit">Submit Request</button>
 </form>
+
 ## 🔗 Related Resources
 Check out more useful links:
 
