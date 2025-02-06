@@ -40,7 +40,7 @@ paginate: true
 </nav>
 
 <div class="container">
-    <!-- Hero Section -->
+    <!-- Hero Section (Now at the top) -->
     <section id="hero">
         <h1>🚀 Unlock the Power of AI & Data Science</h1>
         <p>Explore AI-powered insights, real-world solutions, and data-driven decision-making tools.</p>
@@ -50,7 +50,17 @@ paginate: true
         </div>
     </section>
 
-    <!-- Why Choose Us Section -->
+    <!-- Stay Updated Section (Placed Higher) -->
+    <section id="newsletter">
+        <h2>📢 Stay Updated with AI & Data Science</h2>
+        <p>Subscribe to get the latest insights, trends, and learning resources.</p>
+        <form>
+            <input type="email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+    </section>
+
+    <!-- Why Choose Us Section (Moved Up) -->
     <section id="why-us">
         <h2>💡 Why Choose LLmachine?</h2>
         <div class="features-grid">
@@ -60,36 +70,10 @@ paginate: true
         </div>
         <a href="/about" class="button">Learn More</a>
     </section>
-
-    <!-- Stay Updated Section -->
-    <section id="newsletter">
-        <h2>📢 Stay Updated with AI & Data Science</h2>
-        <p>Subscribe to get the latest insights, trends, and learning resources.</p>
-        <form>
-            <input type="email" placeholder="Enter your email" required>
-            <button type="submit">Subscribe</button>
-        </form>
-    </section>
 </div>
 
 <!-- JavaScript -->
 <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
-<script>
-    // Plotly Visualization
-    const data = {
-        x: ['2020', '2021', '2022', '2023', '2024'],
-        y: [100, 150, 200, 250, 300],
-        type: 'scatter',
-        mode: 'lines+markers',
-        marker: { color: 'blue' }
-    };
-    const layout = {
-        title: 'Trend Prediction',
-        xaxis: { title: 'Year' },
-        yaxis: { title: 'Value' }
-    };
-    Plotly.newPlot('chart-container', [data], layout);
-</script>
 
 <style>
     .container {
@@ -98,9 +82,9 @@ paginate: true
         text-align: center;
     }
 
-    #hero, #why-us, #newsletter {
+    #hero, #newsletter, #why-us {
         padding: 50px 20px;
-        margin-bottom: 30px;
+        margin-bottom: 20px;
     }
 
     .hero-buttons {
