@@ -1,0 +1,66 @@
+---
+layout: default
+title: "Sign Up"
+permalink: /signup/
+---
+
+<section id="signup">
+    <h1>📝 Create an Account</h1>
+    <p>Join us to access exclusive content and features.</p>
+
+    <form action="/thank-you/" method="GET">
+        <label for="name">👤 Full Name:</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">📧 Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">🔒 Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Sign Up</button>
+    </form>
+
+    <p>Already have an account? <a href="/signin/">Sign in here</a>.</p>
+</section>
+
+<style>
+    #signup {
+        max-width: 400px;
+        margin: auto;
+        padding: 20px;
+        text-align: center;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    button {
+        padding: 10px;
+        background-color: #28a745;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #218838;
+    }
+</style>
