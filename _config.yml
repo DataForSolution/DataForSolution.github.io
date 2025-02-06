@@ -39,6 +39,7 @@ include:
   - assets/documents # Ensure this directory is included
   - .nojekyll
   - favicon.ico
+  - courses.html
 
 exclude:
   - .sass-cache/
