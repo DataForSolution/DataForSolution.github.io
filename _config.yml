@@ -41,6 +41,7 @@ include:
   - favicon.ico
   - courses.html
   - dashboard.html
+  - request-submitted.html
 
 exclude:
   - .sass-cache/
