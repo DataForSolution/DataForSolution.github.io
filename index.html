@@ -40,8 +40,8 @@ paginate: true
 </nav>
 
 <div class="container">
-    <!-- Hero Section (Now all elements are close together) -->
-    <section id="hero" class="compact-section">
+    <!-- Hero Section (Everything at the top) -->
+    <section id="hero">
         <h1>🚀 Unlock the Power of AI & Data Science</h1>
         <p>Explore AI-powered insights, real-world solutions, and data-driven decision-making tools.</p>
         <div class="hero-buttons">
@@ -50,26 +50,28 @@ paginate: true
         </div>
     </section>
 
-    <!-- Stay Updated Section (Placed Closer to Hero) -->
-    <section id="newsletter" class="compact-section">
-        <h2>📢 Stay Updated with AI & Data Science</h2>
-        <p>Subscribe to get the latest insights, trends, and learning resources.</p>
-        <form>
-            <input type="email" placeholder="Enter your email" required>
-            <button type="submit">Subscribe</button>
-        </form>
-    </section>
+    <div class="compact-sections">
+        <!-- Stay Updated Section -->
+        <section id="newsletter">
+            <h2>📢 Stay Updated with AI & Data Science</h2>
+            <p>Subscribe to get the latest insights, trends, and learning resources.</p>
+            <form>
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </section>
 
-    <!-- Why Choose Us Section (Compact and Next to Other Sections) -->
-    <section id="why-us" class="compact-section">
-        <h2>💡 Why Choose LLmachine?</h2>
-        <div class="features-grid">
-            <div class="feature-box">✅ Hands-on AI Learning & Projects</div>
-            <div class="feature-box">✅ Advanced Data Science Visualizations</div>
-            <div class="feature-box">✅ Industry-Leading AI Applications</div>
-        </div>
-        <a href="/about" class="button">Learn More</a>
-    </section>
+        <!-- Why Choose Us Section -->
+        <section id="why-us">
+            <h2>💡 Why Choose LLmachine?</h2>
+            <div class="features-grid">
+                <div class="feature-box">✅ Hands-on AI Learning & Projects</div>
+                <div class="feature-box">✅ Advanced Data Science Visualizations</div>
+                <div class="feature-box">✅ Industry-Leading AI Applications</div>
+            </div>
+            <a href="/about" class="button">Learn More</a>
+        </section>
+    </div>
 </div>
 
 <!-- JavaScript -->
@@ -83,8 +85,8 @@ paginate: true
         padding: 20px;
     }
 
-    .compact-section {
-        padding: 30px 15px;
+    #hero {
+        padding: 40px 15px;
         margin-bottom: 10px;
     }
 
@@ -93,6 +95,22 @@ paginate: true
         justify-content: center;
         gap: 10px;
         margin-top: 10px;
+    }
+
+    .compact-sections {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: start;
+        gap: 20px;
+        margin-top: 20px;
+    }
+
+    #newsletter, #why-us {
+        flex: 1;
+        padding: 20px;
+        background: #f9f9f9;
+        border-radius: 8px;
     }
 
     .features-grid {
