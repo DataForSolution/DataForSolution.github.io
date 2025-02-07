@@ -19,18 +19,18 @@
     <!-- CSS -->
     <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
 </head>
-<body>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
 
     <!-- Navigation Bar -->
     {% include navigation.html %}
 
-    <!-- Main Content -->
-    <main style="padding: 20px; margin: auto; max-width: 1200px;">
+    <!-- Main Content (Fixing height issue) -->
+    <main style="padding: 20px; margin: auto; max-width: 1200px; flex-grow: 1;">
         {{ content }}
     </main>
 
-    <!-- Footer -->
-    <footer style="background-color: #333; color: white; text-align: center; padding: 20px 10px; margin-top: 40px; font-size: 0.9em;">
+    <!-- Footer (Fixed so it doesn't push content down) -->
+    <footer style="background-color: #333; color: white; text-align: center; padding: 20px 10px; margin-top: auto; font-size: 0.9em;">
         <p>&copy; {{ "now" | date: "%Y" }} LLmachine. All Rights Reserved.</p>
         <div style="margin: 10px 0;">
             <a href="https://twitter.com/SewLiben" target="_blank" style="color: #1DA1F2; text-decoration: none; margin: 0 10px; transition: color 0.3s;">Twitter</a>
