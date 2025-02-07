@@ -40,8 +40,8 @@ paginate: true
 </nav>
 
 <div class="container">
-    <!-- Hero Section (Now at the top) -->
-    <section id="hero">
+    <!-- Hero Section (Now all elements are close together) -->
+    <section id="hero" class="compact-section">
         <h1>🚀 Unlock the Power of AI & Data Science</h1>
         <p>Explore AI-powered insights, real-world solutions, and data-driven decision-making tools.</p>
         <div class="hero-buttons">
@@ -50,8 +50,8 @@ paginate: true
         </div>
     </section>
 
-    <!-- Stay Updated Section (Placed Higher) -->
-    <section id="newsletter">
+    <!-- Stay Updated Section (Placed Closer to Hero) -->
+    <section id="newsletter" class="compact-section">
         <h2>📢 Stay Updated with AI & Data Science</h2>
         <p>Subscribe to get the latest insights, trends, and learning resources.</p>
         <form>
@@ -60,8 +60,8 @@ paginate: true
         </form>
     </section>
 
-    <!-- Why Choose Us Section (Moved Up) -->
-    <section id="why-us">
+    <!-- Why Choose Us Section (Compact and Next to Other Sections) -->
+    <section id="why-us" class="compact-section">
         <h2>💡 Why Choose LLmachine?</h2>
         <div class="features-grid">
             <div class="feature-box">✅ Hands-on AI Learning & Projects</div>
@@ -77,34 +77,37 @@ paginate: true
 
 <style>
     .container {
-        max-width: 1200px;
+        max-width: 900px;
         margin: auto;
         text-align: center;
+        padding: 20px;
     }
 
-    #hero, #newsletter, #why-us {
-        padding: 50px 20px;
-        margin-bottom: 20px;
+    .compact-section {
+        padding: 30px 15px;
+        margin-bottom: 10px;
     }
 
     .hero-buttons {
         display: flex;
         justify-content: center;
-        gap: 15px;
-        margin-top: 20px;
+        gap: 10px;
+        margin-top: 10px;
     }
 
     .features-grid {
         display: flex;
         justify-content: center;
-        gap: 20px;
+        gap: 10px;
+        flex-wrap: wrap;
     }
 
     .feature-box {
         background-color: #f4f4f4;
-        padding: 20px;
+        padding: 10px;
         border-radius: 8px;
         font-weight: bold;
+        text-align: center;
     }
 
     form {
@@ -114,13 +117,13 @@ paginate: true
     }
 
     input {
-        padding: 10px;
+        padding: 8px;
         border-radius: 5px;
         border: 1px solid #ccc;
     }
 
     button {
-        padding: 10px 20px;
+        padding: 8px 15px;
         background-color: #007BFF;
         color: white;
         border: none;
