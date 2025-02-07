@@ -14,9 +14,9 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-paginate
-  - jekyll-include-cache  # Enables includes caching for better performance
-  - jekyll-sitemap         # Generates a sitemap for better SEO
-  - jekyll-assets          # Manages assets like CSS, JS, and images
+  - jekyll-include-cache
+  - jekyll-sitemap
+  - jekyll-assets
 
 # Pagination Settings
 paginate: 5  
@@ -25,7 +25,7 @@ paginate_path: "/page:num/"
 # Markdown Processor
 markdown: kramdown
 kramdown:
-  input: GFM # Enables GitHub-flavored markdown
+  input: GFM
   hard_wrap: false
   syntax_highlighter_opts:
     line_numbers: true
@@ -34,14 +34,17 @@ kramdown:
 include:
   - _includes
   - _layouts
-  - _projects # Include the Projects directory for collections
+  - _projects
   - assets
-  - assets/documents # Ensure this directory is included
+  - assets/documents
   - .nojekyll
   - favicon.ico
   - courses.html
   - dashboard.html
   - request-submitted.html
+  - signin.html
+  - signup.html
+  - _navigation.html
 
 exclude:
   - .sass-cache/
@@ -69,6 +72,12 @@ collections:
   contact:
     output: true
     permalink: /contact/
+  signin:
+    output: true
+    permalink: /signin/
+  signup:
+    output: true
+    permalink: /signup/
 
 # Defaults
 defaults:
@@ -93,6 +102,16 @@ defaults:
     values:
       layout: "default"
       title: "Our Projects"
+  - scope:
+      path: "signin"
+    values:
+      layout: "default"
+      title: "Sign In"
+  - scope:
+      path: "signup"
+    values:
+      layout: "default"
+      title: "Sign Up"
 
 # Permalinks
 permalink: pretty
@@ -107,6 +126,8 @@ sitemap:
     - /blog/
     - /faq/
     - /contact/
+    - /signin/
+    - /signup/
 
 # SEO Defaults
 jekyll_seo_tag:
