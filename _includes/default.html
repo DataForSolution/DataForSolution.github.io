@@ -14,20 +14,21 @@
     <!-- Favicon -->
     <link rel="icon" href="{{ '/assets/images/favicon.ico' | relative_url }}" type="image/x-icon">
 </head>
-<body>
+<body style="display: flex; flex-direction: column; min-height: 100vh;">
+
     <!-- Include Navigation -->
     {% include navigation.html %}
 
-    <!-- Main Content -->
-    <main>
+    <!-- Main Content (Fixed Layout) -->
+    <main style="max-width: 1200px; margin: auto; padding: 20px; flex-grow: 1;">
         {{ content }}
     </main>
 
-    <!-- Footer -->
-    <footer>
+    <!-- Footer (Fixed to Stay Properly Positioned) -->
+    <footer style="background-color: #333; color: white; text-align: center; padding: 10px; margin-top: auto; font-size: 0.9em;">
         <p>&copy; 2025 LLmachine. Follow me on 
-            <a href="https://twitter.com/SewLiben" target="_blank" rel="noopener noreferrer">Twitter</a> and 
-            <a href="https://github.com/DataForSolution" target="_blank" rel="noopener noreferrer">GitHub</a>.
+            <a href="https://twitter.com/SewLiben" target="_blank" rel="noopener noreferrer" style="color: #1DA1F2;">Twitter</a> and 
+            <a href="https://github.com/DataForSolution" target="_blank" rel="noopener noreferrer" style="color: #6e5494;">GitHub</a>.
         </p>
     </footer>
 
