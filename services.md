@@ -10,13 +10,13 @@ Explore the comprehensive services we offer to drive your business forward with 
 ## 📌 Available Services
 We specialize in the following data-driven services:
 
-- **📊 Business Analytics** – Gain insights into your operations through AI-powered data analysis and visualization.
-- **📝 Data Entry** – Efficient and accurate data entry services to maintain reliable business records.
-- **📈 Data Reporting** – Custom-built reports with dynamic visualizations to simplify decision-making.
-- **🎯 Strategic Planning** – Align data strategies with business objectives for maximum impact.
-- **🏥 Healthcare Consulting** – Leverage AI-powered analytics for diagnostics, medical imaging, and research.
-- **💰 Financial Analysis** – AI-driven budgeting, fraud detection, and investment optimization.
-- **📊 Market Research** – Understand market trends with AI-driven competitive intelligence.
+- **📊 Business Analytics** – Gain insights into your operations through AI-powered data analysis and visualization. [Download our Business Analytics Guide](#)
+- **📝 Data Entry** – Efficient and accurate data entry services to maintain reliable business records. [Download our Data Entry Best Practices](#)
+- **📈 Data Reporting** – Custom-built reports with dynamic visualizations to simplify decision-making. [Access Sample Reports](#)
+- **🎯 Strategic Planning** – Align data strategies with business objectives for maximum impact. [Explore Strategic Planning Resources](#)
+- **🏥 Healthcare Consulting** – Leverage AI-powered analytics for diagnostics, medical imaging, and research. [Download Healthcare Analytics Case Study](#)
+- **💰 Financial Analysis** – AI-driven budgeting, fraud detection, and investment optimization. [Get the Financial Analysis Guide](#)
+- **📊 Market Research** – Understand market trends with AI-driven competitive intelligence. [View Market Research Insights](#)
 
 ## 📩 Request a Service
 Do you need a custom AI or data science solution? **Submit your project request below:**
