@@ -301,70 +301,109 @@ permalink: /resources/
         </ul>
     </div>
 </div>
+
+</section>
+
+<!-- Subscription Modal -->
+<div id="subscription-modal" class="modal">
+    <div class="modal-content">
+        <h2>Subscribe to Access</h2>
+        <p>Please enter your email to read this book.</p>
+        <form id="subscription-form">
+            <input type="email" id="subscriber-email" placeholder="Enter your email" required>
+            <button type="submit">Subscribe</button>
+        </form>
+        <button id="close-modal">Cancel</button>
+    </div>
 </div>
 
+<!-- JavaScript -->
 <script>
 document.addEventListener("DOMContentLoaded", () => {
+    console.log("JavaScript Loaded!");
+
     const modal = document.getElementById("subscription-modal");
     const closeModal = document.getElementById("close-modal");
     const subscriptionForm = document.getElementById("subscription-form");
-    let selectedBookUrl = ""; // Stores selected book URL
+    let selectedBookUrl = ""; 
+
+    // Log all buttons
+    const readButtons = document.querySelectorAll(".read-book-btn");
+    console.log("Read buttons found:", readButtons);
 
     // Show modal when "Read" button is clicked
-    document.querySelectorAll(".read-book-btn").forEach(button => {
+    readButtons.forEach(button => {
         button.addEventListener("click", () => {
-            selectedBookUrl = button.dataset.bookUrl; // Store the book URL
+            selectedBookUrl = button.dataset.bookUrl; 
+            console.log("Opening modal for book:", selectedBookUrl);
             modal.style.display = "block";
         });
     });
 
     // Close modal
     closeModal.addEventListener("click", () => {
+        console.log("Closing modal");
         modal.style.display = "none";
     });
 
     // Handle subscription form
     subscriptionForm.addEventListener("submit", event => {
-        event.preventDefault(); // Prevent form submission
-        const email = subscriptionForm.querySelector("input[type='email']").value.trim();
+        event.preventDefault();
+        const email = document.getElementById("subscriber-email").value.trim();
 
         if (email) {
             alert("Thank you for subscribing! You can now read the book.");
+            console.log("Subscription successful:", email);
             modal.style.display = "none";
 
-            // Open the book in a new tab
             if (selectedBookUrl) {
+                console.log("Opening book:", selectedBookUrl);
                 window.open(selectedBookUrl, "_blank");
             }
         } else {
             alert("Please enter a valid email to subscribe.");
+            console.log("Invalid email entered.");
         }
     });
 });
 </script>
 
- 
-
+<!-- CSS Styles for the Modal -->
 <style>
-    /* Keep all your styles here */
-    .modal {
-        display: none;
-        position: fixed;
-        z-index: 1000;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, 0.5);
-    }
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
 
-    .modal-content {
-        background-color: #fff;
-        margin: 15% auto;
-        padding: 20px;
-        border-radius: 10px;
-        width: 80%;
-        max-width: 500px;
-        text-align: center;
-    }
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto;
+    padding: 20px;
+    width: 50%;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.modal-content input {
+    width: 80%;
+    padding: 8px;
+    margin: 10px 0;
+}
+
+.modal-content button {
+    padding: 10px 15px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+#close-modal {
+    background-color: red;
+    color: white;
+}
 </style>
