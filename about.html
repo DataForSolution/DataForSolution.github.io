@@ -3,6 +3,10 @@ layout: default
 title: "About"
 permalink: /about/
 ---
+<div class="about-container">
+    {{ content }}
+</div>
+
 
 <section id="about">
     <!-- Profile Picture -->
@@ -25,3 +29,13 @@ permalink: /about/
         and let’s collaborate!
     </p>
 </section>
+  <section id="about" style="color: #333; text-align: center;">
+    <img src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="Lissan's Profile Picture" class="profile-pic">
+    <h1 style="color: #0056b3;">Lissan</h1>
+    <h2 style="color: #007BFF;">Data Scientist & Certified Nuclear Medicine Professional</h2>
+    <p style="color: #444;">
+        Welcome to my professional space! I am a Data Scientist specializing in advanced analytics, 
+        artificial intelligence, and machine learning...
+    </p>
+</section>
+
