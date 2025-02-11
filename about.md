@@ -3,6 +3,12 @@ layout: page
 title: "About Us"
 permalink: /about/
 ---
+---
+layout: default
+title: About
+class: about-container
+---
+
 
 ## About LLmachine
 Welcome to **LLmachine**, your go-to platform for AI, Data Science, and Analytics solutions. Our mission is to empower businesses and individuals with cutting-edge technologies and actionable insights.
