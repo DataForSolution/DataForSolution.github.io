@@ -76,27 +76,33 @@ nav a:hover {
     font-size: 1.2em;
     margin-bottom: 30px;
 }
+   /* =========================== */
+/* ABOUT SECTION (FINAL FIX) */
+/* =========================== */
 
-/* =========================== */
-/* ABOUT SECTION (UPDATED) */
-/* =========================== */
-  .about-container {
-    color: #333; /* Dark gray for better contrast */
+.about-container, #about {
+    color: #333 !important; /* Force dark gray text */
     text-align: center;
     padding: 60px 20px;
 }
 
-.about-container h2 {
-    color: #0056b3; /* Deep blue for better headings */
+.about-container h1, #about h1 {
+    color: #0056b3 !important; /* Deep blue for better headings */
     font-size: 2.5em;
     margin-bottom: 15px;
 }
 
-.about-container p {
+.about-container h2, #about h2 {
+    color: #007BFF !important; /* Brighter blue for better visibility */
+}
+
+.about-container p, #about p {
     font-size: 1.2em;
     line-height: 1.6;
-    color: #444; /* Slightly darker gray for better readability */
+    color: #444 !important; /* Slightly darker gray for better readability */
 }
+
+
 /* =========================== */
 /* RESPONSIVE DESIGN */
 /* =========================== */
