@@ -145,14 +145,14 @@ nav a:hover {
     font-size: 2.2em;
     margin-bottom: 20px;
 }
-
 .engagement-card {
-    background: rgba(0, 0, 0, 0.5);
+    background: transparent; /* Remove white-blue background */
     border-radius: 10px;
     padding: 20px;
     max-width: 300px;
     color: white;
 }
+
 
 .engagement-card button {
     background-color: #4CAF50;
