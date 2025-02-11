@@ -79,20 +79,21 @@ paginate: true
         margin-top: 10px;
     }
 
+    /* ✅ Make homepage content take full height and center text */
     .compact-sections {
         display: flex;
         flex-direction: row;
-        justify-content: space-around;
-        align-items: start;
+        justify-content: center; /* ✅ Center items horizontally */
+        align-items: center; /* ✅ Center items vertically */
         gap: 20px;
-        margin-top: 20px;
+        height: 80vh; /* ✅ Make it take 80% of screen height */
     }
 
-    /* ✅ Remove the background */
+    /* ✅ Reduce section height and remove unnecessary spacing */
     #newsletter, #why-us {
         flex: 1;
-        padding: 20px;
-        background: transparent; /* ✅ Fix: Set to transparent */
+        padding: 30px;
+        background: transparent;
         border-radius: 8px;
     }
 
@@ -103,9 +104,8 @@ paginate: true
         flex-wrap: wrap;
     }
 
-    /* ✅ Remove the background */
     .feature-box {
-        background-color: transparent; /* ✅ Fix: Set to transparent */
+        background-color: transparent;
         padding: 10px;
         border-radius: 8px;
         font-weight: bold;
@@ -124,10 +124,9 @@ paginate: true
         border: 1px solid #ccc;
     }
 
-    /* ✅ Remove button background */
     button {
         padding: 8px 15px;
-        background-color: #007BFF; /* ✅ Set a solid color instead */
+        background-color: #007BFF;
         color: white;
         border: none;
         border-radius: 5px;
@@ -137,5 +136,13 @@ paginate: true
     button:hover {
         background-color: #0056b3;
     }
-</style>
 
+    /* ✅ Improve responsiveness */
+    @media (max-width: 768px) {
+        .compact-sections {
+            flex-direction: column; /* ✅ Stack sections on small screens */
+            height: auto;
+            padding-top: 50px;
+        }
+    }
+</style>
