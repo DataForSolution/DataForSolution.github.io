@@ -21,7 +21,7 @@ body::before {
 
 section {
     padding: 100px 20px;
-    min-height: 100vh; /* Full-page height */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -56,21 +56,6 @@ nav a:hover {
     color: #007BFF;
 }
 
-/* Sign-In Button */
-.sign-in {
-    font-weight: bold;
-    color: white;
-    background-color: #007BFF;
-    padding: 8px 15px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s;
-}
-
-.sign-in:hover {
-    background-color: #0056b3;
-}
-
 /* =========================== */
 /* HERO SECTION */
 /* =========================== */
@@ -92,109 +77,26 @@ nav a:hover {
     margin-bottom: 30px;
 }
 
-#hero .cta-buttons {
-    display: flex;
-    gap: 20px;
-    justify-content: center;
-}
-
-.cta-button {
-    padding: 12px 20px;
-    background-color: #007BFF;
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.cta-button:hover {
-    background-color: #0056b3;
-    transform: scale(1.05);
-}
-
 /* =========================== */
-/* SECTIONS */
+/* ABOUT SECTION (UPDATED) */
 /* =========================== */
 
-/* Purpose Section */
-#purpose {
+#about, .about-container {
+    color: #333; /* Dark gray for better contrast */
     text-align: center;
-    color: white;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+    padding: 60px 20px;
 }
 
-#purpose h1 {
+#about h2, .about-container h2 {
+    color: #0056b3; /* Deep blue for better headings */
     font-size: 2.5em;
-    margin-bottom: 20px;
-    color: #4CAF50;
+    margin-bottom: 15px;
 }
 
-#purpose p {
+#about p, .about-container p {
     font-size: 1.2em;
     line-height: 1.6;
-}
-
-/* Engagement Section */
-#engagement {
-    text-align: center;
-    color: white;
-}
-
-#engagement h2 {
-    font-size: 2.2em;
-    margin-bottom: 20px;
-}
-.engagement-card {
-    background: transparent; /* Remove white-blue background */
-    border-radius: 10px;
-    padding: 20px;
-    max-width: 300px;
-    color: white;
-}
-
-
-.engagement-card button {
-    background-color: #4CAF50;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
-    transition: background-color 0.3s ease;
-}
-
-.engagement-card button:hover {
-    background-color: #007BFF;
-}
-
-/* =========================== */
-/* MEDIA SECTION */
-/* =========================== */
-
-#media {
-    background-color: #ffffff;
-    color: #333;
-}
-
-#media h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-    font-weight: bold;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
-}
-
-.video-item {
-    background: #f9f9f9;
-    border-radius: 10px;
-    padding: 15px;
-    max-width: 300px;
-    text-align: center;
-    transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.video-item:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    color: #444; /* Slightly darker gray for better readability */
 }
 
 /* =========================== */
@@ -205,12 +107,8 @@ nav a:hover {
     section {
         padding: 50px 20px;
     }
-
+    
     nav {
         flex-direction: column;
-    }
-
-    .cta-button {
-        width: 100%;
     }
 }
