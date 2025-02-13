@@ -132,6 +132,7 @@ sitemap:
     - /blog/
     - /faq/
     - /contact/
+    - ebooks.md
     - /signin/
     - /signup/
     - /resources/  # Add resources to sitemap
