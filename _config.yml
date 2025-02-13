@@ -9,7 +9,7 @@ baseurl: ""  # Ensure this is empty unless hosted under a subdirectory
 url: "https://dataforsolution.github.io"  # Correct URL for GitHub Pages
 
 # Theme and Plugins
-theme: minima
+remote_theme: jekyll/minima  # Ensures theme is applied correctly
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
@@ -46,16 +46,15 @@ include:
   - signup.html
   - ebooks.md
   - _navigation.html
-  - resources.html  # Add resources.html explicitly for inclusion
+  - resources.html  # Ensure this file exists
 
 exclude:
   - .sass-cache/
   - .jekyll-cache/
-  - Gemfile
-  - Gemfile.lock
   - node_modules/
   - vendor/
-  - README.md
+  - Gemfile  # Keep if not needed for deployment
+  - Gemfile.lock  # Keep if not needed for deployment
 
 # Collections
 collections:
@@ -80,6 +79,9 @@ collections:
   signup:
     output: true
     permalink: /signup/
+  resources:
+    output: true
+    permalink: /resources/:path/
 
 # Defaults
 defaults:
@@ -114,7 +116,7 @@ defaults:
     values:
       layout: "default"
       title: "Sign Up"
-  - scope:  # Add scope for resources
+  - scope:
       path: "resources"
     values:
       layout: "default"
@@ -133,10 +135,10 @@ sitemap:
     - /blog/
     - /faq/
     - /contact/
-    - ebooks.md
+    - /ebooks.md
     - /signin/
     - /signup/
-    - /resources/  # Add resources to sitemap
+    - /resources/  # Ensure this file exists
 
 # SEO Defaults
 jekyll_seo_tag:
