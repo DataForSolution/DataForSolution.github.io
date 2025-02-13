@@ -44,6 +44,7 @@ include:
   - request-submitted.html
   - signin.html
   - signup.html
+  - ebooks.md
   - _navigation.html
   - resources.html  # Add resources.html explicitly for inclusion
 
