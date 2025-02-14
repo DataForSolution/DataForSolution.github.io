@@ -12,7 +12,7 @@ function showSection(sectionId) {
         console.error(`Section with ID '${sectionId}' not found.`);
     }
 }
- 
+
 // SERVICE DESCRIPTIONS OBJECT
 const serviceDescriptions = {
     "business-analytics": "We provide insights to drive business decisions with AI-driven data analysis.",
@@ -27,18 +27,13 @@ const serviceDescriptions = {
 // FUNCTION TO DISPLAY SERVICE DETAILS
 function showServiceDetails(serviceId) {
     const detailsDiv = document.getElementById("service-details");
-    if (detailsDiv) {
-        if (serviceDescriptions[serviceId]) {
-            detailsDiv.innerHTML = `<p>${serviceDescriptions[serviceId]}</p>`;
-            detailsDiv.style.display = "block";
-        } else {
-            detailsDiv.innerHTML = `<p>Details for this service are not available.</p>`;
-            detailsDiv.style.display = "block";
-            console.warn(`Service ID '${serviceId}' not found in serviceDescriptions.`);
-        }
-    } else {
-        console.error("Element with ID 'service-details' not found.");
-    }
+    if (!detailsDiv) return console.error("Element with ID 'service-details' not found.");
+
+    detailsDiv.innerHTML = serviceDescriptions[serviceId] 
+        ? `<p>${serviceDescriptions[serviceId]}</p>` 
+        : `<p>Details for this service are not available.</p>`;
+
+    detailsDiv.style.display = "block";
 }
 
 // EVENT LISTENER FOR SERVICE SELECTION
@@ -67,19 +62,12 @@ function initializeSearchFeature() {
     const searchForm = document.getElementById('menu-search-form');
     const searchInput = document.getElementById('menu-search-input');
 
-    if (!searchForm || !searchInput) {
-        console.error("Search form or input element not found.");
-        return;
-    }
+    if (!searchForm || !searchInput) return console.error("Search form or input element not found.");
 
     searchForm.addEventListener('submit', function(event) {
         event.preventDefault();
         const query = searchInput.value.toLowerCase().trim();
-
-        if (!query) {
-            alert('Please enter a search term.');
-            return;
-        }
+        if (!query) return alert('Please enter a search term.');
 
         const pages = [
             { title: "Services", url: "/services/", content: "Business Analytics, Data Entry, Data Reporting, Strategic Planning, Healthcare Consulting, Financial Analysis" },
@@ -96,116 +84,69 @@ function initializeSearchFeature() {
 
 function displaySearchResults(results) {
     let resultsContainer = document.getElementById('search-results');
-
     if (!resultsContainer) {
         resultsContainer = document.createElement('div');
         resultsContainer.id = 'search-results';
-        resultsContainer.style.position = 'absolute';
-        resultsContainer.style.top = '60px';
-        resultsContainer.style.right = '20px';
-        resultsContainer.style.width = '300px';
-        resultsContainer.style.background = '#222';
-        resultsContainer.style.padding = '15px';
-        resultsContainer.style.borderRadius = '5px';
-        resultsContainer.style.boxShadow = '0 4px 6px rgba(0, 0, 0, 0.3)';
-        resultsContainer.style.zIndex = '1000';
         document.body.appendChild(resultsContainer);
     }
 
     resultsContainer.innerHTML = results.length
-        ? results.map(result => `<p><a href="${result.url}" style="color: #4CAF50; text-decoration: none;">${result.title}</a></p>`).join('')
+        ? results.map(result => `<p><a href="${result.url}" style="color: #4CAF50;">${result.title}</a></p>`).join('')
         : '<p style="color: lightgray;">No results found.</p>';
 
     resultsContainer.style.display = 'block';
 }
 
-// Dynamic loading or live updates for the Live Projects Section
-document.addEventListener("DOMContentLoaded", () => {
-    console.log("Live Projects Section Loaded");
-    // Add any dynamic functionality here
-});
-// Dark Mode Toggle Functionality
+// DARK MODE TOGGLE FUNCTIONALITY
 document.addEventListener("DOMContentLoaded", () => {
     const darkModeToggle = document.getElementById("dark-mode-toggle");
+    if (!darkModeToggle) return;
 
-    // Check if the user has a preferred theme
     const userPreference = localStorage.getItem("theme");
-    if (userPreference === "dark") {
-        document.body.classList.add("dark-mode");
-    }
+    if (userPreference === "dark") document.body.classList.add("dark-mode");
 
-    // Add event listener to toggle button
-    if (darkModeToggle) {
-        darkModeToggle.addEventListener("click", () => {
-            document.body.classList.toggle("dark-mode");
-
-            // Save user preference to localStorage
-            if (document.body.classList.contains("dark-mode")) {
-                localStorage.setItem("theme", "dark");
-            } else {
-                localStorage.setItem("theme", "light");
-            }
-        });
-    }
-});
-// Handle Data Cleaning Tool
-document.getElementById("data-cleaning-form").addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const fileInput = e.target.querySelector('input[type="file"]');
-    const resultDiv = document.getElementById("cleaning-result");
-
-    if (fileInput.files.length === 0) {
-        resultDiv.textContent = "Please upload a CSV file.";
-        return;
-    }
-
-    const formData = new FormData();
-    formData.append("csv-file", fileInput.files[0]);
-
-    try {
-        const response = await fetch("/api/data-cleaning", {
-            method: "POST",
-            body: formData
-        });
-        const result = await response.json();
-        resultDiv.innerHTML = `<p>Dataset cleaned successfully! Download your cleaned dataset <a href="${result.download_url}" target="_blank">here</a>.</p>`;
-    } catch (error) {
-        resultDiv.textContent = "An error occurred while cleaning the dataset.";
-        console.error(error);
-    }
+    darkModeToggle.addEventListener("click", () => {
+        document.body.classList.toggle("dark-mode");
+        localStorage.setItem("theme", document.body.classList.contains("dark-mode") ? "dark" : "light");
+    });
 });
 
-// Handle Prediction Tool
-document.getElementById("prediction-form").addEventListener("submit", async (e) => {
-    e.preventDefault();
-    const inputFeature = e.target.querySelector('input[name="input-feature"]').value.trim();
-    const resultDiv = document.getElementById("prediction-result");
+// HANDLE PREDICTION TOOL
+document.addEventListener("DOMContentLoaded", () => {
+    const predictionForm = document.getElementById("prediction-form");
+    if (!predictionForm) return;
 
-    if (!inputFeature) {
-        resultDiv.textContent = "Please provide an input value.";
-        return;
-    }
+    predictionForm.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const inputFeature = predictionForm.querySelector('input[name="input-feature"]').value.trim();
+        const resultDiv = document.getElementById("prediction-result");
 
-    try {
-        const response = await fetch("/api/predict", {
-            method: "POST",
-            headers: { "Content-Type": "application/json" },
-            body: JSON.stringify({ feature: inputFeature })
-        });
-        const result = await response.json();
-        resultDiv.innerHTML = `<p>Prediction: ${result.prediction}</p>`;
-    } catch (error) {
-        resultDiv.textContent = "An error occurred while generating the prediction.";
-        console.error(error);
-    }
+        if (!inputFeature) return resultDiv.textContent = "Please provide an input value.";
+
+        try {
+            const response = await fetch("/api/predict", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ feature: inputFeature })
+            });
+            const result = await response.json();
+            resultDiv.innerHTML = `<p>Prediction: ${result.prediction}</p>`;
+        } catch (error) {
+            resultDiv.textContent = "An error occurred while generating the prediction.";
+            console.error(error);
+        }
+    });
 });
+
+// SUBSCRIPTION MODAL FUNCTIONALITY
 document.addEventListener('DOMContentLoaded', () => {
     const readButtons = document.querySelectorAll('.read-book-btn');
     const modal = document.getElementById('subscription-modal');
     const closeModal = document.getElementById('close-modal');
     let selectedBookUrl = null;
 
-    // Show modal when 'Read' button is clicked
+    if (!modal || !closeModal) return;
+
     readButtons.forEach(button => {
         button.addEventListener('click', () => {
             selectedBookUrl = button.getAttribute('data-book-url');
@@ -213,83 +154,35 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // Close modal
-    closeModal.addEventListener('click', () => {
-        modal.style.display = 'none';
-    });
+    closeModal.addEventListener('click', () => modal.style.display = 'none');
 
-    // Handle subscription form submission
     document.getElementById('subscription-form').addEventListener('submit', (event) => {
         event.preventDefault();
-
         const email = event.target.querySelector('input[type="email"]').value;
-
         if (email) {
             alert('Thank you for subscribing! Redirecting to the book...');
             modal.style.display = 'none';
-
-            // Open the book URL
-            if (selectedBookUrl) {
-                window.open(selectedBookUrl, '_blank');
-            }
+            if (selectedBookUrl) window.open(selectedBookUrl, '_blank');
         }
     });
 });
-document.addEventListener("DOMContentLoaded", function () {
 
-    // Function to fetch and display quizzes
+// HANDLE QUIZZES AND CHALLENGES
+document.addEventListener("DOMContentLoaded", function () {
     document.querySelectorAll('.quiz-btn').forEach(button => {
         button.addEventListener('click', async () => {
             const quizId = button.dataset.quizId;
             const response = await fetch(`/quiz?quiz_id=${quizId}`);
             const data = await response.json();
-
             const quizContainer = document.getElementById('quiz-container');
-            quizContainer.innerHTML = `<h3>${data.title}</h3>`;
-
-            data.questions.forEach((question, index) => {
-                const questionBlock = document.createElement('div');
-                questionBlock.innerHTML = `
-                    <p><strong>${index + 1}. ${question.question}</strong></p>
-                    <ul>
-                        ${question.options.map(option => `<li><button class="answer-btn" data-correct="${option === question.correct}">${option}</button></li>`).join('')}
-                    </ul>
-                `;
-                quizContainer.appendChild(questionBlock);
-            });
-
-            document.querySelectorAll('.answer-btn').forEach(answerBtn => {
-                answerBtn.addEventListener('click', () => {
-                    answerBtn.style.backgroundColor = answerBtn.dataset.correct === "true" ? "green" : "red";
-                });
-            });
+            quizContainer.innerHTML = `<h3>${data.title}</h3>` +
+                data.questions.map((q, i) => `<p><strong>${i + 1}. ${q.question}</strong></p>`).join('');
         });
     });
+});
 
-    // Function to fetch and display coding challenges
-    document.querySelectorAll('.challenge-btn').forEach(button => {
-        button.addEventListener('click', async () => {
-            const challengeId = button.dataset.challengeId;
-            const response = await fetch(`/challenge?challenge_id=${challengeId}`);
-            const data = await response.json();
-
-            const challengeContainer = document.getElementById('challenge-container');
-            challengeContainer.innerHTML = `
-                <h3>${data.title}</h3>
-                <p>${data.description}</p>
-                <a href="${data.url}" target="_blank">Start Challenge</a>
-            `;
-        });
-    });
-
-    // Function to fetch and update leaderboard
-    async function loadLeaderboard() {
-        const response = await fetch('/leaderboard');
-        const data = await response.json();
-
-        const leaderboard = document.getElementById('leaderboard');
-        leaderboard.innerHTML = data.map((entry, index) => `<li>${index + 1}. ${entry.name} - ${entry.points} Points</li>`).join('');
-    }
-
-    loadLeaderboard();
+// INITIALIZE SEARCH AND HIGHLIGHT MENU ON PAGE LOAD
+document.addEventListener("DOMContentLoaded", () => {
+    initializeSearchFeature();
+    highlightActiveMenuItem();
 });
