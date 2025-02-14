@@ -2,76 +2,41 @@
     <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
         <!-- Left Section: Logo and Name -->
         <div style="display: flex; align-items: center;">
-            <img src="{{ '/assets/images/favicon.ico' | relative_url }}" alt="LLmachine Logo" style="height: 30px; margin-right: 10px;">
-            <a href="{{ '/' | relative_url }}" style="color: white; text-decoration: none; font-size: 1.5em; font-weight: bold; background-color: #333; padding: 5px 10px; border-radius: 5px;">LLmachine</a>
+            <img src="{{ site.baseurl }}/assets/images/favicon.ico" alt="LLmachine Logo" style="height: 30px; margin-right: 10px;">
+            <a href="{{ site.baseurl }}/" style="color: white; text-decoration: none; font-size: 1.5em; font-weight: bold; background-color: #333; padding: 5px 10px; border-radius: 5px;">LLmachine</a>
         </div>
 
         <!-- Center Section: Menu Links -->
         <ul style="list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; flex-wrap: wrap;">
-            <li><a href="{{ '/' | relative_url }}" class="nav-link {% if page.url == '/' %}active{% endif %}">Home</a></li>
-            <li><a href="{{ '/about/' | relative_url }}" class="nav-link {% if page.url == '/about/' %}active{% endif %}">About</a></li>
-            <li><a href="{{ '/services/' | relative_url }}" class="nav-link {% if page.url == '/services/' %}active{% endif %}">Services</a></li>
-            <li><a href="{{ '/projects/' | relative_url }}" class="nav-link {% if page.url == '/projects/' %}active{% endif %}">Projects</a></li>
-            <li><a href="{{ '/contact/' | relative_url }}" class="nav-link {% if page.url == '/contact/' %}active{% endif %}">Contact</a></li>
-            <li><a href="{{ '/blog/' | relative_url }}" class="nav-link {% if page.url == '/blog/' %}active{% endif %}">Blog</a></li>
-            <li><a href="{{ '/faq/' | relative_url }}" class="nav-link {% if page.url == '/faq/' %}active{% endif %}">FAQ</a></li>
-            <li><a href="/media/">Media</a></li>
-            <li><a href="/resources/">Resources</a></li>
-            <li><a href="{{ '/ebooks/' | relative_url }}">E-Books</a></li> <!-- New E-Book Section -->
-            <li><a href="{{ '/free-tools/' | relative_url }}" class="nav-link">Free Tools</a></li>
-            <li><a href="/write-for-us/" class="nav-link">Write for Us</a></li>
-            <li><a href="/collaborate/" class="nav-link">Collaborate with Us</a></li>
-            <li><a href="{{ '/courses/' | relative_url }}">Courses</a></li> <!-- Added Courses -->
-            
-    
-           </nav>
-
-
-
+            <li><a href="{{ site.baseurl }}/" class="nav-link {% if page.url == '/' %}active{% endif %}">Home</a></li>
+            <li><a href="{{ site.baseurl }}/about/" class="nav-link {% if page.url == '/about/' %}active{% endif %}">About</a></li>
+            <li><a href="{{ site.baseurl }}/services/" class="nav-link {% if page.url == '/services/' %}active{% endif %}">Services</a></li>
+            <li><a href="{{ site.baseurl }}/projects/" class="nav-link {% if page.url == '/projects/' %}active{% endif %}">Projects</a></li>
+            <li><a href="{{ site.baseurl }}/contact/" class="nav-link {% if page.url == '/contact/' %}active{% endif %}">Contact</a></li>
+            <li><a href="{{ site.baseurl }}/blog/" class="nav-link {% if page.url == '/blog/' %}active{% endif %}">Blog</a></li>
+            <li><a href="{{ site.baseurl }}/faq/" class="nav-link {% if page.url == '/faq/' %}active{% endif %}">FAQ</a></li>
+            <li><a href="{{ site.baseurl }}/media/">Media</a></li>
+            <li><a href="{{ site.baseurl }}/resources/">Resources</a></li>
+            <li><a href="{{ site.baseurl }}/ebooks/">E-Books</a></li>
+            <li><a href="{{ site.baseurl }}/free-tools/" class="nav-link">Free Tools</a></li>
+            <li><a href="{{ site.baseurl }}/write-for-us/" class="nav-link">Write for Us</a></li>
+            <li><a href="{{ site.baseurl }}/collaborate/" class="nav-link">Collaborate</a></li>
+            <li><a href="{{ site.baseurl }}/courses/">Courses</a></li>
         </ul>
-           <!-- Dark Mode Toggle -->
-    <button id="dark-mode-toggle" class="dark-mode-btn" aria-label="Toggle Dark Mode">
-        🌙
-    </button>
-</nav>
 
-<style>
-    /* Styling for Dark Mode Toggle Button */
-    #dark-mode-toggle {
-        background: none;
-        border: none;
-        cursor: pointer;
-        font-size: 1.5em;
-        margin-left: auto;
-        color: inherit;
-        transition: transform 0.3s;
-    }
+        <!-- Dark Mode Toggle -->
+        <button id="dark-mode-toggle" class="dark-mode-btn" aria-label="Toggle Dark Mode">🌙</button>
 
-    #dark-mode-toggle:hover {
-        transform: scale(1.1);
-    }
-
-    #dark-mode-toggle:focus {
-        outline: none;
-    }
-</style>
-
-        <!-- Right Section: Search Bar -->
-        <div style="display: flex; align-items: center; flex-wrap: wrap;">
-            <form id="menu-search-form" style="display: flex; align-items: center;">
-                <input type="text" id="menu-search-input" placeholder="Search" aria-label="Search" style="padding: 5px; border: 1px solid #ccc; border-radius: 5px; margin-right: 5px;">
-                <button type="submit" style="background-color: #007BFF; color: white; border: none; border-radius: 5px; padding: 5px 10px; cursor: pointer;">Search</button>
-            </form>
-        </div>
+        <!-- Search Bar -->
+        <form id="menu-search-form" style="display: flex; align-items: center;">
+            <input type="text" id="menu-search-input" placeholder="Search" aria-label="Search" style="padding: 5px; border: 1px solid #ccc; border-radius: 5px; margin-right: 5px;">
+            <button type="submit" style="background-color: #007BFF; color: white; border: none; border-radius: 5px; padding: 5px 10px; cursor: pointer;">Search</button>
+        </form>
     </div>
 </nav>
 
-<!-- Search Results Container -->
-<div id="search-results" style="display: none; position: absolute; top: 60px; right: 20px; width: 300px; background-color: #222; color: white; border-radius: 5px; padding: 15px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); z-index: 1000;"></div>
-
 <!-- Styles for Enhanced Navigation -->
 <style>
-    /* General Navigation Styling */
     .nav-link {
         color: black;
         font-size: 1.1em;
@@ -81,89 +46,44 @@
         transition: color 0.3s, background-color 0.3s;
         border-radius: 5px;
     }
-
     .nav-link:hover {
         color: white;
-        background-color: #007BFF; /* Blue hover effect */
+        background-color: #007BFF;
     }
-
     .nav-link.active {
         color: white;
-        background-color: #4CAF50; /* Green for active */
+        background-color: #4CAF50;
     }
-
-    /* Search Bar */
-    input[type="text"] {
-        padding: 5px 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        outline: none;
-        transition: border-color 0.3s ease-in-out;
-    }
-
-    input[type="text"]:focus {
-        border-color: #007BFF;
-    }
-
-    button {
-        background-color: #007BFF;
-        color: white;
+    #dark-mode-toggle {
+        background: none;
         border: none;
-        border-radius: 5px;
-        padding: 5px 10px;
         cursor: pointer;
-        transition: background-color 0.3s ease-in-out;
+        font-size: 1.5em;
+        margin-left: auto;
+        color: inherit;
+        transition: transform 0.3s;
     }
-
-    button:hover {
-        background-color: #0056b3; /* Darker blue */
+    #dark-mode-toggle:hover {
+        transform: scale(1.1);
     }
-
-    /* Search Results */
-    #search-results a {
-        color: #4CAF50;
-        text-decoration: none;
+    #dark-mode-toggle:focus {
+        outline: none;
     }
-
-    #search-results a:hover {
-        color: white;
-    }
-
-    /* Mobile Responsiveness */
     @media (max-width: 768px) {
         nav div {
             flex-direction: column;
             align-items: stretch;
         }
-
         nav ul {
             flex-direction: column;
             gap: 10px;
         }
-
         nav input[type="text"] {
             width: 100%;
             margin: 5px 0;
         }
-
         nav button {
             width: 100%;
         }
     }
-    /* Ensure All Navigation Links Are Consistent */
-.nav-link {
-    font-weight: bold; /* Make all menu items bold */
-    color: black !important; /* Set text color to black */
-    text-decoration: none;
-    padding: 5px 10px;
-    transition: color 0.3s, background-color 0.3s;
-    border-radius: 5px;
-}
-
-/* Ensure "Media" and "Resources" Are Styled the Same */
-.nav-link[href="/media/"],
-.nav-link[href="/resources/"] {
-    font-weight: bold; /* Make bold */
-    color: black !important; /* Set to black */
-}
 </style>

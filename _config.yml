@@ -1,25 +1,24 @@
-# Site Information
 title: "LLmachine"
 email: "kent.sew@gmail.com"
 description: >-
   Welcome to LLmachine, your hub for AI, data science, and analytics.
   Explore projects, insights, and professional research.
 
-baseurl: ""  # Ensure this is empty unless hosted under a subdirectory
-url: "https://dataforsolution.github.io"  # Correct URL for GitHub Pages
+baseurl: ""  # Keep empty unless hosted under a subdirectory
+url: "https://dataforsolution.github.io"  # Ensure it's correct
 
 # Theme and Plugins
-remote_theme: jekyll/minima  # Ensures theme is applied correctly
+remote_theme: jekyll/minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-paginate  # Ensures pagination works
+  - jekyll-paginate
   - jekyll-include-cache
   - jekyll-sitemap
   - jekyll-assets
-  - jekyll-archives  # Enables blog archives (optional)
-  - jekyll-redirect-from  # Useful for managing URL changes
-  - jekyll-robots  # Helps with SEO optimization
+  - jekyll-archives
+  - jekyll-redirect-from
+  - jekyll-robots
 
 # Pagination Settings
 paginate: 5  
@@ -50,9 +49,9 @@ include:
   - signin.html
   - signup.html
   - ebooks.md
-  - navigation.html  # Fixed naming from _navigation.html
-  - resources.html  # Ensure this file exists
-  - index.html  # Ensures homepage is included
+  - navigation.html
+  - resources.html
+  - index.html
 
 exclude:
   - .sass-cache/
@@ -60,8 +59,8 @@ exclude:
   - .jekyll-cache/
   - node_modules/
   - vendor/
-  - Gemfile  # Keep if not needed for deployment
-  - Gemfile.lock  # Keep if not needed for deployment
+  - Gemfile
+  - Gemfile.lock
 
 # Collections (Ensures pages are generated properly)
 collections:
@@ -137,7 +136,7 @@ defaults:
 # Permalinks
 permalink: pretty
 
-# Sitemap Configuration (Optimized for SEO)
+# Sitemap Configuration
 sitemap:
   exclude:
     - /404.html
@@ -150,7 +149,7 @@ sitemap:
     - /ebooks.md
     - /signin/
     - /signup/
-    - /resources/  # Ensure this file exists
+    - /resources/
 
 # SEO Defaults
 jekyll_seo_tag:
@@ -164,7 +163,7 @@ jekyll_seo_tag:
 # Performance Optimization
 cache: true
 
-# Robots.txt (Helps search engines)
+# Robots.txt
 robots:
   disallow:
     - /404.html
