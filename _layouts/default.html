@@ -1,123 +1,69 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="LLmachine - AI, Data Science & Analytics">
-    <meta name="author" content="LLmachine">
-    <meta name="keywords" content="AI, Data Science, Machine Learning, Analytics, LLmachine">
-    <meta property="og:title" content="LLmachine - AI, Data Science & Analytics">
-    <meta property="og:description" content="Your hub for AI, Data Science, and Analytics. Explore projects, insights, and professional research.">
-    <meta property="og:image" content="{{ '/assets/images/og-image.jpg' | relative_url }}">
-    <meta property="og:url" content="{{ site.url | default: site.baseurl }}">
-    <meta name="twitter:card" content="summary_large_image">
-    <title>{{ page.title | default: "LLmachine" }}</title>
+---
+layout: default
+title: "Home"
+permalink: /
+---
 
-    <!-- Favicon -->
-    <link rel="icon" href="{{ '/assets/images/favicon.ico' | relative_url }}" type="image/x-icon">
+{% include navigation.html %}
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="{{ site.baseurl }}/assets/css/style.css">
-</head>
-<body style="display: flex; flex-direction: column; min-height: 100vh;">
+<!-- Hero Section -->
+<section id="hero" style="text-align: center; padding: 50px 20px; background-color: #f5f5f5;">
+    <h1 style="font-size: 2.5em; color: #4CAF50;">Welcome to LLmachine</h1>
+    <p style="font-size: 1.2em; color: #333;">Your hub for AI, Data Science, and Analytics</p>
+    <a href="/projects" class="cta-button" style="display: inline-block; padding: 10px 20px; font-size: 1.2em; color: white; background-color: #4CAF50; border-radius: 5px; text-decoration: none; margin-top: 20px;">Explore Projects</a>
+</section>
 
-    <!-- Navigation Bar -->
-    {% include navigation.html %}
-
-    <!-- Main Content (Fixing height issue) -->
-    <main style="padding: 20px; margin: auto; max-width: 1200px; flex-grow: 1;">
-        {{ content }}
-    </main>
-
-    <!-- Footer (Fixed so it doesn't push content down) -->
-    <footer style="background-color: #333; color: white; text-align: center; padding: 20px 10px; margin-top: auto; font-size: 0.9em;">
-        <p>&copy; {{ "now" | date: "%Y" }} LLmachine. All Rights Reserved.</p>
-        <div style="margin: 10px 0;">
-            <a href="https://twitter.com/SewLiben" target="_blank" style="color: #1DA1F2; text-decoration: none; margin: 0 10px; transition: color 0.3s;">Twitter</a>
-            <a href="https://github.com/DataForSolution" target="_blank" style="color: #6e5494; text-decoration: none; margin: 0 10px; transition: color 0.3s;">GitHub</a>
-        </div>
-        <p>Designed with ❤️ by LLmachine.</p>
-    </footer>
-
-    <!-- JavaScript -->
-    <script src="{{ site.baseurl }}/assets/js/script.js"></script>
-
-    <!-- Subscription Modal for Resources Section -->
-    <div id="subscription-modal" class="modal">
-        <div class="modal-content">
-            <h2>Subscribe to Access</h2>
-            <p>Please enter your email to access this resource.</p>
-            <form id="subscription-form">
-                <input type="email" placeholder="Enter your email" required>
-                <button type="submit">Subscribe</button>
-            </form>
-            <button id="close-modal">Cancel</button>
-        </div>
+<!-- Services Section -->
+<section id="services" style="padding: 40px 20px;">
+    <h2 style="text-align: center;">Our Services</h2>
+    <ul style="list-style-type: none; text-align: center;">
+        <li>Business Analytics</li>
+        <li>Data Entry</li>
+        <li>Data Reporting</li>
+        <li>Strategic Planning</li>
+        <li>Healthcare Consulting</li>
+        <li>Financial Analysis</li>
+    </ul>
+    <div style="text-align: center;">
+        <a href="/services" class="cta-button" style="display: inline-block; padding: 10px 20px; font-size: 1em; color: white; background-color: #008CBA; border-radius: 5px; text-decoration: none; margin-top: 10px;">View All Services</a>
     </div>
+</section>
 
-    <script>
-        // JavaScript for handling the modal functionality
-        document.addEventListener("DOMContentLoaded", () => {
-            const modal = document.getElementById("subscription-modal");
-            const closeModal = document.getElementById("close-modal");
-            const subscriptionForm = document.getElementById("subscription-form");
-            let selectedBookUrl = ""; // To store the selected book URL
+<!-- Projects Section -->
+<section id="projects" style="padding: 40px 20px;">
+    <h2 style="text-align: center;">Latest Projects</h2>
+    <ul style="list-style-type: none; text-align: center;">
+        <li><a href="/projects">Machine Learning in Healthcare</a></li>
+        <li><a href="/projects">AI for Financial Analysis</a></li>
+    </ul>
+    <div style="text-align: center;">
+        <a href="/projects" class="cta-button" style="display: inline-block; padding: 10px 20px; font-size: 1em; color: white; background-color: #008CBA; border-radius: 5px; text-decoration: none; margin-top: 10px;">Explore Projects</a>
+    </div>
+</section>
 
-            // Show the subscription modal when "Read" is clicked
-            document.querySelectorAll(".read-book-btn").forEach(button => {
-                button.addEventListener("click", () => {
-                    selectedBookUrl = button.dataset.bookUrl; // Store the book URL
-                    modal.style.display = "block";
-                });
-            });
+<!-- Blog Section -->
+<section id="blog" style="padding: 40px 20px;">
+    <h2 style="text-align: center;">Latest Blog Posts</h2>
+    {% for post in site.posts limit:3 %}
+        <div style="text-align: center;">
+            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
+            <p>{{ post.excerpt }}</p>
+        </div>
+    {% endfor %}
+    <div style="text-align: center;">
+        <a href="/blog" class="cta-button" style="display: inline-block; padding: 10px 20px; font-size: 1em; color: white; background-color: #008CBA; border-radius: 5px; text-decoration: none; margin-top: 10px;">Read More</a>
+    </div>
+</section>
 
-            // Close the modal
-            closeModal.addEventListener("click", () => {
-                modal.style.display = "none";
-            });
+<!-- Contact Section -->
+<section id="contact" style="padding: 40px 20px;">
+    <h2 style="text-align: center;">Contact Us</h2>
+    <p style="text-align: center;">Email: <a href="mailto:kent.sew@gmail.com">kent.sew@gmail.com</a></p>
+    <p style="text-align: center;">GitHub: <a href="https://github.com/DataForSolution" target="_blank">DataForSolution</a></p>
+    <div style="text-align: center;">
+        <a href="/contact" class="cta-button" style="display: inline-block; padding: 10px 20px; font-size: 1em; color: white; background-color: #008CBA; border-radius: 5px; text-decoration: none; margin-top: 10px;">Get in Touch</a>
+    </div>
+</section>
 
-            // Handle the subscription form submission
-            subscriptionForm.addEventListener("submit", event => {
-                event.preventDefault();
-                const email = subscriptionForm.querySelector("input[type='email']").value.trim();
-
-                if (email) {
-                    alert("Thank you for subscribing! You can now access the resource.");
-                    modal.style.display = "none";
-
-                    // Open the resource in a new tab
-                    if (selectedBookUrl) {
-                        window.open(selectedBookUrl, "_blank");
-                    }
-                } else {
-                    alert("Please enter a valid email to subscribe.");
-                }
-            });
-        });
-    </script>
-
-    <style>
-        /* Modal Style */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 1000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-        }
-
-        .modal-content {
-            background-color: #fff;
-            margin: 15% auto;
-            padding: 20px;
-            border-radius: 10px;
-            width: 80%;
-            max-width: 500px;
-            text-align: center;
-        }
-    </style>
-</body>
-</html>
+<!-- Ensure Footer is included -->
+{% include footer.html %}
