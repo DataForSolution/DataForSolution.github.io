@@ -1,24 +1,26 @@
+# Site Information
 title: "LLmachine"
 email: "kent.sew@gmail.com"
 description: >-
   Welcome to LLmachine, your hub for AI, data science, and analytics.
   Explore projects, insights, and professional research.
 
+# Base URL & Site URL (For GitHub Pages)
 baseurl: ""  # Keep empty unless hosted under a subdirectory
-url: "https://dataforsolution.github.io"  # Ensure it's correct
+url: "https://dataforsolution.github.io"  # Correct URL for GitHub Pages
 
 # Theme and Plugins
-remote_theme: jekyll/minima
+remote_theme: jekyll/minima  # Ensures theme is applied correctly
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-paginate
+  - jekyll-paginate  # Enables pagination
   - jekyll-include-cache
   - jekyll-sitemap
   - jekyll-assets
   - jekyll-archives
   - jekyll-redirect-from
-  - jekyll-robots
+  - jekyll-robots  # Helps with SEO
 
 # Pagination Settings
 paginate: 5  
@@ -51,7 +53,7 @@ include:
   - ebooks.md
   - navigation.html
   - resources.html
-  - index.html
+  - index.html  # Ensures homepage is included
 
 exclude:
   - .sass-cache/
