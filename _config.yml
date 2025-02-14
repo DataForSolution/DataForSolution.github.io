@@ -13,14 +13,14 @@ remote_theme: jekyll/minima  # Ensures theme is applied correctly
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-paginate
+  - jekyll-paginate  # Ensures pagination works
   - jekyll-include-cache
   - jekyll-sitemap
   - jekyll-assets
 
 # Pagination Settings
 paginate: 5  
-paginate_path: "/page:num/"  
+paginate_path: "/blog/page:num/"  # Changed to target blog pagination
 
 # Markdown Processor
 markdown: kramdown
@@ -116,6 +116,11 @@ defaults:
     values:
       layout: "default"
       title: "Sign Up"
+  - scope:
+      path: "blog"
+    values:
+      layout: "default"
+      title: "Blog"
   - scope:
       path: "resources"
     values:
