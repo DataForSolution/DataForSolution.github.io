@@ -1,10 +1,11 @@
 ---
 layout: default
 title: "Our Projects"
+permalink: /projects/
 ---
 
 <section id="projects">
-    <h1>Our Projects</h1>
+    <h1>🚀 Our Projects</h1>
     <p>Explore some of our cutting-edge AI and data science projects designed to solve real-world challenges.</p>
 
     <!-- Projects List -->
@@ -12,7 +13,7 @@ title: "Our Projects"
         <div class="project-card">
             <h3>🏥 Chest CT Scan Cancer Detection</h3>
             <p>AI-powered early detection using CT scans.</p>
-            <a href="https://github.com/DataForSolution/Data-Solution/blob/Master/chest_ct_scan_Cancer_Detection_cnn.ipynb" 
+            <a href="https://github.com/DataForSolution/Data-Solution/blob/main/chest_ct_scan_Cancer_Detection_cnn.ipynb" 
                target="_blank" class="project-link">
                 View Project
             </a>
@@ -20,7 +21,7 @@ title: "Our Projects"
         <div class="project-card">
             <h3>🔍 Adversarial Attacks in Machine Learning</h3>
             <p>Exploring AI security vulnerabilities and model robustness.</p>
-            <a href="https://github.com/DataForSolution/Data-Solution/blob/Master/Adversarial_Attacks.ipynb" 
+            <a href="https://github.com/DataForSolution/Data-Solution/blob/main/Adversarial_Attacks.ipynb" 
                target="_blank" class="project-link">
                 View Project
             </a>
@@ -43,68 +44,36 @@ title: "Our Projects"
         </div>
     </div>
 </section>
-         
 
-<style>
-    #collaborative-projects {
-        padding: 50px 20px;
-        background-color: #f9f9f9;
-        color: #333;
-    }
+<!-- Collaborative Projects Section -->
+<section id="collaborative-projects">
+    <h2>🌍 Collaborative AI & Data Science Projects</h2>
+    <p>Join our open-source initiatives and contribute to the AI community.</p>
 
-    #collaborative-projects h2 {
-        color: #4CAF50;
-        margin-bottom: 20px;
-    }
-
-    .collaboration-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-    }
-
-    .collaboration-card {
-        background-color: white;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        text-align: left;
-        max-width: 300px;
-    }
-
-    .collaboration-card h3 {
-        font-size: 1.5em;
-        color: #4CAF50;
-        margin-bottom: 10px;
-    }
-
-    .collaboration-card p {
-        margin-bottom: 15px;
-        font-size: 1em;
-    }
-
-    .project-link {
-        text-decoration: none;
-        color: white;
-        background-color: #007BFF;
-        padding: 10px 15px;
-        border-radius: 5px;
-        font-weight: bold;
-        display: inline-block;
-        transition: background-color 0.3s ease;
-    }
-
-    .project-link:hover {
-        background-color: #0056b3;
-    }
-</style>
-
+    <div class="collaboration-grid">
+        <div class="collaboration-card">
+            <h3>🛠 Open-Source AI Model Deployment</h3>
+            <p>Deploying AI models using Flask & FastAPI.</p>
+            <a href="https://github.com/DataForSolution/AIML-Deployment" 
+               target="_blank" class="project-link">
+                Contribute
+            </a>
+        </div>
+        <div class="collaboration-card">
+            <h3>📊 Financial Data Analysis & Forecasting</h3>
+            <p>Predicting stock market trends using deep learning.</p>
+            <a href="https://github.com/DataForSolution/Finance-AI" 
+               target="_blank" class="project-link">
+                Join Project
+            </a>
+        </div>
+    </div>
+</section>
 
 <style>
     /* Project Section Styling */
     #projects {
-        background-color: #d4edda;
+        background-color: #f8f9fa;
         padding: 50px 20px;
         text-align: center;
     }
@@ -112,7 +81,7 @@ title: "Our Projects"
     #projects h1 {
         font-size: 2.5em;
         font-weight: bold;
-        color: #4CAF50;
+        color: #007BFF;
         margin-bottom: 20px;
     }
 
@@ -130,7 +99,7 @@ title: "Our Projects"
     }
 
     .project-card {
-        background-color: #fff;
+        background-color: white;
         border-radius: 10px;
         padding: 20px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -146,7 +115,7 @@ title: "Our Projects"
 
     .project-card h3 {
         font-size: 1.5em;
-        color: #4CAF50;
+        color: #007BFF;
         margin-bottom: 10px;
     }
 
@@ -172,6 +141,46 @@ title: "Our Projects"
         background-color: #0056b3;
     }
 
+    /* Collaborative Projects Section Styling */
+    #collaborative-projects {
+        padding: 50px 20px;
+        background-color: #f4f4f4;
+        color: #333;
+        text-align: center;
+    }
+
+    #collaborative-projects h2 {
+        color: #007BFF;
+        margin-bottom: 20px;
+    }
+
+    .collaboration-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: center;
+    }
+
+    .collaboration-card {
+        background-color: white;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        text-align: left;
+        max-width: 300px;
+    }
+
+    .collaboration-card h3 {
+        font-size: 1.5em;
+        color: #007BFF;
+        margin-bottom: 10px;
+    }
+
+    .collaboration-card p {
+        margin-bottom: 15px;
+        font-size: 1em;
+    }
+
     /* Responsive Design */
     @media (max-width: 768px) {
         .projects-container {
@@ -180,6 +189,16 @@ title: "Our Projects"
         }
 
         .project-card {
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .collaboration-grid {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .collaboration-card {
             width: 100%;
             max-width: 400px;
         }

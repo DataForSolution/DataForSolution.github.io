@@ -1,69 +1,67 @@
----
-layout: default
-title: "Home"
-permalink: /
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="LLmachine - AI, Data Science, and Analytics">
+    <meta name="keywords" content="AI, Data Science, Machine Learning, Analytics, LLmachine">
+    <meta name="author" content="LLmachine">
+    <title>{{ page.title }}</title>
 
-{% include navigation.html %}
+    <!-- Corrected CSS and JS Paths -->
+    <link rel="stylesheet" href="{{ '/assets/css/style.css' | absolute_url }}">
+    <script src="{{ '/assets/js/script.js' | absolute_url }}" defer></script>
 
-<!-- Hero Section -->
-<section id="hero" style="text-align: center; padding: 50px 20px; background-color: #f5f5f5;">
-    <h1 style="font-size: 2.5em; color: #4CAF50;">Welcome to LLmachine</h1>
-    <p style="font-size: 1.2em; color: #333;">Your hub for AI, Data Science, and Analytics</p>
-    <a href="/projects" class="cta-button" style="display: inline-block; padding: 10px 20px; font-size: 1.2em; color: white; background-color: #4CAF50; border-radius: 5px; text-decoration: none; margin-top: 20px;">Explore Projects</a>
-</section>
+    <!-- Open Graph / Social Media Meta Tags -->
+    <meta property="og:title" content="LLmachine - AI, Data Science & Analytics">
+    <meta property="og:description" content="Explore AI, data science projects, and innovative solutions at LLmachine.">
+    <meta property="og:image" content="https://dataforsolution.github.io/assets/images/thumbnail.png">
+    <meta property="og:url" content="https://dataforsolution.github.io/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="LLmachine">
+    <meta name="twitter:card" content="summary_large_image">
 
-<!-- Services Section -->
-<section id="services" style="padding: 40px 20px;">
-    <h2 style="text-align: center;">Our Services</h2>
-    <ul style="list-style-type: none; text-align: center;">
-        <li>Business Analytics</li>
-        <li>Data Entry</li>
-        <li>Data Reporting</li>
-        <li>Strategic Planning</li>
-        <li>Healthcare Consulting</li>
-        <li>Financial Analysis</li>
-    </ul>
-    <div style="text-align: center;">
-        <a href="/services" class="cta-button" style="display: inline-block; padding: 10px 20px; font-size: 1em; color: white; background-color: #008CBA; border-radius: 5px; text-decoration: none; margin-top: 10px;">View All Services</a>
-    </div>
-</section>
+    <!-- Preload Key Resources -->
+    <link rel="preload" as="style" href="{{ '/assets/css/style.css' | absolute_url }}">
+    <link rel="preload" as="script" href="{{ '/assets/js/script.js' | absolute_url }}">
 
-<!-- Projects Section -->
-<section id="projects" style="padding: 40px 20px;">
-    <h2 style="text-align: center;">Latest Projects</h2>
-    <ul style="list-style-type: none; text-align: center;">
-        <li><a href="/projects">Machine Learning in Healthcare</a></li>
-        <li><a href="/projects">AI for Financial Analysis</a></li>
-    </ul>
-    <div style="text-align: center;">
-        <a href="/projects" class="cta-button" style="display: inline-block; padding: 10px 20px; font-size: 1em; color: white; background-color: #008CBA; border-radius: 5px; text-decoration: none; margin-top: 10px;">Explore Projects</a>
-    </div>
-</section>
+    <!-- JavaScript to Ensure Page Loads Properly -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            document.body.style.visibility = "visible";
+        });
+    </script>
+</head>
 
-<!-- Blog Section -->
-<section id="blog" style="padding: 40px 20px;">
-    <h2 style="text-align: center;">Latest Blog Posts</h2>
-    {% for post in site.posts limit:3 %}
-        <div style="text-align: center;">
-            <h3><a href="{{ post.url }}">{{ post.title }}</a></h3>
-            <p>{{ post.excerpt }}</p>
-        </div>
-    {% endfor %}
-    <div style="text-align: center;">
-        <a href="/blog" class="cta-button" style="display: inline-block; padding: 10px 20px; font-size: 1em; color: white; background-color: #008CBA; border-radius: 5px; text-decoration: none; margin-top: 10px;">Read More</a>
-    </div>
-</section>
+<body style="display: flex; flex-direction: column; min-height: 100vh; visibility: hidden;">
+    
+    <!-- Include Navigation -->
+    {% include navigation.html %}
 
-<!-- Contact Section -->
-<section id="contact" style="padding: 40px 20px;">
-    <h2 style="text-align: center;">Contact Us</h2>
-    <p style="text-align: center;">Email: <a href="mailto:kent.sew@gmail.com">kent.sew@gmail.com</a></p>
-    <p style="text-align: center;">GitHub: <a href="https://github.com/DataForSolution" target="_blank">DataForSolution</a></p>
-    <div style="text-align: center;">
-        <a href="/contact" class="cta-button" style="display: inline-block; padding: 10px 20px; font-size: 1em; color: white; background-color: #008CBA; border-radius: 5px; text-decoration: none; margin-top: 10px;">Get in Touch</a>
-    </div>
-</section>
+    <!-- Main Content Section -->
+    <main style="max-width: 1200px; margin: auto; padding: 20px; flex-grow: 1;">
+        {{ content }}
+    </main>
 
-<!-- Ensure Footer is included -->
-{% include footer.html %}
+    <!-- Footer -->
+    {% include footer.html %}
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "LLmachine",
+      "url": "https://dataforsolution.github.io/",
+      "logo": "https://dataforsolution.github.io/assets/images/thumbnail.png",
+      "sameAs": [
+        "https://twitter.com/SewLiben",
+        "https://github.com/DataForSolution"
+      ]
+    }
+    </script>
+
+</body>
+</html>
+

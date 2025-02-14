@@ -3,64 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="LLmachine - Professional AI, Data Science & Analytics Services">
+    <meta name="description" content="LLmachine - AI, Data Science, and Analytics">
     <meta name="keywords" content="AI, Data Science, Machine Learning, Analytics, LLmachine">
     <meta name="author" content="LLmachine">
     <title>{{ page.title }}</title>
 
-    <!-- Stylesheet -->
+    <!-- Stylesheet (Fixed Path) -->
     <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
 
     <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:title" content="LLmachine - AI, Data Science & Analytics">
     <meta property="og:description" content="Explore AI, data science projects, and innovative solutions at LLmachine.">
-    <meta property="og:image" <meta property="og:image" content="https://dataforsolution.github.io/assets/images/thumbnail.png?v=1">
-    <meta property="og:image" content="https://dataforsolution.github.io/assets/images/thumbnail.png?v=2">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:url" content="https://dataforsolution.github.io/">
+    <meta property="og:image" content="{{ '/assets/images/thumbnail.png' | relative_url }}">
+    <meta property="og:url" content="{{ site.url }}">
     <meta property="og:type" content="website">
-    <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="LLmachine">
     <meta name="twitter:card" content="summary_large_image">
 
-    <!-- Favicon -->
-    <link rel="icon" href="{{ '/assets/images/favicon.ico' | relative_url }}" type="image/x-icon">
-</head>
-<body style="display: flex; flex-direction: column; min-height: 100vh;">
+    <!-- Favicon (Fixed Path) -->
+    <link rel="icon" href="{{ '/favicon.ico' | relative_url }}" type="image/x-icon">
 
+    <!-- Preload Resources -->
+    <link rel="preload" as="style" href="{{ '/assets/css/style.css' | relative_url }}">
+    <link rel="preload" as="script" href="{{ '/assets/js/script.js' | relative_url }}">
+
+    <!-- JavaScript -->
+    <script src="{{ '/assets/js/script.js' | relative_url }}" defer></script>
+</head>
+
+<body>
     <!-- Include Navigation -->
     {% include navigation.html %}
 
-    <!-- Main Content Section (Semantic Structure) -->
-    <section style="max-width: 1200px; margin: auto; padding: 20px; flex-grow: 1;">
-        {{ content }}
+    <!-- Hero Section -->
+    <section id="hero">
+        <h1>Welcome to LLmachine</h1>
+        <p>Your hub for AI, Data Science, and Analytics</p>
+        <a href="/projects" class="cta-button">Explore Projects</a>
     </section>
 
-    <!-- Footer (Fixed to Stay Properly Positioned) -->
-    <footer style="background-color: #333; color: white; text-align: center; padding: 10px; margin-top: auto; font-size: 0.9em;">
-        <p>&copy; 2025 LLmachine. Follow me on 
-            <a href="https://twitter.com/SewLiben" target="_blank" rel="noopener noreferrer" style="color: #1DA1F2;">Twitter</a> and 
-            <a href="https://github.com/DataForSolution" target="_blank" rel="noopener noreferrer" style="color: #6e5494;">GitHub</a>.
-        </p>
-    </footer>
+    <!-- Services Section -->
+    <section id="services">
+        <h2>Our Services</h2>
+        <ul>
+            <li>Business Analytics</li>
+            <li>Data Entry</li>
+            <li>Data Reporting</li>
+            <li>Strategic Planning</li>
+            <li>Healthcare Consulting</li>
+            <li>Financial Analysis</li>
+        </ul>
+        <a href="/services" class="cta-button">View All Services</a>
+    </section>
 
-    <!-- Structured Data for Rich Results -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "LLmachine",
-      "url": "https://dataforsolution.github.io/",
-      "logo": "https://dataforsolution.github.io/assets/images/thumbnail.png",
-      "sameAs": [
-        "https://twitter.com/SewLiben",
-        "https://github.com/DataForSolution"
-      ]
-    }
-    </script>
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Latest Projects</h2>
+        <ul>
+            <li><a href="/projects">Machine Learning in Healthcare</a></li>
+            <li><a href="/projects">AI for Financial Analysis</a></li>
+        </ul>
+        <a href="/projects" class="cta-button">Explore Projects</a>
+    </section>
 
-    <!-- JavaScript -->
-    <script src="{{ '/assets/js/script.js' | relative_url }}"></script>
+    <!-- Blog Section -->
+    <section id="blog">
+        <h2>Latest Blog Posts</h2>
+        {% for post in site.posts limit:3 %}
+            <div>
+                <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+                <p>{{ post.excerpt | truncatewords: 20 }}</p>
+            </div>
+        {% endfor %}
+        <a href="/blog" class="cta-button">Read More</a>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <p>Email: <a href="mailto:kent.sew@gmail.com">kent.sew@gmail.com</a></p>
+        <p>GitHub: <a href="https://github.com/DataForSolution" target="_blank">DataForSolution</a></p>
+        <a href="/contact" class="cta-button">Get in Touch</a>
+    </section>
+
+    <!-- Include Footer -->
+    {% include footer.html %}
 </body>
 </html>

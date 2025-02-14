@@ -17,10 +17,13 @@ plugins:
   - jekyll-include-cache
   - jekyll-sitemap
   - jekyll-assets
+  - jekyll-archives  # Enables blog archives (optional)
+  - jekyll-redirect-from  # Useful for managing URL changes
+  - jekyll-robots  # Helps with SEO optimization
 
 # Pagination Settings
 paginate: 5  
-paginate_path: "/blog/page:num/"  # Changed to target blog pagination
+paginate_path: "/blog/page:num/"  # Ensures pagination works correctly
 
 # Markdown Processor
 markdown: kramdown
@@ -36,6 +39,8 @@ include:
   - _layouts
   - _projects
   - assets
+  - assets/css
+  - assets/js
   - assets/books
   - .nojekyll
   - favicon.ico
@@ -45,18 +50,20 @@ include:
   - signin.html
   - signup.html
   - ebooks.md
-  - _navigation.html
+  - navigation.html  # Fixed naming from _navigation.html
   - resources.html  # Ensure this file exists
+  - index.html  # Ensures homepage is included
 
 exclude:
   - .sass-cache/
+  - README.md
   - .jekyll-cache/
   - node_modules/
   - vendor/
   - Gemfile  # Keep if not needed for deployment
   - Gemfile.lock  # Keep if not needed for deployment
 
-# Collections
+# Collections (Ensures pages are generated properly)
 collections:
   services:
     output: true
@@ -83,7 +90,7 @@ collections:
     output: true
     permalink: /resources/:path/
 
-# Defaults
+# Defaults (Applies layout settings to pages)
 defaults:
   - scope:
       path: ""
@@ -130,7 +137,7 @@ defaults:
 # Permalinks
 permalink: pretty
 
-# Sitemap Configuration
+# Sitemap Configuration (Optimized for SEO)
 sitemap:
   exclude:
     - /404.html
@@ -152,8 +159,19 @@ jekyll_seo_tag:
       username: "SewLiben"
     github:
       username: "DataForSolution"
+  description: "LLmachine provides AI, Data Science, and Analytics solutions for businesses and researchers."
 
 # Performance Optimization
 cache: true
 
+# Robots.txt (Helps search engines)
+robots:
+  disallow:
+    - /404.html
+    - /private/
+  allow:
+    - /
+  sitemap: "https://dataforsolution.github.io/sitemap.xml"
+
 # Force GitHub Pages Rebuild
+future: true
