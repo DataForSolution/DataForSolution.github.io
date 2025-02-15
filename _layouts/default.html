@@ -16,7 +16,7 @@
     <meta property="og:title" content="LLmachine - AI, Data Science & Analytics">
     <meta property="og:description" content="Explore AI, data science projects, and innovative solutions at LLmachine.">
     <meta property="og:image" content="{{ '/assets/images/thumbnail.png' | relative_url }}">
-    <meta property="og:url" content="https://dataforsolution.github.io/">
+    <meta property="og:url" content="{{ site.url | relative_url }}">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="LLmachine">
@@ -56,7 +56,7 @@
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "LLmachine",
-      "url": "https://dataforsolution.github.io/",
+      "url": "{{ site.url | relative_url }}",
       "logo": "{{ '/assets/images/thumbnail.png' | relative_url }}",
       "sameAs": [
         "https://twitter.com/SewLiben",
@@ -64,6 +64,5 @@
       ]
     }
     </script>
-
 </body>
 </html>
