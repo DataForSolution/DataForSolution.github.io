@@ -8,21 +8,21 @@
 
         <!-- Center Section: Menu Links -->
         <ul style="list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; flex-wrap: wrap;">
-            <li><a href="{{ site.baseurl }}/" class="nav-link {% if page.url == '/' %}active{% endif %}">Home</a></li>
-            <li><a href="{{ site.baseurl }}/about/" class="nav-link {% if page.url == '/about/' %}active{% endif %}">About</a></li>
-            <li><a href="{{ site.baseurl }}/services/" class="nav-link {% if page.url == '/services/' %}active{% endif %}">Services</a></li>
-            <li><a href="{{ site.baseurl }}/projects/" class="nav-link {% if page.url == '/projects/' %}active{% endif %}">Projects</a></li>
-            <li><a href="{{ site.baseurl }}/contact/" class="nav-link {% if page.url == '/contact/' %}active{% endif %}">Contact</a></li>
-            <li><a href="{{ site.baseurl }}/blog/" class="nav-link {% if page.url == '/blog/' %}active{% endif %}">Blog</a></li>
-            <li><a href="{{ site.baseurl }}/faq/" class="nav-link {% if page.url == '/faq/' %}active{% endif %}">FAQ</a></li>
-            <li><a href="{{ site.baseurl }}/media/">Media</a></li>
-            <li><a href="{{ site.baseurl }}/resources/">Resources</a></li>
-            <li><a href="{{ site.baseurl }}/ebooks/">E-Books</a></li>
-            <li><a href="{{ site.baseurl }}/free-tools/" class="nav-link">Free Tools</a></li>
-            <li><a href="{{ site.baseurl }}/write-for-us/" class="nav-link">Write for Us</a></li>
-            <li><a href="{{ site.baseurl }}/collaborate/" class="nav-link">Collaborate</a></li>
-            <li><a href="{{ site.baseurl }}/courses/">Courses</a></li>
-        </ul>
+<nav>
+            <ul>
+    <li><a href="{{ '/' | relative_url }}">Home</a></li>
+    <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+    <li><a href="{{ '/services/' | relative_url }}">Services</a></li>
+    <li><a href="{{ '/projects/' | relative_url }}">Projects</a></li>
+    <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
+    <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
+    <li><a href="{{ '/faq/' | relative_url }}">FAQ</a></li>
+    <li><a href="{{ '/resources/' | relative_url }}">Resources</a></li>
+    <li><a href="{{ '/ebooks/' | relative_url }}">E-Books</a></li>
+    <li><a href="{{ '/free-tools/' | relative_url }}">Free Tools</a></li>
+    <li><a href="{{ '/write-for-us/' | relative_url }}">Write for Us</a></li>
+  </ul>
+<nav>
 
         <!-- Dark Mode Toggle -->
         <button id="dark-mode-toggle" class="dark-mode-btn" aria-label="Toggle Dark Mode">🌙</button>
