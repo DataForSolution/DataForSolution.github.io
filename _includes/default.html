@@ -33,6 +33,14 @@
 
 <body>
     <!-- Include Navigation -->
+   
+    {% include navigation.html %} <!-- Make sure this line is present -->
+    <main style="max-width: 1200px; margin: auto; padding: 20px; flex-grow: 1;">
+        {{ content }}
+    </main>
+    {% include footer.html %}
+
+
     {% include navigation.html %}
 
     <!-- Hero Section -->
