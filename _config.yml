@@ -10,21 +10,21 @@ baseurl: ""  # Keep empty unless hosted under a subdirectory
 url: "https://dataforsolution.github.io"  # Correct URL for GitHub Pages
 
 # Theme and Plugins
-remote_theme: jekyll/minima  # Ensures theme is applied correctly
+remote_theme: jekyll/minima  # or 'theme: minima', either works
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
-  - jekyll-paginate  # Enables pagination
+  - jekyll-paginate
   - jekyll-include-cache
   - jekyll-sitemap
-  - jekyll-assets
-  - jekyll-archives
+  # - jekyll-assets        # Not supported by GitHub Pages
+  # - jekyll-archives      # Not supported by GitHub Pages
   - jekyll-redirect-from
-  - jekyll-robots  # Helps with SEO
+  # - jekyll-robots        # Not supported by GitHub Pages
 
 # Pagination Settings
 paginate: 5  
-paginate_path: "/blog/page:num/"  # Ensures pagination works correctly
+paginate_path: "/blog/page:num/"
 
 # Markdown Processor
 markdown: kramdown
@@ -64,7 +64,7 @@ exclude:
   - Gemfile
   - Gemfile.lock
 
-# Collections (Ensures pages are generated properly)
+# Collections
 collections:
   services:
     output: true
@@ -91,7 +91,7 @@ collections:
     output: true
     permalink: /resources/:path/
 
-# Defaults (Applies layout settings to pages)
+# Defaults (Applies layout to pages)
 defaults:
   - scope:
       path: ""
@@ -164,15 +164,6 @@ jekyll_seo_tag:
 
 # Performance Optimization
 cache: true
-
-# Robots.txt
-robots:
-  disallow:
-    - /404.html
-    - /private/
-  allow:
-    - /
-  sitemap: "https://dataforsolution.github.io/sitemap.xml"
 
 # Force GitHub Pages Rebuild
 future: true
