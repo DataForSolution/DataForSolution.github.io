@@ -43,7 +43,6 @@ include:
   - assets/css
   - assets/js
   - assets/books
-  - .nojekyll
   - favicon.ico
   - courses.html
   - dashboard.html
@@ -152,7 +151,7 @@ sitemap:
     - /signin/
     - /signup/
     - /resources/
-
+    - /index/
 # SEO Defaults
 jekyll_seo_tag:
   social:
