@@ -9,8 +9,6 @@ description: >-
 baseurl: ""  # Keep empty unless hosted under a subdirectory
 url: "https://dataforsolution.github.io"  # Correct URL for GitHub Pages
 
-# Theme and Plugins
-remote_theme: jekyll/minima  # or 'theme: minima', either works
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
