@@ -1,89 +1,87 @@
 <nav style="background-color: #f0f0f0; padding: 10px 20px; box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);" role="navigation" aria-label="Main Navigation">
-    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
-        <!-- Left Section: Logo and Name -->
-        <div style="display: flex; align-items: center;">
-            <img src="{{ site.baseurl }}/assets/images/favicon.ico" alt="LLmachine Logo" style="height: 30px; margin-right: 10px;">
-            <a href="{{ site.baseurl }}/" style="color: white; text-decoration: none; font-size: 1.5em; font-weight: bold; background-color: #333; padding: 5px 10px; border-radius: 5px;">LLmachine</a>
-        </div>
-
-        <!-- Center Section: Menu Links -->
-        <ul style="list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; flex-wrap: wrap;">
-<nav>
-            <ul>
-    <li><a href="{{ '/' | relative_url }}">Home</a></li>
-    <li><a href="{{ '/about/' | relative_url }}">About</a></li>
-    <li><a href="{{ '/services/' | relative_url }}">Services</a></li>
-    <li><a href="{{ '/projects/' | relative_url }}">Projects</a></li>
-    <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
-    <li><a href="{{ '/blog/' | relative_url }}">Blog</a></li>
-    <li><a href="{{ '/faq/' | relative_url }}">FAQ</a></li>
-    <li><a href="{{ '/resources/' | relative_url }}">Resources</a></li>
-    <li><a href="{{ '/ebooks/' | relative_url }}">E-Books</a></li>
-    <li><a href="{{ '/free-tools/' | relative_url }}">Free Tools</a></li>
-    <li><a href="{{ '/write-for-us/' | relative_url }}">Write for Us</a></li>
-  </ul>
-<nav>
-
-        <!-- Dark Mode Toggle -->
-        <button id="dark-mode-toggle" class="dark-mode-btn" aria-label="Toggle Dark Mode">🌙</button>
-
-        <!-- Search Bar -->
-        <form id="menu-search-form" style="display: flex; align-items: center;">
-            <input type="text" id="menu-search-input" placeholder="Search" aria-label="Search" style="padding: 5px; border: 1px solid #ccc; border-radius: 5px; margin-right: 5px;">
-            <button type="submit" style="background-color: #007BFF; color: white; border: none; border-radius: 5px; padding: 5px 10px; cursor: pointer;">Search</button>
-        </form>
+  <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap;">
+    
+    <!-- Left Section: Logo & Site Name -->
+    <div style="display: flex; align-items: center;">
+      <img src="{{ '/assets/images/favicon.ico' | relative_url }}" alt="LLmachine Logo" style="height: 30px; margin-right: 10px;">
+      <a href="{{ '/' | relative_url }}" style="color: white; text-decoration: none; font-size: 1.5em; font-weight: bold; background-color: #333; padding: 5px 10px; border-radius: 5px;">LLmachine</a>
     </div>
+
+    <!-- Center Section: Menu Links -->
+    <ul style="list-style: none; display: flex; gap: 20px; margin: 0; padding: 0; flex-wrap: wrap;">
+      <li><a href="{{ '/' | relative_url }}" class="nav-link">Home</a></li>
+      <li><a href="{{ '/about/' | relative_url }}" class="nav-link">About</a></li>
+      <li><a href="{{ '/services/' | relative_url }}" class="nav-link">Services</a></li>
+      <li><a href="{{ '/projects/' | relative_url }}" class="nav-link">Projects</a></li>
+      <li><a href="{{ '/contact/' | relative_url }}" class="nav-link">Contact</a></li>
+      <li><a href="{{ '/blog/' | relative_url }}" class="nav-link">Blog</a></li>
+      <li><a href="{{ '/faq/' | relative_url }}" class="nav-link">FAQ</a></li>
+      <li><a href="{{ '/resources/' | relative_url }}" class="nav-link">Resources</a></li>
+      <li><a href="{{ '/ebooks/' | relative_url }}" class="nav-link">E-Books</a></li>
+      <li><a href="{{ '/free-tools/' | relative_url }}" class="nav-link">Free Tools</a></li>
+      <li><a href="{{ '/write-for-us/' | relative_url }}" class="nav-link">Write for Us</a></li>
+    </ul>
+
+    <!-- Right Section: Dark Mode Toggle & Search Bar -->
+    <div style="display: flex; align-items: center; gap: 10px;">
+      <!-- Dark Mode Toggle -->
+      <button id="dark-mode-toggle" class="dark-mode-btn" aria-label="Toggle Dark Mode" style="font-size: 1.5em; background: none; border: none; cursor: pointer;">
+        🌙
+      </button>
+
+      <!-- Search Form -->
+      <form id="menu-search-form" style="display: flex; align-items: center;">
+        <input type="text" id="menu-search-input" placeholder="Search" aria-label="Search" style="padding: 5px; border: 1px solid #ccc; border-radius: 5px;">
+        <button type="submit" style="background-color: #007BFF; color: white; border: none; border-radius: 5px; padding: 5px 10px; cursor: pointer; margin-left: 5px;">Search</button>
+      </form>
+    </div>
+
+  </div>
 </nav>
 
-<!-- Styles for Enhanced Navigation -->
+<!-- Optional Styles for Enhanced Navigation -->
 <style>
-    .nav-link {
-        color: black;
-        font-size: 1.1em;
-        font-weight: bold;
-        text-decoration: none;
-        padding: 5px 10px;
-        transition: color 0.3s, background-color 0.3s;
-        border-radius: 5px;
+  .nav-link {
+    color: black;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: color 0.3s, background-color 0.3s;
+    border-radius: 5px;
+  }
+  .nav-link:hover {
+    color: white;
+    background-color: #007BFF; /* Blue hover effect */
+  }
+  .nav-link.active {
+    color: white;
+    background-color: #4CAF50; /* Green for active link */
+  }
+
+  #dark-mode-toggle:hover {
+    transform: scale(1.1);
+  }
+  #dark-mode-toggle:focus {
+    outline: none;
+  }
+
+  /* Mobile Responsiveness */
+  @media (max-width: 768px) {
+    nav div {
+      flex-direction: column;
+      align-items: stretch;
     }
-    .nav-link:hover {
-        color: white;
-        background-color: #007BFF;
+    nav ul {
+      flex-direction: column;
+      gap: 10px;
     }
-    .nav-link.active {
-        color: white;
-        background-color: #4CAF50;
+    nav input[type="text"] {
+      width: 100%;
+      margin: 5px 0;
     }
-    #dark-mode-toggle {
-        background: none;
-        border: none;
-        cursor: pointer;
-        font-size: 1.5em;
-        margin-left: auto;
-        color: inherit;
-        transition: transform 0.3s;
+    nav button {
+      width: 100%;
     }
-    #dark-mode-toggle:hover {
-        transform: scale(1.1);
-    }
-    #dark-mode-toggle:focus {
-        outline: none;
-    }
-    @media (max-width: 768px) {
-        nav div {
-            flex-direction: column;
-            align-items: stretch;
-        }
-        nav ul {
-            flex-direction: column;
-            gap: 10px;
-        }
-        nav input[type="text"] {
-            width: 100%;
-            margin: 5px 0;
-        }
-        nav button {
-            width: 100%;
-        }
-    }
+  }
 </style>
