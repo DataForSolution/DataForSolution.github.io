@@ -21,7 +21,7 @@ plugins:
   # - jekyll-robots        # Not supported by GitHub Pages
 
 # Pagination Settings
-paginate: 5  
+paginate: 5
 paginate_path: "/blog/page:num/"
 
 # Markdown Processor
