@@ -129,16 +129,17 @@ If you need our services, submit a request below:
         });
     });
 </script>
-<!-- Merged & Updated CSS -->
+<!-- Updated CSS: Moved Services Section Higher -->
 <style>
     #services {
         max-width: 900px;
         margin: auto;
-        padding: 20px;
+        padding: 10px 20px; /* ✅ Reduced top padding */
         background: none; /* ✅ Removed white background */
-        border-radius: 0; /* ✅ Remove rounded corners */
-        box-shadow: none; /* ✅ Remove shadow */
+        border-radius: 0;
+        box-shadow: none;
         text-align: center;
+        margin-top: -30px; /* ✅ Moves the section higher */
     }
 
     .services-container ul {
@@ -164,7 +165,7 @@ If you need our services, submit a request below:
         font-size: 18px;
         font-weight: bold;
         transition: color 0.3s ease-in-out;
-        background: none !important; /* ✅ Ensure background is removed */
+        background: none !important;
         padding: 5px;
         border-radius: 5px;
     }
@@ -181,7 +182,7 @@ If you need our services, submit a request below:
 
     /* Service Request Form */
     #service-request {
-        margin-top: 40px;
+        margin-top: 20px; /* ✅ Reduced space below services */
         padding: 20px;
         background: white;
         border-radius: 10px;
