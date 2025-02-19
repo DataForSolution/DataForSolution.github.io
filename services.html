@@ -129,16 +129,15 @@ If you need our services, submit a request below:
         });
     });
 </script>
-
 <!-- Merged & Updated CSS -->
 <style>
     #services {
         max-width: 900px;
         margin: auto;
         padding: 20px;
-        background: #fff;
-        border-radius: 10px;
-        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        background: none; /* ✅ Removed white background */
+        border-radius: 0; /* ✅ Remove rounded corners */
+        box-shadow: none; /* ✅ Remove shadow */
         text-align: center;
     }
 
@@ -165,7 +164,7 @@ If you need our services, submit a request below:
         font-size: 18px;
         font-weight: bold;
         transition: color 0.3s ease-in-out;
-        background: transparent !important; /* ✅ Force remove white background */
+        background: none !important; /* ✅ Ensure background is removed */
         padding: 5px;
         border-radius: 5px;
     }
