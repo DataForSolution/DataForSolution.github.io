@@ -12,43 +12,50 @@ permalink: /services/
     <div class="services-container">
         <ul>
             <li>
-                <a href="#" class="service-link" data-service-id="business-analytics">
+                <a href="/services/business-analytics/" class="service-link">
                     <img src="{{ '/assets/images/business-analytics.png' | relative_url }}" alt="Business Analytics" class="service-icon">
                     <span>Business Analytics</span>
                 </a>
             </li>
             <li>
-                <a href="#" class="service-link" data-service-id="data-entry">
+                <a href="/services/data-entry/" class="service-link">
                     <img src="{{ '/assets/images/data-entry.png' | relative_url }}" alt="Data Entry" class="service-icon">
                     <span>Data Entry</span>
                 </a>
             </li>
             <li>
-                <a href="#" class="service-link" data-service-id="data-reporting">
+                <a href="/services/data-reporting/" class="service-link">
                     <img src="{{ '/assets/images/data-reporting.png' | relative_url }}" alt="Data Reporting" class="service-icon">
                     <span>Data Reporting</span>
                 </a>
             </li>
             <li>
-                <a href="#" class="service-link" data-service-id="strategic-planning">
+                <a href="/services/strategic-planning/" class="service-link">
                     <img src="{{ '/assets/images/strategic-planning.png' | relative_url }}" alt="Strategic Planning" class="service-icon">
                     <span>Strategic Planning</span>
                 </a>
             </li>
             <li>
-                <a href="#" class="service-link" data-service-id="healthcare-consulting">
+                <a href="/services/healthcare-consulting/" class="service-link">
                     <img src="{{ '/assets/images/healthcare-consulting.png' | relative_url }}" alt="Healthcare Consulting" class="service-icon">
                     <span>Healthcare Consulting</span>
                 </a>
             </li>
             <li>
-                <a href="#" class="service-link" data-service-id="financial-analysis">
+                <a href="/services/financial-analysis/" class="service-link">
                     <img src="{{ '/assets/images/financial-analysis.png' | relative_url }}" alt="Financial Analysis" class="service-icon">
                     <span>Financial Analysis</span>
                 </a>
             </li>
+            <li>
+                <a href="/services/market-research/" class="service-link">
+                    <img src="{{ '/assets/images/market-research.png' | relative_url }}" alt="Market Research" class="service-icon">
+                    <span>Market Research</span>
+                </a>
+            </li>
         </ul>
     </div>
+</section>
 
     <!-- Service Details Section -->
     <div id="service-details" class="service-details">
@@ -145,7 +152,54 @@ If you need our services, submit a request below:
     });
 </script>
 
+<!-- Merged & Updated CSS -->
 <style>
+    #services {
+        max-width: 900px;
+        margin: auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .services-container ul {
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .services-container li {
+        width: 30%;
+        margin: 10px;
+        text-align: center;
+    }
+
+    .service-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: #333;
+        font-size: 18px;
+        font-weight: bold;
+        transition: color 0.3s ease-in-out;
+    }
+
+    .service-icon {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 10px;
+    }
+
+    .service-link:hover {
+        color: #007bff;
+    }
+
+    /* Service Request Form */
     #service-request {
         margin-top: 40px;
         padding: 20px;
