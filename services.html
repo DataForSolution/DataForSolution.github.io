@@ -1,0 +1,224 @@
+---
+layout: default
+title: "Our Services"
+permalink: /services/
+---
+<section id="services"> 
+    <h2>🚀 Our Services</h2>
+    <p>Click on a service to learn more.</p>
+
+    <ul>
+        <li><a href="/services/business-analytics/">
+            📊 <strong>Business Analytics</strong> – Gain insights into your operations through AI-powered data analysis and visualization.</a></li>
+
+        <li><a href="/services/data-entry/">
+            📝 <strong>Data Entry</strong> – Efficient and accurate data entry services to maintain reliable business records.</a></li>
+
+        <li><a href="/services/data-reporting/">
+            📈 <strong>Data Reporting</strong> – Custom-built reports with dynamic visualizations to simplify decision-making.</a></li>
+
+        <li><a href="/services/strategic-planning/">
+            🎯 <strong>Strategic Planning</strong> – Align data strategies with business objectives for maximum impact.</a></li>
+
+        <li><a href="/services/healthcare-consulting/">
+            🏥 <strong>Healthcare Consulting</strong> – Leverage AI-powered analytics for diagnostics, medical imaging, and research.</a></li>
+
+        <li><a href="/services/financial-analysis/">
+            💰 <strong>Financial Analysis</strong> – AI-driven budgeting, fraud detection, and investment optimization.</a></li>
+
+        <li><a href="/services/market-research/">
+            🔍 <strong>Market Research</strong> – Understand market trends with AI-driven competitive intelligence.</a></li>
+    </ul>
+</section>
+
+    <!-- Service Details Section -->
+    <div id="service-details" class="service-details">
+        <h3>🛠 Select a Service</h3>
+        <p>Click on a service to learn more about what we offer.</p>
+    </div>
+
+     # Our Services
+Explore our comprehensive services.
+
+## Service Request Form
+If you need our services, submit a request below:
+
+<form action="/request-submitted.html" method="GET">
+    <label for="name">👤 Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">📧 Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="service-type">🛠 Select Service:</label>
+    <select id="service-type" name="service">
+        <option value="business-analytics">Business Analytics</option>
+        <option value="data-entry">Data Entry</option>
+        <option value="data-reporting">Data Reporting</option>
+        <option value="strategic-planning">Strategic Planning</option>
+        <option value="healthcare-consulting">Healthcare Consulting</option>
+        <option value="financial-analysis">Financial Analysis</option>
+    </select>
+
+    <label for="budget">💰 Budget (USD):</label>
+    <input type="number" id="budget" name="budget" min="100" step="50" required>
+
+    <label for="details">📝 Project Details:</label>
+    <textarea id="details" name="details" rows="4" required></textarea>
+
+    <button type="submit">Submit Request</button>
+</form>
+
+        <div id="submission-message" style="display: none; margin-top: 10px;"></div>
+    </div>
+</section>
+
+<script>
+    const serviceDescriptions = {
+        "business-analytics": {
+            "title": "Business Analytics",
+            "description": "Gain insights into your business operations through AI-powered data analysis and visualization."
+        },
+        "data-entry": {
+            "title": "Data Entry",
+            "description": "We provide accurate and efficient data entry services, ensuring reliable records for your business."
+        },
+        "data-reporting": {
+            "title": "Data Reporting",
+            "description": "Custom-built reports with dynamic visualizations to make data-driven decisions easier."
+        },
+        "strategic-planning": {
+            "title": "Strategic Planning",
+            "description": "Align data strategies with your business goals using our expert strategic analysis."
+        },
+        "healthcare-consulting": {
+            "title": "Healthcare Consulting",
+            "description": "Leverage AI-powered healthcare solutions for analytics, imaging, and diagnostics."
+        },
+        "financial-analysis": {
+            "title": "Financial Analysis",
+            "description": "Utilize AI for budgeting, fraud detection, and investment optimization."
+        }
+    };
+
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.service-link').forEach(service => {
+            service.addEventListener('click', (event) => {
+                event.preventDefault();
+                const serviceId = service.dataset.serviceId;
+                const serviceDetails = document.getElementById('service-details');
+
+                if (serviceDescriptions[serviceId]) {
+                    serviceDetails.innerHTML = `<h3>${serviceDescriptions[serviceId].title}</h3>
+                        <p>${serviceDescriptions[serviceId].description}</p>`;
+                    serviceDetails.style.display = "block";
+                }
+            });
+        });
+
+        // Handle form submission
+        document.getElementById("service-request-form").addEventListener("submit", (event) => {
+            event.preventDefault();
+            
+            document.getElementById("submission-message").style.display = "block";
+            document.getElementById("submission-message").innerHTML = "✅ Your request has been submitted successfully. We will contact you soon!";
+        });
+    });
+</script>
+
+<!-- Merged & Updated CSS -->
+<style>
+    #services {
+        max-width: 900px;
+        margin: auto;
+        padding: 20px;
+        background: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+    }
+
+    .services-container ul {
+        padding: 0;
+        list-style: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .services-container li {
+        width: 30%;
+        margin: 10px;
+        text-align: center;
+    }
+
+    .service-link {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-decoration: none;
+        color: #333;
+        font-size: 18px;
+        font-weight: bold;
+        transition: color 0.3s ease-in-out;
+    }
+
+    .service-icon {
+        width: 80px;
+        height: 80px;
+        margin-bottom: 10px;
+    }
+
+    .service-link:hover {
+        color: #007bff;
+    }
+
+    /* Service Request Form */
+    #service-request {
+        margin-top: 40px;
+        padding: 20px;
+        background: white;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    #service-request h2 {
+        text-align: center;
+        color: #007BFF;
+    }
+
+    #service-request form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    #service-request label {
+        font-weight: bold;
+        margin-top: 10px;
+    }
+
+    #service-request input, #service-request select, #service-request textarea {
+        padding: 10px;
+        margin-top: 5px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    #service-request button {
+        margin-top: 15px;
+        padding: 10px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-weight: bold;
+    }
+
+    #service-request button:hover {
+        background-color: #0056b3;
+    }
+</style>
