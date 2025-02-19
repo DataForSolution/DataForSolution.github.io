@@ -6,7 +6,7 @@
   <meta name="description" content="LLmachine - AI, Data Science, and Analytics">
   <meta name="keywords" content="AI, Data Science, Machine Learning, Analytics, LLmachine">
   <meta name="author" content="LLmachine">
-  <title>{{ page.title }}</title>
+  <title>{{ page.title | default: "LLmachine" }}</title>
 
   <!-- Corrected CSS and JS Paths Using relative_url -->
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
@@ -39,6 +39,14 @@
   <main style="max-width: 1200px; margin: auto; padding: 20px; flex-grow: 1;">
     {{ content }}
   </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 LLmachine. Follow us on 
+      <a href="https://twitter.com/SewLiben" target="_blank">Twitter</a> and 
+      <a href="https://github.com/DataForSolution" target="_blank">GitHub</a>.
+    </p>
+  </footer>
 
   <!-- Structured Data for SEO -->
   <script type="application/ld+json">

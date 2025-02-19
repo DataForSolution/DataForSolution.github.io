@@ -6,19 +6,17 @@ description: >-
   Explore projects, insights, and professional research.
 
 # Base URL & Site URL (For GitHub Pages)
-baseurl: ""  # Keep empty unless hosted under a subdirectory
+baseurl: ""  # Keep empty since it's hosted at the root domain
 url: "https://dataforsolution.github.io"  # Correct URL for GitHub Pages
 
+# Jekyll Plugins
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
   - jekyll-paginate
   - jekyll-include-cache
   - jekyll-sitemap
-  # - jekyll-assets        # Not supported by GitHub Pages
-  # - jekyll-archives      # Not supported by GitHub Pages
   - jekyll-redirect-from
-  # - jekyll-robots        # Not supported by GitHub Pages
 
 # Pagination Settings
 paginate: 5
@@ -32,11 +30,14 @@ kramdown:
   syntax_highlighter_opts:
     line_numbers: true
 
-# Include and Exclude Paths
+# Include & Exclude Paths
 include:
   - _includes
   - _layouts
   - _projects
+  - _services
+  - _faq
+  - _resources
   - assets
   - assets/css
   - assets/js
@@ -63,32 +64,44 @@ exclude:
 
 # Collections
 collections:
+  about:
+    output: true
+    permalink: /about/
   services:
     output: true
-    permalink: /services/:path/
+    permalink: /services/
   projects:
     output: true
-    permalink: /projects/:path/
+    permalink: /projects/
+  media:
+    output: true
+    permalink: /media/
+  resources:
+    output: true
+    permalink: /resources/
   blog:
     output: true
     permalink: /blog/
   faq:
     output: true
-    permalink: /faq/:path/
+    permalink: /faq/
   contact:
     output: true
     permalink: /contact/
-  signin:
+  ebooks:
     output: true
-    permalink: /signin/
-  signup:
+    permalink: /ebooks/
+  free-tools:
     output: true
-    permalink: /signup/
-  resources:
+    permalink: /free-tools/
+  write-for-us:
     output: true
-    permalink: /resources/:path/
+    permalink: /write-for-us/
+  collaborate:
+    output: true
+    permalink: /collaborate/
 
-# Defaults (Applies layout to pages)
+# Defaults (Applies Layouts to Pages)
 defaults:
   - scope:
       path: ""
@@ -112,27 +125,52 @@ defaults:
       layout: "default"
       title: "Our Projects"
   - scope:
-      path: "signin"
+      path: "media"
     values:
       layout: "default"
-      title: "Sign In"
+      title: "Media"
   - scope:
-      path: "signup"
+      path: "resources"
     values:
       layout: "default"
-      title: "Sign Up"
+      title: "Resources"
   - scope:
       path: "blog"
     values:
       layout: "default"
       title: "Blog"
   - scope:
-      path: "resources"
+      path: "faq"
     values:
       layout: "default"
-      title: "Resources"
+      title: "FAQ"
+  - scope:
+      path: "contact"
+    values:
+      layout: "default"
+      title: "Contact"
+  - scope:
+      path: "ebooks"
+    values:
+      layout: "default"
+      title: "E-Books"
+  - scope:
+      path: "free-tools"
+    values:
+      layout: "default"
+      title: "Free Tools"
+  - scope:
+      path: "write-for-us"
+    values:
+      layout: "default"
+      title: "Write for Us"
+  - scope:
+      path: "collaborate"
+    values:
+      layout: "default"
+      title: "Collaborate"
 
-# Permalinks
+# Permalinks (SEO-Friendly URLs)
 permalink: pretty
 
 # Sitemap Configuration
@@ -140,16 +178,19 @@ sitemap:
   exclude:
     - /404.html
   include:
+    - /about/
     - /services/
     - /projects/
+    - /media/
+    - /resources/
     - /blog/
     - /faq/
     - /contact/
-    - /ebooks.md
-    - /signin/
-    - /signup/
-    - /resources/
-    - /index/
+    - /ebooks/
+    - /free-tools/
+    - /write-for-us/
+    - /collaborate/
+
 # SEO Defaults
 jekyll_seo_tag:
   social:
