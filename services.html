@@ -31,14 +31,12 @@ permalink: /services/
     </ul>
 </section>
 
-    <!-- Service Details Section -->
+    <!-- Service Details Section (If Needed) -->
     <div id="service-details" class="service-details">
         <h3>🛠 Select a Service</h3>
-        <p>Click on a service to learn more about what we offer.</p>
+        <p>Click on a service above to learn more.</p>
     </div>
-
-     # Our Services
-Explore our comprehensive services.
+</section>
 
 ## Service Request Form
 If you need our services, submit a request below:
@@ -73,6 +71,7 @@ If you need our services, submit a request below:
     </div>
 </section>
 
+<!-- JavaScript to Show Descriptions -->
 <script>
     const serviceDescriptions = {
         "business-analytics": {
@@ -101,6 +100,11 @@ If you need our services, submit a request below:
         }
     };
 
+    function showServiceDetails(service) {
+        const details = serviceDescriptions[service];
+        document.getElementById("service-details").innerHTML = `<h3>${details.title}</h3><p>${details.description}</p>`;
+    }
+</script>
     document.addEventListener('DOMContentLoaded', () => {
         document.querySelectorAll('.service-link').forEach(service => {
             service.addEventListener('click', (event) => {
