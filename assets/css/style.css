@@ -91,6 +91,30 @@ nav ul li a:hover {
 }
 
 /* =========================== */
+/* BACKGROUND VIDEO STYLING */
+/* =========================== */
+
+#home-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    z-index: -1; /* Keeps video behind all content */
+}
+
+#home-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover; /* Ensures video covers the entire screen */
+    transform: translate(-50%, -50%);
+}
+
+/* =========================== */
 /* ABOUT SECTION (FINAL FIX) */
 /* =========================== */
 
@@ -132,32 +156,4 @@ nav ul li a:hover {
     nav ul li {
         margin-bottom: 10px;
     }
-}
-
-/* =========================== */
-/* Background Video Styling for Home Page */
-/* =========================== */
-
-#home-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    overflow: hidden;
-    z-index: -1; /* Keeps video behind all content */
-}
-
-#home-background video {
-    width: 100%;
-    height: 100vh;
-    object-fit: cover; /* Ensures video covers the screen */
-}
-
-/* Ensure Home Page Content Appears Over Video */
-#home {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    color: white; /* Adjust text color for visibility */
 }
