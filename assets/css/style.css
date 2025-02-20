@@ -39,9 +39,10 @@ section {
 /* =========================== */
 
 nav {
-    background-color: #222; /* Dark background for better visibility */
+    background-color: white; /* Light background */
     padding: 15px 0;
     text-align: center;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
 
 nav ul {
@@ -58,14 +59,14 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #ffffff; /* White text for visibility */
-    font-size: 1.1rem;
+    color: #222; /* Dark text color for visibility */
+    font-size: 1.2rem;
     font-weight: bold;
     transition: color 0.3s ease-in-out;
 }
 
 nav ul li a:hover {
-    color: #4CAF50; /* Green highlight on hover */
+    color: #007BFF; /* Blue highlight on hover */
 }
 
 /* =========================== */
@@ -112,7 +113,7 @@ nav ul li a:hover {
 .about-container p, #about p {
     font-size: 1.2em;
     line-height: 1.6;
-    color: #DDD !important; /* Light gray for readability */
+    color: #222 !important; /* Dark text for readability */
 }
 
 /* =========================== */
