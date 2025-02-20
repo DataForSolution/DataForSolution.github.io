@@ -6,6 +6,9 @@ body {
     background: url('/assets/images/background.jpg') no-repeat center center fixed;
     background-size: cover;
     color: white;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 body::before {
@@ -27,22 +30,26 @@ section {
     justify-content: center;
     align-items: center;
     text-align: center;
-    font-family: 'Arial', sans-serif;
     background-color: transparent;
-    color: #333; /* Default text color */
+    color: white; /* Ensuring visibility */
 }
 
 /* =========================== */
 /* NAVIGATION */
 /* =========================== */
 
+nav {
+    background-color: #222; /* Dark background for better visibility */
+    padding: 15px 0;
+    text-align: center;
+}
+
 nav ul {
     list-style: none;
     padding: 0;
     margin: 0;
     display: flex;
-    background-color: #222; /* Dark background for visibility */
-    padding: 10px 20px;
+    justify-content: center;
 }
 
 nav ul li {
@@ -51,14 +58,14 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: #ffffff; /* Change to white or another visible color */
+    color: #ffffff; /* White text for visibility */
     font-size: 1.1rem;
     font-weight: bold;
     transition: color 0.3s ease-in-out;
 }
 
 nav ul li a:hover {
-    color: #007bff; /* Blue highlight on hover */
+    color: #4CAF50; /* Green highlight on hover */
 }
 
 /* =========================== */
@@ -81,18 +88,19 @@ nav ul li a:hover {
     font-size: 1.2em;
     margin-bottom: 30px;
 }
-   /* =========================== */
+
+/* =========================== */
 /* ABOUT SECTION (FINAL FIX) */
 /* =========================== */
 
 .about-container, #about {
-    color: #333 !important; /* Force dark gray text */
+    color: white !important; /* Ensuring text is visible on dark backgrounds */
     text-align: center;
     padding: 60px 20px;
 }
 
 .about-container h1, #about h1 {
-    color: #0056b3 !important; /* Deep blue for better headings */
+    color: #4CAF50 !important; /* Green for better headings */
     font-size: 2.5em;
     margin-bottom: 15px;
 }
@@ -104,9 +112,8 @@ nav ul li a:hover {
 .about-container p, #about p {
     font-size: 1.2em;
     line-height: 1.6;
-    color: #444 !important; /* Slightly darker gray for better readability */
+    color: #DDD !important; /* Light gray for readability */
 }
-
 
 /* =========================== */
 /* RESPONSIVE DESIGN */
@@ -117,11 +124,19 @@ nav ul li a:hover {
         padding: 50px 20px;
     }
     
-    nav {
+    nav ul {
         flex-direction: column;
     }
+    
+    nav ul li {
+        margin-bottom: 10px;
+    }
 }
+
+/* =========================== */
 /* Background Video Styling for Home Page */
+/* =========================== */
+
 #home-background {
     position: fixed;
     top: 0;
