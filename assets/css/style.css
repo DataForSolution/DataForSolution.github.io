@@ -93,8 +93,7 @@ nav ul li a:hover {
 /* =========================== */
 /* BACKGROUND VIDEO STYLING */
 /* =========================== */
-
-#home-background {
+#background-video {
     position: fixed;
     top: 0;
     left: 0;
@@ -104,7 +103,7 @@ nav ul li a:hover {
     z-index: -1; /* Keeps video behind all content */
 }
 
-#home-background video {
+#background-video video {
     position: absolute;
     top: 50%;
     left: 50%;
