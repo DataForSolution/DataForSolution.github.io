@@ -116,7 +116,7 @@ nav a:hover {
         flex-direction: column;
     }
 }
-/* Background Video Styling */
+/* Background Video Styling for Home Page */
 #home-background {
     position: fixed;
     top: 0;
@@ -124,19 +124,19 @@ nav a:hover {
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    z-index: -1; /* Places it behind all content */
+    z-index: -1; /* Keeps video behind all content */
 }
 
 #home-background video {
     width: 100%;
     height: 100vh;
-    object-fit: cover; /* Ensures the video fills the entire screen */
+    object-fit: cover; /* Ensures video covers the screen */
 }
 
-/* Ensure content appears above the video */
+/* Ensure Home Page Content Appears Over Video */
 #home {
     position: relative;
     z-index: 1;
     text-align: center;
-    color: white;
+    color: white; /* Adjust text color for visibility */
 }

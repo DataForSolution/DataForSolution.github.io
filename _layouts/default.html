@@ -32,8 +32,19 @@
 
 <body style="display: flex; flex-direction: column; min-height: 100vh;">
   
-  <!-- Include Navigation (Ensure navigation.html is in _includes) -->
+  <!-- Include Navigation -->
   {% include navigation.html %}
+
+  <!-- Background Video (Only for Home Page) -->
+  {% if page.title == "Home" %}
+  <div id="home-background">
+      <video autoplay loop muted playsinline>
+          <source src="{{ '/assets/videos/background-video.mp4' | relative_url }}" type="video/mp4">
+          <!-- Fallback image in case video doesn't load -->
+          <img src="{{ '/assets/images/video-fallback.jpg' | relative_url }}" alt="Background Image">
+      </video>
+  </div>
+  {% endif %}
 
   <!-- Main Content Section -->
   <main style="max-width: 1200px; margin: auto; padding: 20px; flex-grow: 1;">
