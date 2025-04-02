@@ -3,45 +3,52 @@ layout: default
 title: "Services"
 permalink: /services/
 ---
-<section id="services"> 
-    <h2>🚀 Our Services</h2>
-    <p>Click on a service to learn more.</p>
 
-    <ul>
-        <li><a href="/services/business-analytics/">
-            📊 <strong>Business Analytics</strong> – Gain insights into your operations through AI-powered data analysis and visualization.</a></li>
-
-        <li><a href="/services/data-entry/">
-            📝 <strong>Data Entry</strong> – Efficient and accurate data entry services to maintain reliable business records.</a></li>
-
-        <li><a href="/services/data-reporting/">
-            📈 <strong>Data Reporting</strong> – Custom-built reports with dynamic visualizations to simplify decision-making.</a></li>
-
-        <li><a href="/services/strategic-planning/">
-            🎯 <strong>Strategic Planning</strong> – Align data strategies with business objectives for maximum impact.</a></li>
-
-        <li><a href="/services/healthcare-consulting/">
-            🏥 <strong>Healthcare Consulting</strong> – Leverage AI-powered analytics for diagnostics, medical imaging, and research.</a></li>
-
-        <li><a href="/services/financial-analysis/">
-            💰 <strong>Financial Analysis</strong> – AI-driven budgeting, fraud detection, and investment optimization.</a></li>
-
-        <li><a href="/services/market-research/">
-            🔍 <strong>Market Research</strong> – Understand market trends with AI-driven competitive intelligence.</a></li>
-    </ul>
+<section id="services-overview">
+  <h1>🚀 Our Services</h1>
+  <p class="intro">Explore our data-powered solutions designed to help your business grow and innovate.</p>
+  <div class="service-grid">
+    <a href="/services/business-analytics/" class="service-card">
+      <div class="emoji">📊</div>
+      <h2>Business Analytics</h2>
+      <p>Gain insights into your operations through AI-powered data analysis and visualization.</p>
+    </a>
+    <a href="/services/data-entry/" class="service-card">
+      <div class="emoji">📝</div>
+      <h2>Data Entry</h2>
+      <p>Efficient and accurate data entry services to maintain reliable business records.</p>
+    </a>
+    <a href="/services/data-reporting/" class="service-card">
+      <div class="emoji">📈</div>
+      <h2>Data Reporting</h2>
+      <p>Custom-built reports with dynamic visualizations to simplify decision-making.</p>
+    </a>
+    <a href="/services/strategic-planning/" class="service-card">
+      <div class="emoji">🎯</div>
+      <h2>Strategic Planning</h2>
+      <p>Align data strategies with business objectives for maximum impact.</p>
+    </a>
+    <a href="/services/healthcare-consulting/" class="service-card">
+      <div class="emoji">🏥</div>
+      <h2>Healthcare Consulting</h2>
+      <p>Leverage AI-powered analytics for diagnostics, medical imaging, and research.</p>
+    </a>
+    <a href="/services/financial-analysis/" class="service-card">
+      <div class="emoji">💰</div>
+      <h2>Financial Analysis</h2>
+      <p>AI-driven budgeting, fraud detection, and investment optimization.</p>
+    </a>
+    <a href="/services/market-research/" class="service-card">
+      <div class="emoji">🔍</div>
+      <h2>Market Research</h2>
+      <p>Understand market trends with AI-driven competitive intelligence.</p>
+    </a>
+  </div>
 </section>
 
-    <!-- Service Details Section (If Needed) -->
-    <div id="service-details" class="service-details">
-        <h3>🛠 Select a Service</h3>
-        <p>Click on a service above to learn more.</p>
-    </div>
-</section>
-
-## Service Request Form
-If you need our services, submit a request below:
-
-<form action="/request-submitted.html" method="GET">
+<section id="service-request">
+  <h2>📬 Request a Service</h2>
+  <form action="/request-submitted.html" method="GET" id="service-request-form">
     <label for="name">👤 Name:</label>
     <input type="text" id="name" name="name" required>
 
@@ -50,12 +57,13 @@ If you need our services, submit a request below:
 
     <label for="service-type">🛠 Select Service:</label>
     <select id="service-type" name="service">
-        <option value="business-analytics">Business Analytics</option>
-        <option value="data-entry">Data Entry</option>
-        <option value="data-reporting">Data Reporting</option>
-        <option value="strategic-planning">Strategic Planning</option>
-        <option value="healthcare-consulting">Healthcare Consulting</option>
-        <option value="financial-analysis">Financial Analysis</option>
+      <option value="business-analytics">Business Analytics</option>
+      <option value="data-entry">Data Entry</option>
+      <option value="data-reporting">Data Reporting</option>
+      <option value="strategic-planning">Strategic Planning</option>
+      <option value="healthcare-consulting">Healthcare Consulting</option>
+      <option value="financial-analysis">Financial Analysis</option>
+      <option value="market-research">Market Research</option>
     </select>
 
     <label for="budget">💰 Budget (USD):</label>
@@ -65,167 +73,117 @@ If you need our services, submit a request below:
     <textarea id="details" name="details" rows="4" required></textarea>
 
     <button type="submit">Submit Request</button>
-</form>
-
-        <div id="submission-message" style="display: none; margin-top: 10px;"></div>
-    </div>
+  </form>
+  <div id="submission-message" style="display: none; margin-top: 10px;"></div>
 </section>
 
-<!-- JavaScript to Show Descriptions -->
-<script>
-    const serviceDescriptions = {
-        "business-analytics": {
-            "title": "Business Analytics",
-            "description": "Gain insights into your business operations through AI-powered data analysis and visualization."
-        },
-        "data-entry": {
-            "title": "Data Entry",
-            "description": "We provide accurate and efficient data entry services, ensuring reliable records for your business."
-        },
-        "data-reporting": {
-            "title": "Data Reporting",
-            "description": "Custom-built reports with dynamic visualizations to make data-driven decisions easier."
-        },
-        "strategic-planning": {
-            "title": "Strategic Planning",
-            "description": "Align data strategies with your business goals using our expert strategic analysis."
-        },
-        "healthcare-consulting": {
-            "title": "Healthcare Consulting",
-            "description": "Leverage AI-powered healthcare solutions for analytics, imaging, and diagnostics."
-        },
-        "financial-analysis": {
-            "title": "Financial Analysis",
-            "description": "Utilize AI for budgeting, fraud detection, and investment optimization."
-        }
-    };
-
-    function showServiceDetails(service) {
-        const details = serviceDescriptions[service];
-        document.getElementById("service-details").innerHTML = `<h3>${details.title}</h3><p>${details.description}</p>`;
-    }
-</script>
-    document.addEventListener('DOMContentLoaded', () => {
-        document.querySelectorAll('.service-link').forEach(service => {
-            service.addEventListener('click', (event) => {
-                event.preventDefault();
-                const serviceId = service.dataset.serviceId;
-                const serviceDetails = document.getElementById('service-details');
-
-                if (serviceDescriptions[serviceId]) {
-                    serviceDetails.innerHTML = `<h3>${serviceDescriptions[serviceId].title}</h3>
-                        <p>${serviceDescriptions[serviceId].description}</p>`;
-                    serviceDetails.style.display = "block";
-                }
-            });
-        });
-
-        // Handle form submission
-        document.getElementById("service-request-form").addEventListener("submit", (event) => {
-            event.preventDefault();
-            
-            document.getElementById("submission-message").style.display = "block";
-            document.getElementById("submission-message").innerHTML = "✅ Your request has been submitted successfully. We will contact you soon!";
-        });
-    });
-</script>
-<!-- Final CSS Update: Move Services Section Even Higher -->
 <style>
-    #services {
-        max-width: 900px;
-        margin: auto;
-        padding: 5px 20px; /* ✅ Further reduced padding */
-        background: none; /* ✅ No white background */
-        border-radius: 0;
-        box-shadow: none;
-        text-align: center;
-        margin-top: -80px; /* ✅ Moves the section much higher */
-    }
+#services-overview {
+  max-width: 1100px;
+  margin: auto;
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #f9f9f9;
+}
 
-    .services-container ul {
-        padding: 0;
-        list-style: none;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-    }
+#services-overview h1 {
+  font-size: 2.5em;
+  color: #0056b3;
+  margin-bottom: 10px;
+}
 
-    .services-container li {
-        width: 30%;
-        margin: 10px;
-        text-align: center;
-    }
+.intro {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 40px;
+}
 
-    .service-link {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-decoration: none;
-        color: #333;
-        font-size: 18px;
-        font-weight: bold;
-        transition: color 0.3s ease-in-out;
-        background: none !important;
-        padding: 5px;
-        border-radius: 5px;
-    }
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
 
-    .service-icon {
-        width: 80px;
-        height: 80px;
-        margin-bottom: 10px;
-    }
+.service-card {
+  background: white;
+  border-radius: 10px;
+  padding: 25px 20px;
+  text-decoration: none;
+  color: #222;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
-    .service-link:hover {
-        color: #007bff;
-    }
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.1);
+}
 
-    /* Service Request Form */
-    #service-request {
-        margin-top: 10px; /* ✅ Minimized gap below services */
-        padding: 20px;
-        background: white;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        max-width: 600px;
-        margin-left: auto;
-        margin-right: auto;
-    }
+.service-card h2 {
+  font-size: 1.4em;
+  margin: 10px 0;
+  color: #0056b3;
+}
 
-    #service-request h2 {
-        text-align: center;
-        color: #007BFF;
-    }
+.service-card p {
+  font-size: 0.95em;
+  line-height: 1.5;
+}
 
-    #service-request form {
-        display: flex;
-        flex-direction: column;
-    }
+.service-card .emoji {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
 
-    #service-request label {
-        font-weight: bold;
-        margin-top: 10px;
-    }
+#service-request {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 700px;
+  margin: 50px auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+}
 
-    #service-request input, #service-request select, #service-request textarea {
-        padding: 10px;
-        margin-top: 5px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-    }
+#service-request h2 {
+  text-align: center;
+  color: #007BFF;
+  margin-bottom: 20px;
+}
 
-    #service-request button {
-        margin-top: 15px;
-        padding: 10px;
-        background-color: #007BFF;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        font-weight: bold;
-    }
+#service-request form {
+  display: flex;
+  flex-direction: column;
+}
 
-    #service-request button:hover {
-        background-color: #0056b3;
-    }
+#service-request label {
+  font-weight: bold;
+  margin-top: 10px;
+  text-align: left;
+}
+
+#service-request input,
+#service-request select,
+#service-request textarea {
+  padding: 10px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+}
+
+#service-request button {
+  margin-top: 20px;
+  padding: 12px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+#service-request button:hover {
+  background-color: #0056b3;
+}
 </style>
