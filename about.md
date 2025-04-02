@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-<section id="about" style="background-color: #f0f0f0; color: #222; text-align: center; padding: 60px 20px;">
+<div style="background-color: #f0f0f0; color: #222; text-align: center; padding: 60px 20px;">
 
 ## <span style="color: #0056b3;">About LLmachine</span>
 
@@ -35,4 +35,4 @@ Have questions or want to collaborate?
 Feel free to reach out through our [Contact page](/contact/) or follow us on  
 [Twitter](https://twitter.com/SewLiben) and [GitHub](https://github.com/DataForSolution).
 
-</section>
+</div>
