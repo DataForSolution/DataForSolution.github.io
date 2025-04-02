@@ -37,10 +37,10 @@ permalink: /projects/
         <div class="project-card">
             <h2>📄 Chest Cancer Detection Documentation</h2>
             <p>A detailed PDF report on deep learning applications for lung cancer detection using CT scans.</p>
-            <a href="/assets/documents/Chest_Cancer_Detection_Deep_Learning_CT_Scan.pdf" 
-               target="_blank" class="project-link">
-                View Document
-            </a>
+           <a href="/assets/documents/chest-cancer-detection.pdf" target="_blank" class="project-link">
+    View Document
+</a>
+
         </div>
     </div>
 </section>
