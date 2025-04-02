@@ -33,15 +33,15 @@ permalink: /projects/
                target="_blank" class="project-link">
                 View Project
             </a>
-        </div>
-        <div class="project-card">
-            <h2>📄 Chest Cancer Detection Documentation</h2>
-            <p>A detailed PDF report on deep learning applications for lung cancer detection using CT scans.</p>
-           <a href="/assets/documents/chest-cancer-detection.pdf" target="_blank" class="project-link">
-    View Document
-</a>
+       <div class="project-card">
+    <h2>📄 Chest Cancer Detection Documentation</h2>
+    <p>A detailed PDF report on deep learning applications for lung cancer detection using CT scans.</p>
+    <a href="/assets/documents/chest-cancer-detection.pdf" 
+       target="_blank" class="project-link">
+        View Document
+    </a>
+</div>
 
-        </div>
     </div>
 </section>
 
