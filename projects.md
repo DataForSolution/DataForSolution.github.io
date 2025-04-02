@@ -37,14 +37,14 @@ permalink: /projects/
         <div class="project-card">
             <h2>📄 Chest Cancer Detection Documentation</h2>
             <p>A detailed PDF report on deep learning applications for lung cancer detection using CT scans.</p>
-            <a href="{{ '/assets/documents/Chest_Cancer_Detection_Deep_Learning_CT_Scan.pdf' | relative_url }}" 
+            <a href="/assets/documents/Chest_Cancer_Detection_Deep_Learning_CT_Scan.pdf" 
                target="_blank" class="project-link">
                 View Document
             </a>
         </div>
     </div>
 </section>
-     
+
 <section id="live-projects">
     <h2>Live Projects</h2>
     <p>Explore live, interactive data science projects showcasing real-time insights and dynamic visualizations.</p>
@@ -67,7 +67,7 @@ permalink: /projects/
 <style>
     /* Projects Section Styling */
     #projects {
-        background-color: #d4edda; /* Light gray/green background */
+        background-color: #d4edda;
         padding: 50px 20px;
         text-align: center;
     }
@@ -75,7 +75,7 @@ permalink: /projects/
     #projects h1 {
         font-size: 2.5em;
         font-weight: bold;
-        color: #4CAF50; /* Green for headings */
+        color: #4CAF50;
         margin-bottom: 20px;
     }
 
@@ -109,7 +109,7 @@ permalink: /projects/
 
     .project-card h2 {
         font-size: 1.5em;
-        color: #4CAF50; /* Green for headings */
+        color: #4CAF50;
         margin-bottom: 10px;
     }
 
@@ -124,7 +124,7 @@ permalink: /projects/
         margin-top: 10px;
         padding: 10px 15px;
         color: white;
-        background-color: #007BFF; /* Blue for button */
+        background-color: #007BFF;
         text-decoration: none;
         border-radius: 5px;
         font-weight: bold;
@@ -132,7 +132,7 @@ permalink: /projects/
     }
 
     .project-link:hover {
-        background-color: #0056b3; /* Darker blue on hover */
+        background-color: #0056b3;
     }
 
     /* Live Projects Section Styling */
