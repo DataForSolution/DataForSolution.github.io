@@ -1,0 +1,34 @@
+---
+layout: page
+title: "Toolkits & Templates"
+permalink: /toolkits/
+---
+
+# 🧰 Toolkits & Templates Download Area
+
+Access ready-to-use resources for data science, machine learning, and AI development.
+
+---
+
+## 📓 Jupyter Notebooks
+
+- 📘 [Attack Defence ImageNet v2.5](assets/toolkits/attack_defence_imagenet_v2.5.ipynb)
+- 📘 [Breast Cancer Wisconsin](assets/toolkits/breast_cancer_wisconsin.ipynb)
+- 📘 [Chest CT Scan CNN Final](assets/toolkits/chest_ct_scan_cnn_final.ipynb)
+- 📘 [CIFAR-10 Fake Image Analysis](assets/toolkits/cifar10_fake_images_analysis.ipynb)
+
+---
+
+## 🐍 Python Scripts
+
+- 🧪 [CIFAR-10 Fake Image Analysis Script](assets/toolkits/cifar10_fake_images_analysis.py)
+
+---
+
+## 🗂️ Datasets & Archives
+
+- 🗃️ [Chest CT Scan Images Dataset (ZIP)](assets/toolkits/chest_ct_scan_images_dataset.zip)
+
+---
+
+📩 More toolkits and templates coming soon!
