@@ -1,0 +1,68 @@
+---
+layout: default
+title: "Dashboard"
+permalink: /dashboard/
+---
+
+<section id="dashboard">
+    <h1>👋 Welcome to Your Dashboard!</h1>
+    <p>You are now signed in. Explore your account and enjoy our features!</p>
+
+    <!-- Redirect Users to Home Instead of 404 Errors -->
+    <div class="dashboard-buttons">
+        <a href="/" class="button">🏠 Go to Home</a>
+        <a href="#" class="button" onclick="alert('Settings feature coming soon!')">⚙️ Settings</a>
+        <a href="#" class="button" onclick="alert('Profile feature coming soon!')">👤 View Profile</a>
+        <a href="/" class="button logout" onclick="logoutUser()">🚪 Log Out</a>
+    </div>
+</section>
+
+<script>
+    function logoutUser() {
+        alert("You have been logged out.");
+        localStorage.removeItem("userLoggedIn");
+        window.location.href = "/";
+    }
+</script>
+
+<style>
+    #dashboard {
+        max-width: 600px;
+        margin: auto;
+        padding: 20px;
+        text-align: center;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+
+    .dashboard-buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 20px;
+    }
+
+    .button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007BFF;
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        border-radius: 5px;
+        transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+        background-color: #0056b3;
+    }
+
+    .button.logout {
+        background-color: #dc3545;
+    }
+
+    .button.logout:hover {
+        background-color: #c82333;
+    }
+</style>
