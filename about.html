@@ -3,39 +3,100 @@ layout: default
 title: "About"
 permalink: /about/
 ---
-<div class="about-container">
-    {{ content }}
-</div>
 
+<section id="about-section" class="about-enhanced">
+  <div class="about-wrapper">
 
-<section id="about">
     <!-- Profile Picture -->
-    <img src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="Lissan's Profile Picture" class="profile-pic">
+    <div class="about-image">
+      <img src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="Lissan's Profile Picture">
+    </div>
 
-    <!-- Name and Title -->
-    <h1>Lissan</h1>
-    <h2>Data Scientist & Certified Nuclear Medicine Professional</h2>
+    <!-- About Content -->
+    <div class="about-text">
+      <h1>👋 About <span style="color: #4CAF50;">LLmachine</span></h1>
+      <h2>Lissan – Data Scientist & Certified Nuclear Medicine Professional</h2>
 
-    <!-- Description -->
-    <p>
-        Welcome to my professional space! I am a Data Scientist specializing in advanced analytics, 
-        artificial intelligence, and machine learning. With a certification in Nuclear Medicine, I bring 
-        a unique interdisciplinary approach to problem-solving. My goal is to merge the power of data and 
+      <p>
+        Welcome to my professional space! I am a Data Scientist specializing in advanced analytics,
+        artificial intelligence, and machine learning. With a certification in Nuclear Medicine, I bring
+        a unique interdisciplinary approach to problem-solving. My goal is to merge the power of data and
         medical imaging to create innovative solutions that empower industries and improve lives.
-    </p>
-    <p>
-        This website showcases my work, including machine learning projects, innovative data 
-        science solutions, and insights into the world of AI and healthcare analytics. Explore, connect, 
+      </p>
+
+      <p>
+        LLmachine is your go-to platform for mastering artificial intelligence, data analysis, and smart technologies.
+        Whether you’re a beginner or a seasoned professional, we’ve got the tools and guidance to support your journey.
+      </p>
+
+      <p>
+        This website showcases my work, including machine learning projects, innovative data
+        science solutions, and insights into the world of AI and healthcare analytics. Explore, connect,
         and let’s collaborate!
-    </p>
-</section>
-  <section id="about" style="color: #333; text-align: center;">
-    <img src="{{ '/assets/images/profile.jpg' | relative_url }}" alt="Lissan's Profile Picture" class="profile-pic">
-    <h1 style="color: #0056b3;">Lissan</h1>
-    <h2 style="color: #007BFF;">Data Scientist & Certified Nuclear Medicine Professional</h2>
-    <p style="color: #444;">
-        Welcome to my professional space! I am a Data Scientist specializing in advanced analytics, 
-        artificial intelligence, and machine learning...
-    </p>
+      </p>
+
+    </div>
+  </div>
 </section>
 
+<style>
+/* Professional Styling for About Section */
+.about-enhanced {
+  background: linear-gradient(to right, #f2f7ff, #e2eafc);
+  padding: 80px 20px;
+  color: #222;
+}
+
+.about-wrapper {
+  max-width: 1000px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+  text-align: center;
+}
+
+.about-image img {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #007BFF;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+.about-text h1 {
+  font-size: 2.6em;
+  color: #007BFF;
+  margin-bottom: 10px;
+}
+
+.about-text h2 {
+  font-size: 1.6em;
+  color: #4CAF50;
+  margin-bottom: 25px;
+}
+
+.about-text p {
+  font-size: 1.1em;
+  line-height: 1.7;
+  color: #333;
+  max-width: 800px;
+  margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+  .about-text h1 {
+    font-size: 2em;
+  }
+
+  .about-text h2 {
+    font-size: 1.3em;
+  }
+
+  .about-text p {
+    font-size: 1em;
+  }
+}
+</style>
