@@ -5,138 +5,146 @@ permalink: /media/
 ---
 
 <section id="media">
-    <h1>🎥 Media & Learning Center</h1>
-    <p>Explore our curated collection of educational videos to enhance your data science and AI knowledge.</p>
+  <h1>🎥 Media & Learning Center</h1>
+  <p>Explore video tutorials, lectures, and learning playlists grouped by topic.</p>
 
-    <!-- Organized Video Gallery -->
-    <div class="video-gallery">
-        <!-- Dynamic Video Embeds -->
-        <div class="video-item">
-            <iframe 
-                src="https://www.youtube.com/embed/7YYdpBidyDc" 
-                title="NLP for Oncology: Extracting Staging, Histology, Tumor, Biomarker, and Treatment Facts" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
-            <p>NLP for Oncology: Extracting Staging, Histology, Tumor, Biomarker, and Treatment Facts</p>
-        </div>
+  <!-- 🎯 Categories -->
+  <div class="media-categories">
+    <button onclick="filterVideos('all')">All</button>
+    <button onclick="filterVideos('nlp')">NLP</button>
+    <button onclick="filterVideos('storytelling')">Storytelling</button>
+    <button onclick="filterVideos('aws')">AWS</button>
+  </div>
 
-        <div class="video-item">
-            <iframe 
-                src="https://www.youtube.com/embed/0e52QfQngrM" 
-                title="The Power in Effective Data Storytelling | Malavica Sridhar | TEDxUIUC" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
-            <p>The Power in Effective Data Storytelling | Malavica Sridhar | TEDxUIUC</p>
-        </div>
-
-        <div class="video-item">
-            <iframe 
-                src="https://www.youtube.com/embed/I5bEOyaNy6M" 
-                title="Identity Verification using Amazon Rekognition and Amazon Textract | Amazon Web Services" 
-                frameborder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowfullscreen>
-            </iframe>
-            <p>Identity Verification using Amazon Rekognition and Amazon Textract</p>
-        </div>
-
-        <!-- Add more video items dynamically here -->
+  <!-- 📺 Playlists -->
+  <div class="video-gallery">
+    <div class="video-item nlp">
+      <iframe src="https://www.youtube.com/embed/7YYdpBidyDc" title="NLP for Oncology" allowfullscreen></iframe>
+      <p>NLP for Oncology: Staging, Histology, Tumor, Biomarker Facts</p>
     </div>
 
-    <!-- YouTube Links Section -->
-    <h2>🔗 Additional YouTube Links</h2>
-    <ul class="media-list">
-        <li><a href="https://www.youtube.com/watch?v=puB-4LuRNys" target="_blank">Computer Vision Explained in 5 Minutes | AI Explained</a></li>
-        <li><a href="https://www.youtube.com/watch?v=wQfm4P23Hew" target="_blank">Real-Time Data Pipelines with Apache Spark</a></li>
-        <li><a href="https://www.youtube.com/watch?v=zoAsnJAsLo8" target="_blank">7 Questions to Ask About Your Machine Learning Project</a></li>
-        <li><a href="https://www.youtube.com/watch?v=5mCnQz3wwAY" target="_blank">Data Science Vs Machine Learning Vs Big Data</a></li>
-        <li><a href="https://www.youtube.com/watch?v=yGN28LY5VuA" target="_blank">Python for Data Science | Beginner-Friendly Course</a></li>
-        <li><a href="https://www.youtube.com/watch?v=2WgtKU9bbbs" target="_blank">What is PySpark?</a></li>
-        <li><a href="https://www.youtube.com/watch?v=E49BFhThC3U" target="_blank">Difference between Database, Data Lake, and Warehouse</a></li>
-    </ul>
+    <div class="video-item storytelling">
+      <iframe src="https://www.youtube.com/embed/0e52QfQngrM" title="Data Storytelling" allowfullscreen></iframe>
+      <p>TEDx: The Power in Effective Data Storytelling</p>
+    </div>
+
+    <div class="video-item aws">
+      <iframe src="https://www.youtube.com/embed/I5bEOyaNy6M" title="AWS Rekognition & Textract" allowfullscreen></iframe>
+      <p>Identity Verification using Amazon Rekognition & Textract</p>
+    </div>
+  </div>
+
+  <!-- 📎 YouTube Resource List -->
+  <h2>📌 More YouTube Learning</h2>
+  <ul class="media-list">
+    <li><a href="https://www.youtube.com/watch?v=puB-4LuRNys" target="_blank">Computer Vision in 5 Minutes</a></li>
+    <li><a href="https://www.youtube.com/watch?v=wQfm4P23Hew" target="_blank">Real-Time Data Pipelines with Spark</a></li>
+    <li><a href="https://www.youtube.com/watch?v=zoAsnJAsLo8" target="_blank">7 ML Questions to Ask</a></li>
+  </ul>
 </section>
 
-<!-- Styles for Media Section -->
 <style>
-    #media {
-        padding: 50px 20px;
-        background-color: #f9f9f9;
-        text-align: center;
-    }
+#media {
+  padding: 50px 20px;
+  background-color: #f4faff;
+  text-align: center;
+}
 
-    #media h1 {
-        font-size: 2.5em;
-        margin-bottom: 20px;
-        color: #4CAF50;
-    }
+#media h1 {
+  font-size: 2.4em;
+  color: #4CAF50;
+  margin-bottom: 10px;
+}
 
-    #media p {
-        font-size: 1.2em;
-        margin-bottom: 30px;
-        color: #555;
-    }
+#media p {
+  font-size: 1.2em;
+  color: #444;
+  margin-bottom: 30px;
+}
 
-    .video-gallery {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-    }
+.media-categories {
+  margin-bottom: 20px;
+}
 
-    .video-item {
-        background: white;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        padding: 15px;
-        max-width: 300px;
-        text-align: center;
-    }
+.media-categories button {
+  padding: 10px 15px;
+  margin: 5px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
 
-    .video-item iframe {
-        width: 100%;
-        height: 200px;
-        border-radius: 5px;
-    }
+.media-categories button:hover {
+  background-color: #0056b3;
+}
 
-    .video-item p {
-        margin-top: 10px;
-        font-size: 1em;
-        color: #333;
-    }
+.video-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
 
-    .media-list {
-        list-style: none;
-        padding: 0;
-        margin-top: 40px;
-    }
+.video-item {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  max-width: 300px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.05);
+}
 
-    .media-list li {
-        margin: 10px 0;
-    }
+.video-item iframe {
+  width: 100%;
+  height: 180px;
+  border-radius: 6px;
+}
 
-    .media-list a {
-        color: #007BFF;
-        text-decoration: none;
-        font-weight: bold;
-        transition: color 0.3s ease;
-    }
+.video-item p {
+  margin-top: 10px;
+  font-size: 1em;
+  color: #333;
+}
 
-    .media-list a:hover {
-        color: #0056b3;
-        text-decoration: underline;
-    }
+.media-list {
+  margin-top: 40px;
+  list-style: none;
+  padding: 0;
+}
 
-    @media (max-width: 768px) {
-        .video-gallery {
-            flex-direction: column;
-        }
+.media-list li {
+  margin: 10px 0;
+}
 
-        .video-item {
-            max-width: 100%;
-        }
-    }
+.media-list a {
+  color: #007BFF;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.media-list a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .video-gallery {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 </style>
+
+<script>
+function filterVideos(category) {
+  const items = document.querySelectorAll(".video-item");
+  items.forEach(item => {
+    if (category === 'all' || item.classList.contains(category)) {
+      item.style.display = "block";
+    } else {
+      item.style.display = "none";
+    }
+  });
+}
+</script>
