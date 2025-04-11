@@ -10,6 +10,7 @@ permalink: /projects/
 
   <div class="projects-list">
 
+    <!-- Static Project Cards -->
     <div class="project-card">
       <img src="/assets/images/project_ctscan.jpg" alt="CT Scan Project" class="project-thumb">
       <h2>🏥 Chest CT Scan Cancer Detection</h2>
@@ -37,7 +38,20 @@ permalink: /projects/
       <p>Deep learning PDF report on lung cancer using CT scans.</p>
       <a href="/assets/documents/chest-cancer-detection.pdf" class="btn-view" target="_blank">View PDF</a>
     </div>
+  </div>
+</section>
 
+<!-- 🧠 Dynamic Jekyll Project Loop -->
+<section id="dynamic-projects">
+  <h2 style="margin-top: 60px;">🧠 Additional Projects</h2>
+  <div class="projects-list">
+    {% for project in site.projects %}
+    <div class="project-card">
+      <h2>{{ project.title }}</h2>
+      <p>{{ project.description | truncate: 120 }}</p>
+      <a href="{{ project.url | relative_url }}" class="btn-view">Read More</a>
+    </div>
+    {% endfor %}
   </div>
 </section>
 
@@ -58,7 +72,7 @@ permalink: /projects/
 </section>
 
 <style>
-#projects {
+#projects, #dynamic-projects {
   background-color: #f5f9ff;
   padding: 50px 20px;
   text-align: center;
@@ -108,7 +122,6 @@ permalink: /projects/
   background-color: #0056b3;
 }
 
-/* Live Projects */
 #live-projects {
   padding: 50px 20px;
   background-color: #f4f4f4;
