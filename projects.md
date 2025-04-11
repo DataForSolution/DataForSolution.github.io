@@ -9,7 +9,6 @@ permalink: /projects/
   <p>Explore our data science, AI, and ML projects solving real-world challenges.</p>
 
   <div class="projects-list">
-
     <!-- Static Project Cards -->
     <div class="project-card">
       <img src="/assets/images/project_ctscan.jpg" alt="CT Scan Project" class="project-thumb">
@@ -48,7 +47,7 @@ permalink: /projects/
     {% for project in site.projects %}
     <div class="project-card">
       <h2>{{ project.title }}</h2>
-      <p>{{ project.description | truncate: 120 }}</p>
+      <p>{{ project.description | default: "Explore this notebook for insights and hands-on implementation." }}</p>
       <a href="{{ project.url | relative_url }}" class="btn-view">Read More</a>
     </div>
     {% endfor %}
