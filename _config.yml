@@ -101,6 +101,9 @@ collections:
   collaborate:
     output: true
     permalink: /collaborate/
+  projects:
+    output: true
+    permalink: /projects/                  
 
 # Layout Defaults
 defaults:
