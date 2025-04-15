@@ -13,6 +13,177 @@ permalink: /projects/
     {% comment %} Static GitHub projects (your originals) remain here {% endcomment %}
 
     <!-- START Google Drive Projects -->
+   <div class="project-card">
+  <h2>📘 Vectors and Arrays with NumPy</h2>
+  <p>Analyze air quality index data using NumPy arrays and statistics.</p>
+  <a href="https://drive.google.com/file/d/3hVCUAfCwjZrdTUyg2jBR4/view?usp=sharing" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 DataFrames with Pandas</h2>
+  <p>Hands-on activity working with pandas DataFrames.</p>
+  <a href="https://drive.google.com/file/d/VvJqTXREkZZoBtUQKeZpaD/view?usp=sharing" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 Attack Defence - ImageNet V2.5</h2>
+  <p>Notebook for adversarial defense techniques on ImageNet.</p>
+  <a href="https://drive.google.com/file/d/8k7XRrAnkgkqK28QRbH9SA/view?usp=sharing" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 Clustering with scikit-learn</h2>
+  <p>Data clustering with machine learning techniques.</p>
+  <a href="https://drive.google.com/file/d/R4Np2fm755mHRk2L4hvTmL/view?usp=sharing" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 Bayesian Classification</h2>
+  <p>Classification problems solved using Bayesian models.</p>
+  <a href="https://drive.google.com/file/d/E3aXXgVvqWiFPNhV3ADApW/view?usp=sharing" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 Logistic Regression in Python</h2>
+  <p>Step-by-step linear model implementation.</p>
+  <a href="https://drive.google.com/file/d/73awsMGUkyL7Qgc6Ncy2qs/view?usp=sharing" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 Chest CT Scan with CNN</h2>
+  <p>Medical imaging analysis using CNN for lung cancer detection.</p>
+  <a href="https://drive.google.com/file/d/FSFRXph1RYKb6csKh9Aa6r/view?usp=sharing" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 GAN on CIFAR-10 - Full Implementation</h2>
+  <p>Train and evaluate GAN models on CIFAR-10 dataset.</p>
+  <a href="https://drive.google.com/file/d/MB7cFCx93uKvfKYEHVK4Cn/view?usp=sharing" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 Modified CIFAR-10 GAN</h2>
+  <p>Enhanced GAN training experiment with CIFAR-10.</p>
+  <a href="https://drive.google.com/file/d/C7F93bcN9jQEwu6UviwrDZ/view?usp=sharing" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 Fake Image Detection with CIFAR-10</h2>
+  <p>Detecting and analyzing fake/generated CIFAR-10 images.</p>
+  <a href="https://drive.google.com/file/d/2LksSnmac6mfExsEdcRu8E/view?usp=sharing" class="btn-view" target="_blank">View File</a>
+</div>
+<div class="project-card">
+  <h2>📘 Evaluate Simple Linear Regression</h2>
+  <p>Visual evaluation of linear regression model predictions and accuracy.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1QTPMhTQA1vkZdquY2mMpIBUWO89s1V1j" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 Hypothesis Testing with Python</h2>
+  <p>Step-by-step hypothesis testing techniques using Python for statistical analysis.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1BoYSEBG0Y3uvrMqd72WJXhSc-KfnHNo0" class="btn-view" target="_blank">View File</a>
+</div>
+<div class="project-card">
+  <h2>📘 Evaluate Simple Linear Regression</h2>
+  <p>Visual assessment and statistical summary of a simple regression model.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1QTPMhTQA1vkZdquY2mMpIBUWO89s1V1j" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 Hypothesis Testing with Python</h2>
+  <p>Apply t-tests and hypothesis evaluation in Python for data validation.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1BoYSEBG0Y3uvrMqd72WJXhSc-KfnHNo0" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 Linear Classifier with NumPy</h2>
+  <p>Hands-on model implementation for binary classification using NumPy arrays.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1q0B_cW0Xu47esgx76Z1mySy4Pf4Dh6bQ" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 CNN Model Visualization Notebook</h2>
+  <p>Notebook showcasing convolutional neural networks with visual layer outputs.</p>
+  <a href="https://drive.google.com/uc?export=view&id=15g21DjVWSRPFnUQx0b8BD8jIOhP9gVSt" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 ML Tutorial Dataset Sample</h2>
+  <p>Dataset exploration and sample preprocessing for supervised learning tasks.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1ZC8OZe6xGSG-R1e0gOQkwjXSNc4_uMKB" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 Image Classification Demo (Keras)</h2>
+  <p>End-to-end image classification task using Keras with step-by-step workflow.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1kX71ldY4skFaonucdgbJj-pCUXnLhTHF" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 Clustering Algorithm Evaluation</h2>
+  <p>Evaluate and compare clustering methods on various synthetic datasets.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1lKdXx8E_4hOZ5DcRurof1ZBHgwoaAlOi" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 CartPole Actor-Critic RL</h2>
+  <p>Reinforcement learning using actor-critic method to balance CartPole.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1uiAB6tIgrLsHjj32cGJU_iMv-CFTWpuj" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 Fraud Detection Pipeline (Banking)</h2>
+  <p>Explore fraud signals using anomaly detection in banking data.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1RV_HXT0E2XriWHXv1CU5ilfJNcW4AeHc" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 Web Form with Flask</h2>
+  <p>Deploy a simple Python web form with Flask and test user input routing.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1dVdwOu6j9K6uEdUpdORWkhxqhMbu6Oq8" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 Power BI Interactive Report</h2>
+  <p>Explore an interactive dashboard built with Power BI for business insights.</p>
+  <a href="https://drive.google.com/uc?export=view&id=119ipFm0xdvR5MclIfNwTD8H271KyEqZl" class="btn-view" target="_blank">View File</a>
+</div>
+<div class="project-card">
+  <h2>📘 Excel Project Dashboard</h2>
+  <p>Dynamic project tracker built in Excel with charts and task status indicators.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1jE0omBTeWS0aI3UFH8f5Od0nrG5Q61d6" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 Kernel SVM Classifier (Python)</h2>
+  <p>Support vector machine classifier using kernel trick on classification data.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1KZlUA2vRIxIcKNrN5ynpXHPGChOiA_2q" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 GANs for Image Generation</h2>
+  <p>Generate CIFAR-10 fake images using GANs with visual output at each epoch.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1fYX0FCvSTkJR2hMspgVWWzzW86osqfzx" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 Customer Sales Tracker (Google Sheets)</h2>
+  <p>Track product sales, customer trends, and inventory using Google Sheets.</p>
+  <a href="https://docs.google.com/spreadsheets/d/1bQd5oZBeytolY287eaZ9pHjYANweHQFNXRN69ZHePWQ/edit?usp=drive_link" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 Exploratory Data Analysis Report</h2>
+  <p>Analyze dataset distributions and relationships via Python EDA techniques.</p>
+  <a href="https://drive.google.com/uc?export=view&id=112d8rMMQ_NUA0S9wvHcenG6nSTuGmfan" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 Business Operations Notebook</h2>
+  <p>Notebook showing simulations or models for improving business workflows.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1QcWWkv5sChSY0gpXvVzcH-mOgeKTZnbA" class="btn-view" target="_blank">View File</a>
+</div>
+
     <div class="project-card">
       <h2>📘 Project 1</h2>
       <p>Notebook or document hosted on Google Drive.</p>
