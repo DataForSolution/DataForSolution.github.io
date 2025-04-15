@@ -176,6 +176,114 @@ permalink: /projects/
       <p>Notebook or document hosted on Google Drive.</p>
       <a href="https://drive.google.com/uc?export=view&id=1QcWWkv5sChSY0gpXvVzcH-mOgeKTZnbA" class="btn-view" target="_blank">View File</a>
     </div>
+       <div class="project-card">
+  <h2>📘 GDrive Project 12</h2>
+  <p>Notebook or document hosted on Google Drive.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1Cr8X8Bsp5vQ-7aZ2pE3diL1Gvnbmb6a5" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 GDrive Project 13</h2>
+  <p>Notebook or document hosted on Google Drive.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1V3WlRWfb9ixybnCRd3qMHTeHCYV60Sst" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 GDrive Project 14</h2>
+  <p>Notebook or document hosted on Google Drive.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1QTPMhTQA1vkZdquY2mMpIBUWO89s1V1j" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 GDrive Project 15</h2>
+  <p>Notebook or document hosted on Google Drive.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1BoYSEBG0Y3uvrMqd72WJXhSc-KfnHNo0" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 GDrive Project 16</h2>
+  <p>Notebook or document hosted on Google Drive.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1q0B_cW0Xu47esgx76Z1mySy4Pf4Dh6bQ" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 GDrive Project 17</h2>
+  <p>Notebook or document hosted on Google Drive.</p>
+  <a href="https://drive.google.com/uc?export=view&id=15g21DjVWSRPFnUQx0b8BD8jIOhP9gVSt" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 GDrive Project 18</h2>
+  <p>Notebook or document hosted on Google Drive.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1ZC8OZe6xGSG-R1e0gOQkwjXSNc4_uMKB" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 GDrive Project 19</h2>
+  <p>Notebook or document hosted on Google Drive.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1kX71ldY4skFaonucdgbJj-pCUXnLhTHF" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 GDrive Project 20</h2>
+  <p>Notebook or document hosted on Google Drive.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1lKdXx8E_4hOZ5DcRurof1ZBHgwoaAlOi" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 GDrive Project 21</h2>
+  <p>Notebook or document hosted on Google Drive.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1uiAB6tIgrLsHjj32cGJU_iMv-CFTWpuj" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 GDrive Project 22</h2>
+  <p>Notebook or document hosted on Google Drive.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1RV_HXT0E2XriWHXv1CU5ilfJNcW4AeHc" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 GDrive Project 23</h2>
+  <p>Notebook or document hosted on Google Drive.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1dVdwOu6j9K6uEdUpdORWkhxqhMbu6Oq8" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 GDrive Project 24</h2>
+  <p>Notebook or document hosted on Google Drive.</p>
+  <a href="https://drive.google.com/uc?export=view&id=119ipFm0xdvR5MclIfNwTD8H271KyEqZl" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 GDrive Project 25</h2>
+  <p>Notebook or document hosted on Google Drive.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1jE0omBTeWS0aI3UFH8f5Od0nrG5Q61d6" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 GDrive Project 26</h2>
+  <p>Notebook or document hosted on Google Drive.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1KZlUA2vRIxIcKNrN5ynpXHPGChOiA_2q" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 GDrive Project 27</h2>
+  <p>Notebook or document hosted on Google Drive.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1fYX0FCvSTkJR2hMspgVWWzzW86osqfzx" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 GDrive Project 28</h2>
+  <p>Notebook or document hosted on Google Drive.</p>
+  <a href="https://drive.google.com/uc?export=view&id=112d8rMMQ_NUA0S9wvHcenG6nSTuGmfan" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 GDrive Project 29</h2>
+  <p>Notebook or document hosted on Google Drive.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1QcWWkv5sChSY0gpXvVzcH-mOgeKTZnbA" class="btn-view" target="_blank">View File</a>
+</div>
+
 
     <!-- END Google Drive Projects (Remaining entries continue below as needed) -->
 
