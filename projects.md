@@ -183,6 +183,184 @@ permalink: /projects/
   <p>Notebook showing simulations or models for improving business workflows.</p>
   <a href="https://drive.google.com/uc?export=view&id=1QcWWkv5sChSY0gpXvVzcH-mOgeKTZnbA" class="btn-view" target="_blank">View File</a>
 </div>
+<div class="project-card">
+  <h2>📘 Heart Disease Prediction with ML</h2>
+  <p>Notebook demonstrating machine learning models for predicting heart disease.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1dlCazTKyEfv2wtuNgUTOTs6-UyOCrO3D" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 COVID-19 Case Analysis Dashboard</h2>
+  <p>Exploratory data analysis and visualization of COVID-19 case trends.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1AXMf0tPaeSJiNLr1yzw5681f_TpQvRLr" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 Titanic Survival Prediction</h2>
+  <p>ML notebook predicting passenger survival on the Titanic dataset.</p>
+  <a href="https://drive.google.com/uc?export=view&id=12I6bppuYGQ08a_GUko0KZgMGqizimn99" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 Data Cleaning Techniques with Pandas</h2>
+  <p>Shows cleaning steps for real-world messy data using Python pandas.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1fEtXUktuCP2nIBjv3HQgm8ozMweYv1AA" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 Diabetes Prediction Using ML</h2>
+  <p>ML models to predict the onset of diabetes using health metrics.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1Ti253DtJrBmpOAqU_AgJIOQmT3ygXZAy" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 Stock Price Forecasting with LSTM</h2>
+  <p>Notebook using deep learning (LSTM) to forecast stock market data.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1wSYH0rwwL4F8ePbRMZ5_5csAT-J1VTcT" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 Deep Learning: Cats vs Dogs</h2>
+  <p>Image classification notebook using CNN on the classic Cats vs Dogs dataset.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1Bc-SBLlPLyQQGyBNLGEezHbmGXS6j-eq" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 Customer Analytics with Sales Data</h2>
+  <p>Sales performance analysis and customer segmentation.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1QcWWkv5sChSY0gpXvVzcH-mOgeKTZnbA" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 Loan Approval Prediction</h2>
+  <p>Notebook building predictive models for loan approval using applicant data.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1deYzcAYbvQ9y3VCthjkPKP2O3USMMJNl" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 Exploratory Data Analysis Template</h2>
+  <p>Generic notebook structure for conducting EDA on tabular datasets.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1Ih2VtZgPMW2f5pGkY1Wabe_-aqWTB4aW" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 Real Estate Price Prediction</h2>
+  <p>Uses regression models to forecast house prices based on features.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1TmqzoPpYa1L_sxWbbuA4PN6T-t-_H7h6" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 Image Classification CNN</h2>
+  <p>Convolutional neural network model for multi-class image classification.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1lKdXx8E_4hOZ5DcRurof1ZBHgwoaAlOi" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 NLP: Sentiment Analysis</h2>
+  <p>Text processing and sentiment classification using NLP techniques.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1eY45ZbwBPoRsk9Rqrx5rsfgxHPl56K3G" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 Image Augmentation & CNNs</h2>
+  <p>Enhance CNN performance using Keras-based image augmentation.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1qMEwS2d4fOEd6OTo-FfbJMiteE1TmDUZ" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 ML Classifier Performance Comparison</h2>
+  <p>Compare accuracy of different machine learning classification models.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1da9Clj_WW6z-8RneatJfa3KLBMLY57IB" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 Medical Imaging (CT & MRI Analysis)</h2>
+  <p>Detecting and segmenting anomalies in medical imaging data.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1XGZ0Fqm5n3YKeGLtek41GwKad-X_lYb-" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 Facial Emotion Recognition</h2>
+  <p>Recognize human emotions from facial features using CNNs.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1FsAW5cJfn--yIyGv8ri1-FJDsHJUpU-x" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 Credit Card Fraud Detection</h2>
+  <p>Detecting anomalies in credit card transactions using ML models.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1wT4wF2Br87PdRv-dtySv-zOMvIe3OniR" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 Deep Reinforcement Learning (CartPole)</h2>
+  <p>Train an agent to balance CartPole using actor-critic methods.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1onFiOc11YNCoSzitLUkR6dgrDBVa8NA8" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 OCR with Deep Learning</h2>
+  <p>Optical character recognition using CNN-based character segmentation.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1Cr8X8Bsp5vQ-7aZ2pE3diL1Gvnbmb6a5" class="btn-view" target="_blank">View File</a>
+</div>
+<div class="project-card">
+  <h2>📘 AI-Powered Data Pipeline Overview</h2>
+  <p>Detailed workflow on building a data pipeline with AI integration.</p>
+  <a href="https://drive.google.com/uc?export=view&id=11TF7gL9Hxx7RYLX1yUPdPgf4HWr6_xqs" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 Neural Network Hyperparameter Tuning</h2>
+  <p>Explores grid search and optimization of NN models.</p>
+  <a href="https://drive.google.com/uc?export=view&id=12I6bppuYGQ08a_GUko0KZgMGqizimn99" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 Data Visualization in Healthcare</h2>
+  <p>Visualizing patient outcomes and trends using Python.</p>
+  <a href="https://drive.google.com/uc?export=view&id=13cuE3xUYAK_GeZx_eQeK9jO3myR7IXG-" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 CNN Architecture for Image Classification</h2>
+  <p>Using convolutional neural networks for medical imaging.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1AXMf0tPaeSJiNLr1yzw5681f_TpQvRLr" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 COVID-19 Infection Forecasting</h2>
+  <p>Time series model predicting pandemic infection rates.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1Bc-SBLlPLyQQGyBNLGEezHbmGXS6j-eq" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 Fraud Detection with Decision Trees</h2>
+  <p>Supervised ML project to detect fraud transactions.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1EDY7tnSkVe7314VpH1pa3Ld9KOtZuIg6" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 Heart Disease Prediction with Logistic Regression</h2>
+  <p>Logistic regression applied to healthcare diagnosis.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1EVViSIQAbkOF7cmpnTEekXN1QSLRskWd" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 Sentiment Analysis on Twitter Data</h2>
+  <p>Analyze user sentiment from tweets with NLP techniques.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1FsAW5cJfn--yIyGv8ri1-FJDsHJUpU-x" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 Predicting Patient Readmission Rates</h2>
+  <p>Regression analysis on hospital data for readmission forecasting.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1Ih2VtZgPMW2f5pGkY1Wabe_-aqWTB4aW" class="btn-view" target="_blank">View File</a>
+</div>
+
+<div class="project-card">
+  <h2>📘 Financial Risk Scoring System</h2>
+  <p>Risk modeling for credit approval using ML techniques.</p>
+  <a href="https://drive.google.com/uc?export=view&id=1MS_aCkfOI_Ke3YNeWVctBL0QIPyy_bm4" class="btn-view" target="_blank">View File</a>
+</div>
 
     <div class="project-card">
       <h2>📘 Project 1</h2>
