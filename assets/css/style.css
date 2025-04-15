@@ -258,4 +258,8 @@ nav ul li a:hover {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+main {
+  background-color: transparent !important;
+  color: white;
+}
 
