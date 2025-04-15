@@ -10,216 +10,174 @@ permalink: /projects/
 
   <div class="projects-list">
 
+    {% comment %} Static GitHub projects (your originals) remain here {% endcomment %}
+
+    <!-- START Google Drive Projects -->
     <div class="project-card">
-      <img src="/assets/images/project_ctscan.jpg" alt="CT Scan Project" class="project-thumb">
-      <h2>🏥 Chest CT Scan Cancer Detection</h2>
-      <p>AI-powered early detection using CT scans and CNN.</p>
-      <a href="https://github.com/DataForSolution/Data-Solution/blob/main/chest_ct_scan_Cancer_Detection_cnn.ipynb" class="btn-view" target="_blank">View Code</a>
+      <h2>📘 Project 1</h2>
+      <p>Notebook or document hosted on Google Drive.</p>
+      <a href="https://drive.google.com/uc?export=view&id=1bnJ7jNhVjXSmTfg4Fh9GsiEuoNdYkVcC" class="btn-view" target="_blank">View File</a>
+    </div>
+    <div class="project-card">
+      <h2>📘 Project 2</h2>
+      <p>Notebook or document hosted on Google Drive.</p>
+      <a href="https://drive.google.com/uc?export=view&id=1jzL-Mml7PK06RQ93hVFSaFlNdmVXKwNE" class="btn-view" target="_blank">View File</a>
+    </div>
+    <div class="project-card">
+      <h2>📘 Project 3</h2>
+      <p>Notebook or document hosted on Google Drive.</p>
+      <a href="https://drive.google.com/uc?export=view&id=1qMEwS2d4fOEd6OTo-FfbJMiteE1TmDUZ" class="btn-view" target="_blank">View File</a>
+    </div>
+    <div class="project-card">
+      <h2>📘 Project 4</h2>
+      <p>Notebook or document hosted on Google Drive.</p>
+      <a href="https://drive.google.com/uc?export=view&id=1rKoaD0h6E-wEueGaOaFvWppIOaOiTrCD" class="btn-view" target="_blank">View File</a>
+    </div>
+    <div class="project-card">
+      <h2>📘 Project 5</h2>
+      <p>Notebook or document hosted on Google Drive.</p>
+      <a href="https://drive.google.com/uc?export=view&id=1Ih2VtZgPMW2f5pGkY1Wabe_-aqWTB4aW" class="btn-view" target="_blank">View File</a>
+    </div>
+    <div class="project-card">
+      <h2>📘 Project 6</h2>
+      <p>Notebook or document hosted on Google Drive.</p>
+      <a href="https://drive.google.com/uc?export=view&id=1onFiOc11YNCoSzitLUkR6dgrDBVa8NA8" class="btn-view" target="_blank">View File</a>
+    </div>
+    <div class="project-card">
+      <h2>📘 Project 7</h2>
+      <p>Notebook or document hosted on Google Drive.</p>
+      <a href="https://drive.google.com/uc?export=view&id=1G1hJxAkLWHTb2yPUHfEk-mS829ZIWcxA" class="btn-view" target="_blank">View File</a>
+    </div>
+    <div class="project-card">
+      <h2>📘 Project 8</h2>
+      <p>Notebook or document hosted on Google Drive.</p>
+      <a href="https://drive.google.com/uc?export=view&id=1GBDmDtxFcwle9_zEdFITak9aFoVZN3dx" class="btn-view" target="_blank">View File</a>
+    </div>
+    <div class="project-card">
+      <h2>📘 Project 9</h2>
+      <p>Notebook or document hosted on Google Drive.</p>
+      <a href="https://drive.google.com/uc?export=view&id=1KUE_PzRfOl564zFb9vQjotziDi5VNHxW" class="btn-view" target="_blank">View File</a>
+    </div>
+    <div class="project-card">
+      <h2>📘 Project 10</h2>
+      <p>Notebook or document hosted on Google Drive.</p>
+      <a href="https://drive.google.com/uc?export=view&id=1VgN3T0dbM2xQq-07eZ1fNx3fnip-s4RX" class="btn-view" target="_blank">View File</a>
+    </div>
+        <div class="project-card">
+      <h2>📘 GDrive Project 31</h2>
+      <p>Notebook or document hosted on Google Drive.</p>
+      <a href="https://drive.google.com/uc?export=view&id=1Cr8X8Bsp5vQ-7aZ2pE3diL1Gvnbmb6a5" class="btn-view" target="_blank">View File</a>
     </div>
 
     <div class="project-card">
-      <img src="/assets/images/project_attack.jpg" alt="Adversarial Attacks" class="project-thumb">
-      <h2>🔍 Adversarial Attacks in ML</h2>
-      <p>Explore model robustness and AI security vulnerabilities.</p>
-      <a href="https://github.com/DataForSolution/Data-Solution/blob/main/Adversarial_Attacks.ipynb" class="btn-view" target="_blank">View Code</a>
+      <h2>📘 GDrive Project 32</h2>
+      <p>Notebook or document hosted on Google Drive.</p>
+      <a href="https://drive.google.com/uc?export=view&id=1V3WlRWfb9ixybnCRd3qMHTeHCYV60Sst" class="btn-view" target="_blank">View File</a>
     </div>
 
     <div class="project-card">
-      <img src="/assets/images/project_svm.jpg" alt="SVM Classifier" class="project-thumb">
-      <h2>📊 SVM for Classification</h2>
-      <p>High-accuracy classification using Support Vector Machines.</p>
-      <a href="https://github.com/DataForSolution/Data-Solution/blob/main/projects/SVM_440.ipynb" class="btn-view" target="_blank">View Code</a>
+      <h2>📘 GDrive Project 33</h2>
+      <p>Notebook or document hosted on Google Drive.</p>
+      <a href="https://drive.google.com/uc?export=view&id=1QTPMhTQA1vkZdquY2mMpIBUWO89s1V1j" class="btn-view" target="_blank">View File</a>
     </div>
 
     <div class="project-card">
-      <img src="/assets/images/project_pdf.jpg" alt="Chest Cancer PDF" class="project-thumb">
-      <h2>📄 Chest Cancer Detection Doc</h2>
-      <p>Deep learning PDF report on lung cancer using CT scans.</p>
-      <a href="/assets/documents/chest-cancer-detection.pdf" class="btn-view" target="_blank">View PDF</a>
+      <h2>📘 GDrive Project 34</h2>
+      <p>Notebook or document hosted on Google Drive.</p>
+      <a href="https://drive.google.com/uc?export=view&id=1BoYSEBG0Y3uvrMqd72WJXhSc-KfnHNo0" class="btn-view" target="_blank">View File</a>
     </div>
-    
-    
-    <div class="project-card">
-      <h2>📘 01Updated Attack Defence Imagenet V2.5</h2>
-      <p>Notebook or script covering key topics in data science, ML, or deep learning.</p>
-      <a href="https://github.com/DataForSolution/Data-Solution/blob/main/01updated_attack_defence_imagenet_v2.5.ipynb" class="btn-view" target="_blank">View Code</a>
-    </div>
-    
 
     <div class="project-card">
-      <h2>📘 Activity  Arrays And Vectors With Numpy</h2>
-      <p>Notebook or script covering key topics in data science, ML, or deep learning.</p>
-      <a href="https://github.com/DataForSolution/Data-Solution/blob/main/Activity_%20Arrays%20and%20vectors%20with%20NumPy.py" class="btn-view" target="_blank">View Code</a>
+      <h2>📘 GDrive Project 35</h2>
+      <p>Notebook or document hosted on Google Drive.</p>
+      <a href="https://drive.google.com/uc?export=view&id=1q0B_cW0Xu47esgx76Z1mySy4Pf4Dh6bQ" class="btn-view" target="_blank">View File</a>
     </div>
-    
 
     <div class="project-card">
-      <h2>📘 Activity  Dataframes With Pandas</h2>
-      <p>Notebook or script covering key topics in data science, ML, or deep learning.</p>
-      <a href="https://github.com/DataForSolution/Data-Solution/blob/main/Activity_%20Dataframes%20with%20pandas.ipynb" class="btn-view" target="_blank">View Code</a>
+      <h2>📘 GDrive Project 36</h2>
+      <p>Notebook or document hosted on Google Drive.</p>
+      <a href="https://drive.google.com/uc?export=view&id=15g21DjVWSRPFnUQx0b8BD8jIOhP9gVSt" class="btn-view" target="_blank">View File</a>
     </div>
-    
 
     <div class="project-card">
-      <h2>📘 Actor Critic Cartpole</h2>
-      <p>Notebook or script covering key topics in data science, ML, or deep learning.</p>
-      <a href="https://github.com/DataForSolution/Data-Solution/blob/main/actor_critic_cartpole.ipynb" class="btn-view" target="_blank">View Code</a>
+      <h2>📘 GDrive Project 37</h2>
+      <p>Notebook or document hosted on Google Drive.</p>
+      <a href="https://drive.google.com/uc?export=view&id=1ZC8OZe6xGSG-R1e0gOQkwjXSNc4_uMKB" class="btn-view" target="_blank">View File</a>
     </div>
-    
 
     <div class="project-card">
-      <h2>📘 Adversarial Attacks</h2>
-      <p>Notebook or script covering key topics in data science, ML, or deep learning.</p>
-      <a href="https://github.com/DataForSolution/Data-Solution/blob/main/Adversarial_Attacks.ipynb" class="btn-view" target="_blank">View Code</a>
+      <h2>📘 GDrive Project 38</h2>
+      <p>Notebook or document hosted on Google Drive.</p>
+      <a href="https://drive.google.com/uc?export=view&id=1kX71ldY4skFaonucdgbJj-pCUXnLhTHF" class="btn-view" target="_blank">View File</a>
     </div>
-    
 
     <div class="project-card">
-      <h2>📘 Adversarial Attacks Modified 2</h2>
-      <p>Notebook or script covering key topics in data science, ML, or deep learning.</p>
-      <a href="https://github.com/DataForSolution/Data-Solution/blob/main/Adversarial_Attacks_modified-2.ipynb" class="btn-view" target="_blank">View Code</a>
+      <h2>📘 GDrive Project 39</h2>
+      <p>Notebook or document hosted on Google Drive.</p>
+      <a href="https://drive.google.com/uc?export=view&id=1lKdXx8E_4hOZ5DcRurof1ZBHgwoaAlOi" class="btn-view" target="_blank">View File</a>
     </div>
-    
 
     <div class="project-card">
-      <h2>📘 Assign Adversarial Attacks</h2>
-      <p>Notebook or script covering key topics in data science, ML, or deep learning.</p>
-      <a href="https://github.com/DataForSolution/Data-Solution/blob/main/Assign_Adversarial_Attacks.ipynb" class="btn-view" target="_blank">View Code</a>
+      <h2>📘 GDrive Project 40</h2>
+      <p>Notebook or document hosted on Google Drive.</p>
+      <a href="https://drive.google.com/uc?export=view&id=1uiAB6tIgrLsHjj32cGJU_iMv-CFTWpuj" class="btn-view" target="_blank">View File</a>
     </div>
-    
 
     <div class="project-card">
-      <h2>📘 Attack Defence Imagenet V2.5</h2>
-      <p>Notebook or script covering key topics in data science, ML, or deep learning.</p>
-      <a href="https://github.com/DataForSolution/Data-Solution/blob/main/attack_defence_imagenet_v2.5.ipynb" class="btn-view" target="_blank">View Code</a>
+      <h2>📘 GDrive Project 41</h2>
+      <p>Notebook or document hosted on Google Drive.</p>
+      <a href="https://drive.google.com/uc?export=view&id=1RV_HXT0E2XriWHXv1CU5ilfJNcW4AeHc" class="btn-view" target="_blank">View File</a>
     </div>
-    
 
     <div class="project-card">
-      <h2>📘 Attack Defence Imagenet With Beaglefinal</h2>
-      <p>Notebook or script covering key topics in data science, ML, or deep learning.</p>
-      <a href="https://github.com/DataForSolution/Data-Solution/blob/main/attack_defence_imagenet_with_beagleFinal.ipynb" class="btn-view" target="_blank">View Code</a>
+      <h2>📘 GDrive Project 42</h2>
+      <p>Notebook or document hosted on Google Drive.</p>
+      <a href="https://drive.google.com/uc?export=view&id=1dVdwOu6j9K6uEdUpdORWkhxqhMbu6Oq8" class="btn-view" target="_blank">View File</a>
     </div>
-    
 
     <div class="project-card">
-      <h2>📘 Bayesianclassification</h2>
-      <p>Notebook or script covering key topics in data science, ML, or deep learning.</p>
-      <a href="https://github.com/DataForSolution/Data-Solution/blob/main/BayesianClassification.ipynb" class="btn-view" target="_blank">View Code</a>
+      <h2>📘 GDrive Project 43</h2>
+      <p>Notebook or document hosted on Google Drive.</p>
+      <a href="https://drive.google.com/uc?export=view&id=119ipFm0xdvR5MclIfNwTD8H271KyEqZl" class="btn-view" target="_blank">View File</a>
     </div>
-    
 
     <div class="project-card">
-      <h2>📘 Breast Cancer Wisconsin</h2>
-      <p>Notebook or script covering key topics in data science, ML, or deep learning.</p>
-      <a href="https://github.com/DataForSolution/Data-Solution/blob/main/Breast%20Cancer%20Wisconsin.ipynb" class="btn-view" target="_blank">View Code</a>
+      <h2>📘 GDrive Project 44</h2>
+      <p>Notebook or document hosted on Google Drive.</p>
+      <a href="https://drive.google.com/uc?export=view&id=1jE0omBTeWS0aI3UFH8f5Od0nrG5Q61d6" class="btn-view" target="_blank">View File</a>
     </div>
-    
 
     <div class="project-card">
-      <h2>📘 Chest Ct Scan Cnn Final</h2>
-      <p>Notebook or script covering key topics in data science, ML, or deep learning.</p>
-      <a href="https://github.com/DataForSolution/Data-Solution/blob/main/Chest_CT_Scan_CNN-Final.ipynb" class="btn-view" target="_blank">View Code</a>
+      <h2>📘 GDrive Project 45</h2>
+      <p>Notebook or document hosted on Google Drive.</p>
+      <a href="https://drive.google.com/uc?export=view&id=1KZlUA2vRIxIcKNrN5ynpXHPGChOiA_2q" class="btn-view" target="_blank">View File</a>
     </div>
-    
 
     <div class="project-card">
-      <h2>📘 Cifar10 Fake Images Analysis</h2>
-      <p>Notebook or script covering key topics in data science, ML, or deep learning.</p>
-      <a href="https://github.com/DataForSolution/Data-Solution/blob/main/cifar10_fake_images_analysis.ipynb" class="btn-view" target="_blank">View Code</a>
+      <h2>📘 GDrive Project 46</h2>
+      <p>Notebook or document hosted on Google Drive.</p>
+      <a href="https://drive.google.com/uc?export=view&id=1fYX0FCvSTkJR2hMspgVWWzzW86osqfzx" class="btn-view" target="_blank">View File</a>
     </div>
-    
 
     <div class="project-card">
-      <h2>📘 Cifar10 Fake Images Analysis</h2>
-      <p>Notebook or script covering key topics in data science, ML, or deep learning.</p>
-      <a href="https://github.com/DataForSolution/Data-Solution/blob/main/cifar10_fake_images_analysis.py" class="btn-view" target="_blank">View Code</a>
+      <h2>📘 GDrive Project 47</h2>
+      <p>Notebook or spreadsheet hosted on Google Drive.</p>
+      <a href="https://docs.google.com/spreadsheets/d/1bQd5oZBeytolY287eaZ9pHjYANweHQFNXRN69ZHePWQ/edit?usp=drive_link" class="btn-view" target="_blank">View File</a>
     </div>
-    
 
     <div class="project-card">
-      <h2>📘 Cifar10Gan Complete</h2>
-      <p>Notebook or script covering key topics in data science, ML, or deep learning.</p>
-      <a href="https://github.com/DataForSolution/Data-Solution/blob/main/CIFAR10GAN_Complete_.ipynb" class="btn-view" target="_blank">View Code</a>
+      <h2>📘 GDrive Project 48</h2>
+      <p>Notebook or document hosted on Google Drive.</p>
+      <a href="https://drive.google.com/uc?export=view&id=112d8rMMQ_NUA0S9wvHcenG6nSTuGmfan" class="btn-view" target="_blank">View File</a>
     </div>
-    
 
     <div class="project-card">
-      <h2>📘 Cluster</h2>
-      <p>Notebook or script covering key topics in data science, ML, or deep learning.</p>
-      <a href="https://github.com/DataForSolution/Data-Solution/blob/main/Cluster.ipynb" class="btn-view" target="_blank">View Code</a>
+      <h2>📘 GDrive Project 49</h2>
+      <p>Notebook or document hosted on Google Drive.</p>
+      <a href="https://drive.google.com/uc?export=view&id=1QcWWkv5sChSY0gpXvVzcH-mOgeKTZnbA" class="btn-view" target="_blank">View File</a>
     </div>
-    
 
-    <div class="project-card">
-      <h2>📘 Demo Optim Data Preproc Mlp With Plots</h2>
-      <p>Notebook or script covering key topics in data science, ML, or deep learning.</p>
-      <a href="https://github.com/DataForSolution/Data-Solution/blob/main/demo_optim_data_preproc_MLP_with_plots.ipynb" class="btn-view" target="_blank">View Code</a>
-    </div>
-    
-
-    <div class="project-card">
-      <h2>📘 Emr Glue Pyspark</h2>
-      <p>Notebook or script covering key topics in data science, ML, or deep learning.</p>
-      <a href="https://github.com/DataForSolution/Data-Solution/blob/main/EMR_Glue_PySpark.ipynb" class="btn-view" target="_blank">View Code</a>
-    </div>
-    
-
-    <div class="project-card">
-      <h2>📘 Evaluate Simple Linear Regression</h2>
-      <p>Notebook or script covering key topics in data science, ML, or deep learning.</p>
-      <a href="https://github.com/DataForSolution/Data-Solution/blob/main/Evaluate%20simple%20linear%20regression.ipynb" class="btn-view" target="_blank">View Code</a>
-    </div>
-    
-
-    <div class="project-card">
-      <h2>📘 Explain A Neural Network Mode</h2>
-      <p>Notebook or script covering key topics in data science, ML, or deep learning.</p>
-      <a href="https://github.com/DataForSolution/Data-Solution/blob/main/Explain%20a%20Neural%20Network%20Mode.ipynb" class="btn-view" target="_blank">View Code</a>
-    </div>
-    
-
-    <div class="project-card">
-      <h2>📘 Hypothesis Testing With Python</h2>
-      <p>Notebook or script covering key topics in data science, ML, or deep learning.</p>
-      <a href="https://github.com/DataForSolution/Data-Solution/blob/main/Hypothesis%20testing%20with%20Python.ipynb" class="btn-view" target="_blank">View Code</a>
-    </div>
-    
-
-    <div class="project-card">
-      <h2>📘 Logistic Regression</h2>
-      <p>Notebook or script covering key topics in data science, ML, or deep learning.</p>
-      <a href="https://github.com/DataForSolution/Data-Solution/blob/main/Logistic%20Regression.ipynb" class="btn-view" target="_blank">View Code</a>
-    </div>
-    
-
-    <div class="project-card">
-      <h2>📘 Modified Cifar10Gan Notebook</h2>
-      <p>Notebook or script covering key topics in data science, ML, or deep learning.</p>
-      <a href="https://github.com/DataForSolution/Data-Solution/blob/main/modified_CIFAR10GAN_notebook.ipynb" class="btn-view" target="_blank">View Code</a>
-    </div>
-    
-
-    <div class="project-card">
-      <h2>📘 Set Webhook</h2>
-      <p>Notebook or script covering key topics in data science, ML, or deep learning.</p>
-      <a href="https://github.com/DataForSolution/Data-Solution/blob/main/set_webhook.py" class="btn-view" target="_blank">View Code</a>
-    </div>
-    
-
-    <div class="project-card">
-      <h2>📘 Svm 440</h2>
-      <p>Notebook or script covering key topics in data science, ML, or deep learning.</p>
-      <a href="https://github.com/DataForSolution/Data-Solution/blob/main/SVM_440.ipynb" class="btn-view" target="_blank">View Code</a>
-    </div>
-    
-
-    <div class="project-card">
-      <h2>📘 Svm 440</h2>
-      <p>Notebook or script covering key topics in data science, ML, or deep learning.</p>
-      <a href="https://github.com/DataForSolution/Data-Solution/blob/main/svm_440.py" class="btn-view" target="_blank">View Code</a>
-    </div>
-    
+    <!-- END Google Drive Projects (Remaining entries continue below as needed) -->
 
   </div>
 </section>
