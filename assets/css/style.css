@@ -272,4 +272,69 @@ h1, h2, h3, h4, h5, h6 {
 p, li {
   color: #0056b3;
 }
+/* Text Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7;
+  font-size: 16px;
+  color: #1a1a1a;
+  background-color: #f9f9f9;
+  margin: 0;
+  padding: 0;
+}
+
+/* Section and Layout Styling */
+section {
+  padding: 60px 30px;
+  max-width: 1000px;
+  margin: auto;
+}
+
+/* Headings */
+h1, h2, h3 {
+  color: #0056b3;
+  margin-bottom: 20px;
+  line-height: 1.3;
+}
+
+h1 {
+  font-size: 2.2em;
+}
+
+h2 {
+  font-size: 1.6em;
+}
+
+h3 {
+  font-size: 1.3em;
+}
+
+/* Paragraphs */
+p {
+  color: #333;
+  font-size: 1.05em;
+  margin-bottom: 20px;
+}
+
+/* Project Card Enhancements */
+.project-card p {
+  color: #333;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+/* Buttons */
+.btn-view {
+  background-color: #007BFF;
+  color: white;
+  padding: 10px 16px;
+  border-radius: 6px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.btn-view:hover {
+  background-color: #0056b3;
+}
 
