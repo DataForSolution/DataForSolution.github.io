@@ -262,4 +262,14 @@ main {
   background-color: transparent !important;
   color: white;
 }
+body {
+  color: #0056b3; /* Blue text for better visibility */
+}
+h1, h2, h3, h4, h5, h6 {
+  color: #0047ab;
+}
+
+p, li {
+  color: #0056b3;
+}
 
