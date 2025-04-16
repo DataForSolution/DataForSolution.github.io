@@ -389,3 +389,77 @@ p {
 /* REQUEST FORM (Optional: Keep Dark Text or Convert to Light) */
 /* =========================== */
 /* Leave as-is or let me know if you want this also white-on-dark */
+/* =========================== */
+/* COMPACT LAYOUT FOR SERVICES */
+/* =========================== */
+
+#services-overview {
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.services-content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr; /* Cards and form side by side */
+  gap: 40px;
+  align-items: start;
+}
+
+@media (max-width: 992px) {
+  .services-content-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+.service-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.service-card {
+  background: linear-gradient(135deg, #3b3b3b, #4b4b4b);
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: all 0.2s ease-in-out;
+}
+
+.service-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+.service-card .emoji {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.service-card h2 {
+  font-size: 1.2em;
+  color: #fff;
+  margin-bottom: 8px;
+}
+
+.service-card p {
+  font-size: 0.95em;
+  color: #eee;
+  line-height: 1.4;
+}
+
+/* Request form (reuse previous styling) */
+#service-request {
+  background: #f0f0f0;
+  color: #222;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
