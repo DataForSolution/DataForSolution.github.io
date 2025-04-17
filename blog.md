@@ -11,17 +11,19 @@ permalink: /blog/
   </p>
 
   <!-- Featured Article -->
-  <div class="featured-post">
-    <h2><a href="{{ '/2025/04/17/understanding-transformers.html' | relative_url }}">
-      🧠 Understanding Transformers in NLP
-    </a></h2>
-    <p class="featured-date">Published: April 17, 2025</p>
-    <p class="featured-summary">
-      Transformers have revolutionized Natural Language Processing by enabling deep contextual understanding and parallel processing of text.
-      Unlike RNNs, transformers rely on attention mechanisms, allowing them to focus on relevant parts of the input sequence regardless of position...
-    </p>
-    <a href="{{ '/2025/04/17/understanding-transformers.html' | relative_url }}" class="read-featured">Read Full Article →</a>
-  </div>
+  <!-- Featured Article -->
+<div class="featured-post">
+  <h2><a href="{{ '/2025/04/17/understanding-transformers.html' | relative_url }}">
+    🧠 Understanding Transformers in NLP
+  </a></h2>
+  <p class="featured-date">Published: April 17, 2025</p>
+  <p class="featured-summary">
+    Transformers have revolutionized Natural Language Processing by enabling deep contextual understanding and parallel processing of text.
+    Unlike RNNs, transformers rely on attention mechanisms, allowing them to focus on relevant parts of the input sequence regardless of position...
+  </p>
+  <a href="{{ '/2025/04/17/understanding-transformers.html' | relative_url }}" class="read-featured">Read Full Article →</a>
+</div>
+
 
   <!-- Blog Filters -->
   <div class="blog-filters">
