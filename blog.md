@@ -10,6 +10,19 @@ permalink: /blog/
     Dive into tutorials, trends, and insights in AI, Data Science, and Analytics. Curated for learners and professionals alike.
   </p>
 
+  <!-- Featured Article -->
+  <div class="featured-post">
+    <h2><a href="{{ '/2025/04/17/understanding-transformers.html' | relative_url }}">
+      🧠 Understanding Transformers in NLP
+    </a></h2>
+    <p class="featured-date">Published: April 17, 2025</p>
+    <p class="featured-summary">
+      Transformers have revolutionized Natural Language Processing by enabling deep contextual understanding and parallel processing of text.
+      Unlike RNNs, transformers rely on attention mechanisms, allowing them to focus on relevant parts of the input sequence regardless of position...
+    </p>
+    <a href="{{ '/2025/04/17/understanding-transformers.html' | relative_url }}" class="read-featured">Read Full Article →</a>
+  </div>
+
   <!-- Blog Filters -->
   <div class="blog-filters">
     <span>Filter by:</span>
@@ -45,6 +58,30 @@ permalink: /blog/
   .blog-intro {
     font-size: 1.1rem;
     margin-bottom: 1rem;
+  }
+  .featured-post {
+    border: 2px solid #007BFF;
+    padding: 1.5rem;
+    border-radius: 10px;
+    background: #f8faff;
+    margin: 2rem 0;
+  }
+  .featured-post h2 {
+    margin-top: 0;
+    font-size: 1.5rem;
+  }
+  .featured-date {
+    color: gray;
+    font-size: 0.9rem;
+  }
+  .featured-summary {
+    font-size: 1.05rem;
+    margin: 0.8rem 0;
+  }
+  .read-featured {
+    font-weight: bold;
+    text-decoration: none;
+    color: #007BFF;
   }
   .blog-filters {
     margin-bottom: 1.5rem;
