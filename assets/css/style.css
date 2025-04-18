@@ -579,4 +579,19 @@ nav a.active {
   background-color: #333;
   transform: rotateY(180deg);
 }
+/* Fix: Ensure all text in about-wrapper is white or readable */
+.about-wrapper,
+.about-wrapper * {
+  color: #ffffff !important;
+}
+
+/* Make links visually distinct */
+.about-wrapper a {
+  color: #4FC3F7 !important;
+  text-decoration: none;
+}
+
+.about-wrapper a:hover {
+  text-decoration: underline;
+}
 
