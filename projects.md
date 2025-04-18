@@ -3,18 +3,20 @@ layout: default
 title: "Our Projects"
 permalink: /projects/
 ---
- > ⚠️ **Important Note for Visitors**
->
+
+<div class="project-note">
+⚠️ **Important Note for Visitors**
+
 > This section contains a collection of my personal projects built using **Jupyter Notebooks (`.ipynb`)** and Python scripts. These notebooks are designed to be opened in tools such as **Jupyter Notebook**, **JupyterLab**, **Google Colab**, or other code editors that support interactive Python environments.
->
-> 💡 Each project represents hands-on work and real-world exploration in **Data Science**, **Machine Learning**, **AI**, and **Analytics**. You are welcome to explore, review, and modify them for your learning or research purposes.
->
-> 📂 Some files are hosted on **Google Drive** or **GitHub**, and may require download or online preview. Please ensure you're logged in with access to view shared files.
->
-> 🧠 If you use these resources in your work, a credit back to [LLmachine](https://dataforsolution.github.io) would be appreciated!
 
+💡 Each project represents hands-on work and real-world exploration in **Data Science**, **Machine Learning**, **AI**, and **Analytics**. You are welcome to explore, review, and modify them for your learning or research purposes.
 
-<section id="projects">
+📂 Some files are hosted on **Google Drive** or **GitHub**, and may require download or online preview. Please ensure you're logged in with access to view shared files.
+
+🧠 If you use these resources in your work, a credit back to [LLmachine](https://dataforsolution.github.io) would be appreciated!
+</div>
+
+ <section id="projects">
   <h1>🚀 Our Projects</h1>
   <p>Explore our data science, AI, and ML projects solving real-world challenges.</p>
 
@@ -757,4 +759,3 @@ permalink: /projects/
   }
 }
 </style>
-
