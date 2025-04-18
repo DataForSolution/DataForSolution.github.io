@@ -664,45 +664,53 @@ permalink: /projects/
     <iframe src="https://your-financial-project-url.com" width="100%" height="400"></iframe>
   </div>
 </section>
-
 <style>
 #projects {
-  background-color: #f5f9ff;
+  background-color: #121212;
   padding: 50px 20px;
   text-align: center;
+  color: #ffffff;
 }
+
 .projects-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 25px;
 }
+
 .project-card {
-  background: white;
+  background: #1e1e1e;
   width: 290px;
   padding: 20px;
   border-radius: 15px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   transition: transform 0.3s ease;
+  text-align: left;
 }
+
 .project-card:hover {
   transform: translateY(-8px);
 }
+
 .project-thumb {
   width: 100%;
   border-radius: 10px;
   margin-bottom: 10px;
 }
+
 .project-card h2 {
   font-size: 1.2rem;
-  color: #007bff;
+  color: #4FC3F7;
   margin: 10px 0;
 }
+
 .project-card p {
   font-size: 0.95rem;
-  color: #555;
+  color: #cccccc;
   margin-bottom: 10px;
 }
+
 .btn-view {
   display: inline-block;
   padding: 8px 14px;
@@ -711,7 +719,9 @@ permalink: /projects/
   border-radius: 5px;
   font-weight: bold;
   text-decoration: none;
+  transition: background 0.3s ease;
 }
+
 .btn-view:hover {
   background-color: #0056b3;
 }
@@ -719,22 +729,27 @@ permalink: /projects/
 /* Live Projects */
 #live-projects {
   padding: 50px 20px;
-  background-color: #f4f4f4;
+  background-color: #1a1a1a;
   text-align: center;
+  color: #ffffff;
 }
+
 .live-project {
   margin-bottom: 40px;
 }
+
 .live-project h3 {
   color: #4CAF50;
   font-size: 1.6rem;
 }
+
 .live-project iframe {
   border: none;
   border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   max-width: 100%;
 }
+
 @media (max-width: 768px) {
   .projects-list {
     flex-direction: column;
@@ -742,3 +757,4 @@ permalink: /projects/
   }
 }
 </style>
+
