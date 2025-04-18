@@ -466,7 +466,7 @@ nav a.active {
     font-weight: bold;
     color: #007BFF;
 }
-/* === About Section Styles === */
+/* === About Section Styles (Dark Theme) === */
 .about-wrapper {
   background-color: #121212;
   color: #ffffff;
@@ -474,15 +474,30 @@ nav a.active {
   text-align: center;
 }
 
+.about-wrapper * {
+  color: #ffffff !important;
+  box-sizing: border-box;
+}
+
 .about-wrapper h1,
 .about-wrapper h2 {
-  color: #ffffff;
+  font-weight: 600;
+  margin-bottom: 15px;
 }
 
 .about-wrapper p {
   font-size: 1.1em;
   max-width: 800px;
   margin: 0 auto 20px;
+}
+
+.about-wrapper a {
+  color: #4FC3F7 !important;
+  text-decoration: none;
+}
+
+.about-wrapper a:hover {
+  text-decoration: underline;
 }
 
 .skills {
@@ -527,9 +542,14 @@ nav a.active {
   color: #4CAF50;
 }
 
+.stats p {
+  font-size: 0.95em;
+  color: #ccc !important;
+}
+
 .cta-button {
   background-color: #4CAF50;
-  color: white;
+  color: white !important;
   border: none;
   padding: 12px 20px;
   font-size: 1em;
@@ -559,7 +579,8 @@ nav a.active {
   transform-style: preserve-3d;
 }
 
-.flip-front, .flip-back {
+.flip-front,
+.flip-back {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -579,19 +600,3 @@ nav a.active {
   background-color: #333;
   transform: rotateY(180deg);
 }
-/* Fix: Ensure all text in about-wrapper is white or readable */
-.about-wrapper,
-.about-wrapper * {
-  color: #ffffff !important;
-}
-
-/* Make links visually distinct */
-.about-wrapper a {
-  color: #4FC3F7 !important;
-  text-decoration: none;
-}
-
-.about-wrapper a:hover {
-  text-decoration: underline;
-}
-
