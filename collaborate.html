@@ -63,91 +63,108 @@ permalink: /collaborate/
     </ul>
 
 </section>
-
 <style>
-    #collaborate {
-        padding: 50px 20px;
-        background-color: #f9f9f9;
-        color: #333;
-        text-align: center;
-    }
+#collaborate {
+    background-color: #121212;
+    color: white;
+    padding: 50px 20px;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+}
 
-    .collaboration-grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-    }
+#collaborate h1, #collaborate h2, #collaborate h3 {
+    color: #ffffff;
+    margin-bottom: 15px;
+}
 
-    .collaboration-card {
-        background: white;
-        border-radius: 10px;
-        padding: 20px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        max-width: 300px;
-        text-align: left;
-    }
+#collaborate p, #collaborate li {
+    color: #dddddd;
+    font-size: 1.05em;
+}
 
-    .collaboration-card h3 {
-        font-size: 1.4em;
-        color: #4CAF50;
-        margin-bottom: 10px;
-    }
+.collaboration-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 30px;
+}
 
-    .collaboration-card p {
-        font-size: 1em;
-        margin-bottom: 10px;
-        color: #555;
-    }
+.collaboration-card {
+    background: #1f1f1f;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    max-width: 300px;
+    text-align: left;
+    transition: transform 0.3s;
+}
 
-    .project-link {
-        display: inline-block;
-        margin-top: 10px;
-        padding: 10px 15px;
-        background-color: #007BFF;
-        color: white;
-        text-decoration: none;
-        border-radius: 5px;
-        font-weight: bold;
-        transition: background-color 0.3s ease;
-    }
+.collaboration-card:hover {
+    transform: translateY(-5px);
+}
 
-    .project-link:hover {
-        background-color: #0056b3;
-    }
+.collaboration-card h3 {
+    font-size: 1.4em;
+    color: #4CAF50;
+}
 
-    .collab-ideas {
-        list-style: none;
-        padding: 0;
-    }
+.collaboration-card p {
+    font-size: 1em;
+    color: #ccc;
+}
 
-    .collab-ideas li {
-        font-size: 1.1em;
-        margin: 10px 0;
-        color: #333;
-        background: #eaf7ea;
-        padding: 10px;
-        border-radius: 5px;
-        display: inline-block;
-    }
+.project-link {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
 
-    .community-links {
-        list-style: none;
-        padding: 0;
-    }
+.project-link:hover {
+    background-color: #0056b3;
+}
 
-    .community-links li {
-        font-size: 1.1em;
-        margin: 5px 0;
-    }
+.collab-ideas {
+    list-style: none;
+    padding: 0;
+    margin-top: 30px;
+}
 
-    .community-links a {
-        color: #007BFF;
-        text-decoration: none;
-        font-weight: bold;
-    }
+.collab-ideas li {
+    font-size: 1.1em;
+    margin: 10px 0;
+    background: #2a2a2a;
+    padding: 10px;
+    border-radius: 5px;
+    display: inline-block;
+    color: #aaffaa;
+}
 
-    .community-links a:hover {
-        text-decoration: underline;
-    }
+.community-links {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.community-links li {
+    font-size: 1.1em;
+    margin: 8px 0;
+}
+
+.community-links a {
+    color: #4FC3F7;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.community-links a:hover {
+    text-decoration: underline;
+}
 </style>
+
