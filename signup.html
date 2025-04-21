@@ -1,0 +1,72 @@
+---
+layout: default
+title: "Sign In"
+permalink: /signin/
+---
+
+<section id="signin">
+    <h1>🔑 Sign In</h1>
+    <p>Welcome back! Please sign in to access your account.</p>
+
+    <form action="/dashboard.html" method="GET">
+        <label for="email">📧 Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">🔒 Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <button type="submit">Sign In</button>
+    </form>
+</section>
+
+<style>
+    #signin {
+        max-width: 400px;
+        margin: auto;
+        padding: 20px;
+        text-align: center;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    label {
+        font-weight: bold;
+    }
+
+    input {
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+    button {
+        padding: 10px;
+        background-color: #007BFF;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background-color: #0056b3;
+    }
+
+    a {
+        color: #007BFF;
+        text-decoration: none;
+        font-weight: bold;
+    }
+
+    a:hover {
+        color: #0056b3;
+        text-decoration: underline;
+    }
+</style>

@@ -1,0 +1,215 @@
+---
+layout: default
+title: "Courses"
+permalink: /courses/
+---
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses - Learn Power BI, Tableau, and Python</title>
+    <link rel="stylesheet" href="/assets/css/style.css">
+    
+    <style>
+        /* Style for navigation links */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+            background-color: #fff;
+            border-bottom: 1px solid #ddd;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            gap: 15px;
+        }
+
+        nav ul li a {
+            font-weight: normal;
+            color: #333;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        /* Bold black text for Courses in menu */
+        nav ul li a[href='/courses'] {
+            font-weight: bold !important;
+            color: black;
+        }
+
+        /* Change color to orange when hovered */
+        nav ul li a[href='/courses']:hover {
+            color: orange;
+        }
+
+        /* Sign-in button */
+        .sign-in {
+            font-weight: bold;
+            color: white;
+            background-color: #007BFF;
+            padding: 8px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s;
+        }
+
+        .sign-in:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            
+            <li><a href="/courses">Courses</a></li> <!-- Added Courses to Menu -->
+        </ul>
+    </nav>
+
+    <section id="courses">
+        <h1>📚 Online Courses</h1>
+        <p>Master data visualization, analytics, and programming with our beginner-friendly and advanced courses on Power BI, Tableau, and Python.</p>
+
+        <!-- Course Listings -->
+        <div class="course-list">
+            <!-- Power BI Course -->
+            <div class="course">
+                <h2>Power BI Course</h2>
+                <p>Learn to transform data into powerful visualizations with Power BI.</p>
+                <a href="#power-bi" class="button">Start Learning Power BI</a>
+            </div>
+
+            <!-- Tableau Course -->
+            <div class="course">
+                <h2>Tableau Course</h2>
+                <p>Master Tableau and create stunning dashboards for your data.</p>
+                <a href="#tableau" class="button">Start Learning Tableau</a>
+            </div>
+
+            <!-- Python for Data Science -->
+            <div class="course">
+                <h2>Python for Data Science</h2>
+                <p>Dive into Python programming with a focus on data analysis and visualization.</p>
+                <a href="#python" class="button">Start Learning Python</a>
+            </div>
+        </div>
+
+        <!-- Power BI Course Content -->
+        <div id="power-bi" class="course-content">
+            <h2>📊 Power BI Course</h2>
+            <h3>Course Outline</h3>
+            <ul>
+                <li><strong>Module 1:</strong> Introduction to Power BI
+                    <ul>
+                        <li>What is Power BI?</li>
+                        <li>Installing Power BI Desktop</li>
+                        <li>Connecting to Data Sources</li>
+                    </ul>
+                </li>
+                <li><strong>Module 2:</strong> Data Modeling
+                    <ul>
+                        <li>Transforming Data</li>
+                        <li>Creating Relationships</li>
+                        <li>Using DAX</li>
+                    </ul>
+                </li>
+                <li><strong>Module 3:</strong> Building Visualizations
+                    <ul>
+                        <li>Charts, Tables, and KPIs</li>
+                        <li>Building Dashboards</li>
+                        <li>Sharing Reports</li>
+                    </ul>
+                </li>
+            </ul>
+            <h3>Interactive Examples</h3>
+            <p>Explore sample Power BI dashboards below:</p>
+            <iframe src="https://app.powerbi.com/view?r=example" width="100%" height="400"></iframe>
+        </div>
+
+        <!-- Tableau Course Content -->
+        <div id="tableau" class="course-content">
+            <h2>📊 Tableau Course</h2>
+            <h3>Course Outline</h3>
+            <ul>
+                <li><strong>Module 1:</strong> Getting Started with Tableau
+                    <ul>
+                        <li>What is Tableau?</li>
+                        <li>Installing Tableau</li>
+                        <li>Connecting to Data Sources</li>
+                    </ul>
+                </li>
+                <li><strong>Module 2:</strong> Data Visualization Basics
+                    <ul>
+                        <li>Creating Charts and Graphs</li>
+                        <li>Using Filters and Parameters</li>
+                        <li>Building Dashboards</li>
+                    </ul>
+                </li>
+                <li><strong>Module 3:</strong> Advanced Tableau
+                    <ul>
+                        <li>Calculations and Table Calculations</li>
+                        <li>Storytelling with Tableau</li>
+                        <li>Publishing and Sharing Dashboards</li>
+                    </ul>
+                </li>
+            </ul>
+            <h3>Interactive Examples</h3>
+            <p>Explore sample Tableau dashboards below:</p>
+            <iframe src="https://public.tableau.com/views/example" width="100%" height="400"></iframe>
+        </div>
+
+        <!-- Python Course Content -->
+        <div id="python" class="course-content">
+            <h2>🐍 Python for Data Science</h2>
+            <h3>Course Outline</h3>
+            <ul>
+                <li><strong>Module 1:</strong> Python Basics
+                    <ul>
+                        <li>Installing Python</li>
+                        <li>Using Jupyter Notebooks</li>
+                        <li>Basic Python Syntax</li>
+                    </ul>
+                </li>
+                <li><strong>Module 2:</strong> Data Analysis with Python
+                    <ul>
+                        <li>Using Pandas for Data Manipulation</li>
+                        <li>Data Visualization with Matplotlib</li>
+                        <li>Exploratory Data Analysis (EDA)</li>
+                    </ul>
+                </li>
+                <li><strong>Module 3:</strong> Advanced Python for Data Science
+                    <ul>
+                        <li>Machine Learning with Scikit-learn</li>
+                        <li>Natural Language Processing</li>
+                        <li>Building and Deploying Models</li>
+                    </ul>
+                </li>
+            </ul>
+            <h3>Interactive Code Examples</h3>
+            <p>Write and test Python code in the editor below:</p>
+            <iframe src="https://colab.research.google.com/" width="100%" height="400"></iframe>
+        </div>
+
+        <!-- Assignments and Quizzes -->
+        <div id="assignments">
+            <h2>📄 Assignments and Quizzes</h2>
+            <p>Test your knowledge with interactive quizzes and assignments:</p>
+            <iframe src="https://forms.gle/examplequiz" width="100%" height="600"></iframe>
+        </div>
+
+        <!-- Discussion Forum -->
+        <div id="forum">
+            <h2>💬 Discussion Forum</h2>
+            <p>Have questions? Join the discussion below:</p>
+            <iframe src="https://disqus.com/embed/example" width="100%" height="400"></iframe>
+        </div>
+
+    </section>
+</body>
+</html>

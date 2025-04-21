@@ -1,0 +1,202 @@
+# Site Information
+title: "LLmachine"
+email: "kent.sew@gmail.com"
+description: >-
+  Welcome to LLmachine, your hub for AI, data science, and analytics.
+  Explore projects, insights, and professional research.
+
+# Base URL & Site URL (For GitHub Pages)
+baseurl: ""  # Leave empty for GitHub Pages root
+url: "https://dataforsolution.github.io"
+
+# Jekyll Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-paginate
+  - jekyll-include-cache
+  - jekyll-sitemap
+  - jekyll-redirect-from
+
+# Pagination
+paginate: 5
+paginate_path: "/blog/page:num/"
+
+# Markdown Settings
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  syntax_highlighter_opts:
+    line_numbers: true
+
+# Include & Exclude
+include:
+  - _includes
+  - _layouts
+  - _projects
+  - _services
+  - _faq
+  - _resources
+  - assets
+  - assets/css
+  - assets/js
+  - assets/books
+  - assets/toolkits
+  - favicon.ico
+  - index.html
+  - ebooks.md
+  - toolkits.md
+  - navigation.html
+  - courses.html
+  - dashboard.html
+  - request-submitted.html
+  - signin.html
+  - signup.html
+
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - README.md
+  - node_modules/
+  - vendor/
+  - Gemfile
+  - Gemfile.lock
+
+# Collections
+collections:
+  about:
+    output: true
+    permalink: /about/
+  services:
+    output: true
+    permalink: /services/
+  projects:
+    output: true
+    permalink: /projects/
+  media:
+    output: true
+    permalink: /media/
+  resources:
+    output: true
+    permalink: /resources/
+  blog:
+    output: true
+    permalink: /blog/
+  faq:
+    output: true
+    permalink: /faq/
+  contact:
+    output: true
+    permalink: /contact/
+  ebooks:
+    output: true
+    permalink: /ebooks/
+  free-tools:
+    output: true
+    permalink: /free-tools/
+  write-for-us:
+    output: true
+    permalink: /write-for-us/
+  collaborate:
+    output: true
+    permalink: /collaborate/
+  projects:
+    output: true
+    permalink: /projects/
+  posts:
+    output: true                  
+
+# Layout Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "LLmachine"
+  - scope:
+      path: "about"
+    values:
+      layout: "default"
+  - scope:
+      path: "services"
+    values:
+      layout: "default"
+  - scope:
+      path: "projects"
+    values:
+      layout: "default"
+  - scope:
+      path: "media"
+    values:
+      layout: "default"
+  - scope:
+      path: "resources"
+    values:
+      layout: "default"
+  - scope:
+      path: "blog"
+    values:
+      layout: "default"
+  - scope:
+      path: "faq"
+    values:
+      layout: "default"
+  - scope:
+      path: "contact"
+    values:
+      layout: "default"
+  - scope:
+      path: "ebooks"
+    values:
+      layout: "default"
+      title: "E-Books"
+  - scope:
+      path: "free-tools"
+    values:
+      layout: "default"
+  - scope:
+      path: "write-for-us"
+    values:
+      layout: "default"
+  - scope:
+      path: "collaborate"
+    values:
+      layout: "default"
+
+# Permalinks
+permalink: pretty
+
+# Sitemap Configuration
+sitemap:
+  exclude:
+    - /404.html
+  include:
+    - /about/
+    - /services/
+    - /projects/
+    - /media/
+    - /resources/
+    - /blog/
+    - /faq/
+    - /contact/
+    - /ebooks/
+    - /free-tools/
+    - /write-for-us/
+    - /collaborate/
+
+# SEO Tag Config
+jekyll_seo_tag:
+  social:
+    twitter:
+      username: "SewLiben"
+    github:
+      username: "DataForSolution"
+  description: "LLmachine provides AI, Data Science, and Analytics solutions for businesses and researchers."
+
+# Performance Optimization
+cache: true
+
+# Rebuild Future-Dated Content
+future: true

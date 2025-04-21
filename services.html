@@ -1,0 +1,106 @@
+---
+layout: default
+title: "Services"
+permalink: /services/
+---
+
+<section id="services-overview">
+  <h1>🚀 Our Services</h1>
+  <p class="intro">Explore our data-powered solutions designed to help your business grow and innovate.</p>
+  <div class="service-grid">
+    <a href="/services/business-analytics/" class="service-card">
+      <div class="emoji">📊</div>
+      <h2>Business Analytics</h2>
+      <p>Gain insights into your operations through AI-powered data analysis and visualization.</p>
+    </a>
+    <a href="/services/data-entry/" class="service-card">
+      <div class="emoji">📝</div>
+      <h2>Data Entry</h2>
+      <p>Efficient and accurate data entry services to maintain reliable business records.</p>
+    </a>
+    <a href="/services/data-reporting/" class="service-card">
+      <div class="emoji">📈</div>
+      <h2>Data Reporting</h2>
+      <p>Custom-built reports with dynamic visualizations to simplify decision-making.</p>
+    </a>
+    <a href="/services/strategic-planning/" class="service-card">
+      <div class="emoji">🎯</div>
+      <h2>Strategic Planning</h2>
+      <p>Align data strategies with business objectives for maximum impact.</p>
+    </a>
+    <a href="/services/healthcare-consulting/" class="service-card">
+      <div class="emoji">🏥</div>
+      <h2>Healthcare Consulting</h2>
+      <p>Leverage AI-powered analytics for diagnostics, medical imaging, and research.</p>
+    </a>
+    <a href="/services/financial-analysis/" class="service-card">
+      <div class="emoji">💰</div>
+      <h2>Financial Analysis</h2>
+      <p>AI-driven budgeting, fraud detection, and investment optimization.</p>
+    </a>
+    <a href="/services/market-research/" class="service-card">
+      <div class="emoji">🔍</div>
+      <h2>Market Research</h2>
+      <p>Understand market trends with AI-driven competitive intelligence.</p>
+    </a>
+  </div>
+</section>
+
+<section id="service-request">
+  <h2>📬 Request a Service</h2>
+  <form action="/request-submitted.html" method="GET" id="service-request-form">
+    <label for="name">👤 Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">📧 Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="service-type">🛠 Select Service:</label>
+    <select id="service-type" name="service">
+      <option value="business-analytics">Business Analytics</option>
+      <option value="data-entry">Data Entry</option>
+      <option value="data-reporting">Data Reporting</option>
+      <option value="strategic-planning">Strategic Planning</option>
+      <option value="healthcare-consulting">Healthcare Consulting</option>
+      <option value="financial-analysis">Financial Analysis</option>
+      <option value="market-research">Market Research</option>
+    </select>
+
+    <label for="budget">💰 Budget (USD):</label>
+    <input type="number" id="budget" name="budget" min="100" step="50" required>
+
+    <label for="details">📝 Project Details:</label>
+    <textarea id="details" name="details" rows="4" required></textarea>
+
+    <button type="submit">Submit Request</button>
+  </form>
+  <div id="submission-message" style="display: none; margin-top: 10px;"></div>
+</section>
+<section id="services-overview">
+  <h1>🚀 Our Services</h1>
+  <p class="intro">Explore our data-powered solutions designed to help your business grow and innovate.</p>
+
+  <div class="services-content-wrapper">
+    
+    <!-- Service Cards -->
+    <div class="service-grid">
+      <!-- Service Cards here -->
+      <a href="/services/business-analytics/" class="service-card">
+        <div class="emoji">📊</div>
+        <h2>Business Analytics</h2>
+        <p>Gain insights into your operations through AI-powered data analysis and visualization.</p>
+      </a>
+      <!-- Repeat for other services... -->
+    </div>
+
+    <!-- Request Form -->
+    <div id="service-request">
+      <h2>📬 Request a Service</h2>
+      <form action="/request-submitted.html" method="GET">
+        <!-- Form Fields... -->
+      </form>
+    </div>
+
+  </div>
+</section>
+
