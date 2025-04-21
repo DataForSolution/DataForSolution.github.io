@@ -101,9 +101,6 @@ collections:
   collaborate:
     output: true
     permalink: /collaborate/
-  projects:
-    output: true
-    permalink: /projects/
   posts:
     output: true                  
 
