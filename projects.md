@@ -9,6 +9,26 @@ permalink: /projects/
   <p>Browse our collection of data science and AI projects:</p>
 
   <div class="project-gallery">
+  <div class="project-card">
+  <h3>🧠 Chest CT Scan Cancer Detection (Notebook)</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Chest_CT_Scan_CNN.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card">
+  <h3>🧠 Chest CT Scan CNN – Final</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Chest_CT_Scan_CNN-Final.ipynb" target="_blank">View Final Notebook</a>
+</div>
+
+<div class="project-card">
+  <h3>📄 CT Scan Deep Learning (PDF)</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Chest_Cancer_Detection_Deep_Learning_CT_Scan.pdf" target="_blank">View PDF</a>
+</div>
+
+<div class="project-card">
+  <h3>📄 Chest CT Scan CNN Final – Colab Export</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Chest_CT-Scan-CNN-Final.ipynb - Colab.pdf" target="_blank">View PDF</a>
+</div>
+
     <div class="project-card" title="Uses CNN for lung cancer detection">
       <h3>🧠 Chest CT Scan Cancer Detection (CNN)</h3>
       <p>AI model to detect cancer using CT scans.</p>
