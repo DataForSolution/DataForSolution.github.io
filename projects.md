@@ -13,7 +13,6 @@ permalink: /projects/
       <h3>🧠 Chest CT Scan Cancer Detection (CNN)</h3>
       <p>AI model to detect cancer using CT scans.</p>
       <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/chest_ct_scan_Cancer_Detection_cnn.ipynb" target="_blank">View Project</a>
-      <img src="https://img.shields.io/github/stars/DataForSolution/DataForSolution.github.io?style=social" alt="GitHub stars">
     </div>
 
     <div class="project-card" title="Examines model vulnerability to crafted inputs">
@@ -26,18 +25,6 @@ permalink: /projects/
       <h3>🔍 Support Vector Machine (SVM)</h3>
       <p>Classifies data using a margin-optimized algorithm.</p>
       <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/SVM_440.ipynb" target="_blank">View Project</a>
-    </div>
-
-    <div class="project-card" title="Predicts heart disease using multiple algorithms">
-      <h3>❤️ Heart Disease Prediction (Ensemble)</h3>
-      <p>Combines classifiers for accurate heart disease risk analysis.</p>
-      <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Heart_Disease_Prediction_Ensemble.ipynb" target="_blank">View Project</a>
-    </div>
-
-    <div class="project-card" title="Discovers shopping patterns using association rules">
-      <h3>🛒 Market Basket Analysis</h3>
-      <p>Analyzes customer purchase patterns for business insights.</p>
-      <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Market_Basket_Analysis_Association_Rules.ipynb" target="_blank">View Project</a>
     </div>
   </div>
 </section>
