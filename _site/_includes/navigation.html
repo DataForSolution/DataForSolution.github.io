@@ -1,0 +1,45 @@
+<nav style="background-color: #f8f8f8; padding: 10px 20px; box-shadow: 0 2px 4px rgba(0,0,0,0.1);" role="navigation" aria-label="Main Navigation">
+  <ul style="list-style: none; display: flex; gap: 20px; margin: 0; padding: 0;">
+    <li><a href="{{ '/' | relative_url }}" class="nav-link">Home</a></li>
+    <li><a href="{{ '/about/' | relative_url }}" class="nav-link">About</a></li>
+    <li><a href="{{ '/services/' | relative_url }}" class="nav-link">Services</a></li>
+    <li><a href="{{ '/projects/' | relative_url }}" class="nav-link">Projects</a></li>
+    <li><a href="{{ '/media/' | relative_url }}" class="nav-link">Media</a></li>
+    <li><a href="{{ '/resources/' | relative_url }}" class="nav-link">Resources</a></li>
+    <li><a href="{{ '/blog/' | relative_url }}" class="nav-link">Blog</a></li>
+    <li><a href="{{ '/faq/' | relative_url }}" class="nav-link">FAQ</a></li>
+    <li><a href="{{ '/contact/' | relative_url }}" class="nav-link">Contact</a></li>
+    <li><a href="{{ '/ebooks/' | relative_url }}" class="nav-link">E-Books</a></li>
+    <li><a href="{{ '/free-tools/' | relative_url }}" class="nav-link">Free Tools</a></li>
+    <li><a href="{{ '/write-for-us/' | relative_url }}" class="nav-link">Write for Us</a></li>
+    <li><a href="{{ '/collaborate/' | relative_url }}" class="nav-link">Collaborate</a></li>
+    <li><a href="{{ '/courses/' | relative_url }}" class="nav-link">Courses</a></li>
+  </ul>
+</nav>
+
+<!-- Navigation Styling -->
+<style>
+  .nav-link {
+    color: #333;
+    font-size: 1.1em;
+    font-weight: bold;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s, color 0.3s;
+    border-radius: 5px;
+  }
+
+  .nav-link:hover {
+    background-color: #007BFF; /* Blue hover */
+    color: #fff;               /* White text on hover */
+  }
+
+  /* Mobile Responsive Navigation */
+  @media (max-width: 768px) {
+    nav ul {
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+    }
+  }
+</style>
