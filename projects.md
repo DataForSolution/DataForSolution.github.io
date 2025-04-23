@@ -4,15 +4,20 @@ title: "Projects"
 permalink: /projects/
 ---
 
- <section id="projects">
+<section id="projects">
   <h1>📂 Project Library</h1>
   <p>Browse our collection of data science and AI projects:</p>
 
   <div class="project-gallery">
 
     <div class="project-card">
-      <h3>🧠 Chest CT Scan CNN – Notebook</h3>
+      <h3>📓 Chest CT Scan CNN – Notebook</h3>
       <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Chest_CT_Scan_CNN.ipynb" target="_blank">View Notebook</a>
+    </div>
+
+    <div class="project-card">
+      <h3>📓 Chest CT Scan CNN – Final Notebook</h3>
+      <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Chest_CT_Scan_CNN-Final.ipynb" target="_blank">View Notebook</a>
     </div>
 
     <div class="project-card">
@@ -31,10 +36,8 @@ permalink: /projects/
       <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/chest_ct_scan_Cancer_Detection_cnn.ipynb" target="_blank">View Project</a>
     </div>
 
-  </div>
-</section>
 
-    <div class="project-card" title="Examines model vulnerability to crafted inputs">
+ <div class="project-card" title="Examines model vulnerability to crafted inputs">
       <h3>⚔️ Adversarial Attacks in ML</h3>
       <p>Exploring model robustness and security in ML.</p>
       <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Adversarial_Attacks.ipynb" target="_blank">View Project</a>
