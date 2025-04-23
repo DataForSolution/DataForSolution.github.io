@@ -66,117 +66,125 @@ permalink: /faq/
 </section>
 
 <style>
-    /* FAQ Styling */
-    #faq {
-        padding: 50px 20px;
-        text-align: center;
-        background: #f9f9f9;
-        color: #333;
-    }
+/* FAQ Styling */
+#faq {
+    padding: 50px 20px;
+    text-align: center;
+    background: #1e1e1e; /* Dark background */
+    color: #ffffff; /* White text */
+}
 
-    .faq-list {
-        max-width: 800px;
-        margin: auto;
-        text-align: left;
-    }
+.faq-list {
+    max-width: 800px;
+    margin: auto;
+    text-align: left;
+}
 
-    .faq-item {
-        padding: 15px;
-        background: white;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        cursor: pointer;
-        margin-bottom: 10px;
-    }
+.faq-item {
+    padding: 15px;
+    background: #2c2c2c;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+    cursor: pointer;
+    margin-bottom: 10px;
+    color: white;
+}
 
-    .faq-item h2 {
-        font-size: 1.2em;
-        color: #007BFF;
-    }
+.faq-item h2 {
+    font-size: 1.2em;
+    color: #00aaff;
+}
 
-    .faq-answer {
-        display: none;
-        margin-top: 10px;
-        color: #555;
-    }
+.faq-answer {
+    display: none;
+    margin-top: 10px;
+    color: #dddddd;
+}
 
-    .faq-item.active .faq-answer {
-        display: block;
-    }
+.faq-item.active .faq-answer {
+    display: block;
+}
 
-    /* Chatbot Styling */
-    .chat-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin: 20px auto;
-        max-width: 600px;
-        border: 1px solid #ccc;
-        border-radius: 10px;
-        padding: 15px;
-        background: white;
-    }
+/* Chatbot Styling */
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 600px;
+    border: 1px solid #444;
+    border-radius: 10px;
+    padding: 15px;
+    background: #2c2c2c;
+    color: white;
+}
 
-    #faq-chat-display {
-        max-height: 300px;
-        overflow-y: auto;
-        border: 1px solid #ddd;
-        padding: 10px;
-        margin-bottom: 15px;
-        width: 100%;
-        border-radius: 5px;
-        background: #f4f4f4;
-    }
+#faq-chat-display {
+    max-height: 300px;
+    overflow-y: auto;
+    border: 1px solid #666;
+    padding: 10px;
+    margin-bottom: 15px;
+    width: 100%;
+    border-radius: 5px;
+    background: #1a1a1a;
+    color: #ffffff;
+}
 
-    .input-container {
-        display: flex;
-        gap: 10px;
-        width: 100%;
-    }
+.input-container {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+}
 
-    .input-container input {
-        flex: 1;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-    }
+.input-container input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #555;
+    border-radius: 5px;
+    background: #333;
+    color: white;
+}
 
-    .input-container button {
-        padding: 10px 15px;
-        background-color: #007BFF;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
+.input-container button {
+    padding: 10px 15px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
-    .input-container button:hover {
-        background-color: #0056b3;
-    }
+.input-container button:hover {
+    background-color: #0056b3;
+}
 
-    /* Recommendations */
-    #recommendation ul {
-        list-style: none;
-        padding: 0;
-        text-align: left;
-        max-width: 600px;
-        margin: auto;
-    }
+/* Recommendations */
+#recommendation ul {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    max-width: 600px;
+    margin: auto;
+    color: white;
+}
 
-    #recommendation li {
-        margin: 10px 0;
-    }
+#recommendation li {
+    margin: 10px 0;
+}
 
-    #recommendation a {
-        color: #007BFF;
-        text-decoration: none;
-    }
+#recommendation a {
+    color: #00aaff;
+    text-decoration: none;
+}
 
-    #recommendation a:hover {
-        color: #0056b3;
-        text-decoration: underline;
-    }
+#recommendation a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
 </style>
+
+
 
 <script>
     // FAQ Toggle Logic
