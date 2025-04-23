@@ -339,14 +339,19 @@ permalink: /projects/
 <style>
 #projects {
   padding: 40px 20px;
-  background-color: #f9f9f9;
+  background-color: #1e1e1e; /* Dark gray background */
   text-align: center;
+  color: #ffffff; /* White text */
 }
 
 #projects h1 {
-  color: #4CAF50;
+  color: #ffffff;
   font-size: 2.2rem;
   margin-bottom: 10px;
+}
+
+#projects p {
+  color: #cccccc; /* Light gray paragraph text */
 }
 
 .project-gallery {
@@ -358,11 +363,12 @@ permalink: /projects/
 }
 
 .project-card {
-  background: white;
+  background: #2c2c2c; /* Darker card background */
+  color: white;
   padding: 20px;
   border-radius: 10px;
   width: 280px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   transition: transform 0.3s ease;
 }
 
@@ -373,12 +379,12 @@ permalink: /projects/
 .project-card h3 {
   margin-bottom: 10px;
   font-size: 1.1rem;
-  color: #333;
+  color: #ffffff;
 }
 
 .project-card p {
   font-size: 0.9rem;
-  color: #666;
+  color: #dddddd;
   margin-bottom: 10px;
 }
 
