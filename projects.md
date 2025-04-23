@@ -10,25 +10,30 @@ permalink: /projects/
 
   <div class="project-gallery">
 
-    <div class="project-card">
-      <h3>📓 Chest CT Scan CNN – Notebook</h3>
-      <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Chest_CT_Scan_CNN.ipynb" target="_blank">View Notebook</a>
-    </div>
+   <!-- Notebook 1 -->
+<div class="project-card">
+  <h3>📓 Chest CT Scan CNN – Notebook</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Chest%20CT%20Scan%20CNN.ipynb" target="_blank">View Notebook</a>
+</div>
 
-    <div class="project-card">
-      <h3>📓 Chest CT Scan CNN – Final Notebook</h3>
-      <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Chest_CT_Scan_CNN-Final.ipynb" target="_blank">View Notebook</a>
-    </div>
+<!-- Notebook 2 -->
+<div class="project-card">
+  <h3>📓 Chest CT Scan CNN – Final</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Chest%20CT%20Scan%20CNN-Final.ipynb" target="_blank">View Notebook</a>
+</div>
 
-    <div class="project-card">
-      <h3>📄 Chest CT Scan CNN – Final (Colab PDF)</h3>
-      <a href="https://raw.githubusercontent.com/DataForSolution/DataForSolution.github.io/main/projects/Chest_CT-Scan-CNN-Final.ipynb%20-%20Colab.pdf" target="_blank">View PDF</a>
-    </div>
+<!-- PDF 1 -->
+<div class="project-card">
+  <h3>📄 Chest CT Scan CNN – Final (Colab PDF)</h3>
+  <a href="https://raw.githubusercontent.com/DataForSolution/DataForSolution.github.io/main/projects/Chest%20CT-Scan%20CNN-Final.ipynb%20-%20Colab.pdf" target="_blank">View PDF</a>
+</div>
 
-    <div class="project-card">
-      <h3>📄 CT Scan Deep Learning (PDF)</h3>
-      <a href="https://raw.githubusercontent.com/DataForSolution/DataForSolution.github.io/main/projects/Chest_Cancer_Detection_Deep_Learning_CT_Scan.pdf" target="_blank">View PDF</a>
-    </div>
+<!-- PDF 2 -->
+<div class="project-card">
+  <h3>📄 CT Scan Deep Learning (PDF)</h3>
+  <a href="https://raw.githubusercontent.com/DataForSolution/DataForSolution.github.io/main/projects/Chest%20Cancer%20Detection%20Deep%20Learning%20CT%20Scan.pdf" target="_blank">View PDF</a>
+</div>
+
 
     <div class="project-card" title="Uses CNN for lung cancer detection">
       <h3>🧠 Chest CT Scan Cancer Detection (CNN)</h3>
