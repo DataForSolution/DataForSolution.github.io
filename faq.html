@@ -95,24 +95,24 @@ permalink: /faq/
     color: #00aaff;
 }
 
-/* ... your existing styles ... */
-
 .faq-answer {
     display: none;
     margin-top: 10px;
-    color: #ffffff !important; /* Force white text */
     background-color: #1e1e1e;
     padding: 10px;
     border-radius: 5px;
     transition: all 0.3s ease;
 }
 
-.faq-item.active .faq-answer {
-    display: block;
-    color: #ffffff !important; /* Reinforce visibility */
+/* Ensure text inside .faq-answer is white */
+.faq-answer,
+.faq-answer * {
+    color: #ffffff !important;
 }
 
-/* ... rest of your styles ... */
+.faq-item.active .faq-answer {
+    display: block;
+}
 
 /* Chatbot Styling */
 .chat-container {
@@ -191,18 +191,7 @@ permalink: /faq/
     color: #ffffff;
     text-decoration: underline;
 }
-<style>
-/* Force FAQ answer text to white */
-.faq-answer,
-.faq-answer p,
-.faq-item.active .faq-answer,
-.faq-item.active .faq-answer p {
-    color: #ffffff !important;
-}
 </style>
-
-</style>
-
 
 
 <script>
