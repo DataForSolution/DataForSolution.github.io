@@ -333,6 +333,57 @@ permalink: /projects/
   <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Use K-means for color compression with Python.ipynb" target="_blank">View Notebook</a>
 </div>
 
+<h2 style="color: #4CAF50;">📚 E-Books & Resources</h2>
+<div class="project-gallery">
+
+  <div class="project-card">
+    <h3>📘 FairML Book - Data 460</h3>
+    <a href="https://raw.githubusercontent.com/DataForSolution/DataForSolution.github.io/main/projects/Book-Data-460-fairmlbook.pdf" target="_blank">View PDF</a>
+  </div>
+
+  <div class="project-card">
+    <h3>📘 Deep Learning with Python (2nd Edition)</h3>
+    <a href="https://raw.githubusercontent.com/DataForSolution/DataForSolution.github.io/main/projects/Book-Deep%20Learning%20with%20Python,%202nd%20Edition.pdf" target="_blank">View PDF</a>
+  </div>
+
+  <div class="project-card">
+    <h3>📘 Deep Learning</h3>
+    <a href="https://raw.githubusercontent.com/DataForSolution/DataForSolution.github.io/main/projects/Book-Deep%20Learning.pdf" target="_blank">View PDF</a>
+  </div>
+
+  <div class="project-card">
+    <h3>📘 The Little SAS Book – Exercises and Projects</h3>
+    <a href="https://raw.githubusercontent.com/DataForSolution/DataForSolution.github.io/main/projects/Book-Exercises%20and%20Projects%20for%20The%20Little%20SAS%20Book.epub" target="_blank">View EPUB</a>
+  </div>
+
+  <div class="project-card">
+    <h3>📘 Hands-On ML with Scikit-Learn, Keras & TensorFlow (3rd Ed.)</h3>
+    <a href="https://raw.githubusercontent.com/DataForSolution/DataForSolution.github.io/main/projects/Book-Hands-On%20Machine%20Learning%20with%20Scikit-Learn,%20Keras,%20and%20TensorFlow,%203rd%20Edition.pdf" target="_blank">View PDF</a>
+  </div>
+
+  <div class="project-card">
+    <h3>📘 Machine Learning with Scikit-Learn, Keras & TensorFlow</h3>
+    <a href="https://raw.githubusercontent.com/DataForSolution/DataForSolution.github.io/main/projects/Book-Machine%20Learning%20with%20Scikit-Learn,%20Keras,%20and%20TensorFlow.pdf" target="_blank">View PDF</a>
+  </div>
+
+  <div class="project-card">
+    <h3>📘 Python for Data Analysis (Ch. 1–2)</h3>
+    <a href="https://raw.githubusercontent.com/DataForSolution/DataForSolution.github.io/main/projects/Book-Python%20for%20Data%20Analysis,%203rd%20Edition%20(first%20two%20chapters%20only)%20(Wes%20McKinney%20.epub" target="_blank">View EPUB</a>
+  </div>
+
+  <div class="project-card">
+    <h3>📘 The Elements of Statistical Learning (2nd Ed.)</h3>
+    <a href="https://raw.githubusercontent.com/DataForSolution/DataForSolution.github.io/main/projects/Book-The%20Elements%20of%20Statistical%20Learning,%202nd%20Ed..pdf" target="_blank">View PDF</a>
+  </div>
+
+  <div class="project-card">
+    <h3>📘 Breast Cancer Wisconsin – Colab Notebook (PDF)</h3>
+    <a href="https://raw.githubusercontent.com/DataForSolution/DataForSolution.github.io/main/projects/Breast%20Cancer%20Wisconsin.ipynb%20-%20Colab.pdf" target="_blank">View PDF</a>
+  </div>
+
+</div>
+
+
   </div>
 </section>
 
