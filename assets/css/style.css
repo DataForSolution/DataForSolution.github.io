@@ -298,3 +298,18 @@ nav ul li a:hover, nav a.active {
 .ebook-item a.cta-button:hover {
   background-color: #388e3c; /* Darker green on hover */
 }
+/* ================================== */
+/* E-BOOK TITLES FIX */
+/* ================================== */
+
+.ebook-item h3 {
+  color: #ffffff !important; /* <<< Force white title */
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+.ebook-item h3:hover {
+  color: #4CAF50;
+  text-decoration: underline;
+}
