@@ -34,20 +34,23 @@ section {
 /* ================================== */
 /* NAVIGATION */
 /* ================================== */
-
 nav {
   background-color: #ffffff;
   padding: 15px 0;
   text-align: center;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 5; /* <<< Very important: keep nav on top of video */
 }
 
 nav ul {
   list-style: none;
-  display: flex;
-  justify-content: center;
   margin: 0;
   padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* allow wrapping if needed on smaller screens */
 }
 
 nav ul li {
