@@ -23,14 +23,11 @@ p, li {
   color: #dddddd;
   font-size: 1.05em;
 }
-
 section {
-  padding: 80px 20px;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  padding: 60px 20px;
+  min-height: auto; /* <<< no full screen force */
+  display: block;   /* <<< natural layout */
+  background-color: transparent;
   text-align: center;
 }
 
