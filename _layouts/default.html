@@ -51,7 +51,8 @@
 
   {% include navigation.html %}
 
-  {% if page.title == "Home" %}
+  {% if page.url == "/" %}
+
     <div id="home-background">
       <video autoplay loop muted playsinline>
         <source src="{{ '/assets/videos/background-video.mp4' | relative_url }}" type="video/mp4">
