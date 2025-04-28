@@ -238,4 +238,49 @@ nav ul li a:hover, nav a.active {
     padding: 20px;
   }
 }
+/* ================================== */
+/* E-BOOKS GALLERY SECTION */
+/* ================================== */
+
+.ebook-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  margin-top: 40px;
+}
+
+.ebook-item {
+  background: #1e1e1e;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  text-align: center;
+}
+.ebook-item:hover {
+  box-shadow: 0 0 20px rgba(76, 175, 80, 0.5); /* Soft green glow */
+  transform: translateY(-5px);
+  transition: box-shadow 0.4s ease, transform 0.4s ease;
+}
+
+.ebook-item img {
+  width: 100%;
+  max-width: 200px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+}
+
+.ebook-item h3 {
+  color: #ffffff; /* <<< Now the book title will be bright white */
+  margin-bottom: 10px;
+}
+.ebook-item h3:hover {
+  color: #4CAF50; /* Light green on hover */
+  text-decoration: underline;
+  transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+.ebook-item a.cta-button {
+  display: inline-block;
+  margin-top: 10px;
+}
+
 
