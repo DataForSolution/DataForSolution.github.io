@@ -46,21 +46,10 @@
   }
   </script>
 </head>
-
 <body style="display: flex; flex-direction: column; min-height: 100vh;">
-
+  
   {% include navigation.html %}
-
-  {% if page.url == "/" %}
-
-    <div id="home-background">
-      <video autoplay loop muted playsinline>
-        <source src="{{ '/assets/videos/background-video.mp4' | relative_url }}" type="video/mp4">
-        <img src="{{ '/assets/images/video-fallback.jpg' | relative_url }}" alt="Background Image">
-      </video>
-    </div>
-  {% endif %}
-
+  
   <main style="max-width: 1200px; margin: auto; padding: 2rem 20px; flex-grow: 1; background: transparent;">
     <div class="page-content">
       {{ content }}
@@ -74,4 +63,5 @@
     </p>
   </footer>
 </body>
+
 </html>
