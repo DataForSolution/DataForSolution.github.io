@@ -23,15 +23,14 @@ permalink: /toolkits/
 </div>
 
 ---
-
 ## 📚 Cheat Sheets for Quick Reference {#cheat-sheets}
 
 <ul class="cheat-sheet-list">
-  <li>🐍 <a href="{{ '/toolkits/cheatsheet/Python_Cheat_Sheet.pdf' | relative_url }}" target="_blank">Python Basics</a></li>
-  <li>🔢 <a href="{{ '/toolkits/cheatsheet/NumPy_Cheat_Sheet.pdf' | relative_url }}" target="_blank">NumPy Cheat Sheet</a></li>
-  <li>📊 <a href="{{ '/toolkits/cheatsheet/Pandas_Cheat_Sheet.pdf' | relative_url }}" target="_blank">Pandas Cheat Sheet</a></li>
-  <li>📈 <a href="{{ '/toolkits/cheatsheet/Matplotlib_Cheat_Sheet.pdf' | relative_url }}" target="_blank">Matplotlib Cheat Sheet</a></li>
-  <li>🤖 <a href="{{ '/toolkits/cheatsheet/Scikit_Learn_Cheat_Sheet_Python.pdf' | relative_url }}" target="_blank">Scikit-Learn Cheat Sheet</a></li>
+  <li>🐍 <a href="/toolkits/cheatsheets/Python_Cheat_Sheet.pdf" target="_blank">Python Basics</a></li>
+  <li>🔢 <a href="/toolkits/cheatsheets/NumPy_Cheat_Sheet.pdf" target="_blank">NumPy Cheat Sheet</a></li>
+  <li>📊 <a href="/toolkits/cheatsheets/Pandas_Cheat_Sheet.pdf" target="_blank">Pandas Cheat Sheet</a></li>
+  <li>📈 <a href="/toolkits/cheatsheets/Matplotlib_Cheat_Sheet.pdf" target="_blank">Matplotlib Cheat Sheet</a></li>
+  <li>🤖 <a href="/toolkits/cheatsheets/Scikit_Learn_Cheat_Sheet_Python.pdf" target="_blank">Scikit-Learn Cheat Sheet</a></li>
 </ul>
 
 ---
@@ -41,7 +40,7 @@ permalink: /toolkits/
 <div class="study-planners">
   <h3>🚀 Learn ML in 60 Days Roadmap</h3>
   <p>Structured weekly plan to become confident in Machine Learning.</p>
-  <a href="{{ '/assets/toolkits/ML_Study_Planner_60Days.pdf' | relative_url }}" target="_blank" class="cta-button">Download Study Planner</a>
+  <a href="/assets/toolkits/study_planners/ML_Study_Planner_60Days.pdf" target="_blank" class="cta-button">Download Study Planner</a>
 </div>
 
 ---
