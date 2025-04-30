@@ -1,57 +1,112 @@
-<nav>
-  <ul>
-    <li><a href="{{ '/' | relative_url }}">Home</a></li>
-    <li><a href="{{ '/about/' | relative_url }}">About</a></li>
-    <li><a href="{{ '/services/' | relative_url }}">Services</a></li>
-    <li><a href="{{ '/projects/' | relative_url }}">Projects</a></li>
-    <li class="dropdown">
-      <a href="{{ '/toolkits/' | relative_url }}">Toolkits</a>
-      <ul class="dropdown-menu">
-        <li><a href="{{ '/toolkits/#notebooks' }}">📓 Notebooks</a></li>
-        <li><a href="{{ '/toolkits/#cheat-sheets' }}">📚 Cheat Sheets</a></li>
-        <li><a href="{{ '/toolkits/#study-planners' }}">🗓️ Study Planners</a></li>
-        <li><a href="{{ '/toolkits/#interactive-demos' }}">🛠️ Interactive Demos</a></li>
-        <li><a href="{{ '/ebooks/' | relative_url }}">📘 E-Books</a></li>
-        <li><a href="{{ '/resources/' | relative_url }}">🧠 Resources</a></li>
-      </ul>
-    </li>
-    <li><a href="{{ '/media/' | relative_url }}">Media</a></li>
-    <li><a href="{{ '/blog/' | relative_url }}" class="{% if page.url == '/blog/' %}active{% endif %}">Blog</a></li>
-    <li><a href="{{ '/collaborate/' | relative_url }}">Collaborate</a></li>
-    <li><a href="{{ '/faq/' | relative_url }}">FAQ</a></li>
-    <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
-  </ul>
-</nav>
+---
+layout: default
+title: "Toolkits & Resources Hub"
+permalink: /toolkits/
+---
 
+<section id="toolkits" style="text-align:center; padding:50px 20px;">
+
+# 🧰 Toolkits & Study Resources
+
+<p>Welcome to the LLmachine Toolkits Hub! Explore free notebooks, cheat sheets, interactive demos, and study planners to accelerate your learning in AI, Machine Learning, and Data Science.</p>
+
+---
+
+## 📓 Starter Python Notebooks {#notebooks}
+
+<div class="toolkit-gallery">
+  <div class="toolkit-card">
+    <h3>🧠 CNN Starter Template</h3>
+    <p>Build your first Convolutional Neural Network for image classification.</p>
+    <a href="{{ '/toolkits/notebooks/Chest_CT-Scan_CNN_Project.ipynb' | relative_url }}" target="_blank" class="cta-button">View Notebook</a>
+  </div>
+</div>
+
+---
+
+## 📚 Cheat Sheets for Quick Reference {#cheat-sheets}
+
+<ul class="cheat-sheet-list">
+  <li>🐍 <a href="{{ '/toolkits/cheatsheet/Python_Cheat_Sheet.pdf' | relative_url }}" target="_blank">Python Basics</a></li>
+  <li>🔢 <a href="{{ '/toolkits/cheatsheet/NumPy_Cheat_Sheet.pdf' | relative_url }}" target="_blank">NumPy Cheat Sheet</a></li>
+  <li>📊 <a href="{{ '/toolkits/cheatsheet/Pandas_Cheat_Sheet.pdf' | relative_url }}" target="_blank">Pandas Cheat Sheet</a></li>
+  <li>📈 <a href="{{ '/toolkits/cheatsheet/Matplotlib_Cheat_Sheet.pdf' | relative_url }}" target="_blank">Matplotlib Cheat Sheet</a></li>
+  <li>🤖 <a href="{{ '/toolkits/cheatsheet/Scikit_Learn_Cheat_Sheet_Python.pdf' | relative_url }}" target="_blank">Scikit-Learn Cheat Sheet</a></li>
+</ul>
+
+---
+
+## 🗓️ Study Planners {#study-planners}
+
+<div class="study-planners">
+  <h3>🚀 Learn ML in 60 Days Roadmap</h3>
+  <p>Structured weekly plan to become confident in Machine Learning.</p>
+  <a href="{{ '/assets/toolkits/ML_Study_Planner_60Days.pdf' | relative_url }}" target="_blank" class="cta-button">Download Study Planner</a>
+</div>
+
+---
+
+## 🛠️ Interactive Demos {#interactive-demos}
+
+<p>Coming soon: Try out interactive AI demos right in your browser!</p>
+<ul class="cheat-sheet-list">
+  <li>📄 Text Classification Demo</li>
+  <li>🖼️ Image Classification Demo</li>
+  <li>🤖 Mini Chatbot Assistant</li>
+</ul>
+
+</section>
+
+<!-- Simple CSS -->
 <style>
-/* Dropdown styling */
-nav ul li.dropdown {
-  position: relative;
+.toolkit-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
 }
-nav ul li .dropdown-menu {
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background: white;
-  padding: 10px 0;
+.toolkit-card {
+  background: #1e1e1e;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 280px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+.toolkit-card:hover {
+  transform: scale(1.05);
+}
+.cheat-sheet-list {
   list-style: none;
-  border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-  z-index: 1000;
-  min-width: 200px;
+  padding: 0;
+  margin-top: 20px;
 }
-nav ul li.dropdown:hover .dropdown-menu {
-  display: block;
+.cheat-sheet-list li {
+  margin: 10px 0;
+  font-size: 1.2em;
 }
-.dropdown-menu li a {
-  display: block;
-  padding: 8px 16px;
-  color: #222;
+.cheat-sheet-list a {
+  color: #4CAF50;
+  font-weight: bold;
   text-decoration: none;
-  font-size: 0.95rem;
 }
-.dropdown-menu li a:hover {
-  background-color: #f0f0f0;
+.study-planners {
+  margin-top: 30px;
+}
+.cta-button {
+  display: inline-block;
+  margin-top: 10px;
+  padding: 10px 18px;
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+.cta-button:hover {
+  background-color: #388e3c;
 }
 </style>
