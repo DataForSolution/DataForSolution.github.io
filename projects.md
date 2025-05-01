@@ -14,6 +14,56 @@ permalink: /projects/
     <p>AI model to detect cancer using CT scans.</p>
     <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/chest_ct_scan_Cancer_Detection_cnn.ipynb" target="_blank">View Project</a>
   </div>
+<!-- Project Cards -->
+<div class="project-card" data-topic="cnn">
+  <h3>📓 Chest CT Scan CNN – Notebook</h3>
+  <a href="https://raw.githubusercontent.com/DataForSolution/DataForSolution.github.io/main/projects/Chest_CT_Scan_CNN.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="cnn">
+  <h3>📓 Chest CT Scan CNN – Final</h3>
+  <a href="https://raw.githubusercontent.com/DataForSolution/DataForSolution.github.io/main/projects/Chest_CT_Scan_CNN-Final.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="cnn">
+  <h3>📄 Chest CT Scan CNN – Final (Colab PDF)</h3>
+  <a href="https://raw.githubusercontent.com/DataForSolution/DataForSolution.github.io/main/projects/Chest_CT-Scan_CNN-Final.ipynb%20-%20Colab.pdf" target="_blank">View PDF</a>
+</div>
+
+<div class="project-card" data-topic="cnn">
+  <h3>📄 CT Scan Deep Learning (PDF)</h3>
+  <a href="https://raw.githubusercontent.com/DataForSolution/DataForSolution.github.io/main/projects/Chest_Cancer_Detection_Deep_Learning_CT_Scan.pdf" target="_blank">View PDF</a>
+</div>
+
+<!-- Recommendation Section -->
+<div id="recommendations" style="margin-top: 2rem;"></div>
+
+<!-- Script to track clicks and show recommendations -->
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  // Track click & store data-topic
+  const cards = document.querySelectorAll(".project-card");
+  cards.forEach(card => {
+    card.addEventListener("click", () => {
+      const topic = card.getAttribute("data-topic");
+      if (topic) localStorage.setItem("lastViewedTopic", topic);
+    });
+  });
+
+  // Show recommendation
+  const lastTopic = localStorage.getItem("lastViewedTopic");
+  const box = document.getElementById("recommendations");
+
+  if (lastTopic === "cnn" && box) {
+    box.innerHTML = `
+      <h2>📌 Recommended for You</h2>
+      <p>Since you viewed a <strong>CNN</strong> project:</p>
+      <a href="/projects/#gan-project" class="cta-button">Explore GAN for Image Generation</a>
+    `;
+  }
+});
+</script>
+
 
   <div class="project-card" data-topic="security" title="Examines model vulnerability to crafted inputs">
     <h3>⚔️ Adversarial Attacks in ML</h3>
