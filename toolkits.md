@@ -46,17 +46,11 @@ permalink: /toolkits/
 ---
 ## 🛠️ Interactive Demos {#interactive-demos}
 
-<p>Try out live machine learning demos right here — no setup needed!</p>
+<p>Try live AI demos hosted securely on Hugging Face:</p>
 
-### 🧠 Emotion Detection Demo (Text Classification)
-
-<iframe
-  src="https://huggingface.co/spaces/Abirate/Emotion-Detection"
-  width="100%"
-  height="800"
-  frameborder="0"
-  loading="lazy"
-></iframe>
+<a href="https://huggingface.co/spaces/Abirate/Emotion-Detection" target="_blank" class="cta-button">
+  🧠 Try Emotion Detection Demo
+</a>
 
 </section>
 
