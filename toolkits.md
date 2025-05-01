@@ -48,9 +48,9 @@ permalink: /toolkits/
 
 <p>Try out live machine learning demos right here — no setup needed!</p>
 
-### 🧠 Sentiment Analysis Demo (Text Classification)
+### 🧠 Sentiment Analysis Demo
 
-<iframe src="https://huggingface.co/spaces/akhaliq/distilbert-base-uncased-emotion" width="100%" height="600px" frameborder="0"></iframe>
+<iframe src="https://huggingface.co/spaces/akhaliq/distilbert-base-uncased-emotion" width="100%" height="800px" frameborder="0" loading="lazy"></iframe>
 
 </section>
 
