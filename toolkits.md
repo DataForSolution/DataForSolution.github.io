@@ -44,15 +44,13 @@ permalink: /toolkits/
 </div>
 
 ---
-
 ## 🛠️ Interactive Demos {#interactive-demos}
 
-<p>Coming soon: Try out interactive AI demos right in your browser!</p>
-<ul class="cheat-sheet-list">
-  <li>📄 Text Classification Demo</li>
-  <li>🖼️ Image Classification Demo</li>
-  <li>🤖 Mini Chatbot Assistant</li>
-</ul>
+<p>Try out live machine learning demos right here — no setup needed!</p>
+
+### 🧠 Sentiment Analysis Demo (Text Classification)
+
+<iframe src="https://huggingface.co/spaces/akhaliq/distilbert-base-uncased-emotion" width="100%" height="600px" frameborder="0"></iframe>
 
 </section>
 
