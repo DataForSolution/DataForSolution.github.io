@@ -9,6 +9,17 @@ permalink: /projects/
   <p>Browse our collection of data science and AI projects:</p>
 
   <div class="project-gallery">
+   <h2 style="color:#4CAF50;">🔍 Search & Filter Projects</h2>
+
+<input type="text" id="searchInput" placeholder="Search projects by keyword..." style="width:100%; max-width:600px; padding:10px; border-radius:6px; border:1px solid #444; margin-bottom:20px; background:#1e1e1e; color:#fff;">
+
+<div id="filters" style="margin-bottom:20px;">
+  <button class="filter-btn" data-category="all">All</button>
+  <button class="filter-btn" data-category="notebook">📓 Notebooks</button>
+  <button class="filter-btn" data-category="script">📜 Scripts</button>
+  <button class="filter-btn" data-category="pdf">📄 PDFs</button>
+</div>
+
 <div class="project-card" data-topic="cnn" title="Uses CNN for lung cancer detection">
     <h3>🧠 Chest CT Scan Cancer Detection (CNN)</h3>
     <p>AI model to detect cancer using CT scans.</p>
@@ -813,6 +824,34 @@ document.addEventListener("DOMContentLoaded", function () {
 
   <div id="recommendations"></div>
 </section>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const input = document.getElementById("searchInput");
+  const buttons = document.querySelectorAll(".filter-btn");
+  const cards = document.querySelectorAll(".project-card");
+
+  // Text search
+  input.addEventListener("input", () => {
+    const keyword = input.value.toLowerCase();
+    cards.forEach(card => {
+      const text = card.innerText.toLowerCase();
+      card.style.display = text.includes(keyword) ? "block" : "none";
+    });
+  });
+
+  // Category filter
+  buttons.forEach(button => {
+    button.addEventListener("click", () => {
+      const selected = button.getAttribute("data-category");
+      cards.forEach(card => {
+        const category = card.getAttribute("data-category");
+        card.style.display = (selected === "all" || category === selected) ? "block" : "none";
+      });
+    });
+  });
+});
+</script>
+
 
 <script>
 document.addEventListener("DOMContentLoaded", function () {
