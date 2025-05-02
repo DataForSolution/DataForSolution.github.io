@@ -1,7 +1,14 @@
 <nav>
   <ul>
-    <li><a href="{{ '/' | relative_url }}">Home</a></li>
+    <li class="dropdown">
+  <a href="{{ '/' | relative_url }}">Home</a>
+  <ul class="dropdown-menu">
     <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+    <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
+    <li><a href="{{ '/faq/' | relative_url }}">FAQ</a></li>
+  </ul>
+</li>
+
     <li><a href="{{ '/services/' | relative_url }}">Services</a></li>
     <li><a href="{{ '/projects/' | relative_url }}">Projects</a></li>
     <li><a href="{{ '/ebooks/' | relative_url }}">E-Books</a></li> <!-- TOP LEVEL LINK -->
@@ -23,11 +30,10 @@
     </li>
 
     <li><a href="{{ '/resources/' | relative_url }}">Resources</a></li>
-    <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
     <li><a href="/media/">Media</a></li>
     <li><a href="{{ '/blog/' | relative_url }}" class="{% if page.url == '/blog/' %}active{% endif %}">Blog</a></li>
     <li><a href="{{ '/collaborate/' | relative_url }}">Collaborate</a></li>
-    <li><a href="{{ '/faq/' | relative_url }}">FAQ</a></li>
+    
   </ul>
 </nav>
 
