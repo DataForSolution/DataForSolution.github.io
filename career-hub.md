@@ -47,6 +47,48 @@ permalink: /career-hub/
       <li><a href="https://github.com/academic/awesome-datascience" target="_blank">Awesome Data Science GitHub</a></li>
       <li><a href="https://a16z.com/ai-playbook/" target="_blank">AI Playbook by a16z</a> – How to launch AI products</li>
     </ul>
+    <h2>🧠 AI Resume Analyzer</h2>
+<p>Paste your resume or project summary below. We'll instantly tell you what core AI/Data Science skills are included — and what might be missing.</p>
+
+<textarea id="resume-input" placeholder="Paste your resume or job summary here..." rows="10" style="width:100%; max-width:800px; background:#1c1c1c; color:#fff; border:1px solid #555; border-radius:6px; padding:12px; font-size:1rem;"></textarea>
+
+<br><br>
+<button onclick="analyzeResume()" class="cta-button">📊 Analyze</button>
+
+<div id="resume-analysis-result" style="margin-top: 2rem;"></div>
+
+<script>
+function analyzeResume() {
+  const text = document.getElementById("resume-input").value.toLowerCase();
+  const requiredSkills = [
+    "python", "pandas", "numpy", "scikit-learn", "tensorflow", "pytorch",
+    "nlp", "cnn", "rnn", "transformers", "sql", "aws", "docker",
+    "git", "linux", "machine learning", "deep learning",
+    "data visualization", "matplotlib", "seaborn"
+  ];
+
+  const found = [];
+  const missing = [];
+
+  requiredSkills.forEach(skill => {
+    if (text.includes(skill)) {
+      found.push(skill);
+    } else {
+      missing.push(skill);
+    }
+  });
+
+  document.getElementById("resume-analysis-result").innerHTML = `
+    <h3 style="color:#4CAF50;">✅ Skills Found (${found.length})</h3>
+    <p>${found.length ? found.join(', ') : 'None detected.'}</p>
+    <h3 style="color:#ff5252;">🚫 Skills Missing (${missing.length})</h3>
+    <p>${missing.join(', ')}</p>
+    <h3 style="color:#00BFFF;">💡 Recommendation</h3>
+    <p>Include projects, bullet points, or examples using these missing skills if relevant to your career goals.</p>
+  `;
+}
+</script>
+
   </div>
 </section>
 
