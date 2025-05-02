@@ -4,6 +4,8 @@ email: "kent.sew@gmail.com"
 description: >-
   Welcome to LLmachine, your hub for AI, data science, and analytics.
   Explore projects, insights, and professional research.
+author: "LLmachine Team"
+lang: en
 
 # Base URL & Site URL (For GitHub Pages)
 baseurl: ""  # Leave empty for GitHub Pages root
@@ -17,6 +19,18 @@ plugins:
   - jekyll-include-cache
   - jekyll-sitemap
   - jekyll-redirect-from
+
+# Social SEO (optional)
+twitter:
+  username: "@LLmachineAI"
+  card: summary_large_image
+
+seo:
+  type: website
+  name: LLmachine
+  twitter:
+    username: "@LLmachineAI"
+  image: /assets/images/social-card.png  # Optional: add a preview image here
 
 # Pagination
 paginate: 5
