@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://dataforsolution.github.io/sitemap.xml
