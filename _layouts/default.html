@@ -1,21 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="{{ site.lang | default: 'en' }}">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="LLmachine - AI, Data Science & Innovation">
-  <meta name="keywords" content="AI, Data Science, Machine Learning, Innovation, Analytics">
-  <meta name="author" content="LLmachine">
-  <title>{{ page.title | default: "LLmachine" }}</title>
 
-  <!-- SEO & Social -->
-  <meta property="og:title" content="LLmachine - AI, Data Science & Innovation">
-  <meta property="og:description" content="Explore AI, data science projects, and innovative solutions.">
-  <meta property="og:image" content="{{ '/assets/images/thumbnail.png' | relative_url }}">
-  <meta property="og:url" content="https://dataforsolution.github.io/">
-  <meta property="og:type" content="website">
-  <meta property="og:locale" content="en_US">
-  <meta name="twitter:card" content="summary_large_image">
+  {% seo %}  <!-- Auto-generates all SEO + social tags -->
+
+  <title>{{ page.title | default: site.title }}</title>
 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FNB09GQ72T"></script>
