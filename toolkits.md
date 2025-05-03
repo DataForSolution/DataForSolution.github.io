@@ -5,6 +5,11 @@ permalink: /toolkits/
 ---
 
 <section id="toolkits" style="text-align:center; padding:50px 20px;">
+## 🔗 Jump To
+[📓 Notebooks](#notebooks) • [📚 Cheat Sheets](#cheat-sheets) • [🗓️ Study Planner](#study-planners) • [🎓 Mini-Courses](#mini-courses) • [🛠️ Demos](#interactive-demos)
+
+---
+
 
 # 🧰 Toolkits & Study Resources
 
@@ -182,5 +187,15 @@ form textarea::placeholder {
   margin: auto;
   text-align: center;
 }
+.toolkit-gallery,
+.cheat-sheet-list,
+.mini-course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px 0;
+  text-align: left;
+}
+
 </style>
 
