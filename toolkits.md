@@ -26,11 +26,13 @@ permalink: /toolkits/
 ## 📚 Cheat Sheets for Quick Reference {#cheat-sheets}
 
 <ul class="cheat-sheet-list">
+  
   <li>🐍 <a href="/toolkits/cheatsheets/Python_Cheat_Sheet.pdf" target="_blank">Python Basics</a></li>
   <li>🔢 <a href="/toolkits/cheatsheets/NumPy_Cheat_Sheet.pdf" target="_blank">NumPy Cheat Sheet</a></li>
   <li>📊 <a href="/toolkits/cheatsheets/Pandas_Cheat_Sheet.pdf" target="_blank">Pandas Cheat Sheet</a></li>
   <li>📈 <a href="/toolkits/cheatsheets/Matplotlib_Cheat_Sheet.pdf" target="_blank">Matplotlib Cheat Sheet</a></li>
   <li>🤖 <a href="/toolkits/cheatsheets/Scikit_Learn_Cheat_Sheet_Python.pdf" target="_blank">Scikit-Learn Cheat Sheet</a></li>
+ 
 </ul>
 
 ---
@@ -44,6 +46,50 @@ permalink: /toolkits/
 </div>
 
 ---
+---
+
+## 🎓 Mini-Courses & Learning Paths
+
+<p>Jumpstart your journey into Machine Learning, Deep Learning, and Data Science. Each course includes hands-on notebooks or Colab links — no setup required.</p>
+
+<div class="mini-course-grid">
+
+<div class="course-card">
+  <h3>📘 ML in 7 Days: Crash Course</h3>
+  <p><strong>Level:</strong> Beginner<br><strong>Duration:</strong> 7 Days</p>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/ML_7_Day_Crash_Course.ipynb" target="_blank">View Notebook</a> |
+  <a href="https://colab.research.google.com/github/DataForSolution/DataForSolution.github.io/blob/main/projects/ML_7_Day_Crash_Course.ipynb" target="_blank">Open in Colab</a>
+</div>
+
+<div class="course-card">
+  <h3>🧠 CNN with Python & Keras</h3>
+  <p><strong>Level:</strong> Beginner<br><strong>Duration:</strong> 4 Hours</p>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Chest_CT_Scan_CNN.ipynb" target="_blank">View Notebook</a> |
+  <a href="https://colab.research.google.com/github/DataForSolution/DataForSolution.github.io/blob/main/projects/Chest_CT_Scan_CNN.ipynb" target="_blank">Open in Colab</a>
+</div>
+
+<div class="course-card">
+  <h3>🎯 Decision Trees & SVM</h3>
+  <p><strong>Level:</strong> Beginner–Intermediate<br><strong>Duration:</strong> 3–4 Hours</p>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Build-a decision tree with Python.ipynb" target="_blank">Decision Tree</a> |
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/SVM_440.ipynb" target="_blank">SVM Notebook</a>
+</div>
+
+<div class="course-card">
+  <h3>🧬 GANs with CIFAR-10</h3>
+  <p><strong>Level:</strong> Intermediate<br><strong>Duration:</strong> 6 Hours</p>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/CIFAR10GAN_Final.ipynb" target="_blank">View Notebook</a> |
+  <a href="https://colab.research.google.com/github/DataForSolution/DataForSolution.github.io/blob/main/projects/CIFAR10GAN_Final.ipynb" target="_blank">Open in Colab</a>
+</div>
+
+<div class="course-card">
+  <h3>📄 Build an AI Resume</h3>
+  <p><strong>Level:</strong> All<br><strong>Duration:</strong> 1 Hour</p>
+  <a href="{{ '/career/resume-analyzer/' | relative_url }}">Use Resume Tool →</a>
+</div>
+
+</div>
+
 ## 🛠️ Interactive Demos {#interactive-demos}
 
 <p>Try live AI demos hosted securely on Hugging Face:</p>
@@ -53,57 +99,88 @@ permalink: /toolkits/
 </a>
 
 </section>
-
-<!-- Simple CSS -->
 <style>
-.toolkit-gallery {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  margin-top: 30px;
+#write-for-us {
+  padding: 60px 20px;
+  background-color: #222;
+  font-family: "Segoe UI", sans-serif;
+  color: #fff;
 }
-.toolkit-card {
-  background: #1e1e1e;
-  color: white;
-  padding: 20px;
-  border-radius: 10px;
-  width: 280px;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
-  transition: transform 0.3s ease;
-}
-.toolkit-card:hover {
-  transform: scale(1.05);
-}
-.cheat-sheet-list {
-  list-style: none;
-  padding: 0;
-  margin-top: 20px;
-}
-.cheat-sheet-list li {
-  margin: 10px 0;
-  font-size: 1.2em;
-}
-.cheat-sheet-list a {
+
+#write-for-us h1 {
   color: #4CAF50;
-  font-weight: bold;
-  text-decoration: none;
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
 }
-.study-planners {
-  margin-top: 30px;
+
+#write-for-us h2 {
+  color: #00BFFF;
+  margin-top: 2rem;
+  font-size: 1.6rem;
 }
-.cta-button {
-  display: inline-block;
+
+#write-for-us ul {
+  list-style: disc;
+  padding-left: 30px;
+  text-align: left;
+  max-width: 700px;
+  margin: auto;
+}
+
+#write-for-us p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 1rem auto;
+  color: #f0f0f0;
+}
+
+form {
+  max-width: 600px;
+  margin: 30px auto;
+  text-align: left;
+  background: #333;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.2);
+}
+
+form input, form textarea {
+  width: 100%;
+  padding: 12px;
   margin-top: 10px;
-  padding: 10px 18px;
+  margin-bottom: 20px;
+  border: 1px solid #555;
+  background-color: #111;
+  color: #fff;
+  border-radius: 6px;
+  font-size: 1rem;
+}
+
+form input::placeholder,
+form textarea::placeholder {
+  color: #aaa;
+}
+
+.cta-button {
   background-color: #4CAF50;
   color: white;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 8px;
-  transition: background-color 0.3s ease;
+  border: none;
+  padding: 12px 24px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
 }
+
 .cta-button:hover {
-  background-color: #388e3c;
+  background-color: #45a049;
+}
+
+.content-container {
+  max-width: 900px;
+  margin: auto;
+  text-align: center;
 }
 </style>
+
