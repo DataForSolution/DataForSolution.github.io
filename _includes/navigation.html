@@ -34,7 +34,14 @@
 
     <li><a href="{{ '/resources/' | relative_url }}">Resources</a></li>
     <li><a href="/media/">Media</a></li>
-    <li><a href="{{ '/blog/' | relative_url }}" class="{% if page.url == '/blog/' %}active{% endif %}">Blog</a></li>
+    <li class="dropdown">
+  <a href="{{ '/blog/' | relative_url }}">Blog ▾</a>
+  <ul class="dropdown-menu">
+    <li><a href="{{ '/blog/' | relative_url }}">📰 LLmachine Blog</a></li>
+    <li><a href="{{ '/current-ai-news/' | relative_url }}">🌐 Current AI News</a></li>
+  </ul>
+</li>
+
     <li><a href="{{ '/collaborate/' | relative_url }}">Collaborate</a></li>
     
   </ul>
