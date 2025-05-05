@@ -1,0 +1,80 @@
+
+---
+layout: default
+title: "AI & Data Science News"
+permalink: /blog/ai-news/
+---
+
+<section id="ai-news" style="padding: 60px 20px; text-align: center;">
+  <h1>📡 Live AI & Data Science News</h1>
+  <p>See real-time updates from leading AI research labs and data science communities.</p>
+
+  <div class="feed-box">
+    <h2>🔥 OpenAI Updates</h2>
+    <div class="rss-feed" data-url="https://openai.com/blog/rss.xml"></div>
+
+    <h2>📘 Towards Data Science</h2>
+    <div class="rss-feed" data-url="https://towardsdatascience.com/feed"></div>
+
+    <h2>🤗 Hugging Face Blog</h2>
+    <div class="rss-feed" data-url="https://huggingface.co/blog/rss.xml"></div>
+  </div>
+</section>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+  const feeds = document.querySelectorAll(".rss-feed");
+
+  feeds.forEach(feedEl => {
+    const feedURL = feedEl.dataset.url;
+
+    fetch(`https://api.rss2json.com/v1/api.json?rss_url=${encodeURIComponent(feedURL)}`)
+      .then(res => res.json())
+      .then(data => {
+        if (!data.items) {
+          feedEl.innerHTML = "<p>Unable to fetch feed.</p>";
+          return;
+        }
+
+        const items = data.items.slice(0, 5).map(item => `
+          <li>
+            <a href="${item.link}" target="_blank">${item.title}</a>
+            <span class="date"> – ${new Date(item.pubDate).toLocaleDateString()}</span>
+          </li>
+        `).join("");
+
+        feedEl.innerHTML = `<ul class="feed-list">${items}</ul>`;
+      })
+      .catch(() => {
+        feedEl.innerHTML = "<p>Feed failed to load.</p>";
+      });
+  });
+});
+</script>
+
+<style>
+.feed-box {
+  max-width: 800px;
+  margin: auto;
+  text-align: left;
+}
+.feed-list {
+  list-style: none;
+  padding-left: 0;
+}
+.feed-list li {
+  margin-bottom: 10px;
+}
+.feed-list a {
+  font-weight: bold;
+  color: #3498db;
+  text-decoration: none;
+}
+.feed-list a:hover {
+  text-decoration: underline;
+}
+.date {
+  font-size: 0.85em;
+  color: #888;
+}
+</style>
