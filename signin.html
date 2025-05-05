@@ -4,89 +4,81 @@ title: "Sign In"
 permalink: /signin/
 ---
 
-<section id="signin">
-    <h1>🔑 Sign In</h1>
-    <p>Welcome back! Please sign in to access your account.</p>
+<section id="signin" class="content-container">
+  <h1>🔑 Sign In</h1>
+  <p>Welcome back! Please sign in to access your account.</p>
 
-    <!-- Sign In Form -->
-    <form action="/dashboard/" method="GET">
-        <label for="email">📧 Email:</label>
-        <input type="email" id="email" name="email" required>
+  <form action="/dashboard/" method="GET">
+    <label for="email">📧 Email:</label>
+    <input type="email" id="email" name="email" required>
 
-        <label for="password">🔒 Password:</label>
-        <input type="password" id="password" name="password" required>
+    <label for="password">🔒 Password:</label>
+    <input type="password" id="password" name="password" required>
 
-        <button type="submit">Sign In</button>
-    </form>
-    
-    <p>Don't have an account? <a href="/signup/">Create an account here</a>.</p>
+    <button class="cta-button" type="submit">Sign In</button>
+  </form>
+
+  <p>Don't have an account? <a href="/signup/">Create an account here</a>.</p>
 </section>
 
 <style>
-    body {
-        font-family: Arial, sans-serif;
-        background-color: #f4f4f4;
-        margin: 0;
-        padding: 0;
-    }
+#signin {
+  padding: 40px 20px;
+  background: #1f1f1f;
+  color: #f9f9f9;
+  border-radius: 10px;
+  max-width: 500px;
+  margin: 40px auto;
+  box-shadow: 0 0 20px rgba(0,0,0,0.4);
+  text-align: center;
+}
 
-    section {
-        max-width: 400px;
-        margin: 20px auto;
-        padding: 20px;
-        text-align: center;
-        background-color: #ffffff;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        border-radius: 10px;
-    }
+#signin h1 {
+  color: #4CAF50;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
 
-    form {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
+#signin form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
 
-    label {
-        font-weight: bold;
-    }
+#signin label {
+  font-weight: bold;
+  color: #ddd;
+}
 
-    input {
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-    }
+#signin input {
+  padding: 10px;
+  border: 1px solid #444;
+  background-color: #111;
+  color: #fff;
+  border-radius: 5px;
+}
 
-    button {
-        padding: 10px;
-        background-color: #007BFF;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
+#signin .cta-button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px;
+  font-size: 1rem;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
 
-    button:hover {
-        background-color: #0056b3;
-    }
+#signin .cta-button:hover {
+  background-color: #45a049;
+}
 
-    a {
-        color: #007BFF;
-        text-decoration: none;
-        font-weight: bold;
-    }
+#signin a {
+  color: #00BFFF;
+  text-decoration: none;
+}
 
-    a:hover {
-        color: #0056b3;
-        text-decoration: underline;
-    }
-
-    h1 {
-        font-size: 1.8em;
-        color: #333;
-    }
-
-    p {
-        font-size: 1em;
-        color: #555;
-    }
+#signin a:hover {
+  text-decoration: underline;
+}
 </style>
