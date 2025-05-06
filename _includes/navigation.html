@@ -13,7 +13,16 @@
 </li>
 
     <li><a href="{{ '/services/' | relative_url }}">Services</a></li>
-    <li><a href="{{ '/projects/' | relative_url }}">Projects</a></li>
+    <li class="dropdown">
+  <a href="{{ '/projects/' | relative_url }}">Projects ▾</a>
+  <ul class="dropdown-menu">
+    <li><a href="{{ '/projects/#all' }}">📁 All Projects</a></li>
+    <li><a href="{{ '/projects/#notebooks' }}">📓 Notebooks</a></li>
+    <li><a href="{{ '/projects/#scripts' }}">📜 Scripts</a></li>
+    <li><a href="{{ '/projects/#pdfs' }}">📄 PDFs</a></li>
+  </ul>
+</li>
+
     <li><a href="{{ '/ebooks/' | relative_url }}">E-Books</a></li> <!-- TOP LEVEL LINK -->
 
     <!-- Toolkits Dropdown -->
