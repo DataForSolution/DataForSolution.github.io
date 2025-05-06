@@ -9,9 +9,11 @@ permalink: /dashboard/
   <p class="subtext">Manage your activity, explore resources, and stay productive.</p>
 
   <div class="dashboard-grid">
-  <hr>
-<h2 style="color:#4CAF50; margin-top:40px;">📌 Your Recent Projects</h2>
-<ul id="recent-projects" style="list-style: none; padding: 0; margin-top: 20px;"></ul>
+    <div class="dashboard-card wide">
+      <h3>📌 Your Recent Projects</h3>
+      <ul id="recent-projects"></ul>
+      <button onclick="clearRecentProjects()" class="card-button danger">🧹 Clear All</button>
+    </div>
 
     <div class="dashboard-card">
       <h3>🏠 Home</h3>
@@ -40,37 +42,48 @@ permalink: /dashboard/
 </section>
 
 <script>
-  function logoutUser() {
-    alert("You have been logged out.");
-    localStorage.removeItem("userLoggedIn");
-    window.location.href = "/";
-  }
- // Store last 5 clicked projects
+function logoutUser() {
+  alert("You have been logged out.");
+  localStorage.removeItem("userLoggedIn");
+  window.location.href = "/";
+}
+
 function storeRecentProject(title, url) {
   const history = JSON.parse(localStorage.getItem("recentProjects") || "[]");
   const updated = [{ title, url }, ...history.filter(p => p.url !== url)];
-  localStorage.setItem("recentProjects", JSON.stringify(updated.slice(0, 5)));
+  localStorage.setItem("recentProjects", JSON.stringify(updated.slice(0, 10)));
 }
 
-// Render them in dashboard
+function removeRecentProject(url) {
+  const projects = JSON.parse(localStorage.getItem("recentProjects") || "[]");
+  const filtered = projects.filter(p => p.url !== url);
+  localStorage.setItem("recentProjects", JSON.stringify(filtered));
+  showRecentProjects();
+}
+
+function clearRecentProjects() {
+  localStorage.removeItem("recentProjects");
+  showRecentProjects();
+}
+
 function showRecentProjects() {
   const container = document.getElementById("recent-projects");
   const items = JSON.parse(localStorage.getItem("recentProjects") || "[]");
 
-  if (items.length === 0) {
+  if (!items.length) {
     container.innerHTML = "<li>No recent activity yet.</li>";
     return;
   }
 
-  container.innerHTML = items.map(p =>
-    `<li style="margin-bottom:10px;">
-      <a href="${p.url}" target="_blank" style="color:#00BFFF;font-weight:bold;">${p.title}</a>
-    </li>`
-  ).join("");
+  container.innerHTML = items.map(p => `
+    <li>
+      <a href="${p.url}" target="_blank" title="Open project">${p.title}</a>
+      <button onclick="removeRecentProject('${p.url}')" title="Remove">❌</button>
+    </li>
+  `).join("");
 }
 
-showRecentProjects();
-
+document.addEventListener("DOMContentLoaded", showRecentProjects);
 </script>
 
 <style>
@@ -83,7 +96,6 @@ showRecentProjects();
 
 #dashboard h1 {
   font-size: 2.2em;
-  margin-bottom: 0.5em;
   color: #4CAF50;
 }
 
@@ -111,6 +123,10 @@ showRecentProjects();
 
 .dashboard-card:hover {
   transform: translateY(-5px);
+}
+
+.dashboard-card.wide {
+  grid-column: span 2;
 }
 
 .dashboard-card h3 {
@@ -147,5 +163,49 @@ showRecentProjects();
 
 .card-button.logout:hover {
   background-color: #c0392b;
+}
+
+.card-button.danger {
+  background-color: #555;
+  margin-top: 10px;
+}
+
+.card-button.danger:hover {
+  background-color: #777;
+}
+
+#recent-projects {
+  list-style: none;
+  padding: 0;
+  margin-top: 10px;
+  text-align: left;
+}
+
+#recent-projects li {
+  background: #333;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#recent-projects a {
+  color: #4FC3F7;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+#recent-projects a:hover {
+  text-decoration: underline;
+}
+
+#recent-projects button {
+  background: none;
+  border: none;
+  color: #ff4d4d;
+  font-size: 1.1em;
+  cursor: pointer;
 }
 </style>
