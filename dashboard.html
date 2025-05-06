@@ -9,6 +9,10 @@ permalink: /dashboard/
   <p class="subtext">Manage your activity, explore resources, and stay productive.</p>
 
   <div class="dashboard-grid">
+  <hr>
+<h2 style="color:#4CAF50; margin-top:40px;">📌 Your Recent Projects</h2>
+<ul id="recent-projects" style="list-style: none; padding: 0; margin-top: 20px;"></ul>
+
     <div class="dashboard-card">
       <h3>🏠 Home</h3>
       <p>Return to the main site and explore all features.</p>
@@ -41,6 +45,32 @@ permalink: /dashboard/
     localStorage.removeItem("userLoggedIn");
     window.location.href = "/";
   }
+ // Store last 5 clicked projects
+function storeRecentProject(title, url) {
+  const history = JSON.parse(localStorage.getItem("recentProjects") || "[]");
+  const updated = [{ title, url }, ...history.filter(p => p.url !== url)];
+  localStorage.setItem("recentProjects", JSON.stringify(updated.slice(0, 5)));
+}
+
+// Render them in dashboard
+function showRecentProjects() {
+  const container = document.getElementById("recent-projects");
+  const items = JSON.parse(localStorage.getItem("recentProjects") || "[]");
+
+  if (items.length === 0) {
+    container.innerHTML = "<li>No recent activity yet.</li>";
+    return;
+  }
+
+  container.innerHTML = items.map(p =>
+    `<li style="margin-bottom:10px;">
+      <a href="${p.url}" target="_blank" style="color:#00BFFF;font-weight:bold;">${p.title}</a>
+    </li>`
+  ).join("");
+}
+
+showRecentProjects();
+
 </script>
 
 <style>
