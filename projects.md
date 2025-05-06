@@ -5,49 +5,797 @@ permalink: /projects/
 ---
 
 <section id="projects">
-  <h1>📂 Project Library</h1>
-  <p>Browse our collection of data science and AI projects:</p>
+  <h1 style="color:#4CAF50;">📂 Project Library</h1>
+  <p style="color:#ccc; max-width:800px; margin:auto; margin-bottom:30px;">
+    Explore hands-on AI, ML, and Data Science projects across categories. Use the search bar or filters to find what interests you.
+  </p>
 
-  <div class="project-gallery">
-   <h2 style="color:#4CAF50;">🔍 Search & Filter Projects</h2>
+  <!-- 🔍 Search -->
+  <h2 style="color:#00BFFF;">🔍 Search & Filter Projects</h2>
+  <input
+    type="text"
+    id="searchInput"
+    placeholder="Search projects by keyword, topic, or title..."
+    style="width:100%; max-width:600px; padding:12px; border-radius:6px; border:1px solid #555; background:#1e1e1e; color:#fff; margin-bottom:20px;"
+  >
 
-<input type="text" id="searchInput" placeholder="Search projects by keyword..." style="width:100%; max-width:600px; padding:10px; border-radius:6px; border:1px solid #444; margin-bottom:20px; background:#1e1e1e; color:#fff;">
-
-<div id="filters" style="margin-bottom:20px;">
-  <button class="filter-btn" data-category="all">All</button>
-  <button class="filter-btn" data-category="notebook">📓 Notebooks</button>
-  <button class="filter-btn" data-category="script">📜 Scripts</button>
-  <button class="filter-btn" data-category="pdf">📄 PDFs</button>
-</div>
-
-<div class="project-card" data-topic="cnn" title="Uses CNN for lung cancer detection">
-    <h3>🧠 Chest CT Scan Cancer Detection (CNN)</h3>
-    <p>AI model to detect cancer using CT scans.</p>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/chest_ct_scan_Cancer_Detection_cnn.ipynb" target="_blank">View Project</a>
-  <a href="..." onclick="storeRecentProject('📓 Chest CT Scan CNN', this.href)">View Project</a>
-
+  <!-- 📁 Category Buttons -->
+  <div id="filters" style="margin-bottom:30px;">
+    <button class="filter-btn" data-category="all">📁 All</button>
+    <button class="filter-btn" data-category="notebook">📓 Notebooks</button>
+    <button class="filter-btn" data-category="script">📜 Scripts</button>
+    <button class="filter-btn" data-category="pdf">📄 PDFs</button>
   </div>
-<!-- Project Cards -->
-<div class="project-card" data-topic="cnn" data-category="notebook">
+
+  <!-- Usage Tips -->
+  <div style="background:#2a2a2a; color:#ddd; padding:15px 20px; border-radius:6px; max-width:800px; margin:auto; margin-bottom:30px;">
+    💡 <strong>Tip:</strong> Click a category above or use the search box to instantly filter projects. For example, try typing <code>cnn</code>, <code>regression</code>, or <code>healthcare</code>.
+  </div>
+
+  <!-- Project Cards Container -->
+ <!-- 📓 Notebooks -->
+<div class="project-card" data-category="notebook" data-topic="cnn" title="Uses CNN for lung cancer detection">
+  <h3>🧠 Chest CT Scan Cancer Detection (CNN)</h3>
+  <p>AI model to detect cancer using CT scans.</p>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/chest_ct_scan_Cancer_Detection_cnn.ipynb"
+     target="_blank"
+     onclick="storeRecentProject('🧠 Chest CT Scan Cancer Detection (CNN)', this.href)">
+     View Notebook
+  </a>
+</div>
+
+<div class="project-card" data-category="notebook" data-topic="cnn">
   <h3>📓 Chest CT Scan CNN – Notebook</h3>
-  <a href="..." target="_blank">View Notebook</a>
-  <a href="https://raw.githubusercontent.com/DataForSolution/DataForSolution.github.io/main/projects/Chest_CT_Scan_CNN.ipynb" target="_blank">View Notebook</a>
+  <a href="https://raw.githubusercontent.com/DataForSolution/DataForSolution.github.io/main/projects/Chest_CT_Scan_CNN.ipynb"
+     target="_blank"
+     onclick="storeRecentProject('📓 Chest CT Scan CNN – Notebook', this.href)">
+     View Notebook
+  </a>
 </div>
 
-<div class="project-card" data-topic="cnn">
+<div class="project-card" data-category="notebook" data-topic="cnn">
   <h3>📓 Chest CT Scan CNN – Final</h3>
-  <a href="https://raw.githubusercontent.com/DataForSolution/DataForSolution.github.io/main/projects/Chest_CT_Scan_CNN-Final.ipynb" target="_blank">View Notebook</a>
+  <a href="https://raw.githubusercontent.com/DataForSolution/DataForSolution.github.io/main/projects/Chest_CT_Scan_CNN-Final.ipynb"
+     target="_blank"
+     onclick="storeRecentProject('📓 Chest CT Scan CNN – Final', this.href)">
+     View Notebook
+  </a>
 </div>
 
-<div class="project-card" data-topic="cnn">
+<div class="project-card" data-category="notebook" data-topic="security" title="Examines model vulnerability to crafted inputs">
+  <h3>⚔️ Adversarial Attacks in ML</h3>
+  <p>Exploring model robustness and security in ML.</p>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Adversarial_Attacks.ipynb"
+     target="_blank"
+     onclick="storeRecentProject('⚔️ Adversarial Attacks in ML', this.href)">
+     View Notebook
+  </a>
+</div>
+
+<div class="project-card" data-category="notebook" data-topic="svm" title="Applies SVM for high-accuracy classification">
+  <h3>🔍 Support Vector Machine (SVM)</h3>
+  <p>Classifies data using a margin-optimized algorithm.</p>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/SVM_440.ipynb"
+     target="_blank"
+     onclick="storeRecentProject('🔍 Support Vector Machine (SVM)', this.href)">
+     View Notebook
+  </a>
+</div>
+
+<!-- 📜 Scripts -->
+<div class="project-card" data-category="script" data-topic="numpy">
+  <h3>📊 Activity: Arrays and Vectors with NumPy</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Activity_ Arrays and vectors with NumPy.py"
+     target="_blank"
+     onclick="storeRecentProject('📊 Activity: Arrays and Vectors with NumPy', this.href)">
+     View Script
+  </a>
+</div>
+ <!-- 📄 PDFs -->
+<div class="project-card" data-category="pdf" data-topic="cnn">
   <h3>📄 Chest CT Scan CNN – Final (Colab PDF)</h3>
-  <a href="https://raw.githubusercontent.com/DataForSolution/DataForSolution.github.io/main/projects/Chest_CT-Scan_CNN-Final.ipynb%20-%20Colab.pdf" target="_blank">View PDF</a>
+  <a href="https://raw.githubusercontent.com/DataForSolution/DataForSolution.github.io/main/projects/Chest_CT-Scan_CNN-Final.ipynb%20-%20Colab.pdf"
+     target="_blank"
+     onclick="storeRecentProject('📄 Chest CT Scan CNN – Final (Colab PDF)', this.href)">
+     View PDF
+  </a>
 </div>
 
-<div class="project-card" data-topic="cnn">
+<div class="project-card" data-category="pdf" data-topic="ct-scan">
   <h3>📄 CT Scan Deep Learning (PDF)</h3>
-  <a href="https://raw.githubusercontent.com/DataForSolution/DataForSolution.github.io/main/projects/Chest_Cancer_Detection_Deep_Learning_CT_Scan.pdf" target="_blank">View PDF</a>
+  <a href="https://raw.githubusercontent.com/DataForSolution/DataForSolution.github.io/main/projects/Chest_Cancer_Detection_Deep_Learning_CT_Scan.pdf"
+     target="_blank"
+     onclick="storeRecentProject('📄 CT Scan Deep Learning (PDF)', this.href)">
+     View PDF
+  </a>
 </div>
+<div class="project-card" data-topic="reinforcement" data-category="notebook">
+  <h3>🎮 Actor Critic Cartpole</h3>
+  <a 
+    href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/actor_critic_cartpole.ipynb"
+    target="_blank"
+    onclick="storeRecentProject('🎮 Actor Critic Cartpole', this.href)"
+  >View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="security" data-category="notebook">
+  <h3>🛡️ Adversarial Attacks (Original)</h3>
+  <a 
+    href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Adversarial_Attacks.ipynb"
+    target="_blank"
+    onclick="storeRecentProject('🛡️ Adversarial Attacks (Original)', this.href)"
+  >View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="security" data-category="notebook">
+  <h3>🛡️ Adversarial Attacks (Modified)</h3>
+  <a 
+    href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Adversarial_Attacks_modified-2.ipynb"
+    target="_blank"
+    onclick="storeRecentProject('🛡️ Adversarial Attacks (Modified)', this.href)"
+  >View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="security" data-category="notebook">
+  <h3>🛡️ Assign Adversarial Attacks</h3>
+  <a 
+    href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Assign_Adversarial_Attacks.ipynb"
+    target="_blank"
+    onclick="storeRecentProject('🛡️ Assign Adversarial Attacks', this.href)"
+  >View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="security" data-category="notebook">
+  <h3>🧠 Attack Defence (Imagenet v2.5)</h3>
+  <a 
+    href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/attack_defence_imagenet_v2.5.ipynb"
+    target="_blank"
+    onclick="storeRecentProject('🧠 Attack Defence (Imagenet v2.5)', this.href)"
+  >View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="security" data-category="notebook">
+  <h3>🧠 Attack Defence with Beagle (Final)</h3>
+  <a 
+    href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/attack_defence_imagenet_with_beagleFinal.ipynb"
+    target="_blank"
+    onclick="storeRecentProject('🧠 Attack Defence with Beagle (Final)', this.href)"
+  >View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="bayesian" data-category="notebook">
+  <h3>📈 Bayesian Classification</h3>
+  <a 
+    href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/BayesianClassification.ipynb"
+    target="_blank"
+    onclick="storeRecentProject('📈 Bayesian Classification', this.href)"
+  >View Notebook</a>
+</div>
+<div class="project-card" data-topic="healthcare" data-category="notebook">
+  <h3>🩺 Breast Cancer - Wisconsin Dataset</h3>
+  <a 
+    href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Breast Cancer Wisconsin.ipynb"
+    target="_blank"
+    onclick="storeRecentProject('🩺 Breast Cancer - Wisconsin Dataset', this.href)"
+  >View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="decision-tree" data-category="notebook">
+  <h3>🌳 Decision Tree (Simple)</h3>
+  <a 
+    href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Build a decision tree.ipynb"
+    target="_blank"
+    onclick="storeRecentProject('🌳 Decision Tree (Simple)', this.href)"
+  >View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="clustering" data-category="notebook">
+  <h3>🔵 K-Means Clustering</h3>
+  <a 
+    href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Build a K-means model.ipynb"
+    target="_blank"
+    onclick="storeRecentProject('🔵 K-Means Clustering', this.href)"
+  >View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="xgboost" data-category="notebook">
+  <h3>⚡ XGBoost Model with Python</h3>
+  <a 
+    href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Build an XGBoost model with Python.ipynb"
+    target="_blank"
+    onclick="storeRecentProject('⚡ XGBoost Model with Python', this.href)"
+  >View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="random-forest" data-category="notebook">
+  <h3>🌲 Random Forest (Cross-Validation)</h3>
+  <a 
+    href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Build and cross-validate a random forest model with Python.ipynb"
+    target="_blank"
+    onclick="storeRecentProject('🌲 Random Forest (Cross-Validation)', this.href)"
+  >View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="decision-tree" data-category="notebook">
+  <h3>🌳 Decision Tree with Python</h3>
+  <a 
+    href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Build-a decision tree with Python.ipynb"
+    target="_blank"
+    onclick="storeRecentProject('🌳 Decision Tree with Python', this.href)"
+  >View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="cnn" data-category="notebook">
+  <h3>🧠 Chest CT Scan (CNN Final)</h3>
+  <a 
+    href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Chest_CT_Scan_CNN-Final.ipynb"
+    target="_blank"
+    onclick="storeRecentProject('🧠 Chest CT Scan (CNN Final)', this.href)"
+  >View Notebook</a>
+</div>
+<div class="project-card" data-topic="image-analysis" data-category="notebook">
+  <h3>🖼️ CIFAR-10 Fake Image Analysis (Notebook)</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/cifar10_fake_images_analysis.ipynb" target="_blank">
+    View Notebook
+  </a>
+</div>
+
+<div class="project-card" data-topic="image-analysis" data-category="script">
+  <h3>🖼️ CIFAR-10 Fake Image Analysis (Python Script)</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/cifar10_fake_images_analysis.py" target="_blank">
+    View Script
+  </a>
+</div>
+
+<div class="project-card" data-topic="gan" data-category="notebook">
+  <h3>🧬 CIFAR-10 GAN Complete</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/CIFAR10GAN_Complete_.ipynb" target="_blank">
+    View Notebook
+  </a>
+</div>
+
+<div class="project-card" data-topic="gan" data-category="notebook">
+  <h3>🧬 CIFAR-10 GAN Complete (Alt)</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/CIFAR10GAN_Complete_1_.ipynb" target="_blank">
+    View Notebook
+  </a>
+</div>
+
+<div class="project-card" data-topic="gan" data-category="notebook">
+  <h3>🧬 CIFAR-10 GAN Final</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/CIFAR10GAN_Final.ipynb" target="_blank">
+    View Notebook
+  </a>
+</div>
+
+<div class="project-card" data-topic="naive-bayes" data-category="notebook">
+  <h3>📊 Naive Bayes Classifier</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Construct a Naive Bayes model with Python.ipynb" target="_blank">
+    View Notebook
+  </a>
+</div>
+
+<div class="project-card" data-topic="preprocessing" data-category="notebook">
+  <h3>🧪 Data Preprocessing: German Dataset</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/demo_optim_data_preproc_german.ipynb" target="_blank">
+    View Notebook
+  </a>
+</div>
+
+<div class="project-card" data-topic="mlp" data-category="notebook">
+  <h3>🧠 Preprocessing with MLP</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/demo_optim_data_preproc_MLP.ipynb" target="_blank">
+    View Notebook
+  </a>
+</div>
+<div class="project-card" data-topic="mlp" data-category="notebook">
+  <h3>📊 MLP with Plots</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/demo_optim_data_preproc_MLP_with_plots.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="random-forest" data-category="notebook">
+  <h3>🌲 Random Forest Preprocessing</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/demo_optim_data_preproc_RF.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="random-forest" data-category="notebook">
+  <h3>🌲 Random Forest with Plots</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/demo_optim_data_preproc_RF_with_plots.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="preprocessing" data-category="notebook">
+  <h3>🧪 Data Preprocessing v2</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/demo_optim_data_preproc_v2.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="decision-tree" data-category="notebook">
+  <h3>🌳 Decision Tree (1)</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/DicisionTree1.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="pyspark" data-category="notebook">
+  <h3>⚙️ EMR Glue with PySpark</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/EMR_Glue_PySpark.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="linear-regression" data-category="notebook">
+  <h3>📈 Simple Linear Regression (1)</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Evaluate simple linear regression.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="linear-regression" data-category="notebook">
+  <h3>📈 Simple Linear Regression (2)</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Evaluate-simple linear regression.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="neural-networks" data-category="notebook">
+  <h3>🧠 Explain a Neural Network Model</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Explain a Neural Network Mode.ipynb" target="_blank">View Notebook</a>
+</div>
+<div class="project-card" data-topic="anova" data-category="notebook">
+  <h3>📊 ANOVA Tests with Python</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Explore one-way versus two-way ANOVA tests with Python.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="hypothesis-testing" data-category="notebook">
+  <h3>📊 Hypothesis Testing (1)</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Hypothesis testing with Python (2).ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="hypothesis-testing" data-category="notebook">
+  <h3>📊 Hypothesis Testing (2)</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Hypothesis testing with Python.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="multiple-regression" data-category="notebook">
+  <h3>📈 Interpret Multiple Regression</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Interpret multiple regression results with Python.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="logistic-regression" data-category="notebook">
+  <h3>📉 Logistic Regression</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Logistic Regression.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="mlp" data-category="notebook">
+  <h3>🧠 MLP 440</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/MLP_440 (1).ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="gan" data-category="notebook">
+  <h3>🧬 Modified CIFAR-10 GAN</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/modified_CIFAR10GAN_notebook.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="feature-engineering" data-category="notebook">
+  <h3>⚙️ Feature Engineering</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Perform feature engineering.ipynb" target="_blank">View Notebook</a>
+</div>
+<div class="project-card" data-topic="multiple-regression" data-category="notebook">
+  <h3>📈 Multiple Linear Regression (1)</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Perform multiple linear regression.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="multiple-regression" data-category="notebook">
+  <h3>📈 Multiple Linear Regression (2)</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Perform-multiple linear regression.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="linear-regression" data-category="notebook">
+  <h3>📈 Run Simple Linear Regression</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Run-simple linear regression.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="business" data-category="notebook">
+  <h3>🚗 Salifort Motors Project Lab</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Salifort Motors project lab.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="python-script" data-category="script">
+  <h3>🔧 Set Webhook (Python Script)</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/set_webhook.py" target="_blank">View Script</a>
+</div>
+
+<div class="project-card" data-topic="svm" data-category="notebook">
+  <h3>🧠 SVM and Neural Network (MLB)</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/SVM and NN(MLB).ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="svm" data-category="notebook">
+  <h3>🧠 SVM 440</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/SVM_440.ipynb" target="_blank">View Notebook</a>
+</div>
+<div class="project-card" data-topic="security" data-category="notebook" title="Examines model vulnerability to crafted inputs">
+  <h3>⚔️ Adversarial Attacks in ML</h3>
+  <p>Exploring model robustness and security in ML.</p>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Adversarial_Attacks.ipynb" target="_blank">View Project</a>
+</div>
+
+<div class="project-card" data-topic="svm" data-category="notebook" title="Applies SVM for high-accuracy classification">
+  <h3>🔍 Support Vector Machine (SVM)</h3>
+  <p>Classifies data using a margin-optimized algorithm.</p>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/SVM_440.ipynb" target="_blank">View Project</a>
+</div>
+
+<div class="project-card" data-topic="numpy" data-category="script">
+  <h3>📊 Activity: Arrays and Vectors with NumPy</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Activity_ Arrays and vectors with NumPy.py" target="_blank">View Script</a>
+</div>
+
+<div class="project-card" data-topic="reinforcement" data-category="notebook">
+  <h3>🎮 Actor Critic Cartpole</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/actor_critic_cartpole.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="security" data-category="notebook">
+  <h3>🛡️ Adversarial Attacks (Original)</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Adversarial_Attacks.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="security" data-category="notebook">
+  <h3>🛡️ Adversarial Attacks (Modified)</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Adversarial_Attacks_modified-2.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="security" data-category="notebook">
+  <h3>🛡️ Assign Adversarial Attacks</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Assign_Adversarial_Attacks.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="security" data-category="notebook">
+  <h3>🧠 Attack Defence (Imagenet v2.5)</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/attack_defence_imagenet_v2.5.ipynb" target="_blank">View Notebook</a>
+</div>
+<div class="project-card" data-topic="security" data-category="notebook">
+  <h3>🧠 Attack Defence with Beagle (Final)</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/attack_defence_imagenet_with_beagleFinal.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="bayesian" data-category="notebook">
+  <h3>📈 Bayesian Classification</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/BayesianClassification.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="healthcare" data-category="notebook">
+  <h3>🩺 Breast Cancer - Wisconsin Dataset</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Breast Cancer Wisconsin.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="decision-tree" data-category="notebook">
+  <h3>🌳 Decision Tree (Simple)</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Build a decision tree.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="clustering" data-category="notebook">
+  <h3>🔵 K-Means Clustering</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Build a K-means model.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="xgboost" data-category="notebook">
+  <h3>⚡ XGBoost Model with Python</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Build an XGBoost model with Python.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="random-forest" data-category="notebook">
+  <h3>🌲 Random Forest (Cross-Validation)</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Build and cross-validate a random forest model with Python.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="decision-tree" data-category="notebook">
+  <h3>🌳 Decision Tree with Python</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Build-a decision tree with Python.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="cnn" data-category="notebook">
+  <h3>🧠 Chest CT Scan (CNN Final)</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Chest_CT_Scan_CNN-Final.ipynb" target="_blank">View Notebook</a>
+</div>
+<div class="project-card" data-topic="image-analysis" data-category="notebook">
+  <h3>🖼️ CIFAR-10 Fake Image Analysis (Notebook)</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/cifar10_fake_images_analysis.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="image-analysis" data-category="script">
+  <h3>🖼️ CIFAR-10 Fake Image Analysis (Python Script)</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/cifar10_fake_images_analysis.py" target="_blank">View Script</a>
+</div>
+
+<div class="project-card" data-topic="gan" data-category="notebook">
+  <h3>🧬 CIFAR-10 GAN Complete</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/CIFAR10GAN_Complete_.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="gan" data-category="notebook">
+  <h3>🧬 CIFAR-10 GAN Complete (Alt)</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/CIFAR10GAN_Complete_1_.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="gan" data-category="notebook">
+  <h3>🧬 CIFAR-10 GAN Final</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/CIFAR10GAN_Final.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="naive-bayes" data-category="notebook">
+  <h3>📊 Naive Bayes Classifier</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Construct a Naive Bayes model with Python.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="preprocessing" data-category="notebook">
+  <h3>🧪 Data Preprocessing: German Dataset</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/demo_optim_data_preproc_german.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="mlp" data-category="notebook">
+  <h3>🧠 Preprocessing with MLP</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/demo_optim_data_preproc_MLP.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="mlp" data-category="notebook">
+  <h3>📊 MLP with Plots</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/demo_optim_data_preproc_MLP_with_plots.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="random-forest" data-category="notebook">
+  <h3>🌲 Random Forest Preprocessing</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/demo_optim_data_preproc_RF.ipynb" target="_blank">View Notebook</a>
+</div>
+<div class="project-card" data-topic="random-forest" data-category="notebook">
+  <h3>🌲 Random Forest with Plots</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/demo_optim_data_preproc_RF_with_plots.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="preprocessing" data-category="notebook">
+  <h3>🧪 Data Preprocessing v2</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/demo_optim_data_preproc_v2.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="decision-tree" data-category="notebook">
+  <h3>🌳 Decision Tree (1)</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/DicisionTree1.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="pyspark" data-category="notebook">
+  <h3>⚙️ EMR Glue with PySpark</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/EMR_Glue_PySpark.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="linear-regression" data-category="notebook">
+  <h3>📈 Simple Linear Regression (1)</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Evaluate simple linear regression.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="linear-regression" data-category="notebook">
+  <h3>📈 Simple Linear Regression (2)</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Evaluate-simple linear regression.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="neural-networks" data-category="notebook">
+  <h3>🧠 Explain a Neural Network Model</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Explain a Neural Network Mode.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="anova" data-category="notebook">
+  <h3>📊 ANOVA Tests with Python</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Explore one-way versus two-way ANOVA tests with Python.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="hypothesis-testing" data-category="notebook">
+  <h3>📊 Hypothesis Testing (1)</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Hypothesis testing with Python (2).ipynb" target="_blank">View Notebook</a>
+</div>
+<div class="project-card" data-topic="hypothesis-testing" data-category="notebook">
+  <h3>📊 Hypothesis Testing (2)</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Hypothesis testing with Python.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="multiple-regression" data-category="notebook">
+  <h3>📈 Interpret Multiple Regression</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Interpret multiple regression results with Python.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="logistic-regression" data-category="notebook">
+  <h3>📉 Logistic Regression</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Logistic Regression.ipynb" target="_blank">View Notebook</a>
+</div>
+<div class="project-gallery">
+
+  <div class="project-card" data-topic="security" data-category="notebook">
+    <h3>⚔️ Adversarial Attacks in ML</h3>
+    <p>Exploring model robustness and security in ML.</p>
+    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Adversarial_Attacks.ipynb" target="_blank">View Project</a>
+  </div>
+
+  <div class="project-card" data-topic="svm" data-category="notebook">
+    <h3>🔍 Support Vector Machine (SVM)</h3>
+    <p>Classifies data using a margin-optimized algorithm.</p>
+    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/SVM_440.ipynb" target="_blank">View Project</a>
+  </div>
+
+  <div class="project-card" data-topic="numpy" data-category="script">
+    <h3>📊 Activity: Arrays and Vectors with NumPy</h3>
+    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Activity_ Arrays and vectors with NumPy.py" target="_blank">View Script</a>
+  </div>
+
+  <div class="project-card" data-topic="reinforcement" data-category="notebook">
+    <h3>🎮 Actor Critic Cartpole</h3>
+    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/actor_critic_cartpole.ipynb" target="_blank">View Notebook</a>
+  </div>
+
+  <div class="project-card" data-topic="security" data-category="notebook">
+    <h3>🛡️ Adversarial Attacks (Original)</h3>
+    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Adversarial_Attacks.ipynb" target="_blank">View Notebook</a>
+  </div>
+
+  <div class="project-card" data-topic="security" data-category="notebook">
+    <h3>🛡️ Adversarial Attacks (Modified)</h3>
+    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Adversarial_Attacks_modified-2.ipynb" target="_blank">View Notebook</a>
+  </div>
+
+  <div class="project-card" data-topic="security" data-category="notebook">
+    <h3>🛡️ Assign Adversarial Attacks</h3>
+    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Assign_Adversarial_Attacks.ipynb" target="_blank">View Notebook</a>
+  </div>
+
+  <div class="project-card" data-topic="security" data-category="notebook">
+    <h3>🧠 Attack Defence (Imagenet v2.5)</h3>
+    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/attack_defence_imagenet_v2.5.ipynb" target="_blank">View Notebook</a>
+  </div>
+
+  <div class="project-card" data-topic="security" data-category="notebook">
+    <h3>🧠 Attack Defence with Beagle (Final)</h3>
+    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/attack_defence_imagenet_with_beagleFinal.ipynb" target="_blank">View Notebook</a>
+  </div>
+
+  <div class="project-card" data-topic="bayesian" data-category="notebook">
+    <h3>📈 Bayesian Classification</h3>
+    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/BayesianClassification.ipynb" target="_blank">View Notebook</a>
+  </div>
+
+  <div class="project-card" data-topic="healthcare" data-category="notebook">
+    <h3>🩺 Breast Cancer - Wisconsin Dataset</h3>
+    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Breast Cancer Wisconsin.ipynb" target="_blank">View Notebook</a>
+  </div>
+
+  <div class="project-card" data-topic="decision-tree" data-category="notebook">
+    <h3>🌳 Decision Tree (Simple)</h3>
+    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Build a decision tree.ipynb" target="_blank">View Notebook</a>
+  </div>
+
+  <div class="project-card" data-topic="clustering" data-category="notebook">
+    <h3>🔵 K-Means Clustering</h3>
+    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Build a K-means model.ipynb" target="_blank">View Notebook</a>
+  </div>
+
+  <div class="project-card" data-topic="xgboost" data-category="notebook">
+    <h3>⚡ XGBoost Model with Python</h3>
+    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Build an XGBoost model with Python.ipynb" target="_blank">View Notebook</a>
+  </div>
+
+  <div class="project-card" data-topic="random-forest" data-category="notebook">
+    <h3>🌲 Random Forest (Cross-Validation)</h3>
+    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Build and cross-validate a random forest model with Python.ipynb" target="_blank">View Notebook</a>
+  </div>
+
+  <div class="project-card" data-topic="decision-tree" data-category="notebook">
+    <h3>🌳 Decision Tree with Python</h3>
+    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Build-a decision tree with Python.ipynb" target="_blank">View Notebook</a>
+  </div>
+
+  <div class="project-card" data-topic="cnn" data-category="notebook">
+    <h3>🧠 Chest CT Scan (CNN Final)</h3>
+    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Chest_CT_Scan_CNN-Final.ipynb" target="_blank">View Notebook</a>
+  </div>
+
+</div>
+<div class="project-card" data-topic="image-analysis" data-category="notebook">
+  <h3>🖼️ CIFAR-10 Fake Image Analysis (Notebook)</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/cifar10_fake_images_analysis.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="image-analysis" data-category="script">
+  <h3>🖼️ CIFAR-10 Fake Image Analysis (Python Script)</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/cifar10_fake_images_analysis.py" target="_blank">View Script</a>
+</div>
+
+<div class="project-card" data-topic="gan" data-category="notebook">
+  <h3>🧬 CIFAR-10 GAN Complete</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/CIFAR10GAN_Complete_.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="gan" data-category="notebook">
+  <h3>🧬 CIFAR-10 GAN Complete (Alt)</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/CIFAR10GAN_Complete_1_.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="gan" data-category="notebook">
+  <h3>🧬 CIFAR-10 GAN Final</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/CIFAR10GAN_Final.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="naive-bayes" data-category="notebook">
+  <h3>📊 Naive Bayes Classifier</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Construct a Naive Bayes model with Python.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="preprocessing" data-category="notebook">
+  <h3>🧪 Data Preprocessing: German Dataset</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/demo_optim_data_preproc_german.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="mlp" data-category="notebook">
+  <h3>🧠 Preprocessing with MLP</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/demo_optim_data_preproc_MLP.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="mlp" data-category="notebook">
+  <h3>📊 MLP with Plots</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/demo_optim_data_preproc_MLP_with_plots.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="random-forest" data-category="notebook">
+  <h3>🌲 Random Forest Preprocessing</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/demo_optim_data_preproc_RF.ipynb" target="_blank">View Notebook</a>
+</div>
+<div class="project-card" data-topic="random-forest" data-category="notebook">
+  <h3>🌲 Random Forest with Plots</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/demo_optim_data_preproc_RF_with_plots.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="preprocessing" data-category="notebook">
+  <h3>🧪 Data Preprocessing v2</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/demo_optim_data_preproc_v2.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="decision-tree" data-category="notebook">
+  <h3>🌳 Decision Tree (1)</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/DicisionTree1.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="pyspark" data-category="notebook">
+  <h3>⚙️ EMR Glue with PySpark</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/EMR_Glue_PySpark.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="linear-regression" data-category="notebook">
+  <h3>📈 Simple Linear Regression (1)</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Evaluate simple linear regression.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="linear-regression" data-category="notebook">
+  <h3>📈 Simple Linear Regression (2)</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Evaluate-simple linear regression.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="neural-networks" data-category="notebook">
+  <h3>🧠 Explain a Neural Network Model</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Explain a Neural Network Mode.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="anova" data-category="notebook">
+  <h3>📊 ANOVA Tests with Python</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Explore one-way versus two-way ANOVA tests with Python.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="hypothesis-testing" data-category="notebook">
+  <h3>📊 Hypothesis Testing (1)</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Hypothesis testing with Python (2).ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="hypothesis-testing" data-category="notebook">
+  <h3>📊 Hypothesis Testing (2)</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Hypothesis testing with Python.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="multiple-regression" data-category="notebook">
+  <h3>📈 Interpret Multiple Regression</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Interpret multiple regression results with Python.ipynb" target="_blank">View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="logistic-regression" data-category="notebook">
+  <h3>📉 Logistic Regression</h3>
+  <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Logistic Regression.ipynb" target="_blank">View Notebook</a>
+</div>
+
 
 <!-- Recommendation Section -->
 <div id="recommendations" style="margin-top: 2rem;"></div>
@@ -79,306 +827,7 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 
-  <div class="project-card" data-topic="security" title="Examines model vulnerability to crafted inputs">
-    <h3>⚔️ Adversarial Attacks in ML</h3>
-    <p>Exploring model robustness and security in ML.</p>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Adversarial_Attacks.ipynb" target="_blank">View Project</a>
-  </div>
-
-  <div class="project-card" data-topic="svm" title="Applies SVM for high-accuracy classification">
-    <h3>🔍 Support Vector Machine (SVM)</h3>
-    <p>Classifies data using a margin-optimized algorithm.</p>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/SVM_440.ipynb" target="_blank">View Project</a>
-  </div>
-
-  <div class="project-card" data-topic="numpy">
-    <h3>📊 Activity: Arrays and Vectors with NumPy</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Activity_ Arrays and vectors with NumPy.py" target="_blank">View Script</a>
-  </div>
-
-  <div class="project-card" data-topic="reinforcement">
-  <h3>🎮 Actor Critic Cartpole</h3>
-  <a 
-    href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/actor_critic_cartpole.ipynb"
-    target="_blank"
-    onclick="storeRecentProject('🎮 Actor Critic Cartpole', this.href)"
-  >View Notebook</a>
-</div>
-
-<div class="project-card" data-topic="security">
-  <h3>🛡️ Adversarial Attacks (Original)</h3>
-  <a 
-    href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Adversarial_Attacks.ipynb"
-    target="_blank"
-    onclick="storeRecentProject('🛡️ Adversarial Attacks (Original)', this.href)"
-  >View Notebook</a>
-</div>
-
-<div class="project-card" data-topic="security">
-  <h3>🛡️ Adversarial Attacks (Modified)</h3>
-  <a 
-    href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Adversarial_Attacks_modified-2.ipynb"
-    target="_blank"
-    onclick="storeRecentProject('🛡️ Adversarial Attacks (Modified)', this.href)"
-  >View Notebook</a>
-</div>
-
-<div class="project-card" data-topic="security">
-  <h3>🛡️ Assign Adversarial Attacks</h3>
-  <a 
-    href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Assign_Adversarial_Attacks.ipynb"
-    target="_blank"
-    onclick="storeRecentProject('🛡️ Assign Adversarial Attacks', this.href)"
-  >View Notebook</a>
-</div>
-
-    <h3>🧠 Attack Defence (Imagenet v2.5)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/attack_defence_imagenet_v2.5.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="security">
-  <h3>🧠 Attack Defence with Beagle (Final)</h3>
-  <a 
-    href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/attack_defence_imagenet_with_beagleFinal.ipynb"
-    target="_blank"
-    onclick="storeRecentProject('🧠 Attack Defence with Beagle (Final)', this.href)"
-  >View Notebook</a>
-</div>
-
-<div class="project-card" data-topic="bayesian">
-  <h3>📈 Bayesian Classification</h3>
-  <a 
-    href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/BayesianClassification.ipynb"
-    target="_blank"
-    onclick="storeRecentProject('📈 Bayesian Classification', this.href)"
-  >View Notebook</a>
-</div>
-
-<div class="project-card" data-topic="healthcare">
-  <h3>🩺 Breast Cancer - Wisconsin Dataset</h3>
-  <a 
-    href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Breast Cancer Wisconsin.ipynb"
-    target="_blank"
-    onclick="storeRecentProject('🩺 Breast Cancer - Wisconsin Dataset', this.href)"
-  >View Notebook</a>
-</div>
-
-<div class="project-card" data-topic="decision-tree">
-  <h3>🌳 Decision Tree (Simple)</h3>
-  <a 
-    href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Build a decision tree.ipynb"
-    target="_blank"
-    onclick="storeRecentProject('🌳 Decision Tree (Simple)', this.href)"
-  >View Notebook</a>
-</div>
-
- <div class="project-card" data-topic="clustering">
-  <h3>🔵 K-Means Clustering</h3>
-  <a 
-    href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Build a K-means model.ipynb"
-    target="_blank"
-    onclick="storeRecentProject('🔵 K-Means Clustering', this.href)"
-  >View Notebook</a>
-</div>
-
-<div class="project-card" data-topic="xgboost">
-  <h3>⚡ XGBoost Model with Python</h3>
-  <a 
-    href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Build an XGBoost model with Python.ipynb"
-    target="_blank"
-    onclick="storeRecentProject('⚡ XGBoost Model with Python', this.href)"
-  >View Notebook</a>
-</div>
-
-<div class="project-card" data-topic="random-forest">
-  <h3>🌲 Random Forest (Cross-Validation)</h3>
-  <a 
-    href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Build and cross-validate a random forest model with Python.ipynb"
-    target="_blank"
-    onclick="storeRecentProject('🌲 Random Forest (Cross-Validation)', this.href)"
-  >View Notebook</a>
-</div>
-
-<div class="project-card" data-topic="decision-tree">
-  <h3>🌳 Decision Tree with Python</h3>
-  <a 
-    href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Build-a decision tree with Python.ipynb"
-    target="_blank"
-    onclick="storeRecentProject('🌳 Decision Tree with Python', this.href)"
-  >View Notebook</a>
-</div>
-
-<div class="project-card" data-topic="cnn">
-  <h3>🧠 Chest CT Scan (CNN Final)</h3>
-  <a 
-    href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Chest_CT_Scan_CNN-Final.ipynb"
-    target="_blank"
-    onclick="storeRecentProject('🧠 Chest CT Scan (CNN Final)', this.href)"
-  >View Notebook</a>
-</div>
-
-
-  <div class="project-card" data-topic="image-analysis">
-    <h3>🖼️ CIFAR-10 Fake Image Analysis (Notebook)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/cifar10_fake_images_analysis.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="image-analysis">
-    <h3>🖼️ CIFAR-10 Fake Image Analysis (Python Script)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/cifar10_fake_images_analysis.py" target="_blank">View Script</a>
-  </div>
-
-  <div class="project-card" data-topic="gan">
-    <h3>🧬 CIFAR-10 GAN Complete</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/CIFAR10GAN_Complete_.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="gan">
-    <h3>🧬 CIFAR-10 GAN Complete (Alt)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/CIFAR10GAN_Complete_1_.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="gan">
-    <h3>🧬 CIFAR-10 GAN Final</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/CIFAR10GAN_Final.ipynb" target="_blank">View Notebook</a>
-    <div class="project-card" data-topic="naive-bayes">
-    <h3>📊 Naive Bayes Classifier</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Construct a Naive Bayes model with Python.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="preprocessing">
-    <h3>🧪 Data Preprocessing: German Dataset</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/demo_optim_data_preproc_german.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="mlp">
-    <h3>🧠 Preprocessing with MLP</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/demo_optim_data_preproc_MLP.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="mlp">
-    <h3>📊 MLP with Plots</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/demo_optim_data_preproc_MLP_with_plots.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="random-forest">
-    <h3>🌲 Random Forest Preprocessing</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/demo_optim_data_preproc_RF.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="random-forest">
-    <h3>🌲 Random Forest with Plots</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/demo_optim_data_preproc_RF_with_plots.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="preprocessing">
-    <h3>🧪 Data Preprocessing v2</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/demo_optim_data_preproc_v2.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="decision-tree">
-    <h3>🌳 Decision Tree (1)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/DicisionTree1.ipynb" target="_blank">View Notebook</a>
-    <div class="project-card" data-topic="pyspark">
-    <h3>⚙️ EMR Glue with PySpark</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/EMR_Glue_PySpark.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="linear-regression">
-    <h3>📈 Simple Linear Regression (1)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Evaluate simple linear regression.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="linear-regression">
-    <h3>📈 Simple Linear Regression (2)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Evaluate-simple linear regression.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="neural-networks">
-    <h3>🧠 Explain a Neural Network Model</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Explain a Neural Network Mode.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="anova">
-    <h3>📊 ANOVA Tests with Python</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Explore one-way versus two-way ANOVA tests with Python.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="hypothesis-testing">
-    <h3>📊 Hypothesis Testing (1)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Hypothesis testing with Python (2).ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="hypothesis-testing">
-    <h3>📊 Hypothesis Testing (2)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Hypothesis testing with Python.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="multiple-regression">
-    <h3>📈 Interpret Multiple Regression</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Interpret multiple regression results with Python.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="logistic-regression">
-    <h3>📉 Logistic Regression</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Logistic Regression.ipynb" target="_blank">View Notebook</a>
-    <div class="project-card" data-topic="mlp">
-    <h3>🧠 MLP 440</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/MLP_440 (1).ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="gan">
-    <h3>🧬 Modified CIFAR-10 GAN</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/modified_CIFAR10GAN_notebook.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="feature-engineering">
-    <h3>⚙️ Feature Engineering</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Perform feature engineering.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="multiple-regression">
-    <h3>📈 Multiple Linear Regression (1)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Perform multiple linear regression.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="multiple-regression">
-    <h3>📈 Multiple Linear Regression (2)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Perform-multiple linear regression.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="linear-regression">
-    <h3>📈 Run Simple Linear Regression</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Run-simple linear regression.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="business">
-    <h3>🚗 Salifort Motors Project Lab</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Salifort Motors project lab.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="python-script">
-    <h3>🔧 Set Webhook (Python Script)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/set_webhook.py" target="_blank">View Script</a>
-  </div>
-
-  <div class="project-card" data-topic="svm">
-    <h3>🧠 SVM and Neural Network (MLB)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/SVM and NN(MLB).ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="svm">
-    <h3>🧠 SVM 440</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/SVM_440.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
+  
 
   <div id="recommendations"></div>
 </section>
@@ -440,204 +889,6 @@ document.addEventListener("DOMContentLoaded", function () {
 }
 </style>
 
-<div class="project-card" data-topic="security" title="Examines model vulnerability to crafted inputs">
-    <h3>⚔️ Adversarial Attacks in ML</h3>
-    <p>Exploring model robustness and security in ML.</p>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Adversarial_Attacks.ipynb" target="_blank">View Project</a>
-  </div>
-
-  <div class="project-card" data-topic="svm" title="Applies SVM for high-accuracy classification">
-    <h3>🔍 Support Vector Machine (SVM)</h3>
-    <p>Classifies data using a margin-optimized algorithm.</p>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/SVM_440.ipynb" target="_blank">View Project</a>
-  </div>
-
-  <div class="project-card" data-topic="numpy">
-    <h3>📊 Activity: Arrays and Vectors with NumPy</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Activity_ Arrays and vectors with NumPy.py" target="_blank">View Script</a>
-  </div>
-
-  
-
-  <div class="project-card" data-topic="reinforcement">
-    <h3>🎮 Actor Critic Cartpole</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/actor_critic_cartpole.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="security">
-    <h3>🛡️ Adversarial Attacks (Original)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Adversarial_Attacks.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="security">
-    <h3>🛡️ Adversarial Attacks (Modified)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Adversarial_Attacks_modified-2.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="security">
-    <h3>🛡️ Assign Adversarial Attacks</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Assign_Adversarial_Attacks.ipynb" target="_blank">View Notebook</a>
-    <div class="project-card" data-topic="security">
-    <h3>🧠 Attack Defence (Imagenet v2.5)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/attack_defence_imagenet_v2.5.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="security">
-    <h3>🧠 Attack Defence with Beagle (Final)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/attack_defence_imagenet_with_beagleFinal.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="bayesian">
-    <h3>📈 Bayesian Classification</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/BayesianClassification.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="healthcare">
-    <h3>🩺 Breast Cancer - Wisconsin Dataset</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Breast Cancer Wisconsin.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="decision-tree">
-    <h3>🌳 Decision Tree (Simple)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Build a decision tree.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="clustering">
-    <h3>🔵 K-Means Clustering</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Build a K-means model.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="xgboost">
-    <h3>⚡ XGBoost Model with Python</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Build an XGBoost model with Python.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="random-forest">
-    <h3>🌲 Random Forest (Cross-Validation)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Build and cross-validate a random forest model with Python.ipynb" target="_blank">View Notebook</a>
-    <div class="project-card" data-topic="decision-tree">
-    <h3>🌳 Decision Tree with Python</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Build-a decision tree with Python.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="cnn">
-    <h3>🧠 Chest CT Scan (CNN Final)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Chest_CT_Scan_CNN-Final.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="image-analysis">
-    <h3>🖼️ CIFAR-10 Fake Image Analysis (Notebook)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/cifar10_fake_images_analysis.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="image-analysis">
-    <h3>🖼️ CIFAR-10 Fake Image Analysis (Python Script)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/cifar10_fake_images_analysis.py" target="_blank">View Script</a>
-  </div>
-
-  <div class="project-card" data-topic="gan">
-    <h3>🧬 CIFAR-10 GAN Complete</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/CIFAR10GAN_Complete_.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="gan">
-    <h3>🧬 CIFAR-10 GAN Complete (Alt)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/CIFAR10GAN_Complete_1_.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="gan">
-    <h3>🧬 CIFAR-10 GAN Final</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/CIFAR10GAN_Final.ipynb" target="_blank">View Notebook</a>
-    <div class="project-card" data-topic="naive-bayes">
-    <h3>📊 Naive Bayes Classifier</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Construct a Naive Bayes model with Python.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="preprocessing">
-    <h3>🧪 Data Preprocessing: German Dataset</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/demo_optim_data_preproc_german.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="mlp">
-    <h3>🧠 Preprocessing with MLP</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/demo_optim_data_preproc_MLP.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="mlp">
-    <h3>📊 MLP with Plots</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/demo_optim_data_preproc_MLP_with_plots.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="random-forest">
-    <h3>🌲 Random Forest Preprocessing</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/demo_optim_data_preproc_RF.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="random-forest">
-    <h3>🌲 Random Forest with Plots</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/demo_optim_data_preproc_RF_with_plots.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="preprocessing">
-    <h3>🧪 Data Preprocessing v2</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/demo_optim_data_preproc_v2.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="decision-tree">
-    <h3>🌳 Decision Tree (1)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/DicisionTree1.ipynb" target="_blank">View Notebook</a>
-    <div class="project-card" data-topic="pyspark">
-    <h3>⚙️ EMR Glue with PySpark</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/EMR_Glue_PySpark.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="linear-regression">
-    <h3>📈 Simple Linear Regression (1)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Evaluate simple linear regression.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="linear-regression">
-    <h3>📈 Simple Linear Regression (2)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Evaluate-simple linear regression.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="neural-networks">
-    <h3>🧠 Explain a Neural Network Model</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Explain a Neural Network Mode.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="anova">
-    <h3>📊 ANOVA Tests with Python</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Explore one-way versus two-way ANOVA tests with Python.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="hypothesis-testing">
-    <h3>📊 Hypothesis Testing (1)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Hypothesis testing with Python (2).ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="hypothesis-testing">
-    <h3>📊 Hypothesis Testing (2)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Hypothesis testing with Python.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="multiple-regression">
-    <h3>📈 Interpret Multiple Regression</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Interpret multiple regression results with Python.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="logistic-regression">
-    <h3>📉 Logistic Regression</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Logistic Regression.ipynb" target="_blank">View Notebook</a>
-    
-
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
 
   <div id="recommendations"></div>
 </section>
@@ -680,205 +931,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   }
 });
- <div class="project-card" data-topic="security" title="Examines model vulnerability to crafted inputs">
-    <h3>⚔️ Adversarial Attacks in ML</h3>
-    <p>Exploring model robustness and security in ML.</p>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Adversarial_Attacks.ipynb" target="_blank">View Project</a>
-  </div>
-
-  <div class="project-card" data-topic="svm" title="Applies SVM for high-accuracy classification">
-    <h3>🔍 Support Vector Machine (SVM)</h3>
-    <p>Classifies data using a margin-optimized algorithm.</p>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/SVM_440.ipynb" target="_blank">View Project</a>
-  </div>
-
-  <div class="project-card" data-topic="numpy">
-    <h3>📊 Activity: Arrays and Vectors with NumPy</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Activity_ Arrays and vectors with NumPy.py" target="_blank">View Script</a>
-  </div>
-
-  
-
-  <div class="project-card" data-topic="reinforcement">
-    <h3>🎮 Actor Critic Cartpole</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/actor_critic_cartpole.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="security">
-    <h3>🛡️ Adversarial Attacks (Original)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Adversarial_Attacks.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="security">
-    <h3>🛡️ Adversarial Attacks (Modified)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Adversarial_Attacks_modified-2.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="security">
-    <h3>🛡️ Assign Adversarial Attacks</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Assign_Adversarial_Attacks.ipynb" target="_blank">View Notebook</a>
-    <div class="project-card" data-topic="security">
-    <h3>🧠 Attack Defence (Imagenet v2.5)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/attack_defence_imagenet_v2.5.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="security">
-    <h3>🧠 Attack Defence with Beagle (Final)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/attack_defence_imagenet_with_beagleFinal.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="bayesian">
-    <h3>📈 Bayesian Classification</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/BayesianClassification.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="healthcare">
-    <h3>🩺 Breast Cancer - Wisconsin Dataset</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Breast Cancer Wisconsin.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="decision-tree">
-    <h3>🌳 Decision Tree (Simple)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Build a decision tree.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="clustering">
-    <h3>🔵 K-Means Clustering</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Build a K-means model.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="xgboost">
-    <h3>⚡ XGBoost Model with Python</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Build an XGBoost model with Python.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="random-forest">
-    <h3>🌲 Random Forest (Cross-Validation)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Build and cross-validate a random forest model with Python.ipynb" target="_blank">View Notebook</a>
-    <div class="project-card" data-topic="decision-tree">
-    <h3>🌳 Decision Tree with Python</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Build-a decision tree with Python.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="cnn">
-    <h3>🧠 Chest CT Scan (CNN Final)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Chest_CT_Scan_CNN-Final.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="image-analysis">
-    <h3>🖼️ CIFAR-10 Fake Image Analysis (Notebook)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/cifar10_fake_images_analysis.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="image-analysis">
-    <h3>🖼️ CIFAR-10 Fake Image Analysis (Python Script)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/cifar10_fake_images_analysis.py" target="_blank">View Script</a>
-  </div>
-
-  <div class="project-card" data-topic="gan">
-    <h3>🧬 CIFAR-10 GAN Complete</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/CIFAR10GAN_Complete_.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="gan">
-    <h3>🧬 CIFAR-10 GAN Complete (Alt)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/CIFAR10GAN_Complete_1_.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="gan">
-    <h3>🧬 CIFAR-10 GAN Final</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/CIFAR10GAN_Final.ipynb" target="_blank">View Notebook</a>
-    <div class="project-card" data-topic="naive-bayes">
-    <h3>📊 Naive Bayes Classifier</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Construct a Naive Bayes model with Python.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="preprocessing">
-    <h3>🧪 Data Preprocessing: German Dataset</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/demo_optim_data_preproc_german.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="mlp">
-    <h3>🧠 Preprocessing with MLP</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/demo_optim_data_preproc_MLP.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="mlp">
-    <h3>📊 MLP with Plots</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/demo_optim_data_preproc_MLP_with_plots.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="random-forest">
-    <h3>🌲 Random Forest Preprocessing</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/demo_optim_data_preproc_RF.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="random-forest">
-    <h3>🌲 Random Forest with Plots</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/demo_optim_data_preproc_RF_with_plots.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="preprocessing">
-    <h3>🧪 Data Preprocessing v2</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/demo_optim_data_preproc_v2.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="decision-tree">
-    <h3>🌳 Decision Tree (1)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/DicisionTree1.ipynb" target="_blank">View Notebook</a>
-    <div class="project-card" data-topic="pyspark">
-    <h3>⚙️ EMR Glue with PySpark</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/EMR_Glue_PySpark.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="linear-regression">
-    <h3>📈 Simple Linear Regression (1)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Evaluate simple linear regression.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="linear-regression">
-    <h3>📈 Simple Linear Regression (2)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Evaluate-simple linear regression.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="neural-networks">
-    <h3>🧠 Explain a Neural Network Model</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Explain a Neural Network Mode.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="anova">
-    <h3>📊 ANOVA Tests with Python</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Explore one-way versus two-way ANOVA tests with Python.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="hypothesis-testing">
-    <h3>📊 Hypothesis Testing (1)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Hypothesis testing with Python (2).ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="hypothesis-testing">
-    <h3>📊 Hypothesis Testing (2)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Hypothesis testing with Python.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="multiple-regression">
-    <h3>📈 Interpret Multiple Regression</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Interpret multiple regression results with Python.ipynb" target="_blank">View Notebook</a>
-  </div>
-
-  <div class="project-card" data-topic="logistic-regression">
-    <h3>📉 Logistic Regression</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Logistic Regression.ipynb" target="_blank">View Notebook</a>
-    
-
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-</div>
-
+ 
   <div id="recommendations"></div>
 </section>
 <script>
