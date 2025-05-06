@@ -24,10 +24,13 @@ permalink: /projects/
     <h3>🧠 Chest CT Scan Cancer Detection (CNN)</h3>
     <p>AI model to detect cancer using CT scans.</p>
     <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/chest_ct_scan_Cancer_Detection_cnn.ipynb" target="_blank">View Project</a>
+  <a href="..." onclick="storeRecentProject('📓 Chest CT Scan CNN', this.href)">View Project</a>
+
   </div>
 <!-- Project Cards -->
-<div class="project-card" data-topic="cnn">
+<div class="project-card" data-topic="cnn" data-category="notebook">
   <h3>📓 Chest CT Scan CNN – Notebook</h3>
+  <a href="..." target="_blank">View Notebook</a>
   <a href="https://raw.githubusercontent.com/DataForSolution/DataForSolution.github.io/main/projects/Chest_CT_Scan_CNN.ipynb" target="_blank">View Notebook</a>
 </div>
 
@@ -93,73 +96,127 @@ document.addEventListener("DOMContentLoaded", function () {
     <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Activity_ Arrays and vectors with NumPy.py" target="_blank">View Script</a>
   </div>
 
-  
-
   <div class="project-card" data-topic="reinforcement">
-    <h3>🎮 Actor Critic Cartpole</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/actor_critic_cartpole.ipynb" target="_blank">View Notebook</a>
-  </div>
+  <h3>🎮 Actor Critic Cartpole</h3>
+  <a 
+    href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/actor_critic_cartpole.ipynb"
+    target="_blank"
+    onclick="storeRecentProject('🎮 Actor Critic Cartpole', this.href)"
+  >View Notebook</a>
+</div>
 
-  <div class="project-card" data-topic="security">
-    <h3>🛡️ Adversarial Attacks (Original)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Adversarial_Attacks.ipynb" target="_blank">View Notebook</a>
-  </div>
+<div class="project-card" data-topic="security">
+  <h3>🛡️ Adversarial Attacks (Original)</h3>
+  <a 
+    href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Adversarial_Attacks.ipynb"
+    target="_blank"
+    onclick="storeRecentProject('🛡️ Adversarial Attacks (Original)', this.href)"
+  >View Notebook</a>
+</div>
 
-  <div class="project-card" data-topic="security">
-    <h3>🛡️ Adversarial Attacks (Modified)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Adversarial_Attacks_modified-2.ipynb" target="_blank">View Notebook</a>
-  </div>
+<div class="project-card" data-topic="security">
+  <h3>🛡️ Adversarial Attacks (Modified)</h3>
+  <a 
+    href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Adversarial_Attacks_modified-2.ipynb"
+    target="_blank"
+    onclick="storeRecentProject('🛡️ Adversarial Attacks (Modified)', this.href)"
+  >View Notebook</a>
+</div>
 
-  <div class="project-card" data-topic="security">
-    <h3>🛡️ Assign Adversarial Attacks</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Assign_Adversarial_Attacks.ipynb" target="_blank">View Notebook</a>
-    <div class="project-card" data-topic="security">
+<div class="project-card" data-topic="security">
+  <h3>🛡️ Assign Adversarial Attacks</h3>
+  <a 
+    href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Assign_Adversarial_Attacks.ipynb"
+    target="_blank"
+    onclick="storeRecentProject('🛡️ Assign Adversarial Attacks', this.href)"
+  >View Notebook</a>
+</div>
+
     <h3>🧠 Attack Defence (Imagenet v2.5)</h3>
     <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/attack_defence_imagenet_v2.5.ipynb" target="_blank">View Notebook</a>
   </div>
 
   <div class="project-card" data-topic="security">
-    <h3>🧠 Attack Defence with Beagle (Final)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/attack_defence_imagenet_with_beagleFinal.ipynb" target="_blank">View Notebook</a>
-  </div>
+  <h3>🧠 Attack Defence with Beagle (Final)</h3>
+  <a 
+    href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/attack_defence_imagenet_with_beagleFinal.ipynb"
+    target="_blank"
+    onclick="storeRecentProject('🧠 Attack Defence with Beagle (Final)', this.href)"
+  >View Notebook</a>
+</div>
 
-  <div class="project-card" data-topic="bayesian">
-    <h3>📈 Bayesian Classification</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/BayesianClassification.ipynb" target="_blank">View Notebook</a>
-  </div>
+<div class="project-card" data-topic="bayesian">
+  <h3>📈 Bayesian Classification</h3>
+  <a 
+    href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/BayesianClassification.ipynb"
+    target="_blank"
+    onclick="storeRecentProject('📈 Bayesian Classification', this.href)"
+  >View Notebook</a>
+</div>
 
-  <div class="project-card" data-topic="healthcare">
-    <h3>🩺 Breast Cancer - Wisconsin Dataset</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Breast Cancer Wisconsin.ipynb" target="_blank">View Notebook</a>
-  </div>
+<div class="project-card" data-topic="healthcare">
+  <h3>🩺 Breast Cancer - Wisconsin Dataset</h3>
+  <a 
+    href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Breast Cancer Wisconsin.ipynb"
+    target="_blank"
+    onclick="storeRecentProject('🩺 Breast Cancer - Wisconsin Dataset', this.href)"
+  >View Notebook</a>
+</div>
 
-  <div class="project-card" data-topic="decision-tree">
-    <h3>🌳 Decision Tree (Simple)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Build a decision tree.ipynb" target="_blank">View Notebook</a>
-  </div>
+<div class="project-card" data-topic="decision-tree">
+  <h3>🌳 Decision Tree (Simple)</h3>
+  <a 
+    href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Build a decision tree.ipynb"
+    target="_blank"
+    onclick="storeRecentProject('🌳 Decision Tree (Simple)', this.href)"
+  >View Notebook</a>
+</div>
 
-  <div class="project-card" data-topic="clustering">
-    <h3>🔵 K-Means Clustering</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Build a K-means model.ipynb" target="_blank">View Notebook</a>
-  </div>
+ <div class="project-card" data-topic="clustering">
+  <h3>🔵 K-Means Clustering</h3>
+  <a 
+    href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Build a K-means model.ipynb"
+    target="_blank"
+    onclick="storeRecentProject('🔵 K-Means Clustering', this.href)"
+  >View Notebook</a>
+</div>
 
-  <div class="project-card" data-topic="xgboost">
-    <h3>⚡ XGBoost Model with Python</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Build an XGBoost model with Python.ipynb" target="_blank">View Notebook</a>
-  </div>
+<div class="project-card" data-topic="xgboost">
+  <h3>⚡ XGBoost Model with Python</h3>
+  <a 
+    href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Build an XGBoost model with Python.ipynb"
+    target="_blank"
+    onclick="storeRecentProject('⚡ XGBoost Model with Python', this.href)"
+  >View Notebook</a>
+</div>
 
-  <div class="project-card" data-topic="random-forest">
-    <h3>🌲 Random Forest (Cross-Validation)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Build and cross-validate a random forest model with Python.ipynb" target="_blank">View Notebook</a>
-    <div class="project-card" data-topic="decision-tree">
-    <h3>🌳 Decision Tree with Python</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Build-a decision tree with Python.ipynb" target="_blank">View Notebook</a>
-  </div>
+<div class="project-card" data-topic="random-forest">
+  <h3>🌲 Random Forest (Cross-Validation)</h3>
+  <a 
+    href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Build and cross-validate a random forest model with Python.ipynb"
+    target="_blank"
+    onclick="storeRecentProject('🌲 Random Forest (Cross-Validation)', this.href)"
+  >View Notebook</a>
+</div>
 
-  <div class="project-card" data-topic="cnn">
-    <h3>🧠 Chest CT Scan (CNN Final)</h3>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Chest_CT_Scan_CNN-Final.ipynb" target="_blank">View Notebook</a>
-  </div>
+<div class="project-card" data-topic="decision-tree">
+  <h3>🌳 Decision Tree with Python</h3>
+  <a 
+    href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Build-a decision tree with Python.ipynb"
+    target="_blank"
+    onclick="storeRecentProject('🌳 Decision Tree with Python', this.href)"
+  >View Notebook</a>
+</div>
+
+<div class="project-card" data-topic="cnn">
+  <h3>🧠 Chest CT Scan (CNN Final)</h3>
+  <a 
+    href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Chest_CT_Scan_CNN-Final.ipynb"
+    target="_blank"
+    onclick="storeRecentProject('🧠 Chest CT Scan (CNN Final)', this.href)"
+  >View Notebook</a>
+</div>
+
 
   <div class="project-card" data-topic="image-analysis">
     <h3>🖼️ CIFAR-10 Fake Image Analysis (Notebook)</h3>
