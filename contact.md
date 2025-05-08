@@ -4,182 +4,150 @@ title: "Contact & Portfolio"
 permalink: /contact/
 ---
 
-<section id="contact">
-    <h1>Contact & Portfolio</h1>
+<section id="contact" style="background-color: #1f1f1f; color: #fff; padding: 60px 20px;">
+  <h1 style="text-align: center; color: #4CAF50;">📬 Contact & Portfolio</h1>
+  <p style="max-width: 800px; margin: auto; text-align: center; font-size: 1.1rem;">
+    Let’s collaborate, build something amazing, or simply connect! I’m always open to freelance projects, research, training opportunities, and data storytelling work.
+  </p>
+
+  <!-- Profile -->
+  <div class="profile-section">
+    <img src="{{ '/assets/images/lissan-profile.jpg' | relative_url }}" alt="Lissan" class="profile-pic">
+    <h2>Lissan</h2>
+    <p>Data Scientist | PET/CT Imaging Specialist | AI Developer</p>
     <p>
-        Have questions or want to collaborate? Feel free to reach out to us via email, 
-        or connect with us on LinkedIn or GitHub. We're excited to hear from you!
+      Connect on 
+      <a href="https://www.linkedin.com/in/lissan-analytic" target="_blank" class="contact-link">LinkedIn</a> or 
+      view my work on 
+      <a href="https://github.com/DataForSolution" target="_blank" class="contact-link">GitHub</a>.
     </p>
-    
-    <!-- Profile Section -->
-    <div class="profile-section">
-        <img src="{{ '/assets/images/lissan-profile.jpg' | relative_url }}" alt="Lissan's Profile Picture" class="profile-pic">
-        <h2>Lissan</h2>
-        <p>AI & Data Science | Nuclear Medicine | Data Analyst</p>
-        <p>
-            Let's connect on 
-            <a href="https://www.linkedin.com/in/lissan-analytic" 
-               target="_blank" class="contact-link">
-               LinkedIn
-            </a> or check out my projects on 
-            <a href="https://github.com/DataForSolution" 
-               target="_blank" class="contact-link">
-               GitHub
-            </a>.
-        </p>
-    </div>
+  </div>
 
-    <!-- Contact Form -->
-    <div class="contact-form">
-        <h2>Send Me a Message</h2>
-        <form action="https://formsubmit.co/your-email@example.com" method="POST">
-            <input type="text" name="name" placeholder="Your Name" required>
-            <input type="email" name="email" placeholder="Your Email" required>
-            <textarea name="message" placeholder="Your Message" required></textarea>
-            <button type="submit">Submit</button>
-        </form>
-    </div>
+  <!-- Contact Form -->
+  <div class="contact-form">
+    <h2>Send a Message</h2>
+    <form action="https://formsubmit.co/kent.sew@gmail.com" method="POST">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="How can I help you?" rows="6" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
 </section>
 
-<section id="portfolio">
-    <h2>My Portfolio</h2>
-    <p>Explore a curated selection of my data science and AI projects. Use the filters to browse by category.</p>
+<section id="portfolio" style="padding: 60px 20px; background-color: #2a2a2a; color: #fff;">
+  <h2 style="text-align: center; color: #00BFFF;">💼 My Portfolio</h2>
+  <p style="text-align: center; max-width: 800px; margin: auto;">
+    A snapshot of my hands-on projects in AI, machine learning, and analytics. Filter by area of focus:
+  </p>
 
-    <!-- Filter Buttons -->
-    <div class="portfolio-filters">
-        <button class="filter-btn active" data-category="all">All</button>
-        <button class="filter-btn" data-category="machine-learning">Machine Learning</button>
-        <button class="filter-btn" data-category="ai">AI</button>
-        <button class="filter-btn" data-category="data-visualization">Data Visualization</button>
+  <div class="portfolio-filters" style="text-align: center; margin: 20px 0;">
+    <button class="filter-btn active" onclick="filterPortfolio('all')">All</button>
+    <button class="filter-btn" onclick="filterPortfolio('machine-learning')">Machine Learning</button>
+    <button class="filter-btn" onclick="filterPortfolio('ai')">AI</button>
+    <button class="filter-btn" onclick="filterPortfolio('data-visualization')">Data Viz</button>
+  </div>
+
+  <div class="portfolio-grid">
+    <div class="portfolio-item" data-category="machine-learning">
+      <h3>Project: Predictive Modeling</h3>
+      <p><strong>Tech:</strong> XGBoost, pandas, scikit-learn</p>
+      <p><strong>Insight:</strong> 95% accuracy on customer churn data.</p>
     </div>
 
-    <!-- Portfolio Grid -->
-    <div class="portfolio-grid">
-        <div class="portfolio-item" data-category="machine-learning">
-            <h3>Project 1: Predictive Modeling</h3>
-            <p><strong>Accuracy:</strong> 95%</p>
-            <p><strong>Dataset Size:</strong> 10,000 rows</p>
-            <p><strong>Insights:</strong> Achieved significant prediction accuracy using advanced regression models.</p>
-        </div>
-        <div class="portfolio-item" data-category="ai">
-            <h3>Project 2: Chatbot Development</h3>
-            <p><strong>Accuracy:</strong> 92%</p>
-            <p><strong>Dataset Size:</strong> 5,000 intents</p>
-            <p><strong>Insights:</strong> Built an AI-powered conversational agent for customer support.</p>
-        </div>
-        <div class="portfolio-item" data-category="data-visualization">
-            <h3>Project 3: Interactive Dashboard</h3>
-            <p><strong>Metrics:</strong> Real-time data integration</p>
-            <p><strong>Insights:</strong> Designed a dashboard with dynamic filtering for decision-making.</p>
-        </div>
-        <div class="portfolio-item" data-category="machine-learning">
-            <h3>Project 4: Classification Models</h3>
-            <p><strong>Accuracy:</strong> 90%</p>
-            <p><strong>Dataset Size:</strong> 15,000 rows</p>
-            <p><strong>Insights:</strong> Applied advanced classification techniques for business predictions.</p>
-        </div>
+    <div class="portfolio-item" data-category="ai">
+      <h3>Project: Chatbot Assistant</h3>
+      <p><strong>Tech:</strong> Rasa, Transformers</p>
+      <p><strong>Insight:</strong> Built a contextual chatbot for help desk automation.</p>
     </div>
+
+    <div class="portfolio-item" data-category="data-visualization">
+      <h3>Project: Interactive Dashboard</h3>
+      <p><strong>Tech:</strong> Power BI / Plotly</p>
+      <p><strong>Insight:</strong> Executive KPI dashboard with real-time metrics.</p>
+    </div>
+  </div>
 </section>
+
+<script>
+function filterPortfolio(category) {
+  const items = document.querySelectorAll(".portfolio-item");
+  items.forEach(item => {
+    const match = category === "all" || item.dataset.category === category;
+    item.style.display = match ? "block" : "none";
+  });
+
+  document.querySelectorAll('.filter-btn').forEach(btn => btn.classList.remove("active"));
+  event.target.classList.add("active");
+}
+</script>
 
 <style>
-    /* Profile Section */
-    .profile-section {
-        text-align: center;
-        margin: 30px auto;
-    }
-
-    .profile-pic {
-        width: 150px;
-        height: 150px;
-        border-radius: 50%;
-        object-fit: cover;
-        border: 5px solid #4CAF50;
-        margin-bottom: 15px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
-    }
-
-    /* Contact Form Styling */
-    .contact-form {
-        text-align: center;
-        background-color: #fff;
-        padding: 30px;
-        border-radius: 10px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        max-width: 600px;
-        margin: 20px auto;
-    }
-
-    .contact-form input,
-    .contact-form textarea {
-        width: 100%;
-        padding: 10px;
-        margin-bottom: 15px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        font-size: 1em;
-    }
-
-    .contact-form button {
-        width: 100%;
-        padding: 10px;
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-        transition: background-color 0.3s ease;
-    }
-
-    .contact-form button:hover {
-        background-color: #007BFF;
-    }
-
-    /* Portfolio Section */
-    #portfolio {
-        padding: 50px 20px;
-        background-color: #f4f4f4;
-        color: #333;
-        text-align: center;
-    }
-
-    .portfolio-filters {
-        margin-bottom: 20px;
-    }
-
-    .filter-btn {
-        background-color: #4CAF50;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        padding: 10px 15px;
-        cursor: pointer;
-        margin: 5px;
-        font-size: 1em;
-    }
-
-    .filter-btn:hover {
-        background-color: #007BFF;
-    }
-
-    .portfolio-grid {
-        display: flex;
-        flex-wrap: wrap;
-        gap: 20px;
-        justify-content: center;
-    }
-
-    .portfolio-item {
-        background-color: white;
-        border-radius: 10px;
-        padding: 20px;
-        max-width: 300px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        text-align: left;
-    }
-
-    .portfolio-item h3 {
-        font-size: 1.5em;
-        color: #4CAF50;
-        margin-bottom: 10px;
-    }
+.profile-section {
+  text-align: center;
+  margin: 40px auto;
+}
+.profile-pic {
+  width: 140px;
+  border-radius: 50%;
+  border: 4px solid #4CAF50;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+  margin-bottom: 10px;
+}
+.contact-form {
+  max-width: 600px;
+  background: #333;
+  margin: 30px auto;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0,0,0,0.2);
+}
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 12px;
+  border-radius: 5px;
+  border: 1px solid #666;
+  background: #111;
+  color: #fff;
+}
+.contact-form button {
+  background-color: #4CAF50;
+  padding: 12px;
+  width: 100%;
+  border: none;
+  border-radius: 5px;
+  color: #fff;
+  font-weight: bold;
+}
+.contact-form button:hover {
+  background-color: #007BFF;
+}
+.portfolio-filters .filter-btn {
+  background: #4CAF50;
+  color: white;
+  margin: 5px;
+  border: none;
+  padding: 10px 14px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.portfolio-filters .filter-btn.active {
+  background: #007BFF;
+}
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  max-width: 1000px;
+  margin: auto;
+}
+.portfolio-item {
+  background: #1f1f1f;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 4px solid #4CAF50;
+}
 </style>
