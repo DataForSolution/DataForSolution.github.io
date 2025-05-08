@@ -5,19 +5,22 @@ permalink: /toolkits/
 ---
 
 <section id="toolkits" style="text-align:center; padding:50px 20px;">
-## 🔗 Jump To
-[📓 Notebooks](#notebooks) • [📚 Cheat Sheets](#cheat-sheets) • [🗓️ Study Planner](#study-planners) • [🎓 Mini-Courses](#mini-courses) • [🛠️ Demos](#interactive-demos)
 
----
+<h1>🧰 LLmachine Toolkits Hub</h1>
+<p style="max-width: 800px; margin: auto;">
+  Accelerate your learning with curated, hands-on resources for AI, Machine Learning, and Data Science — all in one place.
+</p>
 
+<h3 style="margin-top: 30px;">🔗 Quick Access</h3>
+<p>
+  <a href="#notebooks">📓 Notebooks</a> •
+  <a href="#cheat-sheets">📚 Cheat Sheets</a> •
+  <a href="#study-planners">🗓️ Study Planners</a> •
+  <a href="#mini-courses">🎓 Mini-Courses</a> •
+  <a href="#interactive-demos">🛠️ Interactive Demos</a>
+</p>
 
-# 🧰 Toolkits & Study Resources
-
-<p>Welcome to the LLmachine Toolkits Hub! Explore free notebooks, cheat sheets, interactive demos, and study planners to accelerate your learning in AI, Machine Learning, and Data Science.</p>
-
----
-
-## 📓 Starter Python Notebooks {#notebooks}
+<hr style="border: none; border-top: 1px solid #555; margin: 30px 0;">
 
 <div class="toolkit-gallery">
   <div class="toolkit-card">
