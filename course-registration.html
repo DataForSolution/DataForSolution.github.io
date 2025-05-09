@@ -1,0 +1,29 @@
+---
+layout: default
+title: "Course Registration"
+permalink: /courses/register/
+---
+
+<section id="course-registration" style="padding: 50px 20px; background-color: #1f1f1f; color: #fff; text-align: center;">
+  <h1>📋 Register for a Course</h1>
+  <p>Fill out the form below to enroll in one of our upcoming training sessions.</p>
+
+  <form action="https://formsubmit.co/your-email@example.com" method="POST" style="max-width:600px; margin:auto; background:#2a2a2a; padding:30px; border-radius:10px;">
+    <input type="text" name="name" placeholder="Full Name" required style="width:100%; padding:10px; margin-bottom:15px; border-radius:6px; border:none; background:#333; color:#fff;">
+    <input type="email" name="email" placeholder="Email Address" required style="width:100%; padding:10px; margin-bottom:15px; border-radius:6px; border:none; background:#333; color:#fff;">
+    
+    <label for="course" style="display:block; margin-bottom:8px; text-align:left;">Select a Course:</label>
+    <select name="course" required style="width:100%; padding:10px; margin-bottom:15px; border-radius:6px; background:#333; color:#fff; border:none;">
+      <option value="">-- Choose a Course --</option>
+      <option value="Power BI Fundamentals">📊 Power BI Fundamentals</option>
+      <option value="Tableau Mastery">📈 Tableau Mastery</option>
+      <option value="Machine Learning with Python">🤖 Machine Learning with Python</option>
+      <option value="SQL for Data Science">🧮 SQL for Data Science</option>
+      <option value="Web Development">🌐 Web Development</option>
+    </select>
+
+    <textarea name="goals" placeholder="What do you hope to gain from this course?" rows="4" required style="width:100%; padding:10px; border-radius:6px; background:#333; color:#fff; border:none;"></textarea>
+    
+    <button type="submit" style="margin-top:20px; padding:12px 24px; background:#4CAF50; border:none; border-radius:6px; color:#fff; font-size:1rem; cursor:pointer;">Submit Registration</button>
+  </form>
+</section>
