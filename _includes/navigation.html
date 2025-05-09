@@ -15,7 +15,19 @@
    <li class="dropdown">
   <a href="#">Services ▾</a>
   <ul class="dropdown-menu">
-    <li><a href="{{ '/services/' | relative_url }}">💼 All Services</a></li>
+    <li class="dropdown">
+  <a href="{{ '/services/' | relative_url }}">Services ▾</a>
+  <ul class="dropdown-menu">
+    <li><a href="{{ '/services/business-analytics/' | relative_url }}">📊 Business Analytics</a></li>
+    <li><a href="{{ '/services/data-entry/' | relative_url }}">📝 Data Entry</a></li>
+    <li><a href="{{ '/services/data-reporting/' | relative_url }}">📈 Data Reporting</a></li>
+    <li><a href="{{ '/services/strategic-planning/' | relative_url }}">🎯 Strategic Planning</a></li>
+    <li><a href="{{ '/services/healthcare-consulting/' | relative_url }}">🏥 Healthcare Consulting</a></li>
+    <li><a href="{{ '/services/financial-analysis/' | relative_url }}">💰 Financial Analysis</a></li>
+    <li><a href="{{ '/services/market-research/' | relative_url }}">🔍 Market Research</a></li>
+  </ul>
+</li>
+
     <li><a href="{{ '/certifications/' | relative_url }}">🎓 Certifications</a></li>
     <li><a href="{{ '/certification-services/' | relative_url }}">📘 Certification Prep Services</a></li>
 
