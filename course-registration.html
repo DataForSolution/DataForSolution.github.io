@@ -8,8 +8,12 @@ permalink: /courses/register/
   <h1>📋 Register for a Course</h1>
   <p>Fill out the form below to enroll in one of our upcoming training sessions.</p>
 
-  <form action="https://formsubmit.co/your-email@example.com" method="POST" style="max-width:600px; margin:auto; background:#2a2a2a; padding:30px; border-radius:10px;">
+  <form action="https://formsubmit.co/kent.sew@gmail.com" method="POST" style="max-width:600px; margin:auto; background:#2a2a2a; padding:30px; border-radius:10px;">
+    <!-- Custom Redirect -->
+    <input type="hidden" name="_next" value="https://dataforsolution.github.io/thank-you/">
+
     <input type="text" name="name" placeholder="Full Name" required style="width:100%; padding:10px; margin-bottom:15px; border-radius:6px; border:none; background:#333; color:#fff;">
+    
     <input type="email" name="email" placeholder="Email Address" required style="width:100%; padding:10px; margin-bottom:15px; border-radius:6px; border:none; background:#333; color:#fff;">
     
     <label for="course" style="display:block; margin-bottom:8px; text-align:left;">Select a Course:</label>
