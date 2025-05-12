@@ -1,0 +1,37 @@
+---
+layout: default
+title: "Request Info"
+permalink: /request-info/
+---
+
+<section id="request-info" style="padding: 50px 20px; background-color: #1f1f1f; color: #fff; text-align: center;">
+  <h1 style="color:#4CAF50;">📮 Request More Information</h1>
+  <p style="max-width: 700px; margin: auto; font-size: 1.1em;">
+    Interested in our services, training, or AI tools? Fill out the form below and we’ll follow up with the details you need.
+  </p>
+
+  <form action="https://formsubmit.co/kent.sew@gmail.com" method="POST" style="max-width: 600px; margin: 30px auto; background-color: #2a2a2a; padding: 30px; border-radius: 10px;">
+    <input type="hidden" name="_next" value="https://dataforsolution.github.io/thank-you/">
+    <input type="hidden" name="_captcha" value="false">
+
+    <label for="name" style="display:block; text-align:left;">Your Name:</label>
+    <input type="text" id="name" name="name" required style="width:100%; padding:10px; margin-bottom:15px; border-radius:6px; background:#333; color:#fff; border:none;">
+
+    <label for="email" style="display:block; text-align:left;">Your Email:</label>
+    <input type="email" id="email" name="email" required style="width:100%; padding:10px; margin-bottom:15px; border-radius:6px; background:#333; color:#fff; border:none;">
+
+    <label for="interest" style="display:block; text-align:left;">What are you interested in?</label>
+    <select name="interest" id="interest" required style="width:100%; padding:10px; margin-bottom:15px; border-radius:6px; background:#333; color:#fff; border:none;">
+      <option value="">-- Choose an Option --</option>
+      <option value="Training">📘 Training & Courses</option>
+      <option value="AI Tools">🤖 AI Tools & Platforms</option>
+      <option value="Custom Project">🧠 Custom AI Project</option>
+      <option value="Consultation">📞 One-on-One Consultation</option>
+    </select>
+
+    <label for="message" style="display:block; text-align:left;">Additional Details:</label>
+    <textarea name="message" id="message" rows="4" required style="width:100%; padding:10px; border-radius:6px; background:#333; color:#fff; border:none;"></textarea>
+
+    <button type="submit" style="margin-top:20px; padding:12px 24px; background:#4CAF50; border:none; border-radius:6px; color:#fff; font-size:1rem; cursor:pointer;">Submit Request</button>
+  </form>
+</section>
