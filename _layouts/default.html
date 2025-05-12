@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  {% seo %}  <!-- Auto-generates all SEO + social tags -->
+  {% seo %}
 
   <title>{{ page.title | default: site.title }}</title>
 
@@ -37,22 +37,23 @@
   }
   </script>
 </head>
-<body style="display: flex; flex-direction: column; min-height: 100vh;">
+
+<body style="display: flex; flex-direction: column; min-height: 100vh; background-color: #121212; color: #fff;">
   
   {% include navigation.html %}
-  
-  <main style="margin: 0; padding: 0; flex-grow: 1; background: transparent;">
-   <div class="page-content">
+
+  <main style="flex-grow: 1; padding: 0; margin: 0;">
+    <div class="page-content">
       {{ content }}
     </div>
   </main>
 
-  <footer style="text-align: center; padding: 20px;">
+  <footer style="text-align: center; padding: 20px; background-color: #1c1c1c; color: #bbb;">
     <p>&copy; 2025 LLmachine. Follow us on 
-      <a href="https://twitter.com/SewLiben" target="_blank">Twitter</a> and 
-      <a href="https://github.com/DataForSolution" target="_blank">GitHub</a>.
+      <a href="https://twitter.com/SewLiben" target="_blank" style="color: #4CAF50;">Twitter</a> and 
+      <a href="https://github.com/DataForSolution" target="_blank" style="color: #4CAF50;">GitHub</a>.
     </p>
   </footer>
 </body>
-
 </html>
+
