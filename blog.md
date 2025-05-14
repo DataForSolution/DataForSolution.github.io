@@ -53,91 +53,42 @@ permalink: /blog/
 <button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" class="scroll-top">↑</button>
 
 <style>
-  #blog {
-    padding: 2rem;
-    font-family: sans-serif;
-  }
-  .blog-intro {
-    font-size: 1.1rem;
-    margin-bottom: 1rem;
-  }
-  .featured-post {
-    border: 2px solid #007BFF;
-    padding: 1.5rem;
-    border-radius: 10px;
-    background: #f8faff;
-    margin: 2rem 0;
-  }
-  .featured-post h2 {
-    margin-top: 0;
-    font-size: 1.5rem;
-  }
-  .featured-date {
-    color: gray;
-    font-size: 0.9rem;
-  }
-  .featured-summary {
-    font-size: 1.05rem;
-    margin: 0.8rem 0;
-  }
-  .read-featured {
-    font-weight: bold;
-    text-decoration: none;
-    color: #007BFF;
-  }
-  .blog-filters {
-    margin-bottom: 1.5rem;
-  }
-  .blog-filters button {
-    margin: 0.25rem;
-    padding: 0.5rem 1rem;
-    border: none;
-    background: #eee;
-    cursor: pointer;
-    border-radius: 5px;
-  }
-  .blog-filters button:hover {
-    background-color: #ccc;
-  }
-  .blog-posts {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-    gap: 1.5rem;
-  }
-  .blog-card {
-    border: 1px solid #ddd;
-    padding: 1rem;
-    border-radius: 10px;
-    transition: transform 0.2s ease;
-  }
-  .blog-card:hover {
-    transform: scale(1.03);
-    background: #f9f9f9;
-  }
-  .blog-card h3 {
-    margin-top: 0;
-  }
-  .blog-date {
-    font-size: 0.85rem;
-    color: gray;
-  }
-  .read-more {
-    color: #007BFF;
-    text-decoration: none;
-    font-weight: bold;
-  }
   .scroll-top {
     position: fixed;
     bottom: 30px;
     right: 30px;
     padding: 0.6rem 1rem;
-    background: #333;
+    background: #4CAF50;
     color: white;
     border: none;
     border-radius: 50%;
     font-size: 1.2rem;
     cursor: pointer;
     display: none;
+  }
+
+  .featured-post {
+    background-color: #1e1e1e;
+    color: #fff;
+    border: 2px solid #4CAF50;
+    padding: 1.5rem;
+    border-radius: 10px;
+    margin: 2rem 0;
+  }
+
+  .featured-post a,
+  .blog-card a {
+    color: #4CAF50;
+  }
+
+  .blog-card {
+    background-color: #1e1e1e;
+    color: #fff;
+    border: 1px solid #4CAF50;
+  }
+
+  .blog-card:hover {
+    background-color: #2a2a2a;
   }
 </style>
 
