@@ -68,3 +68,50 @@ permalink: /advertise/
 </p>
 
 <p style="font-size: 0.9em; color: #777;">Custom media kits available upon request.</p>
+.video-hero {
+  position: relative;
+  overflow: hidden;
+  height: 400px;
+  border-radius: 12px;
+  margin-bottom: 2rem;
+}
+
+.video-hero video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.video-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.video-overlay h1 {
+  font-size: 2.5rem;
+  margin: 0;
+}
+
+.video-overlay p {
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.cta-button {
+  margin-top: 1rem;
+  background-color: #007bff;
+  color: #fff;
+  padding: 0.75rem 1.5rem;
+  border-radius: 5px;
+  text-decoration: none;
+}
