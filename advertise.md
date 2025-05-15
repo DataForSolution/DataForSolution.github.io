@@ -68,17 +68,3 @@ permalink: /advertise/
 </p>
 
 <p style="font-size: 0.9em; color: #777;">Custom media kits available upon request.</p>
-.ad-box {
-  background-color: #f0f4ff;
-  border: 1px solid #c3d9ff;
-  padding: 1rem;
-  text-align: center;
-  margin: 2rem 0;
-  border-radius: 10px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
-}
-.ad-box p {
-  margin-top: 0.5rem;
-  font-size: 0.95rem;
-  color: #333;
-}
