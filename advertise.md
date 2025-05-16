@@ -66,14 +66,14 @@ permalink: /advertise/
   <a href="/contact" class="cta-button">Get in Touch</a>
   <a href="/blog" class="cta-button outline">View Sponsored Articles</a>
 </p>
-
-<p style="font-size: 0.9em; color: #777;">Custom media kits available upon request.</p>
 .video-hero {
   position: relative;
+  width: 100%;
+  height: 350px;
   overflow: hidden;
-  height: 400px;
   border-radius: 12px;
   margin-bottom: 2rem;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
 
 .video-hero video {
@@ -88,30 +88,36 @@ permalink: /advertise/
   left: 0;
   width: 100%;
   height: 100%;
-  color: #fff;
-  background: rgba(0, 0, 0, 0.4);
+  background: rgba(0,0,0,0.45);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  color: #fff;
   text-align: center;
+  padding: 0 1rem;
 }
 
 .video-overlay h1 {
-  font-size: 2.5rem;
-  margin: 0;
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
 }
 
 .video-overlay p {
-  font-size: 1.2rem;
-  margin-top: 0.5rem;
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
 }
 
 .cta-button {
-  margin-top: 1rem;
   background-color: #007bff;
   color: #fff;
   padding: 0.75rem 1.5rem;
   border-radius: 5px;
   text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease;
 }
+.cta-button:hover {
+  background-color: #0056b3;
+}
+
