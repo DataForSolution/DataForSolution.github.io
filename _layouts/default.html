@@ -43,19 +43,20 @@
   {% include navigation.html %}
 
   <!-- LLmachine Video Ad Section -->
-  <section class="video-hero">
-    <video autoplay muted loop playsinline>
-      <source src="{{ '/assets/videos/aiaddvi.mp4' | relative_url }}" type="video/mp4">
-      Your browser does not support the video tag.
-    </video>
-    <div class="video-overlay">
-      <h1>LLmachine: Powering the Future of AI</h1>
-      <p>Join us at the forefront of Data Science, Innovation, and Learning</p>
-      <a href="/advertise/" class="cta-button">Advertise With Us</a>
-    </div>
-  </section>
-
-  <main style="flex-grow: 1; padding: 0; margin: 0;">
+  {% if page.url == "/" %}
+<section class="video-hero">
+  <video autoplay muted loop playsinline>
+    <source src="{{ '/assets/videos/aiaddvi.mp4' | relative_url }}" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+  <div class="video-overlay">
+    <h1>LLmachine: Powering the Future of AI</h1>
+    <p>Join us at the forefront of Data Science, Innovation, and Learning</p>
+    <a href="/advertise/" class="cta-button">Advertise With Us</a>
+  </div>
+</section>
+{% endif %}
+<main style="flex-grow: 1; padding: 0; margin: 0;">
     <div class="page-content">
       {{ content }}
     </div>
