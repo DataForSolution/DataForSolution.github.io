@@ -4,120 +4,120 @@ title: Advertise With Us
 permalink: /advertise/
 ---
 
-<h1>Partner With LLmachine</h1>
+<style>
+  body {
+    background-color: #1e1e1e;
+    color: #ffffff;
+  }
 
-<p><strong>LLmachine</strong> is where cutting-edge innovation meets a data-driven audience. If your brand serves the worlds of Artificial Intelligence, Data Science, Analytics, Healthcare Technology, or EdTech — this is your launchpad to reach an engaged, intelligent, and global community.</p>
+  .advertise-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    line-height: 1.7;
+    font-size: 1.1rem;
+  }
 
-<hr>
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
 
-<h2>🚀 Why Advertise With Us?</h2>
+  th, td {
+    border: 1px solid #444;
+    padding: 0.75rem;
+    text-align: left;
+  }
 
-<ul>
-  <li><strong>Targeted Audience:</strong> Our visitors include data scientists, machine learning engineers, healthcare analysts, students, and educators.</li>
-  <li><strong>Global Visibility:</strong> With a footprint across the U.S., Europe, and Africa, your message reaches a diverse and expanding user base.</li>
-  <li><strong>Credibility:</strong> LLmachine is trusted by professionals who seek high-quality research, tools, and case studies in AI and analytics.</li>
-  <li><strong>SEO-Optimized Placement:</strong> Sponsored content and ad placements benefit from site-wide visibility and optimized metadata.</li>
-</ul>
+  th {
+    background-color: #333;
+  }
 
-<hr>
+  tr:nth-child(even) {
+    background-color: #2a2a2a;
+  }
 
-<h2>📊 Advertising Opportunities</h2>
+  .cta-button {
+    background-color: #4CAF50;
+    color: #fff;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    text-decoration: none;
+    display: inline-block;
+    margin-right: 1rem;
+    margin-top: 1rem;
+  }
 
-<table>
-  <thead>
-    <tr>
-      <th>Option</th>
-      <th>Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><strong>Sidebar Ads</strong></td>
-      <td>Static or animated banners on every page — high impressions, perfect for brand awareness.</td>
-    </tr>
-    <tr>
-      <td><strong>Homepage Featured Banner</strong></td>
-      <td>Your logo and CTA front and center on the homepage with a link to your product or campaign.</td>
-    </tr>
-    <tr>
-      <td><strong>Sponsored Articles</strong></td>
-      <td>Educational or product-based blog posts written by you or co-created with our editorial team.</td>
-    </tr>
-    <tr>
-      <td><strong>Tool/Product Reviews</strong></td>
-      <td>In-depth write-ups, demos, or videos showcasing your service to an AI-savvy audience.</td>
-    </tr>
-    <tr>
-      <td><strong>Email Spotlight</strong></td>
-      <td>Featured promotion in our upcoming newsletter (coming soon).</td>
-    </tr>
-  </tbody>
-</table>
+  .cta-button.outline {
+    background: transparent;
+    border: 2px solid #4CAF50;
+    color: #4CAF50;
+  }
 
-<hr>
+  .cta-button.outline:hover {
+    background: #4CAF50;
+    color: #fff;
+  }
+</style>
 
-<h2>🤝 Ready to Collaborate?</h2>
+<div class="advertise-wrapper">
 
-<p>Whether you're launching a new course, promoting a SaaS product, or seeking high-quality exposure — we’re ready to help amplify your reach with custom packages.</p>
+  <h1>Partner With LLmachine</h1>
 
-<p><strong>📬 Let's talk:</strong> <a href="mailto:kent.sew@gmail.com">kent.sew@gmail.com</a></p>
+  <p><strong>LLmachine</strong> is where innovation meets a data-driven audience. If your brand serves AI, Data Science, Analytics, Healthcare Tech, or EdTech — this is your launchpad to reach an engaged global community.</p>
 
-<p>
-  <a href="/contact" class="cta-button">Get in Touch</a>
-  <a href="/blog" class="cta-button outline">View Sponsored Articles</a>
-</p>
-.video-hero {
-  position: relative;
-  width: 100%;
-  height: 350px;
-  overflow: hidden;
-  border-radius: 12px;
-  margin-bottom: 2rem;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-}
+  <h2>Why Advertise With Us?</h2>
 
-.video-hero video {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
+  <ul>
+    <li><strong>Targeted Audience:</strong> Professionals, engineers, analysts, educators, and students.</li>
+    <li><strong>Global Reach:</strong> Exposure across the U.S., Europe, and Africa.</li>
+    <li><strong>Trusted Brand:</strong> LLmachine is known for high-quality content and tools.</li>
+    <li><strong>SEO Visibility:</strong> Optimized placements across the site.</li>
+  </ul>
 
-.video-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0,0,0,0.45);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: #fff;
-  text-align: center;
-  padding: 0 1rem;
-}
+  <h2>Advertising Opportunities</h2>
 
-.video-overlay h1 {
-  font-size: 2.2rem;
-  margin-bottom: 0.5rem;
-}
+  <table>
+    <thead>
+      <tr>
+        <th>Option</th>
+        <th>Description</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Sidebar Ads</strong></td>
+        <td>Visible on every page. Ideal for brand awareness.</td>
+      </tr>
+      <tr>
+        <td><strong>Homepage Banner</strong></td>
+        <td>Your message at the top of our homepage with a CTA.</td>
+      </tr>
+      <tr>
+        <td><strong>Sponsored Articles</strong></td>
+        <td>Educational or promotional articles posted on our blog.</td>
+      </tr>
+      <tr>
+        <td><strong>Product Reviews</strong></td>
+        <td>Detailed demos or reviews of your tool or service.</td>
+      </tr>
+      <tr>
+        <td><strong>Email Features</strong></td>
+        <td>Direct inclusion in our community newsletters.</td>
+      </tr>
+    </tbody>
+  </table>
 
-.video-overlay p {
-  font-size: 1.1rem;
-  margin-bottom: 1rem;
-}
+  <h2>Ready to Collaborate?</h2>
 
-.cta-button {
-  background-color: #007bff;
-  color: #fff;
-  padding: 0.75rem 1.5rem;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-.cta-button:hover {
-  background-color: #0056b3;
-}
+  <p>Have a campaign, launch, or tool to promote? Let’s create a custom advertising plan together.</p>
 
+  <p><strong>Email:</strong> <a href="mailto:kent.sew@gmail.com" style="color: #4CAF50;">kent.sew@gmail.com</a></p>
+
+  <p>
+    <a href="/contact" class="cta-button">Get in Touch</a>
+    <a href="/blog" class="cta-button outline">View Sponsored Articles</a>
+  </p>
+
+</div>
