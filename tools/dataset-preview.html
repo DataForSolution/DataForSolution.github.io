@@ -1,0 +1,96 @@
+---
+layout: default
+title: Dataset Previewer
+permalink: /tools/dataset-preview.html
+---
+
+<style>
+  .tool-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    line-height: 1.6;
+    color: #fff;
+  }
+
+  input[type="file"] {
+    margin-top: 1rem;
+    padding: 8px;
+    background: #1e1e1e;
+    color: white;
+    border: 1px solid #444;
+    border-radius: 5px;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+    background-color: #1e1e1e;
+    color: #fff;
+  }
+
+  th, td {
+    border: 1px solid #444;
+    padding: 8px;
+    font-size: 0.9rem;
+  }
+
+  th {
+    background-color: #333;
+  }
+
+  .meta {
+    background: #2a2a2a;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-left: 4px solid #4CAF50;
+    border-radius: 6px;
+  }
+</style>
+
+<div class="tool-wrapper">
+  <h1>Dataset Previewer</h1>
+  <p>Upload a CSV file to preview its structure and sample rows.</p>
+  <input type="file" accept=".csv" onchange="previewDataset(event)" />
+
+  <div class="meta" id="fileMeta" style="display: none;"></div>
+  <div id="csvPreview"></div>
+</div>
+
+<script>
+  function previewDataset(event) {
+    const file = event.target.files[0];
+    if (!file || !file.name.endsWith('.csv')) {
+      alert("Please upload a valid .csv file");
+      return;
+    }
+
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      const csvText = e.target.result;
+      const rows = csvText.split("\n").map(row => row.split(","));
+      const headers = rows[0];
+      const previewRows = rows.slice(1, 6); // show only first 5 data rows
+
+      document.getElementById("fileMeta").style.display = "block";
+      document.getElementById("fileMeta").innerHTML = `
+        <strong>File Name:</strong> ${file.name}<br>
+        <strong>Columns:</strong> ${headers.length}<br>
+        <strong>Rows:</strong> ~${rows.length - 1} (first 5 shown)
+      `;
+
+      const table = document.createElement("table");
+      table.innerHTML = `
+        <thead><tr>${headers.map(h => `<th>${h}</th>`).join("")}</tr></thead>
+        <tbody>${previewRows.map(r => `<tr>${r.map(c => `<td>${c}</td>`).join("")}</tr>`).join("")}</tbody>
+      `;
+
+      const preview = document.getElementById("csvPreview");
+      preview.innerHTML = "";
+      preview.appendChild(table);
+    };
+
+    reader.readAsText(file);
+  }
+</script>
