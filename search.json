@@ -1,0 +1,14 @@
+---
+layout: null
+permalink: /search.json
+---
+
+[
+  {% for post in site.posts %}
+    {
+      "title": {{ post.title | jsonify }},
+      "content": {{ post.content | strip_html | truncate: 500 | jsonify }},
+      "url": {{ post.url | relative_url | jsonify }}
+    }{% if forloop.last == false %},{% endif %}
+  {% endfor %}
+]
