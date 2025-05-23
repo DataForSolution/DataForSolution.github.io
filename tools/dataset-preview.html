@@ -59,11 +59,22 @@ permalink: /tools/dataset-preview.html
 
   <div class="meta" id="fileMeta" style="display: none;"></div>
   <div id="csvPreview"></div>
+  <h2 style="margin-top: 2rem;">Visualize Column</h2>
+<select id="chartType" onchange="renderChart()">
+  <option value="bar">Bar</option>
+  <option value="line">Line</option>
+  <option value="pie">Pie</option>
+</select>
+
+<select id="columnSelect" onchange="renderChart()"></select>
+
+<canvas id="chartCanvas" style="margin-top: 20px; max-width: 100%; height: 400px;"></canvas>
+
 </div>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-
+ <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
   function previewDataset(event) {
@@ -90,6 +101,69 @@ permalink: /tools/dataset-preview.html
     };
     reader.readAsText(file);
   }
+  currentSummary = {
+  filename: fileName,
+  columns: headers,
+  types: types,
+  rowCount: rows.length - 1,
+  previewRows: previewRows
+};
+updateColumnDropdown(headers, types);
+
+  let numericCols = [];
+let chart;
+
+function updateColumnDropdown(headers, types) {
+  const select = document.getElementById("columnSelect");
+  select.innerHTML = "";
+  numericCols = headers.map((h, i) => types[i] === "number" ? h : null).filter(Boolean);
+  numericCols.forEach(col => {
+    const opt = document.createElement("option");
+    opt.value = col;
+    opt.innerText = col;
+    select.appendChild(opt);
+  });
+  if (numericCols.length) renderChart();
+}
+
+function renderChart() {
+  if (!numericCols.length) return;
+
+  const chartType = document.getElementById("chartType").value;
+  const selectedCol = document.getElementById("columnSelect").value;
+  const colIndex = currentSummary.columns.indexOf(selectedCol);
+  const rows = currentSummary.previewRows || [];
+
+  const labels = rows.map((_, i) => `Row ${i + 1}`);
+  const values = rows.map(r => parseFloat(r[colIndex])).filter(v => !isNaN(v));
+
+  if (chart) chart.destroy();
+
+  const ctx = document.getElementById("chartCanvas").getContext("2d");
+  chart = new Chart(ctx, {
+    type: chartType,
+    data: {
+      labels: labels,
+      datasets: [{
+        label: selectedCol,
+        data: values,
+        backgroundColor: "#4CAF50",
+        borderColor: "#4CAF50",
+        borderWidth: 1
+      }]
+    },
+    options: {
+      responsive: true,
+      plugins: {
+        legend: { display: true }
+      },
+      scales: {
+        y: { beginAtZero: true }
+      }
+    }
+  });
+}
+
 
   function handleZip(file) {
     JSZip.loadAsync(file).then(zip => {
