@@ -53,11 +53,16 @@ permalink: /tools/dataset-preview.html
   <h1>Dataset Previewer</h1>
   <p>Upload a CSV file to preview its structure and sample rows.</p>
   <input type="file" accept=".csv" onchange="previewDataset(event)" />
+  <br><br>
+<button onclick="exportSummaryCSV()">Export Summary to CSV</button>
+<button onclick="exportSummaryPDF()">Export Summary to PDF</button>
 
   <div class="meta" id="fileMeta" style="display: none;"></div>
   <div id="csvPreview"></div>
 </div>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 
 
 <script>
@@ -126,6 +131,13 @@ permalink: /tools/dataset-preview.html
     // Detect column types
     const sampleCols = headers.map((_, colIdx) => previewRows.map(r => r[colIdx] || ""));
     const types = sampleCols.map(col => detectType(col));
+    currentSummary = {
+  filename: fileName,
+  columns: headers,
+  types: types,
+  rowCount: rows.length - 1
+};
+
 
     document.getElementById("fileMeta").style.display = "block";
     document.getElementById("fileMeta").innerHTML = `
@@ -149,4 +161,43 @@ permalink: /tools/dataset-preview.html
     preview.innerHTML = "";
     preview.appendChild(table);
   }
+  let currentSummary = {
+  filename: "",
+  columns: [],
+  types: [],
+  rowCount: 0
+};
+
+function exportSummaryCSV() {
+  const csvContent = [
+    ["File", currentSummary.filename],
+    ["Rows", currentSummary.rowCount],
+    ["Columns", currentSummary.columns.length],
+    [],
+    ["Column", "Detected Type"],
+    ...currentSummary.columns.map((col, i) => [col, currentSummary.types[i]])
+  ].map(row => row.join(",")).join("\n");
+
+  const blob = new Blob([csvContent], { type: "text/csv" });
+  saveAs(blob, `${currentSummary.filename}_summary.csv`);
+}
+
+async function exportSummaryPDF() {
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF();
+  doc.setFontSize(12);
+
+  doc.text(`Dataset Summary`, 10, 10);
+  doc.text(`File: ${currentSummary.filename}`, 10, 20);
+  doc.text(`Rows: ${currentSummary.rowCount}`, 10, 30);
+  doc.text(`Columns: ${currentSummary.columns.length}`, 10, 40);
+
+  doc.text(`\nColumns & Types:`, 10, 55);
+  currentSummary.columns.forEach((col, i) => {
+    doc.text(`${col}: ${currentSummary.types[i]}`, 10, 60 + i * 10);
+  });
+
+  doc.save(`${currentSummary.filename}_summary.pdf`);
+}
+
 </script>
