@@ -366,3 +366,49 @@ nav ul li ul li a:hover {
   border-radius: 4px;
   font-size: 0.9rem;
 }
+/* Parent dropdown menu */
+ul.dropdown-menu {
+  position: absolute;
+  display: none;
+  list-style: none;
+  background: #1e1e1e;
+  padding: 0;
+  margin: 0;
+  z-index: 999;
+  min-width: 200px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+}
+
+li.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+
+/* Submenu */
+li.dropdown-submenu {
+  position: relative;
+}
+
+li.dropdown-submenu .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-left: 1px;
+  display: none;
+}
+
+li.dropdown-submenu:hover .dropdown-menu {
+  display: block;
+}
+
+/* Menu item styles */
+ul.dropdown-menu li a {
+  display: block;
+  padding: 10px 15px;
+  color: #fff;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+ul.dropdown-menu li a:hover {
+  background-color: #4CAF50;
+  color: white;
+}
