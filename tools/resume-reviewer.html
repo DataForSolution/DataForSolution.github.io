@@ -1,0 +1,105 @@
+---
+layout: default
+title: Resume Reviewer
+permalink: /tools/resume-reviewer.html
+---
+
+<style>
+  .tool-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    line-height: 1.6;
+    color: #fff;
+  }
+
+  textarea {
+    width: 100%;
+    height: 220px;
+    padding: 12px;
+    font-size: 1rem;
+    background-color: #1e1e1e;
+    color: #fff;
+    border: 1px solid #555;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+  }
+
+  button.review-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .review-output {
+    background-color: #2a2a2a;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-left: 4px solid #4CAF50;
+    border-radius: 6px;
+  }
+</style>
+
+<div class="tool-wrapper">
+  <h1>Resume Reviewer</h1>
+  <p>Paste your resume text below to receive instant mock feedback based on common resume rules.</p>
+
+  <textarea id="resumeText" placeholder="Paste your resume content here..."></textarea>
+  <br>
+  <button class="review-btn" onclick="reviewResume()">Review Resume</button>
+
+  <div class="review-output" id="reviewBox" style="display:none;">
+    <h3>Feedback:</h3>
+    <p id="reviewResult"></p>
+  </div>
+</div>
+
+<script>
+  function reviewResume() {
+    const input = document.getElementById("resumeText").value.trim();
+    const reviewBox = document.getElementById("reviewBox");
+    const reviewResult = document.getElementById("reviewResult");
+
+    if (!input) {
+      reviewResult.innerText = "Please paste your resume text first.";
+      reviewBox.style.display = "block";
+      return;
+    }
+
+    let score = 0;
+    let feedback = [];
+
+    if (input.length < 400) {
+      feedback.push("Your resume seems too short. Try expanding your experience and skills.");
+      score -= 10;
+    }
+
+    if (!input.match(/(gmail|yahoo|hotmail|email)/i)) {
+      feedback.push("No email or contact info found.");
+      score -= 5;
+    }
+
+    if (!input.match(/python|sql|excel|machine learning|data/i)) {
+      feedback.push("You might be missing key industry terms like Python, SQL, Excel, or Data.");
+      score -= 5;
+    }
+
+    if (input.match(/objective/i)) {
+      feedback.push("Consider removing outdated sections like 'Objective'.");
+    }
+
+    if (!feedback.length) {
+      feedback.push("Looks great! Your resume includes essential keywords and seems well-written.");
+      score += 20;
+    }
+
+    feedback.push(`Estimated Score: ${Math.max(0, 70 + score)} / 100`);
+
+    reviewResult.innerHTML = feedback.map(f => `<p>• ${f}</p>`).join("");
+    reviewBox.style.display = "block";
+  }
+</script>
