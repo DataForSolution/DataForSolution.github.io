@@ -57,40 +57,96 @@ permalink: /tools/dataset-preview.html
   <div class="meta" id="fileMeta" style="display: none;"></div>
   <div id="csvPreview"></div>
 </div>
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
 
 <script>
   function previewDataset(event) {
     const file = event.target.files[0];
-    if (!file || !file.name.endsWith('.csv')) {
-      alert("Please upload a valid .csv file");
-      return;
-    }
+    if (!file) return;
 
+    const isZip = file.name.endsWith('.zip');
+    const isCSV = file.name.endsWith('.csv');
+
+    if (isCSV) {
+      handleCSV(file, file.name);
+    } else if (isZip) {
+      handleZip(file);
+    } else {
+      alert("Please upload a .csv or .zip file");
+    }
+  }
+
+  function handleCSV(file, displayName) {
     const reader = new FileReader();
     reader.onload = function (e) {
       const csvText = e.target.result;
-      const rows = csvText.split("\n").map(row => row.split(","));
-      const headers = rows[0];
-      const previewRows = rows.slice(1, 6); // show only first 5 data rows
-
-      document.getElementById("fileMeta").style.display = "block";
-      document.getElementById("fileMeta").innerHTML = `
-        <strong>File Name:</strong> ${file.name}<br>
-        <strong>Columns:</strong> ${headers.length}<br>
-        <strong>Rows:</strong> ~${rows.length - 1} (first 5 shown)
-      `;
-
-      const table = document.createElement("table");
-      table.innerHTML = `
-        <thead><tr>${headers.map(h => `<th>${h}</th>`).join("")}</tr></thead>
-        <tbody>${previewRows.map(r => `<tr>${r.map(c => `<td>${c}</td>`).join("")}</tr>`).join("")}</tbody>
-      `;
-
-      const preview = document.getElementById("csvPreview");
-      preview.innerHTML = "";
-      preview.appendChild(table);
+      displayCSV(csvText, displayName);
     };
-
     reader.readAsText(file);
+  }
+
+  function handleZip(file) {
+    JSZip.loadAsync(file).then(zip => {
+      const csvFile = Object.keys(zip.files).find(name => name.endsWith('.csv'));
+      if (!csvFile) {
+        alert("No .csv file found in the .zip");
+        return;
+      }
+
+      zip.files[csvFile].async("string").then(content => {
+        displayCSV(content, csvFile);
+      });
+    });
+  }
+
+  function detectType(values) {
+    const numRegex = /^-?\d+(\.\d+)?$/;
+    const dateRegex = /^\d{4}-\d{2}-\d{2}$/;
+
+    let type = "string";
+    let numCount = 0, dateCount = 0;
+
+    values.forEach(v => {
+      const val = v.trim();
+      if (numRegex.test(val)) numCount++;
+      if (dateRegex.test(val)) dateCount++;
+    });
+
+    if (numCount >= values.length * 0.6) return "number";
+    if (dateCount >= values.length * 0.6) return "date";
+    return "string";
+  }
+
+  function displayCSV(csvText, fileName) {
+    const rows = csvText.trim().split("\n").map(row => row.split(","));
+    const headers = rows[0];
+    const previewRows = rows.slice(1, 6);
+
+    // Detect column types
+    const sampleCols = headers.map((_, colIdx) => previewRows.map(r => r[colIdx] || ""));
+    const types = sampleCols.map(col => detectType(col));
+
+    document.getElementById("fileMeta").style.display = "block";
+    document.getElementById("fileMeta").innerHTML = `
+      <strong>File Name:</strong> ${fileName}<br>
+      <strong>Columns:</strong> ${headers.length}<br>
+      <strong>Rows:</strong> ~${rows.length - 1} (first 5 shown)<br>
+    `;
+
+    const table = document.createElement("table");
+    table.innerHTML = `
+      <thead>
+        <tr>${headers.map(h => `<th>${h}</th>`).join("")}</tr>
+        <tr>${types.map(t => `<th style="font-weight:normal;font-size:0.8em;">${t}</th>`).join("")}</tr>
+      </thead>
+      <tbody>
+        ${previewRows.map(r => `<tr>${r.map(c => `<td>${c}</td>`).join("")}</tr>`).join("")}
+      </tbody>
+    `;
+
+    const preview = document.getElementById("csvPreview");
+    preview.innerHTML = "";
+    preview.appendChild(table);
   }
 </script>
