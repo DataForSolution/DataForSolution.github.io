@@ -1,0 +1,79 @@
+---
+layout: default
+title: CSV Visualizer
+permalink: /tools/csv-visualizer.html
+---
+
+<style>
+  .tool-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    line-height: 1.6;
+    color: #fff;
+  }
+
+  input[type="file"] {
+    background-color: #2a2a2a;
+    color: white;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 5px;
+    margin-top: 1rem;
+  }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1.5rem;
+    background-color: #1e1e1e;
+    color: #fff;
+    border-radius: 6px;
+    overflow-x: auto;
+  }
+
+  th, td {
+    padding: 8px;
+    border: 1px solid #444;
+    text-align: left;
+    font-size: 0.9rem;
+  }
+
+  th {
+    background-color: #333;
+  }
+</style>
+
+<div class="tool-wrapper">
+  <h1>CSV Visualizer</h1>
+  <p>Upload any `.csv` file and preview it below as a table.</p>
+  <input type="file" accept=".csv" onchange="handleCSV(event)" />
+
+  <div id="table-container"></div>
+</div>
+
+<script>
+  function handleCSV(event) {
+    const file = event.target.files[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = function (e) {
+      const text = e.target.result;
+      displayTableFromCSV(text);
+    };
+    reader.readAsText(file);
+  }
+
+  function displayTableFromCSV(csv) {
+    const rows = csv.split("\n").map(row => row.split(","));
+    const table = document.createElement("table");
+    table.innerHTML = rows.map((row, i) => {
+      const tag = i === 0 ? "th" : "td";
+      return "<tr>" + row.map(cell => `<${tag}>${cell.trim()}</${tag}>`).join("") + "</tr>";
+    }).join("");
+
+    document.getElementById("table-container").innerHTML = "";
+    document.getElementById("table-container").appendChild(table);
+  }
+</script>
