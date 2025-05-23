@@ -1,0 +1,75 @@
+---
+layout: default
+title: Text Summarizer
+permalink: /tools/summarizer.html
+---
+
+<style>
+  .tool-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    line-height: 1.6;
+    color: #fff;
+  }
+
+  textarea {
+    width: 100%;
+    height: 180px;
+    padding: 12px;
+    font-size: 1rem;
+    background-color: #1e1e1e;
+    color: #fff;
+    border: 1px solid #555;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+  }
+
+  button.summarize-btn {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .summary-output {
+    background-color: #2a2a2a;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-left: 4px solid #4CAF50;
+    border-radius: 6px;
+  }
+</style>
+
+<div class="tool-wrapper">
+  <h1>Text Summarizer</h1>
+  <p>Paste any article or paragraph below to generate a short summary.</p>
+
+  <textarea id="inputText" placeholder="Paste text here..."></textarea>
+  <br>
+  <button class="summarize-btn" onclick="mockSummarize()">Summarize</button>
+
+  <div class="summary-output" id="summaryBox" style="display:none;">
+    <h3>Summary:</h3>
+    <p id="summaryResult"></p>
+  </div>
+</div>
+
+<script>
+  function mockSummarize() {
+    const input = document.getElementById("inputText").value.trim();
+    const summaryBox = document.getElementById("summaryBox");
+    const summaryResult = document.getElementById("summaryResult");
+
+    if (input.length === 0) {
+      summaryResult.innerText = "Please enter some text to summarize.";
+    } else {
+      summaryResult.innerText = "This is a mock summary of your input. Real AI summarization will be available soon.";
+    }
+
+    summaryBox.style.display = 'block';
+  }
+</script>
