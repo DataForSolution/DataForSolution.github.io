@@ -51,37 +51,49 @@ permalink: /tools/dataset-preview.html
 
 <div class="tool-wrapper">
   <h1>Dataset Previewer</h1>
-  <p>Upload a CSV file to preview its structure and sample rows.</p>
-  <input type="file" accept=".csv" onchange="previewDataset(event)" />
+  <p>Upload a CSV or ZIP file to preview its structure, column types, and visual charts.</p>
+  <input type="file" accept=".csv,.zip" onchange="previewDataset(event)" />
   <br><br>
-<button onclick="exportSummaryCSV()">Export Summary to CSV</button>
-<button onclick="exportSummaryPDF()">Export Summary to PDF</button>
+  <button onclick="exportSummaryCSV()">Export Summary to CSV</button>
+  <button onclick="exportSummaryPDF()">Export Summary to PDF</button>
 
   <div class="meta" id="fileMeta" style="display: none;"></div>
   <div id="csvPreview"></div>
+
   <h2 style="margin-top: 2rem;">Visualize Column</h2>
-<select id="chartType" onchange="renderChart()">
-  <option value="bar">Bar</option>
-  <option value="line">Line</option>
-  <option value="pie">Pie</option>
-</select>
+  <select id="chartType" onchange="renderChart()">
+    <option value="bar">Bar</option>
+    <option value="line">Line</option>
+    <option value="pie">Pie</option>
+  </select>
 
-<select id="columnSelect" onchange="renderChart()"></select>
+  <select id="columnSelect" onchange="renderChart()"></select>
+  <canvas id="chartCanvas" style="margin-top: 20px; max-width: 100%; height: 400px;"></canvas>
 
-<canvas id="chartCanvas" style="margin-top: 20px; max-width: 100%; height: 400px;"></canvas>
-<div style="margin-top: 1rem;">
-  <button onclick="downloadChartPNG()">Download Chart as PNG</button>
-  <button onclick="downloadChartPDF()">Download Chart as PDF</button>
+  <div style="margin-top: 1rem;">
+    <button onclick="downloadChartPNG()">Download Chart as PNG</button>
+    <button onclick="downloadChartPDF()">Download Chart as PDF</button>
+  </div>
 </div>
 
-
-</div>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
- <script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
+<!-- Libraries -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/FileSaver.js/2.0.5/FileSaver.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
 <script>
+  let currentSummary = {
+    filename: "",
+    columns: [],
+    types: [],
+    rowCount: 0,
+    previewRows: []
+  };
+
+  let numericCols = [];
+  let chart;
+
   function previewDataset(event) {
     const file = event.target.files[0];
     if (!file) return;
@@ -106,86 +118,6 @@ permalink: /tools/dataset-preview.html
     };
     reader.readAsText(file);
   }
-  currentSummary = {
-  filename: fileName,
-  columns: headers,
-  types: types,
-  rowCount: rows.length - 1,
-  previewRows: previewRows
-};
-updateColumnDropdown(headers, types);
-
-  let numericCols = [];
-let chart;
-
-function updateColumnDropdown(headers, types) {
-  const select = document.getElementById("columnSelect");
-  select.innerHTML = "";
-  numericCols = headers.map((h, i) => types[i] === "number" ? h : null).filter(Boolean);
-  numericCols.forEach(col => {
-    const opt = document.createElement("option");
-    opt.value = col;
-    opt.innerText = col;
-    select.appendChild(opt);
-  });
-  if (numericCols.length) renderChart();
-}
-
-function renderChart() {
-  if (!numericCols.length) return;
-
-  const chartType = document.getElementById("chartType").value;
-  const selectedCol = document.getElementById("columnSelect").value;
-  const colIndex = currentSummary.columns.indexOf(selectedCol);
-  const rows = currentSummary.previewRows || [];
-
-  const labels = rows.map((_, i) => `Row ${i + 1}`);
-  const values = rows.map(r => parseFloat(r[colIndex])).filter(v => !isNaN(v));
-
-  if (chart) chart.destroy();
-
-  const ctx = document.getElementById("chartCanvas").getContext("2d");
-  chart = new Chart(ctx, {
-    type: chartType,
-    data: {
-      labels: labels,
-      datasets: [{
-        label: selectedCol,
-        data: values,
-        backgroundColor: "#4CAF50",
-        borderColor: "#4CAF50",
-        borderWidth: 1
-      }]
-    },
-    options: {
-      responsive: true,
-      plugins: {
-        legend: { display: true }
-      },
-      scales: {
-        y: { beginAtZero: true }
-      }
-    }
-  });
-}
-function downloadChartPNG() {
-  const link = document.createElement('a');
-  link.download = `${document.getElementById("columnSelect").value}_chart.png`;
-  link.href = document.getElementById('chartCanvas').toDataURL('image/png');
-  link.click();
-}
-
-function downloadChartPDF() {
-  const { jsPDF } = window.jspdf;
-  const canvas = document.getElementById('chartCanvas');
-  const imgData = canvas.toDataURL('image/png');
-  const pdf = new jsPDF();
-  pdf.setFontSize(12);
-  pdf.text("Chart Visualization", 10, 10);
-  pdf.addImage(imgData, 'PNG', 10, 20, 180, 100);
-  pdf.save(`${document.getElementById("columnSelect").value}_chart.pdf`);
-}
-
 
   function handleZip(file) {
     JSZip.loadAsync(file).then(zip => {
@@ -223,17 +155,18 @@ function downloadChartPDF() {
     const rows = csvText.trim().split("\n").map(row => row.split(","));
     const headers = rows[0];
     const previewRows = rows.slice(1, 6);
-
-    // Detect column types
     const sampleCols = headers.map((_, colIdx) => previewRows.map(r => r[colIdx] || ""));
     const types = sampleCols.map(col => detectType(col));
-    currentSummary = {
-  filename: fileName,
-  columns: headers,
-  types: types,
-  rowCount: rows.length - 1
-};
 
+    currentSummary = {
+      filename: fileName,
+      columns: headers,
+      types: types,
+      rowCount: rows.length - 1,
+      previewRows: previewRows
+    };
+
+    updateColumnDropdown(headers, types);
 
     document.getElementById("fileMeta").style.display = "block";
     document.getElementById("fileMeta").innerHTML = `
@@ -257,43 +190,105 @@ function downloadChartPDF() {
     preview.innerHTML = "";
     preview.appendChild(table);
   }
-  let currentSummary = {
-  filename: "",
-  columns: [],
-  types: [],
-  rowCount: 0
-};
 
-function exportSummaryCSV() {
-  const csvContent = [
-    ["File", currentSummary.filename],
-    ["Rows", currentSummary.rowCount],
-    ["Columns", currentSummary.columns.length],
-    [],
-    ["Column", "Detected Type"],
-    ...currentSummary.columns.map((col, i) => [col, currentSummary.types[i]])
-  ].map(row => row.join(",")).join("\n");
+  function updateColumnDropdown(headers, types) {
+    const select = document.getElementById("columnSelect");
+    select.innerHTML = "";
+    numericCols = headers.map((h, i) => types[i] === "number" ? h : null).filter(Boolean);
+    numericCols.forEach(col => {
+      const opt = document.createElement("option");
+      opt.value = col;
+      opt.innerText = col;
+      select.appendChild(opt);
+    });
+    if (numericCols.length) renderChart();
+  }
 
-  const blob = new Blob([csvContent], { type: "text/csv" });
-  saveAs(blob, `${currentSummary.filename}_summary.csv`);
-}
+  function renderChart() {
+    if (!numericCols.length) return;
 
-async function exportSummaryPDF() {
-  const { jsPDF } = window.jspdf;
-  const doc = new jsPDF();
-  doc.setFontSize(12);
+    const chartType = document.getElementById("chartType").value;
+    const selectedCol = document.getElementById("columnSelect").value;
+    const colIndex = currentSummary.columns.indexOf(selectedCol);
+    const rows = currentSummary.previewRows || [];
 
-  doc.text(`Dataset Summary`, 10, 10);
-  doc.text(`File: ${currentSummary.filename}`, 10, 20);
-  doc.text(`Rows: ${currentSummary.rowCount}`, 10, 30);
-  doc.text(`Columns: ${currentSummary.columns.length}`, 10, 40);
+    const labels = rows.map((_, i) => `Row ${i + 1}`);
+    const values = rows.map(r => parseFloat(r[colIndex])).filter(v => !isNaN(v));
 
-  doc.text(`\nColumns & Types:`, 10, 55);
-  currentSummary.columns.forEach((col, i) => {
-    doc.text(`${col}: ${currentSummary.types[i]}`, 10, 60 + i * 10);
-  });
+    if (chart) chart.destroy();
 
-  doc.save(`${currentSummary.filename}_summary.pdf`);
-}
+    const ctx = document.getElementById("chartCanvas").getContext("2d");
+    chart = new Chart(ctx, {
+      type: chartType,
+      data: {
+        labels: labels,
+        datasets: [{
+          label: selectedCol,
+          data: values,
+          backgroundColor: "#4CAF50",
+          borderColor: "#4CAF50",
+          borderWidth: 1
+        }]
+      },
+      options: {
+        responsive: true,
+        plugins: {
+          legend: { display: true }
+        },
+        scales: {
+          y: { beginAtZero: true }
+        }
+      }
+    });
+  }
 
+  function downloadChartPNG() {
+    const link = document.createElement('a');
+    link.download = `${document.getElementById("columnSelect").value}_chart.png`;
+    link.href = document.getElementById('chartCanvas').toDataURL('image/png');
+    link.click();
+  }
+
+  function downloadChartPDF() {
+    const { jsPDF } = window.jspdf;
+    const canvas = document.getElementById('chartCanvas');
+    const imgData = canvas.toDataURL('image/png');
+    const pdf = new jsPDF();
+    pdf.setFontSize(12);
+    pdf.text("Chart Visualization", 10, 10);
+    pdf.addImage(imgData, 'PNG', 10, 20, 180, 100);
+    pdf.save(`${document.getElementById("columnSelect").value}_chart.pdf`);
+  }
+
+  function exportSummaryCSV() {
+    const csvContent = [
+      ["File", currentSummary.filename],
+      ["Rows", currentSummary.rowCount],
+      ["Columns", currentSummary.columns.length],
+      [],
+      ["Column", "Detected Type"],
+      ...currentSummary.columns.map((col, i) => [col, currentSummary.types[i]])
+    ].map(row => row.join(",")).join("\n");
+
+    const blob = new Blob([csvContent], { type: "text/csv" });
+    saveAs(blob, `${currentSummary.filename}_summary.csv`);
+  }
+
+  async function exportSummaryPDF() {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+    doc.setFontSize(12);
+
+    doc.text(`Dataset Summary`, 10, 10);
+    doc.text(`File: ${currentSummary.filename}`, 10, 20);
+    doc.text(`Rows: ${currentSummary.rowCount}`, 10, 30);
+    doc.text(`Columns: ${currentSummary.columns.length}`, 10, 40);
+
+    doc.text(`\nColumns & Types:`, 10, 55);
+    currentSummary.columns.forEach((col, i) => {
+      doc.text(`${col}: ${currentSummary.types[i]}`, 10, 60 + i * 10);
+    });
+
+    doc.save(`${currentSummary.filename}_summary.pdf`);
+  }
 </script>
