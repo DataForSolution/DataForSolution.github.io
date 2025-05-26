@@ -1,0 +1,183 @@
+---
+layout: default
+title: Job Matcher
+permalink: /tools/job-matcher.html
+---
+
+<style>
+  .tool-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+    line-height: 1.6;
+    color: #fff;
+  }
+
+  textarea {
+    width: 100%;
+    height: 180px;
+    padding: 12px;
+    font-size: 1rem;
+    background-color: #1e1e1e;
+    color: #fff;
+    border: 1px solid #555;
+    border-radius: 6px;
+    margin-bottom: 1rem;
+  }
+
+  button {
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    margin-top: 1rem;
+  }
+
+  .result-output {
+    background-color: #2a2a2a;
+    padding: 1rem;
+    margin-top: 1rem;
+    border-left: 4px solid #4CAF50;
+    border-radius: 6px;
+  }
+
+  .keyword-badge {
+    background: #4CAF50;
+    padding: 4px 8px;
+    margin: 4px;
+    border-radius: 4px;
+    display: inline-block;
+    font-size: 0.9rem;
+  }
+
+  .keyword-missing {
+    background: #e53935;
+  }
+</style>
+
+<div class="tool-wrapper">
+  <h1>Job Matcher</h1>
+  <p>Paste your resume and a job description to check match and keyword alignment.</p>
+
+  <h3>Your Resume</h3>
+  <textarea id="resumeInput" placeholder="Paste your resume here..."></textarea>
+
+  <h3>Job Description</h3>
+  <textarea id="jobInput" placeholder="Paste job description or title..."></textarea>
+
+  <button onclick="matchJob()">Match Now</button>
+
+  <div class="result-output" id="resultBox" style="display:none;">
+    <h3>Match Score:</h3>
+    <p id="score"></p>
+    <h3>Feedback:</h3>
+    <p id="feedback"></p>
+    <h3>Matched Keywords:</h3>
+    <div id="matchedKeywords"></div>
+    <h3>Missing Keywords:</h3>
+    <div id="missingKeywords"></div>
+    <button onclick="exportToPDF()">Export Match Report to PDF</button>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+
+<script>
+  function matchJob() {
+    const resume = document.getElementById("resumeInput").value.toLowerCase();
+    const job = document.getElementById("jobInput").value.toLowerCase();
+    const resultBox = document.getElementById("resultBox");
+    const scoreBox = document.getElementById("score");
+    const feedbackBox = document.getElementById("feedback");
+    const matchBox = document.getElementById("matchedKeywords");
+    const missingBox = document.getElementById("missingKeywords");
+
+    if (!resume || !job) {
+      alert("Please paste both resume and job description.");
+      return;
+    }
+
+    const resumeWords = extractKeywords(resume);
+    const jobWords = extractKeywords(job);
+    const matched = jobWords.filter(word => resumeWords.includes(word));
+    const missing = jobWords.filter(word => !resumeWords.includes(word));
+
+    const uniqueMatched = [...new Set(matched)];
+    const uniqueMissing = [...new Set(missing)];
+
+    // Score logic
+    let score = 50 + Math.min(uniqueMatched.length * 2, 30);
+    let feedback = "";
+
+    if (score >= 75) {
+      feedback = "Strong match! Your resume includes many key job terms.";
+    } else if (score >= 60) {
+      feedback = "Moderate match. Consider refining your resume with more relevant terms.";
+    } else {
+      feedback = "Weak match. Try aligning your resume more with the job description.";
+    }
+
+    // Display results
+    scoreBox.innerText = `${score} / 100`;
+    feedbackBox.innerText = feedback;
+
+    matchBox.innerHTML = uniqueMatched.length
+      ? uniqueMatched.map(k => `<span class="keyword-badge">${k}</span>`).join(" ")
+      : "<em>No keyword matches found.</em>";
+
+    missingBox.innerHTML = uniqueMissing.length
+      ? uniqueMissing.map(k => `<span class="keyword-badge keyword-missing">${k}</span>`).join(" ")
+      : "<em>No major keywords missing.</em>";
+
+    // Store for export
+    window.matchData = {
+      score,
+      feedback,
+      matched: uniqueMatched,
+      missing: uniqueMissing
+    };
+
+    resultBox.style.display = "block";
+  }
+
+  function extractKeywords(text) {
+    const stopwords = new Set([
+      "the", "and", "is", "in", "of", "to", "for", "a", "an", "on", "with", "as", "by",
+      "at", "be", "are", "this", "that", "or", "it", "from", "your", "you"
+    ]);
+    return text
+      .split(/\W+/)
+      .map(w => w.trim().toLowerCase())
+      .filter(w => w.length > 2 && !stopwords.has(w));
+  }
+
+  function exportToPDF() {
+    const { jsPDF } = window.jspdf;
+    const doc = new jsPDF();
+    doc.setFontSize(12);
+
+    const data = window.matchData;
+    if (!data) return;
+
+    doc.text("Job Match Report", 10, 10);
+    doc.text(`Score: ${data.score}/100`, 10, 20);
+    doc.text("Feedback:", 10, 30);
+    doc.text(data.feedback, 10, 38);
+
+    doc.text("Matched Keywords:", 10, 50);
+    data.matched.forEach((kw, i) => {
+      doc.text(`• ${kw}`, 10, 60 + i * 6);
+    });
+
+    let offset = 60 + data.matched.length * 6 + 10;
+    doc.text("Missing Keywords:", 10, offset);
+    data.missing.forEach((kw, i) => {
+      doc.text(`• ${kw}`, 10, offset + 10 + i * 6);
+    });
+
+    doc.save("job_match_report.pdf");
+  }
+</script>
