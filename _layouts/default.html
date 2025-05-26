@@ -5,26 +5,24 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   {% seo %}
-
   <title>{{ page.title | default: site.title }}</title>
 
-  <!-- Google tag (gtag.js) -->
+  <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1Z2075VWN0"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag(){ dataLayer.push(arguments); }
     gtag('js', new Date());
     gtag('config', 'G-1Z2075VWN0');
   </script>
 
-  <!-- Styles & Scripts -->
+  <!-- Styles and Scripts -->
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <script src="{{ '/assets/js/script.js' | relative_url }}" defer></script>
   <link rel="icon" href="{{ '/assets/images/favicon.ico' | relative_url }}" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-
-  <!-- Structured Data -->
+  <!-- Schema Markup -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -41,24 +39,25 @@
 </head>
 
 <body style="display: flex; flex-direction: column; min-height: 100vh; background-color: #121212; color: #fff;">
-  
+
   {% include navigation.html %}
 
-  <!-- LLmachine Video Ad Section -->
+  <!-- Homepage Video Banner -->
   {% if page.url == "/" %}
-<section class="video-hero">
-  <video autoplay muted loop playsinline>
-    <source src="{{ '/assets/videos/llmachine.mp4' | relative_url }}" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
-  <div class="video-overlay">
-    <h1>LLmachine: Powering the Future of AI</h1>
-    <p>Join us at the forefront of Data Science, Innovation, and Learning</p>
-    <a href="/advertise/" class="cta-button">Advertise With Us</a>
-  </div>
-</section>
-{% endif %}
-<main style="flex-grow: 1; padding: 0; margin: 0;">
+  <section class="video-hero">
+    <video autoplay muted loop playsinline>
+      <source src="{{ '/assets/videos/llmachine.mp4' | relative_url }}" type="video/mp4">
+      Your browser does not support the video tag.
+    </video>
+    <div class="video-overlay">
+      <h1>LLmachine: Powering the Future of AI</h1>
+      <p>Join us at the forefront of Data Science, Innovation, and Learning</p>
+      <a href="/advertise/" class="cta-button">Advertise With Us</a>
+    </div>
+  </section>
+  {% endif %}
+
+  <main style="flex-grow: 1; padding: 0; margin: 0;">
     <div class="page-content">
       {{ content }}
     </div>
@@ -70,37 +69,36 @@
       <a href="https://github.com/DataForSolution" target="_blank" style="color: #4CAF50;">GitHub</a>.
     </p>
   </footer>
+
+  <!-- Floating Social Media Icons -->
   <div class="social-floating">
-  <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
-  <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
-  <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
-  <a href="https://twitter.com" target="_blank"><i class="fab fa-x-twitter"></i></a>
-  <a href="https://threads.net" target="_blank"><i class="fab fa-threads"></i></a>
-  <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
-</div>
+    <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+    <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+    <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+    <a href="https://twitter.com" target="_blank"><i class="fab fa-x-twitter"></i></a>
+    <a href="https://threads.net" target="_blank"><i class="fab fa-threads"></i></a>
+    <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
+  </div>
+
+  <!-- Search Scripts -->
   <script src="https://unpkg.com/lunr/lunr.js"></script>
-<script src="{{ '/assets/js/search.js' | relative_url }}"></script>
-<div id="search-results" style="position: absolute; top: 60px; right: 20px; background: white; color: black; padding: 10px; border-radius: 6px; z-index: 999;"></div>
-<script>
-  fetch("https://ipapi.co/json/")
-    .then(res => res.json())
-    .then(data => {
-      const region = data.region;        // e.g., "Maryland"
-      const country = data.country_name; // e.g., "United States"
-      const location = `${region}, ${country}`;
+  <script src="{{ '/assets/js/search.js' | relative_url }}"></script>
+  <div id="search-results" style="position: absolute; top: 60px; right: 20px; background: white; color: black; padding: 10px; border-radius: 6px; z-index: 999;"></div>
 
-      document.getElementById("geo-welcome").innerText = `🌍 Hello from ${location}!`;
-      localStorage.setItem("userRegion", location);
-
-      // Show region-specific tools
-      if (region.toLowerCase() === "maryland") {
-        document.getElementById("maryland-tools").style.display = "block";
-      }
-    })
-    .catch(() => {
-      document.getElementById("geo-welcome").innerText = "🌍 Hello, global learner!";
-    });
-</script>
+  <!-- Geolocation Script (still loaded, but not displaying region-specific UI anymore) -->
+  <script>
+    fetch("https://ipapi.co/json/")
+      .then(res => res.json())
+      .then(data => {
+        const region = data.region;
+        const country = data.country_name;
+        const location = `${region}, ${country}`;
+        localStorage.setItem("userRegion", location);
+      })
+      .catch(() => {
+        console.log("Geolocation failed.");
+      });
+  </script>
 
 </body>
 </html>
