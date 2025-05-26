@@ -30,14 +30,8 @@ section {
   background-color: transparent;
   text-align: center;
 }
-/* ================================== */
-/* NAVIGATION - Updated */
-/* ================================== */
-/* ================================== */
-/* NAVIGATION - Updated */
-/* ================================== */
 nav {
-  background-color: #121212;
+  background-color: #001f3f; /* Navy blue */
   position: sticky;
   top: 0;
   z-index: 999;
@@ -63,6 +57,18 @@ ul.nav-links {
 
 ul.nav-links li {
   position: relative;
+}
+
+ul.nav-links li a {
+  color: #ffffff !important;
+  font-weight: bold;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+ul.nav-links li a:hover,
+ul.nav-links li a.active {
+  color: #ffd700 !important; /* Gold hover color */
 }
 
 /* Hamburger toggle */
