@@ -98,7 +98,19 @@
       .catch(() => {
         console.log("Geolocation failed.");
       });
+  <script>
+  const scrollBtn = document.getElementById("scrollTopBtn");
+
+  window.onscroll = () => {
+    scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
+  };
+</script>
+
   </script>
+ <!-- Scroll to Top Button -->
+<button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" id="scrollTopBtn" title="Go to top">
+  ↑
+</button>
 
 </body>
 </html>
