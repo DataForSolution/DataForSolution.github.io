@@ -69,6 +69,11 @@ permalink: /tools/dataset-preview.html
 <select id="columnSelect" onchange="renderChart()"></select>
 
 <canvas id="chartCanvas" style="margin-top: 20px; max-width: 100%; height: 400px;"></canvas>
+<div style="margin-top: 1rem;">
+  <button onclick="downloadChartPNG()">Download Chart as PNG</button>
+  <button onclick="downloadChartPDF()">Download Chart as PDF</button>
+</div>
+
 
 </div>
  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
@@ -162,6 +167,23 @@ function renderChart() {
       }
     }
   });
+}
+function downloadChartPNG() {
+  const link = document.createElement('a');
+  link.download = `${document.getElementById("columnSelect").value}_chart.png`;
+  link.href = document.getElementById('chartCanvas').toDataURL('image/png');
+  link.click();
+}
+
+function downloadChartPDF() {
+  const { jsPDF } = window.jspdf;
+  const canvas = document.getElementById('chartCanvas');
+  const imgData = canvas.toDataURL('image/png');
+  const pdf = new jsPDF();
+  pdf.setFontSize(12);
+  pdf.text("Chart Visualization", 10, 10);
+  pdf.addImage(imgData, 'PNG', 10, 20, 180, 100);
+  pdf.save(`${document.getElementById("columnSelect").value}_chart.pdf`);
 }
 
 
