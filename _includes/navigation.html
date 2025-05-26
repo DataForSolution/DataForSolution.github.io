@@ -1,127 +1,119 @@
-<nav>
-  <ul>
-  <!-- Logo as the first item -->
-  <li style="float: left; margin-right: 20px;">
-    <a href="{{ '/' | relative_url }}">
-      <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="LLmachine Logo" style="height: 40px; vertical-align: middle;">
+<nav class="main-nav">
+  <div class="nav-container">
+    <a href="{{ '/' | relative_url }}" class="logo">
+      <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="LLmachine Logo" style="height: 40px;">
     </a>
-  </li>
-    <li class="dropdown">
-  <a href="{{ '/' | relative_url }}">Home</a>
-  <ul class="dropdown-menu">
-    <li><a href="{{ '/about/' | relative_url }}">About</a></li>
-    <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
-    <li><a href="{{ '/faq/' | relative_url }}">FAQ</a></li>
-    <li><a href="{{ '/dashboard/' | relative_url }}">📊 Dashboard</a></li>
-    <li><a href="{{ '/signin/' | relative_url }}">🔐 Sign In</a></li>
-    <li><a href="{{ '/signup/' | relative_url }}">🆕 Sign Up</a></li>
-    <li><a href="{{ '/feedback/' | relative_url }}">💬 Give Feedback</a></li>
-    <li><a href="{{ '/request-info/' | relative_url }}">📮 Request Info</a></li>
 
-  </ul>
-</li>
+    <button class="hamburger" onclick="document.querySelector('.nav-links').classList.toggle('open')">☰</button>
 
-   <li class="dropdown">
-  <a href="#">Services ▾</a>
-  <ul class="dropdown-menu">
-    <li class="dropdown">
-  <a href="{{ '/services/' | relative_url }}">Services ▾</a>
-  <ul class="dropdown-menu">
-    <li><a href="{{ '/services/business-analytics/' | relative_url }}">📊 Business Analytics</a></li>
-    <li><a href="{{ '/services/data-entry/' | relative_url }}">📝 Data Entry</a></li>
-    <li><a href="{{ '/services/data-reporting/' | relative_url }}">📈 Data Reporting</a></li>
-    <li><a href="{{ '/services/strategic-planning/' | relative_url }}">🎯 Strategic Planning</a></li>
-    <li><a href="{{ '/services/healthcare-consulting/' | relative_url }}">🏥 Healthcare Consulting</a></li>
-    <li><a href="{{ '/services/financial-analysis/' | relative_url }}">💰 Financial Analysis</a></li>
-    <li><a href="{{ '/services/market-research/' | relative_url }}">🔍 Market Research</a></li>
-  </ul>
-</li>
+    <ul class="nav-links">
+      <li class="dropdown">
+        <a href="{{ '/' | relative_url }}">Home</a>
+        <ul class="dropdown-menu">
+          <li><a href="{{ '/about/' | relative_url }}">About</a></li>
+          <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
+          <li><a href="{{ '/faq/' | relative_url }}">FAQ</a></li>
+          <li><a href="{{ '/dashboard/' | relative_url }}">Dashboard</a></li>
+          <li><a href="{{ '/signin/' | relative_url }}">Sign In</a></li>
+          <li><a href="{{ '/signup/' | relative_url }}">Sign Up</a></li>
+          <li><a href="{{ '/feedback/' | relative_url }}">Give Feedback</a></li>
+          <li><a href="{{ '/request-info/' | relative_url }}">Request Info</a></li>
+        </ul>
+      </li>
 
-    <li><a href="{{ '/certifications/' | relative_url }}">🎓 Certifications</a></li>
-    <li><a href="{{ '/certification-services/' | relative_url }}">📘 Certification Prep Services</a></li>
+      <li class="dropdown">
+        <a href="#">Services ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="{{ '/services/' | relative_url }}">Services Overview</a></li>
+          <li><a href="{{ '/services/business-analytics/' | relative_url }}">Business Analytics</a></li>
+          <li><a href="{{ '/services/data-entry/' | relative_url }}">Data Entry</a></li>
+          <li><a href="{{ '/services/data-reporting/' | relative_url }}">Data Reporting</a></li>
+          <li><a href="{{ '/services/strategic-planning/' | relative_url }}">Strategic Planning</a></li>
+          <li><a href="{{ '/services/healthcare-consulting/' | relative_url }}">Healthcare Consulting</a></li>
+          <li><a href="{{ '/services/financial-analysis/' | relative_url }}">Financial Analysis</a></li>
+          <li><a href="{{ '/services/market-research/' | relative_url }}">Market Research</a></li>
+          <li><a href="{{ '/certifications/' | relative_url }}">Certifications</a></li>
+          <li><a href="{{ '/certification-services/' | relative_url }}">Certification Prep Services</a></li>
+        </ul>
+      </li>
 
-    <!-- Add other service links here if needed -->
-  </ul>
-</li>
+      <li class="dropdown">
+        <a href="{{ '/projects/' | relative_url }}">Projects ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="{{ '/projects/#all' }}">All Projects</a></li>
+          <li><a href="{{ '/projects/#notebooks' }}">Notebooks</a></li>
+          <li><a href="{{ '/projects/#scripts' }}">Scripts</a></li>
+          <li><a href="{{ '/projects/#pdfs' }}">PDFs</a></li>
+        </ul>
+      </li>
 
-    <li class="dropdown">
-  <a href="{{ '/projects/' | relative_url }}">Projects ▾</a>
-  <ul class="dropdown-menu">
-    <li><a href="{{ '/projects/#all' }}">📁 All Projects</a></li>
-    <li><a href="{{ '/projects/#notebooks' }}">📓 Notebooks</a></li>
-    <li><a href="{{ '/projects/#scripts' }}">📜 Scripts</a></li>
-    <li><a href="{{ '/projects/#pdfs' }}">📄 PDFs</a></li>
-  </ul>
-</li>
+      <li><a href="{{ '/ebooks/' | relative_url }}">E-Books</a></li>
 
-    <li><a href="{{ '/ebooks/' | relative_url }}">E-Books</a></li> <!-- TOP LEVEL LINK -->
+      <li class="dropdown">
+        <a href="{{ '/toolkits/' | relative_url }}">Toolkits</a>
+        <ul class="dropdown-menu">
+          <li><a href="{{ '/career-hub/' | relative_url }}">Career Hub</a></li>
+          <li><a href="{{ '/career/' | relative_url }}">Career Prep Center</a></li>
+          <li><a href="/tools/job-matcher.html">Job Matcher</a></li>
+          <li><a href="{{ '/toolkits/#notebooks' }}">Notebooks</a></li>
+          <li><a href="{{ '/toolkits/#cheat-sheets' }}">Cheat Sheets</a></li>
+          <li><a href="{{ '/toolkits/#study-planners' }}">Study Planners</a></li>
+          <li><a href="{{ '/toolkits/#interactive-demos' }}">Interactive Demos</a></li>
+          <li><a href="/toolkits/#mini-courses">Mini-Courses</a></li>
+          <li class="dropdown-submenu">
+            <a href="#">AI Tools</a>
+            <ul class="dropdown-menu">
+              <li><a href="/tools/summarizer.html">Text Summarizer</a></li>
+              <li><a href="/tools/csv-visualizer.html">CSV Visualizer</a></li>
+              <li><a href="/tools/resume-reviewer.html">Resume Reviewer</a></li>
+              <li><a href="/tools/dataset-preview.html">Dataset Previewer</a></li>
+            </ul>
+          </li>
+          <li><a href="{{ '/write-for-us/' | relative_url }}">Write for Us</a></li>
+        </ul>
+      </li>
 
-    <!-- Toolkits Dropdown -->
-<li class="dropdown">
-  <a href="{{ '/toolkits/' | relative_url }}">Toolkits</a>
-  <ul class="dropdown-menu">
-    <li><a href="{{ '/career-hub/' | relative_url }}">Career Hub</a></li>
-    <li><a href="{{ '/career/' | relative_url }}">Career Prep Center</a></li>
-    <li><a href="/tools/job-matcher.html">Job Matcher</a></li>
-    <li><a href="{{ '/toolkits/#notebooks' }}">Notebooks</a></li>
-    <li><a href="{{ '/toolkits/#cheat-sheets' }}">Cheat Sheets</a></li>
-    <li><a href="{{ '/toolkits/#study-planners' }}">Study Planners</a></li>
-    <li><a href="{{ '/toolkits/#interactive-demos' }}">Interactive Demos</a></li>
-    <li><a href="/toolkits/#mini-courses">Go to Mini-Courses</a></li>
+      <li><a href="{{ '/resources/' | relative_url }}">Resources</a></li>
 
-    <!-- AI Tools Submenu -->
-    <li class="dropdown-submenu">
-      <a href="#">AI Tools</a>
-      <ul class="dropdown-menu">
-        <li><a href="/tools/summarizer.html">Text Summarizer</a></li>
-        <li><a href="/tools/csv-visualizer.html">CSV Visualizer</a></li>
-        <li><a href="/tools/resume-reviewer.html">Resume Reviewer</a></li>
-        <li><a href="/tools/dataset-preview.html">Dataset Previewer</a></li>
-      </ul>
-    </li>
+      <li class="dropdown">
+        <a href="/media/">Media</a>
+        <ul class="dropdown-menu">
+          <li><a href="/tools/video-tutorials.html">Video Tutorials</a></li>
+        </ul>
+      </li>
 
-    <li><a href="{{ '/write-for-us/' | relative_url }}">Write for Us</a></li>
-  </ul>
-</li>
+      <li class="dropdown">
+        <a href="{{ '/blog/' | relative_url }}">Blog ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="{{ '/blog/' | relative_url }}">LLmachine Blog</a></li>
+          <li><a href="{{ '/current-ai-news/' | relative_url }}">Current AI News</a></li>
+        </ul>
+      </li>
 
-    </li>
+      <li><a href="{{ '/collaborate/' | relative_url }}">Collaborate</a></li>
+      <li><a href="{{ '/advertise/' | relative_url }}">Advertise</a></li>
 
-    <li><a href="{{ '/resources/' | relative_url }}">Resources</a></li>
-   <li class="dropdown">
-  <a href="/media/">Media</a>
-  <ul class="dropdown-menu">
-    <li><a href="/tools/video-tutorials.html">Video Tutorials</a></li>
-  </ul>
-</li>
+      <li class="dropdown">
+        <a href="{{ '/courses/' | relative_url }}">Courses ▾</a>
+        <ul class="dropdown-menu">
+          <li><a href="{{ '/courses/' | relative_url }}">All Courses</a></li>
+          <li><a href="{{ '/courses/powerbi/' | relative_url }}">Power BI Fundamentals</a></li>
+          <li><a href="{{ '/courses/tableau/' | relative_url }}">Tableau Mastery</a></li>
+          <li><a href="{{ '/courses/ml/' | relative_url }}">Machine Learning with Python</a></li>
+          <li><a href="{{ '/courses/sql/' | relative_url }}">SQL for Data Science</a></li>
+          <li><a href="{{ '/courses/webdev/' | relative_url }}">Web Development</a></li>
+          <li><a href="{{ '/courses/register/' | relative_url }}">Register for a Course</a></li>
+        </ul>
+      </li>
 
-     <li class="dropdown">
-  <a href="{{ '/blog/' | relative_url }}">Blog ▾</a>
-  <ul class="dropdown-menu">
-    <li><a href="{{ '/blog/' | relative_url }}">📰 LLmachine Blog</a></li>
-    <li><a href="{{ '/current-ai-news/' | relative_url }}">🌐 Current AI News</a></li>
-    
-  </ul>
-    <li><a href="{{ '/collaborate/' | relative_url }}">Collaborate</a></li>
-    <li><a href="{{ '/advertise/' | relative_url }}">Advertise</a></li>
-   <li class="dropdown">
-      <a href="{{ '/courses/' | relative_url }}">📚 Courses ▾</a>
-      <ul class="dropdown-menu">
-        <li><a href="{{ '/courses/' | relative_url }}">📘 All Courses</a></li>
-        <li><a href="{{ '/courses/powerbi/' | relative_url }}">📊 Power BI Fundamentals</a></li>
-        <li><a href="{{ '/courses/tableau/' | relative_url }}">📈 Tableau Mastery</a></li>
-        <li><a href="{{ '/courses/ml/' | relative_url }}">🤖 Machine Learning with Python</a></li>
-        <li><a href="{{ '/courses/sql/' | relative_url }}">🧮 SQL for Data Science</a></li>
-        <li><a href="{{ '/courses/webdev/' | relative_url }}">🌐 Web Development</a></li>
-        <li><a href="{{ '/courses/register/' | relative_url }}">📝 Register for a Course</a></li>
-
-      </ul>
-    <form id="search-form">
-  <input type="text" id="search-box" placeholder="Search..." />
-</form>
-   <div id="search-results" style="position: absolute; top: 50px; right: 10px; background: #fff; color: #000; width: 300px; border-radius: 6px; box-shadow: 0 2px 10px rgba(0,0,0,0.15); z-index: 999; font-size: 0.95rem;"></div>
-
-    </li>
-</ul>
+      <li>
+        <form id="search-form">
+          <input type="text" id="search-box" placeholder="Search..." />
+        </form>
+        <div id="search-results" style="position: absolute; top: 50px; right: 10px; background: #fff; color: #000; width: 300px; border-radius: 6px; box-shadow: 0 2px 10px rgba(0,0,0,0.15); z-index: 999; font-size: 0.95rem;"></div>
+      </li>
+    </ul>
+  </div>
 </nav>
 
 <style>
