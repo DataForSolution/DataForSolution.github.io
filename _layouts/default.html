@@ -78,6 +78,29 @@
   <a href="https://threads.net" target="_blank"><i class="fab fa-threads"></i></a>
   <a href="https://youtube.com" target="_blank"><i class="fab fa-youtube"></i></a>
 </div>
+  <script src="https://unpkg.com/lunr/lunr.js"></script>
+<script src="{{ '/assets/js/search.js' | relative_url }}"></script>
+<div id="search-results" style="position: absolute; top: 60px; right: 20px; background: white; color: black; padding: 10px; border-radius: 6px; z-index: 999;"></div>
+<script>
+  fetch("https://ipapi.co/json/")
+    .then(res => res.json())
+    .then(data => {
+      const region = data.region;        // e.g., "Maryland"
+      const country = data.country_name; // e.g., "United States"
+      const location = `${region}, ${country}`;
+
+      document.getElementById("geo-welcome").innerText = `🌍 Hello from ${location}!`;
+      localStorage.setItem("userRegion", location);
+
+      // Show region-specific tools
+      if (region.toLowerCase() === "maryland") {
+        document.getElementById("maryland-tools").style.display = "block";
+      }
+    })
+    .catch(() => {
+      document.getElementById("geo-welcome").innerText = "🌍 Hello, global learner!";
+    });
+</script>
 
 </body>
 </html>
