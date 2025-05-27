@@ -111,6 +111,91 @@
 <button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" id="scrollTopBtn" title="Go to top">
   ↑
 </button>
+<script>
+  document.querySelectorAll('.hamburger').forEach(button =>
+    button.addEventListener('click', () =>
+      document.querySelector('.nav-links').classList.toggle('open')
+    )
+  );
+<!-- 🍪 Cookie Consent Floating Banner -->
+<div id="cookie-pill" style="display:none; position:fixed; bottom:20px; right:20px; background:#001f3f; color:#fff; padding:15px 20px; border-radius:30px; font-size:0.9rem; box-shadow:0 4px 8px rgba(0,0,0,0.3); z-index:10000;">
+  <span>
+    LLmachine uses cookies for analytics and experience.
+    <a href="/cookies-policy/" style="color:#ffd700;">Cookies Policy</a> & 
+    <a href="/privacy-policy/" style="color:#ffd700;">Privacy Policy</a>
+  </span>
+  <div style="margin-top:10px;">
+    <button onclick="showCustomizePanel()" style="background:#fff; color:#001f3f; border:none; border-radius:15px; padding:6px 12px; font-weight:bold;">Customize</button>
+    <button onclick="setCookieConsent('rejectAll')" style="margin-left:8px; background:#777; color:#fff; border:none; border-radius:15px; padding:6px 12px;">Reject</button>
+    <button onclick="setCookieConsent('acceptAll')" style="margin-left:8px; background:#4CAF50; color:#fff; border:none; border-radius:15px; padding:6px 12px;">Agree</button>
+  </div>
+</div>
+
+<!-- ⚙️ Cookie Customize Modal -->
+<div id="cookie-modal" style="display:none; position:fixed; bottom:90px; right:20px; width:320px; background:#fff; color:#000; border-radius:12px; padding:20px; box-shadow:0 4px 12px rgba(0,0,0,0.3); z-index:10001;">
+  <h4 style="margin-top:0;">Cookie Preferences</h4>
+  <label><input type="checkbox" checked disabled> Essential (always on)</label><br>
+  <label><input type="checkbox" id="consent-analytics"> Analytics</label><br>
+  <label><input type="checkbox" id="consent-personal"> Personalization</label><br><br>
+  <button onclick="saveCustomConsent()" style="background:#4CAF50; color:#fff; border:none; padding:8px 12px; border-radius:6px;">Save</button>
+  <button onclick="closeModal()" style="margin-left:10px; background:#ccc; border:none; padding:8px 12px; border-radius:6px;">Cancel</button>
+</div>
+
+<!-- 🍪 Cookie Consent Script -->
+<script>
+  function showCustomizePanel() {
+    document.getElementById("cookie-modal").style.display = "block";
+  }
+
+  function closeModal() {
+    document.getElementById("cookie-modal").style.display = "none";
+  }
+
+  function setCookieConsent(type) {
+    const consent = {
+      essential: true,
+      analytics: type === 'acceptAll',
+      personalization: type === 'acceptAll'
+    };
+    localStorage.setItem("cookieConsent", JSON.stringify(consent));
+    document.getElementById("cookie-pill").style.display = "none";
+    document.getElementById("cookie-modal").style.display = "none";
+    pushConsentToAnalytics(consent);
+  }
+
+  function saveCustomConsent() {
+    const consent = {
+      essential: true,
+      analytics: document.getElementById("consent-analytics").checked,
+      personalization: document.getElementById("consent-personal").checked
+    };
+    localStorage.setItem("cookieConsent", JSON.stringify(consent));
+    document.getElementById("cookie-pill").style.display = "none";
+    document.getElementById("cookie-modal").style.display = "none";
+    pushConsentToAnalytics(consent);
+  }
+
+  function pushConsentToAnalytics(consent) {
+    if (window.gtag) {
+      gtag('consent', 'update', {
+        analytics_storage: consent.analytics ? 'granted' : 'denied',
+        ad_storage: consent.personalization ? 'granted' : 'denied'
+      });
+    }
+  }
+
+  document.addEventListener("DOMContentLoaded", () => {
+    const stored = localStorage.getItem("cookieConsent");
+    if (!stored) {
+      document.getElementById("cookie-pill").style.display = "flex";
+      document.getElementById("cookie-pill").style.alignItems = "center";
+      document.getElementById("cookie-pill").style.flexDirection = "column";
+    } else {
+      const consent = JSON.parse(stored);
+      pushConsentToAnalytics(consent);
+    }
+  });
+</script>
 
 </body>
 </html>
