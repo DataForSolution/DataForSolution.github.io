@@ -85,38 +85,37 @@
   <script src="{{ '/assets/js/search.js' | relative_url }}"></script>
   <div id="search-results" style="position: absolute; top: 60px; right: 20px; background: white; color: black; padding: 10px; border-radius: 6px; z-index: 999;"></div>
 
-  <!-- Geolocation Script (still loaded, but not displaying region-specific UI anymore) -->
-  <script>
-    fetch("https://ipapi.co/json/")
-      .then(res => res.json())
-      .then(data => {
-        const region = data.region;
-        const country = data.country_name;
-        const location = `${region}, ${country}`;
-        localStorage.setItem("userRegion", location);
-      })
-      .catch(() => {
-        console.log("Geolocation failed.");
-      });
-  <script>
-  const scrollBtn = document.getElementById("scrollTopBtn");
+ <!-- Geolocation Script -->
+<script>
+  fetch("https://ipapi.co/json/")
+    .then(res => res.json())
+    .then(data => {
+      const region = data.region;
+      const country = data.country_name;
+      const location = `${region}, ${country}`;
+      localStorage.setItem("userRegion", location);
+    })
+    .catch(() => {
+      console.log("Geolocation failed.");
+    });
+</script>
 
+<!-- Scroll to Top Button -->
+<button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" id="scrollTopBtn" title="Go to top">↑</button>
+
+<script>
+  const scrollBtn = document.getElementById("scrollTopBtn");
   window.onscroll = () => {
     scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
   };
-</script>
 
-  </script>
- <!-- Scroll to Top Button -->
-<button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" id="scrollTopBtn" title="Go to top">
-  ↑
-</button>
-<script>
   document.querySelectorAll('.hamburger').forEach(button =>
     button.addEventListener('click', () =>
       document.querySelector('.nav-links').classList.toggle('open')
     )
   );
+</script>
+
 <!-- 🍪 Cookie Consent Floating Banner -->
 <div id="cookie-pill" style="display:none; position:fixed; bottom:20px; right:20px; background:#001f3f; color:#fff; padding:15px 20px; border-radius:30px; font-size:0.9rem; box-shadow:0 4px 8px rgba(0,0,0,0.3); z-index:10000;">
   <span>
@@ -187,9 +186,10 @@
   document.addEventListener("DOMContentLoaded", () => {
     const stored = localStorage.getItem("cookieConsent");
     if (!stored) {
-      document.getElementById("cookie-pill").style.display = "flex";
-      document.getElementById("cookie-pill").style.alignItems = "center";
-      document.getElementById("cookie-pill").style.flexDirection = "column";
+      const pill = document.getElementById("cookie-pill");
+      pill.style.display = "flex";
+      pill.style.alignItems = "center";
+      pill.style.flexDirection = "column";
     } else {
       const consent = JSON.parse(stored);
       pushConsentToAnalytics(consent);
@@ -199,3 +199,4 @@
 
 </body>
 </html>
+ 
