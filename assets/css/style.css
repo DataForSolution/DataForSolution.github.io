@@ -87,7 +87,7 @@ nav ul li .dropdown-menu {
   position: absolute;
   top: 100%;
   left: 0;
-  background: #ffffff; /* White dropdown background */
+  background: #001f3f; /* Navy dropdown background */
   list-style: none;
   padding: 5px 0;
   border-radius: 6px;
@@ -103,17 +103,17 @@ nav ul li.dropdown:hover .dropdown-menu {
 .dropdown-menu li a {
   display: block;
   padding: 10px 16px;
-  color: #000000 !important; /* Force black text */
-  background-color: #ffffff !important;
+  color: #ffffff !important; /* White text */
+  background-color: #001f3f !important;
   text-decoration: none;
   font-size: 1rem;
   white-space: nowrap;
-  border-bottom: 1px solid #eee;
+  border-bottom: 1px solid #003c66;
 }
 
 .dropdown-menu li a:hover {
-  background-color: #f0f0f0 !important;
-  color: #000000 !important;
+  background-color: #004c8c !important;
+  color: #ffffff !important;
   border-radius: 4px;
 }
 
@@ -157,7 +157,7 @@ li.dropdown-submenu:hover .dropdown-menu {
 
   nav ul li .dropdown-menu {
     position: static;
-    background: #ffffff;
+    background: #001f3f;
     box-shadow: none;
     margin-top: 0;
     padding: 0;
@@ -165,17 +165,16 @@ li.dropdown-submenu:hover .dropdown-menu {
 
   .dropdown-menu li a {
     padding: 12px 18px;
-    background-color: #ffffff !important;
-    color: #000000 !important;
-    border-bottom: 1px solid #ddd;
+    background-color: #001f3f !important;
+    color: #ffffff !important;
+    border-bottom: 1px solid #004c8c;
   }
 
   .dropdown-menu li a:hover {
-    background-color: #f0f0f0 !important;
-    color: #000000 !important;
+    background-color: #4CAF50 !important;
+    color: #ffffff !important;
   }
 }
-
 
 /* ================================== */
 /* HERO SECTION */
