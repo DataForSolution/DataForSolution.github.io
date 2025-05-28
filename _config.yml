@@ -46,8 +46,6 @@ kramdown:
 
 # Include & Exclude
 include:
-  - _includes
-  - _layouts
   - _projects
   - _services
   - _faq
@@ -113,9 +111,10 @@ collections:
     output: true
     permalink: /collaborate/
   posts:
-    output: true 
+    output: true
   projects:
-    output: true                 
+    output: true
+    permalink: /projects/:name/
 
 # Layout Defaults
 defaults:
