@@ -116,7 +116,9 @@ collections:
     output: true
     permalink: /collaborate/
   posts:
-    output: true                  
+    output: true 
+  projects:
+    output: true                 
 
 # Layout Defaults
 defaults:
