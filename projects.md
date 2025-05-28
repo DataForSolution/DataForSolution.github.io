@@ -1,4 +1,4 @@
 ---
 permalink: /projects/index.html
-redirect_to: /projects-temp/
+redirect_to: /projects-new/
 ---
