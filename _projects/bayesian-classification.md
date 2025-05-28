@@ -3,6 +3,6 @@ title: "Bayesian Classification"
 description: "Implementation of Bayesian classifiers for probabilistic data modeling and classification."
 category: "Notebook"
 tags: [Bayesian, Classification, ML]
-file_url: /projects/BayesianClassification.ipynb
+file_url: https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/bayesian-classification.ipynb
 layout: project
 ---
