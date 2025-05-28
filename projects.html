@@ -6,6 +6,8 @@ permalink: /projects/
 
 <section class="projects-section">
   <h1>Our Projects</h1>
+  <p>Projects found: {{ site.projects | size }}</p>
+
   <div>
     <label for="filter">Filter by Category:</label>
     <select id="filter" onchange="filterProjects()">
