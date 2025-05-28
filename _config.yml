@@ -85,9 +85,6 @@ collections:
   services:
     output: true
     permalink: /services/
-  projects:
-    output: true
-    permalink: /projects/
   media:
     output: true
     permalink: /media/
