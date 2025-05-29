@@ -550,3 +550,12 @@ nav {
   background-color: #121212;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.6);
 }
+/* Make all links in the ebook section more visible */
+.ebooks-section a {
+  color: #00ffff; /* Light cyan (change if needed) */
+  text-decoration: underline;
+}
+
+.ebooks-section a:hover {
+  color: #ffffff; /* White on hover */
+}
