@@ -5,21 +5,22 @@ permalink: /services/
 ---
 
 <section id="services-request">
-  <h1>📬 Request a Service</h1>
-  <p class="intro">Tell us what you need — we'll match you with the right data science or AI solution.</p>
-  
-  <form action="https://formsubmit.co/kent.sew@gmail.com" method="POST" id="service-request-form">
-  <input type="hidden" name="_next" value="https://dataforsolution.github.io/thank-you-service/">
-  <input type="hidden" name="_captcha" value="false">
+  <h1>Request a Service</h1>
+  <p class="intro">We're here to help you solve your toughest data, AI, and analytics challenges. Fill out the form below, and our team will reach out with a tailored solution.</p>
 
-   <label for="name">👤 Name:</label>
+  <form action="https://formsubmit.co/kent.sew@gmail.com" method="POST" id="service-request-form">
+    <input type="hidden" name="_next" value="https://dataforsolution.github.io/thank-you-service/">
+    <input type="hidden" name="_captcha" value="false">
+
+    <label for="name">Full Name<span class="required">*</span>:</label>
     <input type="text" id="name" name="name" required>
 
-    <label for="email">📧 Email:</label>
+    <label for="email">Email Address<span class="required">*</span>:</label>
     <input type="email" id="email" name="email" required>
 
-    <label for="service-type">🛠 Select Service:</label>
-    <select id="service-type" name="service">
+    <label for="service-type">Select a Service<span class="required">*</span>:</label>
+    <select id="service-type" name="service" required>
+      <option value="">-- Please choose an option --</option>
       <option value="business-analytics">Business Analytics</option>
       <option value="data-entry">Data Entry</option>
       <option value="data-reporting">Data Reporting</option>
@@ -29,13 +30,13 @@ permalink: /services/
       <option value="market-research">Market Research</option>
     </select>
 
-    <label for="budget">💰 Budget (USD):</label>
+    <label for="budget">Estimated Budget (USD)<span class="required">*</span>:</label>
     <input type="number" id="budget" name="budget" min="100" step="50" required>
 
-    <label for="details">📝 Project Details:</label>
-    <textarea id="details" name="details" rows="4" required></textarea>
+    <label for="details">Project Overview<span class="required">*</span>:</label>
+    <textarea id="details" name="details" rows="5" placeholder="Tell us more about your goals, deadlines, or any specific requirements." required></textarea>
 
-    <button type="submit">Submit Request</button>
+    <button type="submit" class="cta-button">Submit Request</button>
   </form>
 </section>
 
