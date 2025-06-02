@@ -6,96 +6,96 @@ permalink: /toolkits/
 
 <section id="toolkits">
 
-<h1>🧰 LLmachine Toolkits Hub</h1>
+<h1>LLmachine Toolkits Hub</h1>
 <p style="max-width: 800px; margin: auto;">
   Accelerate your learning with curated, hands-on resources for AI, Machine Learning, and Data Science — all in one place.
 </p>
 
-<h2>🔗 Quick Access</h2>
+<h2>Quick Access</h2>
 <p>
-  <a href="#notebooks">📓 Notebooks</a> •
-  <a href="#cheat-sheets">📚 Cheat Sheets</a> •
-  <a href="#study-planners">🗓️ Study Planners</a> •
-  <a href="#mini-courses">🎓 Mini-Courses</a> •
-  <a href="#interactive-demos">🛠️ Interactive Demos</a>
+  <a href="#notebooks">Notebooks</a> •
+  <a href="#cheat-sheets">Cheat Sheets</a> •
+  <a href="#study-planners">Study Planners</a> •
+  <a href="#mini-courses">Mini-Courses</a> •
+  <a href="#interactive-demos">Interactive Demos</a>
 </p>
 
 <hr style="border: none; border-top: 1px solid #444; margin: 40px 0;">
-  
+
 <!-- Notebooks Section -->
-<h2 id="notebooks">📓 Starter Python Notebooks</h2>
+<h2 id="notebooks">Starter Python Notebooks</h2>
 <div class="toolkit-gallery">
   <div class="toolkit-card">
-    <h3>🧠 CNN Starter Template</h3>
+    <h3>CNN Starter Template</h3>
     <p>Build your first Convolutional Neural Network for image classification.</p>
     <a href="{{ '/toolkits/notebooks/Chest_CT-Scan_CNN_Project.ipynb' | relative_url }}" target="_blank" class="cta-button">View Notebook</a>
   </div>
 </div>
 
 <!-- Cheat Sheets -->
-<h2 id="cheat-sheets">📚 Cheat Sheets for Quick Reference</h2>
+<h2 id="cheat-sheets">Cheat Sheets for Quick Reference</h2>
 <ul class="cheat-sheet-list">
-  <li>🐍 <a href="/toolkits/cheatsheets/Python_Cheat_Sheet.pdf" target="_blank">Python Basics</a></li>
-  <li>🔢 <a href="/toolkits/cheatsheets/NumPy_Cheat_Sheet.pdf" target="_blank">NumPy Cheat Sheet</a></li>
-  <li>📊 <a href="/toolkits/cheatsheets/Pandas_Cheat_Sheet.pdf" target="_blank">Pandas Cheat Sheet</a></li>
-  <li>📈 <a href="/toolkits/cheatsheets/Matplotlib_Cheat_Sheet.pdf" target="_blank">Matplotlib Cheat Sheet</a></li>
-  <li>🤖 <a href="/toolkits/cheatsheets/Scikit_Learn_Cheat_Sheet_Python.pdf" target="_blank">Scikit-Learn Cheat Sheet</a></li>
+  <li><a href="/toolkits/cheatsheets/Python_Cheat_Sheet.pdf" target="_blank">Python Basics</a></li>
+  <li><a href="/toolkits/cheatsheets/NumPy_Cheat_Sheet.pdf" target="_blank">NumPy Cheat Sheet</a></li>
+  <li><a href="/toolkits/cheatsheets/Pandas_Cheat_Sheet.pdf" target="_blank">Pandas Cheat Sheet</a></li>
+  <li><a href="/toolkits/cheatsheets/Matplotlib_Cheat_Sheet.pdf" target="_blank">Matplotlib Cheat Sheet</a></li>
+  <li><a href="/toolkits/cheatsheets/Scikit_Learn_Cheat_Sheet_Python.pdf" target="_blank">Scikit-Learn Cheat Sheet</a></li>
 </ul>
 
 <!-- Study Planner -->
-<h2 id="study-planners">🗓️ Study Planners</h2>
+<h2 id="study-planners">Study Planners</h2>
 <div class="study-planners">
   <div>
-    <h3>🚀 Learn ML in 60 Days</h3>
+    <h3>Learn ML in 60 Days</h3>
     <p>Structured weekly plan to become confident in Machine Learning.</p>
     <a href="/assets/toolkits/study_planners/ML_Study_Planner_60Days.pdf" target="_blank" class="cta-button">Download Planner</a>
   </div>
 </div>
 
 <!-- Mini Courses -->
-<h2 id="mini-courses">🎓 Mini-Courses & Learning Paths</h2>
+<h2 id="mini-courses">Mini-Courses & Learning Paths</h2>
 <p>Jumpstart your journey into Machine Learning, Deep Learning, and Data Science. Each course includes hands-on notebooks or Colab links — no setup required.</p>
 <div class="mini-course-grid">
   <div class="course-card">
-    <h3>📘 ML in 7 Days</h3>
+    <h3>ML in 7 Days</h3>
     <p><strong>Level:</strong> Beginner<br><strong>Duration:</strong> 7 Days</p>
     <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/ML_7_Day_Crash_Course.ipynb" target="_blank">View Notebook</a> |
     <a href="https://colab.research.google.com/github/DataForSolution/DataForSolution.github.io/blob/main/projects/ML_7_Day_Crash_Course.ipynb" target="_blank">Colab</a>
   </div>
 
   <div class="course-card">
-    <h3>🧠 CNN with Keras</h3>
+    <h3>CNN with Keras</h3>
     <p><strong>Level:</strong> Beginner<br><strong>Duration:</strong> 4 Hours</p>
     <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Chest_CT_Scan_CNN.ipynb" target="_blank">View Notebook</a> |
     <a href="https://colab.research.google.com/github/DataForSolution/DataForSolution.github.io/blob/main/projects/Chest_CT_Scan_CNN.ipynb" target="_blank">Colab</a>
   </div>
 
   <div class="course-card">
-    <h3>🎯 Decision Trees & SVM</h3>
+    <h3>Decision Trees & SVM</h3>
     <p><strong>Level:</strong> Beginner–Intermediate<br><strong>Duration:</strong> 3–4 Hours</p>
     <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Build-a decision tree with Python.ipynb" target="_blank">Decision Tree</a> |
     <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/SVM_440.ipynb" target="_blank">SVM</a>
   </div>
 
   <div class="course-card">
-    <h3>🧬 GANs with CIFAR-10</h3>
+    <h3>GANs with CIFAR-10</h3>
     <p><strong>Level:</strong> Intermediate<br><strong>Duration:</strong> 6 Hours</p>
     <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/CIFAR10GAN_Final.ipynb" target="_blank">View Notebook</a> |
     <a href="https://colab.research.google.com/github/DataForSolution/DataForSolution.github.io/blob/main/projects/CIFAR10GAN_Final.ipynb" target="_blank">Colab</a>
   </div>
 
   <div class="course-card">
-    <h3>📄 Build an AI Resume</h3>
+    <h3>Build an AI Resume</h3>
     <p><strong>Level:</strong> All<br><strong>Duration:</strong> 1 Hour</p>
     <a href="{{ '/career/resume-analyzer/' | relative_url }}">Use Resume Tool →</a>
   </div>
 </div>
 
 <!-- Demos -->
-<h2 id="interactive-demos">🛠️ Interactive Demos</h2>
+<h2 id="interactive-demos">Interactive Demos</h2>
 <p>Try live AI demos hosted on Hugging Face:</p>
 <a href="https://huggingface.co/spaces/Abirate/Emotion-Detection" target="_blank" class="cta-button">
-  🧠 Try Emotion Detection Demo
+  Try Emotion Detection Demo
 </a>
 
 </section>
