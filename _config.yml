@@ -57,7 +57,7 @@ include:
   - assets/toolkits
   - favicon.ico
   - index.html
-  - ebooks.md
+  - ebooks.html
   - toolkits.md
   - navigation.html
   - courses.html
