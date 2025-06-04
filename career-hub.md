@@ -6,10 +6,12 @@ permalink: /career-hub/
 
 <section id="career-hub">
   <div class="content-container">
-    <h1>🚀 AI & Data Science Career Hub</h1>
-    <p>Build your dream career in AI, Data Science, or Machine Learning. This curated section helps you master job interviews, build a killer portfolio, and find real opportunities.</p>
+    <h1>AI & Data Science Career Hub</h1>
+    <p>
+      Build your dream career in AI, Data Science, or Machine Learning. This curated section helps you master job interviews, build a standout portfolio, and find real opportunities.
+    </p>
 
-    <h2>🎯 Interview Prep Resources</h2>
+    <h2>Interview Prep Resources</h2>
     <ul>
       <li><a href="https://www.interviewquery.com/" target="_blank">Interview Query</a> – Real data science interview questions</li>
       <li><a href="https://www.stratascratch.com/" target="_blank">StrataScratch</a> – SQL and Python case practice</li>
@@ -17,7 +19,7 @@ permalink: /career-hub/
       <li><a href="https://glassdoor.com" target="_blank">Glassdoor</a> – Company-specific questions and salary insights</li>
     </ul>
 
-    <h2>🛠️ Resume & Portfolio Tips</h2>
+    <h2>Resume & Portfolio Tips</h2>
     <ul>
       <li><a href="https://flowcv.io" target="_blank">FlowCV</a> – Free resume builder for tech professionals</li>
       <li><a href="https://github.com" target="_blank">GitHub</a> – Host and structure your ML portfolio projects</li>
@@ -25,14 +27,14 @@ permalink: /career-hub/
       <li>Include problem-solving projects, not just notebooks. Show use of real datasets & decision making.</li>
     </ul>
 
-    <h2>📚 Case Studies & Learning Inspiration</h2>
+    <h2>Case Studies & Learning Inspiration</h2>
     <ul>
       <li><a href="https://www.kaggle.com" target="_blank">Kaggle</a> – Practice problems and winning solutions</li>
       <li><a href="https://www.datacamp.com/projects" target="_blank">DataCamp Projects</a> – Guided portfolio builders</li>
       <li><a href="https://realpython.com/" target="_blank">Real Python</a> – Clean, focused tutorials for applied Python</li>
     </ul>
 
-    <h2>🔗 Top Job Boards for AI / Data Careers</h2>
+    <h2>Top Job Boards for AI / Data Careers</h2>
     <ul>
       <li><a href="https://ai-jobs.net" target="_blank">AI-Jobs.net</a> – Dedicated to AI, ML, and NLP jobs</li>
       <li><a href="https://wellfound.com" target="_blank">Wellfound (AngelList)</a> – Startups hiring data talent</li>
@@ -41,54 +43,54 @@ permalink: /career-hub/
       <li><a href="https://www.kaggle.com/jobs" target="_blank">Kaggle Jobs</a></li>
     </ul>
 
-    <h2>🧠 Bonus Learning Sites</h2>
+    <h2>Bonus Learning Sites</h2>
     <ul>
       <li><a href="https://www.fullstackdeeplearning.com/" target="_blank">Full Stack Deep Learning</a> – Real-world workflows</li>
       <li><a href="https://github.com/academic/awesome-datascience" target="_blank">Awesome Data Science GitHub</a></li>
       <li><a href="https://a16z.com/ai-playbook/" target="_blank">AI Playbook by a16z</a> – How to launch AI products</li>
     </ul>
-    <h2>🧠 AI Resume Analyzer</h2>
-<p>Paste your resume or project summary below. We'll instantly tell you what core AI/Data Science skills are included — and what might be missing.</p>
 
-<textarea id="resume-input" placeholder="Paste your resume or job summary here..." rows="10" style="width:100%; max-width:800px; background:#1c1c1c; color:#fff; border:1px solid #555; border-radius:6px; padding:12px; font-size:1rem;"></textarea>
+    <h2>AI Resume Analyzer</h2>
+    <p>Paste your resume or project summary below. We'll instantly tell you what core AI/Data Science skills are included — and what might be missing.</p>
 
-<br><br>
-<button onclick="analyzeResume()" class="cta-button">📊 Analyze</button>
+    <textarea id="resume-input" placeholder="Paste your resume or job summary here..." rows="10" style="width:100%; max-width:800px; background:#1c1c1c; color:#fff; border:1px solid #555; border-radius:6px; padding:12px; font-size:1rem;"></textarea>
 
-<div id="resume-analysis-result" style="margin-top: 2rem;"></div>
+    <br><br>
+    <button onclick="analyzeResume()" class="cta-button">Analyze</button>
 
-<script>
-function analyzeResume() {
-  const text = document.getElementById("resume-input").value.toLowerCase();
-  const requiredSkills = [
-    "python", "pandas", "numpy", "scikit-learn", "tensorflow", "pytorch",
-    "nlp", "cnn", "rnn", "transformers", "sql", "aws", "docker",
-    "git", "linux", "machine learning", "deep learning",
-    "data visualization", "matplotlib", "seaborn"
-  ];
+    <div id="resume-analysis-result" style="margin-top: 2rem;"></div>
 
-  const found = [];
-  const missing = [];
+    <script>
+      function analyzeResume() {
+        const text = document.getElementById("resume-input").value.toLowerCase();
+        const requiredSkills = [
+          "python", "pandas", "numpy", "scikit-learn", "tensorflow", "pytorch",
+          "nlp", "cnn", "rnn", "transformers", "sql", "aws", "docker",
+          "git", "linux", "machine learning", "deep learning",
+          "data visualization", "matplotlib", "seaborn"
+        ];
 
-  requiredSkills.forEach(skill => {
-    if (text.includes(skill)) {
-      found.push(skill);
-    } else {
-      missing.push(skill);
-    }
-  });
+        const found = [];
+        const missing = [];
 
-  document.getElementById("resume-analysis-result").innerHTML = `
-    <h3 style="color:#4CAF50;">✅ Skills Found (${found.length})</h3>
-    <p>${found.length ? found.join(', ') : 'None detected.'}</p>
-    <h3 style="color:#ff5252;">🚫 Skills Missing (${missing.length})</h3>
-    <p>${missing.join(', ')}</p>
-    <h3 style="color:#00BFFF;">💡 Recommendation</h3>
-    <p>Include projects, bullet points, or examples using these missing skills if relevant to your career goals.</p>
-  `;
-}
-</script>
+        requiredSkills.forEach(skill => {
+          if (text.includes(skill)) {
+            found.push(skill);
+          } else {
+            missing.push(skill);
+          }
+        });
 
+        document.getElementById("resume-analysis-result").innerHTML = `
+          <h3 style="color:#4CAF50;">Skills Found (${found.length})</h3>
+          <p>${found.length ? found.join(', ') : 'None detected.'}</p>
+          <h3 style="color:#ff5252;">Skills Missing (${missing.length})</h3>
+          <p>${missing.join(', ')}</p>
+          <h3 style="color:#00BFFF;">Recommendation</h3>
+          <p>Include projects, bullet points, or examples using these missing skills if relevant to your career goals.</p>
+        `;
+      }
+    </script>
   </div>
 </section>
 

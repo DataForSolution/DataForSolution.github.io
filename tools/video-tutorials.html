@@ -18,3 +18,26 @@ permalink: /tools/video-tutorials.html
   <iframe width="100%" height="400" src="https://www.youtube.com/embed/cCONIdrM2VI" frameborder="0" allowfullscreen></iframe>
   <iframe width="100%" height="400" src="https://www.youtube.com/embed/0BKlUySopU4" frameborder="0" allowfullscreen></iframe>
 </div>
+nav ul li.dropdown:hover > .dropdown-menu {
+  display: block;
+}
+
+nav ul li .dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #1e1e1e;
+  padding: 0;
+  list-style: none;
+  z-index: 1000;
+}
+
+nav ul li .dropdown-menu li a {
+  display: block;
+  padding: 10px 15px;
+  color: #fff;
+  text-decoration: none;
+}
+
+nav ul li .dropdown-menu li a:hover {
+  background-color: #4CAF50;
+}
