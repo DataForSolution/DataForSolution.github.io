@@ -8,17 +8,40 @@ title: Home
 
 <!-- Hero Section -->
 <section id="hero" class="fade-in" style="position: relative; height: 100vh; background-image: url('{{ '/assets/images/background.png' | relative_url }}'); background-size: cover; background-position: center; background-repeat: no-repeat; display: flex; align-items: center; justify-content: center; flex-direction: column; color: #fff; text-align: center;">
-  <div id="live-info" style="margin-bottom: 30px;">
+  <!-- Conversion Funnel Message -->
+  <div class="conversion-hero">
+    <h1>Master Data Science & AI — Fast, Free, Real-World</h1>
+    <p class="subheadline">
+      LLmachine is your launchpad to explore hands-on projects, build job-ready skills, and access expert-crafted tools for free.
+    </p>
+    <ul class="value-list">
+      <li>✔️ 100% Free Resources</li>
+      <li>✔️ Certification Prep & Career Hub</li>
+      <li>✔️ Expert-Led AI & ML Projects</li>
+    </ul>
+    <div class="cta-buttons">
+      <a href="/courses" class="button">Start Learning</a>
+      <a href="/projects" class="button outline">Explore Projects</a>
+      <a href="/toolkits" class="button outline">Download Toolkit</a>
+    </div>
+  </div>
+
+  <!-- Live Info -->
+  <div id="live-info" style="margin: 40px 0 20px;">
     <h2 style="color: #4CAF50;">Live Info</h2>
     <p id="current-time" style="font-size: 1.5em; margin: 10px 0;">Loading time...</p>
     <p id="weather" style="font-size: 1.2em; color: #ddd;">Loading weather...</p>
   </div>
+
+  <!-- Introduction -->
   <div style="max-width: 800px; background: rgba(0,0,0,0.6); padding: 20px; border-radius: 10px;">
     <h1 style="font-size: 2.4em; color: #4CAF50; margin-bottom: 15px;">Welcome to LLmachine</h1>
     <p style="font-size: 1.2em;">
       Explore applied AI, data science tools, project-based learning, and career-building resources. LLmachine is your professional launchpad into modern analytics, machine learning, and real-world data solutions.
     </p>
   </div>
+
+  <!-- Subscribe Form -->
   <div id="subscribe" class="subscribe-form" style="background-color: #1e1e1e; padding: 30px; border-radius: 12px; max-width: 480px; margin: 40px auto; text-align: center;">
     <h2 style="color: #4CAF50; margin-bottom: 15px; font-size: 1.8rem;">Stay Updated</h2>
     <p style="color: #ccc; margin-bottom: 20px;">Subscribe to get the latest updates on tools, courses, and AI projects.</p>
@@ -30,68 +53,32 @@ title: Home
   </div>
 </section>
 
-<!-- Scripts -->
-<script>
-function updateTime() {
-  const now = new Date();
-  document.getElementById("current-time").textContent = now.toLocaleString(undefined, {
-    weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit',
-  });
-}
-setInterval(updateTime, 1000);
-updateTime();
-fetch("https://api.open-meteo.com/v1/forecast?latitude=40.7&longitude=-74.0&current_weather=true")
-  .then(res => res.json())
-  .then(data => {
-    const temp = data.current_weather.temperature;
-    const wind = data.current_weather.windspeed;
-    document.getElementById("weather").textContent = `🌤️ Temp: ${temp}°C • Wind: ${wind} km/h`;
-  })
-  .catch(() => {
-    document.getElementById("weather").textContent = "Unable to fetch weather data.";
-  });
-</script>
-
-<!-- Styles -->
 <style>
-.section {
-  padding: 80px 20px;
+.conversion-hero {
+  margin-top: 40px;
   text-align: center;
-  background-color: #f9f9f9;
-}
-.section:nth-child(even) {
-  background-color: #ffffff;
-}
-.button {
-  background: #4CAF50;
   color: white;
-  padding: 12px 24px;
-  border-radius: 6px;
-  display: inline-block;
-  margin-top: 20px;
-  text-decoration: none;
+  max-width: 800px;
 }
-.fade-in {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeInUp 1s ease forwards;
-}
-@keyframes fadeInUp {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-.card {
-  background: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  max-width: 700px;
-  margin: 20px auto;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  text-align: left;
-}
-.card h3 {
+.conversion-hero h1 {
+  font-size: 2.5em;
+  margin-bottom: 15px;
   color: #4CAF50;
+}
+.subheadline {
+  font-size: 1.2em;
+  margin-bottom: 25px;
+}
+.value-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 30px;
+}
+.value-list li {
+  margin: 5px 0;
+  font-weight: 500;
+}
+.cta-buttons .button {
+  margin: 5px 10px;
 }
 </style>
