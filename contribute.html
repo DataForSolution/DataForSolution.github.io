@@ -1,0 +1,84 @@
+---
+layout: default
+title: Contribute
+permalink: /contribute/
+---
+
+<section class="contribute-section">
+  <div class="contribute-container">
+    <h1>Contribute to LLmachine</h1>
+    <p>We're always looking for passionate contributors! Share your project, case study, or tool with the LLmachine community and get featured.</p>
+
+    <form action="https://formspree.io/f/meokokbl" method="POST" class="contribute-form">
+      <label for="name">Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <label for="email">Email or GitHub Handle:</label>
+      <input type="text" id="email" name="email" required>
+
+      <label for="type">Type of Contribution:</label>
+      <select id="type" name="type" required>
+        <option value="Project">Project</option>
+        <option value="Tool">Tool</option>
+        <option value="Case Study">Case Study</option>
+      </select>
+
+      <label for="link">GitHub or Resource Link:</label>
+      <input type="url" id="link" name="link" required>
+
+      <label for="description">Brief Description:</label>
+      <textarea id="description" name="description" rows="5" required></textarea>
+
+      <button type="submit">Submit Contribution</button>
+    </form>
+  </div>
+</section>
+
+<style>
+  .contribute-section {
+    padding: 60px 20px;
+    background-color: #f9f9f9;
+    text-align: center;
+  }
+  .contribute-container {
+    max-width: 700px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    text-align: left;
+  }
+  .contribute-container h1 {
+    color: #4CAF50;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .contribute-form label {
+    display: block;
+    margin: 15px 0 5px;
+    font-weight: bold;
+  }
+  .contribute-form input,
+  .contribute-form select,
+  .contribute-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+  }
+  .contribute-form button {
+    margin-top: 20px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+  }
+  .contribute-form button:hover {
+    background-color: #388e3c;
+  }
+</style>
