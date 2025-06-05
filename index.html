@@ -27,6 +27,13 @@ title: Home
   </div>
 </section>
 
+<!-- Contributor Callout Section -->
+<section id="contribute" class="section fade-in">
+  <h2>Become a Contributor</h2>
+  <p>Share your AI projects, tools, or case studies with the world. Join LLmachine’s mission to empower learners and professionals globally.</p>
+  <a href="/contribute" class="button">Submit Your Work</a>
+</section>
+
 <!-- Live Info -->
 <section class="section fade-in" style="text-align:center;">
   <h2 style="color: #4CAF50;">Live Info</h2>
@@ -44,28 +51,6 @@ title: Home
     <button type="submit" style="padding: 12px 24px; background-color: #4CAF50; color: white; border: none; border-radius: 6px; font-size: 1rem; cursor: pointer;">Subscribe</button>
   </form>
 </section>
-
-<!-- Scripts -->
-<script>
-function updateTime() {
-  const now = new Date();
-  document.getElementById("current-time").textContent = now.toLocaleString(undefined, {
-    weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: '2-digit', minute: '2-digit', second: '2-digit',
-  });
-}
-setInterval(updateTime, 1000);
-updateTime();
-fetch("https://api.open-meteo.com/v1/forecast?latitude=40.7&longitude=-74.0&current_weather=true")
-  .then(res => res.json())
-  .then(data => {
-    const temp = data.current_weather.temperature;
-    const wind = data.current_weather.windspeed;
-    document.getElementById("weather").textContent = `Temp: ${temp}°C • Wind: ${wind} km/h`;
-  })
-  .catch(() => {
-    document.getElementById("weather").textContent = "Unable to fetch weather data.";
-  });
-</script>
 
 <!-- Styles -->
 <style>
