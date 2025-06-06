@@ -6,7 +6,21 @@
 
   {% seo %}
   <title>{{ page.title | default: site.title }}</title>
-
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "LLmachine",
+    "url": "https://dataforsolution.github.io",
+    "logo": "https://dataforsolution.github.io/assets/images/logo.png",
+    "sameAs": [
+      "https://twitter.com/SewLiben",
+      "https://github.com/DataForSolution"
+    ],
+    "description": "A platform for data science, AI research, and analytics solutions."
+  }
+  </script>
+</head>
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1Z2075VWN0"></script>
   <script>
