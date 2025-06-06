@@ -1,0 +1,7 @@
+{
+  "data-analyst": "<h3>Data Analyst Recommendations</h3><ul><li>Project: Sales Dashboard</li><li>Skills: Excel, SQL</li><li>Certification: Google Data Analytics</li><li>Tools: Power BI</li></ul>",
+  "data-scientist": "<h3>Data Scientist Recommendations</h3><ul><li>Project: ML Model</li><li>Skills: Python, Pandas</li><li>Certification: IBM DS</li><li>Tools: Jupyter, Scikit-learn</li></ul>",
+  "ml-engineer": "<h3>Machine Learning Engineer</h3><ul><li>Project: CNN Classifier</li><li>Skills: TensorFlow</li><li>Certification: TensorFlow Dev</li><li>Tools: Keras, ONNX</li></ul>",
+  "bi-developer": "<h3>BI Developer</h3><ul><li>Project: Power BI Dashboard</li><li>Skills: DAX, Power Query</li><li>Certification: Microsoft Analyst</li><li>Tools: Power BI, Excel</li></ul>",
+  "ai-researcher": "<h3>AI Researcher</h3><ul><li>Project: GANs</li><li>Skills: PyTorch, NLP</li><li>Certification: OpenCert AI</li><li>Tools: Arxiv, Hugging Face</li></ul>"
+}
