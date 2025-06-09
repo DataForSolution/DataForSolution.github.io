@@ -1,221 +1,107 @@
 ---
 layout: default
-title: "Toolkits & Resources Hub"
+title: Toolkits
 permalink: /toolkits/
 ---
 
-<section id="toolkits">
-
-<h1>LLmachine Toolkits Hub</h1>
-<p style="max-width: 800px; margin: auto;">
-  Accelerate your learning with curated, hands-on resources for AI, Machine Learning, and Data Science — all in one place.
-</p>
-
-<h2>Quick Access</h2>
-<p>
-  <a href="#notebooks">Notebooks</a> •
-  <a href="#cheat-sheets">Cheat Sheets</a> •
-  <a href="#study-planners">Study Planners</a> •
-  <a href="#mini-courses">Mini-Courses</a> •
-  <a href="#interactive-demos">Interactive Demos</a>
-</p>
-
-<hr style="border: none; border-top: 1px solid #444; margin: 40px 0;">
-
-<!-- Notebooks Section -->
-<h2 id="notebooks">Starter Python Notebooks</h2>
-<div class="toolkit-gallery">
-  <div class="toolkit-card">
-    <h3>CNN Starter Template</h3>
-    <p>Build your first Convolutional Neural Network for image classification.</p>
-    <a href="{{ '/toolkits/notebooks/Chest_CT-Scan_CNN_Project.ipynb' | relative_url }}" target="_blank" class="cta-button">View Notebook</a>
+<section class="toolkits-header" style="background-color: #1e1e1e; color: white; padding: 60px 20px; text-align: center;">
+  <div style="max-width: 800px; margin: auto;">
+    <h1 style="color: #4CAF50;">Toolkits & Templates</h1>
+    <p style="font-size: 1.1rem;">
+      Downloadable resources for data analysis, machine learning, job preparation, and project acceleration.
+    </p>
   </div>
-</div>
+</section>
 
-<!-- Cheat Sheets -->
-<h2 id="cheat-sheets">Cheat Sheets for Quick Reference</h2>
-<ul class="cheat-sheet-list">
-  <li><a href="/toolkits/cheatsheets/Python_Cheat_Sheet.pdf" target="_blank">Python Basics</a></li>
-  <li><a href="/toolkits/cheatsheets/NumPy_Cheat_Sheet.pdf" target="_blank">NumPy Cheat Sheet</a></li>
-  <li><a href="/toolkits/cheatsheets/Pandas_Cheat_Sheet.pdf" target="_blank">Pandas Cheat Sheet</a></li>
-  <li><a href="/toolkits/cheatsheets/Matplotlib_Cheat_Sheet.pdf" target="_blank">Matplotlib Cheat Sheet</a></li>
-  <li><a href="/toolkits/cheatsheets/Scikit_Learn_Cheat_Sheet_Python.pdf" target="_blank">Scikit-Learn Cheat Sheet</a></li>
-</ul>
-
-<!-- Study Planner -->
-<h2 id="study-planners">Study Planners</h2>
-<div class="study-planners">
-  <div>
-    <h3>Learn ML in 60 Days</h3>
-    <p>Structured weekly plan to become confident in Machine Learning.</p>
-    <a href="/assets/toolkits/study_planners/ML_Study_Planner_60Days.pdf" target="_blank" class="cta-button">Download Planner</a>
+<section class="toolkit-section">
+  <h2> Jupyter Notebooks</h2>
+  <div class="card">
+    <h3>Classification Toolkit</h3>
+    <p>Includes SVM, Random Forest, and evaluation metrics for binary classification problems.</p>
+    <a href="/projects/chest_ct_scan_Cancer_Detection_cnn.ipynb" class="button">Download Notebook</a>
   </div>
-</div>
+</section>
 
-<!-- Mini Courses -->
-<h2 id="mini-courses">Mini-Courses & Learning Paths</h2>
-<p>Jumpstart your journey into Machine Learning, Deep Learning, and Data Science. Each course includes hands-on notebooks or Colab links — no setup required.</p>
-<div class="mini-course-grid">
-  <div class="course-card">
-    <h3>ML in 7 Days</h3>
-    <p><strong>Level:</strong> Beginner<br><strong>Duration:</strong> 7 Days</p>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/ML_7_Day_Crash_Course.ipynb" target="_blank">View Notebook</a> |
-    <a href="https://colab.research.google.com/github/DataForSolution/DataForSolution.github.io/blob/main/projects/ML_7_Day_Crash_Course.ipynb" target="_blank">Colab</a>
+<section class="toolkit-section">
+  <h2> Cheat Sheets</h2>
+  <div class="card">
+    <h3>Python Basics</h3>
+    <p>A quick-reference guide to essential Python syntax and operations.</p>
+    <a href="/assets/cheatsheets/python-cheatsheet.pdf" class="button">Download</a>
   </div>
-
-  <div class="course-card">
-    <h3>CNN with Keras</h3>
-    <p><strong>Level:</strong> Beginner<br><strong>Duration:</strong> 4 Hours</p>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Chest_CT_Scan_CNN.ipynb" target="_blank">View Notebook</a> |
-    <a href="https://colab.research.google.com/github/DataForSolution/DataForSolution.github.io/blob/main/projects/Chest_CT_Scan_CNN.ipynb" target="_blank">Colab</a>
+  <div class="card">
+    <h3>Pandas & NumPy</h3>
+    <p>Core data manipulation techniques for analysis in Python.</p>
+    <a href="/assets/cheatsheets/pandas-numpy-cheatsheet.pdf" class="button">Download</a>
   </div>
-
-  <div class="course-card">
-    <h3>Decision Trees & SVM</h3>
-    <p><strong>Level:</strong> Beginner–Intermediate<br><strong>Duration:</strong> 3–4 Hours</p>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/Build-a decision tree with Python.ipynb" target="_blank">Decision Tree</a> |
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/SVM_440.ipynb" target="_blank">SVM</a>
+  <div class="card">
+    <h3>Scikit-Learn</h3>
+    <p>Model fitting, preprocessing, and cross-validation with Scikit-Learn.</p>
+    <a href="/assets/cheatsheets/sklearn-cheatsheet.pdf" class="button">Download</a>
   </div>
+</section>
 
-  <div class="course-card">
-    <h3>GANs with CIFAR-10</h3>
-    <p><strong>Level:</strong> Intermediate<br><strong>Duration:</strong> 6 Hours</p>
-    <a href="https://github.com/DataForSolution/DataForSolution.github.io/blob/main/projects/CIFAR10GAN_Final.ipynb" target="_blank">View Notebook</a> |
-    <a href="https://colab.research.google.com/github/DataForSolution/DataForSolution.github.io/blob/main/projects/CIFAR10GAN_Final.ipynb" target="_blank">Colab</a>
+<section class="toolkit-section">
+  <h2> Study Planners</h2>
+  <div class="card">
+    <h3>30-Day ML Mastery Planner</h3>
+    <p>Structured daily goals to master core ML skills in 4 weeks.</p>
+    <a href="/assets/planners/30day-ml-planner.pdf" class="button">Download PDF</a>
   </div>
-
-  <div class="course-card">
-    <h3>Build an AI Resume</h3>
-    <p><strong>Level:</strong> All<br><strong>Duration:</strong> 1 Hour</p>
-    <a href="{{ '/career/resume-analyzer/' | relative_url }}">Use Resume Tool →</a>
+  <div class="card">
+    <h3>Data Science Exam Prep Planner</h3>
+    <p>Organized review tracker to prepare for certification exams like Google, IBM, and Microsoft.</p>
+    <a href="/assets/planners/exam-prep-planner.pdf" class="button">Download PDF</a>
   </div>
-</div>
+</section>
 
-<!-- Demos -->
-<h2 id="interactive-demos">Interactive Demos</h2>
-<p>Try live AI demos hosted on Hugging Face:</p>
-<a href="https://huggingface.co/spaces/Abirate/Emotion-Detection" target="_blank" class="cta-button">
-  Try Emotion Detection Demo
-</a>
-
+<section class="toolkit-section">
+  <h2> Mini Courses</h2>
+  <div class="card">
+    <h3>Power BI Fundamentals</h3>
+    <p>Build your first BI dashboards and share live reports.</p>
+    <a href="/courses/powerbi/" class="button">Start Course</a>
+  </div>
+  <div class="card">
+    <h3>Intro to SQL for Analysts</h3>
+    <p>Learn SQL basics with real-world query examples and exercises.</p>
+    <a href="/courses/sql/" class="button">Start Course</a>
+  </div>
 </section>
 
 <style>
-#toolkits {
-  padding: 60px 20px;
-  background-color: #121212;
-  color: #ffffff;
-  font-family: "Segoe UI", sans-serif;
+.toolkit-section {
+  padding: 40px 20px;
   text-align: center;
+  background-color: #f9f9f9;
 }
-
-#toolkits h1 {
-  font-size: 2.4rem;
-  color: #4CAF50;
-  margin-bottom: 10px;
+.toolkit-section:nth-of-type(even) {
+  background-color: #ffffff;
 }
-
-#toolkits h2 {
-  font-size: 1.6rem;
-  color: #00BFFF;
-  margin: 30px 0 15px;
-}
-
-#toolkits p {
-  font-size: 1.1rem;
-  color: #ccc;
-  max-width: 800px;
-  margin: 0 auto 20px;
-}
-
-.toolkit-gallery,
-.cheat-sheet-list,
-.study-planners,
-.mini-course-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  padding: 20px 0;
+.card {
+  background: #fff;
+  padding: 25px;
+  border-radius: 12px;
+  max-width: 700px;
+  margin: 20px auto;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   text-align: left;
 }
-
-.toolkit-card,
-.course-card,
-.study-planners > div,
-.cheat-sheet-list li {
-  background-color: #1e1e1e;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
-  transition: transform 0.3s ease;
-}
-
-.toolkit-card:hover,
-.course-card:hover,
-.study-planners > div:hover {
-  transform: translateY(-5px);
-}
-
-.toolkit-card h3,
-.course-card h3,
-.study-planners h3 {
+.card h3 {
   color: #4CAF50;
-  font-size: 1.3rem;
   margin-bottom: 10px;
 }
-
-.toolkit-card p,
-.course-card p {
+.card p {
   font-size: 1rem;
-  color: #ddd;
+  color: #444;
 }
-
-.cta-button {
+.button {
   display: inline-block;
-  background-color: #4CAF50;
-  color: white;
-  border: none;
-  padding: 10px 18px;
-  font-size: 1rem;
-  border-radius: 6px;
   margin-top: 10px;
-  text-decoration: none;
-  transition: background-color 0.3s ease;
-}
-
-.cta-button:hover {
-  background-color: #388e3c;
-}
-
-a {
-  color: #1E90FF;
-  text-decoration: none;
-}
-
-a:hover {
-  text-decoration: underline;
-  color: #4CAF50;
-}
-
-.cheat-sheet-list {
-  list-style: none;
-  padding: 0;
-}
-
-.cheat-sheet-list li {
-  padding: 10px;
-  background-color: #1c1c1c;
-  border: 1px solid #333;
+  background: #4CAF50;
+  color: white;
+  padding: 10px 20px;
   border-radius: 6px;
-  font-size: 1rem;
-}
-
-@media (max-width: 768px) {
-  .toolkit-gallery,
-  .cheat-sheet-list,
-  .study-planners,
-  .mini-course-grid {
-    grid-template-columns: 1fr;
-  }
+  text-decoration: none;
 }
 </style>
