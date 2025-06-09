@@ -68,24 +68,25 @@ permalink: /toolkits/
     <a href="/courses/sql/" class="button">Start Course</a>
   </div>
 </section>
-
 <style>
 .toolkit-section {
   padding: 40px 20px;
   text-align: center;
-  background-color: #f9f9f9;
+  background-color: #1e1e1e;
+  color: white;
 }
 .toolkit-section:nth-of-type(even) {
-  background-color: #ffffff;
+  background-color: #1e1e1e;
 }
 .card {
-  background: #fff;
+  background: #2a2a2a;
   padding: 25px;
   border-radius: 12px;
   max-width: 700px;
   margin: 20px auto;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.3);
   text-align: left;
+  color: white;
 }
 .card h3 {
   color: #4CAF50;
@@ -93,7 +94,7 @@ permalink: /toolkits/
 }
 .card p {
   font-size: 1rem;
-  color: #444;
+  color: #ddd;
 }
 .button {
   display: inline-block;
@@ -104,4 +105,8 @@ permalink: /toolkits/
   border-radius: 6px;
   text-decoration: none;
 }
+.button:hover {
+  background: #45a049;
+}
 </style>
+
