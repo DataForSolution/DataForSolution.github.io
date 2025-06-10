@@ -12,7 +12,6 @@ permalink: /toolkits/
     </p>
   </div>
 </section>
-
 <section class="toolkit-section">
   <h2> Jupyter Notebooks</h2>
   <div class="card">
@@ -21,37 +20,37 @@ permalink: /toolkits/
     <a href="/projects/chest_ct_scan_Cancer_Detection_cnn.ipynb" class="button">Download Notebook</a>
   </div>
 </section>
-
 <section class="toolkit-section">
-  <h2> Cheat Sheets</h2>
+  <h2>📄 Cheat Sheets</h2>
+
   <div class="card">
     <h3>Python Basics</h3>
     <p>A quick-reference guide to essential Python syntax and operations.</p>
-    <a href="/assets/cheatsheets/python-cheatsheet.pdf" class="button">Download</a>
+    <a href="/toolkits/cheatsheets/Python_Cheat_Sheet.pdf" class="button">Download</a>
   </div>
-  <div class="card">
-    <h3>Pandas & NumPy</h3>
-    <p>Core data manipulation techniques for analysis in Python.</p>
-    <a href="/assets/cheatsheets/pandas-numpy-cheatsheet.pdf" class="button">Download</a>
-  </div>
-  <div class="card">
-    <h3>Scikit-Learn</h3>
-    <p>Model fitting, preprocessing, and cross-validation with Scikit-Learn.</p>
-    <a href="/assets/cheatsheets/sklearn-cheatsheet.pdf" class="button">Download</a>
-  </div>
-</section>
 
-<section class="toolkit-section">
-  <h2> Study Planners</h2>
   <div class="card">
-    <h3>30-Day ML Mastery Planner</h3>
-    <p>Structured daily goals to master core ML skills in 4 weeks.</p>
-    <a href="/assets/planners/30day-ml-planner.pdf" class="button">Download PDF</a>
+    <h3>NumPy Cheat Sheet</h3>
+    <p>Core NumPy operations for scientific computing and arrays.</p>
+    <a href="/toolkits/cheatsheets/NumPy_Cheat_Sheet.pdf" class="button">Download</a>
   </div>
+
   <div class="card">
-    <h3>Data Science Exam Prep Planner</h3>
-    <p>Organized review tracker to prepare for certification exams like Google, IBM, and Microsoft.</p>
-    <a href="/assets/planners/exam-prep-planner.pdf" class="button">Download PDF</a>
+    <h3>Pandas Cheat Sheet</h3>
+    <p>Essential Pandas commands for data loading, wrangling, and analysis.</p>
+    <a href="/toolkits/cheatsheets/Pandas_Cheat_Sheet.pdf" class="button">Download</a>
+  </div>
+
+  <div class="card">
+    <h3>Matplotlib Cheat Sheet</h3>
+    <p>Quick guide to creating plots and customizing charts with Matplotlib.</p>
+    <a href="/toolkits/cheatsheets/Matplotlib_Cheat_Sheet.pdf" class="button">Download</a>
+  </div>
+
+  <div class="card">
+    <h3>Scikit-Learn Cheat Sheet</h3>
+    <p>Reference for building and validating ML models with scikit-learn.</p>
+    <a href="/toolkits/cheatsheets/Scikit_Learn_Cheat_Sheet_Python.pdf" class="button">Download</a>
   </div>
 </section>
 
