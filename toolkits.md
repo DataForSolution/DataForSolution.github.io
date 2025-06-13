@@ -17,7 +17,8 @@ permalink: /toolkits/
   <div class="card">
     <h3>Classification Toolkit</h3>
     <p>Includes SVM, Random Forest, and evaluation metrics for binary classification problems.</p>
-    <a href="/toolkits/notebooks/Chest_CT-Scan-CNN-Project.ipynb" class="button">Download Notebook</a>
+   <a href="/toolkits/notebooks/Chest_CT-Scan-CNN-Project.ipynb" class="button">Download Notebook</a>
+<a href="https://colab.research.google.com/github/DataForSolution/DataForSolution.github.io/blob/main/toolkits/notebooks/Chest_CT-Scan-CNN-Project.ipynb" target="_blank" class="button">Open in Colab</a>
  </div>
 </section>
 
