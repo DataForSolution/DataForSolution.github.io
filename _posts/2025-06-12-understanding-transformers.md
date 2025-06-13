@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Understanding Transformers in NLP"
-date: 2025-04-17
+date: 2025-06-12
 description: "A deep dive into the architecture and power of Transformers in Natural Language Processing, and why they outperform traditional models like RNNs and LSTMs."
 ---
 
