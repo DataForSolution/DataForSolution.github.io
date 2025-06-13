@@ -17,8 +17,8 @@ permalink: /toolkits/
   <div class="card">
     <h3>Classification Toolkit</h3>
     <p>Includes SVM, Random Forest, and evaluation metrics for binary classification problems.</p>
-    <a href="/projects/chest_ct_scan_Cancer_Detection_cnn.ipynb" class="button">Download Notebook</a>
-  </div>
+    <a href="/toolkits/notebooks/chest_ct_scan_Cancer_Detection_cnn.ipynb" class="button">Download Notebook</a>
+ </div>
 </section>
 <section class="toolkit-section">
   <h2>📄 Cheat Sheets</h2>
