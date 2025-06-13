@@ -1,0 +1,12 @@
+---
+layout: default
+---
+
+<article class="post-container" style="max-width: 800px; margin: auto; padding: 40px 20px; line-height: 1.7; font-size: 1.1rem; color: #eee;">
+  <h1 style="color: #4CAF50;">{{ page.title }}</h1>
+  <p style="color: #aaa; font-size: 0.95rem;"><em>{{ page.date | date: "%B %d, %Y" }}</em></p>
+
+  <div class="post-content">
+    {{ content | markdownify }}
+  </div>
+</article>
