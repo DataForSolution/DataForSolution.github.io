@@ -5,12 +5,13 @@ title: Home
 
 <!-- Spacer to offset the fixed nav bar -->
 <div style="height: 60px;"></div>
- <section class="weekly-spotlight" style="background: #f0f8ff; padding: 1rem 1.5rem; border-left: 6px solid #007BFF; margin-bottom: 2rem; border-radius: 10px;">
+{% assign latest_post = site.posts.first %}
+<section class="weekly-spotlight" style="background: #f0f8ff; padding: 1rem 1.5rem; border-left: 6px solid #007BFF; margin-bottom: 2rem; border-radius: 10px;">
   <h3 style="color: #007BFF; margin-top: 0;"> Weekly Spotlight</h3>
   <p>
     <strong>
-      <a href="/2025/06/17/flexible-analytical-life-cycle.html" style="color: #0056b3; text-decoration: none;">
-        A Flexible Analytical Data Life Cycle: Why One Size Doesn’t Fit All
+      <a href="{{ latest_post.url | relative_url }}" style="color: #0056b3; text-decoration: none;">
+        {{ latest_post.title }}
       </a>
     </strong>
   </p>
