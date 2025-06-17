@@ -66,7 +66,7 @@ permalink: /blog/
 </style>
 
 <div class="blog-container"> 
-  <!-- Featured Post -->
+  <!-- Blog Header -->
   <h1 class="blog-heading">Latest Articles</h1>
   <p style="text-align: center;">
     Explore insights, case studies, and practical guides in AI, Data Science, and Analytics.
@@ -75,14 +75,13 @@ permalink: /blog/
   <!-- Featured This Week -->
   {% assign latest_post = site.posts.first %}
   <div class="featured-post" style="background: #f0f8ff; padding: 1rem 1.5rem; border-left: 6px solid #007BFF; margin-bottom: 2rem; border-radius: 10px;">
-    <h2 style="margin-top: 0; color: #007BFF;"> Featured This Week</h2>
+    <h2 style="margin-top: 0; color: #007BFF;">🧪 Featured This Week</h2>
     <p>
       <strong>
-  <a href="/blog/2025/06/17/flexible-analytical-life-cycle.html" style="color: #0056b3; text-decoration: none;">
-    A Flexible Analytical Data Life Cycle: Why One Size Doesn’t Fit All
-  </a>
-</strong>
-
+        <a href="{{ latest_post.url | relative_url }}" style="color: #0056b3; text-decoration: none;">
+          {{ latest_post.title }}
+        </a>
+      </strong>
     </p>
   </div>
 
