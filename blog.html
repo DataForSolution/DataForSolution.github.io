@@ -66,12 +66,25 @@ permalink: /blog/
 </style>
 
 <div class="blog-container"> 
-<!-- Featured Post -->
- <div class="blog-container"> 
+  <!-- Featured Post -->
   <h1 class="blog-heading">Latest Articles</h1>
   <p style="text-align: center;">
     Explore insights, case studies, and practical guides in AI, Data Science, and Analytics.
   </p>
+
+  <!-- Featured This Week -->
+  {% assign latest_post = site.posts.first %}
+  <div class="featured-post" style="background: #f0f8ff; padding: 1rem 1.5rem; border-left: 6px solid #007BFF; margin-bottom: 2rem; border-radius: 10px;">
+    <h2 style="margin-top: 0; color: #007BFF;"> Featured This Week</h2>
+    <p>
+      <strong>
+        <a href="{{ latest_post.url | relative_url }}" style="color: #0056b3; text-decoration: none;">
+          {{ latest_post.title }}
+        </a>
+      </strong>
+    </p>
+  </div>
+
   <!-- Blog List -->
   {% for post in site.posts %}
     <div class="blog-card">
