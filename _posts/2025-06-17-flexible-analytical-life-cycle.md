@@ -17,12 +17,12 @@ Without this adaptability, labs risk data errors, integrity issues, and ineffici
 
 ---
 
-### View the Original PDF
+###  View the Original PDF
 
-<iframe src="2025-06-17-flexible-analytical-life-cycle.pdf" width="100%" height="700px" style="border: 1px solid #ccc;"></iframe>
+<iframe src="/assets/pdfs/2025-06-17-flexible-analytical-life-cycle.pdf" width="100%" height="700px" style="border: 1px solid #ccc;"></iframe>
 
 <p style="margin-top: 10px;">
-     Can't view it? <a href="2025-06-17-flexible-analytical-life-cycle.pdf" download>Download the PDF</a>
+     Can't view it? <a href="/assets/pdfs/2025-06-17-flexible-analytical-life-cycle.pdf" target="_blank">Download the PDF</a>
 </p>
 
 ---
