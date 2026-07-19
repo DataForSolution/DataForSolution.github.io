@@ -85,20 +85,7 @@
   <script src="{{ '/assets/js/search.js' | relative_url }}"></script>
   <div id="search-results" style="position: absolute; top: 60px; right: 20px; background: white; color: black; padding: 10px; border-radius: 6px; z-index: 999;"></div>
 
- <!-- Geolocation Script -->
-<script>
-  fetch("https://ipapi.co/json/")
-    .then(res => res.json())
-    .then(data => {
-      const region = data.region;
-      const country = data.country_name;
-      const location = `${region}, ${country}`;
-      localStorage.setItem("userRegion", location);
-    })
-    .catch(() => {
-      console.log("Geolocation failed.");
-    });
-</script>
+ 
 
 <!-- Scroll to Top Button -->
 <button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" id="scrollTopBtn" title="Go to top">↑</button>
