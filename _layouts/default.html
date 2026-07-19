@@ -10,22 +10,7 @@
   {% seo %}
   <title>{{ page.title | default: site.title }}</title>
 
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "LLmachine",
-    "url": "https://dataforsolution.github.io",
-    "logo": "https://dataforsolution.github.io/assets/images/logo.png",
-    "sameAs": [
-      "https://twitter.com/SewLiben",
-      "https://github.com/DataForSolution"
-    ],
-    "description": "A platform for data science, AI research, and analytics solutions."
-  }
-
-  </script>
-
+ 
   <!-- Google Analytics -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-1Z2075VWN0"></script>
   <script>
@@ -41,17 +26,20 @@
   <link rel="icon" href="{{ '/assets/images/favicon.ico' | relative_url }}" type="image/x-icon">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
-  <!-- Schema Markup -->
+   <!-- Organization Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "LLmachine",
+    "@id": "https://dataforsolution.github.io/#organization",
+    "name": "DataForSolution",
+    "alternateName": "LLmachine",
     "url": "https://dataforsolution.github.io/",
-    "logo": "{{ '/assets/images/thumbnail.png' | relative_url }}",
+    "logo": "https://dataforsolution.github.io/assets/images/logo.png",
+    "description": "An educational and knowledge-sharing platform for data science, Python, SQL, statistics, machine learning, artificial intelligence, healthcare analytics, medical imaging, practical projects, tools, research, and career learning.",
     "sameAs": [
-      "https://twitter.com/SewLiben",
-      "https://github.com/DataForSolution"
+      "https://github.com/DataForSolution",
+      "https://twitter.com/SewLiben"
     ]
   }
   </script>
