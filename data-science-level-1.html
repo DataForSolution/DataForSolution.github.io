@@ -1,0 +1,771 @@
+---
+layout: default
+title: Data Science Level 1
+permalink: /learn/data-science/level-1/
+description: Begin the Data Science Academy by learning how data represents real-world events, how analytical problems are defined, and how responsible data science begins.
+---
+
+<style>
+  .curriculum-page {
+    background: #f7faf9;
+    color: #18312a;
+  }
+
+  .curriculum-hero {
+    padding: 85px 24px 75px;
+    background: linear-gradient(
+      135deg,
+      #071f1a 0%,
+      #0c3329 55%,
+      #145040 100%
+    );
+    color: #ffffff;
+  }
+
+  .curriculum-container {
+    max-width: 1120px;
+    margin: 0 auto;
+  }
+
+  .curriculum-breadcrumb {
+    margin-bottom: 28px;
+    font-size: 0.95rem;
+    color: #dcefe8;
+  }
+
+  .curriculum-breadcrumb a {
+    color: #bde8d9;
+    text-decoration: none;
+  }
+
+  .curriculum-breadcrumb a:hover {
+    text-decoration: underline;
+  }
+
+  .curriculum-eyebrow {
+    display: inline-block;
+    margin-bottom: 16px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: #bde8d9;
+  }
+
+  .curriculum-hero h1 {
+    max-width: 850px;
+    margin: 0 0 20px;
+    font-size: clamp(2.4rem, 6vw, 4.4rem);
+    line-height: 1.08;
+  }
+
+  .curriculum-hero p {
+    max-width: 760px;
+    margin: 0;
+    font-size: 1.15rem;
+    line-height: 1.75;
+    color: #e4f3ee;
+  }
+
+  .curriculum-section {
+    padding: 72px 24px;
+  }
+
+  .curriculum-section-alt {
+    background: #eaf3f0;
+  }
+
+  .section-heading {
+    max-width: 760px;
+    margin-bottom: 38px;
+  }
+
+  .section-label {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #28755f;
+  }
+
+  .section-heading h2 {
+    margin: 0 0 14px;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: #102c25;
+  }
+
+  .section-heading p {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: #576a64;
+  }
+
+  .outcomes-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .outcome-card {
+    padding: 26px;
+    background: #ffffff;
+    border: 1px solid #dce8e3;
+    border-radius: 14px;
+    box-shadow: 0 7px 22px rgba(15, 53, 43, 0.05);
+  }
+
+  .outcome-card h3 {
+    margin: 0 0 10px;
+    font-size: 1.15rem;
+    color: #123d34;
+  }
+
+  .outcome-card p {
+    margin: 0;
+    line-height: 1.65;
+    color: #5c6c67;
+  }
+
+  .module-list {
+    display: grid;
+    gap: 22px;
+  }
+
+  .module-card {
+    display: grid;
+    grid-template-columns: 105px minmax(0, 1fr);
+    gap: 24px;
+    align-items: stretch;
+  }
+
+  .module-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 160px;
+    padding: 15px;
+    border-radius: 14px;
+    background: #123d34;
+    color: #ffffff;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.45;
+  }
+
+  .module-content {
+    padding: 28px;
+    background: #ffffff;
+    border: 1px solid #dce8e3;
+    border-radius: 14px;
+  }
+
+  .module-content h3 {
+    margin: 0 0 12px;
+    font-size: 1.45rem;
+    color: #102c25;
+  }
+
+  .module-content p {
+    margin: 0 0 18px;
+    line-height: 1.7;
+    color: #596b65;
+  }
+
+  .module-topics {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin: 0 0 18px;
+    padding: 0;
+    list-style: none;
+  }
+
+  .module-topics li {
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: #edf5f2;
+    color: #275b4d;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  .module-status {
+    font-weight: 700;
+    color: #7a8984;
+  }
+
+  .framework-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 18px;
+  }
+
+  .framework-card {
+    padding: 24px;
+    background: #ffffff;
+    border-radius: 14px;
+  }
+
+  .framework-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    margin-bottom: 16px;
+    border-radius: 50%;
+    background: #123d34;
+    color: #ffffff;
+    font-weight: 700;
+  }
+
+  .framework-card h3 {
+    margin: 0 0 9px;
+    color: #102c25;
+  }
+
+  .framework-card p {
+    margin: 0;
+    line-height: 1.6;
+    color: #5c6c67;
+  }
+
+  .assessment-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .assessment-card {
+    padding: 28px;
+    background: #ffffff;
+    border: 1px solid #dce8e3;
+    border-radius: 14px;
+  }
+
+  .assessment-label {
+    display: inline-block;
+    margin-bottom: 12px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #28755f;
+  }
+
+  .assessment-card h3 {
+    margin: 0 0 12px;
+    color: #102c25;
+  }
+
+  .assessment-card p {
+    margin: 0;
+    line-height: 1.65;
+    color: #5b6b66;
+  }
+
+  .completion-box {
+    padding: 34px;
+    border-radius: 16px;
+    background: #123d34;
+    color: #ffffff;
+  }
+
+  .completion-box h2 {
+    margin: 0 0 14px;
+    color: #ffffff;
+  }
+
+  .completion-box p {
+    max-width: 800px;
+    margin: 0;
+    line-height: 1.75;
+    color: #e4f3ee;
+  }
+
+  .curriculum-cta {
+    padding: 72px 24px;
+    background: #ffffff;
+    text-align: center;
+  }
+
+  .curriculum-cta-content {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .curriculum-cta h2 {
+    margin: 0 0 14px;
+    color: #102c25;
+  }
+
+  .curriculum-cta p {
+    margin: 0 0 28px;
+    line-height: 1.7;
+    color: #5c6c67;
+  }
+
+  .curriculum-button {
+    display: inline-block;
+    padding: 14px 22px;
+    border-radius: 8px;
+    background: #123d34;
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .curriculum-button:hover {
+    background: #0b2d25;
+    color: #ffffff;
+  }
+
+  @media (max-width: 950px) {
+    .outcomes-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .framework-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .assessment-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+
+  @media (max-width: 650px) {
+    .curriculum-hero {
+      padding: 68px 20px 58px;
+    }
+
+    .curriculum-section {
+      padding: 55px 20px;
+    }
+
+    .outcomes-grid,
+    .framework-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .module-card {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .module-number {
+      min-height: auto;
+      justify-content: flex-start;
+    }
+  }
+</style>
+
+<main class="curriculum-page">
+
+  <section class="curriculum-hero">
+    <div class="curriculum-container">
+
+      <div class="curriculum-breadcrumb">
+        <a href="{{ '/learn/' | relative_url }}">Learn</a>
+        <span> / </span>
+        <a href="{{ '/learn/data-science/' | relative_url }}">
+          Data Science Academy
+        </a>
+        <span> / Level 1</span>
+      </div>
+
+      <span class="curriculum-eyebrow">
+        Data Science Academy · Level 1
+      </span>
+
+      <h1>Understanding Data and Problems</h1>
+
+      <p>
+        Before learning advanced tools, models, or programming, a data
+        scientist must first understand what data represents, how problems
+        are defined, what evidence can support, and where responsible
+        analysis begins.
+      </p>
+
+    </div>
+  </section>
+
+  <section class="curriculum-section">
+    <div class="curriculum-container">
+
+      <div class="section-heading">
+        <span class="section-label">Learning outcomes</span>
+
+        <h2>What you should understand by the end</h2>
+
+        <p>
+          Level 1 develops the reasoning foundation required for every later
+          stage of the Data Science Academy.
+        </p>
+      </div>
+
+      <div class="outcomes-grid">
+
+        <article class="outcome-card">
+          <h3>Recognize what data represents</h3>
+          <p>
+            Understand that data is a recorded representation of real people,
+            events, measurements, systems, or processes.
+          </p>
+        </article>
+
+        <article class="outcome-card">
+          <h3>Define analytical problems</h3>
+          <p>
+            Convert broad concerns into clear questions that data may be able
+            to investigate.
+          </p>
+        </article>
+
+        <article class="outcome-card">
+          <h3>Evaluate evidence carefully</h3>
+          <p>
+            Distinguish observations, assumptions, interpretations, and
+            conclusions.
+          </p>
+        </article>
+
+        <article class="outcome-card">
+          <h3>Think responsibly</h3>
+          <p>
+            Consider privacy, fairness, context, limitations, and possible
+            harm before analysis begins.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="curriculum-section curriculum-section-alt">
+    <div class="curriculum-container">
+
+      <div class="section-heading">
+        <span class="section-label">Curriculum</span>
+
+        <h2>Level 1 modules</h2>
+
+        <p>
+          These six modules build the conceptual foundation for statistics,
+          SQL, Python, visualization, and machine learning.
+        </p>
+      </div>
+
+      <div class="module-list">
+
+        <article class="module-card">
+          <div class="module-number">
+            Module 1
+          </div>
+
+          <div class="module-content">
+            <h3>What Is Data?</h3>
+
+            <p>
+              Explore how observations become recorded information and why
+              data is never the same thing as the full reality it represents.
+            </p>
+
+            <ul class="module-topics">
+              <li>Observations</li>
+              <li>Measurements</li>
+              <li>Records</li>
+              <li>Variables</li>
+              <li>Representation</li>
+            </ul>
+
+            <span class="module-status">Lesson coming next</span>
+          </div>
+        </article>
+
+        <article class="module-card">
+          <div class="module-number">
+            Module 2
+          </div>
+
+          <div class="module-content">
+            <h3>Types and Structures of Data</h3>
+
+            <p>
+              Learn how data differs by meaning, format, scale, source, and
+              structure—and why those differences affect analysis.
+            </p>
+
+            <ul class="module-topics">
+              <li>Qualitative data</li>
+              <li>Quantitative data</li>
+              <li>Structured data</li>
+              <li>Unstructured data</li>
+              <li>Measurement scales</li>
+            </ul>
+
+            <span class="module-status">Lesson planned</span>
+          </div>
+        </article>
+
+        <article class="module-card">
+          <div class="module-number">
+            Module 3
+          </div>
+
+          <div class="module-content">
+            <h3>The Data Science Process</h3>
+
+            <p>
+              Understand the complete workflow from identifying a problem to
+              collecting data, analyzing evidence, communicating results, and
+              evaluating impact.
+            </p>
+
+            <ul class="module-topics">
+              <li>Problem definition</li>
+              <li>Data collection</li>
+              <li>Preparation</li>
+              <li>Analysis</li>
+              <li>Communication</li>
+            </ul>
+
+            <span class="module-status">Lesson planned</span>
+          </div>
+        </article>
+
+        <article class="module-card">
+          <div class="module-number">
+            Module 4
+          </div>
+
+          <div class="module-content">
+            <h3>Asking Good Analytical Questions</h3>
+
+            <p>
+              Learn how to turn vague concerns into specific, measurable,
+              answerable, and useful questions.
+            </p>
+
+            <ul class="module-topics">
+              <li>Broad problems</li>
+              <li>Research questions</li>
+              <li>Measurable outcomes</li>
+              <li>Scope</li>
+              <li>Decision context</li>
+            </ul>
+
+            <span class="module-status">Lesson planned</span>
+          </div>
+        </article>
+
+        <article class="module-card">
+          <div class="module-number">
+            Module 5
+          </div>
+
+          <div class="module-content">
+            <h3>Data Quality, Bias, and Ethics</h3>
+
+            <p>
+              Examine how missing information, poor measurement, biased
+              samples, privacy concerns, and unfair assumptions can affect
+              conclusions.
+            </p>
+
+            <ul class="module-topics">
+              <li>Data quality</li>
+              <li>Missing data</li>
+              <li>Bias</li>
+              <li>Privacy</li>
+              <li>Fairness</li>
+            </ul>
+
+            <span class="module-status">Lesson planned</span>
+          </div>
+        </article>
+
+        <article class="module-card">
+          <div class="module-number">
+            Module 6
+          </div>
+
+          <div class="module-content">
+            <h3>Thinking Like a Data Scientist</h3>
+
+            <p>
+              Develop the habit of questioning assumptions, checking evidence,
+              considering alternatives, recognizing uncertainty, and
+              explaining limitations.
+            </p>
+
+            <ul class="module-topics">
+              <li>Curiosity</li>
+              <li>Skepticism</li>
+              <li>Evidence</li>
+              <li>Uncertainty</li>
+              <li>Communication</li>
+            </ul>
+
+            <span class="module-status">Lesson planned</span>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="curriculum-section">
+    <div class="curriculum-container">
+
+      <div class="section-heading">
+        <span class="section-label">Learning framework</span>
+
+        <h2>How every module will work</h2>
+
+        <p>
+          Each module will follow the same five-part structure so that
+          understanding leads to practical capability.
+        </p>
+      </div>
+
+      <div class="framework-grid">
+
+        <article class="framework-card">
+          <div class="framework-number">1</div>
+          <h3>Learn</h3>
+          <p>
+            Understand the concept, purpose, assumptions, and common mistakes.
+          </p>
+        </article>
+
+        <article class="framework-card">
+          <div class="framework-number">2</div>
+          <h3>Practice</h3>
+          <p>
+            Strengthen understanding through focused questions and examples.
+          </p>
+        </article>
+
+        <article class="framework-card">
+          <div class="framework-number">3</div>
+          <h3>Build</h3>
+          <p>
+            Apply the module through a meaningful analytical task.
+          </p>
+        </article>
+
+        <article class="framework-card">
+          <div class="framework-number">4</div>
+          <h3>Reflect</h3>
+          <p>
+            Examine assumptions, limitations, uncertainty, and alternatives.
+          </p>
+        </article>
+
+        <article class="framework-card">
+          <div class="framework-number">5</div>
+          <h3>Apply</h3>
+          <p>
+            Connect the concept to healthcare, business, research, or society.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="curriculum-section curriculum-section-alt">
+    <div class="curriculum-container">
+
+      <div class="section-heading">
+        <span class="section-label">Level completion</span>
+
+        <h2>Practice, project, and reflection</h2>
+
+        <p>
+          Learners will not complete Level 1 by reading alone.
+        </p>
+      </div>
+
+      <div class="assessment-grid">
+
+        <article class="assessment-card">
+          <span class="assessment-label">Practice</span>
+
+          <h3>Question classification exercise</h3>
+
+          <p>
+            Review real-world questions and determine whether they are
+            descriptive, comparative, predictive, causal, or not yet suitable
+            for data analysis.
+          </p>
+        </article>
+
+        <article class="assessment-card">
+          <span class="assessment-label">Project</span>
+
+          <h3>Turn a real problem into a data plan</h3>
+
+          <p>
+            Select a practical problem, define the decision that matters,
+            identify the data needed, and document possible limitations,
+            biases, and ethical concerns.
+          </p>
+        </article>
+
+        <article class="assessment-card">
+          <span class="assessment-label">Reflection</span>
+
+          <h3>What can the data not tell us?</h3>
+
+          <p>
+            Explain the difference between what is observed, what is inferred,
+            and what remains unknown.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="curriculum-section">
+    <div class="curriculum-container">
+
+      <div class="completion-box">
+        <h2>Level 1 completion standard</h2>
+
+        <p>
+          A learner is ready to continue when they can clearly define a
+          problem, explain what the available data represents, identify
+          important limitations, and describe how an analysis could support a
+          real decision without overstating what the evidence proves.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="curriculum-cta">
+    <div class="curriculum-cta-content">
+
+      <h2>The curriculum is ready. The first lesson comes next.</h2>
+
+      <p>
+        Module 1 will begin by exploring a foundational question:
+        What is data, and how does recorded information relate to reality?
+      </p>
+
+      <a
+        class="curriculum-button"
+        href="{{ '/learn/data-science/' | relative_url }}">
+        Return to Data Science Academy
+      </a>
+
+    </div>
+  </section>
+
+</main>
