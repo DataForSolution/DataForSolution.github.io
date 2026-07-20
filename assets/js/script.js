@@ -62,7 +62,7 @@ function initializeSearchFeature() {
     const searchForm = document.getElementById('menu-search-form');
     const searchInput = document.getElementById('menu-search-input');
 
-    if (!searchForm || !searchInput) return console.error("Search form or input element not found.");
+   if (!searchForm || !searchInput) return;
 
     searchForm.addEventListener('submit', function(event) {
         event.preventDefault();
