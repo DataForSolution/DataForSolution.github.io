@@ -184,18 +184,34 @@
   }
 }
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const stored = localStorage.getItem("cookieConsent");
-    if (!stored) {
-      const pill = document.getElementById("cookie-pill");
-      pill.style.display = "flex";
-      pill.style.alignItems = "center";
-      pill.style.flexDirection = "column";
-    } else {
-      const consent = JSON.parse(stored);
-      pushConsentToAnalytics(consent);
-    }
-  });
+ document.addEventListener("DOMContentLoaded", () => {
+  const stored = localStorage.getItem("cookieConsent");
+
+  if (!stored) {
+    showCookieBanner();
+    return;
+  }
+
+  try {
+    const consent = JSON.parse(stored);
+    pushConsentToAnalytics(consent);
+  } catch (error) {
+    localStorage.removeItem("cookieConsent");
+    showCookieBanner();
+  }
+});
+
+function showCookieBanner() {
+  const pill = document.getElementById("cookie-pill");
+
+  if (!pill) {
+    return;
+  }
+
+  pill.style.display = "flex";
+  pill.style.alignItems = "center";
+  pill.style.flexDirection = "column";
+}
 </script>
 {% include footer.html %}
 
