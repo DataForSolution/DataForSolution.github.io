@@ -196,7 +196,17 @@ description: Begin the Data Science Academy by learning how data represents real
     font-weight: 700;
     color: #7a8984;
   }
+  .module-link {
+  display: inline-block;
+  margin-top: 2px;
+  font-weight: 700;
+  color: #11664f;
+  text-decoration: none;
+}
 
+.module-link:hover {
+  text-decoration: underline;
+}
   .framework-grid {
     display: grid;
     grid-template-columns: repeat(5, minmax(0, 1fr));
@@ -482,7 +492,11 @@ description: Begin the Data Science Academy by learning how data represents real
               <li>Representation</li>
             </ul>
 
-            <span class="module-status">Lesson coming next</span>
+            <a
+  class="module-link"
+  href="{{ '/learn/data-science/level-1/module-1/' | relative_url }}">
+  Start Module 1 →
+</a>
           </div>
         </article>
 
