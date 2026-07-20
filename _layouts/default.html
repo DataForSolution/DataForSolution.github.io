@@ -12,13 +12,49 @@
 
  
   <!-- Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=G-1Z2075VWN0"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){ dataLayer.push(arguments); }
-    gtag('js', new Date());
-    gtag('config', 'G-1Z2075VWN0');
-  </script>
+ <!-- Google Analytics with Consent Mode -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+
+  function gtag() {
+    dataLayer.push(arguments);
+  }
+
+  const storedCookieConsent = localStorage.getItem("cookieConsent");
+  let analyticsConsent = "denied";
+  let personalizationConsent = "denied";
+
+  if (storedCookieConsent) {
+    try {
+      const savedConsent = JSON.parse(storedCookieConsent);
+
+      analyticsConsent = savedConsent.analytics
+        ? "granted"
+        : "denied";
+
+      personalizationConsent = savedConsent.personalization
+        ? "granted"
+        : "denied";
+    } catch (error) {
+      localStorage.removeItem("cookieConsent");
+    }
+  }
+
+  gtag("consent", "default", {
+    analytics_storage: analyticsConsent,
+    ad_storage: personalizationConsent,
+    ad_user_data: personalizationConsent,
+    ad_personalization: personalizationConsent
+  });
+
+  gtag("js", new Date());
+  gtag("config", "G-1Z2075VWN0");
+</script>
+
+<script
+  async
+  src="https://www.googletagmanager.com/gtag/js?id=G-1Z2075VWN0">
+</script>
 
   <!-- Styles and Scripts -->
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
@@ -137,14 +173,16 @@
     pushConsentToAnalytics(consent);
   }
 
-  function pushConsentToAnalytics(consent) {
-    if (window.gtag) {
-      gtag('consent', 'update', {
-        analytics_storage: consent.analytics ? 'granted' : 'denied',
-        ad_storage: consent.personalization ? 'granted' : 'denied'
-      });
-    }
+ function pushConsentToAnalytics(consent) {
+  if (window.gtag) {
+    gtag("consent", "update", {
+      analytics_storage: consent.analytics ? "granted" : "denied",
+      ad_storage: consent.personalization ? "granted" : "denied",
+      ad_user_data: consent.personalization ? "granted" : "denied",
+      ad_personalization: consent.personalization ? "granted" : "denied"
+    });
   }
+}
 
   document.addEventListener("DOMContentLoaded", () => {
     const stored = localStorage.getItem("cookieConsent");
