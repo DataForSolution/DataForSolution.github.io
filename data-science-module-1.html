@@ -1,0 +1,585 @@
+---
+layout: default
+title: What Is Data?
+permalink: /learn/data-science/level-1/module-1/
+description: Learn what data is, how observations become records, and why data is a representation of reality rather than reality itself.
+---
+
+<style>
+  .lesson-page {
+    background: #f7faf9;
+    color: #18312a;
+  }
+
+  .lesson-container {
+    max-width: 920px;
+    margin: 0 auto;
+  }
+
+  .lesson-hero {
+    padding: 78px 24px 68px;
+    background: linear-gradient(
+      135deg,
+      #071f1a 0%,
+      #0c3329 55%,
+      #145040 100%
+    );
+    color: #ffffff;
+  }
+
+  .lesson-breadcrumb {
+    margin-bottom: 28px;
+    font-size: 0.94rem;
+    color: #dcefe8;
+  }
+
+  .lesson-breadcrumb a {
+    color: #bde8d9;
+    text-decoration: none;
+  }
+
+  .lesson-breadcrumb a:hover {
+    text-decoration: underline;
+  }
+
+  .lesson-eyebrow {
+    display: inline-block;
+    margin-bottom: 14px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #bde8d9;
+  }
+
+  .lesson-hero h1 {
+    margin: 0 0 18px;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1.08;
+  }
+
+  .lesson-hero p {
+    max-width: 760px;
+    margin: 0;
+    font-size: 1.15rem;
+    line-height: 1.75;
+    color: #e4f3ee;
+  }
+
+  .lesson-section {
+    padding: 64px 24px;
+  }
+
+  .lesson-section-alt {
+    background: #eaf3f0;
+  }
+
+  .lesson-heading {
+    margin-bottom: 24px;
+  }
+
+  .lesson-label {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #28755f;
+  }
+
+  .lesson-heading h2 {
+    margin: 0 0 14px;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    color: #102c25;
+  }
+
+  .lesson-heading p,
+  .lesson-content p {
+    line-height: 1.8;
+    color: #556863;
+  }
+
+  .lesson-content p {
+    margin: 0 0 22px;
+    font-size: 1.04rem;
+  }
+
+  .concept-box {
+    margin: 28px 0;
+    padding: 28px;
+    border-left: 5px solid #28755f;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 7px 20px rgba(15, 53, 43, 0.05);
+  }
+
+  .concept-box h3 {
+    margin: 0 0 10px;
+    color: #123d34;
+  }
+
+  .concept-box p {
+    margin: 0;
+  }
+
+  .example-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+    margin-top: 28px;
+  }
+
+  .example-card {
+    padding: 24px;
+    background: #ffffff;
+    border: 1px solid #dce8e3;
+    border-radius: 14px;
+  }
+
+  .example-card h3 {
+    margin: 0 0 10px;
+    color: #123d34;
+  }
+
+  .example-card p {
+    margin: 0;
+    line-height: 1.65;
+    color: #5b6b66;
+  }
+
+  .process-list {
+    display: grid;
+    gap: 16px;
+    margin-top: 26px;
+  }
+
+  .process-item {
+    display: grid;
+    grid-template-columns: 48px minmax(0, 1fr);
+    gap: 16px;
+    align-items: start;
+    padding: 22px;
+    background: #ffffff;
+    border-radius: 12px;
+  }
+
+  .process-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: #123d34;
+    color: #ffffff;
+    font-weight: 700;
+  }
+
+  .process-item h3 {
+    margin: 0 0 7px;
+    color: #102c25;
+  }
+
+  .process-item p {
+    margin: 0;
+  }
+
+  .practice-box {
+    padding: 30px;
+    border-radius: 15px;
+    background: #123d34;
+    color: #ffffff;
+  }
+
+  .practice-box h2 {
+    margin: 0 0 14px;
+    color: #ffffff;
+  }
+
+  .practice-box p {
+    color: #e4f3ee;
+  }
+
+  .practice-box ol {
+    margin: 20px 0 0;
+    padding-left: 22px;
+  }
+
+  .practice-box li {
+    margin-bottom: 12px;
+    line-height: 1.65;
+    color: #f1faf6;
+  }
+
+  .reflection-list {
+    margin: 22px 0 0;
+    padding-left: 22px;
+  }
+
+  .reflection-list li {
+    margin-bottom: 14px;
+    line-height: 1.7;
+    color: #556863;
+  }
+
+  .lesson-navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 34px;
+    flex-wrap: wrap;
+  }
+
+  .lesson-button {
+    display: inline-block;
+    padding: 13px 20px;
+    border-radius: 8px;
+    background: #123d34;
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .lesson-button:hover {
+    background: #0b2d25;
+    color: #ffffff;
+  }
+
+  .lesson-button-secondary {
+    background: #dfece8;
+    color: #123d34;
+  }
+
+  .lesson-button-secondary:hover {
+    background: #d1e3dd;
+    color: #123d34;
+  }
+
+  @media (max-width: 760px) {
+    .example-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .lesson-hero {
+      padding: 64px 20px 55px;
+    }
+
+    .lesson-section {
+      padding: 50px 20px;
+    }
+  }
+</style>
+
+<main class="lesson-page">
+
+  <section class="lesson-hero">
+    <div class="lesson-container">
+
+      <div class="lesson-breadcrumb">
+        <a href="{{ '/learn/' | relative_url }}">Learn</a>
+        <span> / </span>
+        <a href="{{ '/learn/data-science/' | relative_url }}">
+          Data Science Academy
+        </a>
+        <span> / </span>
+        <a href="{{ '/learn/data-science/level-1/' | relative_url }}">
+          Level 1
+        </a>
+        <span> / Module 1</span>
+      </div>
+
+      <span class="lesson-eyebrow">
+        Data Science Academy · Level 1 · Module 1
+      </span>
+
+      <h1>What Is Data?</h1>
+
+      <p>
+        Data begins with reality, but it is not reality itself. It is a
+        recorded representation of people, events, measurements, systems,
+        behaviors, or processes.
+      </p>
+
+    </div>
+  </section>
+
+  <section class="lesson-section">
+    <div class="lesson-container lesson-content">
+
+      <div class="lesson-heading">
+        <span class="lesson-label">Learn</span>
+        <h2>Data is recorded representation</h2>
+      </div>
+
+      <p>
+        Something happens in the real world. A person visits a clinic, a
+        machine records a temperature, a customer purchases a product, or a
+        sensor detects motion. When information about that event is recorded,
+        it becomes data.
+      </p>
+
+      <p>
+        The record may be a number, word, image, sound, date, category,
+        location, signal, or document. The form can change, but the central
+        idea remains the same: data is information captured about something.
+      </p>
+
+      <div class="concept-box">
+        <h3>Core idea</h3>
+
+        <p>
+          Data is a representation of reality created through observation,
+          measurement, classification, or recording.
+        </p>
+      </div>
+
+      <p>
+        Because data is a representation, it is always incomplete. A row in a
+        spreadsheet may represent a person, but it does not contain the full
+        person. A medical image may represent anatomy and biological activity,
+        but it does not contain every fact about the patient.
+      </p>
+
+    </div>
+  </section>
+
+  <section class="lesson-section lesson-section-alt">
+    <div class="lesson-container">
+
+      <div class="lesson-heading">
+        <span class="lesson-label">Examples</span>
+        <h2>One reality can produce many kinds of data</h2>
+
+        <p>
+          The same real-world event can be represented differently depending
+          on what is observed and how it is recorded.
+        </p>
+      </div>
+
+      <div class="example-grid">
+
+        <article class="example-card">
+          <h3>Healthcare</h3>
+
+          <p>
+            A patient visit may produce age, symptoms, diagnosis codes,
+            laboratory values, imaging studies, medications, and clinical
+            notes.
+          </p>
+        </article>
+
+        <article class="example-card">
+          <h3>Business</h3>
+
+          <p>
+            A purchase may produce product name, quantity, price, store,
+            timestamp, payment method, and customer account information.
+          </p>
+        </article>
+
+        <article class="example-card">
+          <h3>Transportation</h3>
+
+          <p>
+            A trip may produce origin, destination, speed, travel time,
+            distance, fuel use, traffic conditions, and route information.
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="lesson-section">
+    <div class="lesson-container lesson-content">
+
+      <div class="lesson-heading">
+        <span class="lesson-label">From reality to dataset</span>
+        <h2>How data is created</h2>
+      </div>
+
+      <div class="process-list">
+
+        <article class="process-item">
+          <div class="process-number">1</div>
+
+          <div>
+            <h3>An event or condition exists</h3>
+            <p>
+              Something occurs, changes, or is present in the real world.
+            </p>
+          </div>
+        </article>
+
+        <article class="process-item">
+          <div class="process-number">2</div>
+
+          <div>
+            <h3>Someone decides what matters</h3>
+            <p>
+              A person or system selects which characteristics should be
+              observed or measured.
+            </p>
+          </div>
+        </article>
+
+        <article class="process-item">
+          <div class="process-number">3</div>
+
+          <div>
+            <h3>A method records the observation</h3>
+            <p>
+              The information may be entered manually, measured by an
+              instrument, generated by software, or collected by a sensor.
+            </p>
+          </div>
+        </article>
+
+        <article class="process-item">
+          <div class="process-number">4</div>
+
+          <div>
+            <h3>The record becomes part of a dataset</h3>
+            <p>
+              Individual observations are organized so they can be reviewed,
+              compared, analyzed, and communicated.
+            </p>
+          </div>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="lesson-section lesson-section-alt">
+    <div class="lesson-container lesson-content">
+
+      <div class="lesson-heading">
+        <span class="lesson-label">Important distinction</span>
+        <h2>Data is not automatically truth</h2>
+      </div>
+
+      <p>
+        Data can be useful evidence, but recording something does not guarantee
+        that it is complete, accurate, unbiased, or properly understood.
+      </p>
+
+      <p>
+        Measurements can be wrong. Categories can be poorly defined. Records
+        can be missing. Sensors can fail. People can enter incorrect values.
+        Important context may never be captured.
+      </p>
+
+      <div class="concept-box">
+        <h3>Responsible interpretation</h3>
+
+        <p>
+          A data scientist should ask not only, “What does this dataset say?”
+          but also, “How was it created, what does it leave out, and how much
+          confidence should we place in it?”
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="lesson-section">
+    <div class="lesson-container">
+
+      <div class="practice-box">
+        <h2>Practice: Identify the representation</h2>
+
+        <p>
+          Choose one ordinary event, such as a medical visit, grocery purchase,
+          work shift, school class, or car trip. Then answer:
+        </p>
+
+        <ol>
+          <li>What happened in reality?</li>
+          <li>What information could be recorded?</li>
+          <li>Which variables would appear in the dataset?</li>
+          <li>What important details might not be recorded?</li>
+          <li>How could the record be inaccurate or misunderstood?</li>
+        </ol>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="lesson-section lesson-section-alt">
+    <div class="lesson-container lesson-content">
+
+      <div class="lesson-heading">
+        <span class="lesson-label">Reflect</span>
+        <h2>Questions to deepen your understanding</h2>
+      </div>
+
+      <ul class="reflection-list">
+        <li>
+          Can two datasets describe the same event differently and both still
+          be useful?
+        </li>
+
+        <li>
+          Who decides what gets measured and what remains invisible?
+        </li>
+
+        <li>
+          What is lost when a complex human experience is reduced to a number
+          or category?
+        </li>
+
+        <li>
+          How could incomplete data lead to a confident but incorrect
+          conclusion?
+        </li>
+      </ul>
+
+    </div>
+  </section>
+
+  <section class="lesson-section">
+    <div class="lesson-container lesson-content">
+
+      <div class="lesson-heading">
+        <span class="lesson-label">Apply</span>
+        <h2>Why this matters in real work</h2>
+      </div>
+
+      <p>
+        In healthcare, business, research, government, and engineering,
+        decisions are often made from recorded information. Good analysis
+        therefore begins before statistics or programming. It begins by
+        understanding what the data represents and how faithfully it reflects
+        the real situation.
+      </p>
+
+      <p>
+        This lesson forms the foundation for everything that follows. Before
+        cleaning, visualizing, modeling, or predicting, we must understand the
+        relationship between reality and the records created from it.
+      </p>
+
+      <div class="lesson-navigation">
+
+        <a
+          class="lesson-button lesson-button-secondary"
+          href="{{ '/learn/data-science/level-1/' | relative_url }}">
+          ← Return to Level 1
+        </a>
+
+        <a
+          class="lesson-button"
+          href="{{ '/learn/data-science/level-1/' | relative_url }}">
+          Continue learning →
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+</main>
