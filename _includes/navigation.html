@@ -19,7 +19,29 @@
          
         </ul>
       </li>
-        <li><a href="{{ '/learn/' | relative_url }}">Learn</a></li>
+        <li class="dropdown">
+  <a href="{{ '/learn/' | relative_url }}">Learn ▾</a>
+
+  <ul class="dropdown-menu">
+    <li>
+      <a href="{{ '/learn/' | relative_url }}">
+        Learning Overview
+      </a>
+    </li>
+
+    <li>
+      <a href="{{ '/learn/data-science/' | relative_url }}">
+        Data Science Academy
+      </a>
+    </li>
+
+    <li>
+      <a href="{{ '/courses/' | relative_url }}">
+        Current Courses
+      </a>
+    </li>
+  </ul>
+</li>
       <li class="dropdown">
         <a href="{{ '/services/' | relative_url }}">Services ▾</a>
           <ul class="dropdown-menu">
