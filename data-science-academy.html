@@ -1,0 +1,864 @@
+---
+layout: default
+title: Data Science Academy
+permalink: /learn/data-science/
+description: Follow a structured data science learning path from foundational concepts through analysis, machine learning, projects, and real-world problem solving.
+---
+
+<style>
+  .academy-page {
+    background: #f7faf9;
+    color: #18312a;
+  }
+
+  .academy-hero {
+    padding: 90px 24px 80px;
+    background: linear-gradient(
+      135deg,
+      #071f1a 0%,
+      #0d332a 55%,
+      #155343 100%
+    );
+    color: #ffffff;
+  }
+
+  .academy-container {
+    max-width: 1160px;
+    margin: 0 auto;
+  }
+
+  .academy-breadcrumb {
+    margin-bottom: 28px;
+    font-size: 0.95rem;
+  }
+
+  .academy-breadcrumb a {
+    color: #bde8d9;
+    text-decoration: none;
+  }
+
+  .academy-breadcrumb a:hover {
+    text-decoration: underline;
+  }
+
+  .academy-hero-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1.45fr) minmax(280px, 0.55fr);
+    gap: 55px;
+    align-items: center;
+  }
+
+  .academy-eyebrow {
+    display: inline-block;
+    margin-bottom: 16px;
+    font-size: 0.82rem;
+    font-weight: 700;
+    letter-spacing: 0.13em;
+    text-transform: uppercase;
+    color: #bde8d9;
+  }
+
+  .academy-hero h1 {
+    margin: 0 0 20px;
+    font-size: clamp(2.5rem, 6vw, 4.6rem);
+    line-height: 1.06;
+  }
+
+  .academy-hero-description {
+    max-width: 730px;
+    margin: 0 0 30px;
+    font-size: 1.15rem;
+    line-height: 1.75;
+    color: #e4f3ee;
+  }
+
+  .academy-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+  }
+
+  .academy-button {
+    display: inline-block;
+    padding: 14px 22px;
+    border-radius: 8px;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .academy-button-primary {
+    background: #ffffff;
+    color: #123d34;
+  }
+
+  .academy-button-primary:hover {
+    background: #eaf4f0;
+    color: #123d34;
+  }
+
+  .academy-button-secondary {
+    border: 1px solid #8dcbb8;
+    color: #ffffff;
+  }
+
+  .academy-button-secondary:hover {
+    background: rgba(255, 255, 255, 0.08);
+    color: #ffffff;
+  }
+
+  .academy-summary {
+    padding: 28px;
+    border: 1px solid rgba(188, 231, 215, 0.28);
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .academy-summary h2 {
+    margin: 0 0 18px;
+    font-size: 1.3rem;
+    color: #ffffff;
+  }
+
+  .academy-summary-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .academy-summary-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.13);
+    color: #e7f4ef;
+  }
+
+  .academy-summary-list li:last-child {
+    border-bottom: 0;
+  }
+
+  .academy-section {
+    padding: 75px 24px;
+  }
+
+  .academy-section-alt {
+    background: #eaf3f0;
+  }
+
+  .section-heading {
+    max-width: 760px;
+    margin-bottom: 38px;
+  }
+
+  .section-label {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #28755f;
+  }
+
+  .section-heading h2 {
+    margin: 0 0 14px;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: #102c25;
+  }
+
+  .section-heading p {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: #576a64;
+  }
+
+  .outcome-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .outcome-card {
+    padding: 26px;
+    background: #ffffff;
+    border: 1px solid #dce8e3;
+    border-radius: 14px;
+    box-shadow: 0 7px 22px rgba(15, 53, 43, 0.05);
+  }
+
+  .outcome-card h3 {
+    margin: 0 0 10px;
+    font-size: 1.2rem;
+    color: #123d34;
+  }
+
+  .outcome-card p {
+    margin: 0;
+    line-height: 1.65;
+    color: #5c6c67;
+  }
+
+  .roadmap {
+    position: relative;
+    display: grid;
+    gap: 20px;
+  }
+
+  .roadmap-level {
+    display: grid;
+    grid-template-columns: 105px minmax(0, 1fr);
+    gap: 24px;
+    align-items: stretch;
+  }
+
+  .level-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 150px;
+    border-radius: 14px;
+    background: #123d34;
+    color: #ffffff;
+    text-align: center;
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 1.4;
+  }
+
+  .level-content {
+    padding: 28px;
+    background: #ffffff;
+    border: 1px solid #dce8e3;
+    border-radius: 14px;
+  }
+
+  .level-content h3 {
+    margin: 0 0 10px;
+    font-size: 1.45rem;
+    color: #102c25;
+  }
+
+  .level-content p {
+    margin: 0 0 17px;
+    line-height: 1.7;
+    color: #596b65;
+  }
+
+  .topic-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+
+  .topic-list li {
+    padding: 8px 12px;
+    border-radius: 999px;
+    background: #edf5f2;
+    color: #275b4d;
+    font-size: 0.9rem;
+    font-weight: 600;
+  }
+
+  .project-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 260px;
+    padding: 28px;
+    background: #ffffff;
+    border: 1px solid #dce8e3;
+    border-radius: 14px;
+  }
+
+  .project-level {
+    display: inline-block;
+    margin-bottom: 14px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #28755f;
+  }
+
+  .project-card h3 {
+    margin: 0 0 12px;
+    color: #102c25;
+  }
+
+  .project-card p {
+    margin: 0 0 18px;
+    line-height: 1.65;
+    color: #5b6b66;
+  }
+
+  .project-status {
+    margin-top: auto;
+    font-weight: 700;
+    color: #7a8984;
+  }
+
+  .method-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .method-card {
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 14px;
+  }
+
+  .method-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    margin-bottom: 16px;
+    border-radius: 50%;
+    background: #123d34;
+    color: #ffffff;
+    font-weight: 700;
+  }
+
+  .method-card h3 {
+    margin: 0 0 9px;
+    color: #102c25;
+  }
+
+  .method-card p {
+    margin: 0;
+    line-height: 1.6;
+    color: #5c6c67;
+  }
+
+  .academy-cta {
+    padding: 75px 24px;
+    background: #ffffff;
+    text-align: center;
+  }
+
+  .academy-cta-content {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .academy-cta h2 {
+    margin: 0 0 14px;
+    color: #102c25;
+  }
+
+  .academy-cta p {
+    margin: 0 0 28px;
+    line-height: 1.7;
+    color: #5c6c67;
+  }
+
+  @media (max-width: 950px) {
+    .academy-hero-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .outcome-grid,
+    .method-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .project-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 650px) {
+    .academy-hero {
+      padding: 70px 20px 60px;
+    }
+
+    .academy-section {
+      padding: 55px 20px;
+    }
+
+    .outcome-grid,
+    .method-grid,
+    .project-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .roadmap-level {
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+
+    .level-number {
+      min-height: auto;
+      padding: 14px;
+      justify-content: flex-start;
+    }
+  }
+</style>
+
+<main class="academy-page">
+
+  <section class="academy-hero">
+    <div class="academy-container">
+
+      <div class="academy-breadcrumb">
+        <a href="{{ '/learn/' | relative_url }}">Learn</a>
+        <span> / Data Science Academy</span>
+      </div>
+
+      <div class="academy-hero-grid">
+
+        <div>
+          <span class="academy-eyebrow">
+            DataForSolution Academy
+          </span>
+
+          <h1>Data Science Academy</h1>
+
+          <p class="academy-hero-description">
+            Develop the complete ability to work with data—from asking the
+            right question and preparing information to building models,
+            communicating results, and solving real-world problems.
+          </p>
+
+          <div class="academy-actions">
+            <a
+              class="academy-button academy-button-primary"
+              href="#roadmap">
+              Explore the roadmap
+            </a>
+
+            <a
+              class="academy-button academy-button-secondary"
+              href="{{ '/courses/' | relative_url }}">
+              View current courses
+            </a>
+          </div>
+        </div>
+
+        <aside class="academy-summary">
+          <h2>Academy overview</h2>
+
+          <ul class="academy-summary-list">
+            <li><strong>Level:</strong> Beginner to advanced</li>
+            <li><strong>Approach:</strong> Learn, practice, build, explain</li>
+            <li><strong>Focus:</strong> Real problems and real data</li>
+            <li><strong>Outcome:</strong> Portfolio-ready capability</li>
+          </ul>
+        </aside>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="academy-section">
+    <div class="academy-container">
+
+      <div class="section-heading">
+        <span class="section-label">Purpose</span>
+
+        <h2>What you will learn to do</h2>
+
+        <p>
+          The academy is designed around practical capability rather than
+          memorizing isolated tools or definitions.
+        </p>
+      </div>
+
+      <div class="outcome-grid">
+
+        <article class="outcome-card">
+          <h3>Ask better questions</h3>
+          <p>
+            Translate broad problems into clear, measurable analytical
+            questions.
+          </p>
+        </article>
+
+        <article class="outcome-card">
+          <h3>Prepare reliable data</h3>
+          <p>
+            Inspect, clean, organize, validate, and document datasets before
+            analysis.
+          </p>
+        </article>
+
+        <article class="outcome-card">
+          <h3>Build useful analysis</h3>
+          <p>
+            Use statistics, visualization, programming, and modeling to find
+            meaningful patterns.
+          </p>
+        </article>
+
+        <article class="outcome-card">
+          <h3>Explain the meaning</h3>
+          <p>
+            Communicate findings, uncertainty, limitations, and practical
+            implications clearly.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section
+    id="roadmap"
+    class="academy-section academy-section-alt">
+
+    <div class="academy-container">
+
+      <div class="section-heading">
+        <span class="section-label">Learning path</span>
+
+        <h2>Data Science Academy roadmap</h2>
+
+        <p>
+          The roadmap progresses from understanding data to completing
+          integrated, real-world projects.
+        </p>
+      </div>
+
+      <div class="roadmap">
+
+        <article class="roadmap-level">
+          <div class="level-number">
+            Level 1<br>
+            Foundations
+          </div>
+
+          <div class="level-content">
+            <h3>Understanding data and problems</h3>
+
+            <p>
+              Learn what data science is, how analytical questions are formed,
+              and how data represents real people, events, systems, and
+              processes.
+            </p>
+
+            <ul class="topic-list">
+              <li>Data science workflow</li>
+              <li>Problem definition</li>
+              <li>Data types</li>
+              <li>Measurement</li>
+              <li>Data ethics</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="roadmap-level">
+          <div class="level-number">
+            Level 2<br>
+            Statistics
+          </div>
+
+          <div class="level-content">
+            <h3>Reasoning with uncertainty</h3>
+
+            <p>
+              Develop the statistical foundation needed to describe data,
+              understand variation, test ideas, and interpret evidence.
+            </p>
+
+            <ul class="topic-list">
+              <li>Descriptive statistics</li>
+              <li>Probability</li>
+              <li>Sampling</li>
+              <li>Confidence intervals</li>
+              <li>Hypothesis testing</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="roadmap-level">
+          <div class="level-number">
+            Level 3<br>
+            SQL
+          </div>
+
+          <div class="level-content">
+            <h3>Working with structured data</h3>
+
+            <p>
+              Learn to retrieve, join, summarize, filter, and validate data
+              stored in relational databases.
+            </p>
+
+            <ul class="topic-list">
+              <li>SELECT queries</li>
+              <li>Filtering</li>
+              <li>Aggregation</li>
+              <li>Joins</li>
+              <li>Data quality checks</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="roadmap-level">
+          <div class="level-number">
+            Level 4<br>
+            Python
+          </div>
+
+          <div class="level-content">
+            <h3>Programming for analysis</h3>
+
+            <p>
+              Use Python to automate repetitive work, manipulate data, perform
+              analysis, and create reproducible workflows.
+            </p>
+
+            <ul class="topic-list">
+              <li>Python foundations</li>
+              <li>NumPy</li>
+              <li>Pandas</li>
+              <li>Data cleaning</li>
+              <li>Reusable analysis</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="roadmap-level">
+          <div class="level-number">
+            Level 5<br>
+            Visualization
+          </div>
+
+          <div class="level-content">
+            <h3>Exploring and communicating data</h3>
+
+            <p>
+              Build visualizations and dashboards that clarify patterns,
+              comparisons, relationships, trends, and uncertainty.
+            </p>
+
+            <ul class="topic-list">
+              <li>Chart selection</li>
+              <li>Exploratory analysis</li>
+              <li>Dashboard design</li>
+              <li>Data storytelling</li>
+              <li>Responsible visualization</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="roadmap-level">
+          <div class="level-number">
+            Level 6<br>
+            Machine Learning
+          </div>
+
+          <div class="level-content">
+            <h3>Building predictive models</h3>
+
+            <p>
+              Learn how models are trained, evaluated, compared, interpreted,
+              and applied without confusing prediction with certainty.
+            </p>
+
+            <ul class="topic-list">
+              <li>Supervised learning</li>
+              <li>Unsupervised learning</li>
+              <li>Model evaluation</li>
+              <li>Feature engineering</li>
+              <li>Interpretability</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="roadmap-level">
+          <div class="level-number">
+            Level 7<br>
+            Applied Work
+          </div>
+
+          <div class="level-content">
+            <h3>Solving domain-specific problems</h3>
+
+            <p>
+              Apply the complete workflow to areas such as healthcare,
+              business, operations, public data, research, and social impact.
+            </p>
+
+            <ul class="topic-list">
+              <li>Healthcare analytics</li>
+              <li>Business analytics</li>
+              <li>Research workflows</li>
+              <li>Decision support</li>
+              <li>Responsible deployment</li>
+            </ul>
+          </div>
+        </article>
+
+        <article class="roadmap-level">
+          <div class="level-number">
+            Level 8<br>
+            Capstone
+          </div>
+
+          <div class="level-content">
+            <h3>Completing an end-to-end project</h3>
+
+            <p>
+              Define a problem, obtain and prepare data, conduct the analysis,
+              validate the result, explain limitations, and present the work
+              as a professional portfolio project.
+            </p>
+
+            <ul class="topic-list">
+              <li>Project proposal</li>
+              <li>Data documentation</li>
+              <li>Analysis and modeling</li>
+              <li>Validation</li>
+              <li>Final presentation</li>
+            </ul>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="academy-section">
+    <div class="academy-container">
+
+      <div class="section-heading">
+        <span class="section-label">Projects</span>
+
+        <h2>Learn by solving real problems</h2>
+
+        <p>
+          Projects will connect technical skills to decisions, outcomes, and
+          meaningful questions.
+        </p>
+      </div>
+
+      <div class="project-grid">
+
+        <article class="project-card">
+          <span class="project-level">Beginner project</span>
+
+          <h3>Explore a public dataset</h3>
+
+          <p>
+            Clean and summarize a dataset, identify important patterns, and
+            explain what the data can and cannot tell us.
+          </p>
+
+          <span class="project-status">Project guide coming soon</span>
+        </article>
+
+        <article class="project-card">
+          <span class="project-level">Intermediate project</span>
+
+          <h3>Build an analytical dashboard</h3>
+
+          <p>
+            Create a dashboard that helps a user understand trends,
+            comparisons, performance measures, and areas requiring attention.
+          </p>
+
+          <span class="project-status">Project guide coming soon</span>
+        </article>
+
+        <article class="project-card">
+          <span class="project-level">Advanced project</span>
+
+          <h3>Develop a decision-support model</h3>
+
+          <p>
+            Build and evaluate a model, document uncertainty and limitations,
+            and explain how it could responsibly support human decisions.
+          </p>
+
+          <span class="project-status">Project guide coming soon</span>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="academy-section academy-section-alt">
+    <div class="academy-container">
+
+      <div class="section-heading">
+        <span class="section-label">Academy method</span>
+
+        <h2>How each level will work</h2>
+
+        <p>
+          Every stage will connect knowledge, application, reflection, and
+          communication.
+        </p>
+      </div>
+
+      <div class="method-grid">
+
+        <article class="method-card">
+          <div class="method-number">1</div>
+          <h3>Learn</h3>
+          <p>
+            Understand the concept, purpose, assumptions, and practical use.
+          </p>
+        </article>
+
+        <article class="method-card">
+          <div class="method-number">2</div>
+          <h3>Practice</h3>
+          <p>
+            Apply the concept through exercises and focused examples.
+          </p>
+        </article>
+
+        <article class="method-card">
+          <div class="method-number">3</div>
+          <h3>Build</h3>
+          <p>
+            Combine skills in projects based on meaningful problems.
+          </p>
+        </article>
+
+        <article class="method-card">
+          <div class="method-number">4</div>
+          <h3>Explain</h3>
+          <p>
+            Communicate the result, evidence, uncertainty, and limitations.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="academy-cta">
+    <div class="academy-cta-content">
+
+      <h2>Begin with the available learning resources</h2>
+
+      <p>
+        The full academy curriculum will be developed progressively. Current
+        courses in SQL, machine learning, visualization, and related subjects
+        can support your foundation today.
+      </p>
+
+      <a
+        class="academy-button academy-button-primary"
+        href="{{ '/courses/' | relative_url }}"
+        style="background:#123d34; color:#ffffff;">
+        Browse current courses
+      </a>
+
+    </div>
+  </section>
+
+</main>
