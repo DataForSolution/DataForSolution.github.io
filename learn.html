@@ -1,0 +1,417 @@
+---
+layout: default
+title: Learn
+permalink: /learn/
+description: Learn data science, artificial intelligence, machine learning, Python, SQL, statistics, healthcare analytics, and medical imaging AI through practical learning paths.
+---
+
+<style>
+  .learn-page {
+    background: #f7faf9;
+  }
+
+  .learn-hero {
+    padding: 90px 24px 75px;
+    background: linear-gradient(135deg, #081f1a 0%, #0a2e26 55%, #123d34 100%);
+    color: #ffffff;
+    text-align: center;
+  }
+
+  .learn-hero-content {
+    max-width: 850px;
+    margin: 0 auto;
+  }
+
+  .learn-eyebrow {
+    display: inline-block;
+    margin-bottom: 18px;
+    font-size: 0.88rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #bce7d7;
+  }
+
+  .learn-hero h1 {
+    margin: 0 0 20px;
+    font-size: clamp(2.4rem, 6vw, 4.5rem);
+    line-height: 1.08;
+  }
+
+  .learn-hero p {
+    max-width: 720px;
+    margin: 0 auto;
+    font-size: 1.15rem;
+    line-height: 1.75;
+    color: #e2f1ec;
+  }
+
+  .learn-section {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 75px 24px;
+  }
+
+  .section-heading {
+    max-width: 720px;
+    margin-bottom: 38px;
+  }
+
+  .section-heading h2 {
+    margin-bottom: 12px;
+    font-size: clamp(2rem, 4vw, 3rem);
+    color: #102c25;
+  }
+
+  .section-heading p {
+    margin: 0;
+    font-size: 1.05rem;
+    line-height: 1.75;
+    color: #53645f;
+  }
+
+  .learning-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+  }
+
+  .learning-card {
+    display: flex;
+    flex-direction: column;
+    min-height: 285px;
+    padding: 30px;
+    background: #ffffff;
+    border: 1px solid #dfe9e5;
+    border-radius: 16px;
+    box-shadow: 0 8px 26px rgba(11, 45, 36, 0.06);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+
+  .learning-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 34px rgba(11, 45, 36, 0.11);
+  }
+
+  .card-label {
+    margin-bottom: 14px;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #28755f;
+  }
+
+  .learning-card h3 {
+    margin: 0 0 14px;
+    font-size: 1.45rem;
+    color: #102c25;
+  }
+
+  .learning-card p {
+    margin: 0 0 22px;
+    line-height: 1.65;
+    color: #5b6965;
+  }
+
+  .learning-card a {
+    margin-top: auto;
+    font-weight: 700;
+    color: #11664f;
+    text-decoration: none;
+  }
+
+  .learning-card a:hover {
+    text-decoration: underline;
+  }
+
+  .coming-soon {
+    margin-top: auto;
+    font-weight: 700;
+    color: #7b8884;
+  }
+
+  .learning-process {
+    background: #eaf3f0;
+  }
+
+  .process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+  }
+
+  .process-step {
+    padding: 26px;
+    background: #ffffff;
+    border-radius: 14px;
+  }
+
+  .step-number {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    margin-bottom: 18px;
+    border-radius: 50%;
+    background: #123d34;
+    color: #ffffff;
+    font-weight: 700;
+  }
+
+  .process-step h3 {
+    margin: 0 0 10px;
+    color: #102c25;
+  }
+
+  .process-step p {
+    margin: 0;
+    line-height: 1.6;
+    color: #5b6965;
+  }
+
+  .learn-cta {
+    padding: 75px 24px;
+    text-align: center;
+    background: #ffffff;
+  }
+
+  .learn-cta-content {
+    max-width: 760px;
+    margin: 0 auto;
+  }
+
+  .learn-cta h2 {
+    margin-bottom: 14px;
+    color: #102c25;
+  }
+
+  .learn-cta p {
+    margin-bottom: 28px;
+    line-height: 1.7;
+    color: #5b6965;
+  }
+
+  .primary-button {
+    display: inline-block;
+    padding: 14px 24px;
+    border-radius: 8px;
+    background: #123d34;
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .primary-button:hover {
+    background: #0b2d25;
+    color: #ffffff;
+  }
+
+  @media (max-width: 900px) {
+    .learning-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .process-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+  }
+
+  @media (max-width: 620px) {
+    .learn-hero {
+      padding: 70px 20px 60px;
+    }
+
+    .learn-section {
+      padding: 55px 20px;
+    }
+
+    .learning-grid,
+    .process-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .learning-card {
+      min-height: auto;
+    }
+  }
+</style>
+
+<main class="learn-page">
+
+  <section class="learn-hero">
+    <div class="learn-hero-content">
+      <span class="learn-eyebrow">DataForSolution Learning</span>
+
+      <h1>Learn Data Science. Build AI. Solve Real Problems.</h1>
+
+      <p>
+        Develop practical skills through structured learning paths grounded in
+        real data, real workflows, and meaningful problems.
+      </p>
+    </div>
+  </section>
+
+  <section class="learn-section">
+    <div class="section-heading">
+      <h2>Choose your learning path</h2>
+
+      <p>
+        Begin with the fundamentals or focus on an applied specialty.
+        Each path will connect concepts, practice, projects, and real-world use.
+      </p>
+    </div>
+
+    <div class="learning-grid">
+
+      <article class="learning-card">
+        <span class="card-label">Foundation</span>
+        <h3>Data Science</h3>
+        <p>
+          Learn how to collect, prepare, explore, visualize, and interpret data
+          to answer meaningful questions.
+        </p>
+        <span class="coming-soon">Learning path coming soon</span>
+      </article>
+
+      <article class="learning-card">
+        <span class="card-label">Programming</span>
+        <h3>Python</h3>
+        <p>
+          Build programming foundations for data analysis, automation,
+          machine learning, and scientific computing.
+        </p>
+        <span class="coming-soon">Learning path coming soon</span>
+      </article>
+
+      <article class="learning-card">
+        <span class="card-label">Data</span>
+        <h3>SQL</h3>
+        <p>
+          Learn to retrieve, organize, join, summarize, and analyze structured
+          data using practical database queries.
+        </p>
+        <a href="{{ '/courses/sql/' | relative_url }}">Explore SQL course →</a>
+      </article>
+
+      <article class="learning-card">
+        <span class="card-label">Mathematics</span>
+        <h3>Statistics</h3>
+        <p>
+          Understand variation, probability, estimation, hypothesis testing,
+          relationships, and evidence-based conclusions.
+        </p>
+        <span class="coming-soon">Learning path coming soon</span>
+      </article>
+
+      <article class="learning-card">
+        <span class="card-label">Modeling</span>
+        <h3>Machine Learning</h3>
+        <p>
+          Learn how models recognize patterns, make predictions, and support
+          decisions using carefully prepared data.
+        </p>
+        <a href="{{ '/courses/ml/' | relative_url }}">Explore machine learning →</a>
+      </article>
+
+      <article class="learning-card">
+        <span class="card-label">Intelligence</span>
+        <h3>Artificial Intelligence</h3>
+        <p>
+          Explore intelligent systems, language models, computer vision,
+          responsible AI, and practical applications.
+        </p>
+        <span class="coming-soon">Learning path coming soon</span>
+      </article>
+
+      <article class="learning-card">
+        <span class="card-label">Communication</span>
+        <h3>Data Visualization</h3>
+        <p>
+          Turn complex data into understandable charts, dashboards, reports,
+          and decision-support information.
+        </p>
+        <a href="{{ '/courses/powerbi/' | relative_url }}">Explore Power BI →</a>
+      </article>
+
+      <article class="learning-card">
+        <span class="card-label">Applied Analytics</span>
+        <h3>Healthcare Analytics</h3>
+        <p>
+          Apply data science to clinical workflows, healthcare operations,
+          patient-centered questions, quality, and decision support.
+        </p>
+        <span class="coming-soon">Learning path coming soon</span>
+      </article>
+
+      <article class="learning-card">
+        <span class="card-label">Clinical AI</span>
+        <h3>Medical Imaging AI</h3>
+        <p>
+          Study imaging data, quantitative measurements, clinical context,
+          model development, validation, and responsible implementation.
+        </p>
+        <span class="coming-soon">Learning path coming soon</span>
+      </article>
+
+    </div>
+  </section>
+
+  <section class="learning-process">
+    <div class="learn-section">
+      <div class="section-heading">
+        <h2>How learning works</h2>
+
+        <p>
+          DataForSolution connects knowledge to application rather than treating
+          lessons as isolated information.
+        </p>
+      </div>
+
+      <div class="process-grid">
+
+        <article class="process-step">
+          <div class="step-number">1</div>
+          <h3>Learn</h3>
+          <p>Understand the concept and why it matters.</p>
+        </article>
+
+        <article class="process-step">
+          <div class="step-number">2</div>
+          <h3>Practice</h3>
+          <p>Strengthen understanding through focused exercises.</p>
+        </article>
+
+        <article class="process-step">
+          <div class="step-number">3</div>
+          <h3>Build</h3>
+          <p>Apply the skill through projects and real-world cases.</p>
+        </article>
+
+        <article class="process-step">
+          <div class="step-number">4</div>
+          <h3>Explain</h3>
+          <p>Communicate the result, limitations, and practical meaning.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="learn-cta">
+    <div class="learn-cta-content">
+      <h2>Start with the courses already available</h2>
+
+      <p>
+        Explore the current course collection while the full learning paths
+        are being developed.
+      </p>
+
+      <a class="primary-button" href="{{ '/courses/' | relative_url }}">
+        View all courses
+      </a>
+    </div>
+  </section>
+
+</main>
