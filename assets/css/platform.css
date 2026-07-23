@@ -1,0 +1,501 @@
+/* =========================================================
+   DataForSolution Platform Design System
+   Shared foundation for homepage, academies, lessons,
+   projects, tools, and future platform components.
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   1. Design tokens
+   --------------------------------------------------------- */
+
+:root {
+  /* Brand colors */
+  --dfs-green-950: #071f1a;
+  --dfs-green-900: #0b2d25;
+  --dfs-green-800: #123d34;
+  --dfs-green-700: #185444;
+  --dfs-green-600: #28755f;
+  --dfs-green-500: #349172;
+  --dfs-green-300: #9ed5c2;
+  --dfs-green-200: #cce7dd;
+  --dfs-green-100: #e8f3ef;
+  --dfs-green-50: #f5faf8;
+
+  /* Neutral colors */
+  --dfs-white: #ffffff;
+  --dfs-gray-950: #10201b;
+  --dfs-gray-900: #18312a;
+  --dfs-gray-800: #29413a;
+  --dfs-gray-700: #40574f;
+  --dfs-gray-600: #556863;
+  --dfs-gray-500: #70817b;
+  --dfs-gray-400: #9ba9a4;
+  --dfs-gray-300: #c5d0cc;
+  --dfs-gray-200: #dce5e2;
+  --dfs-gray-100: #edf2f0;
+  --dfs-gray-50: #f8faf9;
+
+  /* Semantic colors */
+  --dfs-success: #24745c;
+  --dfs-warning: #a66a18;
+  --dfs-danger: #a33d3d;
+  --dfs-info: #2f6690;
+
+  /* Backgrounds */
+  --dfs-page-background: #f7faf9;
+  --dfs-surface: #ffffff;
+  --dfs-surface-soft: #eef5f2;
+  --dfs-surface-dark: #0b2d25;
+
+  /* Text */
+  --dfs-text-primary: #18312a;
+  --dfs-text-secondary: #556863;
+  --dfs-text-muted: #70817b;
+  --dfs-text-inverse: #ffffff;
+
+  /* Borders */
+  --dfs-border: #dce8e3;
+  --dfs-border-strong: #c6d7d1;
+
+  /* Typography */
+  --dfs-font-sans:
+    Inter,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    Roboto,
+    Helvetica,
+    Arial,
+    sans-serif;
+
+  /* Font sizes */
+  --dfs-text-xs: 0.78rem;
+  --dfs-text-sm: 0.9rem;
+  --dfs-text-base: 1rem;
+  --dfs-text-lg: 1.12rem;
+  --dfs-text-xl: 1.3rem;
+  --dfs-text-2xl: clamp(1.7rem, 3vw, 2.25rem);
+  --dfs-text-3xl: clamp(2rem, 4vw, 3.1rem);
+  --dfs-text-hero: clamp(2.8rem, 7vw, 5.4rem);
+
+  /* Line heights */
+  --dfs-leading-tight: 1.12;
+  --dfs-leading-normal: 1.6;
+  --dfs-leading-relaxed: 1.78;
+
+  /* Spacing */
+  --dfs-space-1: 0.25rem;
+  --dfs-space-2: 0.5rem;
+  --dfs-space-3: 0.75rem;
+  --dfs-space-4: 1rem;
+  --dfs-space-5: 1.25rem;
+  --dfs-space-6: 1.5rem;
+  --dfs-space-8: 2rem;
+  --dfs-space-10: 2.5rem;
+  --dfs-space-12: 3rem;
+  --dfs-space-16: 4rem;
+  --dfs-space-20: 5rem;
+  --dfs-space-24: 6rem;
+
+  /* Layout */
+  --dfs-container-sm: 720px;
+  --dfs-container-md: 920px;
+  --dfs-container-lg: 1180px;
+  --dfs-container-xl: 1320px;
+
+  /* Radius */
+  --dfs-radius-sm: 7px;
+  --dfs-radius-md: 11px;
+  --dfs-radius-lg: 16px;
+  --dfs-radius-xl: 24px;
+  --dfs-radius-pill: 999px;
+
+  /* Shadows */
+  --dfs-shadow-sm:
+    0 4px 12px rgba(12, 51, 41, 0.05);
+
+  --dfs-shadow-md:
+    0 10px 30px rgba(12, 51, 41, 0.08);
+
+  --dfs-shadow-lg:
+    0 22px 55px rgba(7, 31, 26, 0.12);
+
+  /* Motion */
+  --dfs-transition-fast: 160ms ease;
+  --dfs-transition-normal: 240ms ease;
+}
+
+/* ---------------------------------------------------------
+   2. Platform page foundation
+
+   All new pages should be wrapped in:
+   <main class="dfs-page">
+   --------------------------------------------------------- */
+
+.dfs-page {
+  min-height: 100%;
+  overflow: hidden;
+  background: var(--dfs-page-background);
+  color: var(--dfs-text-primary);
+  font-family: var(--dfs-font-sans);
+}
+
+.dfs-page *,
+.dfs-page *::before,
+.dfs-page *::after {
+  box-sizing: border-box;
+}
+
+.dfs-page img {
+  display: block;
+  max-width: 100%;
+}
+
+.dfs-page a {
+  transition:
+    color var(--dfs-transition-fast),
+    background-color var(--dfs-transition-fast),
+    border-color var(--dfs-transition-fast),
+    transform var(--dfs-transition-fast),
+    box-shadow var(--dfs-transition-fast);
+}
+
+/* ---------------------------------------------------------
+   3. Containers
+   --------------------------------------------------------- */
+
+.dfs-container {
+  width: min(
+    calc(100% - 40px),
+    var(--dfs-container-lg)
+  );
+  margin-inline: auto;
+}
+
+.dfs-container-sm {
+  width: min(
+    calc(100% - 40px),
+    var(--dfs-container-sm)
+  );
+  margin-inline: auto;
+}
+
+.dfs-container-md {
+  width: min(
+    calc(100% - 40px),
+    var(--dfs-container-md)
+  );
+  margin-inline: auto;
+}
+
+.dfs-container-xl {
+  width: min(
+    calc(100% - 40px),
+    var(--dfs-container-xl)
+  );
+  margin-inline: auto;
+}
+
+/* ---------------------------------------------------------
+   4. Sections
+   --------------------------------------------------------- */
+
+.dfs-section {
+  padding: var(--dfs-space-20) 0;
+}
+
+.dfs-section-sm {
+  padding: var(--dfs-space-12) 0;
+}
+
+.dfs-section-lg {
+  padding: var(--dfs-space-24) 0;
+}
+
+.dfs-section-white {
+  background: var(--dfs-surface);
+}
+
+.dfs-section-soft {
+  background: var(--dfs-surface-soft);
+}
+
+.dfs-section-dark {
+  background: var(--dfs-surface-dark);
+  color: var(--dfs-text-inverse);
+}
+
+/* ---------------------------------------------------------
+   5. Section headings
+   --------------------------------------------------------- */
+
+.dfs-section-heading {
+  max-width: 760px;
+  margin-bottom: var(--dfs-space-10);
+}
+
+.dfs-section-heading-centered {
+  margin-inline: auto;
+  text-align: center;
+}
+
+.dfs-eyebrow {
+  display: inline-block;
+  margin-bottom: var(--dfs-space-3);
+  color: var(--dfs-green-600);
+  font-size: var(--dfs-text-xs);
+  font-weight: 750;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+}
+
+.dfs-section-dark .dfs-eyebrow {
+  color: var(--dfs-green-300);
+}
+
+.dfs-section-title {
+  margin: 0 0 var(--dfs-space-4);
+  color: var(--dfs-green-950);
+  font-size: var(--dfs-text-3xl);
+  line-height: var(--dfs-leading-tight);
+  letter-spacing: -0.025em;
+}
+
+.dfs-section-dark .dfs-section-title {
+  color: var(--dfs-white);
+}
+
+.dfs-section-description {
+  margin: 0;
+  color: var(--dfs-text-secondary);
+  font-size: var(--dfs-text-lg);
+  line-height: var(--dfs-leading-relaxed);
+}
+
+.dfs-section-dark .dfs-section-description {
+  color: var(--dfs-green-200);
+}
+
+/* ---------------------------------------------------------
+   6. Buttons
+   --------------------------------------------------------- */
+
+.dfs-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--dfs-space-2);
+  min-height: 48px;
+  padding: 0.78rem 1.25rem;
+  border: 1px solid transparent;
+  border-radius: var(--dfs-radius-md);
+  background: var(--dfs-green-800);
+  color: var(--dfs-white);
+  font-size: var(--dfs-text-base);
+  font-weight: 700;
+  line-height: 1.2;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.dfs-button:hover {
+  background: var(--dfs-green-900);
+  color: var(--dfs-white);
+  transform: translateY(-2px);
+  box-shadow: var(--dfs-shadow-sm);
+}
+
+.dfs-button-secondary {
+  border-color: var(--dfs-border-strong);
+  background: var(--dfs-white);
+  color: var(--dfs-green-800);
+}
+
+.dfs-button-secondary:hover {
+  border-color: var(--dfs-green-600);
+  background: var(--dfs-green-50);
+  color: var(--dfs-green-900);
+}
+
+.dfs-button-light {
+  border-color: rgba(255, 255, 255, 0.72);
+  background: var(--dfs-white);
+  color: var(--dfs-green-900);
+}
+
+.dfs-button-light:hover {
+  border-color: var(--dfs-white);
+  background: var(--dfs-green-100);
+  color: var(--dfs-green-950);
+}
+
+.dfs-button-ghost-light {
+  border-color: rgba(255, 255, 255, 0.45);
+  background: transparent;
+  color: var(--dfs-white);
+}
+
+.dfs-button-ghost-light:hover {
+  border-color: var(--dfs-white);
+  background: rgba(255, 255, 255, 0.09);
+  color: var(--dfs-white);
+}
+
+.dfs-button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--dfs-space-3);
+}
+
+/* ---------------------------------------------------------
+   7. Cards
+   --------------------------------------------------------- */
+
+.dfs-card {
+  height: 100%;
+  padding: var(--dfs-space-8);
+  border: 1px solid var(--dfs-border);
+  border-radius: var(--dfs-radius-lg);
+  background: var(--dfs-surface);
+  box-shadow: var(--dfs-shadow-sm);
+}
+
+.dfs-card:hover {
+  border-color: var(--dfs-green-300);
+  transform: translateY(-3px);
+  box-shadow: var(--dfs-shadow-md);
+}
+
+.dfs-card-label {
+  display: inline-block;
+  margin-bottom: var(--dfs-space-3);
+  color: var(--dfs-green-600);
+  font-size: var(--dfs-text-xs);
+  font-weight: 750;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+}
+
+.dfs-card-title {
+  margin: 0 0 var(--dfs-space-3);
+  color: var(--dfs-green-950);
+  font-size: var(--dfs-text-xl);
+  line-height: 1.3;
+}
+
+.dfs-card-text {
+  margin: 0;
+  color: var(--dfs-text-secondary);
+  line-height: var(--dfs-leading-normal);
+}
+
+.dfs-card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--dfs-space-2);
+  margin-top: var(--dfs-space-5);
+  color: var(--dfs-green-700);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.dfs-card-link:hover {
+  color: var(--dfs-green-950);
+}
+
+/* ---------------------------------------------------------
+   8. Grids
+   --------------------------------------------------------- */
+
+.dfs-grid {
+  display: grid;
+  gap: var(--dfs-space-6);
+}
+
+.dfs-grid-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.dfs-grid-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.dfs-grid-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+/* ---------------------------------------------------------
+   9. Accessible helper
+   --------------------------------------------------------- */
+
+.dfs-sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---------------------------------------------------------
+   10. Responsive behavior
+   --------------------------------------------------------- */
+
+@media (max-width: 980px) {
+  .dfs-grid-4 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .dfs-grid-3 {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 700px) {
+  .dfs-container,
+  .dfs-container-sm,
+  .dfs-container-md,
+  .dfs-container-xl {
+    width: min(calc(100% - 32px), 100%);
+  }
+
+  .dfs-section {
+    padding: var(--dfs-space-16) 0;
+  }
+
+  .dfs-section-lg {
+    padding: var(--dfs-space-20) 0;
+  }
+
+  .dfs-grid-2,
+  .dfs-grid-3,
+  .dfs-grid-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .dfs-button-group {
+    flex-direction: column;
+  }
+
+  .dfs-button-group .dfs-button {
+    width: 100%;
+  }
+
+  .dfs-card {
+    padding: var(--dfs-space-6);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .dfs-page *,
+  .dfs-page *::before,
+  .dfs-page *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
