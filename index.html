@@ -1,153 +1,599 @@
 ---
 layout: default
 title: Home
+description: Learn data science, build artificial intelligence, and solve real problems through structured academies, practical projects, tools, and applied learning.
 ---
 
-<!-- Spacer to offset the fixed nav bar -->
-<div style="height: 60px;"></div>
 {% assign latest_post = site.posts.first %}
-<section class="weekly-spotlight" style="background: #f0f8ff; padding: 1rem 1.5rem; border-left: 6px solid #007BFF; margin-bottom: 2rem; border-radius: 10px;">
-  <h3 style="color: #007BFF; margin-top: 0;"> Weekly Spotlight</h3>
-  <p>
-    <strong>
-      <a href="{{ latest_post.url | relative_url }}" style="color: #0056b3; text-decoration: none;">
-        {{ latest_post.title }}
-      </a>
-    </strong>
-  </p>
-</section>
 
-<!-- Hero Section -->
-<section id="hero" class="fade-in" style="position: relative; min-height: 78vh; background: linear-gradient(135deg, #081f1a 0%, #0a2e26 55%, #123d34 100%); display: flex; align-items: center; justify-content: center; flex-direction: column; color: #fff; text-align: center; padding: 80px 20px;">
-  <!-- Conversion Funnel Message -->
-  <div class="conversion-hero">
-    <h1>Master Data Science & AI — Fast, Free, Real-World</h1>
-    <p class="subheadline">
-      LLmachine is your launchpad to explore hands-on projects, build job-ready skills, and access expert-crafted tools for free.
-    </p>
-    <ul class="value-list">
-      <li>✔️ 100% Free Resources</li>
-      <li>✔️ Certification Prep & Career Hub</li>
-      <li>✔️ Expert-Led AI & ML Projects</li>
-    </ul>
-    <div class="cta-buttons">
-      <a href="/courses" class="button white">Start Learning</a>
-      <a href="/projects" class="button white">Explore Projects</a>
-      <a href="/toolkits" class="button white">Download Toolkit</a>
+<div class="dfs-page">
+
+  <!-- =====================================================
+       Hero
+       ===================================================== -->
+
+  <section class="dfs-home-hero">
+    <div class="dfs-container">
+
+      <div class="dfs-home-hero-content">
+
+        <div class="dfs-home-hero-badge">
+          Structured learning for real-world problem solving
+        </div>
+
+        <h1 class="dfs-home-hero-title">
+          Learn Data Science.
+          <span>Build AI.</span>
+          Solve Real Problems.
+        </h1>
+
+        <p class="dfs-home-hero-description">
+          DataForSolution is a practical learning platform for data science,
+          artificial intelligence, analytics, programming, and applied
+          problem solving. Learn through structured academies, guided lessons,
+          projects, tools, and real-world applications.
+        </p>
+
+        <div class="dfs-home-hero-actions">
+
+          <a
+            class="dfs-button dfs-button-light"
+            href="{{ '/learn/' | relative_url }}">
+            Start Learning
+          </a>
+
+          <a
+            class="dfs-button dfs-button-ghost-light"
+            href="{{ '/projects/' | relative_url }}">
+            Explore Projects
+          </a>
+
+        </div>
+
+        <ul class="dfs-home-hero-proof">
+          <li>Structured learning paths</li>
+          <li>Practical projects and tools</li>
+          <li>Learning through real problems</li>
+        </ul>
+
+      </div>
+
     </div>
-  </div>
-</section>
-
-<!-- Contributor Callout Section -->
-<section id="contribute" class="section fade-in">
-  <h2>Become a Contributor</h2>
-  <p>Share your AI projects, tools, or case studies with the world. Join LLmachine’s mission to empower learners and professionals globally.</p>
-  <a href="/contribute" class="button">Submit Your Work</a>
-</section>
+  </section>
 
 
+  <!-- =====================================================
+       Learning paths
+       ===================================================== -->
 
-<!-- Subscribe Form -->
-<section id="subscribe" class="subscribe-form section fade-in" style="background-color: #1e1e1e; padding: 30px; border-radius: 12px; max-width: 480px; margin: 40px auto; text-align: center;">
-  <h2 style="color: #4CAF50; margin-bottom: 15px; font-size: 1.8rem;">Stay Updated</h2>
-  <p style="color: #ccc; margin-bottom: 20px;">Subscribe to get the latest updates on tools, courses, and AI projects.</p>
-  <form action="https://formspree.io/f/meokokbl" method="POST">
-    <input type="email" name="email" placeholder="Your email address" required style="padding: 12px; width: 100%; max-width: 300px; border-radius: 6px; border: 1px solid #444; margin-bottom: 15px; background-color: #2a2a2a; color: #fff;">
-    <br>
-    <button type="submit" style="padding: 12px 24px; background-color: #4CAF50; color: white; border: none; border-radius: 6px; font-size: 1rem; cursor: pointer;">Subscribe</button>
-  </form>
- 
+  <section class="dfs-section dfs-section-white">
+    <div class="dfs-container">
 
- </section>
+      <div class="dfs-section-heading">
 
-<!-- Styles -->
-<style>
-.section {
-  padding: 80px 20px;
-  text-align: center;
-  background-color: #0a2e26;
-}
-.button.white {
-  background: white;
-  color: #4CAF50;
-  padding: 12px 24px;
-  border-radius: 6px;
-  display: inline-block;
-  margin-top: 20px;
-  text-decoration: none;
-  font-weight: bold;
-}
-.button.white:hover {
-  background: #4CAF50;
-  color: white;
-}
-.conversion-hero {
-  margin-top: 40px;
-  text-align: center;
-  color: white;
-  max-width: 800px;
-}
-.conversion-hero h1 {
-  font-size: 2.5em;
-  margin-bottom: 15px;
-  color: #4CAF50;
-}
-.subheadline {
-  font-size: 1.2em;
-  margin-bottom: 25px;
-  color: white;
-}
-.value-list {
-  list-style: none;
-  padding: 0;
-  margin: 0 0 30px;
-  color: white;
-}
-.value-list li {
-  margin: 5px 0;
-  font-weight: 500;
-}
-.cta-buttons .button {
-  margin: 5px 10px;
-}
-</style>
-<style>
-.weekly-spotlight {
-  background: #f0f8ff;
-  border-left: 6px solid #007BFF;
-  padding: 1rem 1.5rem;
-  margin: 1.5rem auto;
-  max-width: 960px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
-  animation: fadeInSlide 1s ease-out both;
-  border-radius: 12px;
-}
+        <span class="dfs-eyebrow">
+          Learning paths
+        </span>
 
-.weekly-spotlight h3 {
-  font-size: 1.25rem;
-  color: #007BFF;
-  margin-bottom: 0.3rem;
-}
+        <h2 class="dfs-section-title">
+          Build knowledge step by step
+        </h2>
 
-.weekly-spotlight a {
-  text-decoration: none;
-  color: #0056b3;
-  transition: color 0.3s ease;
-}
+        <p class="dfs-section-description">
+          Begin with foundational concepts, develop technical skills, and
+          progress toward applied artificial intelligence and domain-specific
+          problem solving.
+        </p>
 
-.weekly-spotlight a:hover {
-  color: #003d80;
-  text-decoration: underline;
-}
+      </div>
 
-@keyframes fadeInSlide {
-  0% {
-    opacity: 0;
-    transform: translateY(-15px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-</style>
+      <div class="dfs-grid dfs-grid-3">
+
+        <article class="dfs-path-card">
+
+          <span class="dfs-path-card-number">
+            01
+          </span>
+
+          <span class="dfs-path-card-status">
+            Available
+          </span>
+
+          <h3 class="dfs-path-card-title">
+            Data Science Academy
+          </h3>
+
+          <p class="dfs-path-card-description">
+            Learn how data is collected, structured, analyzed, interpreted,
+            and used to solve meaningful problems.
+          </p>
+
+          <a
+            class="dfs-path-card-link"
+            href="{{ '/learn/data-science/' | relative_url }}">
+            Enter the academy →
+          </a>
+
+        </article>
+
+
+        <article class="dfs-path-card">
+
+          <span class="dfs-path-card-number">
+            02
+          </span>
+
+          <span class="dfs-path-card-status dfs-path-card-status-planned">
+            Planned
+          </span>
+
+          <h3 class="dfs-path-card-title">
+            Programming and Data Tools
+          </h3>
+
+          <p class="dfs-path-card-description">
+            Develop practical skills in Python, SQL, data preparation,
+            visualization, and reproducible analysis.
+          </p>
+
+          <a
+            class="dfs-path-card-link"
+            href="{{ '/learn/' | relative_url }}">
+            View the learning roadmap →
+          </a>
+
+        </article>
+
+
+        <article class="dfs-path-card">
+
+          <span class="dfs-path-card-number">
+            03
+          </span>
+
+          <span class="dfs-path-card-status dfs-path-card-status-planned">
+            Planned
+          </span>
+
+          <h3 class="dfs-path-card-title">
+            AI and Applied Intelligence
+          </h3>
+
+          <p class="dfs-path-card-description">
+            Progress toward machine learning, artificial intelligence,
+            healthcare analytics, medical imaging, and intelligent systems.
+          </p>
+
+          <a
+            class="dfs-path-card-link"
+            href="{{ '/learn/' | relative_url }}">
+            Explore future academies →
+          </a>
+
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       Learning method
+       ===================================================== -->
+
+  <section class="dfs-section dfs-section-soft">
+    <div class="dfs-container">
+
+      <div class="dfs-section-heading dfs-section-heading-centered">
+
+        <span class="dfs-eyebrow">
+          The DataForSolution method
+        </span>
+
+        <h2 class="dfs-section-title">
+          Learn by understanding, building, and applying
+        </h2>
+
+        <p class="dfs-section-description">
+          Each lesson is designed to move beyond memorization and produce
+          practical understanding, evidence of learning, and useful work.
+        </p>
+
+      </div>
+
+      <div class="dfs-grid dfs-grid-4">
+
+        <article class="dfs-method-step">
+
+          <span class="dfs-method-step-number">
+            1
+          </span>
+
+          <h3>Understand</h3>
+
+          <p>
+            Learn the meaning of a concept and why it matters before using
+            tools or writing code.
+          </p>
+
+        </article>
+
+
+        <article class="dfs-method-step">
+
+          <span class="dfs-method-step-number">
+            2
+          </span>
+
+          <h3>Recognize</h3>
+
+          <p>
+            Identify the concept in datasets, systems, decisions, and
+            real-world situations.
+          </p>
+
+        </article>
+
+
+        <article class="dfs-method-step">
+
+          <span class="dfs-method-step-number">
+            3
+          </span>
+
+          <h3>Build</h3>
+
+          <p>
+            Create a worksheet, dataset, analysis, visualization, notebook,
+            model, or practical artifact.
+          </p>
+
+        </article>
+
+
+        <article class="dfs-method-step">
+
+          <span class="dfs-method-step-number">
+            4
+          </span>
+
+          <h3>Apply</h3>
+
+          <p>
+            Connect the learning to a real problem, professional workflow,
+            research question, or decision.
+          </p>
+
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       Featured academy
+       ===================================================== -->
+
+  <section class="dfs-section dfs-section-white">
+    <div class="dfs-container">
+
+      <div class="dfs-feature-panel">
+
+        <div>
+
+          <span class="dfs-eyebrow">
+            Featured academy
+          </span>
+
+          <h2>
+            Begin with the Data Science Academy
+          </h2>
+
+          <p>
+            Data science begins before programming and machine learning. It
+            begins with understanding data, recognizing different structures,
+            asking useful questions, and defining the problem correctly.
+          </p>
+
+          <div class="dfs-button-group">
+
+            <a
+              class="dfs-button"
+              href="{{ '/learn/data-science/' | relative_url }}">
+              Explore Data Science
+            </a>
+
+            <a
+              class="dfs-button dfs-button-secondary"
+              href="{{ '/learn/data-science/level-1/' | relative_url }}">
+              View Level 1
+            </a>
+
+          </div>
+
+        </div>
+
+        <div>
+
+          <ul class="dfs-feature-list">
+
+            <li>
+              Understand what data represents
+            </li>
+
+            <li>
+              Recognize data types and structures
+            </li>
+
+            <li>
+              Learn how questions shape analysis
+            </li>
+
+            <li>
+              Build practical learning artifacts
+            </li>
+
+            <li>
+              Prepare for statistics, programming, and AI
+            </li>
+
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       Projects and tools
+       ===================================================== -->
+
+  <section class="dfs-section dfs-section-soft">
+    <div class="dfs-container">
+
+      <div class="dfs-section-heading">
+
+        <span class="dfs-eyebrow">
+          Beyond lessons
+        </span>
+
+        <h2 class="dfs-section-title">
+          Explore projects, tools, and applied work
+        </h2>
+
+        <p class="dfs-section-description">
+          DataForSolution connects learning with practical work so concepts
+          can become usable skills, solutions, and portfolio evidence.
+        </p>
+
+      </div>
+
+      <div class="dfs-grid dfs-grid-3">
+
+        <article class="dfs-card">
+
+          <span class="dfs-card-label">
+            Projects
+          </span>
+
+          <h3 class="dfs-card-title">
+            See concepts in action
+          </h3>
+
+          <p class="dfs-card-text">
+            Explore practical projects that connect data, software,
+            artificial intelligence, healthcare, and real-world needs.
+          </p>
+
+          <a
+            class="dfs-card-link"
+            href="{{ '/projects/' | relative_url }}">
+            Explore projects →
+          </a>
+
+        </article>
+
+
+        <article class="dfs-card">
+
+          <span class="dfs-card-label">
+            Tools
+          </span>
+
+          <h3 class="dfs-card-title">
+            Use practical resources
+          </h3>
+
+          <p class="dfs-card-text">
+            Access tools and structured resources designed to simplify
+            analysis, learning, decision support, and professional workflows.
+          </p>
+
+          <a
+            class="dfs-card-link"
+            href="{{ '/toolkits/' | relative_url }}">
+            View tools and resources →
+          </a>
+
+        </article>
+
+
+        <article class="dfs-card">
+
+          <span class="dfs-card-label">
+            Knowledge
+          </span>
+
+          <h3 class="dfs-card-title">
+            Continue learning
+          </h3>
+
+          <p class="dfs-card-text">
+            Read practical articles, explanations, case studies, and insights
+            related to data science, AI, careers, and applied technology.
+          </p>
+
+          <a
+            class="dfs-card-link"
+            href="{{ '/blog/' | relative_url }}">
+            Read the latest content →
+          </a>
+
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       Latest content
+       ===================================================== -->
+
+  {% if latest_post %}
+
+  <section class="dfs-section dfs-section-white">
+    <div class="dfs-container">
+
+      <div class="dfs-section-heading">
+
+        <span class="dfs-eyebrow">
+          Latest from DataForSolution
+        </span>
+
+        <h2 class="dfs-section-title">
+          New knowledge and practical insights
+        </h2>
+
+      </div>
+
+      <a
+        class="dfs-latest-card"
+        href="{{ latest_post.url | relative_url }}">
+
+        <span class="dfs-latest-card-meta">
+          Latest article
+          {% if latest_post.date %}
+            · {{ latest_post.date | date: "%B %-d, %Y" }}
+          {% endif %}
+        </span>
+
+        <h3 class="dfs-latest-card-title">
+          {{ latest_post.title }}
+        </h3>
+
+        <p class="dfs-latest-card-description">
+          {% if latest_post.description %}
+            {{ latest_post.description }}
+          {% elsif latest_post.excerpt %}
+            {{ latest_post.excerpt | strip_html | normalize_whitespace | truncate: 220 }}
+          {% else %}
+            Explore the latest learning content from DataForSolution.
+          {% endif %}
+        </p>
+
+      </a>
+
+    </div>
+  </section>
+
+  {% endif %}
+
+
+  <!-- =====================================================
+       Mission
+       ===================================================== -->
+
+  <section class="dfs-section dfs-section-soft">
+    <div class="dfs-container">
+
+      <div class="dfs-mission">
+
+        <div class="dfs-mission-inner">
+
+          <span class="dfs-eyebrow">
+            Our purpose
+          </span>
+
+          <h2>
+            Technology should begin with a real problem
+          </h2>
+
+          <p>
+            DataForSolution exists to help learners and professionals build
+            the knowledge required to understand problems, evaluate evidence,
+            create responsible technology, and develop solutions that can
+            improve real work and real lives.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- =====================================================
+       Newsletter
+       ===================================================== -->
+
+  <section class="dfs-section dfs-section-white">
+    <div class="dfs-container">
+
+      <div class="dfs-newsletter">
+
+        <span class="dfs-eyebrow">
+          Stay connected
+        </span>
+
+        <h2 class="dfs-section-title">
+          Follow the platform as it grows
+        </h2>
+
+        <p class="dfs-section-description">
+          Receive updates about new lessons, academies, projects, tools,
+          articles, and practical learning resources.
+        </p>
+
+        <form
+          class="dfs-newsletter-form"
+          action="https://formspree.io/f/meokokbl"
+          method="POST">
+
+          <label
+            class="dfs-sr-only"
+            for="homepage-email">
+            Email address
+          </label>
+
+          <input
+            class="dfs-newsletter-input"
+            id="homepage-email"
+            type="email"
+            name="email"
+            placeholder="Enter your email address"
+            autocomplete="email"
+            required>
+
+          <button
+            class="dfs-button"
+            type="submit">
+            Subscribe
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+  </section>
+
+</div>
