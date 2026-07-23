@@ -256,21 +256,7 @@ description: Learn what data is, how observations become records, and why data i
     color: #123d34;
   }
 
-  @media (max-width: 760px) {
-    .example-grid {
-      grid-template-columns: 1fr;
-    }
-    .lesson-overview-grid {
-  grid-template-columns: 1fr;
-}
-    .lesson-hero {
-      padding: 64px 20px 55px;
-    }
-
-    .lesson-section {
-      padding: 50px 20px;
-    }
-    .lesson-overview-section {
+ .lesson-overview-section {
   background: #ffffff;
 }
 
@@ -287,6 +273,7 @@ description: Learn what data is, how observations become records, and why data i
   background: #f8fbfa;
   color: #18312a;
 }
+
 .overview-card-label {
   display: inline-block;
   margin-bottom: 10px;
@@ -305,10 +292,24 @@ description: Learn what data is, how observations become records, and why data i
 .lesson-overview-card p {
   margin: 0;
   line-height: 1.65;
-  color: #556863 !important;
+  color: #556863;
   opacity: 1;
 }
+
+@media (max-width: 760px) {
+  .example-grid,
+  .lesson-overview-grid {
+    grid-template-columns: 1fr;
   }
+
+  .lesson-hero {
+    padding: 64px 20px 55px;
+  }
+
+  .lesson-section {
+    padding: 50px 20px;
+  }
+}
 </style>
 
 <main class="lesson-page">
