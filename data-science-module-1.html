@@ -260,7 +260,9 @@ description: Learn what data is, how observations become records, and why data i
     .example-grid {
       grid-template-columns: 1fr;
     }
-
+    .lesson-overview-grid {
+  grid-template-columns: 1fr;
+}
     .lesson-hero {
       padding: 64px 20px 55px;
     }
@@ -268,6 +270,43 @@ description: Learn what data is, how observations become records, and why data i
     .lesson-section {
       padding: 50px 20px;
     }
+    .lesson-overview-section {
+  background: #ffffff;
+}
+
+.lesson-overview-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+}
+
+.lesson-overview-card {
+  padding: 26px;
+  border: 1px solid #dce8e3;
+  border-radius: 14px;
+  background: #f8fbfa;
+}
+
+.overview-card-label {
+  display: inline-block;
+  margin-bottom: 10px;
+  font-size: 0.76rem;
+  font-weight: 700;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: #28755f;
+}
+
+.lesson-overview-card h3 {
+  margin: 0 0 10px;
+  color: #102c25;
+}
+
+.lesson-overview-card p {
+  margin: 0;
+  line-height: 1.65;
+  color: #5b6b66;
+}
   }
 </style>
 
@@ -303,7 +342,69 @@ description: Learn what data is, how observations become records, and why data i
 
     </div>
   </section>
+  <section class="lesson-section lesson-overview-section">
+  <div class="lesson-container">
 
+    <div class="lesson-heading">
+      <span class="lesson-label">Lesson overview</span>
+      <h2>What you will learn and create</h2>
+
+      <p>
+        This lesson introduces the relationship between real-world events and
+        the records created from them.
+      </p>
+    </div>
+
+    <div class="lesson-overview-grid">
+
+      <article class="lesson-overview-card">
+        <span class="overview-card-label">Understand</span>
+
+        <h3>What data represents</h3>
+
+        <p>
+          Explain why data is recorded information about reality rather than
+          reality itself.
+        </p>
+      </article>
+
+      <article class="lesson-overview-card">
+        <span class="overview-card-label">Recognize</span>
+
+        <h3>How data is created</h3>
+
+        <p>
+          Identify the choices, measurements, systems, and recording methods
+          involved in producing a dataset.
+        </p>
+      </article>
+
+      <article class="lesson-overview-card">
+        <span class="overview-card-label">Build</span>
+
+        <h3>Your first structured dataset</h3>
+
+        <p>
+          Transform an ordinary real-world event into a small table of
+          variables and recorded values.
+        </p>
+      </article>
+
+      <article class="lesson-overview-card">
+        <span class="overview-card-label">Question</span>
+
+        <h3>What the data leaves out</h3>
+
+        <p>
+          Examine missing context, possible inaccuracies, and the limits of
+          recorded information.
+        </p>
+      </article>
+
+    </div>
+
+  </div>
+</section>
   <section class="lesson-section">
     <div class="lesson-container lesson-content">
 
