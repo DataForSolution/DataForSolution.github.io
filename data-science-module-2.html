@@ -1,0 +1,797 @@
+---
+layout: default
+title: Types and Structures of Data
+permalink: /learn/data-science/level-1/module-2/
+description: Learn how qualitative, quantitative, structured, semi-structured, and unstructured data differ and why data type affects analysis.
+---
+
+<style>
+  .lesson-page {
+    background: #f7faf9;
+    color: #18312a;
+  }
+
+  .lesson-container {
+    max-width: 920px;
+    margin: 0 auto;
+  }
+
+  .lesson-hero {
+    padding: 78px 24px 68px;
+    background: linear-gradient(
+      135deg,
+      #071f1a 0%,
+      #0c3329 55%,
+      #145040 100%
+    );
+    color: #ffffff;
+  }
+
+  .lesson-breadcrumb {
+    margin-bottom: 28px;
+    font-size: 0.94rem;
+    color: #dcefe8;
+  }
+
+  .lesson-breadcrumb a {
+    color: #bde8d9;
+    text-decoration: none;
+  }
+
+  .lesson-breadcrumb a:hover {
+    text-decoration: underline;
+  }
+
+  .lesson-eyebrow {
+    display: inline-block;
+    margin-bottom: 14px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #bde8d9;
+  }
+
+  .lesson-hero h1 {
+    margin: 0 0 18px;
+    font-size: clamp(2.5rem, 6vw, 4.5rem);
+    line-height: 1.08;
+  }
+
+  .lesson-hero p {
+    max-width: 760px;
+    margin: 0;
+    font-size: 1.15rem;
+    line-height: 1.75;
+    color: #e4f3ee;
+  }
+
+  .lesson-section {
+    padding: 64px 24px;
+  }
+
+  .lesson-section-alt {
+    background: #eaf3f0;
+  }
+
+  .lesson-overview-section {
+    background: #ffffff;
+  }
+
+  .lesson-heading {
+    margin-bottom: 24px;
+  }
+
+  .lesson-label {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #28755f;
+  }
+
+  .lesson-heading h2 {
+    margin: 0 0 14px;
+    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    color: #102c25;
+  }
+
+  .lesson-heading p,
+  .lesson-content p {
+    line-height: 1.8;
+    color: #556863;
+  }
+
+  .lesson-content p {
+    margin: 0 0 22px;
+    font-size: 1.04rem;
+  }
+
+  .lesson-overview-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 20px;
+  }
+
+  .lesson-overview-card {
+    padding: 26px;
+    border: 1px solid #dce8e3;
+    border-radius: 14px;
+    background: #f8fbfa;
+    color: #18312a;
+  }
+
+  .overview-card-label {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 0.09em;
+    text-transform: uppercase;
+    color: #28755f;
+  }
+
+  .lesson-overview-card h3 {
+    margin: 0 0 10px;
+    color: #102c25;
+  }
+
+  .lesson-overview-card p {
+    margin: 0;
+    line-height: 1.65;
+    color: #556863;
+  }
+
+  .concept-box {
+    margin: 28px 0;
+    padding: 28px;
+    border-left: 5px solid #28755f;
+    border-radius: 10px;
+    background: #ffffff;
+    box-shadow: 0 7px 20px rgba(15, 53, 43, 0.05);
+  }
+
+  .concept-box h3 {
+    margin: 0 0 10px;
+    color: #123d34;
+  }
+
+  .concept-box p {
+    margin: 0;
+  }
+
+  .type-grid {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+    margin-top: 28px;
+  }
+
+  .type-card {
+    padding: 26px;
+    background: #ffffff;
+    border: 1px solid #dce8e3;
+    border-radius: 14px;
+  }
+
+  .type-card h3 {
+    margin: 0 0 10px;
+    color: #123d34;
+  }
+
+  .type-card p {
+    margin: 0 0 14px;
+    line-height: 1.65;
+    color: #5b6b66;
+  }
+
+  .example-list {
+    margin: 0;
+    padding-left: 20px;
+  }
+
+  .example-list li {
+    margin-bottom: 8px;
+    line-height: 1.55;
+    color: #556863;
+  }
+
+  .structure-list {
+    display: grid;
+    gap: 18px;
+    margin-top: 28px;
+  }
+
+  .structure-item {
+    padding: 24px;
+    background: #ffffff;
+    border-radius: 12px;
+    border: 1px solid #dce8e3;
+  }
+
+  .structure-item h3 {
+    margin: 0 0 9px;
+    color: #102c25;
+  }
+
+  .structure-item p {
+    margin: 0;
+    line-height: 1.7;
+    color: #556863;
+  }
+
+  .data-table-wrapper {
+    overflow-x: auto;
+    margin-top: 28px;
+  }
+
+  .data-table {
+    width: 100%;
+    min-width: 650px;
+    border-collapse: collapse;
+    background: #ffffff;
+  }
+
+  .data-table th,
+  .data-table td {
+    padding: 15px;
+    border: 1px solid #d8e5e0;
+    text-align: left;
+  }
+
+  .data-table th {
+    background: #123d34;
+    color: #ffffff;
+  }
+
+  .data-table td {
+    color: #4f625c;
+  }
+
+  .practice-box {
+    padding: 30px;
+    border-radius: 15px;
+    background: #123d34;
+    color: #ffffff;
+  }
+
+  .practice-box h2 {
+    margin: 0 0 14px;
+    color: #ffffff;
+  }
+
+  .practice-box p {
+    color: #e4f3ee;
+  }
+
+  .practice-box ol {
+    margin: 20px 0 0;
+    padding-left: 22px;
+  }
+
+  .practice-box li {
+    margin-bottom: 12px;
+    line-height: 1.65;
+    color: #f1faf6;
+  }
+
+  .build-box {
+    padding: 30px;
+    border: 1px solid #cfe0da;
+    border-radius: 15px;
+    background: #ffffff;
+  }
+
+  .build-box h2 {
+    margin: 0 0 14px;
+    color: #102c25;
+  }
+
+  .build-box p,
+  .build-box li {
+    line-height: 1.7;
+    color: #556863;
+  }
+
+  .reflection-list {
+    margin: 22px 0 0;
+    padding-left: 22px;
+  }
+
+  .reflection-list li {
+    margin-bottom: 14px;
+    line-height: 1.7;
+    color: #556863;
+  }
+
+  .lesson-navigation {
+    display: flex;
+    justify-content: space-between;
+    gap: 16px;
+    margin-top: 34px;
+    flex-wrap: wrap;
+  }
+
+  .lesson-button {
+    display: inline-block;
+    padding: 13px 20px;
+    border-radius: 8px;
+    background: #123d34;
+    color: #ffffff;
+    font-weight: 700;
+    text-decoration: none;
+  }
+
+  .lesson-button:hover {
+    background: #0b2d25;
+    color: #ffffff;
+  }
+
+  .lesson-button-secondary {
+    background: #dfece8;
+    color: #123d34;
+  }
+
+  .lesson-button-secondary:hover {
+    background: #d1e3dd;
+    color: #123d34;
+  }
+
+  @media (max-width: 760px) {
+    .lesson-overview-grid,
+    .type-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .lesson-hero {
+      padding: 64px 20px 55px;
+    }
+
+    .lesson-section {
+      padding: 50px 20px;
+    }
+  }
+</style>
+
+<main class="lesson-page">
+
+  <section class="lesson-hero">
+    <div class="lesson-container">
+
+      <div class="lesson-breadcrumb">
+        <a href="{{ '/learn/' | relative_url }}">Learn</a>
+        <span> / </span>
+
+        <a href="{{ '/learn/data-science/' | relative_url }}">
+          Data Science Academy
+        </a>
+
+        <span> / </span>
+
+        <a href="{{ '/learn/data-science/level-1/' | relative_url }}">
+          Level 1
+        </a>
+
+        <span> / Module 2</span>
+      </div>
+
+      <span class="lesson-eyebrow">
+        Data Science Academy · Level 1 · Module 2
+      </span>
+
+      <h1>Types and Structures of Data</h1>
+
+      <p>
+        Data can represent categories, quantities, text, images, measurements,
+        documents, signals, or events. Understanding its type and structure
+        determines how it should be stored, analyzed, and interpreted.
+      </p>
+
+    </div>
+  </section>
+
+  <section class="lesson-section lesson-overview-section">
+    <div class="lesson-container">
+
+      <div class="lesson-heading">
+        <span class="lesson-label">Lesson overview</span>
+
+        <h2>What you will learn and create</h2>
+
+        <p>
+          This lesson introduces the major ways data is classified and
+          organized.
+        </p>
+      </div>
+
+      <div class="lesson-overview-grid">
+
+        <article class="lesson-overview-card">
+          <span class="overview-card-label">Distinguish</span>
+          <h3>Qualitative and quantitative data</h3>
+          <p>
+            Recognize whether a variable describes a category or measures a
+            numerical quantity.
+          </p>
+        </article>
+
+        <article class="lesson-overview-card">
+          <span class="overview-card-label">Recognize</span>
+          <h3>Data structure</h3>
+          <p>
+            Identify structured, semi-structured, and unstructured
+            information.
+          </p>
+        </article>
+
+        <article class="lesson-overview-card">
+          <span class="overview-card-label">Understand</span>
+          <h3>Measurement scales</h3>
+          <p>
+            Explain how nominal, ordinal, interval, and ratio variables
+            differ.
+          </p>
+        </article>
+
+        <article class="lesson-overview-card">
+          <span class="overview-card-label">Build</span>
+          <h3>A data classification guide</h3>
+          <p>
+            Classify variables from a real-world dataset by type, structure,
+            and measurement scale.
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="lesson-section">
+    <div class="lesson-container lesson-content">
+
+      <div class="lesson-heading">
+        <span class="lesson-label">Learn</span>
+        <h2>Variables carry different kinds of meaning</h2>
+      </div>
+
+      <p>
+        A variable is a characteristic recorded for an observation. Age,
+        diagnosis, temperature, product category, travel time, and customer
+        comments are all variables, but they do not represent information in
+        the same way.
+      </p>
+
+      <p>
+        The type of a variable affects which summaries, visualizations, and
+        analytical methods are appropriate. A category such as blood type
+        should not be treated like a numerical measurement such as body
+        temperature.
+      </p>
+
+      <div class="concept-box">
+        <h3>Core idea</h3>
+
+        <p>
+          Before analyzing a variable, determine what it means—not merely how
+          it appears in a file.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="lesson-section lesson-section-alt">
+    <div class="lesson-container">
+
+      <div class="lesson-heading">
+        <span class="lesson-label">Meaning</span>
+        <h2>Qualitative and quantitative data</h2>
+      </div>
+
+      <div class="type-grid">
+
+        <article class="type-card">
+          <h3>Qualitative data</h3>
+
+          <p>
+            Qualitative data represents qualities, names, groups, labels, or
+            categories.
+          </p>
+
+          <ul class="example-list">
+            <li>Blood type</li>
+            <li>Department name</li>
+            <li>Product category</li>
+            <li>Diagnosis</li>
+            <li>Customer feedback</li>
+          </ul>
+        </article>
+
+        <article class="type-card">
+          <h3>Quantitative data</h3>
+
+          <p>
+            Quantitative data represents amounts, counts, measurements, or
+            numerical values.
+          </p>
+
+          <ul class="example-list">
+            <li>Age</li>
+            <li>Weight</li>
+            <li>Temperature</li>
+            <li>Number of purchases</li>
+            <li>Travel time</li>
+          </ul>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="lesson-section">
+    <div class="lesson-container lesson-content">
+
+      <div class="lesson-heading">
+        <span class="lesson-label">Storage and organization</span>
+        <h2>Structured, semi-structured, and unstructured data</h2>
+      </div>
+
+      <div class="structure-list">
+
+        <article class="structure-item">
+          <h3>Structured data</h3>
+
+          <p>
+            Information organized into clearly defined rows, columns, fields,
+            and data types. Examples include spreadsheets, relational
+            databases, and transaction tables.
+          </p>
+        </article>
+
+        <article class="structure-item">
+          <h3>Semi-structured data</h3>
+
+          <p>
+            Information that does not follow a traditional table but contains
+            labels, keys, tags, or markers that provide organization. Examples
+            include JSON, XML, emails, and system logs.
+          </p>
+        </article>
+
+        <article class="structure-item">
+          <h3>Unstructured data</h3>
+
+          <p>
+            Information without a fixed row-and-column format. Examples
+            include clinical notes, documents, photographs, medical images,
+            audio recordings, and videos.
+          </p>
+        </article>
+
+      </div>
+
+    </div>
+  </section>
+
+  <section class="lesson-section lesson-section-alt">
+    <div class="lesson-container">
+
+      <div class="lesson-heading">
+        <span class="lesson-label">Measurement</span>
+        <h2>Four common measurement scales</h2>
+
+        <p>
+          Measurement scales describe the meaning and relationships contained
+          within recorded values.
+        </p>
+      </div>
+
+      <div class="data-table-wrapper">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Scale</th>
+              <th>Meaning</th>
+              <th>Example</th>
+              <th>Important property</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <tr>
+              <td>Nominal</td>
+              <td>Names or categories</td>
+              <td>Blood type</td>
+              <td>No natural order</td>
+            </tr>
+
+            <tr>
+              <td>Ordinal</td>
+              <td>Ordered categories</td>
+              <td>Pain: mild, moderate, severe</td>
+              <td>Order exists, distance is uncertain</td>
+            </tr>
+
+            <tr>
+              <td>Interval</td>
+              <td>Equal numerical intervals</td>
+              <td>Temperature in Celsius</td>
+              <td>Zero does not mean absence</td>
+            </tr>
+
+            <tr>
+              <td>Ratio</td>
+              <td>Equal intervals with a true zero</td>
+              <td>Weight or duration</td>
+              <td>Ratios are meaningful</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="lesson-section">
+    <div class="lesson-container">
+
+      <div class="practice-box">
+        <h2>Practice: Classify each variable</h2>
+
+        <p>
+          For each variable below, identify whether it is qualitative or
+          quantitative and determine its likely measurement scale.
+        </p>
+
+        <ol>
+          <li>Patient identification number</li>
+          <li>Age in years</li>
+          <li>Satisfaction rating: poor, fair, good, excellent</li>
+          <li>Appointment date</li>
+          <li>Diagnosis category</li>
+          <li>Travel distance in miles</li>
+          <li>Written clinical note</li>
+        </ol>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="lesson-section lesson-section-alt">
+    <div class="lesson-container">
+
+      <div class="build-box">
+        <span class="lesson-label">Build</span>
+
+        <h2>Create a data classification guide</h2>
+
+        <p>
+          Use the small dataset you created in Module 1 or choose another
+          everyday dataset. Create a table with these columns:
+        </p>
+
+        <div class="data-table-wrapper">
+          <table class="data-table">
+            <thead>
+              <tr>
+                <th>Variable</th>
+                <th>Meaning</th>
+                <th>Qualitative or quantitative</th>
+                <th>Measurement scale</th>
+                <th>Structure or format</th>
+              </tr>
+            </thead>
+
+            <tbody>
+              <tr>
+                <td>Date</td>
+                <td>When the event occurred</td>
+                <td>Quantitative or temporal</td>
+                <td>Interval</td>
+                <td>Structured</td>
+              </tr>
+
+              <tr>
+                <td>Event type</td>
+                <td>Category of event</td>
+                <td>Qualitative</td>
+                <td>Nominal</td>
+                <td>Structured</td>
+              </tr>
+
+              <tr>
+                <td>Duration</td>
+                <td>Length of the event</td>
+                <td>Quantitative</td>
+                <td>Ratio</td>
+                <td>Structured</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <p>
+          Add at least five variables. For each one, explain why you selected
+          that classification.
+        </p>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="lesson-section">
+    <div class="lesson-container lesson-content">
+
+      <div class="lesson-heading">
+        <span class="lesson-label">Reflect</span>
+        <h2>Questions to deepen your understanding</h2>
+      </div>
+
+      <ul class="reflection-list">
+        <li>
+          Can a number function as a label rather than a measurement?
+        </li>
+
+        <li>
+          Could the same variable be stored differently in two systems?
+        </li>
+
+        <li>
+          What analytical mistakes could occur when an ordinal variable is
+          treated as a precise numerical measurement?
+        </li>
+
+        <li>
+          Why is unstructured data often more difficult to analyze?
+        </li>
+      </ul>
+
+    </div>
+  </section>
+
+  <section class="lesson-section lesson-section-alt">
+    <div class="lesson-container lesson-content">
+
+      <div class="lesson-heading">
+        <span class="lesson-label">Apply</span>
+        <h2>Why data type matters in real work</h2>
+      </div>
+
+      <p>
+        Healthcare systems contain numerical measurements, diagnosis
+        categories, medical images, clinical notes, timestamps, and signals.
+        Business systems may contain transaction tables, customer comments,
+        emails, product images, and activity logs.
+      </p>
+
+      <p>
+        Each type requires different methods for storage, preparation,
+        visualization, and analysis. Correctly identifying data type is
+        therefore one of the first responsibilities in any data science
+        project.
+      </p>
+
+      <div class="lesson-navigation">
+
+        <a
+          class="lesson-button lesson-button-secondary"
+          href="{{ '/learn/data-science/level-1/module-1/' | relative_url }}">
+          ← Previous: What Is Data?
+        </a>
+
+        <a
+          class="lesson-button"
+          href="{{ '/learn/data-science/level-1/' | relative_url }}">
+          Return to Level 1 →
+        </a>
+
+      </div>
+
+    </div>
+  </section>
+
+</main>
