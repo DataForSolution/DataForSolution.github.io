@@ -41,3 +41,4 @@ Start typing to explore the platform.
 </div>
 
 </section>
+<script src="{{ '/assets/js/discover.js' | relative_url }}"></script>
