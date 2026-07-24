@@ -1,0 +1,40 @@
+[
+  {
+    "title": "What Is Data?",
+    "category": "Lesson",
+    "academy": "Data Science",
+    "url": "/learn/data-science/module-1/",
+    "keywords": [
+      "data",
+      "information",
+      "lesson",
+      "beginner"
+    ]
+  },
+
+  {
+    "title": "Types of Data",
+    "category": "Lesson",
+    "academy": "Data Science",
+    "url": "/learn/data-science/module-2/",
+    "keywords": [
+      "structured",
+      "unstructured",
+      "qualitative",
+      "quantitative"
+    ]
+  },
+
+  {
+    "title": "PET Response Tracker",
+    "category": "Project",
+    "academy": "Healthcare AI",
+    "url": "/projects/pet-response-tracker/",
+    "keywords": [
+      "pet",
+      "oncology",
+      "response",
+      "healthcare"
+    ]
+  }
+]
