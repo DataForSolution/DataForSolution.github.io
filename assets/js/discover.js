@@ -57,21 +57,31 @@ document.addEventListener("DOMContentLoaded", async () => {
 
         }
 
-        results.innerHTML = matches.map(item => `
+       results.innerHTML = matches.map(item => `
 
-            <div class="discover-card">
+<div class="discover-card">
 
-                <h3>${item.title}</h3>
+    <span class="discover-badge">
+        ${item.category}
+    </span>
 
-                <p><strong>${item.category}</strong></p>
+    <h3>${item.title}</h3>
 
-                <p>${item.academy}</p>
+    <p class="discover-description">
+        ${item.description || ""}
+    </p>
 
-                <a href="${item.url}">Open →</a>
+    <p class="discover-academy">
+        ${item.academy}
+    </p>
 
-            </div>
+    <a href="${item.url}">
+        Open →
+    </a>
 
-        `).join("");
+</div>
+
+`).join("");
 
     }
 
