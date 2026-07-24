@@ -75,16 +75,19 @@ document.addEventListener("DOMContentLoaded", async () => {
 
     }
 
-    button.addEventListener("click", searchPlatform);
+   button.addEventListener("click", searchPlatform);
 
-    input.addEventListener("keyup", event => {
+input.addEventListener("input", searchPlatform);
 
-        if (event.key === "Enter") {
+input.addEventListener("keydown", event => {
 
-            searchPlatform();
+    if (event.key === "Escape") {
 
-        }
+        input.value = "";
+        results.innerHTML = "Start typing to explore the platform.";
 
-    });
+    }
+
+});
 
 });
