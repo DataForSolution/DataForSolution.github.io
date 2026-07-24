@@ -1,1 +1,30 @@
-
+[
+  {
+    "title": "What Is Data?",
+    "category": "Lesson",
+    "academy": "Data Science Academy",
+    "description": "Learn what data is and how it represents information.",
+    "url": "/data-science-module-1/",
+    "keywords": [
+      "data",
+      "information",
+      "dataset",
+      "beginner",
+      "data science"
+    ]
+  },
+  {
+    "title": "Types and Structures of Data",
+    "category": "Lesson",
+    "academy": "Data Science Academy",
+    "description": "Explore qualitative, quantitative, structured, and unstructured data.",
+    "url": "/data-science-module-2/",
+    "keywords": [
+      "qualitative",
+      "quantitative",
+      "structured",
+      "unstructured",
+      "measurement scales"
+    ]
+  }
+]
