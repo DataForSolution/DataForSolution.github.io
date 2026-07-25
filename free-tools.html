@@ -1,169 +1,101 @@
 ---
 layout: default
-title: "Free Tools"
+title: "Tools"
 permalink: /free-tools/
 ---
 
-<section id="free-tools">
-    <h1>🚀 Free Tools for Data Scientists</h1>
-    <p>Explore our **cutting-edge** free tools that enhance your data science projects and research.</p>
+<section class="tools-hub">
+  <header class="tools-hero">
+    <p class="tools-eyebrow">DataForSolution Tool Lab</p>
+    <h1>Use practical tools. Understand the result.</h1>
+    <p>Explore privacy-conscious utilities for data analysis, statistics, machine learning, and learning practice. Every tool is clearly marked as available, in development, or external.</p>
+  </header>
 
-    <!-- 🔹 Data Cleaning Tool -->
-    <div class="tool">
-        <h2>🧹 Data Cleaning Tool</h2>
-        <p>Upload your CSV file, and our automated system will clean it for you.</p>
-        <form id="data-cleaning-form" enctype="multipart/form-data">
-            <input type="file" name="csv-file" accept=".csv" required>
-            <button type="submit">Clean Dataset</button>
-        </form>
-        <div id="cleaning-result"></div>
+  <section class="tools-section" aria-labelledby="available-tools-heading">
+    <div class="tools-section-heading">
+      <div>
+        <p class="tools-kicker">Available now</p>
+        <h2 id="available-tools-heading">Working DataForSolution tools</h2>
+      </div>
+      <p>These tools run directly in the visitor's browser.</p>
     </div>
 
-    <!-- 🔹 AI-Powered Prediction Tool -->
-    <div class="tool">
-        <h2>🤖 AI Prediction Tool</h2>
-        <p>Provide input data and get instant AI predictions.</p>
-        <form id="prediction-form">
-            <input type="text" name="input-feature" placeholder="Enter input value" required>
-            <button type="submit">Predict</button>
-        </form>
-        <div id="prediction-result"></div>
+    <div class="tools-grid">
+      <article class="tool-card tool-card--featured">
+        <div class="tool-card-topline">
+          <span class="tool-icon" aria-hidden="true">📊</span>
+          <span class="tool-status tool-status--available">Available</span>
+        </div>
+        <h3>CSV Data Profiler</h3>
+        <p>Upload a CSV file and examine rows, columns, missing values, duplicates, inferred data types, unique values, numerical summaries, and a data preview.</p>
+        <ul class="tool-feature-list">
+          <li>Runs locally in your browser</li>
+          <li>No dataset upload</li>
+          <li>Actionable quality checks</li>
+        </ul>
+        <a class="tool-action" href="/tools/csv-profiler/">Open CSV Data Profiler →</a>
+      </article>
+    </div>
+  </section>
+
+  <section class="tools-section" aria-labelledby="planned-tools-heading">
+    <div class="tools-section-heading">
+      <div>
+        <p class="tools-kicker">Product roadmap</p>
+        <h2 id="planned-tools-heading">Tools being developed</h2>
+      </div>
+      <p>Shown transparently so visitors know what is not yet active.</p>
     </div>
 
-    <!-- 🔹 Data Science Learning & Challenges -->
-    <div class="tool">
-        <h2>🎯 Data Science Quizzes & Challenges</h2>
-        <p>Test your knowledge and skills with our interactive quizzes and coding challenges.</p>
+    <div class="tools-grid tools-grid--three">
+      <article class="tool-card">
+        <div class="tool-card-topline"><span class="tool-icon">📈</span><span class="tool-status tool-status--planned">Planned</span></div>
+        <h3>Descriptive Statistics Calculator</h3>
+        <p>Calculate mean, median, spread, percentiles, and interpretable summaries from numerical data.</p>
+      </article>
 
-        <h3>📘 Quizzes</h3>
-        <ul>
-            <li><button class="quiz-btn" data-quiz-id="python">Python Basics Quiz</button></li>
-            <li><button class="quiz-btn" data-quiz-id="ml">Machine Learning Quiz</button></li>
-            <li><button class="quiz-btn" data-quiz-id="stats">Statistics for Data Science Quiz</button></li>
-        </ul>
+      <article class="tool-card">
+        <div class="tool-card-topline"><span class="tool-icon">🎯</span><span class="tool-status tool-status--planned">Planned</span></div>
+        <h3>Interactive Quizzes</h3>
+        <p>Practice Python, statistics, and machine-learning concepts with explanations and topic-based scoring.</p>
+      </article>
 
-        <h3>💻 Coding Challenges</h3>
-        <ul>
-            <li><button class="challenge-btn" data-challenge-id="1">Build a Regression Model</button></li>
-            <li><button class="challenge-btn" data-challenge-id="2">Classify Images Using CNN</button></li>
-        </ul>
+      <article class="tool-card">
+        <div class="tool-card-topline"><span class="tool-icon">🧠</span><span class="tool-status tool-status--planned">Planned</span></div>
+        <h3>ML Evaluation Calculator</h3>
+        <p>Understand accuracy, precision, recall, specificity, F1 score, and confusion matrices.</p>
+      </article>
+    </div>
+  </section>
 
-        <h3>🏆 Leaderboard</h3>
-        <ul id="leaderboard">
-            <li>Loading leaderboard...</li>
-        </ul>
+  <section class="tools-section" aria-labelledby="external-tools-heading">
+    <div class="tools-section-heading">
+      <div>
+        <p class="tools-kicker">External resources</p>
+        <h2 id="external-tools-heading">Trusted platforms for building and learning</h2>
+      </div>
+      <p>These links open services maintained by other organizations.</p>
     </div>
 
-    <!-- 🔹 Must-Have Free Tools for Data Scientists -->
-    <h2>🔗 Free Resources & Tools</h2>
-    <ul class="tool-links">
-        <li>📊 <a href="https://colab.research.google.com/" target="_blank">Google Colab</a> - Free cloud-based Jupyter Notebook.</li>
-        <li>📂 <a href="https://www.kaggle.com/datasets" target="_blank">Kaggle Datasets</a> - Access free datasets for machine learning.</li>
-        <li>🖥️ <a href="https://www.tensorflow.org/" target="_blank">TensorFlow</a> - Open-source deep learning framework.</li>
-        <li>📈 <a href="https://plotly.com/" target="_blank">Plotly</a> - Free interactive visualization library.</li>
-        <li>🛠️ <a href="https://github.com/" target="_blank">GitHub</a> - Host, collaborate, and contribute to open-source projects.</li>
-        <li>🖼️ <a href="https://www.openai.com/research" target="_blank">OpenAI Tools</a> - Free AI models, APIs, and research papers.</li>
-        <li>📡 <a href="https://huggingface.co/models" target="_blank">Hugging Face Models</a> - Free NLP & ML model hub.</li>
-    </ul>
+    <div class="external-tools-grid">
+      <a href="https://colab.research.google.com/" target="_blank" rel="noopener noreferrer"><strong>Google Colab</strong><span>Cloud-based notebooks for Python and data science.</span></a>
+      <a href="https://www.kaggle.com/datasets" target="_blank" rel="noopener noreferrer"><strong>Kaggle Datasets</strong><span>Public datasets and applied machine-learning resources.</span></a>
+      <a href="https://github.com/" target="_blank" rel="noopener noreferrer"><strong>GitHub</strong><span>Version control, project publishing, and collaboration.</span></a>
+      <a href="https://huggingface.co/models" target="_blank" rel="noopener noreferrer"><strong>Hugging Face</strong><span>Open models, datasets, and machine-learning applications.</span></a>
+      <a href="https://www.tensorflow.org/" target="_blank" rel="noopener noreferrer"><strong>TensorFlow</strong><span>Open-source machine-learning framework and tutorials.</span></a>
+      <a href="https://plotly.com/" target="_blank" rel="noopener noreferrer"><strong>Plotly</strong><span>Interactive data visualization tools and libraries.</span></a>
+    </div>
+  </section>
 
+  <section class="tools-principle">
+    <div>
+      <p class="tools-kicker">Our principle</p>
+      <h2>A tool should teach—not only calculate.</h2>
+    </div>
+    <p>DataForSolution tools will explain what a result means, identify limitations, and connect users to the lesson or project that helps them understand the method.</p>
+  </section>
 </section>
 
-<script>
-    // Load quizzes
-    document.querySelectorAll('.quiz-btn').forEach(button => {
-        button.addEventListener('click', async () => {
-            const quizId = button.dataset.quizId;
-            const quizContainer = document.getElementById('quiz-container');
-
-            quizContainer.innerHTML = "Loading quiz...";
-            try {
-                const response = await fetch(`/quiz?quiz_id=${quizId}`);
-                const data = await response.json();
-                quizContainer.innerHTML = `<h3>${data.title}</h3>`;
-                data.questions.forEach((q, index) => {
-                    const questionDiv = document.createElement("div");
-                    questionDiv.innerHTML = `<p><strong>${index + 1}. ${q.question}</strong></p>
-                        ${q.options.map(opt => `<button>${opt}</button>`).join("")}`;
-                    quizContainer.appendChild(questionDiv);
-                });
-            } catch (err) {
-                quizContainer.innerHTML = "Error fetching quiz data.";
-            }
-        });
-    });
-
-    // Load leaderboard
-    async function loadLeaderboard() {
-        const leaderboard = document.getElementById("leaderboard");
-        leaderboard.innerHTML = "Loading...";
-        try {
-            const response = await fetch("/leaderboard");
-            const data = await response.json();
-            leaderboard.innerHTML = data.leaderboard
-                .map((entry, idx) => `<li>${idx + 1}. ${entry.name} - ${entry.score}</li>`)
-                .join("");
-        } catch (err) {
-            leaderboard.innerHTML = "Error loading leaderboard.";
-        }
-    }
-    loadLeaderboard();
-</script>
-
 <style>
-    #free-tools {
-        padding: 50px 20px;
-        background-color: #f9f9f9;
-        color: #333;
-        text-align: center;
-    }
-
-    .tool {
-        background: white;
-        border-radius: 10px;
-        padding: 20px;
-        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-        margin-bottom: 20px;
-        text-align: left;
-        max-width: 600px;
-        margin: auto;
-    }
-
-    .tool h2 {
-        font-size: 1.5em;
-        color: #4CAF50;
-        margin-bottom: 10px;
-    }
-
-    .tool p {
-        font-size: 1em;
-        margin-bottom: 10px;
-        color: #555;
-    }
-
-    .tool-links {
-        list-style: none;
-        padding: 0;
-        text-align: left;
-        max-width: 600px;
-        margin: auto;
-    }
-
-    .tool-links li {
-        font-size: 1.1em;
-        margin: 10px 0;
-        color: #333;
-        background: #eaf7ea;
-        padding: 10px;
-        border-radius: 5px;
-    }
-
-    .tool-links a {
-        color: #007BFF;
-        text-decoration: none;
-        font-weight: bold;
-    }
-
-    .tool-links a:hover {
-        text-decoration: underline;
-    }
+.tools-hub{max-width:1180px;margin:0 auto;padding:52px 20px 80px;color:#172033}.tools-hero{max-width:850px;margin-bottom:58px}.tools-eyebrow,.tools-kicker{text-transform:uppercase;letter-spacing:.12em;font-size:.76rem;font-weight:850;color:#1662c6;margin:0 0 10px}.tools-hero h1{font-size:clamp(2.35rem,5.5vw,4.6rem);line-height:1.04;margin:0 0 20px}.tools-hero>p:last-child{font-size:1.15rem;line-height:1.75;color:#536178}.tools-section{margin-top:52px}.tools-section-heading{display:flex;justify-content:space-between;gap:28px;align-items:end;margin-bottom:20px}.tools-section-heading h2{font-size:clamp(1.65rem,3vw,2.35rem);margin:0}.tools-section-heading>p{max-width:430px;margin:0;color:#66758b;line-height:1.6}.tools-grid{display:grid;grid-template-columns:minmax(0,760px);gap:18px}.tools-grid--three{grid-template-columns:repeat(3,minmax(0,1fr))}.tool-card{background:#fff;border:1px solid #dfe6ef;border-radius:17px;padding:24px;box-shadow:0 12px 30px rgba(31,48,76,.06)}.tool-card--featured{border-color:#a8c9f4;background:linear-gradient(145deg,#fff,#f4f8ff)}.tool-card-topline{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.tool-icon{font-size:1.8rem}.tool-status{font-size:.75rem;font-weight:850;padding:6px 10px;border-radius:999px;text-transform:uppercase;letter-spacing:.05em}.tool-status--available{background:#e7f7ef;color:#16613e}.tool-status--planned{background:#fff3d8;color:#805b05}.tool-card h3{font-size:1.35rem;margin:0 0 10px}.tool-card p{color:#58677d;line-height:1.65}.tool-feature-list{display:grid;gap:7px;padding-left:20px;color:#3f4f65}.tool-action{display:inline-block;margin-top:10px;font-weight:850;color:#145dcc;text-decoration:none}.external-tools-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.external-tools-grid a{display:flex;flex-direction:column;gap:7px;padding:19px;border:1px solid #dfe6ef;border-radius:13px;background:#fff;text-decoration:none;color:#172033;transition:transform .18s ease,box-shadow .18s ease}.external-tools-grid a:hover{transform:translateY(-2px);box-shadow:0 10px 24px rgba(31,48,76,.1)}.external-tools-grid span{color:#66758b;line-height:1.5;font-size:.94rem}.tools-principle{display:grid;grid-template-columns:.8fr 1.2fr;gap:35px;background:#102b52;color:#fff;border-radius:20px;padding:34px;margin-top:58px}.tools-principle .tools-kicker{color:#8ec2ff}.tools-principle h2{margin:0;font-size:2rem}.tools-principle>p{margin:0;color:#d9e6f8;line-height:1.75}@media(max-width:850px){.tools-grid--three,.external-tools-grid{grid-template-columns:1fr 1fr}.tools-section-heading{display:block}.tools-section-heading>p{margin-top:9px}.tools-principle{grid-template-columns:1fr}}@media(max-width:580px){.tools-grid--three,.external-tools-grid{grid-template-columns:1fr}.tools-hub{padding-top:32px}.tools-principle{padding:24px}.tools-section{margin-top:42px}}
 </style>
