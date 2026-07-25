@@ -1,0 +1,79 @@
+---
+layout: default
+title: "CSV Data Profiler"
+permalink: /tools/csv-profiler/
+---
+
+<section class="csv-tool-shell">
+  <div class="csv-tool-hero">
+    <p class="csv-eyebrow">DataForSolution Tool Lab</p>
+    <h1>CSV Data Profiler</h1>
+    <p>Inspect the structure and quality of a CSV dataset before cleaning, analysis, visualization, or machine learning.</p>
+    <div class="csv-privacy-note"><strong>Private by design:</strong> your file is processed locally in your browser and is not uploaded to DataForSolution.</div>
+  </div>
+
+  <div class="csv-upload-card">
+    <label for="csv-file">Choose a CSV file</label>
+    <input id="csv-file" type="file" accept=".csv,text/csv" />
+    <p class="csv-help">Maximum recommended size: 10 MB. The first row should contain column names.</p>
+    <div class="csv-actions">
+      <button id="analyze-csv" type="button" class="csv-primary-button">Analyze dataset</button>
+      <button id="reset-csv" type="button" class="csv-secondary-button">Reset</button>
+    </div>
+    <div id="csv-status" class="csv-status csv-status--info" role="status" aria-live="polite">Choose a CSV file to begin. Your data stays in your browser.</div>
+  </div>
+
+  <section id="csv-results" class="csv-results" hidden>
+    <div class="csv-section-heading">
+      <h2>Dataset overview</h2>
+      <p>A structural profile, not a substitute for subject-matter validation.</p>
+    </div>
+    <div id="csv-summary" class="csv-summary-grid"></div>
+
+    <div class="csv-panel">
+      <h2>Column profile</h2>
+      <div class="csv-table-wrap">
+        <table class="csv-table">
+          <thead>
+            <tr>
+              <th>Column</th>
+              <th>Inferred type</th>
+              <th>Missing</th>
+              <th>Unique</th>
+              <th>Summary</th>
+            </tr>
+          </thead>
+          <tbody id="column-profile-body"></tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="csv-panel">
+      <h2>Recommended checks</h2>
+      <ul id="csv-recommendations" class="csv-recommendations"></ul>
+    </div>
+
+    <div class="csv-panel">
+      <h2>Data preview</h2>
+      <p>First 10 data rows.</p>
+      <div class="csv-table-wrap">
+        <table class="csv-table csv-preview-table">
+          <thead id="preview-head"></thead>
+          <tbody id="preview-body"></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <div class="csv-learning-card">
+    <h2>How to use this profile</h2>
+    <p>Use the results to identify missing values, duplicates, possible data types, low-information columns, and fields that need closer review. Always interpret findings in the context of how the data was collected.</p>
+    <a href="/learn/">Continue learning →</a>
+  </div>
+</section>
+
+<style>
+.csv-tool-shell{max-width:1180px;margin:0 auto;padding:48px 20px 80px;color:#172033}.csv-tool-hero{max-width:820px;margin-bottom:30px}.csv-eyebrow{text-transform:uppercase;letter-spacing:.12em;font-weight:800;font-size:.78rem;color:#1b63c6}.csv-tool-hero h1{font-size:clamp(2.2rem,5vw,4rem);line-height:1.05;margin:8px 0 16px}.csv-tool-hero>p:not(.csv-eyebrow){font-size:1.15rem;line-height:1.7;color:#526078}.csv-privacy-note{margin-top:20px;padding:14px 18px;border-left:4px solid #1f8f5f;background:#edf9f3;border-radius:8px;color:#21533f}.csv-upload-card,.csv-panel,.csv-learning-card{background:#fff;border:1px solid #dfe6ef;border-radius:16px;padding:24px;box-shadow:0 10px 30px rgba(28,45,75,.07);margin-bottom:24px}.csv-upload-card label{display:block;font-weight:800;margin-bottom:10px}.csv-upload-card input[type=file]{display:block;width:100%;padding:14px;border:1px dashed #93a4ba;border-radius:10px;background:#f8fafc}.csv-help{font-size:.92rem;color:#66758c}.csv-actions{display:flex;gap:12px;flex-wrap:wrap;margin:18px 0}.csv-primary-button,.csv-secondary-button{border:0;border-radius:10px;padding:12px 18px;font-weight:800;cursor:pointer}.csv-primary-button{background:#145dcc;color:#fff}.csv-primary-button:hover{background:#0f4ca9}.csv-primary-button:disabled{opacity:.6;cursor:wait}.csv-secondary-button{background:#e9eef5;color:#26364d}.csv-status{padding:12px 14px;border-radius:9px;font-weight:650}.csv-status--info{background:#eef5ff;color:#234f8b}.csv-status--success{background:#eaf8f0;color:#17623f}.csv-status--error{background:#fff0f0;color:#9c2929}.csv-section-heading{display:flex;justify-content:space-between;gap:20px;align-items:end;margin:34px 0 16px}.csv-section-heading h2,.csv-panel h2,.csv-learning-card h2{margin:0 0 8px}.csv-section-heading p,.csv-panel>p{color:#66758c;margin:0}.csv-summary-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;margin-bottom:24px}.csv-metric{background:#f5f8fc;border:1px solid #e0e7f0;border-radius:14px;padding:18px}.csv-metric span{display:block;color:#64748b;font-size:.88rem;margin-bottom:6px}.csv-metric strong{font-size:1.4rem}.csv-table-wrap{overflow:auto;margin-top:16px;border:1px solid #e0e7ef;border-radius:12px}.csv-table{width:100%;border-collapse:collapse;min-width:760px}.csv-table th,.csv-table td{text-align:left;padding:12px 14px;border-bottom:1px solid #e7edf4;vertical-align:top}.csv-table th{background:#f4f7fb;color:#33445c;font-size:.88rem;position:sticky;top:0}.csv-table tr:last-child td{border-bottom:0}.csv-recommendations{padding-left:22px;line-height:1.65}.csv-recommendations li+li{margin-top:8px}.csv-learning-card{background:linear-gradient(135deg,#eef5ff,#f6fbff)}.csv-learning-card p{line-height:1.7;color:#526078}.csv-learning-card a{font-weight:800;text-decoration:none;color:#145dcc}@media(max-width:800px){.csv-summary-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.csv-section-heading{display:block}.csv-section-heading p{margin-top:6px}}@media(max-width:480px){.csv-summary-grid{grid-template-columns:1fr}.csv-tool-shell{padding-top:30px}.csv-upload-card,.csv-panel,.csv-learning-card{padding:18px}}
+</style>
+
+<script src="/assets/js/csv-profiler.js" defer></script>
