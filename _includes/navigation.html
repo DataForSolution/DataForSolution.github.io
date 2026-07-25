@@ -4,14 +4,19 @@
 
     <!-- Brand -->
     <a
-      class="logo"
+      class="logo dfs-brand-lockup"
       href="{{ '/' | relative_url }}"
-      aria-label="DataForSolution home">
+      aria-label="DataForSolution home, an OraDigit Technology platform">
 
       <img
         src="{{ '/assets/images/logo.png' | relative_url }}"
-        alt="DataForSolution"
-        style="height: 40px;">
+        alt=""
+        class="dfs-brand-mark">
+
+      <span class="dfs-brand-copy">
+        <strong>DataForSolution</strong>
+        <small>by OraDigit Technology</small>
+      </span>
 
     </a>
 
@@ -113,13 +118,13 @@
         </ul>
 
       </li>
-            <!-- Search -->
+
       <!-- Discover -->
-<li>
-  <a href="{{ '/discover/' | relative_url }}">
-    Discover
-  </a>
-</li>
+      <li>
+        <a href="{{ '/discover/' | relative_url }}">
+          Discover
+        </a>
+      </li>
 
 
       <!-- Insights -->
@@ -144,22 +149,22 @@
           </li>
 
           <li>
-  <a href="{{ '/ebooks/' | relative_url }}">
-    E-Books
-  </a>
-</li>
+            <a href="{{ '/ebooks/' | relative_url }}">
+              E-Books
+            </a>
+          </li>
 
-<li>
-  <a href="{{ '/media/' | relative_url }}">
-    Media
-  </a>
-</li>
+          <li>
+            <a href="{{ '/media/' | relative_url }}">
+              Media
+            </a>
+          </li>
 
-<li>
-  <a href="{{ '/resources/' | relative_url }}">
-    Resources
-  </a>
-</li>
+          <li>
+            <a href="{{ '/resources/' | relative_url }}">
+              Resources
+            </a>
+          </li>
 
         </ul>
 
@@ -178,6 +183,18 @@
           <li>
             <a href="{{ '/about/' | relative_url }}">
               About DataForSolution
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.oradigit.com" target="_blank" rel="noopener noreferrer">
+              OraDigit Technology
+            </a>
+          </li>
+
+          <li>
+            <a href="https://www.linkedin.com/in/lissan-analytic" target="_blank" rel="noopener noreferrer">
+              Founder on LinkedIn
             </a>
           </li>
 
@@ -209,11 +226,49 @@
 
       </li>
 
-
-  
-
     </ul>
 
   </div>
 
 </nav>
+
+<style>
+.dfs-brand-lockup {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  text-decoration: none;
+}
+
+.dfs-brand-mark {
+  height: 40px;
+  width: auto;
+  flex: 0 0 auto;
+}
+
+.dfs-brand-copy {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.05;
+  white-space: nowrap;
+}
+
+.dfs-brand-copy strong {
+  font-size: 1rem;
+  letter-spacing: -.01em;
+}
+
+.dfs-brand-copy small {
+  margin-top: 4px;
+  font-size: .66rem;
+  font-weight: 700;
+  letter-spacing: .03em;
+  opacity: .72;
+}
+
+@media (max-width: 560px) {
+  .dfs-brand-copy small {
+    display: none;
+  }
+}
+</style>
