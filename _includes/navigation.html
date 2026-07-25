@@ -1,274 +1,65 @@
 <nav class="main-nav" aria-label="Primary navigation">
-
   <div class="nav-container">
-
-    <!-- Brand -->
-    <a
-      class="logo dfs-brand-lockup"
-      href="{{ '/' | relative_url }}"
-      aria-label="DataForSolution home, an OraDigit Technology platform">
-
-      <img
-        src="{{ '/assets/images/logo.png' | relative_url }}"
-        alt=""
-        class="dfs-brand-mark">
-
-      <span class="dfs-brand-copy">
-        <strong>DataForSolution</strong>
-        <small>by OraDigit Technology</small>
-      </span>
-
+    <a class="logo dfs-brand-lockup" href="{{ '/' | relative_url }}" aria-label="DataForSolution home, an OraDigit Technology platform">
+      <img src="{{ '/assets/images/logo.png' | relative_url }}" alt="" class="dfs-brand-mark">
+      <span class="dfs-brand-copy"><strong>DataForSolution</strong><small>by OraDigit Technology</small></span>
     </a>
 
+    <button class="hamburger" type="button" aria-label="Open navigation menu" aria-expanded="false">☰</button>
 
-    <!-- Mobile navigation button -->
-    <button
-      class="hamburger"
-      type="button"
-      aria-label="Open navigation menu"
-      aria-expanded="false">
-      ☰
-    </button>
-
-
-    <!-- Primary navigation -->
     <ul class="nav-links">
+      <li><a href="{{ '/' | relative_url }}">Home</a></li>
 
-      <!-- Home -->
-      <li>
-        <a href="{{ '/' | relative_url }}">
-          Home
-        </a>
-      </li>
-
-
-      <!-- Learn -->
       <li class="dropdown">
-
-        <a href="{{ '/learn/' | relative_url }}">
-          Learn ▾
-        </a>
-
+        <a href="{{ '/learn/' | relative_url }}">Learn ▾</a>
         <ul class="dropdown-menu">
-
-          <li>
-            <a href="{{ '/learn/' | relative_url }}">
-              Learning Overview
-            </a>
-          </li>
-
-          <li>
-            <a href="{{ '/learn/data-science/' | relative_url }}">
-              Data Science Academy
-            </a>
-          </li>
-
-          <li>
-            <a href="{{ '/learn/data-science/level-1/' | relative_url }}">
-              Data Science Level 1
-            </a>
-          </li>
-
+          <li><a href="{{ '/learn/' | relative_url }}">Learning Overview</a></li>
+          <li><a href="{{ '/learn/data-science/' | relative_url }}">Data Science Academy</a></li>
+          <li><a href="{{ '/learn/data-science/level-1/' | relative_url }}">Data Science Level 1</a></li>
         </ul>
-
       </li>
 
+      <li><a href="{{ '/projects-new/' | relative_url }}">Projects</a></li>
 
-      <!-- Projects -->
-      <li>
-        <a href="{{ '/projects-new/' | relative_url }}">
-          Projects
-        </a>
-      </li>
-
-
-      <!-- Tools -->
       <li class="dropdown">
-
-        <a href="{{ '/toolkits/' | relative_url }}">
-          Tools ▾
-        </a>
-
+        <a href="{{ '/toolkits/' | relative_url }}">Tools ▾</a>
         <ul class="dropdown-menu">
-
-          <li>
-            <a href="{{ '/toolkits/' | relative_url }}">
-              Tools Overview
-            </a>
-          </li>
-
-          <li>
-            <a href="{{ '/free-tools/' | relative_url }}">
-              Free Tools
-            </a>
-          </li>
-
-          <li>
-            <a href="{{ '/career-hub/' | relative_url }}">
-              Career Hub
-            </a>
-          </li>
-
-          <li>
-            <a href="{{ '/career-navigator/' | relative_url }}">
-              Career Navigator
-            </a>
-          </li>
-
+          <li><a href="{{ '/toolkits/' | relative_url }}">Tools Overview</a></li>
+          <li><a href="{{ '/free-tools/' | relative_url }}">Free Tools</a></li>
+          <li><a href="{{ '/career-hub/' | relative_url }}">Career Hub</a></li>
+          <li><a href="{{ '/career-navigator/' | relative_url }}">Career Navigator</a></li>
         </ul>
-
       </li>
 
-      <!-- Discover -->
-      <li>
-        <a href="{{ '/discover/' | relative_url }}">
-          Discover
-        </a>
-      </li>
+      <li><a href="{{ '/discover/' | relative_url }}">Discover</a></li>
 
-
-      <!-- Insights -->
       <li class="dropdown">
-
-        <a href="{{ '/blog/' | relative_url }}">
-          Insights ▾
-        </a>
-
+        <a href="{{ '/blog/' | relative_url }}">Insights ▾</a>
         <ul class="dropdown-menu">
-
-          <li>
-            <a href="{{ '/blog/' | relative_url }}">
-              Articles
-            </a>
-          </li>
-
-          <li>
-            <a href="{{ '/current-ai-news/' | relative_url }}">
-              AI News
-            </a>
-          </li>
-
-          <li>
-            <a href="{{ '/ebooks/' | relative_url }}">
-              E-Books
-            </a>
-          </li>
-
-          <li>
-            <a href="{{ '/media/' | relative_url }}">
-              Media
-            </a>
-          </li>
-
-          <li>
-            <a href="{{ '/resources/' | relative_url }}">
-              Resources
-            </a>
-          </li>
-
+          <li><a href="{{ '/blog/' | relative_url }}">Articles</a></li>
+          <li><a href="{{ '/current-ai-news/' | relative_url }}">AI News</a></li>
+          <li><a href="{{ '/ebooks/' | relative_url }}">E-Books</a></li>
+          <li><a href="{{ '/media/' | relative_url }}">Media</a></li>
+          <li><a href="{{ '/resources/' | relative_url }}">Resources</a></li>
         </ul>
-
       </li>
 
-
-      <!-- About -->
-      <li class="dropdown">
-
-        <a href="{{ '/about/' | relative_url }}">
-          About ▾
-        </a>
-
+      <li class="dropdown dfs-about-nav">
+        <a href="{{ '/about/' | relative_url }}">About ▾</a>
         <ul class="dropdown-menu">
-
-          <li>
-            <a href="{{ '/about/' | relative_url }}">
-              About DataForSolution
-            </a>
-          </li>
-
-          <li>
-            <a href="https://www.oradigit.com" target="_blank" rel="noopener noreferrer">
-              OraDigit Technology
-            </a>
-          </li>
-
-          <li>
-            <a href="https://www.linkedin.com/in/lissan-analytic" target="_blank" rel="noopener noreferrer">
-              Founder on LinkedIn
-            </a>
-          </li>
-
-          <li>
-            <a href="{{ '/collaborate/' | relative_url }}">
-              Collaborate
-            </a>
-          </li>
-
-          <li>
-            <a href="{{ '/contribute/' | relative_url }}">
-              Contribute
-            </a>
-          </li>
-
-          <li>
-            <a href="{{ '/faq/' | relative_url }}">
-              FAQ
-            </a>
-          </li>
-
-          <li>
-            <a href="{{ '/contact/' | relative_url }}">
-              Contact
-            </a>
-          </li>
-
+          <li><a href="{{ '/about/' | relative_url }}">Platform & Founder</a></li>
+          <li><a href="https://www.oradigit.com" target="_blank" rel="noopener noreferrer">OraDigit Technology</a></li>
+          <li><a href="https://www.linkedin.com/in/lissan-analytic" target="_blank" rel="noopener noreferrer">Lissan Liben — LinkedIn</a></li>
+          <li><a href="{{ '/collaborate/' | relative_url }}">Work With Us</a></li>
+          <li><a href="{{ '/contribute/' | relative_url }}">Contribute Knowledge</a></li>
+          <li><a href="{{ '/faq/' | relative_url }}">Platform FAQ</a></li>
+          <li><a href="{{ '/contact/' | relative_url }}">Contact Lissan</a></li>
         </ul>
-
       </li>
-
     </ul>
-
   </div>
-
 </nav>
 
 <style>
-.dfs-brand-lockup {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  text-decoration: none;
-}
-
-.dfs-brand-mark {
-  height: 40px;
-  width: auto;
-  flex: 0 0 auto;
-}
-
-.dfs-brand-copy {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.05;
-  white-space: nowrap;
-}
-
-.dfs-brand-copy strong {
-  font-size: 1rem;
-  letter-spacing: -.01em;
-}
-
-.dfs-brand-copy small {
-  margin-top: 4px;
-  font-size: .66rem;
-  font-weight: 700;
-  letter-spacing: .03em;
-  opacity: .72;
-}
-
-@media (max-width: 560px) {
-  .dfs-brand-copy small {
-    display: none;
-  }
-}
+.dfs-brand-lockup{display:inline-flex;align-items:center;gap:10px;text-decoration:none}.dfs-brand-mark{height:40px;width:auto;flex:0 0 auto}.dfs-brand-copy{display:flex;flex-direction:column;line-height:1.05;white-space:nowrap}.dfs-brand-copy strong{font-size:1rem;letter-spacing:-.01em}.dfs-brand-copy small{margin-top:4px;font-size:.66rem;font-weight:700;letter-spacing:.03em;opacity:.72}.dfs-about-nav .dropdown-menu{min-width:230px}.dfs-about-nav .dropdown-menu a{white-space:nowrap}@media(max-width:560px){.dfs-brand-copy small{display:none}.dfs-about-nav .dropdown-menu{min-width:0;width:min(290px,calc(100vw - 42px))}.dfs-about-nav .dropdown-menu a{white-space:normal;overflow-wrap:anywhere}}
 </style>
