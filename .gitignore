@@ -1,6 +1,8 @@
 _site/
 _site - Copy/
 _projects-Tempo/
+_projects/
+projects/
 venv/
 .venv/
 __pycache__/
