@@ -46,7 +46,6 @@ kramdown:
 
 # Include & Exclude
 include:
-  - _projects
   - _services
   - _faq
   - _resources
@@ -111,9 +110,6 @@ collections:
     permalink: /collaborate/
   posts:
     output: true
-  projects:
-    output: true
-    permalink: /projects/:name/
 
 # Layout Defaults
 defaults:
@@ -129,10 +125,6 @@ defaults:
       layout: "default"
   - scope:
       path: "services"
-    values:
-      layout: "default"
-  - scope:
-      path: "projects"
     values:
       layout: "default"
   - scope:
