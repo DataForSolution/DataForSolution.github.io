@@ -4,27 +4,25 @@ title: "A Flexible Analytical Data Life Cycle: Why One Size Doesn’t Fit All"
 date: 2025-06-17
 ---
 
-In regulated laboratory environments, the integrity of data depends on more than a generic life cycle. Traditional models fail to capture the diverse procedures across analytical workflows.
+In regulated laboratory environments, the integrity of data depends on more than a generic life cycle. Traditional models can be too broad to represent the different procedures, records, controls, and review steps involved in analytical workflows.
 
-This article explores the necessity of a **flexible analytical data life cycle**, one that adapts to various processes—whether it's observational testing or spectroscopic analysis. Drawing insights from regulatory guidance and practical examples, it outlines:
+This short commentary highlights several ideas discussed in R.D. McDowall's article **“A Flexible Analytical Data Life Cycle?”**:
 
-- The difference between active and inactive data phases  
-- The importance of sample management and preparation  
-- Second-person review and short-term retention  
-- Why flexibility is key in adapting to specific analytical contexts
+- active and inactive phases of analytical data
+- sample management and preparation as explicit parts of the workflow
+- second-person review and controlled retention
+- adapting the life cycle to the analytical procedure instead of forcing every process into one generic model
 
-Without this adaptability, labs risk data errors, integrity issues, and inefficiencies.
-
----
-
-###  View the Original PDF
-
-<iframe src="/assets/pdfs/2025-06-17-flexible-analytical-life-cycle.pdf" width="100%" height="700px" style="border: 1px solid #ccc;"></iframe>
-
-<p style="margin-top: 10px;">
-     Can't view it? <a href="/assets/pdfs/2025-06-17-flexible-analytical-life-cycle.pdf" target="_blank">Download the PDF</a>
-</p>
+The practical lesson is that data-integrity controls should reflect the actual analytical process and the records it produces.
 
 ---
 
->  Inspired by “A Flexible Analytical Data Life Cycle?” by R.D. McDowall in *Spectroscopy*, September 2018.
+### Read the original source
+
+This page is a brief commentary and does not reproduce or host the publisher's PDF. Read the original article on the publisher's website:
+
+<a href="https://www.spectroscopyonline.com/view/flexible-analytical-data-life-cycle" target="_blank" rel="noopener noreferrer">R.D. McDowall, “A Flexible Analytical Data Life Cycle?”, <em>Spectroscopy</em>, September 1, 2018 →</a>
+
+---
+
+**Source:** R.D. McDowall, “A Flexible Analytical Data Life Cycle?”, *Spectroscopy*, Vol. 33, Issue 9, 2018.
