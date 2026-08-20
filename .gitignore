@@ -13,3 +13,10 @@ __pycache__/
 .DS_Store
 Thumbs.db
 desktop.ini
+assets/pdfs/2025-06-17-flexible-analytical-life-cycle.pdf
+toolkits/cheatsheets/Matplotlib_Cheat_Sheet.pdf
+toolkits/cheatsheets/NumPy_Cheat_Sheet.pdf
+toolkits/cheatsheets/Pandas_Cheat_Sheet.pdf
+toolkits/cheatsheets/Python_Cheat_Sheet.pdf
+toolkits/cheatsheets/Scikit_Learn_Cheat_Sheet_Python.pdf
+toolkits/notebooks/Chest_CT-Scan-CNN-Project.ipynb
