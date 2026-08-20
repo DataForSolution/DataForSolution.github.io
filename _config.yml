@@ -53,7 +53,6 @@ include:
   - assets
   - assets/css
   - assets/js
-  - assets/books
   - assets/toolkits
   - favicon.ico
   - index.html
