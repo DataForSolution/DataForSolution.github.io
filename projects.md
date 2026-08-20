@@ -122,6 +122,10 @@ description: "Selected healthcare AI, responsible AI, machine learning, NLP, and
 .project-card h3 {
   margin-top: 0;
 }
+.project-card p {
+  color: #1f2937;
+  line-height: 1.6;
+}
 .project-card a {
   display: inline-block;
   margin-top: 0.5rem;
