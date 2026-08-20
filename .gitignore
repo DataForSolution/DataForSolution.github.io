@@ -1,2 +1,8 @@
 _site/
 _site - Copy/
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.DS_Store
