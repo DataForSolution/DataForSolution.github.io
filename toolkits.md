@@ -146,7 +146,7 @@ permalink: /toolkits/
 .tools-overview-hero h1 { max-width:780px; margin:0; color:#fff; font-size:clamp(2.35rem,6vw,4.5rem); line-height:1.04; }
 .tools-overview-lead { max-width:760px; margin:24px 0 0; color:#dbeafe; font-size:1.15rem; line-height:1.75; }
 .tools-overview-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:30px; }
-.tools-button { display:inline-flex; align-items:center; justify-content:center; border-radius:9px; padding:12px 18px; font-weight:750; text-decoration:none; }
+.tools-button { box-sizing:border-box; display:inline-flex; align-items:center; justify-content:center; border-radius:9px; padding:12px 18px; font-weight:750; text-decoration:none; }
 .tools-button--primary { background:#0f766e; color:#fff; }
 .tools-button--secondary { border:1px solid rgba(255,255,255,.5); color:#fff; background:rgba(255,255,255,.08); }
 .tools-overview-section { padding:68px 20px; background:#fff; }

@@ -107,11 +107,14 @@
     scrollBtn.style.display = window.scrollY > 300 ? "block" : "none";
   };
 
-  document.querySelectorAll('.hamburger').forEach(button =>
-    button.addEventListener('click', () =>
-      document.querySelector('.nav-links').classList.toggle('open')
-    )
-  );
+  document.querySelectorAll('.hamburger').forEach(button => {
+    button.addEventListener('click', () => {
+      const navigation = document.querySelector('.nav-links');
+      const isOpen = navigation.classList.toggle('open');
+      button.setAttribute('aria-expanded', String(isOpen));
+      button.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+    });
+  });
 </script>
 
 <!-- 🍪 Cookie Consent Floating Banner -->
