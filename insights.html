@@ -1,0 +1,123 @@
+---
+layout: default
+title: "Insights"
+permalink: /insights/
+---
+
+<style>
+  .insights-shell{max-width:1180px;margin:0 auto;padding:48px 20px 72px;color:#1f2937}
+  .insights-hero{background:linear-gradient(135deg,#062b4a,#0b5c91);color:#fff;border-radius:20px;padding:44px 34px;margin-bottom:28px}
+  .insights-hero h1{margin:0 0 12px;font-size:clamp(2rem,4vw,3.2rem);color:#fff}
+  .insights-hero p{max-width:820px;margin:0;font-size:1.08rem;line-height:1.7;color:#e5f4ff}
+  .insights-jump{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+  .insights-jump a{display:inline-block;padding:10px 14px;border-radius:999px;background:#fff;color:#062b4a!important;font-weight:700;text-decoration:none}
+  .insights-section{margin-top:44px;scroll-margin-top:110px}
+  .insights-section h2{margin-bottom:8px;color:#062b4a;font-size:1.75rem}
+  .section-lead{max-width:860px;line-height:1.7;color:#4b5563}
+  .insights-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin-top:20px}
+  .insight-card{background:#fff;border:1px solid #dbe4ec;border-radius:14px;padding:20px;box-shadow:0 6px 18px rgba(15,23,42,.06)}
+  .insight-card h3{margin:0 0 8px;color:#0b3657;font-size:1.12rem}
+  .insight-card p{margin:0 0 12px;line-height:1.6;color:#4b5563}
+  .insight-card a{font-weight:700;color:#0b5c91;text-decoration:none}
+  .insight-card a:hover{text-decoration:underline}
+  .card-meta{font-size:.88rem;color:#6b7280;margin-bottom:10px}
+  .source-label{display:inline-block;margin-bottom:10px;padding:4px 8px;border-radius:999px;background:#eef6fb;color:#0b5c91;font-size:.78rem;font-weight:700}
+  .article-tools{display:flex;gap:12px;align-items:center;margin-top:18px;flex-wrap:wrap}
+  .article-tools label{font-weight:700;color:#374151}
+  .article-tools input{flex:1;min-width:240px;max-width:520px;padding:11px 13px;border:1px solid #cbd5e1;border-radius:10px;font:inherit;background:#fff;color:#111827}
+  .article-empty{display:none;margin-top:16px;color:#6b7280}
+  .learning-columns{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:20px}
+  .learning-list{margin:10px 0 0;padding-left:18px}
+  .learning-list li{margin:8px 0;color:#4b5563}
+  .learning-list a{color:#0b5c91;font-weight:700;text-decoration:none}
+  .learning-list a:hover{text-decoration:underline}
+  .insights-note{margin-top:18px;padding:14px 16px;border-left:4px solid #0b5c91;background:#f3f8fc;color:#374151;border-radius:8px}
+  .explore-strip{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:18px;margin-top:20px}
+  @media(max-width:900px){.insights-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+  @media(max-width:640px){.insights-shell{padding:28px 16px 56px}.insights-hero{padding:30px 22px;border-radius:16px}.insights-grid,.learning-columns,.explore-strip{grid-template-columns:1fr}.article-tools{align-items:stretch}.article-tools input{width:100%;min-width:0}}
+</style>
+
+<main class="insights-shell">
+  <section class="insights-hero" aria-labelledby="insights-title">
+    <h1 id="insights-title">Insights</h1>
+    <p>A practical knowledge hub for DataForSolution: original articles, direct links to trustworthy AI and health-technology updates, and official learning resources for data science, software engineering, responsible AI, and medical-imaging technology.</p>
+    <div class="insights-jump" aria-label="Insights sections">
+      <a href="#articles">Articles</a>
+      <a href="#ai-updates">AI & Health-Tech Updates</a>
+      <a href="#learning">Learning Resources</a>
+    </div>
+  </section>
+
+  <section id="articles" class="insights-section" aria-labelledby="articles-title">
+    <h2 id="articles-title">Articles</h2>
+    <p class="section-lead">Browse DataForSolution writing and commentary. The list is generated from the site’s maintained posts, so new articles appear here automatically.</p>
+    <div class="article-tools">
+      <label for="article-search">Find an article</label>
+      <input id="article-search" type="search" placeholder="Search titles and summaries…" autocomplete="off">
+    </div>
+    <div id="article-grid" class="insights-grid">
+      {% for post in site.posts %}
+      <article class="insight-card article-card" data-search="{{ post.title | strip_html | escape }} {{ post.excerpt | strip_html | escape }} {{ post.categories | join: ' ' | escape }} {{ post.tags | join: ' ' | escape }}">
+        <div class="card-meta">{{ post.date | date: "%B %d, %Y" }}</div>
+        <h3><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h3>
+        <p>{{ post.excerpt | strip_html | truncatewords: 28 }}</p>
+        <a href="{{ post.url | relative_url }}">Read article →</a>
+      </article>
+      {% endfor %}
+    </div>
+    <p id="article-empty" class="article-empty">No articles match that search.</p>
+  </section>
+
+  <section id="ai-updates" class="insights-section" aria-labelledby="updates-title">
+    <h2 id="updates-title">AI & Health-Tech Updates</h2>
+    <p class="section-lead">For current developments, this page links to primary and authoritative sources instead of scraping headlines or presenting unverified summaries as “live news.” Use these sources to follow product releases, research, standards, and healthcare-AI regulation directly.</p>
+    <div class="insights-grid">
+      <article class="insight-card"><span class="source-label">Primary source</span><h3>OpenAI News</h3><p>Official product, research, safety, and company updates from OpenAI.</p><a href="https://openai.com/news/" target="_blank" rel="noopener noreferrer">Visit OpenAI News →</a></article>
+      <article class="insight-card"><span class="source-label">Primary source</span><h3>Google DeepMind</h3><p>Research and technical updates from Google DeepMind.</p><a href="https://deepmind.google/discover/blog/" target="_blank" rel="noopener noreferrer">Visit DeepMind →</a></article>
+      <article class="insight-card"><span class="source-label">Primary source</span><h3>Hugging Face</h3><p>Open-source model, dataset, tooling, and community engineering updates.</p><a href="https://huggingface.co/blog" target="_blank" rel="noopener noreferrer">Visit Hugging Face Blog →</a></article>
+      <article class="insight-card"><span class="source-label">Standards</span><h3>NIST Artificial Intelligence</h3><p>AI standards, risk-management guidance, evaluation work, and public resources from NIST.</p><a href="https://www.nist.gov/artificial-intelligence" target="_blank" rel="noopener noreferrer">Visit NIST AI →</a></article>
+      <article class="insight-card"><span class="source-label">Healthcare</span><h3>FDA AI-Enabled Medical Devices</h3><p>FDA information and the maintained list of AI-enabled medical devices authorized for marketing in the United States.</p><a href="https://www.fda.gov/medical-devices/software-medical-device-samd/artificial-intelligence-enabled-medical-devices" target="_blank" rel="noopener noreferrer">Visit FDA resource →</a></article>
+      <article class="insight-card"><span class="source-label">Research</span><h3>NIH Data Science</h3><p>Biomedical data-science programs, research infrastructure, and training resources from the National Institutes of Health.</p><a href="https://datascience.nih.gov/" target="_blank" rel="noopener noreferrer">Visit NIH Data Science →</a></article>
+    </div>
+    <div class="insights-note"><strong>Editorial standard:</strong> DataForSolution will distinguish its own analysis from external reporting and will link to original or authoritative sources whenever practical.</div>
+  </section>
+
+  <section id="learning" class="insights-section" aria-labelledby="learning-title">
+    <h2 id="learning-title">Learning Resources</h2>
+    <p class="section-lead">Use official documentation and clearly identified public learning resources instead of redistributed books or copied course material. Start with the pathway that matches what you are trying to learn.</p>
+    <div class="learning-columns">
+      <article class="insight-card"><h3>Start inside DataForSolution</h3><ul class="learning-list"><li><a href="{{ '/learn/' | relative_url }}">Learning Overview</a> — guided entry points.</li><li><a href="{{ '/learn/data-science/' | relative_url }}">Data Science Academy</a> — structured data-science learning.</li><li><a href="{{ '/projects/' | relative_url }}">Curated Projects</a> — evidence-backed project examples.</li><li><a href="{{ '/toolkits/' | relative_url }}">Tools & Toolkits</a> — practical utilities and references.</li></ul></article>
+      <article class="insight-card"><h3>Python & Machine Learning</h3><ul class="learning-list"><li><a href="https://docs.python.org/3/" target="_blank" rel="noopener noreferrer">Python Documentation</a></li><li><a href="https://numpy.org/doc/stable/user/quickstart.html" target="_blank" rel="noopener noreferrer">NumPy Quickstart</a></li><li><a href="https://pandas.pydata.org/docs/" target="_blank" rel="noopener noreferrer">pandas Documentation</a></li><li><a href="https://scikit-learn.org/stable/user_guide.html" target="_blank" rel="noopener noreferrer">scikit-learn User Guide</a></li></ul></article>
+      <article class="insight-card"><h3>Deep Learning & Model Engineering</h3><ul class="learning-list"><li><a href="https://docs.pytorch.org/tutorials/" target="_blank" rel="noopener noreferrer">PyTorch Tutorials</a></li><li><a href="https://www.tensorflow.org/tutorials" target="_blank" rel="noopener noreferrer">TensorFlow Tutorials</a></li><li><a href="https://huggingface.co/learn" target="_blank" rel="noopener noreferrer">Hugging Face Learn</a></li><li><a href="https://spark.apache.org/docs/latest/" target="_blank" rel="noopener noreferrer">Apache Spark Documentation</a></li></ul></article>
+      <article class="insight-card"><h3>Responsible & Healthcare AI</h3><ul class="learning-list"><li><a href="https://www.nist.gov/itl/ai-risk-management-framework" target="_blank" rel="noopener noreferrer">NIST AI Risk Management Framework</a></li><li><a href="https://www.fda.gov/medical-devices/digital-health-center-excellence" target="_blank" rel="noopener noreferrer">FDA Digital Health Center of Excellence</a></li><li><a href="https://www.healthit.gov/topic/scientific-initiatives/ai" target="_blank" rel="noopener noreferrer">HealthIT.gov Artificial Intelligence</a></li><li><a href="https://datascience.nih.gov/" target="_blank" rel="noopener noreferrer">NIH Data Science</a></li></ul></article>
+    </div>
+  </section>
+
+  <section class="insights-section" aria-labelledby="more-title">
+    <h2 id="more-title">Explore More</h2>
+    <p class="section-lead">Media and the broader resource directory remain separate so the Insights hub stays focused.</p>
+    <div class="explore-strip">
+      <article class="insight-card"><h3>Media</h3><p>Video, presentation, and media-oriented content.</p><a href="{{ '/media/' | relative_url }}">Open Media →</a></article>
+      <article class="insight-card"><h3>Resources</h3><p>Datasets, tools, reference links, and broader resource collections.</p><a href="{{ '/resources/' | relative_url }}">Open Resources →</a></article>
+    </div>
+  </section>
+</main>
+
+<script>
+(function(){
+  const input=document.getElementById('article-search');
+  const cards=Array.from(document.querySelectorAll('.article-card'));
+  const empty=document.getElementById('article-empty');
+  if(!input||!cards.length)return;
+  input.addEventListener('input',function(){
+    const query=input.value.trim().toLowerCase();
+    let visible=0;
+    cards.forEach(function(card){
+      const match=!query||(card.getAttribute('data-search')||'').toLowerCase().includes(query);
+      card.hidden=!match;
+      if(match)visible+=1;
+    });
+    if(empty)empty.style.display=visible?'none':'block';
+  });
+})();
+</script>
