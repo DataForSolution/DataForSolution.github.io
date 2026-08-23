@@ -1,17 +1,37 @@
 ---
 layout: post
-title: "Case Study: Predicting Cancer from CT Scans"
+title: "What the Chest CT Classification Reconstruction Taught Us"
 date: 2025-04-10
 category: case
+description: "A retrospective on an educational chest CT classification project, its historical evaluation weaknesses, and the corrected reconstruction." 
 ---
 
-This project leveraged convolutional neural networks (CNNs) to classify chest CT images into cancerous vs. non-cancerous.
+This article revisits an educational chest CT classification project that was later reconstructed and audited for the DataForSolution portfolio.
 
-Key steps:
-- Preprocessed DICOM images
-- Trained CNN on labeled data
-- Achieved 93% test accuracy
+> **Educational use only.** This work is not a diagnostic model, has not been clinically validated, and must not be used to diagnose, stage, or guide treatment for lung cancer.
 
-> Result: AI-assisted diagnostics with improved early detection capability.
+## What the historical project did
 
-Explore the code and methodology [on GitHub](https://github.com/DataForSolution/Data-Solution).
+The recovered project used a public four-class chest CT image dataset and an ImageNet-pretrained ResNet50. The supplied dataset contains 1,000 2D JPG/PNG images across adenocarcinoma, large-cell carcinoma, squamous-cell carcinoma, and normal categories.
+
+The historical notebook trained on 613 images and evaluated during development on a 72-image validation split. Training accuracy rose to about 88.8%, but the final training epoch reported about 22.2% validation accuracy and a later validation evaluation reported about 29.2%. The untouched 315-image test split was not used for a final reported evaluation.
+
+Those results indicate substantial overfitting. They do **not** support a claim of useful clinical performance.
+
+## What the audit found
+
+The reconstruction identified several methodological problems worth preserving as engineering lessons:
+
+- the ResNet50 backbone was trainable from the beginning despite the small dataset;
+- image preprocessing did not follow the pretrained ResNet50 input contract;
+- the classifier head flattened convolutional feature maps instead of using a smaller pooling-based design;
+- validation ordering was not deterministic in later reporting code;
+- and the historical workflow did not reserve the supplied test split for a final evaluation.
+
+## What changed in the reconstruction
+
+The maintained portfolio version demonstrates a safer experiment contract: validate the dataset structure, use the correct pretrained-model preprocessing, freeze the backbone for initial transfer learning, keep evaluation ordering deterministic, report multiple classification metrics, and preserve the test split for one final evaluation after model decisions are fixed.
+
+The value of this project is therefore not a headline accuracy number. It is the reconstruction process: identifying overfitting, evaluation-order problems, and the difference between an educational imaging experiment and a clinically validated system.
+
+[Review the maintained Chest CT Classification reconstruction on GitHub →](https://github.com/DataForSolution/Data-Solution/tree/Master/portfolio/chest-ct-classification)
