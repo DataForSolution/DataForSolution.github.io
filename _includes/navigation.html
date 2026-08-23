@@ -42,18 +42,7 @@
         </ul>
       </li>
 
-      <li class="dropdown dfs-about-nav">
-        <a href="{{ '/about/' | relative_url }}">About ▾</a>
-        <ul class="dropdown-menu">
-          <li><a href="{{ '/about/' | relative_url }}">About DataForSolution</a></li>
-          <li><a href="https://www.oradigit.com" target="_blank" rel="noopener noreferrer">OraDigit Technology</a></li>
-          <li><a href="https://www.linkedin.com/in/lissan-analytic" target="_blank" rel="noopener noreferrer">Lissan Liben — Profile</a></li>
-          <li><a href="{{ '/collaborate/' | relative_url }}">Collaboration</a></li>
-          <li><a href="{{ '/contribute/' | relative_url }}">Contribute</a></li>
-          <li><a href="{{ '/faq/' | relative_url }}">FAQ</a></li>
-          <li><a href="{{ '/contact/' | relative_url }}">Contact</a></li>
-        </ul>
-      </li>
+      <li><a href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} aria-current="page"{% endif %}>About</a></li>
     </ul>
   </div>
 </nav>
@@ -88,10 +77,10 @@
 {% endif %}
 
 <style>
-.dfs-brand-lockup{display:inline-flex;align-items:center;gap:10px;text-decoration:none}.dfs-brand-mark{height:40px;width:auto;flex:0 0 auto}.dfs-brand-copy{display:flex;flex-direction:column;line-height:1.05;white-space:nowrap}.dfs-brand-copy strong{font-size:1rem;letter-spacing:-.01em;color:#fff!important}.dfs-brand-copy small{margin-top:4px;font-size:.66rem;font-weight:700;letter-spacing:.03em;opacity:.82;color:#d1fae5!important}.dfs-about-nav .dropdown-menu,.dfs-insights-nav .dropdown-menu{min-width:250px!important;background:#062b4a!important;border:1px solid #17486f!important}.dfs-about-nav .dropdown-menu li,.dfs-insights-nav .dropdown-menu li{background:#062b4a!important}.dfs-about-nav .dropdown-menu a,.dfs-insights-nav .dropdown-menu a{white-space:nowrap;color:#fff!important;background:#062b4a!important;border-bottom:1px solid #17486f!important;padding:12px 18px!important}.dfs-about-nav .dropdown-menu a:hover,.dfs-insights-nav .dropdown-menu a:hover{background:#0b5c91!important;color:#fff!important}
+.dfs-brand-lockup{display:inline-flex;align-items:center;gap:10px;text-decoration:none}.dfs-brand-mark{height:40px;width:auto;flex:0 0 auto}.dfs-brand-copy{display:flex;flex-direction:column;line-height:1.05;white-space:nowrap}.dfs-brand-copy strong{font-size:1rem;letter-spacing:-.01em;color:#fff!important}.dfs-brand-copy small{margin-top:4px;font-size:.66rem;font-weight:700;letter-spacing:.03em;opacity:.82;color:#d1fae5!important}.dfs-insights-nav .dropdown-menu{min-width:250px!important;background:#062b4a!important;border:1px solid #17486f!important}.dfs-insights-nav .dropdown-menu li{background:#062b4a!important}.dfs-insights-nav .dropdown-menu a{white-space:nowrap;color:#fff!important;background:#062b4a!important;border-bottom:1px solid #17486f!important;padding:12px 18px!important}.dfs-insights-nav .dropdown-menu a:hover{background:#0b5c91!important;color:#fff!important}
 
 .dfs-insights-pathway{background:#eaf1f7;border-bottom:1px solid #c9d8e5;color:#172033}.dfs-insights-pathway-inner{max-width:1240px;margin:0 auto;padding:22px 20px;display:grid;grid-template-columns:minmax(220px,.72fr) minmax(0,2fr);gap:22px;align-items:center}.dfs-insights-pathway-copy{min-width:0}.dfs-insights-pathway-eyebrow{display:inline-block;margin-bottom:4px;color:#0b5c91;font-size:.76rem;font-weight:900;letter-spacing:.09em;text-transform:uppercase}.dfs-insights-pathway-copy h2{margin:0 0 5px;color:#062b4a;font-size:1.25rem;line-height:1.2}.dfs-insights-pathway-copy p{margin:0;color:#4d5e70;font-size:.91rem;line-height:1.5}.dfs-insights-pathway-links{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.dfs-insights-pathway-card{display:flex;gap:10px;align-items:flex-start;min-width:0;padding:13px 14px;border:1px solid #c5d4e0;border-radius:12px;background:#fff;color:#172033!important;text-decoration:none!important;box-shadow:0 3px 10px rgba(15,23,42,.04)}.dfs-insights-pathway-card:hover{border-color:#0b5c91;box-shadow:0 6px 16px rgba(15,23,42,.08);transform:translateY(-1px)}.dfs-insights-pathway-card.is-active{background:#062b4a;border-color:#062b4a;color:#fff!important}.dfs-insights-pathway-number{flex:0 0 auto;display:inline-flex;align-items:center;justify-content:center;width:29px;height:29px;border-radius:50%;background:#eaf4fb;color:#075985;font-size:.72rem;font-weight:900}.dfs-insights-pathway-card.is-active .dfs-insights-pathway-number{background:#dff2ff;color:#062b4a}.dfs-insights-pathway-text{display:flex;flex-direction:column;min-width:0}.dfs-insights-pathway-text strong{color:inherit;font-size:.91rem;line-height:1.25}.dfs-insights-pathway-text small{margin-top:3px;color:#5a6879;font-size:.75rem;line-height:1.35}.dfs-insights-pathway-card.is-active .dfs-insights-pathway-text small{color:#dbeafe}.dfs-insights-pathway a:focus-visible{outline:3px solid #f59e0b;outline-offset:3px}
 
 @media(max-width:900px){.dfs-insights-pathway-inner{grid-template-columns:1fr}.dfs-insights-pathway-links{grid-template-columns:repeat(3,minmax(190px,1fr));overflow-x:auto;padding-bottom:4px}.dfs-insights-pathway-card{min-width:190px}}
-@media(max-width:560px){.dfs-brand-copy small{display:none}.dfs-about-nav .dropdown-menu,.dfs-insights-nav .dropdown-menu{min-width:0!important;width:min(310px,calc(100vw - 42px))!important}.dfs-about-nav .dropdown-menu a,.dfs-insights-nav .dropdown-menu a{white-space:normal;overflow-wrap:anywhere}.dfs-insights-pathway-inner{padding:17px 14px;gap:14px}.dfs-insights-pathway-copy h2{font-size:1.12rem}.dfs-insights-pathway-links{display:flex;gap:9px}.dfs-insights-pathway-card{flex:0 0 82%;min-width:0}}
+@media(max-width:560px){.dfs-brand-copy small{display:none}.dfs-insights-nav .dropdown-menu{min-width:0!important;width:min(310px,calc(100vw - 42px))!important}.dfs-insights-nav .dropdown-menu a{white-space:normal;overflow-wrap:anywhere}.dfs-insights-pathway-inner{padding:17px 14px;gap:14px}.dfs-insights-pathway-copy h2{font-size:1.12rem}.dfs-insights-pathway-links{display:flex;gap:9px}.dfs-insights-pathway-card{flex:0 0 82%;min-width:0}}
 </style>
