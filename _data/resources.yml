@@ -1,0 +1,421 @@
+categories:
+  - id: data-discovery
+    label: Data Discovery
+    description: Find general-purpose datasets for machine learning, analytics, and exploration.
+    resources:
+      - name: Kaggle Datasets
+        url: https://www.kaggle.com/datasets
+        type: Dataset hub
+        best_for: Broad public datasets and project practice
+        description: Search thousands of community and organization datasets across tabular, image, text, time-series, and other formats.
+        featured: true
+      - name: UCI Machine Learning Repository
+        url: https://archive.ics.uci.edu/
+        type: Academic repository
+        best_for: Classic and research-oriented ML datasets
+        description: A long-running UC Irvine repository of datasets widely used for machine-learning education and benchmarking.
+        featured: true
+      - name: OpenML
+        url: https://www.openml.org/
+        type: ML platform
+        best_for: Reproducible datasets, tasks, runs, and benchmarks
+        description: An open platform for sharing datasets, machine-learning tasks, experiments, and benchmark results.
+      - name: Google Dataset Search
+        url: https://datasetsearch.research.google.com/
+        type: Search engine
+        best_for: Finding datasets across many publishers
+        description: Google’s dataset-focused search engine for discovering data published across government, research, institutional, and public sites.
+        featured: true
+      - name: Hugging Face Datasets
+        url: https://huggingface.co/datasets
+        type: AI dataset hub
+        best_for: NLP, vision, audio, multimodal, and generative-AI data
+        description: Searchable community hub for machine-learning datasets with modality, format, language, license, and task filters.
+      - name: Registry of Open Data on AWS
+        url: https://registry.opendata.aws/
+        type: Cloud data registry
+        best_for: Large public datasets hosted in AWS
+        description: AWS registry of openly available datasets that can be accessed for analysis, research, and cloud-scale workloads.
+      - name: data.world
+        url: https://data.world/
+        type: Data catalog
+        best_for: Discovering and organizing shared datasets
+        description: Data catalog and collaboration platform with public datasets, metadata, and community-curated collections.
+      - name: Nasdaq Data Link
+        url: https://data.nasdaq.com/
+        type: Financial data platform
+        best_for: Economic, market, and alternative data
+        description: The current Nasdaq destination for the service formerly known as Quandl, providing financial, economic, and alternative datasets.
+      - name: DataHub
+        url: https://datahub.io/
+        type: Data publishing platform
+        best_for: Structured public data and data packages
+        description: Platform for discovering, publishing, and working with structured datasets and reusable data packages.
+
+  - id: healthcare-imaging
+    label: Healthcare & Imaging
+    description: Trusted sources for medical imaging, physiologic signals, public health, and global health data.
+    resources:
+      - name: The Cancer Imaging Archive (TCIA)
+        url: https://www.cancerimagingarchive.net/
+        type: Medical imaging archive
+        best_for: Cancer CT, MRI, pathology, and related research data
+        description: NCI-supported archive of de-identified cancer imaging collections, commonly distributed in DICOM with supporting clinical and analysis data when available.
+        featured: true
+      - name: PhysioNet
+        url: https://physionet.org/
+        type: Biomedical research repository
+        best_for: ECG, ICU, waveform, and physiologic datasets
+        description: Research resource for complex physiologic signals and clinical datasets, with documentation, software, and data-use requirements.
+      - name: HealthData.gov
+        url: https://healthdata.gov/
+        type: U.S. health data portal
+        best_for: Public U.S. health and human-services datasets
+        description: U.S. government health-data portal for datasets published by federal health agencies and programs.
+      - name: CDC Data
+        url: https://data.cdc.gov/
+        type: Public health portal
+        best_for: U.S. surveillance and public-health datasets
+        description: CDC open-data portal for public-health indicators, surveillance datasets, and program data.
+      - name: WHO Data
+        url: https://www.who.int/data
+        type: Global health statistics
+        best_for: International health indicators and estimates
+        description: World Health Organization data hub for global health statistics, indicators, observatories, and country-level health information.
+      - name: Institute for Health Metrics and Evaluation (IHME)
+        url: https://healthdata.org/
+        type: Global health research
+        best_for: Global Burden of Disease and comparative health metrics
+        description: University of Washington institute providing Global Burden of Disease research, data tools, methods, and health-metrics resources.
+      - name: UNICEF Data
+        url: https://data.unicef.org/
+        type: Global social data
+        best_for: Child, maternal, education, and development indicators
+        description: UNICEF statistics and evidence on children and women, including health, nutrition, education, protection, and demographic indicators.
+
+  - id: public-global
+    label: Government & Global Data
+    description: Official national, international, economic, environmental, and city open-data portals.
+    resources:
+      - name: Data.gov
+        url: https://data.gov/
+        type: U.S. government portal
+        best_for: Cross-agency U.S. public datasets
+        description: Official U.S. government open-data catalog spanning health, climate, education, transportation, science, economics, and many other topics.
+        featured: true
+      - name: World Bank Open Data
+        url: https://data.worldbank.org/
+        type: Global development data
+        best_for: Economic, social, and development indicators
+        description: World Bank access point for development indicators, country profiles, economic measures, and globally comparable public data.
+      - name: UN Data
+        url: https://data.un.org/
+        type: International statistics
+        best_for: UN statistical series across countries and topics
+        description: United Nations data portal aggregating official statistics across population, trade, environment, health, labor, education, and other domains.
+      - name: IMF Data
+        url: https://data.imf.org/
+        type: Economic data
+        best_for: Macroeconomic and financial statistics
+        description: International Monetary Fund portal for economic, financial, fiscal, monetary, trade, and country-level statistical datasets.
+      - name: OECD Data Explorer
+        url: https://data-explorer.oecd.org/
+        type: International policy data
+        best_for: Comparable economic and social indicators
+        description: OECD’s current data-exploration platform for internationally comparable statistics across economies, society, education, health, environment, and policy.
+      - name: European Data Portal
+        url: https://data.europa.eu/
+        type: EU open-data portal
+        best_for: European Union public-sector datasets
+        description: Official European data portal for discovering datasets published by EU institutions, member states, and public bodies.
+      - name: UK National Data Library
+        url: https://www.data.gov.uk/
+        type: UK public-data portal
+        best_for: United Kingdom government datasets
+        description: UK government portal for finding public datasets and metadata published by departments, agencies, local authorities, and public bodies.
+      - name: Government of Canada Open Data
+        url: https://search.open.canada.ca/opendata/
+        type: Canada public-data portal
+        best_for: Federal Canadian datasets and APIs
+        description: Government of Canada open-data catalog with machine-readable datasets, metadata, downloadable formats, and API-enabled resources.
+      - name: U.S. Census Bureau Data
+        url: https://www.census.gov/data.html
+        type: Demographic and economic data
+        best_for: U.S. population, housing, business, and geography
+        description: Official Census Bureau gateway to demographic, economic, population, geographic, survey, and visualization products.
+      - name: European Environment Agency Datahub
+        url: https://www.eea.europa.eu/en/datahub
+        type: Environmental data
+        best_for: European climate, environment, and sustainability data
+        description: EEA hub for quality-assured environmental, climate, biodiversity, energy, and sustainability datasets from European reporting networks.
+      - name: London Datastore
+        url: https://data.london.gov.uk/
+        type: City open data
+        best_for: London population, economy, planning, and city indicators
+        description: Greater London Authority portal providing open datasets and data products about London’s people, economy, places, planning, and services.
+      - name: Seattle Open Data
+        url: https://data.seattle.gov/
+        type: City open data
+        best_for: Municipal analytics and civic-data projects
+        description: City of Seattle open-data catalog covering public safety, transportation, permits, services, geography, and municipal operations.
+      - name: Chicago Data Portal
+        url: https://data.cityofchicago.org/
+        type: City open data
+        best_for: Urban analytics and civic-data projects
+        description: City of Chicago portal for transportation, public safety, business, buildings, health, community, and city-service datasets.
+      - name: Austin Open Data
+        url: https://data.austintexas.gov/
+        type: City open data
+        best_for: Local government and urban-data projects
+        description: City of Austin portal for civic datasets including transportation, utilities, permits, public safety, environment, and city operations.
+      - name: San Francisco Open Data
+        url: https://data.sfgov.org/
+        type: City open data
+        best_for: Civic analytics and public-sector projects
+        description: San Francisco’s public-data portal for city operations, housing, transportation, public safety, environment, business, and community indicators.
+
+  - id: research-apis
+    label: Research, Science & APIs
+    description: Specialized research datasets and developer-facing APIs for scientific, economic, network, and real-time projects.
+    resources:
+      - name: NASA Open Data
+        url: https://data.nasa.gov/
+        type: Science data portal
+        best_for: Space, Earth science, engineering, and mission data
+        description: NASA’s open-data portal for datasets and metadata from scientific missions, research programs, engineering activities, and agency operations.
+      - name: NOAA National Centers for Environmental Information
+        url: https://www.ncei.noaa.gov/
+        type: Climate and environmental archive
+        best_for: Weather, climate, ocean, and geophysical data
+        description: NOAA’s primary environmental data archive for climate, weather, oceans, coastal, geophysical, and related Earth-system datasets.
+      - name: Stanford SNAP
+        url: https://snap.stanford.edu/data/
+        type: Network research datasets
+        best_for: Graph mining and network-analysis research
+        description: Stanford collection of large network datasets for social, communication, citation, web, collaboration, and graph-learning research.
+      - name: MovieLens
+        url: https://grouplens.org/datasets/movielens/
+        type: Recommender-system data
+        best_for: Recommendation algorithms and collaborative filtering
+        description: GroupLens movie-rating datasets widely used for recommender-system research, teaching, and experimentation.
+      - name: IMDb Non-Commercial Datasets
+        url: https://developer.imdb.com/non-commercial-datasets/
+        type: Entertainment data
+        best_for: Movie and television metadata research
+        description: IMDb’s current non-commercial dataset distribution for title, person, rating, episode, and related entertainment metadata.
+      - name: Enron Email Dataset
+        url: https://www.cs.cmu.edu/~enron/
+        type: Text and network dataset
+        best_for: NLP, email classification, and communication networks
+        description: Carnegie Mellon-hosted public Enron email corpus commonly used for NLP, information retrieval, and network-analysis research.
+      - name: OpenAlex
+        url: https://openalex.org/
+        type: Scholarly knowledge graph
+        best_for: Research analytics and bibliometrics
+        description: Open catalog of scholarly works, authors, institutions, concepts, sources, and citations designed for research and bibliometric analysis.
+      - name: GBIF
+        url: https://www.gbif.org/
+        type: Biodiversity data
+        best_for: Ecology, species, and geospatial research
+        description: Global Biodiversity Information Facility providing open species-occurrence and biodiversity data from institutions around the world.
+      - name: Federal Reserve Data Download Program
+        url: https://www.federalreserve.gov/datadownload/
+        type: Economic data
+        best_for: U.S. financial and economic series
+        description: Federal Reserve Board tool for downloading official economic and financial time series in machine-readable formats.
+      - name: NASA Open APIs
+        url: https://api.nasa.gov/
+        type: Public API
+        best_for: Space and Earth-science application prototypes
+        description: NASA developer APIs for astronomy, imagery, Earth observation, Mars, space weather, and other public agency datasets.
+      - name: OpenWeather API
+        url: https://openweathermap.org/api
+        type: Weather API
+        best_for: Weather, forecast, and geospatial application prototypes
+        description: Developer APIs for current weather, forecasts, historical weather, geocoding, and related environmental data; plans and rate limits vary.
+      - name: Alpha Vantage
+        url: https://www.alphavantage.co/
+        type: Financial API
+        best_for: Market-data prototypes and time-series exercises
+        description: API service for equities, foreign exchange, digital assets, technical indicators, and economic data; access tiers and limits apply.
+      - name: U.S. Census APIs
+        url: https://www.census.gov/data/developers/data-sets.html
+        type: Government API
+        best_for: Programmatic demographic and economic data access
+        description: Official Census developer catalog for programmatically querying ACS, Decennial Census, business, population, and other datasets.
+      - name: FRED API
+        url: https://fred.stlouisfed.org/docs/api/fred/
+        type: Economic API
+        best_for: Macroeconomic time-series applications
+        description: Federal Reserve Bank of St. Louis API for programmatic access to FRED economic series, releases, categories, tags, and related metadata.
+
+  - id: python-ml
+    label: Python & Machine Learning
+    description: Core official documentation for the Python data-science and machine-learning stack.
+    resources:
+      - name: Python Documentation
+        url: https://docs.python.org/3/
+        type: Official documentation
+        best_for: Python language, standard library, setup, and references
+        description: Authoritative Python documentation including the tutorial, language reference, standard library, HOWTOs, setup guides, and packaging links.
+        featured: true
+      - name: Project Jupyter
+        url: https://jupyter.org/
+        type: Interactive computing
+        best_for: Notebooks, JupyterLab, and reproducible exploratory work
+        description: Official Jupyter project site for notebook-based interactive computing, JupyterLab, JupyterHub, kernels, documentation, and related tools.
+      - name: NumPy Documentation
+        url: https://numpy.org/doc/stable/
+        type: Numerical computing
+        best_for: Arrays, vectorized computation, linear algebra, and numerical workflows
+        description: Official NumPy manual, user guide, API reference, tutorials, and release documentation for scientific Python computing.
+      - name: pandas Documentation
+        url: https://pandas.pydata.org/docs/
+        type: Data analysis library
+        best_for: Tabular data cleaning, transformation, joins, and analysis
+        description: Official pandas documentation for DataFrame operations, indexing, reshaping, time series, I/O, missing data, and analytical workflows.
+      - name: Matplotlib Documentation
+        url: https://matplotlib.org/stable/
+        type: Visualization library
+        best_for: Publication-style and programmatic Python plotting
+        description: Official Matplotlib documentation with plotting examples, API references, tutorials, and guidance for static and interactive visualization.
+      - name: scikit-learn
+        url: https://scikit-learn.org/stable/
+        type: Machine-learning library
+        best_for: Classical ML, preprocessing, evaluation, pipelines, and model selection
+        description: Official scikit-learn documentation for supervised and unsupervised learning, preprocessing, metrics, model selection, inspection, and pipelines.
+      - name: PyTorch
+        url: https://pytorch.org/
+        type: Deep-learning framework
+        best_for: Research, neural networks, GPU training, and production ML
+        description: Official PyTorch platform with documentation, tutorials, ecosystem libraries, distributed training guidance, and deployment resources.
+      - name: TensorFlow
+        url: https://www.tensorflow.org/
+        type: Machine-learning framework
+        best_for: Deep learning, deployment, edge/mobile, and production workflows
+        description: Official TensorFlow site with guides, tutorials, APIs, Keras resources, deployment tooling, and ecosystem documentation.
+      - name: Hugging Face
+        url: https://huggingface.co/
+        type: Open AI platform
+        best_for: Models, datasets, transformers, diffusion, and open-source AI
+        description: Open AI platform hosting models, datasets, Spaces, libraries, documentation, and community resources across modern machine-learning tasks.
+      - name: XGBoost
+        url: https://xgboost.readthedocs.io/en/stable/
+        type: Gradient boosting library
+        best_for: High-performance tree boosting on structured data
+        description: Official XGBoost documentation for gradient-boosted tree models, Python APIs, distributed training, parameters, tutorials, and deployment guidance.
+
+  - id: engineering-mlops
+    label: Data Engineering & MLOps
+    description: Tools for data processing, orchestration, experiment tracking, versioning, and analytics engineering.
+    resources:
+      - name: Apache Spark
+        url: https://spark.apache.org/docs/latest/
+        type: Distributed data processing
+        best_for: Large-scale ETL, analytics, SQL, streaming, and ML pipelines
+        description: Official Spark documentation for distributed batch and streaming processing, Spark SQL, DataFrames, MLlib, and cluster execution.
+      - name: DuckDB
+        url: https://duckdb.org/docs/
+        type: Analytical database
+        best_for: Local analytics, SQL on files, and embedded OLAP
+        description: In-process analytical database optimized for fast SQL analysis of Parquet, CSV, DataFrames, and local analytical workloads.
+      - name: Polars
+        url: https://pola.rs/
+        type: DataFrame library
+        best_for: Fast DataFrame processing and lazy query execution
+        description: High-performance DataFrame library built around parallel execution, expression-based transformations, and efficient columnar data processing.
+      - name: MLflow
+        url: https://mlflow.org/docs/latest/
+        type: ML lifecycle tooling
+        best_for: Experiment tracking, model packaging, evaluation, and lifecycle workflows
+        description: Open-source platform for tracking machine-learning experiments, managing models, evaluating runs, and organizing ML development workflows.
+      - name: DVC
+        url: https://dvc.org/doc
+        type: Data and experiment versioning
+        best_for: Versioning datasets, model artifacts, pipelines, and experiments
+        description: Data Version Control documentation for reproducible pipelines, dataset/model versioning, remote storage, experiment tracking, and Git-integrated ML workflows.
+      - name: Apache Airflow
+        url: https://airflow.apache.org/docs/
+        type: Workflow orchestration
+        best_for: Scheduling and monitoring data pipelines
+        description: Official Airflow documentation for authoring, scheduling, monitoring, and operating dependency-aware data and batch workflows.
+      - name: dbt Developer Hub
+        url: https://docs.getdbt.com/
+        type: Analytics engineering
+        best_for: SQL transformation, testing, documentation, and warehouse workflows
+        description: Official dbt documentation for modular SQL transformation, data testing, lineage, documentation, semantic modeling, and analytics-engineering practices.
+
+  - id: visualization-bi
+    label: Visualization & BI
+    description: Tools for charts, dashboards, exploratory visualization, and communication of data findings.
+    resources:
+      - name: Plotly Python
+        url: https://plotly.com/python/
+        type: Interactive visualization
+        best_for: Interactive Python charts and analytical dashboards
+        description: Plotly’s Python graphing documentation for interactive statistical, scientific, financial, geographic, and custom visualizations.
+      - name: Observable
+        url: https://observablehq.com/
+        type: Data exploration platform
+        best_for: Interactive data analysis, prototyping, and web-native visualization
+        description: Browser-based environment for fast data exploration, reactive notebooks, visualization, and publishing interactive analytical work.
+      - name: Tableau Public
+        url: https://public.tableau.com/
+        type: Public BI platform
+        best_for: Publishing interactive dashboards and portfolio visualizations
+        description: Free public Tableau platform for creating, sharing, and exploring interactive data visualizations and dashboards.
+      - name: Power BI Documentation
+        url: https://learn.microsoft.com/en-us/power-bi/
+        type: Business intelligence
+        best_for: Power BI modeling, reports, dashboards, and governance
+        description: Microsoft Learn documentation for Power BI Desktop, service, modeling, DAX, visualization, administration, and enterprise BI workflows.
+      - name: Datawrapper
+        url: https://www.datawrapper.de/
+        type: Publishing visualization
+        best_for: Clear charts, maps, and tables for public communication
+        description: Browser-based tool for creating responsive charts, maps, and tables designed for publishing and explanatory data communication.
+
+  - id: learning-community
+    label: Learning, Practice & Community
+    description: Practical courses, challenges, and communities for building skills and getting technical help.
+    resources:
+      - name: Google Machine Learning Crash Course
+        url: https://developers.google.com/machine-learning/crash-course
+        type: Free learning course
+        best_for: Practical machine-learning foundations and responsible ML
+        description: Google’s practical introductory course covering regression, classification, data preparation, neural networks, production ML systems, LLM basics, and fairness.
+      - name: Kaggle Learn
+        url: https://www.kaggle.com/learn
+        type: Free learning platform
+        best_for: Short hands-on courses in Python, ML, data, and AI
+        description: Free practical courses and guides designed to build usable skills through concise lessons, notebooks, exercises, and project-oriented topics.
+      - name: Hugging Face Learn
+        url: https://huggingface.co/learn
+        type: Free AI courses
+        best_for: LLMs, agents, vision, audio, diffusion, and open-source AI
+        description: Hugging Face’s course hub covering large language models, agents, computer vision, audio, diffusion, reinforcement learning, and related open-source AI topics.
+      - name: fast.ai
+        url: https://www.fast.ai/
+        type: Free deep-learning education
+        best_for: Practical deep learning for people with coding experience
+        description: Research and education community offering free practical deep-learning courses, software, documentation, and learning materials centered on accessible applied AI.
+      - name: DataTalks.Club
+        url: https://datatalks.club/
+        type: Community and courses
+        best_for: Data engineering, ML engineering, MLOps, AI, and career learning
+        description: Global data community offering free courses, events, articles, podcasts, Slack discussion, and peer learning for data and AI practitioners.
+      - name: Kaggle Competitions
+        url: https://www.kaggle.com/competitions
+        type: Practice challenges
+        best_for: Applied ML practice and benchmark-style competitions
+        description: Machine-learning competitions and community challenges where users can practice modeling, compare approaches, and learn from public solutions and discussions.
+      - name: Cross Validated
+        url: https://stats.stackexchange.com/
+        type: Technical Q&A community
+        best_for: Statistics, probability, methodology, and ML theory questions
+        description: Stack Exchange community focused on statistics, machine learning, probability, experimental design, inference, and analytical methodology.
+      - name: Stack Overflow
+        url: https://stackoverflow.com/
+        type: Programming Q&A community
+        best_for: Debugging and implementation questions
+        description: Large programming Q&A community useful for targeted implementation, library, language, tooling, and debugging questions when searched critically.
