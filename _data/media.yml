@@ -1,0 +1,211 @@
+featured:
+  - title: But what is a neural network?
+    source: 3Blue1Brown
+    video_id: aircAruvnKk
+    category: Machine Learning & Deep Learning
+    level: Foundation
+    description: A visual-first explanation of neurons, layers, weights, biases, and how neural networks represent patterns. A strong starting point before implementation-focused deep-learning material.
+  - title: Stanford CS229 — Machine Learning, Lecture 1
+    source: Stanford Online
+    video_id: jGwO_UgTS7I
+    category: Machine Learning & Deep Learning
+    level: University lecture
+    description: Andrew Ng’s opening CS229 lecture introduces the course, supervised and unsupervised learning, learning theory, reinforcement learning, and the broader machine-learning landscape.
+  - title: StatQuest — Logistic Regression
+    source: StatQuest with Josh Starmer
+    video_id: yIYKR4sgzI8
+    category: Statistics & Modeling
+    level: Foundation
+    description: A concise explanation of logistic regression, how it differs from linear regression, and why it is widely used for classification and statistical modeling.
+
+categories:
+  - id: ml-deep-learning
+    label: Machine Learning & Deep Learning
+    description: Build conceptual and technical foundations in classical machine learning, neural networks, and modern deep learning.
+    items:
+      - title: 3Blue1Brown — Neural Networks
+        source: 3Blue1Brown
+        url: https://www.3blue1brown.com/topics/neural-networks
+        format: Visual lesson series
+        level: Foundation to intermediate
+        best_for: Understanding the mathematics and intuition behind neural networks
+        description: A visual series covering neural networks, gradient descent, backpropagation, transformers, attention, and related deep-learning ideas with unusually clear mathematical animations.
+      - title: MIT 6.S191 — Introduction to Deep Learning
+        source: MIT
+        url: https://introtodeeplearning.com/
+        format: Open lecture series + labs
+        level: Intermediate
+        best_for: Current deep-learning lectures with slides and hands-on labs
+        description: MIT’s open deep-learning course with annually refreshed lectures, slides, and software labs covering sequence models, computer vision, generative modeling, and modern deep-learning practice.
+      - title: Stanford CS229 — Machine Learning
+        source: Stanford Online
+        url: https://www.youtube.com/watch?v=jGwO_UgTS7I
+        format: University lecture series
+        level: Intermediate to advanced
+        best_for: Rigorous machine-learning theory and algorithms
+        description: Stanford’s graduate-level machine-learning course provides a broad introduction to supervised learning, unsupervised learning, learning theory, reinforcement learning, and statistical pattern recognition.
+      - title: StatQuest
+        source: StatQuest with Josh Starmer
+        url: https://www.youtube.com/@statquest
+        format: Educational video channel
+        level: Foundation to intermediate
+        best_for: Clear explanations of statistics, ML models, and evaluation concepts
+        description: Verified educational channel known for breaking down statistics and machine-learning topics into concise, approachable explanations while preserving the underlying logic.
+      - title: PyTorch Official Channel
+        source: PyTorch
+        url: https://www.youtube.com/@PyTorch
+        format: Official tutorials, talks, and conference videos
+        level: Intermediate to advanced
+        best_for: PyTorch engineering, tutorials, ecosystem updates, and practitioner talks
+        description: Official PyTorch media channel featuring tutorials, conference sessions, beginner series, expert exchanges, and engineering content from the open-source PyTorch community.
+
+  - id: statistics-storytelling
+    label: Statistics, Visualization & Storytelling
+    description: Learn statistical reasoning and how to communicate data clearly rather than presenting charts without context.
+    items:
+      - title: StatQuest — Logistic Regression
+        source: StatQuest with Josh Starmer
+        url: https://www.youtube.com/watch?v=yIYKR4sgzI8
+        format: Short explainer
+        level: Foundation
+        best_for: Classification and statistical-model intuition
+        description: A verified StatQuest lesson explaining logistic regression, the logistic function, and how classification probabilities differ from linear-regression outputs.
+      - title: TED Study — Visualizing Data
+        source: TED
+        url: https://www.ted.com/read/ted-studies/statistics
+        format: Curated video collection
+        level: General to intermediate
+        best_for: Data visualization, statistical literacy, and communication
+        description: TED’s curated study collection combines talks and supporting material on visualizing data, statistical thinking, information design, and evaluating effective versus misleading displays.
+      - title: The Power in Effective Data Storytelling
+        source: TEDxUIUC / TED
+        url: https://www.ted.com/talks/malavica_sridhar_the_power_in_effective_data_storytelling
+        format: TEDx talk
+        level: General
+        best_for: Turning analytical findings into understandable narratives
+        description: Malavica Sridhar demonstrates how analysis becomes more useful when data is structured into a clear story instead of presented as disconnected numbers and charts.
+      - title: The Beauty of Data Visualization
+        source: TED
+        url: https://www.ted.com/talks/david_mccandless_the_beauty_of_data_visualization
+        format: TED talk
+        level: General
+        best_for: Visual design and discovering patterns in complex information
+        description: David McCandless demonstrates how thoughtful visual design can reveal relationships and patterns that are difficult to see in dense tables or raw information.
+
+  - id: healthcare-imaging
+    label: Healthcare & Imaging AI
+    description: Trusted medical-imaging and digital-health education from radiology and regulatory organizations.
+    items:
+      - title: RSNA AI Training & Education
+        source: Radiological Society of North America
+        url: https://www.rsna.org/artificial-intelligence/training-and-education
+        format: Courses, webinars, playlists, and on-demand education
+        level: Professional
+        best_for: Radiology-specific AI education and responsible clinical implementation
+        description: RSNA’s current education hub for imaging AI, including certificate courses, webinars, expert playlists, AI toolkit resources, and radiology-focused training.
+      - title: "Radiology: Artificial Intelligence — YouTube"
+        source: RSNA journal
+        url: https://www.youtube.com/@RadiologyAI
+        format: Journal videos, webinars, and podcasts
+        level: Professional / research
+        best_for: Medical-imaging AI research discussions and journal-related media
+        description: "Official channel for RSNA’s Radiology: Artificial Intelligence journal, featuring AI-in-imaging discussions, webinar series, podcasts, and research-oriented media."
+      - title: FDA CDRH Learn — Digital Health
+        source: U.S. Food and Drug Administration
+        url: https://www.fda.gov/training-and-continuing-education/cdrh-learn
+        format: Videos, audio, slides, and transcripts
+        level: Professional / regulatory
+        best_for: Medical-device regulation, digital health, AI/ML device guidance, and product lifecycle education
+        description: FDA’s multimedia education center for medical devices and radiation-emitting products, including digital-health modules, AI/ML device guidance, presentations, slides, and transcripts.
+      - title: FDA Webinar — Predetermined Change Control Plans for AI-Enabled Device Software
+        source: U.S. Food and Drug Administration
+        url: https://www.fda.gov/medical-devices/cdrhnew-news-and-updates/webinar-final-guidance-marketing-submission-recommendations-predetermined-change-control-plan
+        format: Recorded regulatory webinar + slides/transcript
+        level: Professional / regulatory
+        best_for: Understanding FDA expectations for planned modifications to AI-enabled device software
+        description: FDA webinar explaining final guidance on Predetermined Change Control Plans for AI-enabled device software functions, with supporting presentation material and transcript.
+
+  - id: data-cloud
+    label: Data Engineering & Cloud
+    description: Practical media for distributed data processing, cloud architecture, and current engineering practice.
+    items:
+      - title: AWS re:Invent — On Demand
+        source: Amazon Web Services
+        url: https://aws.amazon.com/events/reinvent/on-demand/
+        format: Conference keynotes and technical sessions
+        level: Intermediate to advanced
+        best_for: Current AWS architecture, analytics, data, AI, security, and cloud engineering sessions
+        description: AWS’s official on-demand library of re:Invent keynotes, innovation talks, breakout sessions, customer stories, and technical presentations across cloud and AI topics.
+      - title: AWS Builder Events & Live Learning
+        source: Amazon Web Services
+        url: https://builder.aws.com/events
+        format: Live events, workshops, YouTube, and streams
+        level: Foundation to advanced
+        best_for: Hands-on cloud learning and current service demonstrations
+        description: AWS Builder Center hub for summits, workshops, training events, AWSOnAir, AWS Developers media, and other live or recorded technical learning opportunities.
+      - title: What is Apache Spark?
+        source: Databricks
+        url: https://www.youtube.com/watch?v=p8FGC49N-zM
+        format: Technical explainer
+        level: Foundation
+        best_for: Understanding Spark’s role in distributed data processing
+        description: Apache Spark co-creator Matei Zaharia explains Spark’s purpose and how distributed data processing supports large-scale analytics and engineering workloads.
+
+  - id: responsible-ai
+    label: Responsible AI & Governance
+    description: Primary-source media for AI risk, trustworthiness, governance, and regulated AI systems.
+    items:
+      - title: NIST AI Risk Management Framework — Explainer Video
+        source: National Institute of Standards and Technology
+        url: https://www.nist.gov/video/introduction-nist-ai-risk-management-framework-ai-rmf-10-explainer-video
+        format: Official explainer video
+        level: General to professional
+        best_for: Understanding the purpose and structure of the NIST AI RMF
+        description: NIST’s official introduction to the voluntary AI Risk Management Framework and its role in incorporating trustworthiness into AI design, development, use, and evaluation.
+      - title: NIST AI RMF 1.0 Launch Recording
+        source: National Institute of Standards and Technology
+        url: https://www.nist.gov/news-events/events/2023/01/nist-ai-risk-management-framework-ai-rmf-10-launch
+        format: Recorded launch event
+        level: Professional
+        best_for: AI governance context and stakeholder perspectives
+        description: Recording of the NIST AI RMF 1.0 launch with government and stakeholder perspectives on trustworthy AI, risk management, and the framework’s intended use.
+      - title: NIST AI RMF Media & Resources
+        source: National Institute of Standards and Technology
+        url: https://www.nist.gov/itl/ai-risk-management-framework/ai-risk-management-framework-resources
+        format: Videos, framework resources, and supporting material
+        level: Professional
+        best_for: Continuing from explainer media into implementation resources
+        description: NIST’s maintained resource page linking the AI RMF, Playbook, roadmap, crosswalks, explainer video, generative-AI profile, and related trustworthy-AI material.
+
+  - id: ongoing-sources
+    label: Ongoing Learning Channels
+    description: Reliable sources worth returning to when you want new technical talks rather than a one-time lesson.
+    items:
+      - title: MIT Deep Learning
+        source: MIT 6.S191
+        url: https://introtodeeplearning.com/
+        format: Annually refreshed open course
+        level: Intermediate
+        best_for: New deep-learning lectures, slides, and labs
+        description: MIT’s course site is updated with new lecture material and gives users a stable source for current deep-learning media instead of relying on an old fixed playlist.
+      - title: "Radiology: Artificial Intelligence"
+        source: RSNA
+        url: https://www.youtube.com/@RadiologyAI
+        format: Ongoing research-media channel
+        level: Professional / research
+        best_for: Staying current with radiology AI research and discussion
+        description: A recurring media source for journal webinars, podcasts, research discussions, and developments in artificial intelligence for medical imaging.
+      - title: PyTorch
+        source: PyTorch Foundation
+        url: https://www.youtube.com/@PyTorch
+        format: Ongoing official channel
+        level: Intermediate to advanced
+        best_for: Framework tutorials, conferences, and engineering updates
+        description: Official PyTorch channel with current conference sessions, tutorials, webinars, developer content, and ecosystem updates.
+      - title: AWS re:Invent On Demand
+        source: Amazon Web Services
+        url: https://aws.amazon.com/events/reinvent/on-demand/
+        format: Annual conference archive
+        level: Intermediate to advanced
+        best_for: New cloud, data, AI, architecture, and infrastructure sessions
+        description: A regularly refreshed archive of AWS technical sessions that can be filtered by topic and used for deeper cloud and data-engineering study.
