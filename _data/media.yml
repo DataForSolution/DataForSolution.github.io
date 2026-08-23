@@ -103,7 +103,7 @@ categories:
         level: Professional
         best_for: Radiology-specific AI education and responsible clinical implementation
         description: RSNA’s current education hub for imaging AI, including certificate courses, webinars, expert playlists, AI toolkit resources, and radiology-focused training.
-      - title: Radiology: Artificial Intelligence — YouTube
+      - title: "Radiology: Artificial Intelligence — YouTube"
         source: RSNA journal
         url: https://www.youtube.com/@RadiologyAI
         format: Journal videos, webinars, and podcasts
@@ -188,7 +188,7 @@ categories:
         level: Intermediate
         best_for: New deep-learning lectures, slides, and labs
         description: MIT’s course site is updated with new lecture material and gives users a stable source for current deep-learning media instead of relying on an old fixed playlist.
-      - title: Radiology: Artificial Intelligence
+      - title: "Radiology: Artificial Intelligence"
         source: RSNA
         url: https://www.youtube.com/@RadiologyAI
         format: Ongoing research-media channel
