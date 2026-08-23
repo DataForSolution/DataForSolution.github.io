@@ -23,66 +23,66 @@ description: "Selected healthcare AI, responsible AI, machine learning, NLP, and
   <h2>Healthcare &amp; Medical Imaging</h2>
   <div class="project-grid">
     <article class="project-card">
-      <h3>PETQuant Reliability</h3>
+      <h3><a href="https://github.com/DataForSolution/Data-Solution/tree/Master/portfolio/petquant" target="_blank" rel="noopener">PETQuant Reliability</a></h3>
       <p>PET quantitative-ML reconstruction focused on small-sample limits, data-quality contracts, and defensible validation claims.</p>
-      <a href="https://github.com/DataForSolution/Data-Solution/tree/Master/portfolio/petquant" target="_blank" rel="noopener">View project</a>
+      <ul class="project-tags" aria-label="Core technologies and capabilities"><li>Python</li><li>PET safety</li><li>Validation</li></ul>
     </article>
     <article class="project-card">
-      <h3>Chest CT Classification</h3>
+      <h3><a href="https://github.com/DataForSolution/Data-Solution/tree/Master/portfolio/chest-ct-classification" target="_blank" rel="noopener">Chest CT Classification</a></h3>
       <p>Medical-imaging transfer-learning reconstruction emphasizing overfitting analysis, split integrity, and deterministic evaluation.</p>
-      <a href="https://github.com/DataForSolution/Data-Solution/tree/Master/portfolio/chest-ct-classification" target="_blank" rel="noopener">View project</a>
+      <ul class="project-tags" aria-label="Core technologies and capabilities"><li>TensorFlow</li><li>ResNet50</li><li>Medical imaging</li></ul>
     </article>
     <article class="project-card">
-      <h3>Pima Diabetes ML Evaluation</h3>
+      <h3><a href="https://github.com/DataForSolution/Data-Solution/tree/Master/portfolio/pima-diabetes-ml" target="_blank" rel="noopener">Pima Diabetes ML Evaluation</a></h3>
       <p>Leakage-safe SVM/MLP retrospective with clinically relevant missing-measurement handling and sensitivity/specificity reporting.</p>
-      <a href="https://github.com/DataForSolution/Data-Solution/tree/Master/portfolio/pima-diabetes-ml" target="_blank" rel="noopener">View project</a>
+      <ul class="project-tags" aria-label="Core technologies and capabilities"><li>scikit-learn</li><li>Clinical metrics</li><li>Leakage control</li></ul>
     </article>
   </div>
 
   <h2>Responsible &amp; Explainable AI</h2>
   <div class="project-grid">
     <article class="project-card">
-      <h3>SHAP + LIME Explainability</h3>
+      <h3><a href="https://github.com/DataForSolution/Data-Solution/tree/Master/portfolio/shap-lime-explainability" target="_blank" rel="noopener">SHAP + LIME Explainability</a></h3>
       <p>Class-aligned explanation workflow with corrected label ordering, scaled modeling, and defensible attribution aggregation.</p>
-      <a href="https://github.com/DataForSolution/Data-Solution/tree/Master/portfolio/shap-lime-explainability" target="_blank" rel="noopener">View project</a>
+      <ul class="project-tags" aria-label="Core technologies and capabilities"><li>SHAP</li><li>LIME</li><li>Explainability</li></ul>
     </article>
     <article class="project-card">
-      <h3>Fairness Evaluation</h3>
+      <h3><a href="https://github.com/DataForSolution/Data-Solution/tree/Master/portfolio/fairness-evaluation" target="_blank" rel="noopener">Fairness Evaluation</a></h3>
       <p>Explicit group-fairness metrics and threshold analysis with fixed reference labels and documented AIF360 provenance.</p>
-      <a href="https://github.com/DataForSolution/Data-Solution/tree/Master/portfolio/fairness-evaluation" target="_blank" rel="noopener">View project</a>
+      <ul class="project-tags" aria-label="Core technologies and capabilities"><li>AIF360</li><li>Group fairness</li><li>Thresholds</li></ul>
     </article>
     <article class="project-card">
-      <h3>Adversarial Robustness</h3>
+      <h3><a href="https://github.com/DataForSolution/Data-Solution/tree/Master/portfolio/adversarial-robustness" target="_blank" rel="noopener">Adversarial Robustness</a></h3>
       <p>Bounded PGD and defense-evaluation reconstruction with preprocessing, threat-model, and denominator corrections.</p>
-      <a href="https://github.com/DataForSolution/Data-Solution/tree/Master/portfolio/adversarial-robustness" target="_blank" rel="noopener">View project</a>
+      <ul class="project-tags" aria-label="Core technologies and capabilities"><li>PyTorch</li><li>PGD</li><li>Threat models</li></ul>
     </article>
   </div>
 
   <h2>Applied Machine Learning &amp; NLP</h2>
   <div class="project-grid">
     <article class="project-card">
-      <h3>CIFAR-10 Generated-Image Analysis</h3>
-      <p>Classifier-response diagnostics for generated images with a clear separation between classifier confidence and perceptual realism.</p>
-      <a href="https://github.com/DataForSolution/Data-Solution/tree/Master/portfolio/cifar10-generated-analysis" target="_blank" rel="noopener">View project</a>
-    </article>
-    <article class="project-card">
-      <h3>Automobile Insurance Fraud Classification</h3>
+      <h3><a href="https://github.com/DataForSolution/Data-Solution/tree/Master/portfolio/insurance-fraud-classification" target="_blank" rel="noopener">Automobile Insurance Fraud Classification</a></h3>
       <p>Temporal, imbalance-aware evaluation showing why high overall accuracy can coexist with zero minority-class recall.</p>
-      <a href="https://github.com/DataForSolution/Data-Solution/tree/Master/portfolio/insurance-fraud-classification" target="_blank" rel="noopener">View project</a>
+      <ul class="project-tags" aria-label="Core technologies and capabilities"><li>PR-AUC</li><li>Temporal holdout</li><li>Imbalanced ML</li></ul>
     </article>
     <article class="project-card">
-      <h3>Restaurant Review Sentiment Evaluation</h3>
+      <h3><a href="https://github.com/DataForSolution/Data-Solution/tree/Master/portfolio/restaurant-sentiment-evaluation" target="_blank" rel="noopener">Restaurant Review Sentiment Evaluation</a></h3>
       <p>Leakage-safe NLP model comparison using fold-local TF-IDF pipelines and a clearly licensed UCI Yelp data source.</p>
-      <a href="https://github.com/DataForSolution/Data-Solution/tree/Master/portfolio/restaurant-sentiment-evaluation" target="_blank" rel="noopener">View project</a>
+      <ul class="project-tags" aria-label="Core technologies and capabilities"><li>TF-IDF</li><li>NLP</li><li>Cross-validation</li></ul>
+    </article>
+    <article class="project-card">
+      <h3><a href="https://github.com/DataForSolution/Data-Solution/tree/Master/portfolio/cifar10-generated-analysis" target="_blank" rel="noopener">CIFAR-10 Generated-Image Analysis</a></h3>
+      <p>Classifier-response diagnostics for generated images with a clear separation between classifier confidence and perceptual realism.</p>
+      <ul class="project-tags" aria-label="Core technologies and capabilities"><li>NumPy</li><li>Entropy</li><li>Generative AI</li></ul>
     </article>
   </div>
 
   <h2>Data Engineering</h2>
   <div class="project-grid">
     <article class="project-card">
-      <h3>AWS Glue + EMR PySpark Ingestion Validation</h3>
+      <h3><a href="https://github.com/DataForSolution/Data-Solution/tree/Master/portfolio/spark-glue-ingestion" target="_blank" rel="noopener">AWS Glue + EMR PySpark Ingestion Validation</a></h3>
       <p>Catalog-resolution and ingestion-quality engineering based on a historical embedded-header defect discovered in an EMR/Glue run.</p>
-      <a href="https://github.com/DataForSolution/Data-Solution/tree/Master/portfolio/spark-glue-ingestion" target="_blank" rel="noopener">View project</a>
+      <ul class="project-tags" aria-label="Core technologies and capabilities"><li>PySpark</li><li>AWS Glue</li><li>Data quality</li></ul>
     </article>
   </div>
 </section>
@@ -122,13 +122,30 @@ description: "Selected healthcare AI, responsible AI, machine learning, NLP, and
 .project-card h3 {
   margin-top: 0;
 }
+.project-card h3 a {
+  color: #123b63;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.18em;
+}
 .project-card p {
   color: #1f2937;
   line-height: 1.6;
 }
-.project-card a {
-  display: inline-block;
-  margin-top: 0.5rem;
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  margin: 1rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+.project-tags li {
+  border: 1px solid #b9c8d8;
+  border-radius: 999px;
+  padding: 0.25rem 0.6rem;
+  background: #f3f7fb;
+  color: #1f2937;
+  font-size: 0.85rem;
   font-weight: 600;
 }
 .project-note {
