@@ -172,16 +172,18 @@ permalink: pretty
 sitemap:
   exclude:
     - /404.html
+    - /blog/
+    - /current-ai-news/
+    - /ebooks/
   include:
     - /about/
     - /services/
     - /projects/
     - /media/
     - /resources/
-    - /blog/
+    - /insights/
     - /faq/
     - /contact/
-    - /ebooks/
     - /free-tools/
     - /write-for-us/
     - /collaborate/
