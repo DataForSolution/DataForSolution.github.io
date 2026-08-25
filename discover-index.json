@@ -19,6 +19,32 @@ sitemap: false
   }
   {% assign needs_comma = true %}
 {% endfor %}
+{% if needs_comma %},{% endif %}
+{
+  "title": "Reading Library",
+  "category": "Learn",
+  "type": "Reading library",
+  "url": "/library/",
+  "description": "Read verified open-access books, explore legal reading sources, professional recommendations, and original weekly reading companions.",
+  "keywords": ["library", "books", "reading", "open access", "medical imaging", "statistics", "weekly reading"],
+  "external": false,
+  "featured": true
+}
+{% assign needs_comma = true %}
+{% for note in site.reading_notes %}
+  {% if needs_comma %},{% endif %}
+  {
+    "title": {{ note.title | jsonify }},
+    "category": "Learn",
+    "type": "Weekly reading note",
+    "url": {{ note.url | jsonify }},
+    "description": {% if note.summary %}{{ note.summary | jsonify }}{% else %}{{ note.excerpt | strip_html | normalize_whitespace | truncate: 220 | jsonify }}{% endif %},
+    "keywords": {{ note.keywords | default: empty | jsonify }},
+    "external": false,
+    "featured": false
+  }
+  {% assign needs_comma = true %}
+{% endfor %}
 {% for post in site.posts %}
   {% if needs_comma %},{% endif %}
   {
