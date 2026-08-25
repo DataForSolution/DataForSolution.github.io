@@ -77,6 +77,25 @@ for (const item of discoverItems) {
   }
 }
 
+const libraryFailures = [];
+const libraryPath = path.join(root, 'library', 'index.html');
+if (!fs.existsSync(libraryPath)) {
+  libraryFailures.push('Reading Library route is missing.');
+} else {
+  const library = fs.readFileSync(libraryPath, 'utf8');
+  if (!library.includes('Weekly Reading Notes')) libraryFailures.push('Reading Library is missing the weekly-reading section.');
+  if (!library.includes('Professional Bookshelf')) libraryFailures.push('Reading Library is missing the professional-bookshelf section.');
+  if (/href=["']\/[^"']*\.pdf(?:[?#][^"']*)?["']/i.test(library)) libraryFailures.push('Reading Library exposes a locally hosted PDF link.');
+  if (/assets\/books\//i.test(library)) libraryFailures.push('Reading Library references the retired local books directory.');
+}
+
+const weeklyDirectory = path.join(root, 'library', 'weekly');
+if (!fs.existsSync(weeklyDirectory)) libraryFailures.push('Weekly reading-note output directory is missing.');
+const readingLibraryItem = discoverItems.find((item) => item.title === 'Reading Library' && item.url === '/library/');
+if (!readingLibraryItem) libraryFailures.push('Discover index does not contain the Reading Library.');
+const weeklyDiscoverItem = discoverItems.find((item) => item.type === 'Weekly reading note');
+if (!weeklyDiscoverItem) libraryFailures.push('Discover index does not contain a weekly reading note.');
+
 console.log(`HTML_FILES=${htmlFiles.length}`);
 console.log(`INTERNAL_REFERENCES=${checked}`);
 console.log(`BROKEN_INTERNAL=${broken.length}`);
@@ -85,13 +104,15 @@ console.log(`DUPLICATE_IDS=${duplicateIds.length}`);
 console.log(`UNRESOLVED_LABELS=${unresolvedLabels.length}`);
 console.log(`DISCOVER_ITEMS=${discoverItems.length}`);
 console.log(`DISCOVER_FAILURES=${discoverFailures.length}`);
+console.log(`LIBRARY_FAILURES=${libraryFailures.length}`);
 
-if (broken.length || duplicateIds.length || unresolvedLabels.length || discoverFailures.length) {
+if (broken.length || duplicateIds.length || unresolvedLabels.length || discoverFailures.length || libraryFailures.length) {
   [
     ...broken,
     ...duplicateIds.map((id) => `Duplicate id: ${id}`),
     ...unresolvedLabels.map((id) => `Label target missing: ${id}`),
-    ...discoverFailures
+    ...discoverFailures,
+    ...libraryFailures
   ].forEach((failure) => console.error(failure));
   process.exitCode = 1;
 }

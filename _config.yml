@@ -105,6 +105,9 @@ collections:
   collaborate:
     output: true
     permalink: /collaborate/
+  reading_notes:
+    output: true
+    permalink: /library/weekly/:name/
   posts:
     output: true
 
@@ -120,6 +123,11 @@ defaults:
     values:
       layout: "post"
       author: "LLmachine"
+  - scope:
+      path: ""
+      type: "reading_notes"
+    values:
+      layout: "reading-note"
   - scope:
       path: "about"
     values:
@@ -180,6 +188,7 @@ sitemap:
     - /resources/
     - /insights/
     - /discover/
+    - /library/
     - /faq/
     - /contact/
     - /toolkits/

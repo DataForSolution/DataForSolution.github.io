@@ -19,6 +19,8 @@
         </ul>
       </li>
 
+      <li><a href="{{ '/library/' | relative_url }}"{% if page.url == '/library/' or page.url contains '/library/weekly/' %} aria-current="page"{% endif %}>Library</a></li>
+
       <li><a href="{{ '/projects/' | relative_url }}">Projects</a></li>
 
       <li><a href="{{ '/toolkits/' | relative_url }}"{% if page.url == '/toolkits/' %} aria-current="page"{% endif %}>Tools</a></li>
