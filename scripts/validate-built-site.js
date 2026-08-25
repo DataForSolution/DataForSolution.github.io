@@ -14,6 +14,13 @@ function walk(directory) {
   }
 }
 
+function builtTarget(url) {
+  const urlPath = String(url).split(/[?#]/)[0];
+  let target = path.join(root, decodeURIComponent(urlPath));
+  if (urlPath.endsWith('/')) target = path.join(target, 'index.html');
+  return target;
+}
+
 walk(root);
 let checked = 0;
 const broken = [];
@@ -26,9 +33,7 @@ for (const file of htmlFiles) {
     const urlPath = original.split(/[?#]/)[0];
     if (!urlPath) continue;
     checked += 1;
-    let target = path.join(root, decodeURIComponent(urlPath));
-    if (urlPath.endsWith('/')) target = path.join(target, 'index.html');
-    if (!fs.existsSync(target)) broken.push(`${path.relative(root, file)} -> ${original}`);
+    if (!fs.existsSync(builtTarget(original))) broken.push(`${path.relative(root, file)} -> ${original}`);
   }
 }
 
@@ -38,14 +43,55 @@ const duplicateIds = [...new Set(ids.filter((id, index) => ids.indexOf(id) !== i
 const labels = [...workspace.matchAll(/\sfor=["']([^"']+)["']/g)].map((match) => match[1]);
 const unresolvedLabels = labels.filter((label) => !ids.includes(label));
 
+const discoverPath = path.join(root, 'assets', 'data', 'discover-index.json');
+const discoverFailures = [];
+let discoverItems = [];
+try {
+  discoverItems = JSON.parse(fs.readFileSync(discoverPath, 'utf8'));
+} catch (error) {
+  discoverFailures.push(`Discover index is not valid JSON: ${error.message}`);
+}
+
+const allowedCategories = new Set(['Learn', 'Projects', 'Tools', 'Insights', 'Platform']);
+if (!Array.isArray(discoverItems)) {
+  discoverFailures.push('Discover index must be an array.');
+  discoverItems = [];
+}
+if (discoverItems.length < 30) discoverFailures.push(`Discover index unexpectedly small: ${discoverItems.length}`);
+
+const discoverKeys = new Set();
+for (const item of discoverItems) {
+  if (!item || !item.title || !item.category || !item.type || !item.url) {
+    discoverFailures.push(`Incomplete Discover item: ${JSON.stringify(item)}`);
+    continue;
+  }
+  if (!allowedCategories.has(item.category)) discoverFailures.push(`Unexpected Discover category: ${item.category}`);
+  const key = `${item.title}|${item.url}`;
+  if (discoverKeys.has(key)) discoverFailures.push(`Duplicate Discover item: ${key}`);
+  discoverKeys.add(key);
+  if (String(item.url).startsWith('/') && !String(item.url).startsWith('//') && !fs.existsSync(builtTarget(item.url))) {
+    discoverFailures.push(`Discover internal target missing: ${item.title} -> ${item.url}`);
+  }
+  if (!String(item.url).startsWith('/') && !String(item.url).startsWith('https://')) {
+    discoverFailures.push(`Unsafe Discover URL: ${item.title} -> ${item.url}`);
+  }
+}
+
 console.log(`HTML_FILES=${htmlFiles.length}`);
 console.log(`INTERNAL_REFERENCES=${checked}`);
 console.log(`BROKEN_INTERNAL=${broken.length}`);
 console.log(`WORKSPACE_IDS=${ids.length}`);
 console.log(`DUPLICATE_IDS=${duplicateIds.length}`);
 console.log(`UNRESOLVED_LABELS=${unresolvedLabels.length}`);
+console.log(`DISCOVER_ITEMS=${discoverItems.length}`);
+console.log(`DISCOVER_FAILURES=${discoverFailures.length}`);
 
-if (broken.length || duplicateIds.length || unresolvedLabels.length) {
-  [...broken, ...duplicateIds.map((id) => `Duplicate id: ${id}`), ...unresolvedLabels.map((id) => `Label target missing: ${id}`)].forEach((failure) => console.error(failure));
+if (broken.length || duplicateIds.length || unresolvedLabels.length || discoverFailures.length) {
+  [
+    ...broken,
+    ...duplicateIds.map((id) => `Duplicate id: ${id}`),
+    ...unresolvedLabels.map((id) => `Label target missing: ${id}`),
+    ...discoverFailures
+  ].forEach((failure) => console.error(failure));
   process.exitCode = 1;
 }

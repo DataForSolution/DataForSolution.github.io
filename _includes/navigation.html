@@ -23,7 +23,7 @@
 
       <li><a href="{{ '/toolkits/' | relative_url }}"{% if page.url == '/toolkits/' %} aria-current="page"{% endif %}>Tools</a></li>
 
-      <li><a href="{{ '/discover/' | relative_url }}">Discover</a></li>
+      <li><a href="{{ '/discover/' | relative_url }}"{% if page.url == '/discover/' %} aria-current="page"{% endif %}>Discover</a></li>
 
       <li class="dropdown dfs-insights-nav">
         <a href="{{ '/insights/' | relative_url }}">Insights ▾</a>
