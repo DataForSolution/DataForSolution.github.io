@@ -1,5 +1,5 @@
 open_books:
-  - title: Medical Imaging Systems: An Introductory Guide
+  - title: "Medical Imaging Systems: An Introductory Guide"
     authors: Andreas Maier, Stefan Steidl, Vincent Christlein, and Joachim Hornegger, editors
     year: 2018
     subject: Medical imaging
@@ -23,7 +23,7 @@ open_books:
     rights_label: Open access
     license: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 (CC BY-NC-SA 4.0)
     source: OpenStax, Rice University
-    read_url: https://openstax.org/details/books/introductory-statistics-2e
+    read_url: https://openstax.org/books/introductory-statistics-2e/pages/1-introduction
     description: An openly licensed introductory statistics textbook covering descriptive statistics, probability, distributions, inference, regression, and interpretation.
     best_for: Learners building statistical foundations for data science, analytics, research, and evidence-based decision making.
     related_url: /toolkits/#evaluation
