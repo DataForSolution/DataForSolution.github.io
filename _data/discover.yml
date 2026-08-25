@@ -1,0 +1,194 @@
+items:
+  - title: Learning Overview
+    category: Learn
+    type: Hub
+    url: /learn/
+    description: Start with DataForSolution learning paths and see which academy or lesson fits your current level.
+    keywords: [learning, academy, courses, beginner, roadmap]
+    featured: true
+  - title: Data Science Academy
+    category: Learn
+    type: Academy
+    url: /learn/data-science/
+    description: Follow a structured path from understanding data and defining problems through analysis, machine learning, and applied projects.
+    keywords: [data science, academy, analysis, machine learning, roadmap]
+    featured: true
+  - title: Data Science Level 1
+    category: Learn
+    type: Learning path
+    url: /learn/data-science/level-1/
+    description: Build foundational data-science thinking before moving into statistics, programming, modeling, and advanced tools.
+    keywords: [foundations, beginner, data science, level 1, learning]
+  - title: What Is Data?
+    category: Learn
+    type: Lesson
+    url: /learn/data-science/level-1/module-1/
+    description: Learn how observations become records and why data is a representation of reality rather than reality itself.
+    keywords: [data, information, records, observations, dataset, module 1]
+  - title: Types and Structures of Data
+    category: Learn
+    type: Lesson
+    url: /learn/data-science/level-1/module-2/
+    description: Understand qualitative, quantitative, structured, semi-structured, and unstructured data and how type affects analysis.
+    keywords: [qualitative, quantitative, structured, unstructured, measurement, module 2]
+
+  - title: Curated Projects
+    category: Projects
+    type: Portfolio hub
+    url: /projects/
+    description: Browse ten reviewed projects with documented provenance, methodology, reproducibility, data boundaries, and limitations.
+    keywords: [portfolio, projects, reproducibility, methodology, evidence]
+    featured: true
+  - title: PETQuant Reliability
+    category: Projects
+    type: Healthcare project
+    url: https://github.com/DataForSolution/Data-Solution/tree/Master/portfolio/petquant
+    external: true
+    description: PET quantitative-ML reconstruction focused on small-sample limits, data-quality contracts, and defensible validation claims.
+    keywords: [pet, pet ct, medical imaging, quantification, validation, healthcare]
+  - title: Chest CT Classification
+    category: Projects
+    type: Healthcare project
+    url: https://github.com/DataForSolution/Data-Solution/tree/Master/portfolio/chest-ct-classification
+    external: true
+    description: Medical-imaging transfer-learning reconstruction emphasizing overfitting analysis, split integrity, and deterministic evaluation.
+    keywords: [ct, chest ct, resnet50, tensorflow, medical imaging, classification]
+  - title: Pima Diabetes ML Evaluation
+    category: Projects
+    type: Healthcare project
+    url: https://github.com/DataForSolution/Data-Solution/tree/Master/portfolio/pima-diabetes-ml
+    external: true
+    description: Leakage-safe SVM and MLP retrospective with missing-measurement handling and sensitivity/specificity reporting.
+    keywords: [diabetes, svm, mlp, clinical metrics, sensitivity, specificity]
+  - title: SHAP + LIME Explainability
+    category: Projects
+    type: Responsible AI project
+    url: https://github.com/DataForSolution/Data-Solution/tree/Master/portfolio/shap-lime-explainability
+    external: true
+    description: Class-aligned explanation workflow with corrected label ordering, scaled modeling, and defensible attribution aggregation.
+    keywords: [shap, lime, explainability, xai, responsible ai]
+  - title: Fairness Evaluation
+    category: Projects
+    type: Responsible AI project
+    url: https://github.com/DataForSolution/Data-Solution/tree/Master/portfolio/fairness-evaluation
+    external: true
+    description: Explicit group-fairness metrics and threshold analysis with documented AIF360 provenance.
+    keywords: [fairness, aif360, responsible ai, bias, thresholds]
+  - title: Adversarial Robustness
+    category: Projects
+    type: Responsible AI project
+    url: https://github.com/DataForSolution/Data-Solution/tree/Master/portfolio/adversarial-robustness
+    external: true
+    description: Bounded PGD and defense-evaluation reconstruction with preprocessing, threat-model, and denominator corrections.
+    keywords: [adversarial, pgd, robustness, pytorch, threat model]
+  - title: Automobile Insurance Fraud Classification
+    category: Projects
+    type: Machine learning project
+    url: https://github.com/DataForSolution/Data-Solution/tree/Master/portfolio/insurance-fraud-classification
+    external: true
+    description: Temporal, imbalance-aware evaluation showing why high overall accuracy can coexist with zero minority-class recall.
+    keywords: [fraud, classification, imbalanced learning, pr auc, temporal holdout]
+  - title: Restaurant Review Sentiment Evaluation
+    category: Projects
+    type: NLP project
+    url: https://github.com/DataForSolution/Data-Solution/tree/Master/portfolio/restaurant-sentiment-evaluation
+    external: true
+    description: Leakage-safe NLP model comparison using fold-local TF-IDF pipelines and a clearly licensed UCI Yelp source.
+    keywords: [nlp, sentiment, tf idf, yelp, cross validation]
+  - title: CIFAR-10 Generated-Image Analysis
+    category: Projects
+    type: Generative AI project
+    url: https://github.com/DataForSolution/Data-Solution/tree/Master/portfolio/cifar10-generated-analysis
+    external: true
+    description: Classifier-response diagnostics for generated images with a clear separation between confidence and perceptual realism.
+    keywords: [cifar10, generated images, entropy, generative ai, diagnostics]
+  - title: AWS Glue + EMR PySpark Ingestion Validation
+    category: Projects
+    type: Data engineering project
+    url: https://github.com/DataForSolution/Data-Solution/tree/Master/portfolio/spark-glue-ingestion
+    external: true
+    description: Catalog-resolution and ingestion-quality engineering based on a historical embedded-header defect discovered in an EMR/Glue run.
+    keywords: [pyspark, aws glue, emr, data engineering, ingestion, data quality]
+
+  - title: Tools Workspace
+    category: Tools
+    type: Workspace
+    url: /toolkits/
+    description: Work directly with browser-local data, statistics, model-evaluation, and career-alignment tools.
+    keywords: [tools, workspace, calculator, browser local, privacy]
+    featured: true
+  - title: CSV Data Profiler
+    category: Tools
+    type: Data tool
+    url: /toolkits/#data-tools
+    description: Inspect CSV structure, missing values, duplicate rows, inferred types, numeric summaries, and a safe data preview without uploading the file.
+    keywords: [csv, data profiler, missing values, duplicates, data quality, local processing]
+  - title: Descriptive Statistics Calculator
+    category: Tools
+    type: Statistics tool
+    url: /toolkits/#evaluation
+    description: Calculate count, sum, mean, median, quartiles, IQR, range, and sample/population standard deviation from supplied numeric values.
+    keywords: [statistics, mean, median, quartiles, standard deviation, iqr]
+  - title: Classification Evaluation Calculator
+    category: Tools
+    type: Model evaluation tool
+    url: /toolkits/#evaluation
+    description: Calculate accuracy, PPV, sensitivity, specificity, F1, NPV, balanced accuracy, and prevalence from a supplied confusion matrix.
+    keywords: [classification, confusion matrix, accuracy, sensitivity, specificity, f1, ppv]
+  - title: Career Text Comparison
+    category: Tools
+    type: Career tool
+    url: /toolkits/#career
+    description: Compare resume and job-description text locally to review overlapping terms, job-only terms, repeated technical terms, and topic groups without an ATS score.
+    keywords: [resume, job description, career, terms, ats, local processing]
+  - title: Career Path Explorer
+    category: Tools
+    type: Career tool
+    url: /toolkits/#career
+    description: Review skill areas, project types, learning priorities, and selected references for five data and AI career directions.
+    keywords: [career, data analyst, data scientist, ml engineer, bi developer, ai research]
+
+  - title: Insights Overview & Articles
+    category: Insights
+    type: Insights hub
+    url: /insights/
+    description: Read maintained DataForSolution articles and use primary-source AI, health-technology, and learning references.
+    keywords: [articles, ai updates, health technology, learning, insights]
+    featured: true
+  - title: Media Learning Center
+    category: Insights
+    type: Media hub
+    url: /media/
+    description: Find curated technical lessons, healthcare and imaging AI media, responsible-AI material, and trusted ongoing learning channels.
+    keywords: [media, videos, tutorials, healthcare ai, responsible ai, lectures]
+  - title: Data & AI Resource Directory
+    category: Insights
+    type: Resource hub
+    url: /resources/
+    description: Search curated datasets, APIs, official documentation, engineering tools, healthcare data sources, and learning communities.
+    keywords: [resources, datasets, api, documentation, healthcare data, tools]
+
+  - title: About DataForSolution
+    category: Platform
+    type: Platform page
+    url: /about/
+    description: Understand the purpose of DataForSolution, its relationship to OraDigit Technology, trust principles, and platform direction.
+    keywords: [about, mission, oradigit, trust, platform]
+  - title: Collaborate & Contribute
+    category: Platform
+    type: Participation page
+    url: /collaborate/
+    description: Explore collaboration opportunities or propose original projects, tools, case studies, and learning contributions under one shared standard.
+    keywords: [collaborate, contribute, partnerships, submissions, projects]
+  - title: Frequently Asked Questions
+    category: Platform
+    type: Help page
+    url: /faq/
+    description: Review common questions about DataForSolution, tools, privacy, projects, learning, and platform boundaries.
+    keywords: [faq, questions, help, privacy, tools]
+  - title: Contact
+    category: Platform
+    type: Contact page
+    url: /contact/
+    description: Send a professional inquiry about the platform, collaboration, healthcare technology, data science, software engineering, or related work.
+    keywords: [contact, inquiry, collaboration, message]
