@@ -1,0 +1,36 @@
+---
+layout: null
+permalink: /assets/data/discover-index.json
+sitemap: false
+---
+[
+{% assign needs_comma = false %}
+{% for item in site.data.discover.items %}
+  {% if needs_comma %},{% endif %}
+  {
+    "title": {{ item.title | jsonify }},
+    "category": {{ item.category | jsonify }},
+    "type": {{ item.type | jsonify }},
+    "url": {{ item.url | jsonify }},
+    "description": {{ item.description | jsonify }},
+    "keywords": {{ item.keywords | jsonify }},
+    "external": {{ item.external | default: false | jsonify }},
+    "featured": {{ item.featured | default: false | jsonify }}
+  }
+  {% assign needs_comma = true %}
+{% endfor %}
+{% for post in site.posts %}
+  {% if needs_comma %},{% endif %}
+  {
+    "title": {{ post.title | jsonify }},
+    "category": "Insights",
+    "type": "Article",
+    "url": {{ post.url | jsonify }},
+    "description": {% if post.description %}{{ post.description | jsonify }}{% else %}{{ post.excerpt | strip_html | normalize_whitespace | truncate: 220 | jsonify }}{% endif %},
+    "keywords": [{% if post.category %}{{ post.category | jsonify }}{% endif %}],
+    "external": false,
+    "featured": false
+  }
+  {% assign needs_comma = true %}
+{% endfor %}
+]
