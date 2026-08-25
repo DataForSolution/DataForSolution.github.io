@@ -1,0 +1,64 @@
+open_books:
+  - title: Medical Imaging Systems: An Introductory Guide
+    authors: Andreas Maier, Stefan Steidl, Vincent Christlein, and Joachim Hornegger, editors
+    year: 2018
+    subject: Medical imaging
+    level: Intermediate
+    rights: open_access
+    rights_label: Open access
+    license: Creative Commons Attribution 4.0 International (CC BY 4.0)
+    source: NCBI Bookshelf / Springer
+    read_url: https://www.ncbi.nlm.nih.gov/books/NBK546147/
+    description: A broad introduction to medical imaging systems, from system theory and image processing through CT, MRI, X-ray imaging, emission tomography, ultrasound, and other modalities.
+    best_for: Imaging professionals, students, and engineers who want a modality-spanning technical foundation.
+    related_url: /projects/
+    related_label: Explore medical-imaging projects
+
+  - title: Introductory Statistics 2e
+    authors: Barbara Illowsky and Susan Dean
+    year: 2023
+    subject: Statistics
+    level: Beginner to intermediate
+    rights: open_access
+    rights_label: Open access
+    license: Creative Commons Attribution-NonCommercial-ShareAlike 4.0 (CC BY-NC-SA 4.0)
+    source: OpenStax, Rice University
+    read_url: https://openstax.org/details/books/introductory-statistics-2e
+    description: An openly licensed introductory statistics textbook covering descriptive statistics, probability, distributions, inference, regression, and interpretation.
+    best_for: Learners building statistical foundations for data science, analytics, research, and evidence-based decision making.
+    related_url: /toolkits/#evaluation
+    related_label: Practice with statistics tools
+
+legal_sources:
+  - name: NCBI Bookshelf
+    url: https://www.ncbi.nlm.nih.gov/books/
+    description: Free full-text books and documents in biomedical science, medicine, healthcare, and related fields from the U.S. National Library of Medicine.
+  - name: Directory of Open Access Books (DOAB)
+    url: https://www.doabooks.org/
+    description: Search peer-reviewed scholarly books that publishers have made openly accessible under documented licenses.
+  - name: OAPEN Library
+    url: https://library.oapen.org/
+    description: A quality-controlled collection of peer-reviewed open-access scholarly books, with strong coverage in academic and professional subjects.
+  - name: OpenStax
+    url: https://openstax.org/subjects
+    description: Peer-reviewed openly licensed textbooks designed to expand access to high-quality education.
+  - name: WorldCat
+    url: https://search.worldcat.org/
+    description: Find print and electronic books in libraries worldwide and identify legal borrowing or interlibrary-loan options.
+
+rights_policy:
+  - code: open_access
+    label: Open access
+    meaning: Full reading is linked only from an authorized open-access source and the license is recorded.
+  - code: public_domain
+    label: Public domain
+    meaning: Full reading may be linked or hosted only after public-domain status is verified for the relevant jurisdiction and edition.
+  - code: publisher_free
+    label: Publisher free access
+    meaning: The publisher or rights holder provides a free authorized reading copy; DataForSolution links to that source.
+  - code: personal_reference
+    label: Personal collection reference
+    meaning: A privately owned copy can be cataloged and recommended, but the file itself is not distributed or exposed to visitors.
+  - code: permission_granted
+    label: Permission granted
+    meaning: DataForSolution may host or embed material only within the documented scope of written permission.
