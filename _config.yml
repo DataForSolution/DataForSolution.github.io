@@ -112,6 +112,10 @@ collections:
 defaults:
   - scope:
       path: ""
+    values:
+      disable_search: true
+  - scope:
+      path: ""
       type: "posts"
     values:
       layout: "post"
@@ -175,6 +179,7 @@ sitemap:
     - /media/
     - /resources/
     - /insights/
+    - /discover/
     - /faq/
     - /contact/
     - /toolkits/
