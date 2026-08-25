@@ -21,15 +21,7 @@
 
       <li><a href="{{ '/projects/' | relative_url }}">Projects</a></li>
 
-      <li class="dropdown">
-        <a href="{{ '/toolkits/' | relative_url }}">Tools ▾</a>
-        <ul class="dropdown-menu">
-          <li><a href="{{ '/toolkits/' | relative_url }}">Tools Overview</a></li>
-          <li><a href="{{ '/free-tools/' | relative_url }}">Free Tools</a></li>
-          <li><a href="{{ '/career-hub/' | relative_url }}">Career Hub</a></li>
-          <li><a href="{{ '/career-navigator/' | relative_url }}">Career Navigator</a></li>
-        </ul>
-      </li>
+      <li><a href="{{ '/toolkits/' | relative_url }}"{% if page.url == '/toolkits/' %} aria-current="page"{% endif %}>Tools</a></li>
 
       <li><a href="{{ '/discover/' | relative_url }}">Discover</a></li>
 

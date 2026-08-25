@@ -95,8 +95,10 @@
   
  
   <!-- Search Scripts -->
+{% unless page.disable_search %}
 <script src="https://unpkg.com/lunr/lunr.js"></script>
 <script src="{{ '/assets/js/search.js' | relative_url }}"></script>
+{% endunless %}
 
 <!-- Scroll to Top Button -->
 <button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" id="scrollTopBtn" title="Go to top">↑</button>

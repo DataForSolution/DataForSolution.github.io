@@ -99,9 +99,6 @@ collections:
   ebooks:
     output: true
     permalink: /ebooks/
-  free-tools:
-    output: true
-    permalink: /free-tools/
   write-for-us:
     output: true
     permalink: /write-for-us/
@@ -153,10 +150,6 @@ defaults:
       layout: "default"
       title: "E-Books"
   - scope:
-      path: "free-tools"
-    values:
-      layout: "default"
-  - scope:
       path: "write-for-us"
     values:
       layout: "default"
@@ -184,7 +177,7 @@ sitemap:
     - /insights/
     - /faq/
     - /contact/
-    - /free-tools/
+    - /toolkits/
     - /write-for-us/
     - /collaborate/
 

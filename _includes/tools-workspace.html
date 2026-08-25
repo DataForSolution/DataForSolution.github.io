@@ -1,0 +1,59 @@
+<div class="tools-workspace" id="tools-workspace">
+  <header class="tools-workspace__hero">
+    <div class="tools-workspace__shell">
+      <p class="tools-workspace__eyebrow">DataForSolution Tools</p>
+      <h1>Choose a task and work directly on the page</h1>
+      <p>Profile a CSV, calculate statistics, examine a confusion matrix, or compare career documents. Your files and text stay in this browser.</p>
+    </div>
+  </header>
+  <div class="tools-workspace__shell tools-workspace__body">
+    <nav class="tools-workspace__tabs" aria-label="Tools work areas" role="tablist">
+      <button type="button" role="tab" data-workspace-tab="data-tools" aria-controls="data-tools">Data tools</button>
+      <button type="button" role="tab" data-workspace-tab="evaluation" aria-controls="evaluation">Statistics &amp; model evaluation</button>
+      <button type="button" role="tab" data-workspace-tab="career" aria-controls="career">Career tools</button>
+      <button type="button" role="tab" data-workspace-tab="help" aria-controls="help">Help &amp; learning</button>
+    </nav>
+    <section id="data-tools" class="tools-workspace__area" role="tabpanel" data-workspace-panel aria-labelledby="data-tools-title">
+      <header class="tools-workspace__heading"><p class="tools-workspace__section-label">Data tools</p><h2 id="data-tools-title">CSV Data Profiler</h2><p>Review structure, missing cells, duplicate rows, inferred types, numeric summaries, and a safe ten-row preview before analysis.</p></header>
+      <div class="tools-panel">
+        <div class="tools-privacy"><strong>Local processing:</strong> the selected CSV is read only by this page. It is not uploaded, logged, or stored.</div>
+        <label for="csv-file">Choose a CSV file</label><input id="csv-file" type="file" accept=".csv,text/csv">
+        <p class="tools-help">Maximum size: 10 MB. The first row should contain column names.</p>
+        <div class="tools-actions"><button id="analyze-csv" type="button" class="tools-button tools-button--primary">Analyze dataset</button><button id="reset-csv" type="button" class="tools-button tools-button--secondary">Reset</button></div>
+        <div id="csv-status" class="tools-status" role="status" aria-live="polite">Choose a CSV file to begin.</div>
+      </div>
+      <div id="csv-results" class="tools-results" hidden>
+        <section class="tools-panel" aria-labelledby="csv-overview-title"><h3 id="csv-overview-title">Dataset overview</h3><p>A structural profile is not a substitute for domain or source validation.</p><div id="csv-summary" class="tools-metric-grid"></div></section>
+        <section class="tools-panel" aria-labelledby="csv-columns-title"><h3 id="csv-columns-title">Column profile</h3><div class="tools-table-wrap"><table class="tools-table"><thead><tr><th>Column</th><th>Inferred type</th><th>Missing</th><th>Unique</th><th>Summary</th></tr></thead><tbody id="column-profile-body"></tbody></table></div></section>
+        <section class="tools-panel" aria-labelledby="csv-checks-title"><h3 id="csv-checks-title">Recommended checks</h3><ul id="csv-recommendations"></ul></section>
+        <section class="tools-panel" aria-labelledby="csv-preview-title"><h3 id="csv-preview-title">Data preview</h3><p>First ten data rows. Cell values are inserted as text, never as HTML.</p><div class="tools-table-wrap"><table class="tools-table"><thead id="preview-head"></thead><tbody id="preview-body"></tbody></table></div></section>
+      </div>
+    </section>
+    <section id="evaluation" class="tools-workspace__area" role="tabpanel" data-workspace-panel aria-labelledby="evaluation-title" hidden>
+      <header class="tools-workspace__heading"><p class="tools-workspace__section-label">Statistics &amp; model evaluation</p><h2 id="evaluation-title">Calculate and interpret supplied values</h2><p>These deterministic calculators describe the numbers you enter. They do not establish causality, model quality, or clinical validity.</p></header>
+      <div class="tools-workspace__columns">
+        <section class="tools-panel" aria-labelledby="statistics-title">
+          <h3 id="statistics-title">Descriptive statistics</h3><label for="statistics-input">Numbers separated by commas or new lines</label><textarea id="statistics-input" rows="8" spellcheck="false" placeholder="12, 15, 18, 21"></textarea><p class="tools-help">Blank entries are ignored. All other entries must be finite numbers.</p>
+          <div class="tools-actions"><button type="button" id="calculate-statistics" class="tools-button tools-button--primary">Calculate statistics</button><button type="button" id="reset-statistics" class="tools-button tools-button--secondary">Reset</button></div><div id="statistics-status" class="tools-status" role="status" aria-live="polite">Enter at least one number.</div><div id="statistics-results" class="tools-result-block" hidden></div>
+        </section>
+        <section class="tools-panel" aria-labelledby="classification-title">
+          <h3 id="classification-title">Classification evaluation</h3><div class="tools-field-grid"><label>True positives<input id="metric-tp" type="number" min="0" step="1" inputmode="numeric"></label><label>False positives<input id="metric-fp" type="number" min="0" step="1" inputmode="numeric"></label><label>True negatives<input id="metric-tn" type="number" min="0" step="1" inputmode="numeric"></label><label>False negatives<input id="metric-fn" type="number" min="0" step="1" inputmode="numeric"></label></div>
+          <div class="tools-actions"><button type="button" id="calculate-metrics" class="tools-button tools-button--primary">Calculate metrics</button><button type="button" id="reset-metrics" class="tools-button tools-button--secondary">Reset</button></div><div id="metrics-status" class="tools-status" role="status" aria-live="polite">Enter four non-negative whole-number counts.</div><div id="metrics-results" class="tools-result-block" hidden></div>
+          <details class="tools-method"><summary>How this is calculated</summary><dl><dt>Accuracy</dt><dd>(TP + TN) / all observations</dd><dt>Precision / PPV</dt><dd>TP / (TP + FP)</dd><dt>Recall / sensitivity</dt><dd>TP / (TP + FN)</dd><dt>Specificity</dt><dd>TN / (TN + FP)</dd><dt>F1</dt><dd>2TP / (2TP + FP + FN)</dd><dt>NPV</dt><dd>TN / (TN + FN)</dd><dt>Balanced accuracy</dt><dd>(sensitivity + specificity) / 2</dd><dt>Prevalence</dt><dd>(TP + FN) / all observations</dd></dl></details>
+        </section>
+      </div>
+    </section>
+    <section id="career" class="tools-workspace__area" role="tabpanel" data-workspace-panel aria-labelledby="career-title" hidden>
+      <header class="tools-workspace__heading"><p class="tools-workspace__section-label">Career tools</p><h2 id="career-title">Career Alignment Workspace</h2><p>Use transparent text comparison and reviewed role guidance. Nothing here predicts hiring outcomes or emulates a commercial applicant-tracking system.</p></header>
+      <div class="tools-panel">
+        <h3>Resume and job-description comparison</h3><div class="tools-workspace__columns"><label for="career-resume">Resume text<textarea id="career-resume" rows="10" placeholder="Paste resume text"></textarea></label><label for="career-job">Job-description text<textarea id="career-job" rows="10" placeholder="Paste job-description text"></textarea></label></div>
+        <p class="tools-help">Text is processed locally, is not stored, and is not sent to an API. Review suggestions in context; do not add terms that do not reflect your experience.</p><div class="tools-actions"><button type="button" id="compare-career-text" class="tools-button tools-button--primary">Compare texts</button><button type="button" id="reset-career-text" class="tools-button tools-button--secondary">Reset</button></div><div id="career-status" class="tools-status" role="status" aria-live="polite">Paste both documents to begin.</div><div id="career-results" class="tools-result-block" hidden></div>
+      </div>
+      <div class="tools-panel"><h3>Career path explorer</h3><label for="career-role">Choose a role</label><select id="career-role"><option value="">Select a role</option><option value="data-analyst">Data Analyst</option><option value="data-scientist">Data Scientist</option><option value="ml-engineer">Machine Learning Engineer</option><option value="bi-developer">BI / Analytics Developer</option><option value="ai-research">AI / Applied Research</option></select><div class="tools-actions"><button type="button" id="reset-career-role" class="tools-button tools-button--secondary">Reset role</button></div><div id="career-role-results" class="tools-result-block" aria-live="polite" hidden></div></div>
+    </section>
+    <section id="help" class="tools-workspace__area" role="tabpanel" data-workspace-panel aria-labelledby="help-title" hidden>
+      <header class="tools-workspace__heading"><p class="tools-workspace__section-label">Help &amp; learning</p><h2 id="help-title">Understand the result and continue learning</h2><p>The tools provide mechanical summaries. Domain knowledge, data provenance, representative sampling, and appropriate validation still determine whether an analysis is useful.</p></header>
+      <div class="tools-link-list"><a href="{{ '/learn/' | relative_url }}"><strong>Learn</strong><span>Build foundations in data science and analysis.</span></a><a href="{{ '/projects/' | relative_url }}"><strong>Projects</strong><span>Review evidence-backed implementations and limitations.</span></a><a href="{{ '/resources/' | relative_url }}"><strong>Resources</strong><span>Find maintained documentation, datasets, and external references.</span></a><a href="{{ '/insights/' | relative_url }}"><strong>Insights</strong><span>Read analysis and practical guidance.</span></a></div>
+    </section>
+  </div>
+</div>
