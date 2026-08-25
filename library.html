@@ -1,0 +1,131 @@
+---
+layout: default
+title: "Reading Library"
+permalink: /library/
+description: "Read verified open-access books, explore professional reading recommendations, and follow original DataForSolution weekly reading companions."
+---
+
+<main class="library-page">
+  <section class="library-hero">
+    <div class="library-shell">
+      <p class="library-eyebrow">DataForSolution Reading Library</p>
+      <h1>Professional reading without an unauthorized PDF archive</h1>
+      <p>Use verified open-access books, legal reading sources, original reading companions, and a growing professional bookshelf. Full-text links appear only when the source is authorized to provide them.</p>
+      <div class="library-actions">
+        <a href="#read-free" class="library-button library-button--primary">Read free now</a>
+        <a href="#weekly-reading" class="library-button">Weekly reading notes</a>
+        <a href="#professional-bookshelf" class="library-button">Professional bookshelf</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="library-section" id="read-free">
+    <div class="library-shell">
+      <div class="library-heading">
+        <p class="library-kicker">Verified access</p>
+        <h2>Read free now</h2>
+        <p>These books are linked from the organization currently authorized to provide the full text. DataForSolution records the source and license instead of republishing a private copy.</p>
+      </div>
+
+      <div class="library-grid">
+        {% for book in site.data.library.open_books %}
+        <article class="library-card">
+          <p class="library-card-label">{{ book.subject }} · {{ book.level }}</p>
+          <h3>{{ book.title }}</h3>
+          <p class="library-authors">{{ book.authors }} · {{ book.year }}</p>
+          <p>{{ book.description }}</p>
+          <p><strong>Best for:</strong> {{ book.best_for }}</p>
+          <dl class="library-rights">
+            <dt>Access</dt><dd>{{ book.rights_label }}</dd>
+            <dt>License</dt><dd>{{ book.license }}</dd>
+            <dt>Source</dt><dd>{{ book.source }}</dd>
+          </dl>
+          <div class="library-card-actions">
+            <a href="{{ book.read_url }}" target="_blank" rel="noopener noreferrer">Read from the authorized source →</a>
+            <a href="{{ book.related_url | relative_url }}">{{ book.related_label }} →</a>
+          </div>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="library-section library-section--soft" id="weekly-reading">
+    <div class="library-shell">
+      <div class="library-heading">
+        <p class="library-kicker">Learn from the source</p>
+        <h2>Weekly Reading Notes</h2>
+        <p>Each note takes one useful idea from a verified book or authorized source, cites it, explains the concept in original language, and connects it to something you can practice on DataForSolution.</p>
+      </div>
+
+      <div class="library-notes">
+        {% assign notes = site.reading_notes | sort: 'date' | reverse %}
+        {% for note in notes %}
+        <article class="library-note-card">
+          <p class="library-card-label">{{ note.date | date: "%B %-d, %Y" }}</p>
+          <h3><a href="{{ note.url | relative_url }}">{{ note.title }}</a></h3>
+          {% if note.summary %}<p>{{ note.summary }}</p>{% endif %}
+          {% if note.source_book %}<p class="library-source-line"><strong>Source book:</strong> {{ note.source_book }}</p>{% endif %}
+          <a class="library-note-link" href="{{ note.url | relative_url }}">Read the companion →</a>
+        </article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="library-section" id="professional-bookshelf">
+    <div class="library-shell library-split">
+      <div>
+        <p class="library-kicker">Growing collection</p>
+        <h2>Professional Bookshelf</h2>
+        <p>The long-term goal is to catalog books collected through years of professional practice across medical imaging, healthcare, data science, analytics, AI, and software engineering.</p>
+        <p>A personal copy may be listed with bibliographic information, an original recommendation, topics, prerequisites, and legal access options. The private PDF is not exposed unless public-domain status, an open license, publisher access, or explicit permission is verified.</p>
+      </div>
+      <aside class="library-policy-card">
+        <h3>What each future book record will tell you</h3>
+        <ul>
+          <li>What the book is about and who it helps</li>
+          <li>Difficulty and prerequisites</li>
+          <li>Why it is recommended</li>
+          <li>Key topics and related DataForSolution material</li>
+          <li>Publisher, library, preview, or open-access options</li>
+          <li>The verified rights classification</li>
+        </ul>
+      </aside>
+    </div>
+  </section>
+
+  <section class="library-section library-section--soft">
+    <div class="library-shell">
+      <div class="library-heading">
+        <p class="library-kicker">Find legal access</p>
+        <h2>Open libraries and borrowing paths</h2>
+        <p>When DataForSolution cannot provide full reading, these sources can help users locate legitimate open or library access.</p>
+      </div>
+      <div class="library-source-grid">
+        {% for source in site.data.library.legal_sources %}
+        <a href="{{ source.url }}" target="_blank" rel="noopener noreferrer"><strong>{{ source.name }}</strong><span>{{ source.description }}</span></a>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+
+  <section class="library-section">
+    <div class="library-shell">
+      <div class="library-heading">
+        <p class="library-kicker">Rights standard</p>
+        <h2>How reading access is classified</h2>
+        <p>This standard prevents a purchased or collected PDF from being treated as permission to redistribute the work.</p>
+      </div>
+      <div class="library-rights-grid">
+        {% for item in site.data.library.rights_policy %}
+        <article><h3>{{ item.label }}</h3><p>{{ item.meaning }}</p></article>
+        {% endfor %}
+      </div>
+    </div>
+  </section>
+</main>
+
+<style>
+.library-page{background:#f6f9f8;color:#172b25}.library-shell{max-width:1180px;margin:0 auto}.library-hero,.library-section{padding:72px 22px}.library-hero{background:linear-gradient(135deg,#082b24 0%,#164f40 60%,#1f6c57 100%);color:#fff}.library-eyebrow,.library-kicker{text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;font-weight:850;margin:0 0 12px}.library-eyebrow{color:#c7eadf!important}.library-kicker{color:#1d765f!important}.library-hero h1{max-width:900px;margin:0;color:#fff!important;font-size:clamp(2.4rem,5.5vw,4.4rem);line-height:1.06}.library-hero>div>p:not(.library-eyebrow){max-width:900px;color:#e5f4ef!important;font-size:1.08rem;line-height:1.8}.library-actions{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.library-button{display:inline-flex;padding:11px 17px;border:1px solid rgba(255,255,255,.58);border-radius:10px;color:#fff!important;text-decoration:none;font-weight:800}.library-button--primary{background:#fff;color:#123d34!important}.library-section--soft{background:#eaf3f0}.library-heading{max-width:800px;margin-bottom:30px}.library-heading h2,.library-split h2{color:#102f27!important;font-size:clamp(1.8rem,4vw,2.7rem);margin:0 0 12px}.library-heading p,.library-split p{color:#4b625a!important;line-height:1.75}.library-grid,.library-notes{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}.library-card,.library-note-card,.library-policy-card{background:#fff;border:1px solid #d8e5e0;border-radius:18px;padding:26px;box-shadow:0 9px 26px rgba(15,53,43,.06)}.library-card-label{color:#1d765f!important;text-transform:uppercase;letter-spacing:.08em;font-size:.76rem!important;font-weight:850}.library-card h3,.library-note-card h3,.library-policy-card h3{color:#123d34!important;margin-top:0}.library-card p,.library-note-card p,.library-policy-card li{color:#485e56!important;line-height:1.7}.library-authors,.library-source-line{color:#65776f!important;font-size:.94rem}.library-rights{display:grid;grid-template-columns:88px 1fr;gap:6px 12px;margin:18px 0}.library-rights dt{font-weight:800;color:#203f35}.library-rights dd{margin:0;color:#53685f}.library-card-actions{display:flex;flex-direction:column;gap:8px;margin-top:18px}.library-card-actions a,.library-note-card a,.library-source-grid a{color:#17634f!important;font-weight:800;text-decoration:none}.library-note-card h3 a{color:#123d34!important}.library-split{display:grid;grid-template-columns:1.15fr .85fr;gap:34px;align-items:start}.library-policy-card ul{padding-left:20px}.library-source-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}.library-source-grid a{display:flex;flex-direction:column;gap:7px;background:#fff;border:1px solid #d8e5e0;border-radius:14px;padding:20px}.library-source-grid span{color:#53685f;line-height:1.6;font-weight:400}.library-rights-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}.library-rights-grid article{background:#fff;border:1px solid #d8e5e0;border-radius:14px;padding:21px}.library-rights-grid h3{color:#123d34!important;margin-top:0}.library-rights-grid p{color:#53685f!important;line-height:1.65}.library-page a:focus-visible{outline:3px solid #f59e0b;outline-offset:3px}@media(max-width:850px){.library-grid,.library-notes,.library-split,.library-source-grid,.library-rights-grid{grid-template-columns:1fr 1fr}.library-split{grid-template-columns:1fr}}@media(max-width:600px){.library-hero,.library-section{padding:52px 15px}.library-grid,.library-notes,.library-source-grid,.library-rights-grid{grid-template-columns:1fr}.library-actions{flex-direction:column}.library-button{justify-content:center}}
+</style>
