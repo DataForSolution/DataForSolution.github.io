@@ -1,0 +1,40 @@
+---
+layout: default
+---
+<main class="reading-note-page">
+  <article class="reading-note-shell">
+    <nav class="reading-note-breadcrumb" aria-label="Breadcrumb">
+      <a href="{{ '/library/' | relative_url }}">Reading Library</a>
+      <span aria-hidden="true">/</span>
+      <span>Weekly Reading Note</span>
+    </nav>
+
+    <header class="reading-note-header">
+      <p class="reading-note-eyebrow">Weekly Reading Note</p>
+      <h1>{{ page.title }}</h1>
+      {% if page.summary %}<p class="reading-note-summary">{{ page.summary }}</p>{% endif %}
+      <p class="reading-note-meta">Published {{ page.date | date: "%B %-d, %Y" }}{% if page.source_book %} · Source: {{ page.source_book }}{% endif %}</p>
+    </header>
+
+    <div class="reading-note-content">
+      {{ content }}
+    </div>
+
+    {% if page.source_url or page.source_citation %}
+    <section class="reading-note-source" aria-labelledby="reading-note-source-title">
+      <h2 id="reading-note-source-title">Source and reading access</h2>
+      {% if page.source_citation %}<p>{{ page.source_citation }}</p>{% endif %}
+      {% if page.source_url %}<p><a href="{{ page.source_url }}" target="_blank" rel="noopener noreferrer">Read the authorized source →</a></p>{% endif %}
+      <p>This note is an original DataForSolution learning companion. It summarizes and applies ideas from the cited source; it is not a substitute for the book.</p>
+    </section>
+    {% endif %}
+
+    <footer class="reading-note-footer">
+      <a href="{{ '/library/#weekly-reading' | relative_url }}">← Back to Weekly Reading Notes</a>
+    </footer>
+  </article>
+</main>
+
+<style>
+.reading-note-page{background:#f6f9f8;color:#172b25;padding:52px 20px 80px}.reading-note-shell{max-width:900px;margin:0 auto}.reading-note-breadcrumb{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:28px;color:#5b6b65}.reading-note-breadcrumb a{color:#17634f;font-weight:700}.reading-note-header{padding:38px;border-radius:20px;background:linear-gradient(135deg,#0c2f27,#174f40);color:#fff}.reading-note-eyebrow{text-transform:uppercase;letter-spacing:.12em;font-size:.78rem;font-weight:800;color:#bfe6d9!important;margin:0 0 12px}.reading-note-header h1{margin:0;color:#fff!important;font-size:clamp(2.2rem,5vw,3.8rem);line-height:1.08}.reading-note-summary{margin:18px 0 0;color:#e6f4ef!important;font-size:1.1rem;line-height:1.7}.reading-note-meta{margin:18px 0 0;color:#c9e5dc!important;font-size:.92rem}.reading-note-content,.reading-note-source{margin-top:28px;padding:30px;border:1px solid #d9e5e1;border-radius:18px;background:#fff;box-shadow:0 8px 24px rgba(15,53,43,.06)}.reading-note-content h2,.reading-note-source h2{color:#123d34!important}.reading-note-content h3{color:#1a5a49!important}.reading-note-content p,.reading-note-content li,.reading-note-source p{color:#40544d!important;line-height:1.8}.reading-note-content a,.reading-note-source a,.reading-note-footer a{color:#17634f!important;font-weight:750}.reading-note-footer{margin-top:28px}@media(max-width:600px){.reading-note-page{padding:32px 14px 58px}.reading-note-header,.reading-note-content,.reading-note-source{padding:22px}.reading-note-header{border-radius:15px}}
+</style>
