@@ -1,0 +1,28 @@
+name: Weekly Reading Note validation
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  reading-note:
+    name: source-rights-and-site-build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Ruby and Bundler
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.1"
+          bundler-cache: true
+      - name: Verify this week's source and note structure
+        run: ruby scripts/validate-reading-note-source.rb _reading_notes/2026-10-26-morphology-mask-quality.md
+      - name: Build Jekyll site
+        run: bundle exec jekyll build
+      - name: Validate built site and internal references
+        run: node scripts/validate-built-site.js _site
