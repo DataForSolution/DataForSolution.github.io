@@ -20,8 +20,15 @@ jobs:
         with:
           ruby-version: "3.1"
           bundler-cache: true
-      - name: Verify this week's source and note structure
-        run: ruby scripts/validate-reading-note-source.rb _reading_notes/2026-10-26-morphology-mask-quality.md
+      - name: Verify latest source, rights, and note structure
+        shell: bash
+        run: |
+          latest_note="$(find _reading_notes -maxdepth 1 -type f -name '????-??-??-*.md' | sort | tail -n 1)"
+          test -n "$latest_note"
+          echo "VALIDATING=$latest_note"
+          ruby scripts/validate-reading-note-source.rb "$latest_note"
+      - name: Run relevant JavaScript tests
+        run: node --test tests/discover.test.js tests/tools-workspace.test.js
       - name: Build Jekyll site
         run: bundle exec jekyll build
       - name: Validate built site and internal references
